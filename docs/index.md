@@ -1,1 +1,0 @@
-# Welcome to apex-acrolinx-testing!
