@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>SmartTech RightThere is here!</title>
+
+<script type="text/javascript" src="ckeditor/ckeditor_source.js"></script>
+
+<script src="../js-api/src/scripts/libs/jquery.js"></script>
+
+<script type="text/javascript">
+    function getUrlParameterByName(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regexS = "[\\?&]" + name + "=([^&#]*)";
+        var regex = new RegExp(regexS);
+        var results = regex.exec(window.location.href);
+        if (results == null)
+            return "";
+        else
+            return decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+</script>
+
+</head>
+<body>
+
+	<h1>SmartTech RightThere is here!</h1>
+
+	<form action="." method="get">
+		<textarea cols="80" id="editorId" name="editorName" rows="10">
+		
+		<h2>It's finally here!</h2>
+		<p>
+		Today we've announced a great new solution for all those 
+		looking to make unified communications a reality. We are all struggling with 
+		the proliferation of more or less improvised communications infrastructures: 
+		with bring your own device, many teams have vastly different toolsets for mail,
+		voice, IM chat, etc. 
+		IT has often given up trying to regulate this mess, but is rather looking for 
+		solutions which can make all these tools work together. 
+		</p>
+		<test>
+		<div cid="paypal's-CID_012">I am an dog.</div>
+		<div sid="paypal's-SID_013">An cat is running.</div>
+		</test>
+		<test>
+		<div cid="paypal's-CID_014">
+		<a sid="paypal's-SID_015">Thas is a bad flaggged UI string</a>
+		</div>
+		</test>
+		<h2>RightThere: the right solution</h2>
+		<p>
+		Now SmartTech RightThere is here to provide exactly that! With 
+		our RealLife Platform, we can provide connectivity can provide connectivity 
+		between any older N7 RightThere System rooms can collaborate with new Lync 
+		clients in Virtual Meeting Rooms. You can install an the HDX Eye Detector and 
+		other cool immersive technologies right in your N7 environments. You can even use
+		your traditional NUCM and N7 video assets.
+		</p>
+		<p>
+		Not only does this work out-of-the-box, but its also smart. Reducing bandwidth 
+		and eliminating the need for expensive gateways to tie everything together. 
+		</p>
+		<p>
+		Even better, it's all based on the RightThere Interoperability Protocol which 
+		is open and available to any vendor signed up to IMTC. As Eileen Li, our CMO, 
+		said at our recent briefing on the release: "Enterprises need to ensure they use 
+		open and interoperable protocols to ensure that they get the functionality they 
+		need while protecting existing investments. A multivendor approach can reduce 
+		costs and simplify network complexity"
+		</p>
+
+		</textarea>
+		<br /> <input type="submit" value="Post it!">
+	</form>
+
+
+	<button onclick="alert(CKEDITOR.instances['editorId'].getData());">Get
+		Editor Html</button>
+
+
+    <br/><br/>
+    <textarea rows="10" cols="80" id="lastPost"></textarea>
+    
+	<script type="text/javascript">
+        CKEDITOR.replace('editorName',{documentFilename:"http://www.acrolinx.de/about_de.html"});
+        $('#lastPost').val(getUrlParameterByName('editorName'));
+    </script>
+</body>
+</html>

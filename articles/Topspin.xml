@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<!DOCTYPE Article PUBLIC "-//SoftQuad Software//DTD Journalist v2.0 20000501//EN" "file:///C:/Program%20Files/Corel/XMetaL%204/Author/Rules/journalist.dtd">
+<Article> 
+  <Title> Topspin 360 Quick Start</Title>
+  <Para> This document will describe the basic steps required to install and
+	 configure the Topspin 360 system. </Para> 
+  <Sect1> 
+	 <Title>Requirements</Title>
+	 <Para>To install the Topspin 360 into a rack, you require the
+		following:</Para> 
+	 <ItemizedList> 
+		<ListItem>one #1 and one #2 Phillips-head screwdriver 
+		</ListItem> 
+		<ListItem>one management workstation, such as a PC running
+		  terminal-emulation software 
+		</ListItem> 
+		<ListItem>one chasis cable kit (included) 
+		</ListItem> 
+		<ListItem>two people to safely lift the unit into the rack 
+		</ListItem> 
+	 </ItemizedList> 
+  </Sect1> 
+  <Sect1> 
+	 <Title>Topspin 360 Package Contents</Title>
+	 <Para>You will find the following items in your Topspin shipment: </Para> 
+	 <ItemizedList> 
+		<ListItem>1 Topspin 360 Server Switch 
+		</ListItem> 
+		<ListItem>1 or 2 12-port InfiniBand switch blades 
+		</ListItem> 
+		<ListItem>1 or 2 power supplies 
+		</ListItem> 
+		<ListItem>1 or 2 fan trays 
+		</ListItem> 
+		<ListItem>1 or 2 system controllers 
+		</ListItem> 
+		<ListItem>2 rack-mount brackets and mounting screws 
+		</ListItem> 
+		<ListItem>1 power-supply blanking panel 
+		</ListItem> 
+		<ListItem>1 expansion card blanking panel 
+		</ListItem> 
+		<ListItem>1 console-cable kit, which includes a DB-9 M/F serial cable 
+		</ListItem> 
+		<ListItem>1 or 2 6-foot (1.8-meter) AC power cables 
+		</ListItem> 
+		<ListItem>1 CD-ROM containing software and user documentation 
+		</ListItem> 
+		<ListItem>1 Quick Start Guide 
+		</ListItem> 
+		<ListItem>1 warranty card 
+		</ListItem> 
+	 </ItemizedList> 
+  </Sect1> 
+  <Sect1> 
+	 <Title>Preparing the Site</Title>
+	 <Para>To prepare the site for the Topspin 360, perform the following
+		steps:</Para> 
+	 <OrderedList> 
+		<ListItem> Read the cautionary statements in "Safety Information" on page
+		  v. 
+		</ListItem> 
+		<ListItem> Fill the Topspin registration form out online. Go to
+		  http://www.topspin.com/support/prodreg.cfm. 
+		</ListItem> 
+		<ListItem>Check that the rack environment provides sufficent
+		  ventilation. 
+		</ListItem> 
+		<ListItem>Unpack the Topspin 360 package. 
+		</ListItem> 
+		<ListItem>Check that you have all of the items on the Requirements list.
+		  Refer to "Requirements" on page 1. 
+		</ListItem> 
+	 </OrderedList> 
+  </Sect1> 
+  <Sect1> 
+	 <Title>Install Topspin 360 FRUs</Title>
+	 <Para>Install gateways and switch cards to increase the port count of your
+		switch.</Para> 
+	 <Note> 
+		<Para>Whenever possible, install all FRUs before you rack your Topspin
+		  360. You can continue to add or replace FRUs after you rack your device.</Para>
+		
+	 </Note> 
+	 <Para>To install field replaceable units (FRUs), perform the following
+		steps:</Para> 
+	 <OrderedList Style="LAlpha"> 
+		<ListItem>Install any expansion modules (Fibre Channel gateways or
+		  Ethernet gateways): 
+		  <OrderedList Style="LAlpha"> 
+			 <ListItem> Remove any filler panels from slots that will have a card
+				installed. Begin by filling the first gateway slot (slot 2). 
+			 </ListItem> 
+			 <ListItem> Install Ethernet and/or Fibre Channel gateways, as
+				appropriate to your Topspin system. For more information, see “Install an
+				Ethernet or Fibre Channel Gateway‿ in the Topspin 360 Hardware Guide. 
+			 </ListItem> 
+		  </OrderedList> 
+		</ListItem> 
+		<ListItem>Install a additional InfiniBand switch card: 
+		  <OrderedList Style="LAlpha"> 
+			 <ListItem>Remove the blanking panel from the slot. 
+			 </ListItem> 
+			 <ListItem>Slide the IB switch card firmly into place. 
+			 </ListItem>
+			 <ListItem>Check the fan blades are free.
+			 </ListItem> 
+			 <ListItem> Tighten the screws to the on the left and right-hand sides
+				of the IB switch card. 
+			 </ListItem> 
+		  </OrderedList> 
+		</ListItem> 
+	 </OrderedList> 
+  </Sect1> 
+  <Sect1> 
+	 <Title>Rack the Topspin 360</Title>
+	 <Para>To mount the Topspin 360 in a rack, perform the following
+		steps:</Para> 
+	 <OrderedList> 
+		<ListItem>Open the Topspin box. 
+		</ListItem> 
+		<ListItem> Remove the chassis, rack brackets, CD-ROM, parts bag, and
+		  documentation. 
+		</ListItem> 
+	 </OrderedList> 
+	 <Para><Strong>CAUTION</Strong>: Don't lift the 360 chassis by the front
+		(bezel end) and back (service end). Lift the unit by the sides to prevent
+		damage.</Para> 
+	 <OrderedList> 
+		<ListItem>Place the chassis on a secure, clean surface. 
+		</ListItem> 
+		<ListItem>Open the plastic bag that contains the mounting hardware. 
+		</ListItem> 
+		<ListItem>Check that the rack will provide sufficient clearance for the
+		  Topspin 360. 
+		</ListItem> 
+		<ListItem> Loosen the nuts on the sides of the rack brackets, then adjust
+		  the length of your brackets to fit your rack. Tighten the bracket screws when
+		  the brackets fit the rack. Extend the brackets to 29 inches or contract them to
+		  24 inches. 
+		</ListItem> 
+		<ListItem>Attach the side flanges to the sides of the chassis with the
+		  screws provided, as shown in Figure 1-1 and Figure 1-2. 
+		</ListItem> 
+	 </OrderedList><Graphic FileRef="chassis.png" Depth="304" Width="635"/> 
+	 <Para>Figure 1-1: Positioning the Side Flanges </Para> 
+  </Sect1> <LastModDate>Saturday, July 29, 2006 6:32:00 PM</LastModDate> 
+</Article> 
