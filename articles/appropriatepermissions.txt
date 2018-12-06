@@ -1,0 +1,29 @@
+
+Jello WOOOORLD!
+
+.
+Access Requirements for Selected Tasks
+
+
+
+
+Access Requirements for Selected Tasks
+
+You can perform a specific action on a target resource only if an evaluation of all of the resource's access controls indicates that the necessary permissions have been granted to you (or to a group to which you belong).
+
+Select one of the following for more information about common security-related tasks:
+
+setting access controls
+managing user definitions and logins
+managing group definitions and logins
+managing ACTs and Permission objects
+
+
+
+
+See also:
+Setting Permissions
+
+
+
+
