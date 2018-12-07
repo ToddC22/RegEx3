@@ -1,2 +1,2 @@
 {:allowed-branchname-matches ["master" "release-.*"]
- :allowed-filename-matches ["private"]}
+ :allowed-filename-matches ["articles" "testing" "private"]}
