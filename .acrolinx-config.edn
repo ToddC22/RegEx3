@@ -1,2 +1,3 @@
 {:allowed-branchname-matches ["master" "release-.*"]
+ :ignored-filetypes ["XML" "HTML" "JAVA" "CPP" "PROPERTIES" "JSON"]
  :allowed-filename-matches ["articles" "testing" "private" "Teams/"]}
