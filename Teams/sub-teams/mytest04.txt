@@ -1,1 +1,3 @@
-a silly test, this should not beeee testttted by Acrolinx.
+### Mytest TXT file
+
+Another silly test, this should not beeee testttted by Acrolinx.
