@@ -1,3 +1,17 @@
 {:allowed-branchname-matches ["master" "release-.*"]
- :ignored-filetypes ["XML" "HTML" "JAVA" "CPP" "PROPERTIES" "JSON"]
+ :template-header
+  "
+## Acrolinx Scorecards
+
+**A minimum Acrolinx score of 80 is required.**
+
+Click the scorecard links for each article to review the Acrolinx feedback on grammar, spelling, punctuation, writing style, and terminology:
+
+| Article | Acrolinx<br>Score | Lowest<br>Category<br>Score | Issues | Scorecard | Processed |
+|---------|:--------------:|:--------------------:|:------:|:---------:|:---------:|
+"
+
+ :template-change
+ "| ${s/file} | ${acrolinx/qualityscore} | ${acrolinx/flags/min-score} | ${acrolinx/flags/issues} | [link](${acrolinx/scorecard}) | ${s/status} |
+"
  :allowed-filename-matches ["articles" "testing" "private" "Teams/"]}
