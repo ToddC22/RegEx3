@@ -14,4 +14,4 @@ Click the scorecard links for each article to review the Acrolinx feedback on gr
  :template-change
  "| ${s/file} | ${acrolinx/qualityscore} | ${acrolinx/flags/issues} | [link](${acrolinx/scorecard}) | ${s/status} |
 "
- :allowed-filename-matches ["articles" "testing" "private" "Teams/"]}
+ :allowed-filename-matches nil
