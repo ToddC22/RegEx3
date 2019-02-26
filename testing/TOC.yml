@@ -1,0 +1,546 @@
+- name: Docs Contributor Guide
+  href: index.md
+- name: Contribute to the contributor guide
+  href: contribute-to-contributor-guide.md
+- name: What's new in the Contributor Guide
+  href: contribute-whats-new.md
+- name: Get Started
+  items:
+  - name: GitHub overview
+    href: contribute-get-started-git-github-fundamentals.md
+  - name: Quick browser edits
+    href: contribute-how-to-edit-article.md
+  - name: Set up your GitHub account
+    href: contribute-get-started-setup-github.md
+  - name: Install Git/Markdown tools
+    href: contribute-get-started-setup-tools.md
+    displayName: vscode, vs code, visual studio code, setup, set up, git, git bash, acrolinx, docs authoring pack, extensions
+  - name: Fork and clone a repository
+    href: fork-and-clone.md
+  - name: Make changes to an article
+    href: edit-doc-with-vs-code-and-git-cli.md
+  - name: Rebase and squash
+    href: rebase-and-squash.md
+- name: Create content
+  items:
+  - name: Plan
+    items:
+    - name: Writing content for C+AI
+      displayName: mvc content model milestones
+      href: contribute-get-started-mvc.md
+    - name: Choose a content type
+      href: content-type-comparison.md
+    - name: Request approval for an exception or experiment
+      href: content-model-exception-process.md
+    - name: Public vs private repos
+      href: contribute-authors-in-public-repo.md
+    - name: Plan content releases
+      href: contribute-content-release-planning.md
+      displayName: release branch
+    - name: Content channel guidance
+      items:
+      - name: Overview
+        href: contribute-get-started-channel-guidance.md
+      - name: Case studies + customer stories
+        href: case-studies.md
+      - name: White papers
+        href: contribute-whitepapers.md
+      - name: Blogs
+        href: contribute-blog-to-article.md
+      - name: Troubleshooting
+        displayName: error
+        href: contribute-troubleshooting.md
+  - name: Write
+    items:
+    - name: Write an overview
+      href: contribute-how-to-write-overview.md
+    - name: Write a quickstart
+      href: contribute-how-to-mvc-quickstart.md
+    - name: Developer quickstarts
+      href: contribute-developer-quickstarts.md
+    - name: Write a tutorial
+      href: contribute-how-to-mvc-tutorial.md
+    - name: Write a sample
+      href: contribute-how-to-mvc-samples.md
+    - name: Templates
+      items:
+      - name: Overview template
+        href: global-overview-template.md
+      - name: Quickstart template
+        href: global-quickstart-template.md
+      - name: Tutorial template
+        href: global-tutorial-template.md
+      - name: Create or update a template
+        href: templates/template-create-or-update.md
+      - name: Azure templates
+        items:
+        - name: Tutorial
+          href: templates/azure/tutorial-template-azure.md
+      - name: .NET templates
+        items:
+        - name: Tutorial
+          href: templates/dotnet/tutorial-template-dotnet.md
+        - name: Quickstart
+          href: templates/dotnet/quickstart-template-dotnet.md
+      - name: SQL templates
+        items:
+        - name: Tutorial
+          href: templates/sql/tutorial-template-sql.md
+    - name: File name and folder path guidelines
+      href: file-path-guidelines.md
+    - name: Optimize for search
+      items:
+      - name: SEO Basics
+        href: contribute-how-to-write-seo-basics.md
+      - name: Run an SEO hackadoc
+        href: how-to-seo-hackadoc.md
+      - name: SEO rules validation and troubleshooting
+        href: seo-improvements-troubleshooting.md
+    - name: Using release branches
+      href: contribute-release-branches.md
+    - name: Add art to articles
+      items:
+      - name: Create a screenshot
+        href: contribute-how-to-create-screenshot.md
+        displayName: image images art png gif jpg jpeg picture pictures
+      - name: Create an expandable screenshot
+        href: contribute-how-to-use-lightboxes.md
+      - name: Create conceptual art
+        href: contribute-how-to-create-conceptual-art.md
+      - name: Create an animated GIF
+        href: contribute-animated-gifs.md
+    - name: Add videos to articles
+      items:
+      - name: Plan a video
+        href: contribute-video-plan.md
+      - name: Create a video
+        href: contribute-video-create.md
+      - name: Publish a video
+        href: contribute-video-publish.md
+    - name: Add code to articles
+      href: code-in-docs.md
+      displayName: backtick, code blocks, inline code blocks, repo snippet reference, !code-, interactive code snippets, programming languages, languages, code extensions, extensions
+    - name: Add links to articles
+      href: links-how-to.md
+    - name: Add alerts to articles
+      href: markdown-extension-snippets.md
+    - name: Add lists and bullets in articles
+      href: contribute-how-to-mvc-lists-bullets.md
+    - name: Add metadata to articles
+      items:
+      - name: Metadata overview
+        href: metadata-overview.md
+      - name: How to apply metadata
+        href: metadata-how-to-apply.md
+      - name: Metadata attributes
+        href: metadata-attributes.md
+        displayName: includes metadata
+      - name: APIScan metadata
+        href: metadata-apiscan.md
+      - name: Metadata changes
+        href: metadata-changes.md
+    - name: Include reusable content in articles
+      href: includes-best-practices.md
+      displayName: includes include file
+    - name: GDPR references in documentation
+      href: contribute-add-gdpr-references.md
+  - name: TOCs
+    items:
+    - name: TOC structure
+      href: contribute-toc-mvc-how-to.md
+    - name: TOC file format
+      href: toc-management.md
+    - name: Contextual TOC
+      href: contextual-toc.md
+    - name: TOC Visualizer
+      href: toc-visualizer.md
+  - name: Landing + hub pages
+    items:
+    - name: Create a landing page
+      href: contribute-how-to-write-landing-page.md
+    - name: Update a landing or hub page
+      href: contribute-landing-page-process.md
+  - name: Repository-specific guidance
+    items:
+    - name: Azure
+      items:
+      - name: Aliases for Azure tech content
+        href: azure-aliases.md
+      - name: File names and locations for Azure technical articles
+        href: contribute-azure-file-names-and-locations.md
+      - name: Request a change on azure.microsoft.com (ACOM)
+        href: https://acomportal.azure.net/#Workspaces/AcomRequests/Create
+      - name: Service updates
+        href: http://acomdocs.azurewebsites.net/articles/service-updates-overview/
+      - name: Subscriptions for writers
+        href: azure-subscription.md
+      - name: Sovereign clouds
+        href: contribute-sovereign-clouds.md
+      - name: New service checklist
+        href: new-azure-service-checklist.md
+    - name: Azure Architecture Center
+      items:
+      - name: Overview
+        href: ./architecture-center/index.md
+      - name: Design patterns
+        href: ./architecture-center/design-pattern.md
+      - name: Example scenarios
+        href: ./architecture-center/example-scenario.md
+      - name: Reference architectures
+        href: ./architecture-center/reference-architecture.md
+    - name: Azure DevOps
+      items:
+      - name: Track content contributions
+        href: azure-devops-work-item-tracking.md
+      - name: Content review checklist
+        href: azure-devops-checklist.md
+      - name: Azure DevOps aliases
+        href: azure-devops-aliases.md
+      - name: Repositories, docsets & owners
+        href: azure-devops-content-areas-and-owners.md
+      - name: Metadata guidance
+        href: azure-devops-metadata.md
+      - name: Publishing workflow
+        href: azure-devops-ops-workflow.md
+      - name: Versioning guidance
+        href: azure-devops-versioning-monikers.md
+      - name: Tabbed conceptual tags
+        href: azure-devops-tabbed-conceptual-tags.md
+      - name: Terminology & branding
+        href: azure-devops-terminology-guidance.md
+      - name: Navigation guidelines
+        href: azure-devops-navigation-guidance.md
+    - name: Power BI
+      items:
+      - name: Power BI docs
+        href: powerbi-docs.md
+    - name: SQL
+      items:
+      - name: Contribute to SQL docs
+        href: sql-docs-pr-get-started.md
+      - name: SQL docs guidance
+        href: sql-server-docs-contribute.md
+      - name: SQL versioning guidance
+        href: sql-docs-pr-repo-ops-conceptual-versioning.md
+- name: Improve content
+  items:
+  - name: Before you publish
+    items:
+    - name: Customer research
+      items:
+      - name: How to perform customer research 
+        href: contribute-how-to-perform-customer-research.md
+      - name: How to select a research method
+        href: contribute-how-to-choose-a-research-method.md
+      - name: How to perform customer interviews
+        href: contribute-how-to-do-customer-interviews.md
+    - name: Technical principles
+      items:
+      - name: Technical principles checklist
+        href: technical-principles-checklist.md
+      - name: Conventions - Azure CLI
+        href: conventions-azure-cli.md
+      - name: Conventions - Azure PowerShell
+        href: conventions-azure-ps.md
+    - name: Request a Technical Focused Review (TFR)
+      href: contribute-how-to-manage-technical-focused-review.md
+    - name: Writing principles
+      displayName: Voice principles, 5 principles, five principles
+      href: writing-principles.md
+      items:
+      - name: Writing principles checklist
+        href: writing-principles-checklist.md
+      - name: Writing principles job aid
+        href: writing-principles-voice-job-aid.md
+      - name: Everyday word list
+        href: writing-principles-everyday-words.md
+    - name: Request a Customer Focused Review (CFR)
+      href: contribute-how-to-manage-customer-focused-review.md
+    - name: Accessibility
+      items:
+      - name: Accessibility guidelines
+        href: contribute-accessibility-guidelines.md
+      - name: Alt text
+        href: contribute-alt-text.md
+    - name: Product names and terminology
+      href: product-names-terms.md
+    - name: Legal guidelines
+      href: contribute-legal-guidelines.md
+    - name: Format text
+      href: text-formatting-guidelines.md
+    - name: Policheck for GitHub
+      href: policheck.md
+    - name: Acrolinx
+      items:
+      - name: Acrolinx overview
+        href: contribute-get-started-setup-acrolinx-overview.md
+      - name: Acrolinx extension for VS Code
+        href: contribute-get-started-setup-acrolinx-vscode.md
+        displayName: vscode, visual studio code, spell check, spelling, spellcheck, grammar, install
+      - name: Acrolinx integration for GitHub
+        href: contribute-get-started-setup-acrolinx-github.md
+      - name: Acrolinx minimum score
+        href: acrolinx-min-score.md
+      - name: Acrolinx reporting
+        href: acrolinx-report.md
+      - name: Acrolinx error messages
+        href: acrolinx-error-messages.md
+    - name: Review content in a pull request
+      items:
+      - name: Writing/Publishing best practices
+        href: contribute-how-to-write-best-practices.md
+      - name: Use CodeFlow for content reviews
+        href: contribute-how-to-review-pr-with-codeflow.md
+      - name: Use GitHub for content reviews
+        href: contribute-how-to-write-pull-request-reviews.md
+      - name: Content validation with CATS
+        href: contribute-how-to-test-with-cats.md
+  - name: After you publish
+    items:
+    - name: Editorial service
+      href: contribute-apex-editorial-service.md
+    - name: Customer feedback - Azure Pulse program
+      href: process-pulse-overview.md
+    - name: Customer feedback - PSAT program
+      href: process-psat-overview.md
+    - name: Customer feedback in GitHub Issues
+      items:
+      - name: Overview of GitHub issues for doc feedback
+        href: github-issues-feedback.md
+      - name: Policies for GitHub issues for doc feedback
+        href: github-issues-feedback-policy.md
+      - name: Triaging GitHub issues
+        displayName: issues labels
+        href: github-issues-feedback-triage.md
+      - name: Configuring GitHub issues for doc feedback
+        displayName: label automation
+        href: github-feedback.md
+      - name: Documentation feedback process for Azure CXP
+        href: contribute-customer-feedback-azure-cxp-process.md
+      - name: Documentation feedback process for Azure content authors
+        href: contribute-customer-feedback-azure-authors-process.md
+      - name: FAQ about the change to GitHub issues
+        href: contribute-customer-feedback-azure-faq.md
+      - name: GitHub issues and PR reports
+        href: github-reports.md
+    - name: Manage and maintain content
+      href: contribute-how-to-manage.md
+    - name: Freshness
+      href: freshness.md
+    - name: Triage underperforming articles
+      href: triage-underperforming-articles.md
+    - name: Host a hackadoc
+      href: how-to-hackadoc.md
+    - name: Run experiments
+      href: contribute-how-to-manage-using-experiments.md
+    - name: Interpret data and feedback
+      items:
+      - name: Overview
+        href: contribute-how-to-manage-data.md
+      - name: Viewing content related data in SkyEye reports and search
+        href: contribute-how-to-manage-data-skyeye.md
+      - name: Other ways of getting content data
+        href: contribute-how-to-manage-data-other.md
+        displayName: skyeye, skyray, sky ray, kusto
+      - name: Kusto query library
+        href: contribute-kusto-queries.md
+        displayName: query, metrics, BI
+    - name: Act on data and customer feedback
+      href: contribute-how-to-manage-act.md
+    - name: Quick data references and job aids
+      href: contribute-how-to-manage-reference.md
+    - name: Guidelines for responding to customer bug reports
+      href: contribute-how-to-manage-act-customer-bug-reports.md
+    - name: Best practices for fixing actionable verbatims
+      href: contribute-how-to-manage-act-bp-actionable-verbatims.md
+    - name: Best practices for responding to social media comments
+      href: contribute-how-to-manage-act-bp-responding-social-media.md
+    - name: Presenting and sharing data with partner teams
+      href: contribute-how-to-manage-act-share-data-partners.md
+    - name: Typical Root Cause Analysis (RCA) on content
+      href: contribute-how-to-manage-act-rca.md
+    - name: Delete, rename, or move articles
+      items:
+      - name: Retire or rename an article
+        displayName: redirect
+        href: retire-rename-articles.md
+      - name: Refactor, rename, or move many articles
+        displayName: Dr. Move redirect
+        href: retire-rename-many-articles.md
+      - name: Rename a product or service in content
+        href: rename-product-service.md
+      - name: Redirect obsolete articles
+        href: redirect-articles.md
+- name: Publish content
+  items:
+  - name: Workflow
+    items:
+    - name: 'Workflow: minor/infrequent'
+      href: contribute-how-to-write-workflows-minor.md
+    - name: 'Workflow: major/long-running'
+      href: contribute-how-to-write-workflows-major.md
+  - name: Pull request review process
+    items:
+    - name: PR comment automation
+      href: contribute-how-to-write-pull-request-automation.md
+    - name: PR content quality criteria
+      href: contribute-how-to-write-pull-request-quality-criteria.md
+    - name: PRMerger overview
+      href: prmerger-overview.md
+    - name: .Net docs PR Review process
+      href: contribute-pr-review-process-without-pr-merger.md
+    - name: PR submission best practices
+      href: contribute-how-to-write-pull-request-etiquette.md
+    - name: Resolve merge conflicts
+      href: resolve-merge-conflicts.md
+    - name: Break up large PRs
+      href: contribute-break-up-pull-requests.md
+    - name: Public PR response guidance
+      href: contribute-how-to-manage-act-guidelines-public-pr.md
+    - name: Standard, out-of-band, and hotfix publishing
+      href: oob-and-hotfix-publishing.md
+  - name: Migrate GitHub project documentation to Docs
+    href: contribute-migrate-github-to-docs.md
+- name: API Reference content
+  href: ../contribute-ref/TOC.md
+- name: Localization
+  items:
+  - name: Localization Overview
+    items:
+    - name: Get to know Content + Learning DOCs content localization
+      href: localization-get-started.md
+    - name: Azure DOCS Q&A
+      href: localization-azure-docs.md
+  - name: Avoid force push
+    href: contribute-how-to-write-loc-guidance.md
+  - name: Guidance for legal articles
+    href: localization-legal-guideline.md
+  - name: How the loc team selects content to localize
+    href: contribute-how-to-select-content-to-localize.md
+  - name: How to respond to private loc PRs
+    href: contribute-how-to-manage-act-guidelines-private-pr.md
+  - name: How to notify loc of priority content
+    href: contribute-how-to-notify-loc-of-priority-content.md
+- name: Resources
+  items:
+  - name: Markdown
+    items:
+    - name: Printable markdown cheat sheet
+      href: /help/contribute/media/documents/markdown-cheatsheet.pdf
+    - name: Markdown
+      href: contribute-how-to-write-use-markdown.md
+    - name: Markdown reference
+      href: markdown-reference.md
+    - name: DFM Code snippets
+      href: codesnippets.md
+  - name: Templates
+    items:
+    - name: Create or update a template
+      href: templates/template-create-or-update.md
+    - name: Azure templates
+      items:
+      - name: Tutorial
+        href: templates/azure/tutorial-template-azure.md
+    - name: .NET templates
+      items:
+      - name: Tutorial
+        href: templates/dotnet/tutorial-template-dotnet.md
+      - name: Advanced tutorial
+        href: templates/dotnet/advanced-tutorial-template-dotnet.md
+      - name: Quickstart
+        href: templates/dotnet/quickstart-template-dotnet.md
+    - name: SQL templates
+      items:
+      - name: Tutorial
+        href: templates/sql/tutorial-template-sql.md
+  - name: Tools
+    items:
+    - name: Additional tool installation options
+      href: contribute-get-started-setup-othertools.md
+    - name: Acrolinx extension
+      href: contribute-get-started-setup-acrolinx-vscode.md
+    - name: Docs Authoring pack
+      displayName: Gauntlet, markdownlint, spell checker, preview, templates, redirect
+      href: docs-authoring-pack.md
+    - name: Gauntlet extension
+      href: gauntlet.md
+    - name: Repo cleanup tool
+      href: clean-repo-tool.md
+  - name: Quality and vendor programs
+    items:
+    - name: Vendor supported quality program
+      href: contribute-vendor-supported-quality.md
+    - name: Tutorial review vendor checklist
+      href: contribute-tutorial-standards-review.md
+    - name: Public repo PR review
+      href: contribute-vendor-public-prs.md
+    - name: Vendor content authoring managed service engagement
+      href: vendor-team-authoring-engagement.md
+    - name: Vendor content authoring skillsets
+      href: vendor-team-author-skills.md
+    - name: Tiers, Acrolinx, and PR review coverage
+      href: contribute-tiers-acro-pr-review-list.md
+  - name: Writing and publishing
+    items:
+    - name: Contributors Guide Cheatsheet
+      href: common-tasks.md
+    - name: Understand repo roles and responsibilities
+      href: repository-roles.md
+    - name: C+L business approvers and repos list
+      href: contribute-business-approvers-and-repos.md
+    - name: Azure-specific business approvers list
+      href: faq-service-content-owners.md
+    - name: 'Cheat sheet: command-line steps'
+      href: contribute-git-commands-for-master.md
+    - name: Create and publish sample code
+      href: contribute-get-started-azure-samples.md
+    - name: Docs onboarding guide
+      href: ../onboard/index.md
+    - name: Docs SkyEye analytics
+      href: https://aka.ms/skyeye
+    - name: Cloud style guide
+      href: https://worldready.cloudapp.net/Styleguide/Read?id=2696
+    - name: Microsoft style guide
+      href: https://worldready.cloudapp.net/Styleguide/Read?id=2700
+    - name: Docs instructor-led training kit
+      href: training/index.md
+    - name: OPS/Docs SiteHelp portal
+      href: https://sitehelp.microsoft.com/
+    - name: OPS docset portal
+      href: https://ops.microsoft.com/
+    - name: OPS publishing portal
+      href: https://op-portal-prod.azurewebsites.net/
+    - name: OPS service health portal
+      href: https://review.docs.microsoft.com/en-us/vscinsights/?branch=master
+    - name: OPS user guide
+      href: https://opsdocs.azurewebsites.net/en-us/opsdocs/?branch=master
+    - name: Content + Learning Content Production Service
+      href: https://review.docs.microsoft.com/content-production-service/?branch=master
+    - name: Online course - Writing Technical Documentation for C+AI
+      href: https://learn.microsoft.com/activity/S675004/launch#/
+  - name: Git/GitHub
+    items:
+    - name: 'Git: Git basics'
+      href: https://git-scm.com/book/en/v2/Getting-Started-Git-Basics
+    - name: 'Git: Pro Git e-book (web)'
+      href: https://git-scm.com/book
+    - name: 'Git: Pro Git e-book (PDF)'
+      href: https://progit2.s3.amazonaws.com/en/2016-03-22-f3531/progit-en.1084.pdf
+    - name: 'Git: Learn Git course from Codecademy'
+      href: https://www.codecademy.com/learn/learn-git
+    - name: 'Git: Try Git course from Code School'
+      href: https://www.codeschool.com/courses/try-git
+    - name: 'GitHub: 15-minute interactive primer'
+      href: https://try.github.io/
+    - name: 'GitHub: Cheat sheets'
+      href: https://services.github.com/resources/cheatsheets/
+    - name: 'GitHub: GitHub Guides'
+      href: https://guides.github.com/
+    - name: 'GitHub: GitHub learning resources'
+      href: https://help.github.com/articles/git-and-github-learning-resources/
+    - name: 'GitHub: GitHub training services'
+      href: https://services.github.com/training/
+    - name: 'GitHub: Glossary'
+      href: https://help.github.com/articles/github-glossary
+    - name: Stack Overflow forums
+      href: http://stackoverflow.com/
