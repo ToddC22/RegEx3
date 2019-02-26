@@ -1,17 +1,3 @@
 {:allowed-branchname-matches ["master" "release-.*"]
- :template-header
-  "
-## Acrolinx Scorecards
-
-**A minimum Acrolinx score of 80 is required.**
-
-Click the scorecard links for each article to review the Acrolinx feedback on grammar, spelling, punctuation, writing style, and terminology:
-
-| Article | Score | Issues | Scorecard | Processed |
-| ------- | ----- | ------ | --------- | --------- |
-"
-
- :template-change
- "| ${s/file} | ${acrolinx/qualityscore} | ${acrolinx/flags/issues} | [link](${acrolinx/scorecard}) | ${s/status} |
-"
  :allowed-filename-matches ["articles/" "testing/" "Teams/"]
+}
