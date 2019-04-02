@@ -1,27 +1,27 @@
-- name: Docs Contributor Guides
+- name: Acrolinx internal testing yaml fileeeee
   href: index.md
-- name: Contribute to the contributor guide
+- name: Contribute to the contributor guidesssss
   href: contribute-to-contributor-guide.md
-- name: What's new in the Contributor Guide
+- name: What's newwwww in the Contributor Guide
   href: contribute-whats-new.md
-- name: Get Started
+- name: Get Started with some sillytestting 
   items:
   - name: GitHub overview
     href: contribute-get-started-git-github-fundamentals.md
   - name: Quick browser edits
     href: contribute-how-to-edit-article.md
-  - name: Set up your GitHub account
+  - name: Set up she GitHub account
     href: contribute-get-started-setup-github.md
   - name: Install Git/Markdown tools
     href: contribute-get-started-setup-tools.md
     displayName: vscode, vs code, visual studio code, setup, set up, git, git bash, acrolinx, docs authoring pack, extensions
   - name: Fork and clone a repository
     href: fork-and-clone.md
-  - name: Make changes to an article
+  - name: Makes chaning to they articlesss
     href: edit-doc-with-vs-code-and-git-cli.md
   - name: Rebase and squash
     href: rebase-and-squash.md
-- name: Create content
+- name: Create contenting funnnn
   items:
   - name: Plan
     items:
