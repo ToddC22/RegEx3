@@ -15,8 +15,6 @@ Click the scorecard links for each article to review the Acrolinx feedback on gr
 
  :template-change
  "| ${s/file} | ${acrolinx/qualityscore} | ${acrolinx/flags/min-score} | ${acrolinx/flags/issues} | [link](${acrolinx/scorecard}) | ${s/status} |
- 
- Click here to see the [Aggregated Analytics Report](${acrolinx/aggregdash}).
+  |Click here to see the [Aggregated Analytics Report](${acrolinx/aggregdash})|
 "
-
 }
