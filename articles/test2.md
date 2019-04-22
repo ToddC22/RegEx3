@@ -1,6 +1,6 @@
 # Testing new Event Post
 
-just  a simmple testtt.
+just  a simmple test.
 
 Hugo
 
