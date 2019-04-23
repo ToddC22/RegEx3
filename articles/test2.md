@@ -1,6 +1,6 @@
-# Testing new Event Post
+# Testing New Event Post
 
-just  a simmple test.
+Just a simple test.
 
 Hugo
 
