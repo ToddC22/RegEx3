@@ -11,7 +11,7 @@
           "**/includes/**",
           "**/_themes/**"
         ],
-        "src": "articles",
+        "src": "my articles for Client",
         "dest": "."
       },
       {
