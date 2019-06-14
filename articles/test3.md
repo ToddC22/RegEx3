@@ -1,4 +1,4 @@
-# Another Silly test.
+# Another Silly test
 
 Just a tessst.
 
