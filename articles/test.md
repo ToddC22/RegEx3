@@ -1,9 +1,7 @@
-# A sillii testttting
+# Validattion testttting
 
 Second test for the day. helllo
- another after 1.6 udpate
+ another after 1.7 udpate
 
- 06.27.19
+ 09.10.19
  H.M.
-
-Date 04.23.19
