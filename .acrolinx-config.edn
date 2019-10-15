@@ -9,12 +9,12 @@
 
 Click the scorecard links for each article to review the Acrolinx feedback on grammar, spelling, punctuation, writing style, and terminology:
 
-| Article | Acrolinx<br>Score | Lowest<br>Category<br>Score | Issues | Scorecard | Processed |
-|---------|:--------------:|:--------------------:|:------:|:---------:|:---------:|
+| Article | Acrolinx<br>Score | Lowest<br>Category<br>Score | Spelling<br>Flags<br>Found | Issues | Scorecard | Processed |
+|---------|:--------------:|:--------------------:|:-------------------:|:------:|:---------:|:---------:|
 "
 
  :template-change
- "| ${s/file} | ${acrolinx/qualityscore} | ${acrolinx/flags/min-score} | ${acrolinx/flags/issues} | [link](${acrolinx/scorecard}) | ${s/status} |
+ "| ${s/file} | ${acrolinx/qualityscore} | ${acrolinx/flags/min-score} | ${acrolinx/flags/spelling} | ${acrolinx/flags/issues} | [link](${acrolinx/scorecard}) | ${s/status} |
 "
  
  :template-footer
