@@ -1,7 +1,7 @@
 # Testing New Event Post
 
-Just a simple test. after  the 1.6 update
+Just a simple test. after  the 1.7.2 update
 
 Hugo
 
-04.22.2019
+10.31.2019.
