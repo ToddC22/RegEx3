@@ -20,7 +20,7 @@ Click the scorecard links for each article to review the Acrolinx feedback on gr
  :template-footer
  "
 **More info about Acrolinx**
-
-- Click here to see the [Aggregated Analytics Report](${acrolinx/aggregdash})
+- [Install Acrolinx locally for VSCode](https://review.docs.microsoft.com/en-us/help/contribute/contribute-acrolinx-vscode?branch=master)
+- [False positives or issues](https://aka.ms/acrolinxbug)
 "
 }
