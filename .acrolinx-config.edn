@@ -1,26 +1,3 @@
 {:allowed-branchname-matches ["master" "release-.*"]
  :allowed-filename-matches ["articles/" "testing/" "Teams/"]
- 
- :template-header
- "
-## Acrolinx Scorecards 3
-
-**A minimum Acrolinx score of 80 is required.**
-
-Click the scorecard links for each article to review the Acrolinx feedback on grammar, spelling, punctuation, writing style, and terminology:
-
-| Article | Acrolinx<br>Score | Lowest<br>Category<br>Score | Spelling<br>Flags<br>Found | Issues | Scorecard | Processed |
-|---------|:--------------:|:--------------------:|:-------------------:|:------:|:---------:|:---------:|
-"
-
- :template-change
- "| ${s/file} | ${acrolinx/qualityscore} | ${acrolinx/flags/min-score} | ${acrolinx/flags/spelling} | ${acrolinx/flags/issues} | [link](${acrolinx/scorecard}) | ${s/status} |
-"
- 
- :template-footer
- "
-**More info about Acrolinx**
-- [Install Acrolinx locally for VSCode](https://review.docs.microsoft.com/en-us/help/contribute/contribute-acrolinx-vscode?branch=master)
-- [False positives or issues](https://aka.ms/acrolinxbug)
-"
 }
