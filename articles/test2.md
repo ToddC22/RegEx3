@@ -1,7 +1,7 @@
 # Testing New Event Post
 
-Just a simple test. after  the 1.7.2 update
+Just a simple test. after adddddging the channnge to the instance's Dashboard login screeen.
 
 Hugo
 
-12.03.2019.
+12.10.2019.
