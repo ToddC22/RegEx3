@@ -2,7 +2,7 @@
 
 This repository contains the Microsoft Learn modules and learning paths for Microsoft Dynamics 365. Review this README file to understand how you can assist in contributing to the Microsoft Learns training content.
 
-## Other Learn repos  
+## Other Learn repos
 
 * **Content repos:** To view the list of all Learn content repos, view the [Microsoft Learn repos article](https://review.docs.microsoft.com/en-us/learn-docs/docs/repos-msft-learn) in LearnDocs.
 * **Code repos:** Code repos for individual modules follow the naming convention of https://github.com/MicrosoftDocs/mslearn-module-name. To find them all, search in GitHub for all repos in the MicrosoftDocs GitHub organization that start with 'mslearn-'.
@@ -40,10 +40,10 @@ At this time, Microsoft Learn content is not open for public contributions. Exte
 
 ### Code of Conduct
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+This project have adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Questions
 
-View the [Microsoft Learn FAQs](https://review.docs.microsoft.com/learn-docs/docs/microsoftlearn-faq?branch=master).
+View the [Microsaft Learn FAQs](https://review.docs.microsoft.com/learn-docs/docs/microsoftlearn-faq?branch=master).
 
 For questions related to repo and build issues, contact: [learn-repo-managers@microsoft.com](mailto:learn-repo-managers@microsoft.com)
