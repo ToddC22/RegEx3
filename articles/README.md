@@ -12,7 +12,7 @@ This repository contains the Microsoft Learn modules and learning paths for Micr
 The content in the Microsoft Learn repositories is developed, organized, and displayed differently than traditional Docs content.
 
 * **Development**: Modules and learning paths are highly curated training content with textual content, hands-on interactivity, live knowledge checks, videos, achievements and more. The APEX Learning team, in partnership with content teams, governs the roadmap and quality of content before publishing, for all products. These training assets are made up of YAML and MD files, in specific folder structures.
-* **Organization**: Learn repos are typically created for each product family rather than per-product. The content in these repos are aggregated together for the final experience (i.e. the files interact with each other, so you could include Azure and Business Applications content into a single learning path, if you need).
+* **Organization**: Learn repos are typically created for each product family rather than per-product. The content in these repos is aggregated together for the final experience (i.e. the files interact with each other, so you could include Azure and Business Applications content into a single learning path, if you need).
 * **Display**: Although there may be separate Learn landing pages for various product families, there is a single, all-up Microsoft Learn home page, as well as a dynamic browse page that shows all Learn content side-by-side, regardless of product.
 
 ### Home, landing, and browse pages
