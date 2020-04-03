@@ -1,7 +1,5 @@
 # Testing New Event Post
 
-Just a simple test. after adddddging the channnge to the instance's Dashboard login screeen.
-
-Hugo
-
-12.10.2019.
+Just a simple test. Adding the change to the instance's Dashboard sign in screen.
+Just a simple test. Adding the change to the instance's Dashboard sign in screen.
+Just a simple test. Adding the change to the instance's Dashboard sign in screen.
