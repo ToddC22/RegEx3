@@ -2,7 +2,7 @@
 
 This repository contains the Microsoft Learn modules and learning paths for Microsoft Dynamics 365. Review this README file to understand how you can assist in contributing to the Microsoft Learns training content.
 
-## Other Learn repos  
+## Other Learn repos
 
 * **Content repos:** To view the list of all Learn content repos, view the [Microsoft Learn repos article](https://review.docs.microsoft.com/en-us/learn-docs/docs/repos-msft-learn) in LearnDocs.
 * **Code repos:** Code repos for individual modules follow the naming convention of https://github.com/MicrosoftDocs/mslearn-module-name. To find them all, search in GitHub for all repos in the MicrosoftDocs GitHub organization that start with 'mslearn-'.
@@ -12,8 +12,8 @@ This repository contains the Microsoft Learn modules and learning paths for Micr
 The content in the Microsoft Learn repositories is developed, organized, and displayed differently than traditional Docs content.
 
 * **Development**: Modules and learning paths are highly curated training content with textual content, hands-on interactivity, live knowledge checks, videos, achievements and more. The APEX Learning team, in partnership with content teams, governs the roadmap and quality of content before publishing, for all products. These training assets are made up of YAML and MD files, in specific folder structures.
-* **Organization**: Learn repos are typically created for each product family rather than per-product. The content in these repos is aggregated together for the final experience (i.e. the files interact with each other, so you could include Azure and Business Applications content into a single learning path, if you need).
-* **Display**: Although there may be separate Learn landing pages for various product families, there is a single, all-up Microsoft Learn home page, as well as a dynamic browse page that shows all Learn content side-by-side, regardless of product.
+* **Organization**: Learn repos are typically created for each product family rather than per-product. The content in these repos is aggregated together for the final experience (that is, the files interact with each other, so you could include Azure and Business Applications content into a single learning path, if you need).
+* **Display**: Although there may be separate Learn landing pages for various product families, there is a single, all-up Microsoft Learn home page, as well as a dynamic browse page that shows all Learn content side by side, regardless of product.
 
 ### Home, landing, and browse pages
 
@@ -36,7 +36,7 @@ We welcome contributions and feedback. How you contribute depends on who you are
 
 ### External users
 
-At this time, Microsoft Learn content is not open for public contributions. External users can provide feedback by clicking on the 'Report an issue' email alias located at the bottom of any learning unit. The English alias is: learn-en-us@microsoft.com. If the user is viewing the site in any other language, they will be able to access the localized versions of the alias. Although this is one-way feedback, the content, engineering, and localization teams review and triage all incoming feedback on a daily basis.
+At this time, Microsoft Learn content is not open for public contributions. External users can provide feedback by clicking on the 'Report an issue' email alias located at the bottom of any learning unit. The English alias is: learn-en-us@microsoft.com. If the user is viewing the site in any other language, they will be able to access the localized versions of the alias. Although this is one-way feedback, the content, engineering, and localization teams review and triage all incoming feedback on a daily basis
 
 ### Code of Conduct
 
@@ -47,3 +47,4 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 View the [Microsoft Learn FAQs](https://review.docs.microsoft.com/learn-docs/docs/microsoftlearn-faq?branch=master).
 
 For questions related to repo and build issues, contact: [learn-repo-managers@microsoft.com](mailto:learn-repo-managers@microsoft.com)
+04.03.2020
