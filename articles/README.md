@@ -13,7 +13,7 @@ The content in the Microsoft Learn repositories is developed, organized, and dis
 
 * **Development**: Modules and learning paths are highly curated training content with textual content, hands-on interactivity, live knowledge checks, videos, achievements and more. The APEX Learning team, in partnership with content teams, governs the roadmap and quality of content before publishing, for all products. These training assets are made up of YAML and MD files, in specific folder structures.
 * **Organization**: Learn repos are typically created for each product family rather than per-product. The content in these repos is aggregated together for the final experience (i.e. the files interact with each other, so you could include Azure and Business Applications content into a single learning path, if you need).
-* **Display**: Although there may be separate Learn landing pages for various product families, there is a single, all-up Microsoft Learn home page, as well as a dynamic browse page that shows all Learn content side-by-side, regardless of product.
+* **Display**: Although there may be separate Learn landing pages for various product families, there is a single, all-up Microsoft Learn home page, as well as a dynamic browse page that shows all Learn content side by side, regardless of product.
 
 ### Home, landing, and browse pages
 
@@ -36,11 +36,11 @@ We welcome contributions and feedback. How you contribute depends on who you are
 
 ### External users
 
-At this time, Microsoft Learn content is not open for public contributions. External users can provide feedback by clicking on the 'Report an issue' email alias located at the bottom of any learning unit. The English alias is: learn-en-us@microsoft.com. If the user is viewing the site in any other language, they will be able to access the localized versions of the alias. Although this is one-way feedback, the content, engineering, and localization teams review and triage all incoming feedback on a daily basis.
+At this time, Microsoft Learn content is not open for public contributions. External users can provide feedback by clicking on the 'Report an issue' email alias located at the bottom of any learning unit. The English alias is: learn-en-us@microsoft.com. If the user is viewing the site in any other language, they will be able to access the localized versions of the alias. Although this is one-way feedback, the content, engineering, and localization teams review and triage all incoming feedback on a daily basis
 
 ### Code of Conduct
 
-This project have adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Questions
 
