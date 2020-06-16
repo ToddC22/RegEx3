@@ -1,4 +1,4 @@
 {:allowed-branchname-matches ["master" "release-.*"]
- :allowed-filename-matches ["articles/" "testing/" "Teams/" "subtesting/"]
+ :allowed-filename-matches ["*/*"]
  :use-gh-statuses true
 }
