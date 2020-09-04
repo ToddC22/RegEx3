@@ -5,7 +5,7 @@
  :targets 
   {
     :counts {
-             :spelling 10
+             ;:spelling 10
              ;;:grammar 3
              ;;:counts 15 ;; KC this one one work, please look at the following lines to achive what I think you have in mind here.
              ;;:total 15 ;; absolute flag count
@@ -15,7 +15,7 @@
              ;;:terminology 100
              ;;:min-score 50
              ;;:spelling 40
-             ;;:qualitycore 60 ;; This won't become available until A4GitHub 2.1, Currently plan for the 2nd half on 07/2020.
+             :qualityscore 60 ;; This won't become available until A4GitHub 2.1, Currently plan for the 2nd half on 07/2020.
              }
    }
 }
