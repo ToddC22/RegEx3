@@ -10,7 +10,6 @@ ms.author: weiluo
 ---
 
 # Common in operationsCommon
-
   
  Latest version of the JSON entity definition is available on <a href="https://github.com/Microsoft/CDM/tree/master/schemaDocuments/core/operationsCommon/Common.cdm.json" target="_blank">GitHub</a>.  
 
