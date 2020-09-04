@@ -1,5 +1,5 @@
 {:allowed-branchname-matches ["master" "release-.*"]
- :allowed-filename-matches ["(?i)^(?:(?!systemuser.md|common.md|brand.string.json|string.json)*$" "articles" "testing"]
+ :allowed-filename-matches ["(?i)^(?:(?!systemuser.md|common.md|brand.string.json|string.json)*$" "(?i)^articles/(?:(?!systemuser.md|common.md|brand.string.json|string.json))" "(?i)^testing/(?:(?!systemuser.md|common.md|brand.string.json|string.json))"]
  :use-gh-statuses true
  
  :targets 
