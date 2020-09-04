@@ -1,4 +1,4 @@
 {
   "_TopNavBar.Logout.comment": "Action for Logout menu when O365ShellHeader doesn't render.",
-  "TopNavBar.Logout": "Sign out"
+  "TopNavBar.Logout": "Signs out"
 }
