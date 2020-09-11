@@ -16,6 +16,6 @@
              ;;:min-score 50
              ;;:spelling 40
              :qualityscore 60 ;; This won't become available until A4GitHub 2.1, Currently plan for the 2nd half on 07/2020.
-             
+            }
    }
 }
