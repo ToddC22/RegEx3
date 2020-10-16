@@ -1,6 +1,6 @@
 {:allowed-branchname-matches ["master" "release-.*"]
  :allowed-filename-matches ["(?i)^articles/(?:(?!systemuser.md|common.md|sub-teams/common.md|sub-teams/systemuser.md|brand.string.json|string.json|sub-teams/brand.string.json|sub-teams/string.json))" "(?i)^testing/(?:(?!systemuser.md|common.md|brand.string.json|string.json|sub-teams/brand.string.json|sub-teams/string.json|sub-teams/common.md|sub-teams/systemuser.md))" "(?i)^Teams/(?:(?!systemuser.md|common.md|brand.string.json|string.json|sub-teams/brand.string.json|sub-teams/string.json|sub-teams/common.md|sub-teams/systemuser.md))"]
- :use-gh-statuses true
+ :use-gh-statuses false
  
  :targets 
   {
