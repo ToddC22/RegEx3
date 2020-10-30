@@ -14,7 +14,7 @@ search.audienceType:
 ---
 # SystemUser Entity Reference
 
-Person with acces to the Microsoft CRM system and who owns objects in the Microsoft CRM database.
+Person with access to the Microsoft CRM system and who owns objects in the Microsoft CRM database.
 
 
 ## Messages
