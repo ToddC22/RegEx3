@@ -1,0 +1,355 @@
+﻿<header><h1>Procedure: M365 TS: Error message when a Company Admin (GA/CA) tries to verify a domain in Microsoft 365</h1></header><div class="kb-summary-section section">
+<h3 class="sbody-h3"><span asset="4462485" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4462485]</span>Contents<a class="bookmark" id="toc"></a></h3>
+
+<ul class="sbody-free_list">
+	<li><a bookmark-id="sum" href="#sum" managed-link="" target="">Summary</a></li>
+	<li><a bookmark-id="assumptions" href="#assumptions" managed-link="" target="">Assumptions</a></li>
+	<li><a bookmark-id="procedure" href="#procedure" managed-link="" target="">Procedure</a></li>
+	<li><a bookmark-id="more" href="#more" managed-link="" target="">More information</a>
+	<ul class="sbody-free_list">
+		<li><a bookmark-id="resources" href="#resources" managed-link="" target="">Additional resources</a></li>
+		<li><a bookmark-id="related" href="#related" managed-link="" target="">Related articles</a></li>
+		<li><a bookmark-id="history" href="#history" managed-link="" target="">Version history</a></li>
+	</ul>
+	</li>
+</ul>
+</div>
+<div class="kb-summary-section section">
+<h3 class="sbody-h3">Summary<a class="bookmark" id="sum"></a></h3>
+<span class="text-base"><br>
+Who</span> should follow this procedure?
+
+<ul class="sbody-free_list">
+	<li>Data Protection Escalation Team (DPET &ndash; Global EN) and Frontline Support Engineers who handle Microsoft 365 Data Protection workflows (non-Global EN) and have been provisioned with the proper security permissions. All cases should be directed accordingly by using KB <a href="/help/2500396" id="kb-link-1" target="_self">2500396: Office 365 redirect resource sheet</a>.</li>
+</ul>
+<span class="text-base">What</span> is this procedure about?
+
+<ul class="sbody-free_list">
+	<li>When a Company Admin (GA/CA) tries to verify a domain in Microsoft&nbsp;365, and receives one of the following error messages:
+	<div class="sbody-error">
+	<div class="indent">&lt;Domain_Name&gt; has already been verified for your account, or for another Microsoft Online Services account.<br>
+	<br>
+	Can&#39;t verify the domain<br>
+	&lt;Domain Name&gt; was already added to a different Microsoft 365 account XXXX.onmicrosoft.com.<br>
+	Sign in to that account as an admin, and remove domain &lt;Domain Name&gt;. Then come back here and try adding &lt;Domain Name&gt; to this account again {select this text and the curly braces to enter content}</div>
+	</div>
+	</li>
+</ul>
+<span class="text-base">When</span> should this procedure be followed?
+
+<ul class="sbody-free_list">
+	<li>When a Company Admin (GA/CA) tries to verify a domain in Microsoft&nbsp;365, and it exists in another Microsoft 365 tenant.</li>
+	<li><strong>DO NOT</strong> follow this procedure when a customer is looking to verify the domain into a GoDaddy account. Redirect the customer (requestor) to Advance Technical Support (ATS) with GoDaddy. Do not offer to create a trial account to process a domain removal.</li>
+</ul>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to top</a></div>
+<div class="kb-summary-section section">
+<h3 class="sbody-h3">Assumptions<a class="bookmark" id="assumptions"></a></h3>
+<br>
+This article describes scenarios where a Company Admin (GA/CA) receives an error when trying to verify a domain to their Microsoft 365 account. This could mean that the GA/CA may or may not have awareness <span>of the domain associated to</span> another tenant.
+
+<ul class="sbody-free_list">
+	<li><span class="text-base">Unmanaged tenant</span>: This kind of tenant is created when customers sign up for a variety of Microsoft 365 offers using a business email address. These new tenants carry no Admin account, no Technical Contact. For more information, see <a href="/help/2995721" id="kb-link-2" target="_self">2995721: How to troubleshoot Commercial Self Service Offers in Office 365</a>, <a href="/help/3068485" id="kb-link-3" target="_self">3068485: Job aid for Commercial Self Service for Office 365</a> and <a href="https://support.office.com/en-us/article/how-to-manage-a-domain-already-in-use-by-people-in-your-organization-who-signed-up-with-their-work-or-school-email-address-b9707ec8-2247-4e25-9bad-f11ddbc686e4?ui=en-us&amp;rs=en-us&amp;ad=us" id="kb-link-4" target="_self">How to manage a domain already in use by people in your organization who signed up with their work or school email address</a>.</li>
+</ul>
+
+<p>Only a full&nbsp;entitled Admin (GA/CA) can request a domain removal.&nbsp;Entitle the caller via&nbsp;<a href="https://internal.support.services.microsoft.com/en-us/help/3023334" target="_blank">3023334: DPET How to perform entitlement in Office 365</a>.<br>
+<br>
+<br>
+Only an Admin (GA/CA) has the ability to remove a domain from within the Admin Portal.</p>
+
+<p><strong>Note:</strong> <strong>Removing a domain association alters mail flow, can affect tenant access, and may result in data loss. Requests need to be a carefully managed event.</strong><br>
+<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to top</a></p>
+</div>
+<div class="kb-summary-section section">
+<h3 class="sbody-h3">Procedure<a class="bookmark" id="procedure"></a></h3>
+<br>
+Ask the Admin (GA/CA) whether they are aware of the Microsoft 365 account that holds the vanity domain and if they have access to it.
+<ol class="sbody-num_list">
+	<li>If the Admin (GA/CA) is the Administrator on the M365 tenant where the domain is located, they must perform the following steps for domain removal:
+	<ol class="sbody-alpha_list">
+		<li>Sign in to the Microsoft 365 portal (<a href="https://portal.office.com/" id="kb-link-5" target="_self">https://portal.office.com</a>) as a Global Admin.</li>
+		<li>In the left navigation pane, click <strong class="uiterm">domains</strong>.</li>
+		<li>Select the domain that you want to remove, click <strong class="uiterm">Remove</strong>, and then follow the instructions on the page.</li>
+	</ol>
+	</li>
+	<li><span><span><span><span><span><span>Research both the target tenant and the holding tenant in Rave.</span></span></span></span></span></span>
+	<ol style="list-style-type:lower-alpha">
+		<li><span><span><span><span><span>Is the holding tenant unmanaged? Refer to: </span></span></span></span></span>
+		<ul>
+			<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2995721" managed-link="" target="_blank">2995721: How to troubleshoot Commercial Self Service Offers in Office 365</a></li>
+			<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/3068485" managed-link="" target="_blank">3068485: Job aid for Commercial Self Service for Office 365</a></li>
+			<li><a data-content-id="" data-content-type="" href="https://support.office.com/en-us/article/how-to-manage-a-domain-already-in-use-by-people-in-your-organization-who-signed-up-with-their-work-or-school-email-address-b9707ec8-2247-4e25-9bad-f11ddbc686e4?ui=en-us&amp;rs=en-us&amp;ad=us" managed-link="" target="_blank">How to manage a domain already in use by people in your organization who signed up with their work or school email address</a><span><span><span><span><span> </span></span></span></span></span></li>
+		</ul>
+		</li>
+		<li><span><span><span><span><span>Is the holding tenant a Student Advantage, Power BI, or Microsoft 365 Basic tenant or other IW Signup tenant scenario?</span></span></span></span></span>
+		<ul>
+			<li>If yes, please advise the customer that the resolution is self-service and follow the steps in <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/3068485" managed-link="" target="_blank">3068485: Job aid for Commercial Self Service for Office 365</a>.</li>
+			<li><span><span><span><span><span><span>If no, go to step 3B.</span></span></span></span></span></span><span><span><span><span><span> </span></span></span></span></span></li>
+		</ul>
+		</li>
+		<li><span><span><span><span><span>Are there similarities that point to the holding tenant being related to the target tenant, such as Company Name, Company Address, Admin Names, Technical Contact, Phone numbers, and so on?</span></span></span></span></span>
+		<ul>
+			<li>If there are similarities, document them. Continue by informing the requesting GA that we may have identified an &ldquo;intra-company connection&rdquo; between the tenants.</li>
+			<li><span><span><span><span><span><span>Request permission from the requesting Company Admin (GA/CA) to make an intra-company connection by sharing their contact information with the holding tenant Administrators. If permission is granted, call or/and email the holding tenant Admins and advise them that someone from their organization is requesting domain removal.&nbsp;If you can&rsquo;t reach the GAs on the phone, or no reply after 24 hours, go to step 4.</span></span></span></span></span></span><span><span><span><span><span> </span></span></span></span></span></li>
+		</ul>
+		</li>
+	</ol>
+	</li>
+	<li>If the Admin (GA/CA) doesn&#39;t know or doesn&#39;t have control over the Microsoft 365 tenant where the domain is located, follow these steps:
+	<ol style="list-style-type:lower-alpha">
+		<li>Review the target tenant:
+		<ul class="sbody-free_list">
+			<li>The requestor must be a GA/CA on the target tenant.</li>
+			<li>The GA/CA needs to fully entitle the account.</li>
+		</ul>
+		</li>
+		<li>Confirm that the requesting Admin (GA/CA) has control over the vanity domain:
+		<ul>
+			<li>Go to the domain tab in the Rave and select the domain.</li>
+			<li><span><span><span><span><span><span>Status should be: Unverified. </span></span></span></span></span></span></li>
+			<li>Click on Check DNS, look for &ldquo;verification records&rdquo; to get the TXT-MS=XXXXX code.</li>
+			<li>Check against public records to confirm that the code propagated correctly.</li>
+			<li>If the code is not visible through public records, provide the code to the customer and ask for it to be entered as a DNS TXT.</li>
+			<li><span><span><span><span>Document the <span>Microsoft</span></span></span></span></span><span lang="ES-CR"><span><span> </span></span></span><span><span><span><span> code in the case notes.</span></span></span></span></li>
+			<li>If the domain is not found in the target tenant, this means that the customer has not followed the instructions to verify the domain; ask the customer to do so using the <span><span><span><span><span>Microsoft</span></span></span></span></span> code.&nbsp;<br>
+			<span><span><span><span><span><strong>Note</strong>: Do not disclose any information about the holding tenant to the requestor.</span></span></span></span></span></li>
+		</ul>
+		</li>
+		<li>Verify if there is a root-child domain relationship in Rave: if there is a child domain, inform the customer that we need to first remove the child domain before removing the root domain.&nbsp;Before proceeding, customer must provide written approval to remove both root and child domains.</li>
+		<li>Verify that the domain is not federated. If the domain is federated: Inform the customer that we will need to remove the federation and we will need written authorization. Use&nbsp;<strong>Email template 1:&nbsp;</strong><a href="https://internal.support.services.microsoft.com/en-us/help/3178282#template%201"><strong>Reverse Federation | GA Confirmation</strong></a>.</li>
+		<li>If there are no similarities between the tenants, the domain is not federated&nbsp;and no child domains exist or the child domains are approved for removal, proceed to step 4.</li>
+	</ol>
+	</li>
+	<li><span><span><span><span><span>Explain to the caller that we need written confirmation from listed admin on the target account in order to proceed with the domain removal: Using the ticketing system, send an email to the GA making the request (both UPN and alt email) by using the <strong>Email template 2:</strong> <a bookmark-id="template" href="https://internal.support.services.microsoft.com/help/3178282#template" managed-link="">Domain Removal | GA Confirmation</a>.</span></span></span></span></span>&nbsp;
+	<ul>
+		<li><span><span><span><span>If no response is received </span></span></span><span lang="ES-CR"><span><span>in 24 business hours</span></span></span><span><span><span>, contact the GA (requestor) and explain that Microsoft is not able to proceed without the written confirmation.</span></span></span></span></li>
+		<li><span><span><span><span>If a positive response is received</span></span></span><span><span><span> in less than 24 business hours</span></span></span><span><span><span>, proceed to step 5.</span></span></span></span></li>
+		<li><span><span><span><span>If a positive response is received more than 24 business hours later, consult the case with your TA.</span></span></span></span></li>
+	</ul>
+	</li>
+	<li>Update the case with&nbsp;the following template:<br>
+	The following information needs to be added in the case notes:
+	<ul class="sbody-free_list">
+		<li>Customer must be fully entitled on the target tenant, and the entitlement must be completed over the phone.</li>
+		<li>Customer needs to be fully aware of risk of data lost and service interruption.</li>
+	</ul>
+	</li>
+</ol>
+<span class="text-base">DESCRIBE THE SITUATION </span><br>
+Describe the situation and provide the details of the work and research that was performed.<br>
+&nbsp;
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Name of requesting Company GA/CA</td>
+			<td class="sbody-td">List full name of GA</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">Is the GA on target tenant fully entitled?</td>
+			<td class="sbody-td">Yes / No</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Vanity domain in conflict</td>
+			<td class="sbody-td">List vanity domain</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">MODRD of current associated tenant (holding tenant)</td>
+			<td class="sbody-td">List Microsoft Online Direct Routing Domain (&lt;domain&gt;.onmicrosoft.com)</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">MODRD of Target tenant to be associated (requesting tenant)</td>
+			<td class="sbody-td">List Microsoft Online Direct Routing Domain<br>
+			<br>
+			(&lt;domain&gt;.onmicrosoft.com)</td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><span>DNS TXT Record&nbsp;(MS=XXX)</span></td>
+			<td class="sbody-td"><span>List TXT record place on DNS</span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Registrant Name</td>
+			<td class="sbody-td"><span class="sbody-italic">From </span>whois lookup results</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">Domain Removal | GA Confirmation received?</td>
+			<td class="sbody-td">Yes / No</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Business Impact</td>
+			<td class="sbody-td"># of users affected/industry/and so son</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<ul>
+	<li>Submit the domain removal request in Rave escalation.</li>
+	<li>If you are not provisioned with the proper security permissions for Domain Removal, escalate to Microsoft 365 Data Protection TA by sending an email message to <a href="mailto:o365dpta@microsoft.com" target="_self">O365DPTA@microsoft.com</a> and include the template that was added to the case.</li>
+</ul>
+
+<p><span><strong><span><span><span><a id="template 1" name="template 1"></a>1. Reverse Federation | GA Confirmation</span></span></span></strong></span></p>
+
+<p><span><span><span><span><strong>Instructions</strong>: Use this template to receive written confirmation from the GA listed in the target tenant before processing a reverse federation.</span></span></span></span></p>
+
+<p><span><span><span><span>To: <em>&lt;Alternate email address, primary email address of Requesting GA/CA and UPN&gt;</em></span></span></span></span></p>
+
+<p><strong>Email Template:</strong></p>
+
+<p><span><em><span><span></span></span></em><span><span><span><span><span>Hi &lt;customer first name&gt;</span></span></span></span></span><span><span><span>, </span></span></span></span></p>
+
+<p><span><span><span></span></span></span>Thanks for contacting Microsoft 365 customer support. Your request to<span><span><span><span> reverse federation of the domain &lt;xxxx&gt; will begin once you&nbsp;acknowledge it&rsquo;s possible that your request may cause service interruption and/or data loss related to this domain.</span></span></span></span></p>
+
+<p><span><span><span><span>Once you&#39;ve replied to this email with your confirmation, we&rsquo;ll proceed with the reverse federation.</span></span></span></span></p>
+
+<p><span><span><span><span>If you&#39;d like to coordinate the timing of this request, please provide the date and time.</span></span></span></span></p>
+
+<p><span><span><span><span>Your case number is &lt;rave case number&gt; if you need it.</span></span></span></span></p>
+
+<p><em><span><span><span></span></span></span></em>Thanks,<br>
+<br>
+<strong>First and Last Name</strong><br>
+Microsoft Customer Service and Support<br>
+Phone Number<br>
+Email address<em><span><span><span></span></span></span></em></p>
+
+<p><span><span><span><strong><a id="template" name="template"></a>2.&nbsp;Domain Removal | GA Confirmation</strong></span></span></span></p>
+
+<p><strong>Instructions</strong>: Use this template to receive written confirmation from the GA listed in the target tenant before processing a domain removal.</p>
+
+<p>To: <em><span><span><span><span><span>&lt;Alternate email address, primary email address of Requesting GA/CA and UPN&gt;</span></span></span></span></span></em></p>
+
+<p><em><span><span><span></span></span></span></em><strong>Email Template:</strong></p>
+
+<p>Thanks for contacting Microsoft 365 customer support. Your request to remove the domain &lt;xxxx&gt; will begin once you acknowledge it&rsquo;s possible that your request may cause service interruption and/or data loss related to this domain.</p>
+
+<p><span>Once you&#39;ve replied to this email with your confirmation, we&rsquo;ll remove the domain.</span></p>
+
+<p><span><span><span><span>If you&#39;d like to coordinate the timing of this request, please provide a date and time that works for you.</span></span></span></span></p>
+
+<p><span>Your case number is &lt;rave case number&gt; if you need it.</span></p>
+
+<p><em><span><span><span><span></span></span></span></span></em></p>
+
+<p><span><span><span><span><span>Thanks,<br>
+<br>
+<strong>First and Last Name</strong><br>
+Microsoft Customer Service and Support<br>
+Phone Number<br>
+Email address</span></span></span></span></span></p>
+
+<p><em><span><span><span><span></span></span></span></span></em></p>
+
+<p><a bookmark-id="toc" href="#toc" managed-link="" target="">back to top</a></p>
+</div>
+<div class="kb-summary-section section">
+<h3 class="sbody-h3">More information<a class="bookmark" id="more"></a></h3>
+
+<div class="indent">
+<h4 class="sbody-h4">Additional resources<a class="bookmark" id="resources"></a></h4>
+</div>
+
+<ul class="sbody-free_list">
+	<li>For more info about how to troubleshoot domain verification issues in Microsoft 365, see the following Microsoft Knowledge Base article: <a href="/help/2515404" id="kb-link-8" target="_self">2515404: Troubleshoot domain verification issues in Office 365</a></li>
+</ul>
+
+<div class="indent">
+<h4 class="sbody-h4">Related articles<a class="bookmark" id="related"></a></h4>
+</div>
+
+<ul class="sbody-free_list">
+	<li><a href="/help/2905700" id="kb-link-9" target="_self">2905700: TA removal of domain association procedure</a></li>
+	<li><a href="/help/2812881" id="kb-link-10" target="_self">2812881: Error message when you try to verify a domain in Office 365</a></li>
+	<li><span><span><span><span><span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3080083" managed-link="" target="_blank">Office 365 domain purchase experience</a></span></span></span></span></span></span></li>
+</ul>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to top</a><br>
+<a class="bookmark" id="history"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Version history</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p>&nbsp;</p>
+
+<div class="kb-collapsible kb-collapsible-collapsed">&nbsp;
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span><span class="text-base">CI #</span></span></td>
+			<td class="sbody-td"><span><span class="text-base">Date</span></span></td>
+			<td class="sbody-td"><span><span class="text-base">Brief description of changes</span></span></td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/119611">119611</a></td>
+			<td class="sbody-td">June 9, 2020</td>
+			<td class="sbody-td">Add Office 365 domain purchase experience as reference.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><span><span><span><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/118657" managed-link="" target="_blank">118657</a></span></span></span></td>
+			<td class="sbody-td">May 21, 2020</td>
+			<td class="sbody-td"><span><span><span>Updated customer facing email templates.</span></span></span></td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/118490" managed-link="" target="_blank">118490</a></td>
+			<td class="sbody-td">May 18, 2020</td>
+			<td class="sbody-td">Re-arrange and update step 2 and TXT verification details.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">116997</td>
+			<td class="sbody-td">April 23, 2020</td>
+			<td class="sbody-td">Add full entitlement requirement condition.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">115154</td>
+			<td class="sbody-td">March 13, 2020</td>
+			<td class="sbody-td">Remove VP related content and replace with Rave info.</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">98136</td>
+			<td class="sbody-td">2/18/2019</td>
+			<td class="sbody-td">Added additional info in case notes.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">100001</td>
+			<td class="sbody-td">4/1/2019</td>
+			<td class="sbody-td">Changed Office 365 to Microsoft 365.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">101502</td>
+			<td class="sbody-td">5/7/2019</td>
+			<td class="sbody-td">Add new step 4 in the procedure and add &quot;Email template 1: Domain Removal | GA Confirmation&quot;.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">102184</td>
+			<td class="sbody-td">5/17/2019</td>
+			<td class="sbody-td">Update the Email template 1.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">104676</td>
+			<td class="sbody-td">7/25/2019</td>
+			<td class="sbody-td">
+			<p>Added speak up asset and tag &ldquo;SUE_O365TSPPP&rdquo;.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">111006</td>
+			<td class="sbody-td">December 16, 2019</td>
+			<td class="sbody-td">
+			<p>Article title update and term changes. Also removed empty sections.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">113874</td>
+			<td class="sbody-td">Feb. 7, 2020</td>
+			<td class="sbody-td">Update root-child domain scenario.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to top</a></div>

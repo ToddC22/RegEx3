@@ -1,0 +1,488 @@
+﻿<header><h1>AES: Process: Back Office support advocates: Shopping Audit</h1></header><p class="kb-symptoms-section section"><span asset="4509089" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4509089]</span></p>
+
+<h3><span><span><span><span>Who should use this article?</span></span></span></span></h3>
+
+<ul>
+	<li><span><span><span><span><span>Back Office Support (BOS) advocates supporting the Advertiser Enablement Services (AES) program.</span></span></span></span></span></li>
+</ul>
+
+<h3><span><span><span><span>What is this article about?</span></span></span></span></h3>
+
+<p>This article covers how to run a Shopping Audit report.</p>
+
+<h3 class="kb-symptoms-section section"><a id="top" name="top"></a>Table of contents</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<h4>1. <a bookmark-id="1" href="#1" managed-link="" target="">Tools required</a></h4>
+			</td>
+			<td>
+			<p class="MsoToc2">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>2. <a bookmark-id="2" href="#2" managed-link="" target="">Definitions</a></h4>
+			</td>
+			<td>
+			<p class="MsoToc2">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>3. <a bookmark-id="3" href="#3" managed-link="" target="">ASD coding guidelines</a></h4>
+			</td>
+			<td>
+			<p class="MsoToc2">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>4. Running a shopping audit report</h4>
+			</td>
+			<td>
+			<p>4.1 <a bookmark-id="4.1" href="#4.1" managed-link="" target="">Gathering of requirements</a></p>
+
+			<p>4.2 <a bookmark-id="4.2" href="#4.2" managed-link="" target="">Running a Product Partition report</a></p>
+
+			<p class="MsoToc2"><span><span><span>4.3 </span></span></span><a bookmark-id="4.3" href="#_Step_5.3:_Sorting" managed-link="" target="">Sorting data for Benchmark Bids</a></p>
+
+			<p class="MsoToc2"><span><span><span>4.4 </span></span></span><a bookmark-id="4.4" href="#_Step_5.4:_Generating" managed-link="" target="">Generating Untargeted Offers report</a></p>
+
+			<p class="MsoToc2"><span><span><span>4.5 </span></span></span><a bookmark-id="4.5" href="#_Step_5.5:_Catalog" managed-link="" target="">Catalog and Feed Rejections</a></p>
+
+			<p><span><span><span><span>4.6 </span></span></span></span><span><span><span><a bookmark-id="4.6" href="#_Step_5.6:_Merchant" managed-link="" target="">Merchant Promotions</a></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td><span><span><span><span>5. </span></span></span></span><a bookmark-id="5" href="#5" managed-link=""><span><span><span>Preparing the Final Deliverable (output file)</span></span></span></a></td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<h3 class="kb-symptoms-section section"><a id="1" name="1"></a>1.&nbsp;Tools required</h3>
+
+<ul>
+	<li><span><span><span><span><span><span>Microsoft Advertising UI</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span>Microsoft Excel</span></span></span><span> </span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="top#top" managed-link="" target="">Return to top</a></p>
+
+<h3><a id="2" name="2"></a>2.&nbsp;Definitions</h3>
+
+<ul>
+	<li><span><span><strong><span><span><span>Microsoft Merchant Center</span></span></span></strong> &ndash;<span><span><span>&nbsp;Allows the advertiser to create a catalog, which includes images and other information about their products.</span></span></span></span></span></li>
+	<li><span><span><strong><span><span><span>Product Partition Report </span></span></span></strong>&ndash;<span><span><span>&nbsp;It shows the impressions, clicks, spend, average cost-per-click and conversion for each product group in your Shopping Campaigns.</span></span></span></span></span></li>
+	<li><span><span><strong><span><span><span>Benchmark Bids </span></span></span></strong><span><span><span>&ndash;</span></span></span><span><span><span>&nbsp;To see the performance data of the product groups in your shopping campaigns.</span></span></span></span></span></li>
+	<li><span><span><strong><span><span><span>Untargeted Offers </span></span></span></strong><span><span><span>&ndash; A&nbsp;downloadable diagnostic report that shows the number of offers in a store that is not targeted in your existing or new campaigns. This report will be generated once in 24 hours.</span></span></span></span></span></li>
+	<li><span><span><strong><span><span><span>Catalog Rejections </span></span></span></strong><span><span><span>&ndash; These depend on the target location/countries where the catalog will be used for. These error messages can be either about &ldquo;Adult Image&rdquo;, &ldquo;Weapon Image&rdquo; or &ldquo;Adult Content&rdquo;.</span></span></span></span></span></li>
+	<li><span><span><strong><span><span><span>Feed Rejections </span></span></span></strong><span><span><span>&ndash; These are error or warning messages when trying to upload feed file.</span></span></span></span></span></li>
+	<li><span><span><strong><span><span><span>Merchant Promotions </span></span></span></strong><span><span><span>&ndash; You can promote products directly from your Microsoft Shopping Campaigns&rsquo; inventory with special offer tags. Merchant Promotions are free to add to your product ads, with the usual charges for any clicks you get. Including Merchant Promotions can improve the visibility of your ads, which can lead to more clicks and improve your return on investment (ROI).</span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span><span><span><span><a bookmark-id="top" href="top#top" managed-link="">Return to top</a></span></span></span></span></span></span></span></span></p>
+
+<h3><a id="3" name="3"></a>3.&nbsp;ASD coding guidelines</h3>
+
+<p>ASD coding for shopping audit:</p>
+
+<p><strong>Ticket status:</strong> (choose the one that best fits your case): Completed, pending, or cancelled</p>
+
+<p><strong>Customer issue:</strong> Optimization Tactic Request</p>
+
+<p><strong>Topic</strong>: Shopping Campaigns Optimization</p>
+
+<p><strong>Scenario:</strong> Shopping Campaigns Audit</p>
+
+<p><strong>Problem:</strong> Shopping Campaigns Audit</p>
+
+<p class="CxSpFirst"><span><strong><span><span><span>Solution delivered</span></span></span></strong><span><span><span>: </span></span></span><span> </span><span><span><span>Shopping campaigns Audit Completed/Shopping Campaigns Audit Cancelled/Solution in Progress</span></span></span><strong><span> </span></strong></span></p>
+
+<p><span><span><span><span><span><span><span><span><a bookmark-id="top" href="top#top" managed-link="">Return to top</a></span></span></span></span></span></span></span></span></p>
+
+<h3><a id="4" name="4"></a>4.<strong>&nbsp;</strong>Running a shopping audit report</h3>
+
+<h4><a id="4.1" name="4.1"></a>4.1&nbsp;Gathering of requirements</h4>
+
+<p><span><span><span><span>Here you will find instructions on how you can gather all requirements necessary before conducting a shopping audit report.<br>
+<br>
+Account managers, specialists or frontline advocates will submit a request to the BOS team. Once received, the following steps should be completed.</span></span></span></span></p>
+
+<p><strong>Review of submission form</strong></p>
+
+<p>Review the submission form. The requester will specify the details of the account to be used for the shopping audit report, along with other instructions.</p>
+
+<ul>
+	<li>Check if all required fields were completed.</li>
+	<li>If required information is missing, reach out to the requester.</li>
+</ul>
+
+<p><strong><span><span><span>Pulling up the&nbsp;account</span></span></span></strong><br>
+<br>
+<span><span><span><span>Access the account through Microsoft Advertising UI.</span></span></span></span></p>
+
+<p><span><span><span><span><span><span><span><span><a bookmark-id="top" href="top#top" managed-link="">Return to top</a></span></span></span></span></span></span></span></span></p>
+
+<h4><span><span><span><a id="4.2" name="4.2"></a>4.2 Running a Product partition report</span></span></span></h4>
+
+<ol>
+	<li><span><span><span><span><span><span><span>From the UI, search for the account and navigate your way to the </span></span></span></span><strong><span><span><span>Reports</span></span></span></strong><span><span><span><span><strong> </strong>tab. Download a Production partition report by expanding the </span></span></span></span><strong><span><span><span>Product ads category</span></span></span></strong><span><span><span><span> and selecting </span></span></span></span><strong><span><span><span>Product partition</span></span></span></strong><span><span><span><span> as the report type.</span></span></span></span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4541318" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541318]</span></p>
+
+<ol start="2">
+	<li>Under <strong>General settings</strong>, run a product partition report using the settings below:</li>
+</ol>
+
+<ul>
+	<li class="indent-1">Unit of time: <strong>Summary</strong></li>
+	<li class="indent-1">Date range: <strong>Last 30 days</strong> (unless otherwise specified in your ticket)</li>
+	<li class="indent-1">Time zone: <strong>Leave as is</strong></li>
+	<li class="indent-1">Format: <strong>Excel</strong></li>
+	<li class="indent-1">What to report on: <strong>Specific accounts and campaigns</strong></li>
+</ul>
+
+<p class="indent-1"><strong>Note</strong>: For <strong>Date range</strong>, you may run the report using <strong>Last 14 days</strong> in case the <strong>Last 30 days </strong>resulted to nothing.</p>
+
+<p class="indent-1"><span asset="4541319" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541319]</span></p>
+
+<ol start="3">
+	<li>
+	<p><span><span><span><span>Be sure to add the following columns from the </span></span></span></span><strong><span><span><span>Performance Statistics&nbsp;</span></span></span></strong><span><span><span><span>list of columns:</span></span></span></span></p>
+	</li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span>Benchmark bid</span></span></span></span></li>
+	<li class="indent-1"><span><span><span><span>Impression share</span></span></span></span></li>
+	<li class="indent-1"><span><span><span><span>Impression share lost to budget</span></span></span></span></li>
+	<li class="indent-1"><span><span><span><span>Impression share lost to rank</span></span></span></span></li>
+	<li class="indent-1"><span><span><span><span>Return on ad spend</span></span></span></span></li>
+</ul>
+
+<p class="indent-1"><span asset="4541320" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541320]</span></p>
+
+<ol start="4">
+	<li>Before the file is downloaded, <strong>sort all 20 columns in</strong> the following order:</li>
+</ol>
+
+<ul>
+	<li class="indent-1">Account</li>
+	<li class="indent-1">Campaign</li>
+	<li class="indent-1">Ad group</li>
+	<li class="indent-1">Product group ID</li>
+	<li class="indent-1">Product group</li>
+	<li class="indent-1">Product partition type</li>
+	<li class="indent-1">Current Max CPC</li>
+	<li class="indent-1">Benchmark bid</li>
+	<li class="indent-1">Impression share</li>
+	<li class="indent-1">Impression share lost to rank</li>
+	<li class="indent-1">Impression share lost to budget</li>
+	<li class="indent-1">Impressions</li>
+	<li class="indent-1">Clicks</li>
+	<li class="indent-1">CTR</li>
+	<li class="indent-1">Avg. CPC</li>
+	<li class="indent-1">Spend</li>
+	<li class="indent-1">Conversions</li>
+	<li class="indent-1">Conversion rate</li>
+	<li class="indent-1">CPA</li>
+	<li class="indent-1">Return on ad spend</li>
+</ul>
+
+<p class="indent-1"><span asset="4541321" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541321]</span></p>
+
+<ol start="5">
+	<li><strong><span><span><span>Download the report</span></span></span></strong><span><span><span><span> and rename the tab as </span></span></span></span><strong><span><span><span>Benchmark Bids</span></span></span></strong><span><span><span><span>. This excel file will serve as the actual base of your </span></span></span></span><strong><span><span><span>final deliverable</span></span></span></strong><span><span><span><span>.</span></span></span></span></li>
+</ol>
+
+<p><span><span><span><span><span><span><span><span><a bookmark-id="top" href="top#top" managed-link="">Return to top</a></span></span></span></span></span></span></span></span><span><span><span> </span></span></span></p>
+
+<h4><a id="4.3" name="4.3"></a>4.3 Sorting data for Benchmark Bids</h4>
+
+<ol>
+	<li><strong><span><span><span>Filter</span></span></span></strong><span><span><span><span><strong> </strong>the Product partition column to </span></span></span></span><strong><span><span><span>Subdivision</span></span></span></strong><span><span><span><span>, select </span></span></span></span><strong><span><span><span>OK</span></span></span></strong><span><span><span><span><strong> </strong>and delete all rows. Only </span></span></span></span><strong><span><span><span>Unit</span></span></span></strong><span><span><span><span><strong> </strong>should be left.</span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4541322" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541322]</span></p>
+
+<ol start="2">
+	<li>Next, <strong>add a new column</strong> between the <strong>Benchmark bid </strong>and <strong>Impression share</strong> columns. Rename this new column as <strong>Delta</strong>. Add an equation in column Delta to <strong>subtract the Current Maximum CPC</strong> <strong>from Benchmark bid</strong>. A sample formula is shown below:</li>
+</ol>
+
+<p class="indent-1"><span asset="4541340" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541340]</span></p>
+
+<ol start="3">
+	<li><span><span><span><span>Filter </span></span></span></span><strong><span><span><span>column Delta</span></span></span></strong><span><span><span><span> to </span></span></span></span><span><span><span><strong>Less Than or Equal To</strong>&hellip;</span></span></span><span><span><span><span> and indicate 0 as shown below. </span></span></span></span><strong><span><span><span>Delete</span></span></span></strong><span><span><span><span><strong> </strong>all rows that have<strong> </strong></span></span></span></span><strong><span><span><span>0 and any negative number</span></span></span></strong><span><span><span><span> under this column.</span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4541323" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541323]</span></p>
+
+<ol start="4">
+	<li><strong><span><span><span>Clear the filter</span></span></span></strong><span><span><span><span><strong> </strong>in column Delta. By now, you should only have numbers greater than 0. </span></span></span></span><strong><span><span><span>Delete column Delta</span></span></span></strong><span><span><span><span> after.</span></span></span></span></li>
+	<li><span><span><span><span>Apply column header </span></span></span></span><strong><span><span><span>filters</span></span></span></strong><span><span><span><span><strong> </strong>and</span></span></span></span><span><span><span> <strong>sort </strong></span></span></span><span><span><span><span>the </span></span></span></span><strong><span><span><span>Impression share lost to rank</span></span></span></strong><span><span><span><span><strong> </strong>column from </span></span></span></span><span><span><span><strong>Largest to Smallest</strong>.</span></span></span></li>
+	<li><span><span><span><span>Use </span></span></span></span><strong><span><span><span>Styles&nbsp;</span></span></span></strong><span><span><span><span>to highlight the columns as follows:</span></span></span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><strong>Neutral color</strong>&nbsp;for&nbsp;</span></span></span><span><span><span><span>Current Max CPC&nbsp;</span></span></span></span></li>
+	<li class="indent-1"><strong><span><span><span>Green </span></span></span></strong><span><span><span>for</span></span></span><strong><span><span><span>&nbsp;</span></span></span></strong><span><span><span><span>Benchmark Bids</span></span></span></span></li>
+	<li class="indent-1"><strong><span><span><span>Red </span></span></span></strong><span><span><span><span>for columns Impression share and Impression share to lost rank</span></span></span></span></li>
+</ul>
+
+<p class="indent-1"><span asset="4541324" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541324]</span></p>
+
+<p><strong>Note</strong>: In case column Delta shows that everything is less than or equal to 0 and nothing is left after deleting all rows, keep the tab as it is and retain its headers. Under <strong>column Account name</strong>, indicate the below:</p>
+
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<div class="row">
+<div class="col-xs-24">
+<p><em><span><span><span><span>After subtracting the Current Max CPC from the Benchmark Bids, all returned results are less than or equal to 0, thus, all values have been deleted.</span></span></span></span></em><span><span><span> </span></span></span></p>
+</div>
+</div>
+</div>
+</div>
+
+<p class="indent-1">&nbsp;<span asset="4541325" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541325]</span></p>
+
+<ol start="7">
+	<li><span><span><span><span>Remove any filters and save the file as Excel Workbook using the following name format: </span></span></span></span><em><span><span><span>Advertiser Name_Account Number</span></span></span></em></li>
+</ol>
+
+<p class="indent-1"><span asset="4541326" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541326]</span></p>
+
+<p><span><span><span><span><span><span><span><span><a bookmark-id="top" href="top#top" managed-link="">Return to top</a></span></span></span></span></span></span></span></span></p>
+
+<h4><a id="4.4" name="4.4"></a>4.4 Generating Untargeted Offers report</h4>
+
+<ol>
+	<li><span><span><span><span>From the Reports tab, navigate your way to </span></span></span></span><strong><span><span><span>Tools</span></span></span></strong><span><span><span><span><strong> </strong>then select </span></span></span></span><span><span><span><strong>Microsoft Merchant Center</strong> </span></span></span><span><span><span><span>from the dropdown menu.</span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4541327" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541327]</span></p>
+
+<ol start="2">
+	<li>
+	<p><span><span><span><span>Once you&rsquo;re in the </span></span></span></span><strong><span><span><span>Microsoft Merchant Center</span></span></span></strong><span><span><span><span> page, select the </span></span></span></span><strong><span><span><span>Store Name</span></span></span></strong><span><span><span><span> which will open the selected store&rsquo;s page for you.</span></span></span></span></p>
+	</li>
+</ol>
+
+<p class="indent-1"><span asset="4541346" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541346]</span></p>
+
+<p class="indent-1"><span><span><span><strong>Note</strong>: </span></span></span><span><span><span><span>There will be instances where an account would have multiple stores. The steps indicated in this article must be done across all stores, from generating untargeted offers down to downloading merchant promotions. This information must be collated and saved in one file. If&nbsp;the line items exceed Excel&rsquo;s limit, then it must be called out to the requester that the file(s) was saved in very large file share (VLFS). Make sure that the requester has access to VLFS before sending your closing email.<br>
+<br>
+In case of multiple untargeted offers from multiple stores under one account, you may the follow the steps below to organize them in tabs:</span></span></span></span></p>
+
+<ol start="1" style="list-style-type:decimal">
+	<li class="indent-1"><span><span><span><span>Insert </span></span></span></span><strong><span><span><span>columns A and B</span></span></span></strong><span><span><span><span> and rename them as<strong> </strong></span></span></span></span><strong><span><span><span>Store Name</span></span></span><span><span><span><span> </span></span></span></span></strong><span><span><span><span>and </span></span></span></span><strong><span><span><span>Store ID</span></span></span></strong><span><span><span><span>, respectively. To get this information, select the </span></span></span></span><strong><span><span><span>Store Details</span></span></span></strong><span><span><span><span> tab and copy the details you need as shown below:</span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4541347" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541347]</span></p>
+
+<ol start="2" style="list-style-type:decimal">
+	<li class="indent-1"><span><span><span><span>Inserting the first two columns will automatically move the rest to columns C to Q. </span></span></span></span><strong><span><span><span>Delete the top six rows </span></span></span></strong><span><span><span><span>as you will no longer need that information.</span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4541351" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541351]</span></p>
+
+<ol start="3" style="list-style-type:decimal">
+	<li class="indent-1"><span><span><span><strong>Add</strong></span></span></span><span><span><span><span><strong> </strong>the next untargeted offers from another store in the same account and paste them at the beginning of the last row in Column A.</span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4541352" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541352]</span></p>
+
+<p class="indent-1">Considering the file size, you may also divide the contents of the report for ease of attaching them in your email if it meets the allowable file size. If not, then upload them in VLFS.</p>
+
+<p class="indent-1"><span asset="4541353" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541353]</span></p>
+
+<ol start="4">
+	<li>
+	<p><span><span><span><span>Under the </span></span></span></span><strong><span><span><span>Store Summary tab</span></span></span></strong><span><span><span><span>, select the </span></span></span></span><strong><span><span><span>Store Issues</span></span></span></strong><span><span><span><span> to get the report for non-targeted items. Download the file and rename the tab as </span></span></span></span><strong><span><span><span>Untargeted</span></span></span><span><span><span><span>. </span></span></span></span><span><span><span>Move this tab</span></span></span></strong><span><span><span><span> next to Benchmark Bids in the final deliverable.</span></span></span></span></p>
+	</li>
+</ol>
+
+<p class="indent-1"><span asset="4541354" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541354]</span></p>
+
+<p class="indent-1"><span asset="4541355" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541355]</span></p>
+
+<p class="indent-1"><span><span><span><strong>Note</strong>: </span></span></span><span><span><span><span>Should the<strong> </strong></span></span></span></span><strong><span><span><span>Store Issues indicate 0</span></span></span></strong><span><span><span><span>, insert a new tab in your original file where the tab for Benchmark Bids is at and indicate </span></span></span></span><strong><span><span><span>No report generated</span></span></span></strong><span><span><span><span><strong> </strong>in cell A1. See sample below:</span></span></span></span></p>
+
+<p class="indent-1"><span asset="4541356" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541356]</span></p>
+
+<p><span><span><span><span><span><span><span><span><a bookmark-id="top" href="top#top" managed-link="">Return to top</a></span></span></span></span></span></span></span></span></p>
+
+<h4><span><span><span><a id="4.5" name="4.5"></a>4.5 Catalog and Feed Rejections</span></span></span></h4>
+
+<ol>
+	<li><span><span><span><span>Still inside the same Microsoft Merchant Center store, go to the </span></span></span></span><strong><span><span><span>Store summary M2 testing tab</span></span></span></strong><span><span><span><span> and select </span></span></span></span><strong><span><span><span>Catalog Summary V1</span></span></span></strong><span><span><span><span>. This is where you will find the list of catalogs in a store.</span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4541357" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541357]</span></p>
+
+<ol start="2">
+	<li>
+	<p><span><span><span><span>Once you see a </span></span></span></span><span><span><span><strong>View errors</strong></span></span></span><span><span><span><span><strong> </strong>link in the Status column, </span></span></span></span><span><span><span>select <strong>the actual Catalog name</strong></span></span></span><span><span><span><span> to view both Catalog and Feed rejections.</span></span></span></span></p>
+	</li>
+</ol>
+
+<p class="indent-1"><span asset="4541358" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541358]</span></p>
+
+<ol start="1" style="list-style-type:decimal">
+	<li class="indent-1"><span><span><span><span>To get the </span></span></span></span><strong><span><span><span>Catalog rejections</span></span></span></strong><span><span><span><span>, select<strong> </strong></span></span></span></span><strong><span><span><span>Download Details</span></span></span></strong><span><span><span><span> beside Download Summary.</span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4541365" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541365]</span></p>
+
+<ol start="2" style="list-style-type:decimal">
+	<li class="indent-1"><span><span><span><span>Open the file and </span></span></span></span><strong><span><span><span>move the tab</span></span></span></strong><span><span><span><span> to your final deliverable and </span></span></span></span><strong><span><span><span>rename</span></span></span></strong><span><span><span><span><strong> </strong>the tab as </span></span></span></span><strong><span><span><span>Catalog Errors</span></span></span></strong><span><span><span><span>.</span></span></span></span></li>
+	<li class="indent-1"><strong><span><span><span>Filter and sort</span></span></span></strong><span><span><span><span> the Type column from<strong> </strong></span></span></span></span><strong><span><span><span>A to Z</span></span></span></strong><span><span><span><span> so that </span></span></span></span><strong><span><span><span>Error</span></span></span></strong><span><span><span><span><strong> </strong>appears on top.</span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4541366" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541366]</span></p>
+
+<ol start="4" style="list-style-type:decimal">
+	<li class="indent-1">To get the <strong>Feed rejections</strong>, select <strong>Download Details</strong> under the <strong>Feed file details</strong> field and follow steps 2&nbsp;to 3. <strong>Rename </strong>this tab as <strong>Feed Errors</strong>.</li>
+</ol>
+
+<p class="indent-1"><span asset="4541367" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541367]</span></p>
+
+<p class="indent-1"><span><span><span><strong>Note</strong>: </span></span></span><span><span><span><span>In cases where there are </span></span></span></span><strong><span><span><span>multiple catalogs</span></span></span></strong><span><span><span><span> that have a <em>View errors</em> link in a single store, make sure to download every available Catalog and Feed rejections. Collate them in one tab (one for catalog and the other for feed rejections), following the steps below:</span></span></span></span></p>
+
+<ol start="1" style="list-style-type:decimal">
+	<li class="indent-1"><strong>Insert columns A to C</strong>. Then cut and paste <strong>Catalog Name</strong>, <strong>Catalog ID </strong>and <strong>Store ID</strong> to these new columns.</li>
+</ol>
+
+<p class="indent-1"><span asset="4541368" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541368]</span></p>
+
+<ol start="2" style="list-style-type:decimal">
+	<li class="indent-1"><strong>Delete the first three rows</strong>. Then, copy the details under the three new columns up to the last row.</li>
+</ol>
+
+<p class="indent-1"><span asset="4541369" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541369]</span></p>
+
+<ol start="3" style="list-style-type:decimal">
+	<li class="indent-1"><span><span><span><strong>Download </strong>a new set of Catalog rejections (see steps 1 and 2 under <a bookmark-id="4.5" href="#4.5" managed-link="">section 4.5</a></span></span></span><span><span><span><span>) and <strong>move the details</strong> to the original Catalog Errors tab in the <strong>final deliverable</strong>. Make sure to paste the new details in the beginning of the last row in Column A. See sample screenshot below:</span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4541370" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541370]</span></p>
+
+<p class="indent-1"><strong>Note</strong>: The same steps from 1&nbsp;to 3&nbsp;are applied for multiple Feed rejections as well. <strong>Do not forget</strong> to sort the Type column from A to Z afterwards.</p>
+
+<p><span><span><span><span><span><span><span><span><a bookmark-id="top" href="top#top" managed-link="">Return to top</a></span></span></span></span></span></span></span></span></p>
+
+<div>
+<h4><a id="4.6" name="4.6"></a>4.6 Merchant Promotions</h4>
+
+<ol>
+	<li><span><span><span><span>From the same Microsoft Merchant Center store, select the </span></span></span></span><strong><span><span><span>Promotions</span></span></span></strong><span><span><span><span><strong> </strong>tab.</span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4541373" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541373]</span></p>
+
+<ol start="2">
+	<li><span><span><span><span>Verify if the advertiser has any promotions set up. If they do not, state this in the </span></span></span></span><span><span><span>Merchant Promos</span></span></span><span><span><span><span> tab of the final report as </span></span></span></span><strong><span><span><span>No report generated</span></span></span></strong><span><span><span><span>. See sample screenshot in </span></span></span></span><span><span><span><span><a bookmark-id="4.4" href="#4.4" managed-link=""><strong>step 3</strong></a> </span></span></span></span><span><span> </span></span><span><span><span><span>of </span></span></span></span><strong><span><span><span>Generating Untargeted Offers report</span></span></span><span><span><span>.</span></span></span></strong></li>
+	<li><span><span><span><span>If promotions are set up, export all of them by selecting the top box. Once everything is selected, select the </span></span></span></span><strong><span><span><span>Export </span></span></span></strong><span><span><span><span>button.</span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4541374" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541374]</span></p>
+
+<ol start="4">
+	<li>A file in <em>.<strong>tsv</strong></em><strong> </strong>will start downloading and will open in Notepad. To convert this into an Excel file, go to the <strong>File </strong>menu and select <strong>Save As</strong>. A new window will open, and in the bottom right, update the <strong>Encoding </strong>dropdown menu from <strong>ANSI to Unicode</strong>. Add <em>.<strong>csv</strong></em><strong> </strong>in the file name and select <strong>Save</strong>.</li>
+</ol>
+
+<p class="indent-1"><span asset="4541375" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541375]</span></p>
+
+<p class="indent-1"><span asset="4541376" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541376]</span></p>
+
+<ol start="5">
+	<li><strong><span><span><span>Open the file back in Microsoft Excel</span></span></span></strong><span><span><span><span> and move the Promotions tab to the final deliverable. Rename the tab to </span></span></span></span><strong><span><span><span>Merchant Promos</span></span></span></strong><span><span><span><span>. Using styles, </span></span></span></span><strong><span><span><span>highlight</span></span></span></strong><span><span><span><span><strong> </strong>in green any promos with an </span></span></span></span><strong><span><span><span>Approved</span></span></span></strong><span><span><span><span><strong> </strong>state. On the other hand, set those that are </span></span></span></span><strong><span><span><span>In review</span></span></span></strong><span><span><span><span>, </span></span></span></span><strong><span><span><span>Pending</span></span></span></strong><span><span><span><span>, </span></span></span></span><strong><span><span><span>Paused</span></span></span></strong><span><span><span><span><strong> </strong>or </span></span></span></span><strong><span><span><span>Rejected</span></span></span></strong><span><span><span><span><strong> </strong>in red.</span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4541377" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541377]</span></p>
+
+<ol start="6">
+	<li><strong>Highlight </strong>in red any promos with an <strong>end date</strong> within the <strong>next 30 days</strong> from the date the report is being worked on.</li>
+</ol>
+
+<p class="indent-1">For example, the date of the report is October 21<sup>st</sup>, 2019. However, the next 30 days would include dates from October 22<sup>&nbsp;nd</sup>, to November 21<sup> st</sup>, 2019.</p>
+
+<p class="indent-1"><span asset="4541378" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541378]</span></p>
+
+<ol start="7">
+	<li><span><span><span><span>Lastly, </span></span></span></span><strong><span><span><span>highlight</span></span></span></strong><span><span><span><span><strong> </strong>in red any promos<strong> </strong></span></span></span></span><strong><span><span><span>without any matching products</span></span></span></strong><span><span><span><span> found in the </span></span></span></span><strong><span><span><span>Products Matched Status</span></span></span></strong><span><span><span><span> column.</span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4541379" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541379]</span></p>
+
+<p><span><span><span><span><span><span><span><span><a bookmark-id="top" href="top#top" managed-link="">Return to top</a></span></span></span></span></span></span></span></span></p>
+
+<h3><span><span><span><span><a id="5" name="5"></a>5. Preparing the Final Deliverable (output file)</span></span></span></span><span><span><span> </span></span></span></h3>
+
+<ol>
+	<li><span><span><span><span>In the final deliverable, </span></span></span></span><span><span><span>insert an Overview tab</span></span></span><span><span><span><span>. From the Standardized Output File, edit the details using the format below.</span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4541380" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541380]</span></p>
+
+<ol start="2">
+	<li><span><span><span><span>Rename the <span>output file </span> using the following name format: </span></span></span></span><em><span><span><span>Advertiser Name_XID_Shopping Audit_Date</span></span></span></em></li>
+</ol>
+
+<p><span><span><span><strong>Note</strong>: </span></span></span><span><span><span><span>Make sure to </span></span></span></span><span><span><span>include the message</span></span></span><span><span><span><span> below should you encounter any </span></span></span></span><span><span><span>Catalog/Feed rejections</span></span></span><span><span><span><span>. This must be communicated to your requester in the closing email.</span></span></span></span></p>
+
+<p><strong>Messaging:</strong></p>
+
+<p><em><span><span><span>&ldquo;Please review the Feed Rejections for</span></span></span></em><em> </em><span><a data-content-id="" data-content-type="" href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fhelp.ads.microsoft.com%2F%23apex%2F3%2Fen%2F52023%2F1&amp;data=02%7C01%7Cv-cavil%40microsoft.com%7Ce37fc3dc03004c834b7708d7621f778a%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637085760838638398&amp;sdata=TXxgzmASEQvc6ZaPFaR3659WyP5Y4u8qEXKcmSxSR%2B0%3D&amp;reserved=0" managed-link="" target="_blank">editorial disapprovals</a></span><em><span><span><span>, and submit disapprovals to editorial</span></span></span></em><em> </em><span><a data-content-id="" data-content-type="" href="mailto:nqs@microsoft.com" managed-link="" target="_blank">@Network Quality Services</a></span><em><span><span><span>.&rdquo;</span></span></span></em></p>
+
+<p><span><span><span><span><span><span><span><span><a bookmark-id="top" href="top#top" managed-link="">Return to top</a></span></span></span></span></span></span></span></span></p>
+</div>
+<p><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span><strong><span aria-label="Asset widget" contenteditable="false" role="region" tabindex="-1"></span>February 2020</strong></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Change history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="64">
+			<p><strong><span><span><span>Item</span></span></span></strong></p>
+			</td>
+			<td width="358">
+			<p><strong><span><span><span>Title</span></span></span></strong></p>
+			</td>
+			<td width="74">
+			<p><strong><span><span><span>Date</span></span></span></strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="64"><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/153619">CONTENT TRACKING 153619</a></td>
+			<td width="358">MAST: AES: Project:4540765 BOS KB Various Full Review&nbsp;</td>
+			<td width="74">5/7/2020</td>
+		</tr>
+		<tr>
+			<td width="64"><a class="caption" href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/151597">Content Tracking 151597</a></td>
+			<td width="358">MAST: From SU129: Advertising: Update wording to &quot;output file&quot; in KB 4540765</td>
+			<td width="74">2/20/2020</td>
+		</tr>
+		<tr>
+			<td width="64">
+			<p><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/151285">CONTENT TRACKING 151285</a></p>
+			</td>
+			<td width="358">MAST: New SDK article needed for AES (Shopping Audits): Overview 4540762 : Frontline Advocates 4540763 : AES advocates 4540765&nbsp;</td>
+			<td width="74">2/10/2020</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>

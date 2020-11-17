@@ -1,0 +1,682 @@
+﻿<header><h1>Procedure: Windows: Windows Defender offline anti-virus (AV)</h1></header><p><span asset="4049349" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4049349]</span></p>
+
+<h3><span><span><span><span><span>Who should use this article? </span></span></span></span></span></h3>
+
+<ul>
+	<li><span><span><span><span><span><span>Consumer Windows TS </span></span></span></span></span></span></li>
+</ul>
+
+<h3><span><span><span><span><span>What is this article about?</span></span></span></span></span></h3>
+
+<p><span><span><span><span><span>This article provides information for virus and malware removal using Windows Defender Offline AV process, for Windows TS advocates. </span></span></span></span></span></p>
+
+<h3><span><span><span><span><span> <a id="top" name="top"></a>﻿Table of contents</span></span></span></span></span></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<h4>1. <a bookmark-id="1" href="#1" managed-link="">Overview</a></h4>
+			</td>
+			<td>
+			<h4>&nbsp;</h4>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>2. <a bookmark-id="2" href="#2" managed-link="">ASD coding</a></h4>
+			</td>
+			<td>
+			<h4>&nbsp;</h4>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>3. <a bookmark-id="3" href="#3" managed-link="">Prerequisites</a></h4>
+			</td>
+			<td>
+			<h4>&nbsp;</h4>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>4. <a bookmark-id="4" href="#4" managed-link="">Defender workflow</a></h4>
+			</td>
+			<td>
+			<p>4.1 <a bookmark-id="4.1" href="#4.1" managed-link="">Scam call</a></p>
+
+			<p>4.2 <a bookmark-id="4.2" href="#4.2" managed-link="">Scam pop-up</a></p>
+
+			<p>4.3 <a bookmark-id="4.3" href="#4.3" managed-link="">Suspected virus</a></p>
+
+			<p>4.4 <a bookmark-id="4.4" href="#4.4" managed-link="">If virus activity persists</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>5. Troubleshooting steps by scenario</h4>
+			</td>
+			<td>
+			<p>5.1 <a bookmark-id="5.1" href="#5.1" managed-link="">Removing pop-ups</a></p>
+
+			<p>5.2 <a bookmark-id="5.2" href="#5.2" managed-link="">Manually reset Edge</a></p>
+
+			<p>5.3 ﻿<a bookmark-id="5.3" href="#5.3" managed-link="">How to use Defender Offline with third-party Antivirus installed?</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>6. Case note examples</h4>
+			</td>
+			<td>
+			<p>6.1 <a bookmark-id="6.1" href="#6.1" managed-link="">Scam call without access</a></p>
+
+			<p>﻿6.2 <a bookmark-id="6.2" href="#6.2" managed-link="">Scam call with access﻿</a></p>
+
+			<p>6.3 <a bookmark-id="6.3" href="#6.3" managed-link="">Scam pop-up removed</a></p>
+
+			<p>6.4 <a bookmark-id="6.4" href="#6.4" managed-link="">Scam pop-up not removed</a></p>
+
+			<p>6.5 <a bookmark-id="6.5" href="#6.5" managed-link="">Scam pop-up not while browsing</a></p>
+
+			<p>6.6<a bookmark-id="6.6" href="#6.6" managed-link=""> Suspected virus</a></p>
+
+			<p>6.7 <a bookmark-id="6.7" href="#6.7" managed-link="">Virus activity persists</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>7. <a bookmark-id="7" href="#7" managed-link="">FAQ</a></h4>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+<h3><span><a id="overview"></a></span><a id="1" name="1"></a>1. Overview</h3>
+
+<p><span><span><span><span><span>Virus and Malware removal is part of the Microsoft paid services (</span></span></span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/3049120" managed-link="" target="_blank">Assure</a></span><span><span><span>, </span></span></span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2805687" managed-link="" target="_blank">Microsoft Complete</a></span><span><span><span> and PPI) and PC or Tablets purchased at Microsoft Store.<br>
+<br>
+Your primary and only tool for scanning and removing viruses and malware is Windows Defender AV and Windows Defender Offline.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>The use of the Answer Desk Virus and Malware Removal tool (MSDT) is no longer permitted and has been removed. You should no longer use any of the tools that were listed in the Answer Desk wrapper, including third-party tools such as Hitman Pro. <strong><em>Third-party tools for virus and malware removal are not permitted.</em></strong></span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Manual removal of virus and malware is not recommended nor permitted. If a security threat (for example, virus, and malware) has been detected, and Windows Defender Offline is not able to remove it, advocates are expected to recommend a re-install of Windows or a reset/refresh of Windows. This approach is the fastest, most efficient way to recover a system compromised by malware infection.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>You are not required to stay connected with the customer for the duration of the virus/malware scan. The time required for the scan and removal process varies, as it depends on the number of files on the PC and the hardware specification. If the customer requests a follow up based on the outcome of scan/removal process, advocates are expected to proceed in accommodating a scheduled callback (escalation for a follow up). The callback arrangement (escalation) should only be made based on the customer&#39;s request. Only if customer request to stay connected, you can do so but be mindful of time you spent as well, you can always suggest calling back if you expect the process takes long time.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Avoid unnecessary troubleshooting steps. Numerous steps that are considered inappropriate have been identified. Many of these methods are very time-consuming and are inappropriate based on the call type (symptoms). Below is a list of troubleshooting step examples and approaches that should be avoided for a virus and malware removal:</span></span></span></span></span></p>
+
+<ul>
+	<li>Clearing Pre-fetch</li>
+	<li>Deleting cached files</li>
+	<li>Deleting temp files</li>
+	<li>Clearing Event Viewer</li>
+	<li>SFC scan</li>
+	<li>Defrag</li>
+	<li>Disk cleanup</li>
+	<li>Installing third-party ad blockers for web browsers.</li>
+	<li>Using Malwarebytes, or other third-party tools.</li>
+	<li>Staying online when running scans.</li>
+</ul>
+
+<p><span><span><span><span><span><span>This is not limited to the list above. The goal is to eliminate inappropriate troubleshooting practices and make use of this article as the only resource for virus and malware removal.</span></span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="2" name="2"></a>2. ASD coding</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><strong><span><span>Product Category</span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Select appropriate Windows version</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><strong><span><span><span>Sub Product</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Select appropriate Sub Product</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><strong><span><span><span>Topic</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Security and Privacy</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><strong><span><span><span>Sub Topic</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Virus or Malware</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><strong><span><span><span>Problem Description</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Use keywords: Virus, Malware Infection</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="3" name="3"></a>3. Prerequisites</h3>
+
+<p><span><span><span><span><span>The customer must meet the service requirements before you begin.<br>
+<br>
+Minimum requirements:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>Microsoft account one-time offers, including PSS PC tune-up, and virus removal may be purchased without Microsoft account, using Guest Checkout. See KB <a href="https://internal.support.services.microsoft.com/help/3039170" target="_blank"><span>3039170 Procedure: Microsoft software support services refunds</span></a>.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Broadband Internet connection.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Windows 7 or higher.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Internet Explorer 11 or higher, or Firefox 3.6 or higher.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>300 MHz or higher processor clock speed recommended, 233 MHz minimum required (single or dual processor system).</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Intel Pentium/Celeron, or AMD K6/Athlon/Duron, or compatible processor recommended.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>256MB RAM or higher recommended (minimum might limit performance and some features).</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>SVGA (1024 x 768) or higher display.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Recommended use of default browser security setting levels.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Adobe (Macromedia) Flash 8 and higher. </span></span></span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="4" name="4"></a>4. Defender workflow</h3>
+
+<h4><span><span><span><span><span><a id="4.1" name="4.1"></a>4.1 ﻿Scam call</span></span></span></span></span></h4>
+
+<ol>
+	<li><span><span><span><span><span><span>If the customer <strong>did not</strong> let the scammer access their PC:</span></span></span></span></span></span>
+
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>Direct customer to </span></span></span><span><a href="http://microsoft.com/reportascam" target="_blank"><span><span><span>http://microsoft.com/reportascam</span></span></span></a></span><span><span><span>.</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+</ol>
+
+<p class="indent-1"><span><span><span><span><span>Go to <span><a bookmark-id="6.1" href="#6.1" managed-link="">Scam call without access</a> </span></span></span></span><span><span> </span></span><span><span><span>section for example note. </span></span></span></span></span></p>
+
+<ol start="2">
+	<li><span><span><span><span><span><span>If the customer <strong>did </strong>let the scammer access their PC:</span></span></span></span></span></span>
+
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>Follow the same process as Suspected virus.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Share <em>Staying safe from scam calls </em>&nbsp;video with customer: </span></span></span><span><a data-content-id="" data-content-type="" href="https://aka.ms/AvoidScamCalls" managed-link="" target="_blank">https://aka.ms/AvoidScamCalls</a></span></span></span></span></li>
+	</ul>
+	</li>
+</ol>
+
+<p class="indent-1"><span><span><span><span><span>Go to <a bookmark-id="6.2" href="#6.2" managed-link=""><span>S</span></a><span><a bookmark-id="6.2" href="#6.2" managed-link="">cam call with access</a> </span></span></span></span><span><span> </span></span><span><span><span>section for </span></span></span><span><span> </span></span><span><span><span>example note. </span></span></span></span></span></p>
+
+<div>
+<div><a bookmark-id="top" href="#top" managed-link="">Return to top</a></div>
+
+<div>&nbsp;</div>
+
+<h4><a id="4.2" name="4.2"></a>4.2 Scam pop-up</h4>
+
+<ol>
+	<li><span><span><span><span><span><span>During browsing:</span></span></span></span></span></span>
+
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>Remove pop-up using instructions <a bookmark-id="6.3" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4019995" managed-link="" target="_blank">here</a></span></span></span><span><span><span>, and then restart computer.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>If the pop-up <strong>is gone</strong>, suggest the customer run a full virus scan at their convenience, and then complete the call. </span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>If the pop-up <strong>is not gone</strong>, follow the same process as <a bookmark-id="4.3" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4019995" managed-link="" target="_blank">Suspected virus</a></span></span></span><span><span><span>. </span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Share <em>Staying safe from web browser scams</em> video with the customer: </span></span></span><span><a data-content-id="" data-content-type="" href="https://aka.ms/AvoidWebScams" managed-link="" target="_blank">https://aka.ms/AvoidWebScams</a></span><span><span><span>.</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span>Getting a pop-up while not browsing (pop-up appears when using another app, such as Word):</span></span></span></span></span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span><span><span>Follow the same process as per <a bookmark-id="4.3" href="https://internal.support.services.microsoft.com/help/4019995" managed-link="" target="">Suspected virus</a></span></span></span><span><span> </span></span><span><span><span> section. </span></span></span></span></span></span></li>
+	<li class="indent-1"><span><span><span><span><span><span>Share <em>Staying safe from email and chat scams</em> video with the customer: </span></span></span><span><a data-content-id="" data-content-type="" href="https://aka.ms/AvoidScamEmails" managed-link="" target="_blank">https://aka.ms/AvoidScamEmails</a></span><span><span><span>.</span></span></span></span></span></span></li>
+</ul>
+
+<div>
+<p>&nbsp;<a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="4.3" name="4.3"></a>﻿4.3 Suspected virus</h4>
+</div>
+
+<ol>
+	<li>Check if Defender is up to date for Windows 8.1 and 10.</li>
+</ol>
+
+<p class="indent-1"><span asset="4020706" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4020706]</span></p>
+
+<ol start="2">
+	<li><span><span><span><span><span><span>Instructions for how to update Windows Defender when it&#39;s been turned off, or a third-party antivirus program is present, can be found <a bookmark-id="5.3" href="https://internal.support.services.microsoft.com/help/4019995" managed-link="" target="">﻿here</a></span></span></span><span><span>&nbsp;</span></span><span><span><span>.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Run Windows Defender Offline.</span></span></span></span></span></span></li>
+</ol>
+
+<ul style="list-style-type:disc">
+	<li class="indent-1"><span><span><span><span><span><span>For Windows 10, follow the instructions for Defender offline. </span></span></span><span><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/17466/windows-defender-offline-help-protect-my-pc" managed-link="" target="_blank">https://support.microsoft.com/help/17466/windows-defender-offline-help-protect-my-pc</a></span> </span></span></span></li>
+	<li class="indent-1"><span><span><span><span><span><span>For Windows 7, 8, and 8.1, use the instructions for creating offline media: </span></span></span><span><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/17466/windows-defender-offline-help-protect-my-pc" managed-link="" target="_blank">https://support.microsoft.com/help/17466/windows-defender-offline-help-protect-my-pc</a></span> </span></span></span></li>
+</ul>
+</div>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><span><span><span><span><a id="4.4" name="4.4"></a>4.4 Virus activity persists</span></span></span></span></span></h4>
+
+<ol>
+	<li><span><span><span><span><span><span>For Windows 7: Clean install of Windows 7 will remove all data and programs. Some machines will offer an option to go back to factory settings. The customer should check with OEM for those instructions. <strong>The</strong> <strong>customer will need to back up any needed files before the clean install.</strong> They will also need any installation disk for software that will need to be replaced after the reinstall. For Windows 7 Diskimages (ISO): </span></span></span><span><a href="https://www.microsoft.com/software-download/windows7" target="_blank"><span><span><span>https://www.microsoft.com﻿/software-download/windows7</span></span></span></a></span><span><span><span>.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>For Windows 8, 8.1, or 10: Back up data, and reset:</span></span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>Windows 8/8.1: <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/17085/windows-8-restore-refresh-reset-pc" managed-link="" target="_blank">How to refresh, reset, or restore your PC</a></span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Windows 10: <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/12415" managed-link="" target="_blank">Recovery options in Windows 10</a></span></span></span></span></span></span></li>
+	</ul>
+	</li>
+</ol>
+
+<p><span><span><span><span><span>Go to <span><a bookmark-id="6.7" href="#6.7" managed-link="">Virus activity persists</a> </span></span></span></span><span><span> </span></span><span><span><span>section for example note.</span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="5" name="5"></a>5. Troubleshooting steps by scenario</h3>
+
+<h4><span><span><span><span><span><a id="5.1" name="5.1"></a>5.1 ﻿Removing pop-ups</span></span></span></span></span></h4>
+
+<p><span><span><strong><span><span><span>Edge:</span></span></span></strong><span><span><span> Malicious pop-ups generally appear when the customer is browsing the web. Once the pop-up appears, it won&rsquo;t go away with normal procedures, such as close button or Alt + F4. When you do manage to close the pop-ups, sometimes it continue to re-appear on opening the browser. </span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Example</span></span></span></strong><span><span><span> (the text in the screen is designed to bring awareness to the customer and call a fake Microsoft number to encourage customers into paying money to remove it):</span></span></span></span></span></p>
+
+<p><span asset="4020525" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4020525]</span></p>
+
+<p><span><span><span><span><span>To remove this type of persistent screen, follow these steps:</span></span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span><span>Close the windows with Task Manager. Select<strong> CTRL+ ALT + Delete</strong> keys simultaneously, which will bring you to this screen:</span></span></span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span></span>&nbsp;<span asset="4020526" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4020526]</span></p>
+
+<ol class="indent-1" start="2">
+	<li>Select <strong>Task Manager</strong>, which will bring up this screen:</li>
+</ol>
+
+<div>
+<div>&nbsp;</div>
+</div>
+
+<p class="indent-1"><span asset="4020527" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4020527]</span></p>
+
+<ol start="3">
+	<li>Select&nbsp;<strong>Microsoft Edge</strong>&nbsp;in the list, and then&nbsp;<strong>End task</strong>.&nbsp;This will close the Edge program.</li>
+</ol>
+
+<p class="indent-1"><br>
+<strong>Note (Creators update only):</strong>&nbsp;After closing and re-opening Microsoft Edge, you will start at a new page, as Edge knows it was terminated. The offending page will be on its own tab and can be closed. If pop-up is resolved in this step, you can skip the remaining steps.</p>
+
+<ol start="4">
+	<li><span><span><span><span><span><span>Next, remove the Edge package from the operating system and replace it with the default version that ships with Windows 10. The MSDT tool <strong>Edge Malicious Pop-up removal tool</strong> doesn&#39;t remove virus or malware; it reinstalls and resets Edge.</span></span></span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4020528" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4020528]</span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="5.2" name="5.2"></a>5.2 Manually reset Edge</h4>
+
+<p><span><span><span><span><span>If the MSDT tool <strong>Edge Malicious Pop-up removal tool</strong> fails to execute, manual steps can be taken. Just like MSDT tool <strong>Edge Malicious Pop-up removal tool</strong>, this does not remove virus or malware, this reinstalls and resets Edge. </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Open the PowerShell ISE and run the following command:</span></span></span></span></span></p>
+
+<p><span><span><em><span><span><span>remove-item$env:localappdata\Packages\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\* -recurse-Force 2&gt;$null</span></span></span></em></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><span><span><span><span><a id="5.3" name="5.3"></a>5.3 How to use Defender Offline with third-party Antivirus installed?</span></span></span></span></span></h4>
+
+<p><span><span><span><span><span>When a third-party antivirus is installed, such as Norton, Defender signatures won&rsquo;t get updated and Defender Offline is not enabled.</span></span></span></span></span></p>
+
+<p><span asset="4020529" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4020529]</span></p>
+
+<p><span asset="4020530" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4020530]</span></p>
+
+<p><span><span><span><span><span>You can turn Defender back on without removing third-party antivirus by turning on Limited Periodic Scanning. In Windows Defender, select <strong>Turn On,</strong> or in <strong>Settings</strong> &gt; <strong>Update &amp; security</strong> &gt; <strong>Windows Defender</strong>, and turn on Limited Periodic Scanning.</span></span></span></span></span></p>
+
+<p><span asset="4020531" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4020531]</span></p>
+
+<p><span><span><span><span><span>Norton will show a pop-up dialog suggesting the user to turn Limited Periodic Scanning off.</span></span></span></span></span></p>
+
+<p><span asset="4020532" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4020532]</span></p>
+
+<p><span><span><span><span><span>For more information, see the </span></span></span><span><a href="https://support.norton.com/sp/en/us/home/current/solutions/v118532580_EndUserProfile_en_us?inid=hho_vanity_supp_kb_dlpsettings&amp;OpenDocument&amp;src=dlpsettings" target="_blank"><span><span><span>Learn More</span></span></span></a></span><span><span><span> page. </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>After turning on Limited Periodic Scanning, you need to download the latest Signatures through Windows Update or Windows Defender.</span></span></span></span></span></p>
+
+<p><span asset="4020533" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4020533]</span></p>
+
+<p><span><span><span><span><span>Then you can run <strong>Defender Offline</strong>.</span></span></span></span></span></p>
+
+<p><span asset="4020534" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4020534]</span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><span><span><span><span><span><a id="6" name="6"></a>6. Case note examples</span></span></span> ﻿</span></span></h3>
+
+<h4><span><span><span><span><span><a id="6.1" name="6.1"></a>6.1 ﻿Scam call without access</span></span></span></span></span></h4>
+
+<p><span><span><strong><span><span><span>Action:</span></span></span></strong><span><span><span> The customer received a support call claiming to be Microsoft, but they did not let caller access their PC.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Blocker:</span></span></span></strong><span><span><span> The customer was questioning whether this was Microsoft or a scam.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Solution:</span></span></span></strong></span></span></p>
+
+<ul style="list-style-type:disc">
+	<li><span><span><span><span><span>Educate the customer about the issue. (Be sure they understood.)</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Refer customers to <a href="http://www.microsoft.com/reportascam" target="_blank"><span>www.microsoft.com/reportascam</span></a> to report scam.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Provide case ID | Sent email | EOC.</span></span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><span><span><span><span><a id="6.2" name="6.2"></a>6.2 Scam call with access</span></span></span></span></span></h4>
+
+<p><span><span><strong><span><span><span>Action:</span></span></span></strong><span><span><span> The customer received a support call claiming to be Microsoft, but they let caller access their PC.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Blocker:</span></span></span></strong><span><span><span> The customer wasn&rsquo;t sure if this caller was from Microsoft.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Solution:</span></span></span></strong></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span>Educate the customer about the issue. Treat as an infected PC. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>Refer customers to <a href="http://microsoft.com/reportascam" target="_blank"><span>www.microsoft.com/reportascam</span></a> to report scam.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Run Windows Defender Offline.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Advise the customer to wait for the process of doing the scan and call back if virus was noted and could not be removed.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Provide case ID | Sent email | EOC.</span></span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="6.3" name="6.3"></a>6.3 Scam pop-up removed</h4>
+
+<p><span><span><strong><span><span><span>Action:</span></span></span></strong><span><span><span> Using pc browsing with Edge.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Blocker:</span></span></span></strong><span><span><span> Virus pop-up.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Solution:</span></span></span></strong></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span>Verify the account.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>LMI 12121212.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Start Task Manager Ended Edge Task.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Open Run Dialog, entered <a data-content-id="" data-content-type="" href="http://www.bing.com" managed-link="" target="_blank">www.bing.com</a>.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Close tab with the pop-up.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Close and reopen Edge.</span></span></span></span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span><span>Let the customer know that the issue is resolved, but they should run a virus scan at their convenience as a precaution.</span></span></span></span></span></li>
+</ul>
+
+<ol start="7">
+	<li><span><span><span><span><span>Issue solved.</span></span></span></span></span></li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><span><span><span><span><a id="6.4" name="6.4"></a>6.4 Sca﻿m pop-up not removed</span></span></span></span></span></h4>
+
+<p><span><span><strong><span><span><span>Action:</span></span></span></strong><span><span><span> Using pc browsing with Edge.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Blocker:</span></span></span></strong><span><span><span> Virus pop-up.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Solution:</span></span></span></strong></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span>Verify the account.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>LMI 12121212.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Start Task Manager Ended Edge Task.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Open Run Dialog, enter <a data-content-id="" data-content-type="" href="http://www.bing.com" managed-link="" target="_blank">www.bing.com</a>.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Close the tab with the pop-up.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Close and reopen Edge &ndash; Pop-up still on screen.</span></span></span></span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span><span>Edge Soft reset &ndash; Unable to do.</span></span></span></span></span></li>
+	<li class="indent-1"><span><span><span><span><span>Edge Hard reset &ndash; Failed to start.</span></span></span></span></span></li>
+</ul>
+
+<ol start="7">
+	<li><span><span><span><span><span>Check if Defender is up to date.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Start Defender Offline.</span></span></span></span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span><span>Advise the customer that this may take a while and if pop-up persist to call back.</span></span></span></span></span></li>
+	<li class="indent-1"><span><span><span><span><span>The customer asked for the advocate to remain online.</span></span></span></span></span></li>
+</ul>
+
+<ol start="9">
+	<li><span><span><span><span><span>Scan complete, one virus found and removed.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Restart the PC and check for pop-up.</span></span></span></span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span><span>No pop-up, issue solved.</span></span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><span><span><span><span><a id="6.5" name="6.5"></a>6.5 Sca﻿m pop-up while not browsing</span></span></span></span></span></h4>
+
+<p><span><span><strong><span><span><span>Action:</span></span></span></strong><span><span><span> Using pc editing a document in Word.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Blocker:</span></span></span></strong><span><span><span> Virus pop-up.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Solution:</span></span></span></strong> </span></span></p>
+
+<ol>
+	<li><span><span><span><span><span>Check if Defender is up to date.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Start Defender Offline full scan.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Advise the customer that this may take a while and if pop-up persist to call back.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Provide case ID | Sent email | EOC.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>The customer replies in email that pop-up was removed.</span></span></span></span></span></li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><span><span><span><span><a id="6.6" name="6.6"></a>6.6 Suspected virus</span></span></span></span></span></h4>
+
+<p><span><span><strong><span><span><span>Action:</span></span></span></strong><span><span><span> Virus/Malware infection.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Blocker:</span></span></span></strong><span><span><span> Virus/Malware infection.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Solution:</span></span></span></strong> </span></span></p>
+
+<ol>
+	<li><span><span><span><span><span>Check the subscription.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Verify the account.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Establish remote access 488422073.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Check if Defender is up to date.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Scan the computer using windows defender offline.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Ask the customer to use the computer or navigate the internet (if the customer said that it is already working fine).</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Provide case ID.</span></span></span></span></span></li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><span><span><span><span><a id="6.7" name="6.7"></a>6.7 Virus activity persists</span></span></span></span></span></h4>
+
+<p><span><span><strong><span><span><span>Action:</span></span></span></strong><span><span><span> The customer is accessing a website.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Blocker:</span></span></span></strong><span><span><span> Pop-up message blocking the screen asking to call number to unlock PC.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Solution:</span></span></span></strong></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span>Educate the customer about support scams and ransomware.</span></span></span></span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span><span>Explain to the customer that we don&#39;t call or send messages that they have problem on their computer.</span></span></span></span></span></li>
+	<li class="indent-1"><span><span><span><span><span>Offer services/subscription.</span></span></span></span></span></li>
+	<li class="indent-1"><span><span><span><span><span>The customer agree.</span></span></span></span></span></li>
+</ul>
+
+<ol start="2">
+	<li><span><span><span><span><span>Verify the account &ndash; Processed/purchased successfully.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>The order number is 1020102102.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Inform the customer that you will perform a remote session.</span></span></span></span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span><span>The customer agrees and understand.</span></span></span></span></span></li>
+</ul>
+
+<ol start="5">
+	<li><span><span><span><span><span>LMI successfully launch with disclaimer.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>LMI session number: 220202022.</span></span></span></span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span><span>Unable to connect.</span></span></span></span></span></li>
+</ul>
+
+<ol start="7">
+	<li><span><span><span><span><span>Ask the customer to start Task Manager &ndash; Unable.</span></span></span></span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span><span>Use a second computer to create Defender Offline flash drive.</span></span></span></span></span></li>
+</ul>
+
+<ol start="8">
+	<li><span><span><span><span><span>Start Defender Offline.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Advise the customer that this may take a while and if pop-up persist to call back.</span></span></span></span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1">The customer asked for the advocate to remain online.</li>
+</ul>
+
+<ol start="10">
+	<li><span><span><span><span><span>Scan complete, one virus found and removed.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Restart PC and check for pop-ups &ndash; Pop-up persist not able to access PC.</span></span></span></span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span><span>Advise the customer that PC would need to be clean installed. They agree.</span></span></span></span></span></li>
+	<li class="indent-1"><span><span><span><span><span>Advise the customer about applications and files &ndash; They had online backups and needed applications.</span></span></span></span></span></li>
+</ul>
+
+<ol start="12">
+	<li><span><span><span><span><span>Create ISO on a second computer.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Start clean install.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Provide case ID and email for the customer to call back if any problems occurs.</span></span></span></span></span></li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="7" name="7"></a>7. FAQ</h3>
+
+<p><span><span><strong><span><span><span>Q:</span></span></span></strong><span><span><span> <strong>Why Windows Defender or Windows Defender Offline?</strong></span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>A:</span></span></span></strong><span><span><span> Windows Defender is underestimated in its capability and effectiveness, especially the &quot;Offline&quot; version. The primary benefit of using this tool is that it runs before malware, such as rootkits, can hide. When you perform a post-event malware scan and remediation by running the scan on a system infected with advanced low-level malware, the malware has a chance to run first. The malware itself may be intercepting the antimalware software&rsquo;s attempts to inspect, take actions, or communicate to the user. When you run an &ldquo;offline&rdquo; tool like Windows Defender Offline, you&rsquo;re bringing your own known-good, clean operating environment with you along with the scanner.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Q:</span></span></span></strong><span><span><span> <strong>Can we still escalate these cases?</strong></span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>A:</span></span></span></strong><span><span><span> Yes. However, we are anticipating a reduction to the escalation rate since manual removal of malware is no longer allowed. Moreover, an escalation might be a good choice if the customer is requiring additional assistances to reinstall the OS later.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Q: I used Windows Defender, and it did not detect any malware or was not able to remove the malware. Can I go back and use another tool like Hitman Pro?</span></span></span></strong></span></span></p>
+
+<p><span><span><strong><span><span><span>A:</span></span></span></strong><span><span><span> No. If malware was not detected, it&#39;s possible that the root cause of the issue might not be malware related. Therefore, it&#39;s important not to communicate or act on poor assumptions based on the symptoms of the issue. If Windows Defender detected malware and it was not remediated, Windows Defender Offline will have a high probability for remediation.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Q:</span></span></span></strong><span><span><span> <strong>What&#39;s the difference between Windows Defender AV and Windows Defender offline?</strong></span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>A:</span></span></span></strong><span><span><span> Windows Defender is an antivirus that is included in the latest version of Windows (Windows 10). For other version of Windows, it&#39;s available as a download. Unlike the offline version, it runs on Windows. For more complex threads such as a rootkit, Windows Defender may not be as effective. Since Windows Defender works &quot;offline&quot;, there are less changes where remediation is blocked by the malware.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Q:</span></span></span></strong><span><span><span> <strong>Is Answer Desk paid offering still required (for example, Assure Support)?</strong></span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>A:</span></span></span></strong><span><span><span> Yes.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Q:</span></span></span></strong><span><span><span> <strong>What if the customer declines the paid offer?</strong></span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>A:</span></span></span></strong><span><span><span> You can share this URL with the customer on how to use Window Defender Offline as a self-help resource: </span></span></span><span><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/17466/windows-defender-offline-help-protect-my-pc" managed-link="" target="_blank">https://support.microsoft.com/help/17466/windows-defender-offline-help-protect-my-pc</a></span> </span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+<p><strong><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span>May 2019</strong></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Change history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td style="width:33%">
+			<p><span><strong><span>Item</span></strong> </span></p>
+			</td>
+			<td>
+			<p><span><strong><span>Title</span></strong> </span></p>
+			</td>
+			<td style="width:20%">
+			<p><span><strong><span>Date</span></strong> </span></p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/154448" managed-link="">CONTENT TRACKING 154448</a></td>
+			<td>Windows: Project: KB 4019995 Full Review</td>
+			<td width="58">6/4/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/144014">CONTENT TRACKING 144014</a></td>
+			<td>Windows: Batch Title Restate&nbsp;</td>
+			<td width="58">5/22/2019</td>
+		</tr>
+		<tr>
+			<td><a href="tfsirt:8080/tfs/IRT1/CSS IRT/_workitems?id=123797&amp;fullScreen=false&amp;_a=edit" managed-link="" target="_blank">Content Tracking 123797</a></td>
+			<td>Add Speak Up Express asset box for the articles in portals 423 and 421</td>
+			<td width="58">1/15/2018</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><a href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/111132?fullScreen=false">Content Tracking 111132</a> </span></p>
+			</td>
+			<td>
+			<p><span><span>Windows: Adding clarity on 4019995 Process Windows Defender Offline Anti-Virus (AV)</span> </span></p>
+			</td>
+			<td width="58">
+			<p><span><span>5/4/2017</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/116625" role="heading">Content Tracking 116625</a></td>
+			<td>Answer Desk Offer: Archive 2967400<br>
+			v-astark - this article had a&nbsp;crosslink to 2967400 and it was replaced with&nbsp;3039170&nbsp;</td>
+			<td width="58">8/18/2017</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/121648" role="heading">Content Tracking 121648</a></p>
+			</td>
+			<td>Windows: Add video links to 4019995 Process: Windows Defender Offline Anti-Virus (AV)</td>
+			<td width="58">12/7/2017</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>

@@ -1,0 +1,465 @@
+﻿<header><h1>WS16: NET: Unique logons result in registry bloat that causes servers hangs; firewall rules are not purged by User Profile deletion </h1></header><span asset="4476087" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4476087]</span><ul><li><strong>Content Idea (CI): </strong><a managed-link="" href="https://aka.ms/CIEdit?id=74287" target="" data-content-type="" data-content-id="" bookmark-id="">74287</a></li></ul><p><strong>Support Topic: </strong><ul><li>Windows Servers\Windows Server 2016\Windows Server 2016\Network Connectivity and File Sharing\Windows Firewall with Advanced Security (WFAS)</li></ul></p><div><p style="margin:0px 0px 10.66px;"><font face="Calibri" size="3">Abstract</font></p><blockquote style="margin-top:0px;margin-bottom:0px;" dir="ltr"><p style="margin:0px 0px 10.66px;"><font face="Calibri" size="3">Each unique logon to a Windows 10 or Windows Server 2016 server writes 40+ firewall rules to the registry, resulting in registry boat. Registry &quot;leaks&quot; occur because deleting a users profile does not delete the corresponding firewall rules associated with that user from the following registry path:</font></p><blockquote dir="ltr"><p style="margin:0px 0px 10.66px;"><font face="Calibri" size="3">HKLM\System\CCS\Services\SharedAccess\Parameters\FirewallPolicy\RestrictedServices\Configurable\System</font></p></blockquote><p style="margin:0px 0px 10.66px;" dir="ltr"><font face="Calibri" size="3">Kiosk clients and RDP server computers that service a large number of unique user logons most at risk are most @ risk to such registry bloat and risk.&nbsp;<br></font></p><p style="margin:0px 0px 10.66px;" dir="ltr"><font face="Calibri" size="3">Other examples of registry bloat&nbsp;<span style="display:inline !important;background-color:rgba(255, 255, 255, 1);font-size:14px;">affecting Windows 10, Windows Server 2016 or Windows Server 2019</span> are discussed in:</font></p><ul dir="ltr"><li><div style="margin:0px 0px 10.66px;"><font face="Calibri" size="3"></font><font face="Calibri" size="3"><font face="Calibri" size="3">KB <a href="https://internal.support.services.microsoft.com/en-US/help/4091401">4091401</a>&nbsp;WinX: NET: Firewall Known Issues &amp; Mitigations</font></font></div></li><li><div style="margin:0px 0px 10.66px;"><font face="Calibri" size="3"><font face="Calibri" size="3">KB <a href="https://internal.support.services.microsoft.com/en/help/4490474">4490474</a>:&nbsp;Unique logons result in registry bloat because Notifications registries are not purged by User Profile deletion</font></font></div></li><li><div style="margin:0px 0px 10.66px;"><font face="Calibri" size="3"><font face="Calibri" size="3">KB <a href="https://internal.support.services.microsoft.com/en-US/help/4501961">4501961</a>:&nbsp;WinX: SBSL: Boot | Reboot delay at “spinning dots&quot; phase caused by AppContainer\Mappings bloat on RS5</font></font></div></li><li><div style="margin:0px 0px 10.66px;"><font face="Calibri" size="3"><font face="Calibri" size="3">KB <a href="https://internal.support.services.microsoft.com/en-US/help/4502624">4502624</a>:&nbsp;WinX: SBSL: Slow boot caused by Registry bloat by localservice profile in ntuser.dat on 1809 (RS5)</font></font></div></li></ul><div style="margin:0px 0px 10.66px;" dir="ltr"><font face="Calibri" size="3"><font face="Calibri" size="3">Senior Escalation Engineer notes that all devices impacted by the&nbsp;</font></font></div></blockquote><p style="margin:0px 0px 10.66px;" dir="ltr"><font face="Calibri" size="3">Symptoms</font></p><blockquote dir="ltr"><p style="margin:0px 0px 10.66px;" dir="ltr"><p style="margin:0px 0px 10.66px;"><font face="Calibri" size="3">When a user’s profile is deleted on Windows Server 2016,
+either with User Profile Disk or with standard profile, there is no call to
+remove the “AppContainer” created when users connected first time. This leaks/generates
+registry bloat for fire rules in the registry.<span style="margin:0px;">&nbsp;&nbsp;
+</span>The registry bloat is in the following registry key:</font></p><p><blockquote dir="ltr"><p style="margin:0px 0px 10.66px;"><span style="margin:0px;color:rgb(34, 34, 34);font-family:&quot;Segoe UI&quot;,sans-serif;font-size:9pt;">HKLM\System\CCS\Services\SharedAccess\Parameters\FirewallPolicy\RestrictedServices\Configurable\System</span></p></blockquote><p style="margin:0px 0px 10.66px;"><font face="Calibri" size="3">Over time, this registry bloat can cause the following symptoms:</font></p><font face="Calibri" size="3"><ul><li><div style="margin:0px 0px 10.66px;">Server hang</div></li><li><div style="margin:0px 0px 10.66px;">Slow performance</div></li><li><div style="margin:0px 0px 10.66px;">Slow Logons</div></li><li><div style="margin:0px 0px 10.66px;">Black screen when logging in</div></li><li><div style="margin:0px 0px 10.66px;">Inability to launch start menu or Cortana<br></div></li></ul></font><p style="margin:0px 0px 10.66px;"><font face="Calibri" size="3">This behavior is not limited to RDS however RDS scenarios
+using UPD may have greater impact given profiles are removed by default on user
+disconnect for UPD. </font></p></blockquote></div><div><font face="Calibri" size="3"><p style="margin:0px;">Event logs may show the following events<br></p><blockquote style="padding:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;" dir="ltr"><blockquote style="margin-top:0px;margin-bottom:0px;" dir="ltr"><p style="margin:0px;">Source:<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Microsoft-Windows-AppModel-Runtime</p><p style="margin:0px;">Date:<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p><p style="margin:0px;">Event ID:<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>21</p><p style="margin:0px;">Task Category: None</p><p style="margin:0px;">Level:<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Error</p><p style="margin:0px;">Keywords:<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(70368744177664),AppContainer</p><p style="margin:0px;">Description: CreateAppContainerProfile failed for AppContainer
+Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy with error 0x800705AA.<span style="margin:0px;"> &nbsp;</span><br></p></blockquote></blockquote><p style="margin:0px;">&nbsp;And<br></p><blockquote style="padding:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;" dir="ltr"><blockquote style="margin-top:0px;margin-bottom:0px;" dir="ltr"><p style="margin:0px;">&nbsp;Source:<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Microsoft-Windows-AppModel-Runtime</p><p style="margin:0px;">Date:<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p><p style="margin:0px;">Event ID:<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>21</p><p style="margin:0px;">Task Category: None</p><p style="margin:0px;">Level:<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Error</p><p style="margin:0px;">Keywords:<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>(70368744177664),AppContainer</p><p style="margin:0px;">Description: CreateAppContainerProfile failed for AppContainer <span style="margin:0px;font-family:&quot;Calibri&quot;,sans-serif;font-size:11pt;">Microsoft.Windows.Cortana_cw5n1h2txyewy with
+error 0x800705AA.</span></p></blockquote></blockquote></font><p style="margin:0px;"><font face="Calibri" size="3"><b></b></font><font face="Calibri" size="3">From the
+dump collected, it is the process wsappx that initiates a call to
+firewallapi!NetworkIsolationCreateAppContainer()</font></p><p style="margin:0px;"><font face="Calibri" size="3">This thread
+calls AppContainerRegistrationHelper::CreateProfile(). In the below code path,
+it calls NetworkIsolationCreateAppContainer to create the firewall rules&nbsp;<span style="margin:0px;"><font face="Calibri" size="3">&nbsp;</font></span></font></p><blockquote dir="ltr"><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (!IsAppXFramework(type))</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>// We may think the profile is
+fully there, but the firewall rules could be incorrect.</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>// This can happen during
+migration and profile copy scenarios where the folders and reg keys</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>// are migrated but the
+firewall rules are not.</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>// Therefore, to be on the safe
+side we delete and re-create the rules in that case.</font></font></p><p style="margin:0px;"><span style="margin:0px;"><font face="Calibri" size="3">&nbsp;</font></span></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(IsNetworkIsolationDeleteAppContainerPresent())</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>LogFirewallAppContainerDeletionStart(pszAppContainerName);</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>dwErrLog =
+NetworkIsolationDeleteAppContainer(psidAppContainerSid, pszDisplayName);</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>LogFirewallAppContainerDeletionStop(pszAppContainerName, dwErrLog);</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</font></font></p><p style="margin:0px;"><span style="margin:0px;"><font face="Calibri" size="3">&nbsp;</font></span></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(IsNetworkIsolationCreateAppContainerPresent())</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>LogFirewallAppContainerCreationStart(pszAppContainerName);</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>dwErrUsed = NetworkIsolationCreateAppContainer(</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>psidAppContainerSid,</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>pszAppContainerName,</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>pszDisplayName,</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>pszDescription,</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>pCapabilities,</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>dwCapabilityCount);</font></font></p></blockquote><p style="margin:0px;" dir="ltr"><span style="margin:0px;"><font face="Calibri" size="3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font></span><font face="Calibri"><font size="3">Thread stack:</font></font></p><blockquote style="padding:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;" dir="ltr"><blockquote style="margin-top:0px;margin-bottom:0px;" dir="ltr"><p style="margin:0px;"><font face="Calibri" size="3">10: kd&gt;
+!mex.t<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp; </span>ffffdc8a`95a4d800 </font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;</span>Process<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Thread<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>CID<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>UserTime KernelTime ContextSwitches Wait
+Reason Time State<span style="margin:0px;">&nbsp;&nbsp; </span>COM-Initialized</font></font></p><p style="margin:0px;"><font face="Calibri" size="3">svchost.exe
+(wsappx) (ffffdc8a9712a3c0) ffffdc8a95a4d800 b9c.334c<span style="margin:0px;">&nbsp;&nbsp;&nbsp; </span>5s.875<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>5s.656<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>29743 WrLpcReply<span style="margin:0px;">&nbsp; </span>46ms Waiting APTKIND_MULTITHREADED (MTA)</font></p><p style="margin:0px;"><span style="margin:0px;"><font face="Calibri" size="3">&nbsp;</font></span></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;</span>WaitBlockList:</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp; </span>Object<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Type<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Other Waiters Info</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp; </span>ffffdc8a95a4de40 Semaphore<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0 Limit: 1</font></font></p><p style="margin:0px;"><span style="margin:0px;"><font face="Calibri" size="3">&nbsp;</font></span></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;</span>Priority:</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp; </span>Current Base UB FB IO Page</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp; </span>9<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>8<span style="margin:0px;">&nbsp;&nbsp;&nbsp; </span>0<span style="margin:0px;">&nbsp; </span>0<span style="margin:0px;">&nbsp;
+</span>2<span style="margin:0px;">&nbsp; </span>3</font></font></p><p style="margin:0px;"><span style="margin:0px;"><font face="Calibri" size="3">&nbsp;</font></span></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp;</span>LPC Msg<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ServerProcess<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ServerThread</font></font></p><p style="margin:0px;"><font face="Calibri" size="3">ffff918fb8da3cf0
+svchost.exe (LocalServiceNoNetwork)(ffffd484e89d9840) ffffdc8a93e83800</font></p><p style="margin:0px;"><span style="margin:0px;"><font face="Calibri" size="3">&nbsp;</font></span></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span># Child-SP<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Return<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Call Site</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>0 ffffe701b9e4e490 fffff801698433ac
+nt!KiSwapContext+0x76</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>1 ffffe701b9e4e5d0 fffff80169842e4f
+nt!KiSwapThread+0x17c</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>2 ffffe701b9e4e680 fffff80169844c17
+nt!KiCommitThreadWait+0x14f</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>3 ffffe701b9e4e720 fffff8016987d728
+nt!KeWaitForSingleObject+0x377</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>4 (Inline)<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>----------------
+nt!AlpcpWaitForSingleObject+0x33</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>5 ffffe701b9e4e7d0 fffff80169c3b648
+nt!AlpcpSignalAndWait+0x1d8</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>6 ffffe701b9e4e870 fffff80169c3a321
+nt!AlpcpReceiveSynchronousReply+0x58</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>7 ffffe701b9e4e8d0 fffff80169c385fd
+nt!AlpcpProcessSynchronousRequest+0x301</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>8 ffffe701b9e4e9d0 fffff80169963893
+nt!NtAlpcSendWaitReceivePort+0x23d</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>9 ffffe701b9e4ea90 00007ff8cd6f71c4
+nt!KiSystemServiceCopyEnd+0x13</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>a 000000eaba5fe4e8 00007ff8cbc1b211
+ntdll!ZwAlpcSendWaitReceivePort+0x14</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>b 000000eaba5fe4f0 00007ff8cbcb808e
+RPCRT4!LRPC_BASE_CCALL::DoSendReceive+0x111</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>c 000000eaba5fe5a0 00007ff8cbcb5102 RPCRT4!NdrpClientCall3+0xa0e</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>d 000000eaba5fe9b0 00007ff8c873e20d
+RPCRT4!NdrClientCall3+0xf2</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>e 000000eaba5fed40 00007ff8bdce172a
+firewallapi!NetworkIsolationCreateAppContainer+0x1ed</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>f 000000eaba5fee00 00007ff8bdce3b9b
+profext!AppContainerRegistrationHelper::CreateProfile+0xba</font></font></p><p style="margin:0px;"><font face="Calibri" size="3">10
+000000eaba5fee60 00007ff8c9203488 profext!CreateAppContainerProfileWorker+0x26b</font></p><p style="margin:0px;"><font face="Calibri" size="3">11
+000000eaba5ff010 00007ff8b3e3a949
+USERENV!CreateAppContainerProfileInternal+0x58</font></p><p style="margin:0px;"><font face="Calibri" size="3">12
+000000eaba5ff060 00007ff8b67a4feb AppXDeploymentExtensions_onecore!OSIntegration::DEH::AppXMiniRepositoryHandler::CommitChanges+0x369</font></p><p style="margin:0px;"><font face="Calibri" size="3">13
+000000eaba5ff380 00007ff8b66fdca4
+appxdeploymentserver!AppXApplyTrustLabelToFolder+0x5cefb</font></p><p style="margin:0px;"><font face="Calibri" size="3">14
+000000eaba5ff560 00007ff8b66e20a4
+appxdeploymentserver!GetPackageFilesDiskUsagePerVolumeImplementation+0x7a444</font></p><p style="margin:0px;"><font face="Calibri" size="3">15
+000000eaba5ff5e0 00007ff8b6669c55
+appxdeploymentserver!GetPackageFilesDiskUsagePerVolumeImplementation+0x5e844</font></p><p style="margin:0px;"><font face="Calibri" size="3">16
+000000eaba5ff690 00007ff8b667be9d
+appxdeploymentserver!PackageRepositoryFree+0x145b5</font></p><p style="margin:0px;"><font face="Calibri" size="3">17
+000000eaba5ff860 00007ff8b667bc99
+appxdeploymentserver!GetPackageTypeImplementation+0x63d</font></p><p style="margin:0px;"><font face="Calibri" size="3">18
+000000eaba5ff8e0 00007ff8cd6a2af4
+appxdeploymentserver!GetPackageTypeImplementation+0x439</font></p><p style="margin:0px;"><font face="Calibri" size="3">19 000000eaba5ff910
+00007ff8cd683272 ntdll!TppSimplepExecuteCallback+0x74</font></p><p style="margin:0px;"><font face="Calibri" size="3">1a
+000000eaba5ff950 00007ff8cb968364 ntdll!TppWorkerThread+0x4b2</font></p><p style="margin:0px;"><font face="Calibri" size="3">1b
+000000eaba5ffd50 00007ff8cd6b70d1 KERNEL32!BaseThreadInitThunk+0x14</font></p><p style="margin:0px;"><font face="Calibri" size="3">1c
+000000eaba5ffd80 0000000000000000 ntdll!RtlUserThreadStart+0x21</font></p><p style="margin:0px;"><span style="margin:0px;"><font face="Calibri" size="3">&nbsp;</font></span></p><p style="margin:0px;"><font face="Calibri" size="3">This causes
+mpssvc!RPC_NetworkIsolationCreateAppContainer to get called and eventually
+calls FwAddRule</font></p><p style="margin:0px;"><span style="margin:0px;"><font face="Calibri" size="3">&nbsp;</font></span></p><p style="margin:0px;"><font face="Calibri" size="3">10: kd&gt;
+!mex.t ffffdc8a93e83800</font></p><p style="margin:0px;"><font face="Calibri" size="3">Process<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Thread<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>CID<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>UserTime KernelTime ContextSwitches Wait
+Reason Time State</font></p><p style="margin:0px;"><font face="Calibri" size="3">svchost.exe
+(LocalServiceNoNetwork) (ffffd484e89d9840) ffffdc8a93e83800 604.3824<span style="margin:0px;">&nbsp;&nbsp;&nbsp; </span>1s.641<span style="margin:0px;">&nbsp;&nbsp;&nbsp;
+</span>31s.969<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2539
+UserRequest 15ms Running on CPU 18</font></p><p style="margin:0px;"><span style="margin:0px;"><font face="Calibri" size="3">&nbsp;</font></span></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span># Child-SP<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Return<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Call Site</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>0 ffffe701b45d75d8 fffff80169c0a895
+nt!HvpMapEntryReleaseBinAddress+0x0</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>1 ffffe701b45d75e0 fffff80169d0aa04
+nt!HvpReleaseCellPaged+0x75</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>2 (Inline)<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>---------------- nt!HvReleaseCell+0xb</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>3 ffffe701b45d7620 fffff80169d0a88a
+nt!CmpFindNameInListCellWithStatus+0x144</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>4 ffffe701b45d76b0 fffff80169d0a670
+nt!CmpFindNameInListWithStatus+0x6e</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>5 (Inline)<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>----------------
+nt!CmpFindValueByNameFromCache+0x2d</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>6 ffffe701b45d7710 fffff80169d09feb
+nt!CmpCompareNewValueDataAgainstKCBCache+0x80</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>7 ffffe701b45d77a0 fffff80169d09ca7
+nt!CmSetValueKey+0x1fb</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>8 ffffe701b45d78e0 fffff80169963893
+nt!NtSetValueKey+0x57b</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>9 ffffe701b45d7a90 00007ff8cd6f6cc4
+nt!KiSystemServiceCopyEnd+0x13</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>a 000000a11d07e0e8 00007ff8ca6dea2b
+ntdll!ZwSetValueKey+0x14</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>b (Inline)<span style="margin:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>----------------
+KERNELBASE!Wow64NtSetValueKey+0x1d</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>c 000000a11d07e0f0 00007ff8ca6dec11
+KERNELBASE!LocalBaseRegSetValue+0x12b</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>d 000000a11d07e180 00007ff8c85471a9
+KERNELBASE!RegSetValueExW+0x141</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>e 000000a11d07e220 00007ff8c3583fde
+fwbase!FwRegSetString+0x89</font></font></p><p style="margin:0px;"><font face="Calibri"><font size="3"><span style="margin:0px;">&nbsp; </span>f 000000a11d07e280 00007ff8c3583eb8
+FWPolicyIOMgr!FwAdvPolicyAddRule+0xde</font></font></p><p style="margin:0px;"><font face="Calibri" size="3">10
+000000a11d07e2d0 00007ff8c3583d5f FWPolicyIOMgr!FwVerifyAndWriteRule+0xc8</font></p><p style="margin:0px;"><font face="Calibri" size="3">11
+000000a11d07e320 00007ff8c3a2d9c1 FWPolicyIOMgr!FwAddRule+0xcf</font></p><p style="margin:0px;"><font face="Calibri" size="3">12 000000a11d07e3a0
+00007ff8c3a228bb mpssvc!SvrImpl_FWAddFirewallRule2_26+0x129</font></p><p style="margin:0px;"><font face="Calibri" size="3">13
+000000a11d07e420 00007ff8c3a22212 mpssvc!FwMoneisAddRule+0xab</font></p><p style="margin:0px;"><font face="Calibri" size="3">14
+000000a11d07e4e0 00007ff8c3a21e5b mpssvc!FwMoneisCreateAppContainer+0x39a</font></p><p style="margin:0px;"><font face="Calibri" size="3">15
+000000a11d07e850 00007ff8cbc57de3 mpssvc!RPC_NetworkIsolationCreateAppContainer+0x7b</font></p><p style="margin:0px;"><font face="Calibri" size="3">16
+000000a11d07e8b0 00007ff8cbcbbc6d RPCRT4!Invoke+0x73</font></p><p style="margin:0px;"><font face="Calibri" size="3">17
+000000a11d07e930 00007ff8cbbea8dc RPCRT4!Ndr64StubWorker+0xbfd</font></p><p style="margin:0px;"><font face="Calibri" size="3">18
+000000a11d07f000 00007ff8cbc3a194 RPCRT4!NdrServerCallAll+0x3c</font></p><p style="margin:0px;"><font face="Calibri" size="3">19
+000000a11d07f050 00007ff8cbc390ad RPCRT4!DispatchToStubInCNoAvrf+0x24</font></p><p style="margin:0px;"><font face="Calibri" size="3">1a
+000000a11d07f0a0 00007ff8cbc3995b
+RPCRT4!RPC_INTERFACE::DispatchToStubWorker+0x1bd</font></p><p style="margin:0px;"><font face="Calibri" size="3">1b
+000000a11d07f170 00007ff8cbc19afc RPCRT4!RPC_INTERFACE::DispatchToStub+0xcb</font></p><p style="margin:0px;"><font face="Calibri" size="3">1c
+000000a11d07f1d0 00007ff8cbc19f7c RPCRT4!LRPC_SCALL::DispatchRequest+0x34c</font></p><p style="margin:0px;"><font face="Calibri" size="3">1d
+000000a11d07f2b0 00007ff8cbc3426c RPCRT4!LRPC_SCALL::HandleRequest+0x2bc</font></p><p style="margin:0px;"><font face="Calibri" size="3">1e
+000000a11d07f3d0 00007ff8cbc35acb RPCRT4!LRPC_ADDRESS::HandleRequest+0x36c</font></p><p style="margin:0px;"><font face="Calibri" size="3">1f
+000000a11d07f480 00007ff8cbc285ca RPCRT4!LRPC_ADDRESS::ProcessIO+0x91b</font></p><p style="margin:0px;"><font face="Calibri" size="3">20
+000000a11d07f5c0 00007ff8cd682bbe RPCRT4!LrpcIoComplete+0xaa</font></p><p style="margin:0px;"><font face="Calibri" size="3">21
+000000a11d07f660 00007ff8cd683699 ntdll!TppAlpcpExecuteCallback+0x25e</font></p><p style="margin:0px;"><font face="Calibri" size="3">22
+000000a11d07f710 00007ff8cb968364 ntdll!TppWorkerThread+0x8d9</font></p><p style="margin:0px;"><font face="Calibri" size="3">23
+000000a11d07fb10 00007ff8cd6b70d1 KERNEL32!BaseThreadInitThunk+0x14</font></p><p style="margin:0px;"><font face="Calibri" size="3">24
+000000a11d07fb40 0000000000000000 ntdll!RtlUserThreadStart+0x21</font></p></blockquote></blockquote></div><div>
+<ol>
+	<li>
+	<div>Track related bugs. Install corrective OS versions or OS updates. Enable the&nbsp;<span>DeleteUserAppContainersOnLogoff</span> registry setting&nbsp;</div>
+
+	<div>&nbsp;
+	<p align="left"><span lang="EN-US">The 1st fix below will delete AppContainer Firewall rules for roaming user profile but not for mandatory user profile or guest users temp profile. </span></p>
+
+	<table class="table">
+		<tbody>
+			<tr>
+				<td width="193">
+				<p><span lang="EN-US">OS</span></p>
+				</td>
+				<td width="81">
+				<p><span lang="EN-US">Bug #</span></p>
+				</td>
+				<td width="113">
+				<p><span lang="EN-US">Resolving KB</span></p>
+				</td>
+				<td width="129">
+				<p><span lang="EN-US">Release Date</span></p>
+				</td>
+				<td width="624">
+				<p><span lang="EN-US">Comments</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width="193">
+				<p><span lang="EN-US">Vibranium</span></p>
+				</td>
+				<td width="81">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="113">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="129">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="624">
+				<p><span lang="EN-US">Not fixed</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width="193">
+				<p><span lang="EN-US">19H1</span></p>
+				</td>
+				<td width="81">
+				<p><span lang="EN-US"><a href="https://microsoft.visualstudio.com/OS/_workitems/edit/13807079"><span><u>13807079</u></span></a><br>
+				<br>
+				<a href="https://microsoft.visualstudio.com/DefaultCollection/OS/_workitems?id=14191220&amp;_a=edit"><span><u>14191220</u></span></a></span></p>
+				</td>
+				<td width="113">
+				<p><span lang="EN-US">N/A</span></p>
+				</td>
+				<td width="129">&nbsp;</td>
+				<td width="624">
+				<p><span lang="EN-US">Bug title: AppContainer firewall rules are not cleaned up on user profile delete<br>
+				The bug was fixed, but a part of the fix was removed and DeleteUserAppContainersOnLogoff has no effect in 19H1.</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width="193">
+				<p><span lang="EN-US">RS5</span></p>
+				</td>
+				<td width="81">
+				<p><span lang="EN-US"><a href="https://apac01.safelinks.protection.outlook.com/?url=https://microsoft.visualstudio.com/DefaultCollection/OS/_workitems/edit/20460221&amp;data=02%7c01%7cmakotkat%40microsoft.com%7cd73590679cc84a97534808d68d4fc785%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c636851771258183985&amp;sdata=9YvfyK/khZgKehp3XP7lHOETRRzHs2501Bq85XpFC4I%3D&amp;reserved=0" target="_blank"><span><u>20460221</u></span></a></span></p>
+				</td>
+				<td width="113">
+				<p><span lang="EN-US"><a href="https://support.microsoft.com/en-us/help/4490481"><u>KB4490481</u></a></span></p>
+				</td>
+				<td width="129">
+				<p><span lang="EN-US">2019 3D</span></p>
+				</td>
+				<td width="624">&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="193">
+				<p><span lang="EN-US">RS4</span></p>
+				</td>
+				<td width="81">
+				<p><span lang="EN-US"><a href="https://apac01.safelinks.protection.outlook.com/?url=https://microsoft.visualstudio.com/DefaultCollection/OS/_workitems/edit/20506972&amp;data=02%7c01%7cmakotkat%40microsoft.com%7cfe715b274b664fae1a0008d69153777f%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c636856185115313285&amp;sdata=XAtjesmhETMhEmehcFP7xxk0G36/rHPxHNs3tXxBJpo%3D&amp;reserved=0" target="_blank"><span><u>20506972</u></span></a></span></p>
+				</td>
+				<td width="113">
+				<p><span lang="EN-US"><a href="https://support.microsoft.com/en-us/help/4493437"><u>KB4493437</u></a></span></p>
+				</td>
+				<td width="129">
+				<p><span lang="EN-US">2019 4C</span></p>
+				</td>
+				<td width="624">&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="193">
+				<p><span lang="EN-US">RS3</span></p>
+				</td>
+				<td width="81">
+				<p><span lang="EN-US">N/A</span></p>
+				</td>
+				<td width="113">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="129">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="624">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width="193">
+				<p><span lang="EN-US">RS2</span></p>
+				</td>
+				<td width="81">
+				<p><span lang="EN-US">N/A</span></p>
+				</td>
+				<td width="113">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="129">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="624">&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="193">
+				<p><span lang="EN-US">RS1 / 1607</span></p>
+				</td>
+				<td width="81">
+				<p><span lang="EN-US"><a href="https://microsoft.visualstudio.com/DefaultCollection/OS/_workitems/edit/18790162"><span><u>18790162</u></span></a></span></p>
+				</td>
+				<td width="113">
+				<p><span lang="EN-US"><a href="https://support.microsoft.com/en-us/help/4467684"><span><u>KB4467684</u></span></a></span></p>
+				</td>
+				<td width="129">
+				<p><span lang="EN-US">&nbsp;2018.11 C</span></p>
+				</td>
+				<td width="624">
+				<p><span lang="EN-US">Bug Title: [WS2016] AppContainer firewall rules are not cleaned up on user profile delete<br>
+				<br>
+				Relnote text: Addresses an issue where server hang or slow performance occurs due to large number of Windows firewall rules. For enabling the changes, add a new Registry Key &ldquo;DeleteUserAppContainersOnLogoff&rdquo; (DWORD) on HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy via regedit and set it to 1.<br>
+				<br>
+				This fix will purge the registry and firewall bloat when user profiles are removed from the system. </span></p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<p align="left"><span lang="EN-US">&nbsp;</span></p>
+
+	<p align="left"><span lang="EN-US">The 2nd fix below will delete AppContainer Firewall rules for roaming user profile and mandatory user profile and guest users temp profile. </span></p>
+
+	<table class="table">
+		<tbody>
+			<tr>
+				<td width="193">
+				<p><span lang="EN-US">OS</span></p>
+				</td>
+				<td width="81">
+				<p><span lang="EN-US">Bug #</span></p>
+				</td>
+				<td width="113">
+				<p><span lang="EN-US">Resolving KB</span></p>
+				</td>
+				<td width="129">
+				<p><span lang="EN-US">Release Date</span></p>
+				</td>
+				<td width="624">
+				<p><span lang="EN-US">Comments</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width="193">
+				<p><span lang="EN-US">Vibranium</span></p>
+				</td>
+				<td width="81">
+				<p><span lang="EN-US"><a href="https://microsoft.visualstudio.com/OS/_workitems/edit/23593152"><span><u>23593152</u></span></a></span></p>
+				</td>
+				<td width="113">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="129">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="624">
+				<p><span lang="EN-US">Fixed</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width="193">
+				<p><span lang="EN-US">19H1</span></p>
+				</td>
+				<td width="81">
+				<p><span lang="EN-US"><a href="https://microsoft.visualstudio.com/OS/_workitems/edit/23594998"><span><u>23594998</u></span></a></span></p>
+				</td>
+				<td width="113">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="129">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="624">
+				<p><span lang="EN-US">Fixed in 2019.10D.</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width="193">
+				<p><span lang="EN-US">RS5</span></p>
+				</td>
+				<td width="81">
+				<p><span lang="EN-US"><a href="https://microsoft.visualstudio.com/OS/_workitems/edit/23997666"><u>23997666</u></a></span></p>
+				</td>
+				<td width="113">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="129">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="624">
+				<p><span lang="EN-US">The fix is scheduled to be released in 2020.1C.</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width="193">
+				<p><span lang="EN-US">RS4</span></p>
+				</td>
+				<td width="81">
+				<p><span lang="EN-US"><a href="https://microsoft.visualstudio.com/OS/_workitems/edit/23939524"><u>23939524</u></a></span></p>
+				</td>
+				<td width="113">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="129">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="624">
+				<p><span lang="EN-US">The fix is scheduled to be released in 2020.1C.</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width="193">
+				<p><span lang="EN-US">RS3</span></p>
+				</td>
+				<td width="81">
+				<p><span lang="EN-US">N/A</span></p>
+				</td>
+				<td width="113">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="129">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="624">&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="193">
+				<p><span lang="EN-US">RS2</span></p>
+				</td>
+				<td width="81">
+				<p><span lang="EN-US">N/A</span></p>
+				</td>
+				<td width="113">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="129">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="624">&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="193">
+				<p><span lang="EN-US">RS1 / 1607</span></p>
+				</td>
+				<td width="81">
+				<p><span lang="EN-US"><a href="https://microsoft.visualstudio.com/OS/_workitems/edit/23955156"><u>23955156</u></a></span></p>
+				</td>
+				<td width="113">&nbsp;</td>
+				<td width="129">
+				<p><span lang="EN-US">&nbsp;</span></p>
+				</td>
+				<td width="624">
+				<p><span lang="EN-US">The fix is scheduled to be released in 2020.1C.</span></p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</li>
+	<li>Workaround 1: Run FWCLEAN<br>
+	<br>
+	Primary Path:<font color="#000121"> On </font><a href="https://github.com/CSS-Windows/WindowsDiag/tree/master/NET/Firewall" managed-link="">Github</a>, one ZIP for RS1 (until 4) and RS5 (and newer).<br>
+	Backup path: <a href="file://ntqfedev/public/samoham/FwClean">\\ntqfedev\public\samoham\FwClean</a>
+	<ol>
+		<li>This tool needs to be run as an Administrator.</li>
+		<li>Run the following script to identify cached profiles<br>
+		<br>
+		PS C:\&gt; $profileList = &#39;HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList&#39;<br>
+		PS C:\&gt; Get-childItem &#39;HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList&#39; | % {Get-ItemProperty $_.pspath } | Select profileImagePath, sid</li>
+		<li>You can enumerate the existing AppContainers using the following command.<br>
+		<br>
+		fwclean.exe EnumAppContainers<br>
+		<br>
+		This will list the AppContainer name and USER SID.</li>
+		<li>Obtain Active User SIDS on the system from the following registry path:&nbsp;<br>
+		<br>
+		PS C:\&gt; $profileList = &#39;HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList&#39;<br>
+		PS C:\&gt; Get-ChildItem &#39;HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList&#39; | % {Get-ItemProperty $_.pspath } | Select profileImagePath, sid</li>
+		<li>Delete the user SIDs from the enumerate command, which are not present in the above registry using the following command.<br>
+		<br>
+		fwclean.exe DeleteAppContainer -u=&lt;SID&gt;</li>
+		<li>Note that delete operations are irreversible.</li>
+	</ol>
+	</li>
+	<li>Workaround 2: Run FWCLEAN<br>
+	<br>
+	Primary Path: <a href="https://microsoft.sharepoint.com/teams/LegacyUploaded_BemisRepository/Bemis/Portico%20Team%20Files/Forms/AllItems.aspx?RootFolder=/sites/LegacyUploaded_BemisRepository/Bemis/Portico%20Team%20Files/Commercial%20-%20Windows/4073671/RS1&amp;FolderCTID=0x012000153A96C42736B7468BDF550744631BF0&amp;View=%7b7765E085-1177-4047-A69E-DB84C09DC867%7d">here</a>&nbsp;where fwclean.exe has been saved as fwlean.ex1<br>
+	Backup path: <a href="file://\\ntqfedev\public\samoham\FwClean">\\ntqfedev\public\samoham\FwClean</a>
+	<ol>
+		<li>This tool needs to be run as an Administrator.</li>
+		<li>Run the following script to identify cached profiles<br>
+		<br>
+		PS C:\&gt; $profileList = &#39;HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList&#39;<br>
+		PS C:\&gt; Get-childItem &#39;HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList&#39; | % {Get-ItemProperty $_.pspath } | Select profileImagePath, sid</li>
+		<li>You can enumerate the existing AppContainers using the following command.<br>
+		<br>
+		fwclean.exe EnumAppContainers<br>
+		<br>
+		This will list the AppContainer name and USER SID.</li>
+		<li>Delete the user SIDs from the enumerate command, which are not present in the above registry using the following command.<br>
+		<br>
+		fwclean.exe DeleteAppContainer -u=&lt;SID&gt;</li>
+		<li>Note that delete operations are irreversible.</li>
+	</ol>
+	</li>
+	<li>
+	<div><span>Workaround 3: Manually delete firewall rules from the registry</span><br>
+	<br>
+	<span>Manually delete registry firewall rules from&nbsp;HKLM\System\CCS\Services\SharedAccess\Parameters\FirewallPolicy\RestrictedServices\Configurable\System</span></div>
+	</li>
+</ol>
+</div>
+<div><p><font face="Times New Roman" size="3"><span>Note: the previous bug fixed the common scenario. There is another scenario where RDP users added to Guest user Group will have only temp profile created.&nbsp; In this case the fix won't delete AppContainer Firewall rule.&nbsp; The fix for this new bug is scheduled&nbsp; to be released in 2019.11C</span></font></p><p><font face="Times New Roman" size="3"><span><span style="display:inline !important;background-color:rgba(255, 255, 255, 1);color:rgb(0, 0, 0);font-size:14px;font-weight:normal;">Bug </span><a style="box-sizing:border-box;cursor:pointer;font-size:14px;text-decoration:underline;" href="https://microsoft.visualstudio.com/OS/_workitems/edit/23116027">23116027</a><span style="display:inline !important;background-color:rgba(255, 255, 255, 1);color:rgb(0, 0, 0);font-size:14px;font-weight:normal;">&nbsp;</span><span style="display:inline !important;background-color:rgba(255, 255, 255, 1);color:rgb(0, 0, 0);font-size:14px;font-weight:normal;">[Server 2016] AppContainer firewall rules are not cleaned up when guest users temp profile deleted&nbsp;</span></span></font></p><p><font face="Times New Roman" size="3"><span><br></span></font></p><p><font face="Times New Roman" size="3"><span><br></span></font></p><p><font face="Times New Roman" size="3"><span>&lt;cstrassn&gt;<br></span></font></p><div><font face="Times New Roman" size="3">Important note for &nbsp;customers &nbsp;using 3rd party profile managment &nbsp;solutions:<br></font></div><div><font face="Times New Roman" size="3"><br></font></div><div><font face="Times New Roman" size="3">If &nbsp;a &nbsp;customer uses &nbsp;a 3rd party user profile managment solution (such as &nbsp;Citrix UPM), they might find that the issue &nbsp;persists even after applying the &nbsp;fix &nbsp;along&nbsp; with the registry key.<br></font></div><div><font face="Times New Roman" size="3"><br></font></div><div><font face="Times New Roman" size="3">Citrix is &nbsp;aware of &nbsp;the issue &nbsp;and working on &nbsp;a solution as &nbsp;of today ( june 6th 2019) , &nbsp;the customer should contact Citrix &nbsp;when&nbsp; they &nbsp;use Citrix UPM.<br></font></div><div><font face="Times New Roman" size="3"><br></font></div><div><font face="Times New Roman" size="3">If the customer is using &nbsp;any &nbsp;other &nbsp;profile managment &nbsp;solution, &nbsp;they should engage &nbsp;with that &nbsp;ISV.<br></font></div><div><font face="Times New Roman" size="3"><br></font></div><div><font face="Times New Roman" size="3">Background:<br></font></div><font face="Times New Roman" size="3"><span>the Fix &nbsp;only &nbsp;works &nbsp;if &nbsp;the related user profile is &nbsp;deleted &nbsp;via &nbsp;the DeleteProfile() &nbsp;API &nbsp;which is the supported &nbsp;way of deleting a &nbsp;profile.</span><br></font><p><p><font face="Times New Roman" size="3">update November 2019</font></p><p><font face="Times New Roman" size="3">Citrix did fix&nbsp; the issue for their&nbsp; UPM solution &nbsp;</font></p><p><font face="Times New Roman" size="3"><span lang="EN-US" style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;">The fix was indeed made available on 7.15 CU5</span><br></font></p><p><font face="Times New Roman" size="3"><a href="https://docs.citrix.com/en-us/xenapp-and-xendesktop/7-15-ltsr/whats-new/cumulative-update-5/fixed-issues.html#profile-management">https://docs.citrix.com/en-us/xenapp-and-xendesktop/7-15-ltsr/whats-new/cumulative-update-5/fixed-issues.html#profile-management</a></font></p><p><font face="Times New Roman" size="3"><br></font></p><p><font face="Times New Roman" size="3">The Registry key / fix&nbsp; should now&nbsp; work&nbsp; as&nbsp; expected&nbsp; if the customer&nbsp; is using the Citrix&nbsp; UPM&nbsp; solution</font></p><p style="margin:0in 0in 8pt;"><font face="Calibri" size="3">Author</font><font face="Times New Roman" size="3"><br></font></p><ul style="margin-top:0in;"><font face="Times New Roman" size="3">
+ </font><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">Jerrycif<font face="Times New Roman" size="3"><br></font></li></ul><p style="margin:0in 0in 8pt;"><font face="Calibri" size="3">Related Content</font><font face="Times New Roman" size="3"><br></font></p><ul style="margin-top:0in;"><font face="Times New Roman" size="3">
+ </font><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">&lt;insert
+     here&gt;<font face="Times New Roman" size="3"><br></font></li></ul><p style="margin:0in 0in 8pt;"><font face="Calibri" size="3">Related Bugs</font><font face="Times New Roman" size="3"><br></font></p><ul style="margin-top:0in;"><font face="Times New Roman" size="3">
+ </font><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">&nbsp;Bug <a href="https://microsoft.visualstudio.com/OS/_workitems/edit/23116027">23116027</a>&nbsp;[Server 2016] AppContainer firewall rules are not cleaned up when guest users temp profile deleted <font face="Times New Roman" size="3"><br></font></li></ul><p style="margin:0in 0in 8pt;"><font face="Calibri" size="3">Related Social Media</font><font face="Times New Roman" size="3"><br></font></p><ul style="margin-top:0in;"><font face="Times New Roman" size="3">
+ </font><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">Social.TechNet: <a href="https://social.technet.microsoft.com/Forums/windowsserver/en-US/992e86c8-2bee-4951-9461-e3d7710288e9/windows-servr-2016-rdsh-firewall-rules-created-at-every-login?forum=winserverTS">Windows Server 2016 RDSH - Firewall rules created at every login</a>&nbsp;- Thread start date = November 9th, 2016. Windows Firewall consumes 25-50% of CPU + 1200MB of memory during user logon. RDS Server deployed April, 13th 2017 has 65K+ rules by June 27th, 2017. </li><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">Social.TechNet: <a href="https://social.technet.microsoft.com/Forums/windows/en-US/9aad7675-d1ba-4900-9d85-0cd117f5514f/new-firewall-rules-created-for-each-user?forum=win10itprosetup">New firewall rules created for each user </a>- </li><ul><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">Thread start date = November 9th, 2016. </li><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">User JS20109 has print stations with 20K firewall rules. CPU utilization for Windows Firewall runs hot. User Fredrik Gustafsson has 66K rules on 1 of 5 RDS servers. One user notes that WS2016 Servres don't create rules if related Desktop Experience services don't get spawned for new users and provides pointer to WS 2016 blog on disabling <a href="https://blogs.technet.microsoft.com/secguide/2017/05/29/guidance-on-disabling-system-services-on-windows-server-2016-with-desktop-experience/">same</a>.<font face="Times New Roman" size="3"><br></font></li></ul></ul><p style="margin:0in 0in 8pt;"><font face="Calibri" size="3">Related Cases</font><font face="Times New Roman" size="3"><br></font></p><ul style="margin-top:0in;"><font face="Times New Roman" size="3">
+ </font><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">119041121001877&nbsp;</li><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">119032719775807 <br></li><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">118121719462227<br></li><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">118081618798645</li><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">118070618530291<br></li><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">118101119211377&nbsp;</li><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">118051418175868 <br></li><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">117021415319040</li><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">117022015347447</li><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">117092816410487
+- case owned by&nbsp;Yamine Taib. Disbaling ICS server on WS16 RDS cited by bug 13483018 has no impact </li><font face="Times New Roman" size="3">
+ </font><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">117040715571277</li><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">117060715854140</li><font face="Times New Roman" size="3">
+ </font><font face="Times New Roman" size="3">
+ </font><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">117081616191795</li><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">117060615849485</li><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">118012617538106</li><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">118021417642452</li><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">118022317699402</li><ul><li style="margin:0in 0in 8pt;color:rgb(0, 0, 0);font-style:normal;font-weight:normal;">Case owner = Albert Lavrentev. OS = WS16.14393. 50 RDS hosts impacted. Start / search buttons don't work. RDS Server hangs. 261,024 firewall rules under hklm\ccs\services\sharedaccess\parameters\firewallpolicy\restrictedservices\configurable\system. Customer relying on registry key cleanup as workaround. 50 RDS hosts support 100 users for a total of 5K seats. <font face="Times New Roman" size="3"><br></font></li></ul></ul></div>

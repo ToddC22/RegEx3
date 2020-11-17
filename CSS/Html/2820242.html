@@ -1,0 +1,914 @@
+﻿<header><h1>Informational: M365 Commerce: Supporting Volume Licensing customers</h1></header><div class="kb-references-section section">
+<p class="sbody-h3"><span asset="4462485" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4462485]</span></p>
+
+<h3 class="sbody-h3"><span class="text-base"><span class="text-base"><a id="top" name="top"></a></span></span></h3>
+
+<h3>&nbsp;</h3>
+
+<h3><span><strong><span><span><span>Table of contents</span></span></span></strong></span></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td><a bookmark-id="apply" href="#apply" managed-link=""><span><span><span><span>Applies to</span></span></span></span></a></td>
+		</tr>
+		<tr>
+			<td><a bookmark-id="guidance" href="#guidance" managed-link=""><span><span><span><span>Guidance</span></span></span></span></a></td>
+		</tr>
+		<tr>
+			<td><a bookmark-id="procedure" href="#procedure" managed-link=""><span><span><span><span><span><span>Procedure</span></span></span></span><span><span><span>s by Scenario</span></span></span></span></span></a></td>
+		</tr>
+		<tr>
+			<td><span><span><span lang="EN-GB"><span><span> </span></span></span></span></span> <a bookmark-id="doc" href="#doc" managed-link=""><span><span><span><span>Supporting documents</span></span></span></span></a></td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+<div>&nbsp;</div>
+</div>
+
+<h3 class="sbody-h3"><a id="apply" name="apply"></a>Applies to <a class="bookmark" id="applies"></a></h3>
+
+<div class="indent"><span class="text-base">The following services:</span> All services<br>
+<span class="text-base">The following <span lang="EN-US"><span><span>advocate</span></span></span> roles:&nbsp;</span><span class="text-base">For NOAM only&nbsp;</span>Tier 2 and Premier team;<span class="text-base">&nbsp;For other regions: </span>All Roles<br>
+<span class="text-base">The following markets: </span>All markets (For detailed information about product-specific availability, see <a data-content-id="" data-content-type="" href="/en-us/help/2748142" id="kb-link-1" managed-link="" target="_blank">2748142: Markets where Microsoft Online Services are available</a>.</div>
+
+<p class="sbody-h4"><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+<br>
+<span class="text-base"></span>
+
+<h3 class="sbody-h3"><a id="guidance" name="guidance"></a>Guidance&nbsp; &nbsp;</h3>
+
+<p>Certain scenarios require the viewing/changing of VL agreement information. In those cases, additional personally identifiable information (PII) authorization is required. Please refer to <a data-content-id="" data-content-type="" href="/en-us/help/2801563" id="kb-link-2" managed-link="" target="_blank">2801563: How to verify and entitle Volume Licensing customer(s)</a>. This is called out on a scenario-by-scenario basis in this document.<br>
+<br>
+<span class="text-base">Support boundaries </span><br>
+<br>
+If the customer comes in through either VL or Commerce, advocates will not bounce the customer back&nbsp;but will continue to support them following their respective procedure.</p>
+
+<p><span><span><span><strong>Note</strong>: If the scenario the customer is describing does not fit with any of the scenarios below described in this article, or if advocates are uncertain if a case should be transferred to the Volume Licensing team or kept under Commerce ownership, please also review the article&nbsp;<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4539127" managed-link="" target="_blank">4539127: Procedure: M365 Commerce: How can Support Transfer a Rave Case to Volume Licensing Team</a><strong>.</strong></span></span></span></p>
+
+<p><span><span><span>W</span></span></span><span class="text-base">hich admin roles from each tool are entitled to support?</span></p>
+
+<ul class="sbody-free_list">
+	<li><span class="text-base">CMAT</span> - The person either shown in the <span class="text-base">Tenant Discovery Emails</span> or the VL payload.</li>
+	<li><span class="text-base">VLSC</span> - <span class="sbody-italic">VL admin (Blue man icon), OSM Admin (yellow triangle) and VL Contact in VLSC Impersonation tool</span><span class="sbody-italic">.</span></li>
+	<li><span class="text-base">Explore.ms</span> - Notices Contact, Primary Contact, Online Admin and OSM on the VL agreement.</li>
+</ul>
+<span class="text-base">When does a VL subscription move from Active to InGracePeriod?</span>
+
+<div class="indent">If a VL subscription has moved past its end date, the service will change to HAR or END state immediately. The status on the VL side can be viewed in the Customer Management Agent Tool (CMAT) by searching VL Information &gt; Agreement Number.<br>
+<br>
+<span class="text-base">VL Status</span> in CMAT:<br>
+ACT = Active<br>
+HAR (Held Awaiting Reactivation) = InGracePeriod or Disabled or De-provisioned<br>
+END = InGracePeriod or Disabled or De-provisioned<br>
+&nbsp;</div>
+
+<p><span class="text-base">How long does a VL subscription stay in the InGracePeriod state?</span></p>
+
+<div class="alert-band">
+<div class="alert alert-info" role="alert">
+<p class="alert-title">InGracePeriod update notes</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><span><span>Starting with September 2017, for all O365 subscriptions, the grace period should be 90 days.</span><br>
+NOTES:</span></p>
+
+<ul>
+	<li>
+	<p>Prior to September 2017, the length of InGracePeriod status could vary, based on the subscription offer. &nbsp;<span><span> </span></span></p>
+	</li>
+	<li>
+	<p>Other cloud subscriptions have different lifecycles and will be aligned in the future.</p>
+	</li>
+</ul>
+
+<p>For more information check KB <a href="https://internal.support.services.microsoft.com/en-us/help/2812947/information-about-the-subscription-life-cycle" managed-link="" target="_blank">2812947 - Information about the subscription lifecycle</a></p>
+</div>
+</div>
+</div>
+</div>
+
+<p><span class="text-base"></span><br>
+The length of InGracePeriod status also varies, depending on the subscription.</p>
+
+<ul class="sbody-free_list">
+	<li>If the subscription is already in InGracePeriod, advocates can check the <span class="text-base">Current Status End Date </span>in CMAT to determine when the subscription will move into Disabled status.</li>
+	<li>If the subscription is still Active and the customer wants to know how long the grace period is, Commerce advocates can collaborate with Commerce T-3 or VL advocates to identify the specific grace period.</li>
+</ul>
+<br>
+<a bookmark-id="top" href="#top" managed-link="">Return to top</a><br>
+&nbsp;
+<h3 class="sbody-h3"><a id="procedure" name="procedure"></a>Procedure<span><span><span><span>s by Scenario</span></span></span></span><a class="bookmark" id="process"></a></h3>
+<a class="bookmark" id="s1"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span> <span class="bold btn-link link-expand-text"><span class="text-base">Scenario 1. </span>The customer has purchased licenses through a VL program and does not see them in the Microsoft 365 admin center</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p>For details, refer to article <a data-content-id="" data-content-type="" href="/en-us/help/3165883" id="kb-link-3" managed-link="" target="_blank">3165883: How to troubleshoot when VL customers report they did not see licenses after purchasing</a>.</p>
+</div>
+</div>
+<a class="bookmark" id="s2"></a>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"> </span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Scenario 2. Customer renewed their agreement and now has duplicate subscriptions on their tenant.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed">
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span><span class="text-base">a.</span></span></td>
+			<td class="sbody-td"><span>Suggested script</span></td>
+			<td class="sbody-td">
+			<p><span><span><span>Instruction: Advocate should request agreement number.</span></span></span></p>
+
+			<p><span><span class="sbody-italic">&quot;What is your VL agreement number?&quot;</span></span></p>
+			</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">&nbsp;</td>
+			<td class="sbody-td"><span>Steps</span></td>
+			<td class="sbody-td"><span>1. Entitle the customer on the agreement, following <a data-content-id="" data-content-type="" href="/en-us/help/2801563" id="kb-link-4" managed-link="" target="_blank">2801563: How to verify and entitle Volume Licensing customer(s)</a>.<br>
+			2. Search by VL Information/Agreement Number.</span>
+			<div class="kb-collapsible kb-collapsible-collapsed"><span><span asset="4528185" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4528185]</span><br>
+			3. Go to the Subscriptions page.</span></div>
+			</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">&nbsp;</td>
+			<td class="sbody-td"><span>Validation</span></td>
+			<td class="sbody-td"><span>Are there duplicate subscriptions?</span>
+			<ul class="sbody-free_list">
+				<li><span><span class="text-base">Yes. </span>Proceed to step b.</span></li>
+				<li><span><span class="text-base">No.</span> Please ask the customer to confirm the VL agreement number, and return to the&nbsp;beginning of step <span class="text-base">a</span> with the new VL agreement number.</span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span><span class="text-base">b.</span></span></td>
+			<td class="sbody-td"><span>Suggested script</span></td>
+			<td class="sbody-td">
+			<p><span><span><span>Instruction: Advocate asks if a new or renewed agreement exists.</span></span></span></p>
+
+			<p><span><span class="sbody-italic">&ldquo;Did you recently renew your service and receive a new agreement number?&rdquo;</span></span></p>
+			</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">&nbsp;</td>
+			<td class="sbody-td"><span>Validation</span></td>
+			<td class="sbody-td">
+			<ul class="sbody-free_list">
+				<li><span><span class="text-base">Yes. </span>This is by design. Confirm that the customer sees their licenses pooling (customer sees all licenses of a service type in one group). Please inform the customer that because the new subscription is the same license type, they will not need to move users. The users will be associated with the active licenses automatically.<br>
+				<br>
+				<span class="text-base">Note:</span> If a new agreement was signed and resulted in two duplicate line items, disable the subscriptions associated with the old or expired EA.</span></li>
+				<li><span><span class="text-base">No/Don&rsquo;t Know.</span> Contact your Team Lead, and escalate the case to OVLS POD for collaboration. </span></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<a class="bookmark" id="s3"></a>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Scenario 3. The customer did not receive the Microsoft 365 activation link&mdash;needs to have it resent. </span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed">
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span><span class="text-base">a.</span></span></td>
+			<td class="sbody-td"><span>Suggested script</span></td>
+			<td class="sbody-td"><span><span class="sbody-italic">&quot;What is the Volume Licensing agreement number you would like to activate?&quot;</span></span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">&nbsp;</td>
+			<td class="sbody-td"><span>Steps</span></td>
+			<td class="sbody-td"><span>1. Entitle the customer on the agreement, following <a data-content-id="" data-content-type="" href="/en-us/help/2801563" id="kb-link-5" managed-link="" target="_blank">2801563: How to verify and entitle Volume Licensing customer(s)</a>.<br>
+			2. Search by VL Information/Agreement Number.</span>
+			<div class="kb-collapsible kb-collapsible-collapsed"><br>
+			<br>
+			<span><span asset="4528186" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4528186]</span><br>
+			<br>
+			<br>
+			3. Go to the <span class="text-base">Subscriptions </span>tab.<br>
+			4. Click on the drop-down arrow against the line item.<br>
+			5. Scroll down and click <span class="text-base">Tenant Discovery Emails</span>. </span>
+			<div class="kb-collapsible kb-collapsible-collapsed"><br>
+			<span><span asset="4528187" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4528187]</span><br>
+			<br>
+			<br>
+			6. Find the &ldquo;Sign Up Link&rdquo; and &ldquo;Sign In Link&rdquo; and resend them to the customer.</span>
+			<div class="kb-collapsible kb-collapsible-collapsed"><br>
+			<span><span asset="4528188" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4528188]</span><br>
+			<br>
+			<br>
+			The customer could be the person either shown in the <a data-content-id="" data-content-type="" href="http://view.email.microsoftonline.com/?qs=5031ee308953e02409f9cce4f3a19affa35ec541e0462093750e5607a7f7fd941e2bfa75d2d5fc21ab7c1b12e1e07ca98603a6cd234f9c64" managed-link="" target="_blank">Tenant Discovery Emails</a>&nbsp;or the VL payload. If the customer wants the email to be sent to another person, the email address must first be updated in VLSC by an admin. Once the new email address has been updated, copy the links and resend them through the ticketing system.&nbsp;<br>
+			<br>
+			<span class="text-base">For EMEA and VL Support Pilot to change VL contact and to whom the activation link can be sent</span></span>
+			<div class="kb-collapsible kb-collapsible-collapsed"><br>
+			<br>
+			<span>There are multiple roles in VLSC portal: VL admin (Blue man icon), OSM Admin (yellow triangle) and VL Contact in VLSC Impersonation tool. VL admin can update contacts in the VLSC portal so the activation link can be sent accordingly.</span><br>
+			<br>
+			<span>If the customer wants to send the links to another person, go to explore.ms or VLSC to check if the person who requested the activation link is a VL admin or OSM or Online Admin. VL admins, Online Admins,&nbsp;and OSM on the VL agreement are allowed to receive the activation link.&nbsp;<br>
+			<br>
+			<span class="sbody-italic">How to identify the OSM or Online Admin in Explore.ms:</span><br>
+			<br>
+			Notice EA can have multiple OSM&rsquo;s/VL admins. Enter the Agreement Details page in explorer.ms, and check the Participant Type column to identify the Online Services manager or Online Admin.&nbsp;</span>
+			<div class="kb-collapsible kb-collapsible-collapsed"><br>
+			<span><span asset="4528189" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4528189]</span><br>
+			<br>
+			<span class="sbody-italic">How to identify the VL admin or OSM in VLSC:</span></span>
+			<div class="kb-collapsible kb-collapsible-collapsed"><br>
+			<span><span asset="4528191" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4528191]</span><br>
+			<br>
+			If the person is the VL admin or OSM or Online Admin, send the activation link in the ticketing system and help with the correct activation. (See steps above on how to copy and paste the activation links from CMAT).&nbsp;<br>
+			<br>
+			If the person is not VL admin or OSM or Online Admin, don&rsquo;t send links. Provide the following steps to the customer.<br>
+			<br>
+			If the customer wants the email to be sent to another person (not OSM,&nbsp;not Online Admin and not VL admin), the email address must first be updated in VLSC by an admin. Once the new email address has been updated, copy the links and resend them through the ticketing system.</span></div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<a class="bookmark" id="s41"></a>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Scenario 4. VL customer provisions their VL licenses on one tenant but had intended to provision them on another.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed"><br>
+<br>
+<span><span class="text-base">Tier 1 advocates:</span><br>
+<br>
+After getting customer&#39;s authorization and subscription changing permission, escalate the issue to Tier 2. Refer to article <a href="https://internal.support.services.microsoft.com/en-us/help/3165912" managed-link="" target="_blank">3165912: How M365 Accounts and Billing Tier 1 supports VL customers on PCN remap when customer provisioned their licenses on wrong tenant</a> for details.<br>
+<span class="text-base">Tier 2/POD SME:</span><br>
+<br>
+After verification, remap the PCN tenant as described in article <a data-content-id="" data-content-type="" href="/en-us/help/3165892" id="kb-link-8" managed-link="" target="_blank">3165892: How Tier 2/POD SME support VL customers when they provisioned their licenses on the&nbsp;wrong tenant</a>.</span></div>
+
+<p>&nbsp;</p>
+</div>
+</div>
+<a class="bookmark" id="s51"></a>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Scenario 5. The customer wants the Trial and EAVL Paid offers of the same plan to co-exist on the same tenant simultaneously.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed"><br>
+<br>
+<span><span class="text-base">Tier 2/POD SME:</span></span>
+
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span>a.</span></td>
+			<td class="sbody-td"><span>By design, a trial will automatically convert to a paid subscription. Therefore, you cannot have paid and trial offers in the same tenant.</span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<a class="bookmark" id="s5"></a>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Scenario 6. The customer receives their Office 365 activation email but receives an error when they click the URL.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed">
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span><span class="text-base">a.</span></span></td>
+			<td class="sbody-td"><span>Steps</span></td>
+			<td class="sbody-td"><span>1. Verify the customer&rsquo;s eligibility to access Personally Identifiable Information (PII) for this agreement, following <a data-content-id="" data-content-type="" href="/en-us/help/2801563" id="kb-link-9" managed-link="" target="_blank">2801563: How to verify and entitle Volume Licensing customer(s)</a>.<br>
+			<br>
+			2. Search for the customer by VL Information/Agreement Number.</span>
+			<div class="kb-collapsible kb-collapsible-collapsed"><span><span asset="4528192" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4528192]</span><br>
+			<br>
+			3. On the Subscriptions page, locate the VL subscription and expand the details. Click the <span class="text-base">Tenant Discovery Emails</span> link. Note the Expiration Date. </span>
+			<div class="kb-collapsible kb-collapsible-collapsed"><span><span asset="4528193" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4528193]</span><br>
+			<br>
+			4. If the URL has expired, click<span class="text-base"> Reactivate VL Sign Up</span>.<br>
+			<br>
+			<span class="text-base">Note:</span> T1 <span lang="EN-US"><span><span>advocate</span></span></span>s are now empowered to reactivate expired links, there is no need to escalate to POD SME/T2.<br>
+			<br>
+			5. If customer sees the following error:</span>
+			<div class="kb-collapsible kb-collapsible-collapsed"><br>
+			<span><span asset="4528194" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4528194]</span><br>
+			ask the customer to sign out from all accounts and then sign in on the account you want&nbsp;to activate,&nbsp;or ask the customer to try with a different browser, or use in-private browser mode when the above troubleshooting steps don&rsquo;t work.<br>
+			<br>
+			6. If the&nbsp;customer continues to see this error message, escalate the case to T-3 for possible MUTEX issue.</span></div>
+			</div>
+			</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<a class="bookmark" id="s6"></a>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Scenario 7. Customer needs to know to whom the activation email was sent. </span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed">
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span><span class="text-base">a.</span></span></td>
+			<td class="sbody-td"><span>Suggested script</span></td>
+			<td class="sbody-td"><span><span class="sbody-italic">&ldquo;The Activation email is sent to the address listed as the Online Services Administrator in the Volume Licensing Service Center at the time the order was processed. The Administrator can and may have changed this field. Please provide the agreement number, and I&#39;ll verify what address this is.&rdquo;</span></span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">&nbsp;</td>
+			<td class="sbody-td"><span>Steps</span></td>
+			<td class="sbody-td"><span>1. Verify the customer&rsquo;s eligibility to access PII for this agreement, following <a data-content-id="" data-content-type="" href="/en-us/help/2801563" id="kb-link-10" managed-link="" target="_blank">2801563: How to verify and entitle Volume Licensing customer(s) </a>.<br>
+			2. Search for the customer by VL Information/Agreement Number.<br>
+			3. On the Subscriptions page, locate the VL subscription and expand the details.<br>
+			4. Scroll down to the VOLUME LICENSING section and click the <span class="text-base">Tenant Discovery Emails</span> link. </span>
+			<div class="kb-collapsible kb-collapsible-collapsed"><span><span asset="4528195" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4528195]</span><br>
+			5. View the Recipient field for the email. The activation email was sent to this email address.</span>
+			<div class="kb-collapsible kb-collapsible-collapsed"><span><span asset="4528196" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4528196]</span><br>
+			6. Inform the customer that the contact can be seen in the VLSC portal, and we are not allowed to give out any PII. If the customer wants the email to be sent to another person, the email address must first be updated in VLSC by an admin. Once the new email has been updated, copy the Sign-Up or Sign In Link and resend to the new contact through the ticketing system. For advocates who have VLSC access, see steps in <a bookmark-id="s3" href="#s3" managed-link="" target="">Scenario 3</a> to walk through VL admin to change the contact person in the portal. </span></div>
+			</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<a class="bookmark" id="s8"></a><span class="text-base"></span>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="text-base">Scenario 8.</span> VL customer requests credit for a duplicate direct subscription.</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p>Refer to article <a data-content-id="" data-content-type="" href="/en-us/help/3165914" id="kb-link-11" managed-link="" target="_blank">3165914: How to support when VL customer requests credit for duplicate direct subscription</a>.</p>
+</div>
+</div>
+<a class="bookmark" id="s9"></a><a id="9" name="9"></a>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="text-base">Scenario 9. </span>VL customers may need assistance in locating their Account Manager&rsquo;s name and contact information as well as information about their agreements.</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p>&nbsp;Refer to <a data-content-id="" data-content-type="" href="/en-us/help/2768896" id="kb-link-13" managed-link="" target="_blank">2768896: How to use explore.ms to support Volume Licensing customers</a>.</p>
+</div>
+</div>
+<a class="bookmark" id="s11"></a>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="text-base">Scenario 10.</span> VL customers may contact Support asking for a service outage credit (SLA credit).</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p>Refer to <a data-content-id="" data-content-type="" href="/help/3181554" id="kb-link-14" managed-link="" target="_blank">3181554: Processing an SLA credit request for Volume Licensing customers</a>.</p>
+</div>
+</div>
+<a class="bookmark" id="s12"></a>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Scenario 11. Customer requests an extension on their Volume Licensing subscription.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed"><br>
+<br>
+<span><span class="text-base">Guidance to request VL subscription extension.</span></span>
+
+<div class="kb-collapsible kb-collapsible-collapsed"><span>This guidance applies to VL account teams requesting an extension to an existing VL customer&rsquo;s subscription.<br>
+<br>
+<span class="text-base">Extension guidelines:</span></span>
+
+<ul class="sbody-free_list">
+	<li><span>For non-government subscriptions, the account team can request a 1-time up-to-90 day extension to the subscription&rsquo;s grace period. No Business group (BG) approval required.</span></li>
+	<li><span>For Government contracts, BG must approve the extension.</span></li>
+	<li><span>The account team may request a second extension or a longer extension if the customer has subscriptions totaling &gt; 10K seats. In this case, the BG must approve the extension&nbsp;<span lang="EN-US"><span><span>submitted by T3 through M365 Deal Desk dashboard.</span></span></span></span></li>
+</ul>
+<span><span class="text-base">Note:</span></span>
+
+<ul class="sbody-free_list">
+	<li><span>In all cases, the account team must have written evidence from the customer (in email form) that they want/approve this extension (this is required for data deletion compliance).</span></li>
+	<li><span>This procedure&nbsp;only applies to scenarios where the account team is contacting support, not when the customer contacts support. All requests must have involvement from the Microsoft Account Team.</span></li>
+	<li><span><span><span><span><span><span>If BG Approval is needed, then the Customer&rsquo;s Account Team can raise a concession request here: <a data-content-id="" data-content-type="" href="https://empguide-v4.trafficmanager.net/concession/1990" managed-link="" target="_blank">https://empguide-v4.trafficmanager.net/concession/1990</a>. In the meantime, please extend the customers Grace period on the subscriptions for 7 days until the decision from BG is decided.</span></span></span></span></span></span></li>
+</ul>
+<br>
+<br>
+<span>To allow for the best experience for customers, the time a Volume Licensing subscription is in InGracePeriod can be extended. This workaround is to be used to provide service to the customer while their Volume Licensing subscription renewal or extension is being processed. Users will continue to have access to their service when the subscription is in InGracePeriod status.<br>
+<br>
+<span class="text-base">Tier 1:</span></span>
+
+<ul class="sbody-free_list">
+	<li><span>After proper entitlement: </span></li>
+	<li><span>If the customer&rsquo;s subscription is in <span class="text-base">Active</span> status, do not extend the end date. Users will have access to their service even when the subscription moves into InGracePeriod.</span></li>
+	<li><span>If the customer&rsquo;s subscription is in <span class="text-base">Ingraceperiod</span> status:</span>
+	<ol class="sbody-num_list">
+		<li><span>Confirm with the customer that their Volume Licensing renewal or extension is in progress or they are working towards renewing or extending their existing service.</span></li>
+		<li><span>Ask the customer how long they believe they will need to complete the renewal or extension. Note this time.</span></li>
+		<li><span>Extend the current state end date to the desired date as determined in step 2. The maximum extension allowed is 90 days from the current date, if requested.</span></li>
+	</ol>
+	</li>
+	<li><span>If the customer&rsquo;s subscription is in <span class="text-base">Disabled</span> status:</span>
+	<ol class="sbody-num_list">
+		<li><span>Confirm with the customer that their Volume Licensing renewal or extension is in progress or they are working towards renewing or extending their existing service.</span></li>
+		<li><span>Ask the customer how long they believe they will need to complete the renewal or extension. Note this time.</span></li>
+		<li><span>Escalate to Tier 3 Engineering per&nbsp;<a data-content-id="" data-content-type="" href="/en-us/help/2778091" id="kb-link-15" managed-link="" target="_blank">2778091: How to escalate a Service Request to Tier 3, Engineering</a>. </span></li>
+	</ol>
+	</li>
+</ul>
+<span><span class="text-base">Tier 3 Engineering steps to extend the end date of a disabled VL subscription:</span></span>
+
+<ol class="sbody-num_list">
+	<li><span>Re-enable the subscription.<br>
+	<br>
+	Note: A VL subscription in HAR or END should never be left in the Active state.</span>
+
+	<ul class="sbody-free_list">
+		<li><span>If the re-enable option is not available, update the end date to one day beyond the current status end date. This will allow the subscription to be re-enabled.</span></li>
+	</ul>
+	</li>
+	<li>When the subscription is Active, immediately cancel the subscription to put it in &ldquo;InGracePeriod&rdquo; status, then <span>select&nbsp;</span><span class="text-base">Extend current state end date, </span>edit the Current Status End Date field to the desired date as determined in Step 2. The maximum extension allowed is 90 days from the current date, if requested.</li>
+	<li><span lang="EN-US"><span><span>If more than 180 days grace period is needed, submit request through Dashboard <a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/cpcee/Lists/Trial/AllItems.aspx" managed-link="" target="_blank">here</a> and email the Microsoft 365 Deal Desk <u><a href="mailto:microsoft365dealdesk@service.microsoft.com" title="mailto:microsoft365dealdesk@service.microsoft.com">microsoft365dealdesk@service.microsoft.com</a></u> to inform them that a request is pending for approval. (ETA SLA for Deal Desk to respond is 3 business days.)</span></span></span></li>
+</ol>
+
+<p><span><span><span><span><span><span>For Bulk extensions see new article: <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4574687" managed-link="" target="_blank">4574687: Procedure: VLS: Office VL Subscription Bulk Extension</a></span></span></span></span></span></span></p>
+</div>
+</div>
+</div>
+</div>
+<a class="bookmark" id="s13"></a>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Scenario 12. Customer who is receiving notifications about their disabled (InGracePeriod) VL subscription.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed">&nbsp;
+<div class="indent"><span>Customers receive notifications when the Enterprise Agreement expires and they may receive notifications when their VL subscription goes into a different stage, e.g. from InGracePeriod to Disabled.</span></div>
+</div>
+</div>
+</div>
+<a class="bookmark" id="14"></a>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Scenario 13. Tenant remap instructions for Enterprise Mobility Suite (EMS) customers</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed"><br>
+<span><span class="text-base">Note:</span> Enterprise Mobility Suite (EMS) is a suite that includes Microsoft Azure Active Directory Premium, Microsoft Azure Rights Management, and Microsoft Intune. It is sold through Volume Licensing, MPSA, Cloud Service Provider and prepaid. This subscription will be supported the same as all other Volume Licensing and prepaid subscriptions we already have in place. See articles 2821797: Information about Office 365 Prepaid Plans and<a data-content-id="" data-content-type="" href="/en-us/help/2821257" id="kb-link-17" managed-link="" target="_blank">2821257: Helping customers with prepaid plan product key issues</a>.<br>
+<br>
+Tenant remap instructions:</span>
+
+<ol class="sbody-num_list">
+	<li><span>Perform a tenant remap for the EMS subscription as you would with any Volume Licensing service. The customer will have an &quot;Access to Azure Active Directory&quot; subscription under their Azure account. Ask the customer for the Microsoft account this Azure subscription is under.</span></li>
+	<li><span>After the remap has been completed, transfer the case to Azure support (choose &ldquo;Azure Active Directory&rdquo;&nbsp;with the following request: <span class="sbody-italic">&quot;This customer&#39;s EMS subscription has been moved from tenant ID to tenant ID. Please link the &quot;Access to Azure Active Directory&quot; subscription to the new directory (tenant), using customer&rsquo;s Microsoft Account.&quot; </span></span></li>
+</ol>
+</div>
+</div>
+</div>
+<a class="bookmark" id="15"></a>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Scenario 14. The customer wants to expedite the lifecycle process of their VL subscription from InGracePeriod to Disabled or Deprovisioned.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed"><br>
+<br>
+<span>Tier 1 advocate should escalate to Tier 2 or Tier 3 and they will check the EA situation (for example end date) and then approve the request as valid. As long as the EA subscription is in HAR or END status, the&nbsp;advocate can move it to Disabled. </span>
+
+<div class="kb-collapsible kb-collapsible-collapsed"><br>
+<span><span asset="4528197" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4528197]</span><br>
+<span asset="4528199" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4528199]</span><br>
+<br>
+<br>
+If the customer provides a good reason for the subscription being&nbsp;disabled (e.g. the customer doesn&rsquo;t want to see the licenses or the customer wants to ensure the licenses cannot be used on the portal when their subscription is in the status of InGracePeriod), or they don&rsquo;t accept the explanation about the subscription&rsquo;s normal life cycle, set the subscription status from InGracePeriod to Disabled.<br>
+<br>
+If customer request to de-provision, please assure the VL subscription status should be Disabled or InGracePeriod. Please do not de-provision active VL subscription. If de-provisioned by the&nbsp;wrong action, please try to contact VL hub. For details, see article&nbsp;<a data-bi-name="content-anchor-link" href="https://internal.support.services.microsoft.com/en-us/help/2836475" managed-link="" tabindex="0" target="_blank">2836475: Self-serve subscription removal and tenant deletion request process</a>.</span></div>
+
+<div class="kb-collapsible kb-collapsible-collapsed">&nbsp;</div>
+
+<div class="kb-collapsible kb-collapsible-collapsed">
+<p><span><span><strong><span lang="EN-US"><span>Note:</span></span></strong><span lang="EN-US"></span></span></span></p>
+
+<p><span><span><span lang="EN-US"><span>If the subscriptions are with <em>Active</em> status and the customer still wants us to disable them on our side, please refer the customer to the Partner/Account team to have the licenses cancelled. </span></span></span></span></p>
+<span lang="EN-US"><span><span>Tier2/Tier3 cannot disable them until the subscriptions are with <em>InGracePeriod</em> status. In order to disable the customer&#39;s subscriptions, we need a written approval (email) from an entitled Admin.</span></span></span></div>
+
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<a class="bookmark" id="s15"></a>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Scenario 15. Customers cannot do a License reservation in Volume Licensing Service Center (VLSC) and get an error message. </span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed"><span>Due to a change in May, some customer contract will not be able to do license reservations in VLSC and they will receive the following error message:<br>
+<br>
+<span class="sbody-italic">&ldquo;Unfortunately, the Enterprise Agreement you have signed does not include the necessary terms to support online services. Please work with your Partner or Microsoft Representative to ensure that the appropriate terms are signed before placing reservations.&rdquo;</span><br>
+<br>
+Screenshot with error message:<br>
+<span asset="4528201" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4528201]</span><br>
+<br>
+If you see this error, escalate to the VL Hub.</span></div>
+
+<p>&nbsp;</p>
+</div>
+</div>
+<a class="bookmark" id="s16"></a>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span><span><strong><span><span><span><span>Scenario 16:</span></span></span></span></strong></span><span><span><span> </span></span></span><strong><span><span>EA Step-up licenses &ndash; Base subscription seats count doubled after step-up.</span></span></strong></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><span><strong><span><span>A systems limitation corrected on Nov 2</span></span></strong><strong><span><span>2</span></span></strong><strong><sup><span><span>th</span></span></sup></strong><strong><span><span> 2018, can result in customers who completed an EA Step-Up having twice the count of base subscription seats. </span></span></strong></span></p>
+
+<p><span> </span></p>
+
+<p><span><strong><span><span>Prior to Nov 2018,</span></span></strong><em> </em><span><span>EA Step-up licenses processed manually / or electronically (excluding orders placed through POET /RO &ndash; which the system decremented correctly) resulted in the base licenses count being doubled, as the base licenses were not decremented and the stepped -up licenses were added. This is visible in the Admin Portal and the VLSC, as well as in internal tools such as CMAT.</span></span></span></p>
+
+<p><span><span><span>There is no solution to decrement the base licenses for such orders at this time and the issue will remain until the Po ends (e.g. anniversary, end for agreement). Notice there is no impact on billing.</span></span></span></p>
+
+<p><span><strong> </strong></span></p>
+
+<p><span><strong><span><span>From Nov 2018:</span></span></strong><span><span> Step-Up orders processed manually or electronically after Nov 2</span></span><span><span>2</span></span><sup><span><span>th</span></span></sup><span><span>2018 will correctly decrement base offerings. Customers will see the correct number of seats as the base license count is immediately decremented and the higher level step-up offering is provisioned, ensuring that the customer is not over-licensed for either remaining base license offering or step-up offering. </span></span></span></p>
+
+<p><span><span><span>This will not correct license count for step up orders processed prior to Nov 2018</span></span></span></p>
+
+<p><span><strong> </strong></span></p>
+
+<p><span><strong><span><span>Customer ready message:</span></span></strong></span></p>
+
+<p><span><strong> </strong></span></p>
+
+<p><span><em><span><span>&ldquo;Your step-up order resulted in a double-provisioning of services on the Admin Portal and double license count for the base subscription on VLSC&nbsp;</span></span><span><span><span>because of a known system limitation</span></span></span><span><span>. This double license count will remain for the duration of your subscription /order term. From a billing perspective, you won&#39;t be charged for these additional licenses.</span></span></em></span></p>
+
+<p><em><span><span><span><span>This duplication won&#39;t occur on any new orders you place, but it&#39;s not possible for Microsoft, or our Partners, to correct the existing duplicated base counts. We apologize for this inconvenience. &ldquo;</span></span></span></span></em></p>
+</div>
+</div>
+
+<p><a id="Scenario 17" name="Scenario 17"></a></p>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span><span><span><span>Scenario 17:</span></span></span></span><span><span><span> &nbsp;A</span></span></span><span><span><span><span>llow <span>overage&nbsp;/ Smart Provisioning</span></span></span></span></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<ul>
+	<li><span lang="EN-GB"><span><span>Allow&nbsp;Overage is an internal reference to a design feature that allows VL customers to assign up to twice as many seats as they are licensed for, using PowerShell scripts in order to avoid loss of service.&nbsp;Allow Overage applies to Agreements created up until October 25, 2019, with an Order Placement date that is after May 2018.</span></span></span></li>
+	<li><span lang="EN-GB"></span><span><span><strong><span lang="EN-GB"><span><span>Smart Provisioning </span></span></span></strong><span lang="EN-GB"><span><span>is the capability for commercial EA / EAS / SCE Agreements which were created after October 25, 2019, to have overages created dynamically, based upon Step Up or seat reductions.</span></span></span></span></span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>&#8203;&#8203;</span></span></span></li>
+</ul>
+
+<p><span lang="EN-GB"><span><span><strong><span>Guidance - DO NOT share any information about this feature with Customers or Partners.&nbsp;Scripting is provided for use in reactive support cases.</span></strong></span></span></span></p>
+
+<p><span><span><span lang="EN-GB"><span><span>When the customer encounters any provisioning issues, advocates are<span> <span>allowed to </span></span></span></span></span><span lang="EN-GB"><span><span> </span></span></span><span lang="EN-GB"><span><span>inform the customer that they can use the overage licenses until the provisioning issue is solved.</span></span></span></span></span></p>
+
+<p><span><span><strong><span lang="EN-GB"><span><span>Provisioning issue is caused by Microsoft:</span></span></span></strong></span></span></p>
+
+<p><span><span><em><span lang="EN-GB"><span><span>&ldquo;We apologize that the Subscription provisioning in Volume Licensing is not working properly. </span></span></span></em></span></span></p>
+
+<p><span><span><em><span lang="EN-GB"><span><span>Our Engineering team is aware of the issue and is working on a resolution which they will deploy as soon as possible. </span></span></span></em></span></span></p>
+
+<p><span><span><em><span lang="EN-GB"><span><span>For a limited period, it is still possible to assign seats via Power Shell Scripts or using Group Based Licensing up to the previously licensed quantity. This is done to avoid unplanned data loss for previously licensed subscribers. Just keep in mind, it will generate a license conflict in the Admin Portal which will be disappear once the provisioning issue is resolved.</span></span></span></em></span></span></p>
+
+<p><span><span><em><span lang="EN-GB"><span><span>We apologize for the inconvenience this issue may have caused.&rdquo; </span></span></span></em></span></span></p>
+
+<p><span><span><span lang="EN-GB"></span></span></span></p>
+
+<p><span><span><strong><span lang="EN-GB"><span><span>Provisioning issue is caused by Customer /Partner:</span></span></span></strong></span></span></p>
+
+<p><span><span><em><span lang="EN-GB"><span><span>&ldquo;We see there was a mistake (provide the reason, for example <span>base and add on are not on the same agreement and therefore the subscription are not provisioning</span>)</span></span></span></em><span lang="EN-GB"><span> </span></span><em><span lang="EN-GB"><span><span>. </span></span></span></em></span></span></p>
+
+<p><span><span><em><span lang="EN-GB"><span><span>For a limited period, it is still possible to assign seats via Power Shell Scripts or using Group Based Licensing up to the previously licensed quantity. This is done to avoid unplanned data loss for previously licensed subscribers. Just keep in mind, it will generate a license conflict in the Admin Portal which will be disappear once the provisioning issue is resolved.&rdquo;</span></span></span></em></span></span></p>
+
+<p><span><span><span lang="EN-GB"></span></span></span></p>
+
+<ul>
+	<li><span lang="EN-GB"><span><span><span>Advocates<span> </span></span></span></span></span><span lang="EN-GB"><span><span> </span></span></span><span lang="EN-GB"><span><span><span>can see the overage licenses in BET: </span></span></span></span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-US/help/4101662" managed-link="" target="_blank">https://internal.support.services.microsoft.com/en-US/help/4101662</a><span lang="EN-GB"></span></li>
+	<li><span lang="EN-GB"><span><span>For more info go to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4479336" managed-link="" target="_blank">https://internal.support.services.microsoft.com/en-us/help/4479336</a></span></span></span></li>
+</ul>
+</div>
+</div>
+
+<p><a id="Scenario 18" name="Scenario 18"></a></p>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span><span><span><span><span><a class="bookmark" id="Scenario 18">Scenario 18. VL Customers can use Extended Period Term (EPT) functionality to avoid a loss of service <span>in the event of a customer&rsquo;s Online Services expiring and not being renewed</span>.</a></span></span></span></span></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><span><span><span><span><span><br>
+Please refer to article <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4530540" managed-link="" target="_blank">4530540: Procedure: VLS: Extended Period Terms (EPT) for Online Services Subscriptions Purchased via Volume Licensing</a> for more details.</span></span></span></span></span></p>
+</div>
+</div>
+<a class="bookmark" id="s19"></a>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span><span><strong><span><span><span>Scenario 19: VL/MPSA customers purchased additional subscriptions, however they are not visible in their portal.</span></span></span></strong></span></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><span><span><strong><span><span><span>Verify</span></span></span></strong><span><span><span> whether the customer has reached the limitation of 150 Active subscription on the tenant.</span></span></span></span></span><br>
+<br>
+<span><span><span><span><span>If so, refer to article </span></span></span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3174133" managed-link="" target="_blank">3174133 - Procedure: M365 Commerce: Supporting Microsoft Product and Services (MPSA) Customers</a></span><span><span><span> for escalation details</span></span></span></span></span></p>
+</div>
+</div>
+</div>
+<br>
+<a bookmark-id="top" href="#top" managed-link="">Return to top</a><br>
+<a id="doc" name="doc"></a><br>
+<br>
+<a class="bookmark" id="suppdocs"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Supporting documents</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed">
+<div class="indent"><span><a data-content-id="" data-content-type="" href="/en-us/help/2768896" id="kb-link-19" managed-link="" target="_blank">2768896: How to use explore.ms to support Volume Licensing customers</a></span><br>
+<span><a data-content-id="" data-content-type="" href="/en-us/help/2814892" id="kb-link-20" managed-link="" target="_blank">2814892: Information about Volume Licensing </a></span><br>
+<span><a data-content-id="" data-content-type="" href="/en-us/help/2870042" id="kb-link-21" managed-link="" target="_blank">2870042: How to identify whether a subscription source is Direct, Volume Licensing, Prepaid, Syndication or CSP </a></span><br>
+<span><a data-content-id="" data-content-type="" href="/en-us/help/2996655" id="kb-link-22" managed-link="" target="_blank">2996655: Applying a credit to a customer&#39;s account using CMAT </a></span><br>
+<span><a data-content-id="" data-content-type="" href="/en-us/help/2821797" id="kb-link-23" managed-link="" target="_blank">2821797: Information about Office 365 Prepaid Plans </a></span><br>
+<span><a data-content-id="" data-content-type="" href="/en-us/help/2821257" id="kb-link-24" managed-link="" target="_blank">2821257: Helping customers with prepaid plan product key issues </a></span><br>
+<span><a data-content-id="" data-content-type="" href="/help/3078288" id="kb-link-25" managed-link="" target="_blank">3078288: How to engage the HUB</a>&nbsp;</span><br>
+<span><a data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2836475" managed-link="" tabindex="0" target="_blank">2836475: Self-serve subscription removal and tenant deletion request process</a></span><br>
+<span><a data-content-id="" data-content-type="" href="/en-us/help/3151630" id="kb-link-27" managed-link="" target="_blank">3151630: How to troubleshoot when VL customers report they did not receive Tenant Discovery Email </a></span><br>
+<span><a data-content-id="" data-content-type="" href="/en-us/help/3151668" id="kb-link-28" managed-link="" target="_blank">3151668: How to troubleshoot when a VL payload fails </a></span><br>
+<span><a data-content-id="" data-content-type="" href="/en-us/help/3165883" id="kb-link-29" managed-link="" target="_blank">3165883: How to troubleshoot when VL customers report they did not see licenses after purchasing </a></span><br>
+<span><a href="https://internal.support.services.microsoft.com/en-us/help/3165912" managed-link="" target="_blank">3165912: How M365 Accounts and Billing Tier 1 supports VL customers on PCN remap when customer provisioned their licenses on wrong tenant</a></span><br>
+<span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3165892" id="kb-link-31" managed-link="" target="_blank">3165892: How Tier 2/POD SEME support VL customers when they provisioned their licenses on the&nbsp;wrong tenant</a></span><br>
+<span><a data-content-id="" data-content-type="" href="/en-us/help/3165914" id="kb-link-32" managed-link="" target="_blank">3165914: How to support when VL customer requests credit for duplicate direct subscription</a><br>
+<a href="https://internal.support.services.microsoft.com/en-us/help/4539127" managed-link="" target="_blank">4539127: Procedure: M365 Commerce:<strong> </strong>How can Support Transfer a Rave Case to Volume Licensing Team</a><a data-content-id="" data-content-type="" href="/en-us/help/3165914" managed-link="" target="_blank"> </a></span></div>
+</div>
+</div>
+</div>
+</div>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<p>&nbsp;</p>
+
+<div internal-content-body="">
+<div class="internal-content">
+<div class="bold internal-content-body-title spacer-12-bottom">Microsoft Internal Support Information</div>
+
+<div class="row">
+<div class="col-xs-24 internal-content-body-content">
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span><u><span><span><span>Change History</span></span></span></u></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><strong><span><span><span>Item</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><strong><span><span><span>Title</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><strong><span><span><span>Date</span></span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td 123017=""><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/124138/?triage=true" managed-link="" target="_blank">124138</a></td>
+			<td>Edits to Scenario 3</td>
+			<td>October 16, 2020</td>
+		</tr>
+		<tr>
+			<td 123017=""><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/123109/?triage=true" managed-link="" target="_blank">123017</a></td>
+			<td>Update TAM terms</td>
+			<td>September 8, 2020</td>
+		</tr>
+		<tr>
+			<td><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/122324" managed-link="" target="_blank">COMMERCIAL CONTENT TRACKING 122324</a></td>
+			<td>Made updates for extending VL subscriptions when BG approval is required.</td>
+			<td>August 31, 2020</td>
+		</tr>
+		<tr>
+			<td><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/120803" managed-link="" target="_blank">COMMERCIAL CONTENT TRACKING 120803</a></td>
+			<td>Added reference for Bulk extensions.</td>
+			<td>July 16, 2020</td>
+		</tr>
+		<tr>
+			<td><span><span><span><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/120863" managed-link="" target="_blank">120863</a></span></span></span></td>
+			<td>Remove CAP related contents</td>
+			<td>July 15, 2020</td>
+		</tr>
+		<tr>
+			<td><span><span><span><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/119042" managed-link="" target="_blank">119042</a></span></span></span></td>
+			<td><span><span><span>Updated customer facing scripts.</span></span></span></td>
+			<td>June 1, 2020</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/116307" managed-link="" target="_blank">COMMERCIAL CONTENT TRACKING 116307</a></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Updated Scenario 17.</span></span></span></p>
+
+			<p><span><span><span>Rebuilt the collapsible sections in Section 3 to enable &ldquo;Expand all/Collapse all&rdquo; functionality.</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>April 13, 2020</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/114648" target="_blank"><span><span><span>114648</span></span></span></a></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Updated the scenario 19.</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>March 6, 2020</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/114397" target="_blank"><span><span><span>114397</span></span></span></a></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Added scenario 19 hyperlink in the index of article 2820242.</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>February 28, 2020</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/112955" target="_blank"><span><span><span>112955</span></span></span></a></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Added a note in Guidance for advocates to refer to article How can Support Transfer a Rave Case to Volume Licensing Team.</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>January 23, 2020</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/112449" managed-link="" target="_blank">112449</a></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Added new scenario about new purchased licenses not visible in portal.</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>January 17, 2020</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span>112781</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Updated a de-provisioning step in Scenario 14.</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>January 17, 2020</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span>111006</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Article title update and term changes. Also removed empty sections.</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>December 12, 2019</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span>110739</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Added a new Scenario related to Extended Period Term (EPT). </span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>November 22, 2019</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span>110161</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Updated title of article 3165912.</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>November 15, 2019</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span>105708</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Updated scenario 11 in the article.</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>October 25, 2019</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span>101660</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Removed reference to 2820302 since it has been archived.</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>May 10, 2019</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span>99896</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Add Policy in TAG.<br>
+			Add Process in TAG.</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>April 1,2019</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span>99894</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Add &ldquo;Speak Up&rdquo; to all Commerce articles.</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>March 27, 2019</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span>98724</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Replaced 3092736 with 2836475.</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>March 25, 2019</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+<a bookmark-id="top" href="#top" managed-link="">Return to top</a><br>
+&nbsp;</div>
+<div class="kb-securedata-section section">Author ID (email alias): aaronb, v-xhua,&nbsp;v-wendya,<br>
+Writer ID (email alias): v-kebro, v-hofern, v-jadewu, v-zhochu, v-maqiu<br>
+SME ID (email alias): aaronb,adong, tkaur<br>
+Contributor ID (email alias):</div>

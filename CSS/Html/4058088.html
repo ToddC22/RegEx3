@@ -1,0 +1,879 @@
+﻿<header><h1>Procedure: Payment instruments scenarios</h1></header><p><span asset="4049349" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4049349]</span></p>
+
+<h3><span><span><span><span>Who should use this article?</span></span></span></span></h3>
+
+<ul>
+	<li><span><span><span><span>Accounts &amp; Billing</span></span></span></span></li>
+	<li><span><span><span><span>Sales</span></span></span></span></li>
+	<li><span><span><span><span>Xbox </span></span></span></span></li>
+</ul>
+
+<h3><span><span><span><span>What is this article about?</span></span></span></span></h3>
+
+<p><span><span><span><span>This article has troubleshooting steps for issues you may run into surrounding Payment Instruments (PI).</span></span></span></span></p>
+
+<p><span><span><span><span>For how to perform an action in the advocate tool, see KB </span></span></span><span><span><span><a href="https://internal.support.services.microsoft.com/help/3065764" target="_blank">3065764 Tool User Guide: Membership Support Tool (MST)</a></span></span></span><span><span><span>. </span></span></span></span></p>
+
+<p><span><span><span></span></span><span><span><span><span>For general Payment Instrument information, see KB </span></span></span><a href="https://internal.support.services.microsoft.com/help/4488312" target="_blank"><span><span><span>4488312 Informational: Payment Instrument (PI) methods</span></span></span></a><span><span><span>.</span></span></span></span><span><span></span></span><span><span><span>.</span></span></span></span></p>
+
+<h3><span><span><span><span><a id="top" name="top"></a>Table of contents</span></span></span></span></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<h4><span><span><span><span>1. <a bookmark-id="1" href="#1" managed-link="">Adding payment instruments</a></span></span></span></span></h4>
+			</td>
+			<td>
+			<p><br>
+			&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4><span><span><span><span>2. Updating payment instruments</span></span></span></span></h4>
+			</td>
+			<td>
+			<p>2.1&nbsp;<a bookmark-id="2.1" href="#2.1" managed-link="">How customers update payment instrument</a></p>
+
+			<p>2.2&nbsp;<a bookmark-id="2.2" href="#2.2" managed-link="">How advocates update payment instrument</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4><span><span><span><span>3. <a bookmark-id="3" href="#3" managed-link="">Removing payment instruments</a></span></span></span></span></h4>
+			</td>
+			<td>
+			<p><span><span><span><span>3.1 </span></span></span><a bookmark-id="3.1" href="#3.1" managed-link=""><span><span>Steps to resolve payment instrument removal prevention</span></span></a></span></p>
+
+			<p><span><a bookmark-id="3.1" href="#3.1" managed-link=""></a><span><span><span>3.2 </span></span></span><a bookmark-id="3.2" href="#3.2" managed-link=""><span><span>How customers remove payment instrument</span></span></a></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4><span><span><span><span>4. Troubleshooting for removing/adding/updating payment instrument issues and errors</span></span></span></span></h4>
+			</td>
+			<td>
+			<p><span><span><span><span>4.1</span></span></span></span><span><span><span><span> </span></span></span><a bookmark-id="4.1" href="#4.1" managed-link=""><span><span>Payment i</span></span><span><span>n</span></span><span><span>strument error codes</span></span></a></span></p>
+
+			<p><span><span><span><span>4.2 <a bookmark-id="4.2" href="#4.2" managed-link="">Payment instrument error messages</a></span></span></span></span><span><span></span></span></p>
+
+			<p><span><span><span><span>4.3&nbsp;</span></span></span><a bookmark-id="4.3" href="#4.3" managed-link=""><span><span>Payment instrument troubleshooting</span></span></a></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4><span><span><span><span>5. Other payment instrument<br>
+			information and scenarios</span></span></span></span></h4>
+			</td>
+			<td>
+			<p><span><span><span><span>5.1 </span></span></span><a bookmark-id="5.1" href="#5.1" managed-link=""><span><span>How to handle a customer who is the payment instrument owner but not the account owner</span></span></a></span></p>
+
+			<p>5.2&nbsp;<a bookmark-id="5.2" href="#5.2" managed-link="">Determining if a payment instrument is banned</a></p>
+
+			<p><span><span><span><span>5.3&nbsp;</span></span></span><a bookmark-id="5.3" href="#5.3" managed-link=""><span><span>Banning payment instruments</span></span></a></span></p>
+
+			<p><span><span><span><span>5.4&nbsp;</span></span></span><a bookmark-id="5.4" href="#5.4" managed-link=""><span><span>LATAM debit card rejection</span></span></a></span></p>
+
+			<p><span><span><span><span>5.5&nbsp;</span></span></span><a bookmark-id="5.5" href="#5.5" managed-link=""><span><span>Customers get charged on credit cards for which they did not provide us any details or Customers get charged on the wrong credit card</span></span></a></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>6.&nbsp;<a bookmark-id="6" href="#6" managed-link="">Refund timelines</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+<h3><span> </span><span><strong><span><span><span><a id="1" name="1"></a></span></span></span></strong><span><span><span>1. Adding payment instruments</span></span></span></span></h3>
+
+<p><span><span><span><span><span><span><span></span></span></span></span></span></span></span><span><span><span><span><span>Guide the customer through self-service for adding a payment instrument.</span></span></span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><span><span><span>1. On account.microsoft.com, under the Payment &amp; billing menu.<br>
+			<br>
+			The customer selects&nbsp;<strong>Payment Options</strong>.<br>
+			<br>
+			On a Windows 10 Phone, customers need to navigate to the Store app. Then through the menu at the top left corner choose&nbsp;<strong>Payment Options</strong>&nbsp;which prompts them to sign into their Microsoft account and provides a mobile version of account.microsoft.com/billing/payments.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span> <span asset="4058089" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4058089]</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>2. Customers verify the Payment Instrument they wish to add if it is not already present.<br>
+			<br>
+			Then select&nbsp;<strong>Add a payment option</strong>.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span> <span asset="4058090" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4058090]</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>3. The customer needs to select the appropriate payment method type.<br>
+			<br>
+			<br>
+			Then the customer needs to verify the region where the payment instrument will be used.<br>
+			<br>
+			<strong>Note</strong>: If the customer selects the wrong region, they may be subject to geo-fencing. Not all payment methods are available in all regions.<br>
+			<br>
+			Select&nbsp;<strong>Next</strong>.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span> </span></span></span><span asset="4058091" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4058091]</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>4. The customer fills in the appropriate information that must match the information required by their financial institution for authorization.<br>
+			<br>
+			Select&nbsp;<strong>Next</strong>.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span> </span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<ul>
+	<li><span><span><span><span><span>On the <strong>Xbox One</strong> <strong>console</strong>, see the online support content for managing the payment options at: </span></span></span><span><a href="https://support.xbox.com/billing/payment-and-purchases/manage-payment-options-on-xbox-one" target="_blank"><span><span><span>https://support.xbox.com/billing/payment-and-purchases/manage-payment-options-on-xbox-one</span></span></span></a></span><span><span><span>.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>On the <strong>Xbox 360 console</strong>, see the online support content for managing the payment options at: </span></span></span><span><a href="https://support.xbox.com/billing/payment-and-purchases/manage-payment-options-on-xbox-360" target="_blank"><span><span><span>https://support.xbox.com/billing/payment-and-purchases/manage-payment-options-on-xbox-360</span></span></span></a></span><span><span><span>.</span></span></span></span></span></li>
+</ul>
+
+<p><span><a bookmark-id="top" href="#top" managed-link=""><span><span>Return to top</span></span></a> </span></p>
+
+<h3><span><span><span><span>2. Updating payment instruments</span></span></span></span></h3>
+
+<h4><span><span><span><span><a id="2.1" name="2.1"></a>2.1 How customers update payment instrument</span></span></span></span></h4>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><span><span><span>1. On PC, navigate to account.microsoft.com, and under the <strong>Payment &amp; billing</strong> menu the customer selects&nbsp;<strong>Payment Options</strong>.<br>
+			<br>
+			On a Windows 10 Phone, customers navigate to the Store app.<br>
+			<br>
+			Through the menu at the top left corner choose&nbsp;<strong>Payment Options</strong>&nbsp;which prompts signing into their Microsoft account and provides a mobile version of account.microsoft.com/billing/payments.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span> <span><span asset="4058089" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4058089]</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span></span></span></span>2. The customer selects&nbsp;<strong>Edit info</strong>&nbsp;on the payment instrument they wish to update.<br>
+			<br>
+			<strong>Note</strong>: If the option to&nbsp;<strong>Edit info</strong>&nbsp;is not available it is an issue with the payment method type. Generally, the payment method will need to be removed and re-added to update the information.</p>
+			</td>
+			<td>
+			<p><span><span><span><span> </span></span></span></span><span asset="4058092" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4058092]</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span></span></span></span>3. The customer fills in the appropriate information which needs to match the information required by their financial institution for authorization.<br>
+			<br>
+			Select&nbsp;<strong>Next</strong>.</p>
+			</td>
+			<td>
+			<p><span><span><span><span>&nbsp; </span></span></span><em><span asset="4058093" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4058093]</span></em></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span><span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span>On the <strong>Xbox One console</strong>, see the online support content for managing the payment options at: </span></span></span><span><a href="https://support.xbox.com/billing/payment-and-purchases/manage-payment-options-on-xbox-one" target="_blank"><span><span><span>https://support.xbox.com/billing/payment-and-purchases/manage-payment-options-on-xbox-one</span></span></span></a></span><span><span><span>.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>On the <strong>Xbox 360 console</strong>, see the online support content for managing the payment options at: </span></span></span><span><a href="https://support.xbox.com/billing/payment-and-purchases/manage-payment-options-on-xbox-360" target="_blank"><span><span><span>https://support.xbox.com/billing/payment-and-purchases/manage-payment-options-on-xbox-360</span></span></span></a></span><span><span><span>.</span></span></span></span></span></li>
+</ul>
+
+<p><br>
+<br>
+<span><a bookmark-id="top" href="#top" managed-link=""><span><span>Return to top</span></span></a></span></p>
+
+<h4><span> </span><span><strong><span><span><span><a id="2.2" name="2.2"></a></span></span></span></strong><span><span><span>2.2 How advocates update payment instrument</span></span></span></span></h4>
+
+<p><span><span><span><span><span></span></span></span></span></span><span><span><span><span><span>Follow section 4 &ldquo;Update payment instrument (all LOBs) in KB </span></span></span><span><a href="https://internal.support.services.microsoft.com/help/4053337" target="_blank"><span><span><span>4053337 TUG: MST: Payment instrument section</span></span></span></a></span><span><span><span>.</span></span></span></span></span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span>Return to top</span></span></a></span></span></p>
+
+<h3><span><span><strong><span><span><span><a id="3" name="3"></a></span></span></span></strong><span><span><span>3. Removing payment instruments2</span></span></span></span></span></h3>
+
+<p><span><span><span><span><span>When removing a payment instrument, there may be conditions that prevent it from being removed.<br>
+<br>
+Examples:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>There is an outstanding or pending balance on the payment instrument.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>There is a renewing subscription on the payment instrument.</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span>Educate the customer about the impact of removing a payment instrument on active subscriptions tied to the account. When removing the payment instrument, select <strong>Cancel renewing subscriptions at the end of cycle and do not renew [No Refund]</strong> (<em>Do not</em> select <strong>Cancel renew subscriptions immediately)</strong>.</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><strong><span><span><span>Note</span></span></span></strong><span><span><span>: PayPal: select <strong>Cancel the subscription immediately</strong> to remove it, otherwise system limitations won&#39;t allow PayPal to be removed even if Auto Renew is turned off.</span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span>Return to top</span></span></a></span></span></span></span></span></span></p>
+
+<h4><span><span><span><span></span></span></span></span><span><span><span><span><strong><a id="3.1" name="3.1"></a></strong>3.1 Steps to resolve payment instrument removal prevention</span></span></span></span></h4>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><span><span><span>If there is an outstanding balance</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Review MST <strong>Payment Instruments and Orders</strong> section to identify the charge causing the outstanding balance.<br>
+			<br>
+			Inform the customer and follow appropriate policies and processes regarding the product or content to resolve the outstanding balance, typically by:</span></span></span></p>
+
+			<ul>
+				<li><span><span><span><span>Transferring the balance to a different valid payment method.</span></span></span></span></li>
+				<li><span><span><span>Offsetting the transaction and canceling the product order.</span></span></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>If there is a pending refund</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span></span></span></span>Use the balance function to resolve the pending refund.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>If the payment instrument is tied to a renewing subscription</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Advice the customer of the subscription, then:</span></span></span></p>
+
+			<ul>
+				<li><span><span><span><span>Switch the subscription to a different payment method.</span></span></span></span></li>
+				<li><span><span><span><span>Turn off auto renewal on the subscription.</span></span></span></span></li>
+				<li><span><span><span><span>If the subscription is in a delayed cancel or auto renewal is turned off, but the PI is still tied to the subscription. Check the subscription to determine if it is a type a replacement token can be issued for. If it is, cancel the subscription and provide a replacement for the time remaining</span></span></span></span></li>
+			</ul>
+
+			<p><span><strong><span><span>Accounts &amp; Billing or Sales</span></span></strong><span><span>: For an Xbox subscription transfer to Xbox Support for replacement.<br>
+			<br>
+			<strong>Xbox:</strong> For an Office subscription Accounts &amp; Billing.</span></span></span></p>
+
+			<p><span><span><span>See KB </span></span></span><span><span><span><a href="https://internal.support.services.microsoft.com/help/3065764" target="_blank"><span><span><span><span>3065764 TUG: MST: Token Lookup tool</span></span></span></span></a></span></span></span><span><span><span> for additional steps.</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span>Return to top</span></span></a></span></span></span></p>
+
+<h4><span><strong><span><span><span><a id="3.2" name="3.2"></a></span></span></span></strong><span><span><span>3.2 How customers remove a payment&nbsp;instrument</span></span></span></span></h4>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><span><span><span>1. On&nbsp;<a href="https://internal.support.services.microsoft.com/account.microsoft.com" target="_blank">account.microsoft.com</a>&nbsp;under the <strong>Payment &amp; billing</strong> menu.<br>
+			<br>
+			The customer selects&nbsp;<strong>Payment Options</strong>.<br>
+			<br>
+			On a Windows 10 Phone navigate to the Store app.<br>
+			<br>
+			Through the menu at the top left corner choose&nbsp;<strong>Payment Options</strong>&nbsp;which prompts a Microsoft account sign in and opens a mobile version of account.microsoft.com/billing/payments.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span> <span><span><span asset="4058089" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4058089]</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span></span></span></span>2. Select&nbsp;<strong>Remove</strong>&nbsp;on the payment instrument they wish to remove.</p>
+			</td>
+			<td>
+			<p><span><span><span><span> </span></span></span></span><span asset="4058094" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4058094]</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>3. The customer needs to confirm the remove by selecting&nbsp;<strong>Yes, remove</strong>.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span> </span></span></span><em><span asset="4058095" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4058095]</span></em></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span><span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span>On the <strong>Xbox One console</strong>, see the online support content for managing the payment options at: </span></span></span><span><a href="https://support.xbox.com/billing/payment-and-purchases/manage-payment-options-on-xbox-one" target="_blank"><span><span><span>https://support.xbox.com/billing/payment-and-purchases/manage-payment-options-on-xbox-one</span></span></span></a></span><span><span><span>.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>On the <strong>Xbox 360 console</strong>, see the online support content for managing the payment options at: </span></span></span><span><a href="https://support.xbox.com/billing/payment-and-purchases/manage-payment-options-on-xbox-360" target="_blank"><span><span><span>https://support.xbox.com/billing/payment-and-purchases/manage-payment-options-on-xbox-360</span></span></span></a></span><span><span><span>.</span></span></span></span></span></li>
+</ul>
+
+<p><span><br>
+<span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span>Return to top</span></span></a></span></span></span></span></p>
+
+<h3><span><span><span><span>4. Troubleshooting for adding/updating payment instrument issues and errors</span></span></span></span></h3>
+
+<h4><span><span><span><span><a id="4.1" name="4.1"></a>4.1 Payment instrument error codes</span></span></span></span></h4>
+
+<p><span><span><span><span>If any error codes are encountered that are not on this list, follow the troubleshooting in <a bookmark-id="4.3" href="#4.3" managed-link="">section 4.3</a>.</span></span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong><span><span><span><span>Error code</span></span></span></span></strong></p>
+			</td>
+			<td>
+			<p><strong><span><span><span><span>Error description</span></span></span></span></strong></p>
+			</td>
+			<td>
+			<p><strong><span><span><span><span>Advocate action</span></span></span></span></strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span></span></span></span>&quot;<em>The customer needs to dissociate any subscription from this payment instrument. This only applies to Mint-managed subscription.&quot;</em></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Same as error code</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span></span></span></span></p>
+
+			<p><span><span><span>We are unable to remove the PayPal account until the subscription has expired or cancelled, so we can set to delay cancel to avoid renewal charges. If the customer wants the PayPal account removed, they need to update the subscription to be associated to a payment instrument which can be removed after changing the subscription to it if desired.</span></span></span></p>
+
+			<p><span><span><span>If this is a PI owner scenario (KB </span></span></span><span><span><span><a href="https://internal.support.services.microsoft.com/help/2885545" target="_blank"><span><span><span><span>2885545 Procedure: How to handle a customer who is the payment instrument owner but not the account owner</span></span></span></span></a></span></span></span><span><span><span>) and the customer has pending charges you can offset and if associated to a subscription you can cancel the subscription immediately.</span></span></span><span><span><span><span> </span></span></span></span></p>
+
+			<p><span> </span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>8214</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span></span></span></span>The payment instrument returns a status of invalid from the backend.</p>
+			</td>
+			<td>
+			<ol>
+				<li><span><span><span><span>Confirm the billing information entered in account.microsoft.com is correct for the payment instrument information.</span></span></span></span>
+				<ul style="list-style-type:disc">
+					<li><span><span><span><span>Ask if the customer has online banking and ask them to confirm the address matches.</span></span></span></span></li>
+					<li><span><span><span><span>A common mistake is customer&rsquo;s providing their mailing address with their financial institution rather than the billing address the payment instrument is set to.</span></span></span></span></li>
+					<li><span><span><span><span>The addresses may be to the same location but have different abbreviations such as &ldquo;DR&rdquo; instead of Drive or &ldquo;Ave&rdquo; instead of &ldquo;Avenue&rdquo;.</span></span></span></span></li>
+					<li><span><span><span><span>Having the exact information is critical to the authorization process.</span></span></span></span></li>
+					<li><span><span><span><span>If the customer does not have online banking but you have confirmed with the customer that the billing information for the payment instrument on account.microsoft.com is correct - proceed to step 2.</span></span></span></span></li>
+				</ul>
+				</li>
+				<li><span><span><span><span>Refer the customer to their financial institution to verify their information is exactly what the financial institution has on record for authorization. Ask the customer to update their payment instrument information accordingly on account.microsoft.com.</span></span></span></span></li>
+			</ol>
+			<span><span><span>If the customer has contacted their financial institution and confirmed their information is correct, follow the engagement process in KB </span></span></span><span><span><span><a href="https://internal.support.services.microsoft.com/help/3072553" target="_blank"><span><span><span><span>3072553 Procedure: A&amp;B: Tier 1 Scenarios</span></span></span></span></a></span></span></span><span><span><span>.<br>
+			<br>
+			Additionally, the customer may re-attempt in 24 hours or try another payment instrument.</span></span></span></td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>8003<br>
+			<br>
+			8004<br>
+			<br>
+			8014</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span></span></span></span>Your zip code is invalid, please enter valid information.</p>
+			</td>
+			<td>
+			<ol>
+				<li><span><span><span><span>Confirm the billing information entered in account.microsoft.com is correct for the payment instrument information.</span></span></span></span></li>
+			</ol>
+
+			<ul>
+				<li><span><span><span>Ask if the customer has online banking and ask them to confirm the address matches.</span></span></span></li>
+				<li><span><span><span>A common mistake is customer&rsquo;s providing their mailing address with their financial institution rather than the billing address the payment instrument is set to.</span></span></span></li>
+				<li><span><span><span>The addresses may be to the same location but have different abbreviations such as &ldquo;DR&rdquo; instead of Drive or &ldquo;Ave&rdquo; instead of &ldquo;Avenue&rdquo;.</span></span></span></li>
+				<li><span><span><span>Having the exact information is critical to the authorization process.</span></span></span></li>
+				<li><span><span><span>If the customer does not have online banking but you have confirmed with the customer that the billing information for the payment instrument on account.microsoft.com is correct - proceed to step 2.</span></span></span></li>
+			</ul>
+
+			<ol start="2">
+				<li><span><span><span><span>Refer the customer to their financial institution to verify their information is exactly what the financial institution has on record for authorization. Ask the customer to update their payment instrument information accordingly on account.microsoft.com.</span></span></span></span></li>
+			</ol>
+
+			<p><span><span><span>If the customer has contacted their financial institution and confirmed their information is correct, follow the engagement process in KB </span></span></span><span><span><span><a href="https://internal.support.services.microsoft.com/help/3072553" target="_blank"><span><span><span><span>3072553 Procedure: A&amp;B: Tier 1 Scenarios</span></span></span></span></a></span></span></span><span><span><span>.<br>
+			<br>
+			Additionally, the customer can re-attempt in 24 hours or try another payment instrument.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>8007<br>
+			<br>
+			8012<br>
+			<br>
+			30225</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span></span></span></span>Your address is invalid, please enter valid information.</p>
+			</td>
+			<td>
+			<ol>
+				<li><span><span><span><span>Confirmed the billing information entered in account.microsoft.com is correct for the payment instrument information.</span></span></span></span></li>
+			</ol>
+
+			<ul>
+				<li><span><span><span>Ask if the customer has online banking and ask them to confirm if the address matches.</span></span></span></li>
+				<li><span><span><span>A common mistake is customer&rsquo;s reviewing their mailing address with their financial institution rather than the billing address the payment instrument is set to.</span></span></span></li>
+				<li><span><span><span>The addresses may be to the same location but have different abbreviations such as &ldquo;DR&rdquo; instead of Drive or &ldquo;Ave&rdquo; instead of &ldquo;Avenue&rdquo;.</span></span></span></li>
+				<li><span><span><span>Having the exact information is critical to the authorization process.</span></span></span></li>
+				<li><span><span><span>If the customer does not have online banking but you have confirmed with the customer that the billing information for the payment instrument on account.microsoft.com is correct - proceed to step 2.</span></span></span></li>
+			</ul>
+
+			<ol start="2">
+				<li><span><span><span><span>Refer the customer to their financial institution to verify their information is exactly what the financial institution has on record for authorization. Have the customer update their payment instrument information accordingly on account.microsoft.com.</span></span></span></span></li>
+			</ol>
+
+			<p><span><span><span>If customer has contacted their financial institution and confirmed their &nbsp;information is correct follow section </span></span></span><span><span><span><a bookmark-id="4.3" href="https://internal.support.services.microsoft.com/en-us/help/4058088#4.3" managed-link="" target="">4.3 payment instrument troubleshooting</a></span></span></span><span><span><span> below.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>8016<br>
+			<br>
+			8017<br>
+			<br>
+			8044</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span></span></span></span>We can&#39;t authorize the payment method. Please make sure the information is correct or use another payment method. If you continue to get this message, please contact your financial institution.</p>
+			</td>
+			<td>
+			<ol>
+				<li><span><span><span><span>Confirmed the billing information entered in account.microsoft.com is correct for the payment instrument information.</span></span></span></span></li>
+			</ol>
+
+			<ul>
+				<li><span><span><span>Ask if the customer has online banking and ask them to confirm the address matches.</span></span></span></li>
+				<li><span><span><span>A common mistake is customer&rsquo;s providing their mailing address with their financial institution rather than the billing address the payment instrument is set to.</span></span></span></li>
+				<li><span><span><span>The addresses may be to the same location but have different abbreviations such as &ldquo;DR&rdquo; instead of Drive or &ldquo;Ave&rdquo; instead of &ldquo;Avenue&rdquo;.</span></span></span></li>
+				<li><span><span><span>Having the exact information is critical to the authorization process.</span></span></span></li>
+				<li><span><span><span>If the customer does not have online banking but you have confirmed with the customer that the billing information for the payment instrument on account.microsoft.com is correct - proceed to step 2.</span></span></span></li>
+			</ul>
+
+			<ol start="2">
+				<li><span><span><span><span>Refer the customer to their financial institution to verify their information is exactly what the financial institution has on record for authorization. Ask the customer to update their payment instrument information accordingly on account.microsoft.com.</span></span></span></span></li>
+				<li><span><span><span>If the customer has contacted their financial institution and confirmed their information is correct follow </span></span></span><span><span><span><a href="https://internal.support.services.microsoft.com/en-us/help/4058088#4.3"><span><span><span><span>section 4.3</span></span></span></span></a></span></span></span><span><span><span> payment instrument troubleshooting below.</span></span></span></li>
+			</ol>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>8021</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Your payment method is banned. Please try with another one.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span> </span></p>
+
+			<ol>
+				<li><span><span><span><span></span></span></span></span><span><span><span><span>Inform the customer their payment instrument is banned, and they need to use a different payment instrument.</span></span></span></span></li>
+				<li><span><span><span>If the customer has already contacted their financial institution and confirmed their information is correct, follow the engagement process in KB </span></span></span><span><span><span><a href="https://internal.support.services.microsoft.com/help/3072553" target="_blank"><span><span><span><span>3072553 Procedure: A&amp;B: Tier 1 Scenarios</span></span></span></span></a></span></span></span><span><span><span>.</span></span></span><span><span><span><span></span></span></span></span></li>
+			</ol>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>8048</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Your credit card number is invalid. Please enter valid credit card number.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span></span></span></span>The credit card number entered is invalid. Try again after verifying the number, or use another payment instrument.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>8056<br>
+			25055</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>We cannot add this payment method because it already exists in your account. Please try with another one.</span></span></span></span></p>
+			</td>
+			<td>
+			<ol>
+				<li><span><span><span><span></span></span></span></span><span><span><span><span>Try another payment instrument. If you are unable to see the payment instrument in MST, wait 24 hours.</span></span></span></span></li>
+				<li><span><span><span>After 24 hours, follow the engagement process in KB </span></span></span><span><span><span><a href="https://internal.support.services.microsoft.com/help/3072553" target="_blank"><span><span><span><span>3072553 Procedure: A&amp;B: Tier 1 Scenarios</span></span></span></span></a></span></span></span><span><span><span>.</span></span></span><span><span><span><span></span></span></span></span></li>
+			</ol>
+			</td>
+		</tr>
+		<tr>
+			<td>8024</td>
+			<td>&#39;30445: BDK_E_INVALID_CVM_CODE&#39; which means that the Cardholder Verification Method is invalid.</td>
+			<td>Ask the customer to reach out to their financial institution.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span>Return to top</span></span></a></span></span></span></span></span></p>
+
+<h4><span><span><span><span><strong><a id="4.2" name="4.2"></a></strong>4.2 Payment instrument error messages</span></span></span></span></h4>
+
+<p><span><span><span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span>See KB </span></span></span><span><span><a href="https://internal.support.services.microsoft.com/help/2846008" target="_blank"><span><span><span><span>2846008 Procedure: Billing Errors</span></span></span></span></a></span></span><span><span><span>.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>For PI information, see KB </span></span></span><span><span><a href="https://internal.support.services.microsoft.com/help/4488312" target="_blank"><span><span><span><span>4488312 Informational: Payment Instrument (PI) methods</span></span></span></span></a></span></span><span><span><span>.</span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span></span></span></span></p>
+
+<p><span><span><span><span><span><span><span><a bookmark-id="top" href="#top" managed-link="">Return to top</a></span></span></span></span></span></span></span></p>
+
+<h4><span><strong><span><span><span><a id="4.3" name="4.3"></a></span></span></span></strong><span><span><span>4.3 Payment instrument troubleshooting</span></span></span></span></h4>
+
+<p><span><span><span><span><span>If a payment instrument is failing when attempting to add or update it or if purchase attempts are failing, use the following steps to troubleshoot the issue:</span></span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span><span>Confirm the billing address on record matches the address used by the customer&#39;s financial institution:</span></span></span></span></span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span><span><span>Make sure the billing address for customer&rsquo;s Microsoft account matches the billing address used by customer&rsquo;s financial institution. Sample advocate messaging: &quot;<em>In order to charge your payment instrument, I need to make sure that billing address we have on record matches the address used by your financial institution. May I have the last four digits of the payment instrument you are using?</em>&quot;</span></span></span></span></span></span></li>
+	<li class="indent-1"><span><span><span><span><span><span>Confirm the billing address, expiration date, and name on the payment instrument are correct.</span></span></span></span></span></span></li>
+	<li class="indent-2"><span><span><span><span><span><span>A common mistake is customer&rsquo;s providing their mailing address with their financial institution rather than the billing address the payment instrument is set to which may be the same address but written differently.</span></span></span></span></span></span></li>
+	<li class="indent-2"><span><span><span><span><span><span>The addresses may be to the same location but have different abbreviations such as &ldquo;DR&rdquo; instead of Drive or &ldquo;Ave&rdquo; instead of &ldquo;Avenue&rdquo;.</span></span></span></span></span></span></li>
+	<li class="indent-2"><span><span><span><span><span><span>Having the exact information is critical to the authorization process.</span></span></span></span></span></span></li>
+	<li class="indent-1"><span><span><span><span><span><span>Verify the customer has provided the correct CVV code.</span></span></span></span></span></span></li>
+	<li class="indent-2"><span><span><span><span><strong><span><span>American Express</span></span></strong><span><span>: &ldquo;<em>The 4-digit security code located on the front right of your payment instrument. The code is printed on the card and is not raised like the account number. It is typically located above the account number</em>.&quot;</span></span></span></span></span></span></li>
+	<li class="indent-2"><span><span><span><span><strong><span><span>Visa, MasterCard, or Discover:</span></span></strong><span><span> &ldquo;<em>The 3-digit security code located on the back of your payment instrument. The code is printed on the card and is not raised. It is located on or near the signature panel</em>.&rdquo; <strong>Note</strong>: If the Microsoft account address matches the billing address used by the financial institution, try the next solution.</span></span></span></span></span></span></li>
+</ul>
+
+<ol start="2">
+	<li><span><span><span><span><span><span>Determine if the payment instrument is newly issued by the customer&rsquo;s financial institution:</span></span></span></span></span></span>
+
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>Ask if the customer is using a newly issued payment instrument. If the payment instrument is new, confirm the customer has activated it. Sample advocate messaging: &quot;<em>Is this a new payment instrument?</em>&quot;</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>If the answer is yes, use the following messaging: &quot;<em>Have you activated the payment instrument with your financial institution?</em>&quot;</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span>Check for a Risk Alert in MST:</span></span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>Review the Alerts section of MST, see details in KB </span></span></span><span><span><a href="https://internal.support.services.microsoft.com/help/2896711" target="_blank"><span><span><span><span>2896711 Procedure: How to handle risk rejections and engagement with Risk Ops</span></span></span></span></a></span></span><span><span><span>.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>If the rejection is for the payment instrument the customer is trying to add, view the details and engage A&amp;B ERA/Xbox offline team for PayOps escalation, or RiskOps if the reason code instructs you to.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>If there is no declined transaction present, the customer is being declined by their bank, or the payment instrument information entered is invalid or incorrect.</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span>Insufficient funds and Outstanding Balance:</span></span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>Check all payment instruments in MST to see if there are any in <strong>Decline</strong> status.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Ask the customer if the outstanding balance on the Microsoft account is more than the available credit on the payment instrument, if applicable. Sample advocate messaging: &quot;<em>Do you know if the available credit balance on your payment instrument is enough to pay for the service? If you are unsure if funds are available, please contact your financial institution.</em>&quot;</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>If the customer is sure they have sufficient funds, ask the customer if we may settle the balance for the outstanding transaction. &ndash; If yes, process the balance.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>If the balance will not settle for that payment instrument, check if there is another payment instrument the customer will agree to transfer the balance on to.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>If the balance transfer fails to settle or the customer does not have another payment instrument to use take the following steps:</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+</ol>
+
+<p><span><span><span><span><span>1. Verify the type of content the transaction was for.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>2. If the content is digital, offset the transaction.</span></span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span>Advise the customer they need to repurchase the content.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>If the digital content is a subscription, verify if any active time on the subscription came from another source such as a PPC/Token.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Cancel the subscription and provide a replacement token for any time that was active, and was not part of the transaction that was offset.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Reach out to a supervisor to provide the case as an example to the Technical Advisors for issue tracking.</span></span></span></span></span></li>
+</ol>
+
+<p><span><span><span><span><span>3. If the content is for a pre-order, the customer needs to wait for the cycle to cancel on its own.</span></span></span></span></span></p>
+
+<ol start="5">
+	<li><span><span><span><span><span><span>Determine if the payment instrument is added on another account.</span></span></span></span></span></span>
+
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>Go to <strong>Advanced Search</strong> in MST.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Search the customer&rsquo;s PI with one of the following options: </span></span></span></span></span></span>
+		<ul style="list-style-type:circle">
+			<li><span><span><span><span><span><span>Partial PI details</span></span></span></span></span></span></li>
+			<li><span><span><span><span><span><span>Full PI details</span></span></span></span></span></span></li>
+			<li><span><span><span><span><span><span>PayPal email</span></span></span></span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span>Verify the payment instrument is set up to accept online purchases.</span></span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>Ask the customer if the payment instrument is set up to accept online purchases or automatic withdrawals. Sample advocate messaging: &quot;<em>Do you know if this payment instrument can be used for online purchases or automatic withdrawals? Some debit cards or prepaid payment instruments cannot be used for online transactions. If you are unsure, contact your financial institution to confirm that your payment instrument can be used for online purchases.</em>&quot;</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span>Customer&rsquo;s region</span></span></span></span></span></span></li>
+</ol>
+
+<ol>
+	<li><span><span><span><span><span><span>Ask the customer if they are currently located in the country associated with their account. Sample advocate messaging: &quot;<em>Are you currently located in [read country name]?</em>&quot;</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>If the customer answers no, use the following messaging &quot;<em>You will not be able to update your payment instrument information on Microsoft account while you are outside of the country where your account is registered</em>&rdquo;</span></span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>Use existing processes to help the customer with switching the country if the location difference is not temporary.</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span>Some location changes can&rsquo;t be changed again until a certain period of time has passed, for example a region migration for an Xbox Billing account. If the customer is actively traveling advise the customer of possible future effects, such as any lock out timers that may affect them.</span></span></span></span></span></span></li>
+	<li value="8"><span><span><span><span><span><span>Contact the financial institution regarding the authorization failure.</span></span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>There are situations in which a financial institution may prevent authorization that Microsoft cannot foresee.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Advise the customer to contact their financial institution regarding the authorization failure if all troubleshooting to this point has not resolved the issue.</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span>If these steps do not resolve the issue or if there are other issues, ask the customer try one of these methods (if customer is willing):</span></span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>Try again in 48 to 72 hours.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Use a different credit card.</span></span></span></span></span></span></li>
+		<li><span><span><span><strong><span><span><span>Note:</span></span></span></strong><span><span><span> If the customer is in a chat help the customer by directing them to account.microsoft.com and walking them through the process; However, if the situation requires support to add the payment instrument, advise the customer that adding a new payment instrument can only be done over the phone or you will need to use our Data Transfer &amp; Management (DTM) tool to collect such data. (Refer to KB </span></span></span><span><span><a href="https://internal.support.services.microsoft.com/help/4135034" target="_blank"><span><span><span><span>4135034 Tools User Guide: Data Transfer &amp; Management</span></span></span></span></a></span></span><span><span><span> to learn how to use DTM). To start a phone session, direct the customer to the contact us website (</span></span></span><span><span><a href="http://support.microsoft.com/" target="_blank"><span><span><span><span>http://support.microsoft.com/contactus</span></span></span></span></a></span></span><span><span><span>) to be connected to a phone advocate.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Purchase a prepaid subscription or points card from a retailer.</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span>If the customer has performed all troubleshooting through step 8.</span></span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>Obtain any error codes the customer receives when attempting to update or add the payment instrument.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Engage with A&amp;B ERA or Xbox Offline team for PayOps escalation.</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+</ol>
+
+<p><span><span><strong><span><span><span>Note</span></span></span></strong><span><span><span>: If the customer is calling with a bank representative on the line, use the following sample advocate messaging:<em> &quot;The credit card number that you are using cannot be authorized through the billing system. The authorization process does not give me the specific reason for the authorization failure. As an online retailer, we are unable to force a credit card to work when it fails. We have ruled out the most common reasons that may cause your card to fail. Right now, the only solution is to use a different credit card or try again later in 24 to 48 hours.&rdquo;</em><br>
+<br>
+<strong>Note</strong>: Microsoft cannot force a credit card to work. If a customer&#39;s card is being declined, ask the customer to verify that their information is accurate, use a different payment option, or try again in 24 to 48 hours.<br>
+<br>
+If the customer&#39;s account has been locked, see KB </span></span></span><span><span><a href="https://internal.support.services.microsoft.com/help/930018" target="_blank"><span><span><span><span>930018 Procedure: How to handle account takeover on a Microsoft account</span></span></span></span></a></span></span></span></span></p>
+
+<p><span><span><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span>Return to top</span></span></a></span></span></span></span></span></p>
+
+<h3><span><span><span><span>5. Other payment instrument information and scenarios</span></span></span></span></h3>
+
+<h4><span><span><span><span><a id="5.1" name="5.1"></a>5.1 How to handle a customer who is the payment instrument owner but not the account owner</span></span></span></span></h4>
+
+<p><span><span><span></span></span></span><span><span><span><span><span>Customers who are the payment instrument owners can receive assisted support if they are unable to pass verification, but you <strong>must</strong> first determine if they <strong>can</strong> pass verification. If a customer cannot pass verification, it is important to understand that the assisted support options will be <strong>limited to information about transactions</strong>. If the customer wants to perform other account management activities, such as updating the account information, wants a refund, or wants account details, the customer must pass verification.</span></span></span></span></span></p>
+
+<p><span><span><span><span></span></span></span></span><span><span><span><span><span>See KB </span></span></span><span><span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2885545" managed-link="" target="_blank">2885545 Procedure: How to handle a customer who is the payment instrument owner but not the account owner</a></span></span></span><span><span><span>&nbsp;for additional details.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span>Return to top</span></span></a></span></span></span></span></span></span></p>
+
+<h4><span><span><span><span><span><span><a id="5.2" name="5.2"></a>5.2 Determining if a payment instrument is banned</span></span></span></span><span> </span></span></span></h4>
+
+<p><span><span><span><span><span>To determine if a customer&rsquo;s PI has been banned, follow the below steps:</span></span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span><span>Go to <strong>view all Orders History </strong>in MST.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Select a wide time range, such as the past five years.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Filter by <strong>Failed</strong> status.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Select <strong>Search.</strong></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Open the Transactions tab for each order, and if the PI is banned the Reason Code will be <strong>PGW_E_BANNED_PAYMENT_METHOD</strong>.</span></span></span></span></span></span></li>
+</ol>
+
+<p><span asset="4490366" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4490366]</span></p>
+
+<ol start="6">
+	<li><span><span><span><span><span><span>If the PI is banned, advocates using the Place Order on Behalf Of tool (POBO) will see the following error: <strong>PI-BannedPaymentInstrument</strong>.</span></span></span></span></span></span></li>
+</ol>
+
+<p><span asset="4490367" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4490367]</span></p>
+
+<ol start="7">
+	<li><span><span><span><span><span><span>For more information about banned PI&rsquo;s, see KB </span></span></span><span><span><a href="https://internal.support.services.microsoft.com/help/2896711" target="_blank"><span><span><span><span>2896711 Procedure: How to handle risk rejections and engagement with Risk Ops</span></span></span></span></a></span></span><span><span><span>. </span></span></span></span></span></span></li>
+</ol>
+
+<p><span><span><span><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span>Return to top</span></span></a></span></span></span></span></span></span></p>
+
+<h4><span><strong><span><span><span><a id="5.3" name="5.3"></a></span></span></span></strong><span><span><span>5.3&nbsp;Tier 1 - Banning payment instruments</span></span></span></span></h4>
+
+<p><span><span><span><strong><span><span><span>Note</span></span></span></strong><span><span><span>: When a payment instrument is banned in MST, it is banned across <strong>all</strong> Microsoft entities.</span></span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Who can ban a payment instrument?</span></span></span></strong></span></span></p>
+
+<ul>
+	<li><span><span><span><span>The Commerce system may automatically ban the customer&#39;s payment instrument if the system finds fraud, billing issues (including a chargeback), or non-payment.</span></span></span></span></li>
+	<li><span><span><span><span>If the customer requests we ban their PI to prevent the PI from being used on the customer&rsquo;s Microsoft account or added to any other Microsoft accounts engage A&amp;B ERA or Xbox Offline Team for PayOps escalation.</span></span></span></span></li>
+	<li><span><span><span><span>Regarding banned payment methods identified as banned by the Commerce system follow messaging on risk message</span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span>Return to top</span></span></a></span></span></span></span></span></p>
+
+<h4><span><strong><span><span><span><a id="5.4" name="5.4"></a></span></span></span></strong><span><span><span>5.4&nbsp;LATAM Debit Card Rejection</span></span></span></span></h4>
+
+<ol>
+	<li><span><span><span><span><span><span>Customers trying to use a debit card as their payment instrument in the LATAM region will receive the following error: <em>&quot;We cannot authorize this payment method. Make sure the information is correct or use another payment method. If you keep getting this message, you may contact your financial institution.&quot;</em></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Inform the customer that the card issuer or local operating rules may not allow us to accept specific debit cards.</span></span></span></span></span></span></li>
+	<li><span><span><span><span>Recommended messaging:<em> &quot;Bank accounts have different rules and some debit cards seem to be accepted while others are not. We do not have an influence on it. It is not a Microsoft decision to block a debit card, but it is likely the issuer or our acquiring bank due to operating rules that will not allow it.&quot;</em></span></span></span></span></li>
+</ol>
+
+<p><span><br>
+<span><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span>Return to top</span></span></a></span></span></span></span></span></p>
+
+<h4><span><strong><span><span><span><a id="5.5" name="5.5"></a></span></span></span></strong><span><span><span>5.5&nbsp;Customers get charged on credit cards for which they did not provide us any details </span></span></span><span><span><span>or customers get charged on the wrong credit card</span></span></span></span></h4>
+
+<p><span> </span><span><span><span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span>If a customer&rsquo;s credit card is replaced due to expiration or loss, some banks will enable recurring purchases to continue to be charged to the new replacement card.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Customers should contact their banks for more details since each bank handles it differently.</span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span> </span></span></span></span></p>
+
+<p><span><span><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span>Return to top</span></span></a></span></span></span></span></span></p>
+
+<h3><a id="6" name="6"></a>6.&nbsp;Refund timelines</h3>
+
+<p><span><span><span><span><span>Rough timelines to process refunds from Microsoft to each of the below types payment instruments:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><strong><span><span><span>Credit/debit card</span></span></span></strong><span><span><span>: 3-5 business days&#8203;</span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>PayPal</span></span></span></strong><span><span><span>: Up to 30 days based on PayPal&rsquo;s terms</span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>Mobile number</span></span></span></strong><span><span><span>: Next Billing Cycle&#8203;</span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>Check</span></span></span></strong><span><span><span>: 4-6 weeks&#8203;</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span></span></span><span><span><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span>Return to top</span></span></a></span></span></span></span></span></p>
+<p><strong><strong><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span>October&nbsp;</strong></strong><strong>2018</strong></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Change History</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td><strong>Item</strong></td>
+			<td>
+			<p><strong>Title</strong></p>
+			</td>
+			<td><strong>Date</strong></td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/156556">CONTENT TRACKING 156556</a></td>
+			<td>A&amp;B: From SU3720: Remove financial requirement collection requirement on KB 4058088 Procedure: Payment instruments scenarios</td>
+			<td>7/2/2020</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/147722">CONTENT TRACKING 147722</a></p>
+			</td>
+			<td>Accounts &amp; Billing: From SUE1723: Updating KB 4058088</td>
+			<td>9/30/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/147361">CONTENT TRACKING 147361</a></td>
+			<td>A&amp;B: Regarding refunds and essentially payment instruments it is unclear in KBs: 4058088 and KB&nbsp;
+			<p>Procedure: Handling refunds from our Subscription Refund portal (archived in CT&nbsp;160841)</p>
+			</td>
+			<td>9/12/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/145807">CONTENT TRACKING 145807</a></td>
+			<td>Procedure: Payment instruments scenarios</td>
+			<td>7/24/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/145365">CONTENT TRACKING 145365</a></td>
+			<td>A&amp;B: Replace references to KB 3134186 with KB 4488312</td>
+			<td>7/2/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/144756">CONTENT TRACKING 144756</a></td>
+			<td>A&amp;B: Change request for KB 4058088 Procedure: A&amp;B: Payment instruments scenarios&nbsp;</td>
+			<td>6/12/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/144654">CONTENT TRACKING 144654</a></td>
+			<td>Billing: Remove A&amp;B from the title on KB 4058088</td>
+			<td>6/10/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/143947">CONTENT TRACKING 143947</a></td>
+			<td>Cross LoB: Bulk restatement request - AB&nbsp;</td>
+			<td>05/23/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/141037" role="heading">Content Tracking 141037</a></td>
+			<td>SUE950: A&amp;B: Mistake in section 4.1 of KB 4058088</td>
+			<td>03/07/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/139897" role="heading">Content Tracking 139897</a></td>
+			<td>KB 4058088 update to section 5 to add finding banned PI steps</td>
+			<td>02/08/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/138729" role="heading">Content Tracking 138729</a></td>
+			<td>KB 4058088 section 3 update for PI removal note</td>
+			<td>01/07/2019</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/138002" role="heading">Content Tracking 138002</a></p>
+			</td>
+			<td>KB4058088 update for error code note and new troubleshooting step for PI errors&nbsp;</td>
+			<td>12/12/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/136999" role="heading">Content Tracking 136999</a></td>
+			<td>Billing: Update KB 4058088 Process: Payment Instrument Scenarios</td>
+			<td>11/14/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/135492" role="heading">Content Tracking 135492</a></td>
+			<td>Billing:Update KB 4058088 Process: Microsoft Store Payment Instrument Scenarios</td>
+			<td>10/23/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/132984" role="heading">Content Tracking 132984</a></td>
+			<td>Add the Speak Up! asset to all consumer articles</td>
+			<td>9/13/18</td>
+		</tr>
+		<tr>
+			<td>
+			<div class="main-container">
+			<div class="main">
+			<div class="content-section">
+			<div class="explorer hub-view work-item-editor-view work-items-view" id="14">
+			<div class="hub-content">
+			<div class="horizontal hub-splitter no-split splitter stateful toggle-button-enabled toggle-button-hotkey-enabled" id="5">
+			<div class="hotkey-section hotkey-section-1 rightPane" role="main">
+			<div class="hub-title">
+			<div class="workitem-info-bar" id="27">
+			<div class="info-text-wrapper"><a aria-level="1" class="caption" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/122355" role="heading">Content Tracking 122355</a></div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</td>
+			<td><span class="info-text">New KB: PI Troubleshooting </span></td>
+			<td>12/18/2017</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>

@@ -1,0 +1,323 @@
+﻿<header><h1>ASMS – How to Convert an Azure Subscription in CMAT</h1></header><p>Submit a <a href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder=">ModTrack</a> request to update this TSG.</p>
+
+<h3><strong><a id="Known Issues" name="Known Issues"></a>Known Issues</strong></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>Date </strong></p>
+			</td>
+			<td>
+			<p><strong>Issue </strong></p>
+			</td>
+			<td>
+			<p><strong>Approved Workaround </strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>10/17/2018</p>
+			</td>
+			<td>
+			<p>Converting any offer to the -148P offer (EA Dev/Test) will cause core quotas to be reduced to the defaults for the -148P offer. We are treating this as a bug.</p>
+
+			<p><strong>Note:</strong> Only the core quota changes when converting sub from EA to EA Dev/Test.</p>
+			</td>
+			<td>
+			<p>Check if the quota that the customer wants to retain has had its values changed by going to the following directory in <a href="https://jarvis-west.dc.ad.msft.net/?page=actions&amp;acisEndpoint=Public#/" managed-link="">Jarvis</a>:<br>
+			<strong>CRP</strong> &gt; <strong>Subscription Operations</strong> &gt; <strong>Get Subscription Details (also returns quota details)</strong>.</p>
+
+			<p>Check the output for <strong>quotaOverrides</strong>. Any quota under the <em>quotaOverrides</em> section would remain unaffected by the conversion. The Support Engineer can ask the customer for the list of quotas they want to retain post the offer conversion, and check Jarvis if there is an override for those quotas. If yes, proceed with the conversion. If no, then work with the Capacity Management Team and increase/decrease the quota of that item by 1 (so that the override takes effect) and then proceed with the conversion.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>1/3/2019</td>
+			<td>4011 error blocking offer conversion</td>
+			<td>
+			<p><span>In CMAT, go to Billing / Orders and expand the search as far back as possible. This will bring up the list of old orders. </span></p>
+
+			<p><span>Check if the old orders have the updated full address or not, if not, add it and update the order. After that is completed, you should be able to run the offer conversion. If you still get an error after that, escalate to payops. </span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3><strong><a id="Overview" name="Overview"></a>Overview</strong></h3>
+
+<p>This article describes how ASMS can convert a customer subscription from one offer type to another.&nbsp;<span>Use the following document to assist a customer in converting from one Azure subscription type to another using the Commerce Management Agent Tool (CMAT).</span></p>
+
+<p><br>
+<strong>Applies To: </strong>All customers who want to convert from one Azure subscription type to another offer type.<br>
+<strong>Example:</strong> A customer currently has an Azure MSDN benefit subscription, but then decides that they want to change to an Azure Pay-As-You-Go subscription.&nbsp;</p>
+
+<h3><strong><a id="Policy" name="Policy"></a>Policy</strong></h3>
+
+<ul>
+	<li>For Azure in Open (AIO) conversions, ASMS only supports converting AIO subscriptions to Enterprise Agreement (EA) subscriptions.</li>
+	<li>No subscription type should be converted to an Azure Pass subscription, without direct approval from the Azure Pass team.</li>
+	<li>No Azure subscriptions should be converted to the TechNet Cloud Essentials Benefit (-0024P). This is an active offer, just not for Azure. Because it is an active offer it will show up in CMAT, but no Azure subscription should be converted to this offer type.&nbsp;</li>
+	<li>An Azure account is only allowed to contain <strong>one </strong>MPN subscription (even if suspended). You should not attempt to convert a subscription to MPN if one already exists (even if suspended)&nbsp;under the account. If you do, you will receive the following error message in CMAT: &quot;User limit is exceeded for Offer id &#39;MS-AZR-0025P&quot;.</li>
+	<li>Some offer conversions may fail in CMAT, with one of the following error messages:&nbsp;
+	<ul style="list-style-type:circle">
+		<li><strong><em>&quot;Get Product Eligibility Failed. Status invalid, both sponsored subscription, commerce entitlement is not in enabled state.&quot;</em></strong>
+		<ul style="list-style-type:square">
+			<li>This is due to the&nbsp;subscription being&nbsp;in a suspended state. A subscription can only be converted or transferred when in an active state. To resolve this issue, you must first active the subscription.&nbsp;</li>
+		</ul>
+		</li>
+		<li><strong><em>&quot;4011- Line1 required&quot;</em></strong>
+		<ul style="list-style-type:square">
+			<li>This is due the customer&#39;s profile in the Destination Account or the &quot;Ship to&quot; Order Address is missing mandatory details.</li>
+			<li>To resolve this issue, ask the customer to&nbsp;complete the mandatory fields under order &quot;ship-to&quot; address. Once they have updated the fields, attempt the transfer again.&nbsp;</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<h3><strong><a id="Support Scenarios" name="Support Scenarios"></a>Support Scenarios</strong></h3>
+
+<p><span>Before converting any subscription to another offer type: </span></p>
+
+<ol>
+	<li><span>Check if the subscription has pending charges:&nbsp;</span>
+
+	<ol start="1" style="list-style-type:lower-alpha">
+		<li>I<span>f the subscription has pending charges, follow step 2.</span></li>
+		<li>I<span>f the subscription doesn&#39;t have pending charges, you can convert the subscription after checking the prerequisites in this TSG. </span></li>
+	</ol>
+	</li>
+	<li><span>Inform the customer they still will have pending charges after conversion, and they have to pay the pending charges. </span></li>
+</ol>
+
+<p class="indent-3"><strong>E</strong><span><strong>xample:</strong> If the customer wants to convert from Pay-As-You-Go (PAYG) to Sponsorship, the Sponsorship credits will <strong>not</strong> cover the charges from the PAYG subscription. The customer has to pay by the payment method they had before converting. If the customer wants to pay the pending charges with the Sponsorship credits, engage AIRS team (don&#39;t guarantee the customer that they can use credits as this is subject to the AIRS team approval) to deduct the pending charges under the Sponsorship credits.</span></p>
+
+<h4>Scenarios</h4>
+
+<p>ASMS Support Engineers may assist customers who wish to convert their Azure subscriptions in the following scenarios:</p>
+
+<p><strong>Scenario #1</strong> &ndash; Customer wants to convert from a Pay-As-You-Go subscription to a Microsoft Developer Network (MSDN) subscription. This option is only available for MSDN-qualified customers.</p>
+
+<ol>
+	<li><span><span><span><span>Use the <a data-content-id="" data-content-type="" href="https://my.visualstudio.com/support" managed-link="" target="_blank">CAT</a> tool to verify the origin customer has an active subscription.</span></span></span></span>
+
+	<ol style="list-style-type:lower-alpha">
+		<li><span><span><span><span><span><span><span><span>First time users should select <strong>CSSSubscription Validation Tool</strong> from Microsoft Dropdown box.</span></span></span></span></span></span></span></span></li>
+	</ol>
+	</li>
+	<li>After verification, g<span><span><span><span><span><span><span><span>o to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2647585#How%20to%20Change%20an%20Offer%20Type%20in%20CMAT" managed-link="" target="">How to Change an Offer Type in CMAT</a> and follow the instructions there.</span></span></span></span></span></span></span></span></li>
+</ol>
+
+<p><strong>Scenario #2</strong> &ndash; Customer wants to convert from an MSDN offer to another offer. Although this scenario is unlikely, this request does not require escalation.</p>
+
+<ul>
+	<li>Ask the customer to go to My Account at azure.microsoft.com, remove the monetary cap, and enter a valid credit card as the new Payment Instrument (PI).</li>
+	<li>Once the new PI is in place, you can complete an offer conversion to Pay-As-You-Go. Go to <a href="https://internal.support.services.microsoft.com/en-us/help/2647585#How%20to%20Change%20an%20Offer%20Type%20in%20CMAT" managed-link="">How to Change an Offer Type in CMAT</a> and follow the instructions there.</li>
+</ul>
+
+<p><strong>Scenario #3</strong> &ndash; Customer wants to convert from a non-partner offer to a partner offer.</p>
+
+<p>This option only applies to partners who exist in the Microsoft Partner Network (MPN).</p>
+
+<p><strong>Note: </strong>If a customer needs assistance purchasing an entitled benefit subscription except for BizSpark Plus/MS4SU, use the steps below to resolve the issue. For BizSpark Plus/MS4SU, customers must be properly entitled and use that entitlement to make requested purchase through the official process. ASMS may not attempt to bypass the BizSpark Plus/MS4SU process.</p>
+
+<ol>
+	<li>Try to get the user to make the purchase via the correct link first (you can find offer details at <a href="http://azure.microsoft.com/en-us/support/legal/offer-details/" managed-link="">http://azure.microsoft.com/en-us/support/legal/offer-details/</a>).</li>
+	<li>If the customer is still unable to activate, work with the appropriate partner team (MSDN, MPN, BizSpark, etc.) to make sure the user is entitled before doing an offer conversion from a Pay-As-You-Go subscription to an entitled offer. Manual conversion can cause significant problems when the systems connect later and this person may lose the benefit because it wasn&rsquo;t started properly.
+	<ul>
+		<li><strong>If the customer is entitled:</strong><br>
+		Convert the customer&rsquo;s subscription from a Pay-As-You-Go account to their appropriate benefit subscription. Go to <a href="https://internal.support.services.microsoft.com/en-us/help/2647585#How%20to%20Change%20an%20Offer%20Type%20in%20CMAT" managed-link="">How to Change an Offer Type in CMAT</a> and follow the instructions there.</li>
+		<li><strong>If the customer is not entitled:</strong><br>
+		Inform the customer that they do not have an active entitlement for the requested offer. The customer will need to purchase a new subscription.</li>
+	</ul>
+	</li>
+</ol>
+
+<p><strong>Scenario #4</strong> &ndash; Customer wants to convert a Pay-As-You-Go/paid subscription to an Azure MPN subscription so that they can use MPN benefits.</p>
+
+<p>Often, the customer has an existing Pay-As-You-Go/paid subscription which they want to activate their MPN benefits on, but they end up creating a new Azure MPN subscription instead. They request that we convert their Pay-As-You-Go/paid subscription to Azure MPN so that they can use MPN benefits.</p>
+
+<p>If data migration from the paid subscription to the new MPN subscription is not an option, you may convert the Pay-As-You-Go/paid subscription to an Azure MPN offer, but things must be done in the proper order, as an Azure Account can only have one Azure MPN subscription.&nbsp;</p>
+
+<ol>
+	<li>Deprovision the incorrect Azure MPN subscription by following the instructions in TSG <a href="https://internal.support.services.microsoft.com/en-us/help/2646764/azure-sms-generaladmin-general-qa-how-to-how-to-cancel">2646764</a>: &ldquo;Request to Cancel Now - <strong>Only to be done by TA&rdquo;</strong></li>
+	<li>Go to <a href="https://internal.support.services.microsoft.com/en-us/help/2647585#How%20to%20Change%20an%20Offer%20Type%20in%20CMAT" managed-link="">How to Change an Offer Type in CMAT</a> and follow the instructions there.</li>
+</ol>
+
+<p><strong>Scenario #5</strong> &ndash; Customer wants to convert an EA subscription to an EA MSDN Dev/Test subscription.</p>
+
+<ol>
+	<li>Log in as the enterprise administrator.</li>
+	<li>Click <strong>Manage</strong>.</li>
+	<li>Click the <strong>Account</strong> tab.</li>
+	<li>Click to select the row to enable Dev/Test access.</li>
+	<li>Click the <strong>Edit</strong> (Pencil) icon of the row.</li>
+	<li>Check the <strong>Dev/Test</strong> checkbox.</li>
+	<li>Click <strong>Save</strong>.</li>
+	<li>After they have checked the box, you can do an offer conversion for them to the new -148P (EA Dev/Test) offer. (Go to <a href="https://internal.support.services.microsoft.com/en-us/help/2647585#How%20to%20Change%20an%20Offer%20Type%20in%20CMAT" managed-link="">How to Change an Offer Type in CMAT</a> and follow the instructions there.)</li>
+</ol>
+
+<p><strong>Note:</strong> As per the agreement signed by the customer, conversion from EA to EA Dev/Test is not supported for Production environments.<br>
+&nbsp;<br>
+Please confirm with customer that it is indeed a Non-production Test Environment and only then convert the subscription to EA Dev/Test (provided they are made aware of the new Quota Limitation which will be in place after the conversion to EA Dev/Test).</p>
+
+<p><strong>Scenario #6</strong> &ndash; Customer wants to convert any type of subscription to an EA subscription.</p>
+
+<ol>
+	<li>Verify that the customer has a valid EA enrollment by verifying it in the EA portal (ea.azure.com).</li>
+	<li>Confirm that the customer wants to move all subscriptions on the account under that EA enrollment. This is an all or nothing process. If the customer wants to move a select few subscriptions, then a subscription ownership transfer will be required so that only the desired subscriptions are converted.</li>
+	<li>Request that the user pull the subscriptions under their EA enrollment by adding the account admin to the EA subscription. This will convert them all automatically.&nbsp;</li>
+	<li>If the customer is in the EA portal and does not see the subscriptions listed as an EA subscription, then you may need to complete an offer conversion to an EA offer. (Go to <a href="https://internal.support.services.microsoft.com/en-us/help/2647585#How%20to%20Change%20an%20Offer%20Type%20in%20CMAT" managed-link="">How to Change an Offer Type in CMAT</a> and follow the instructions there.)</li>
+</ol>
+
+<p><strong>Note:&nbsp;</strong> Subscriptions should only be converted to EA after it is verified that the account with the correct authentication account (<strong>Microsoft Account</strong> / <strong>Work or school account</strong>) is <strong>Active</strong> in the EA Portal. If the account is still shown as <strong>Pending</strong>, first work with the customer to activate it before converting to EA.</p>
+
+<p><strong>Scenario #7</strong><span> &ndash; EA Customer wants to convert a non-EA account.</span></p>
+
+<ol>
+	<li><span><span><span><span>Convert the EA subscription to a BizSpark offer and then transfer this subscription to a non-EA account.</span></span></span></span></li>
+	<li><span><span><span><span>Once transferred, convert the BizSpark subscription to the desired offer type that the customer chooses. </span></span></span></span></li>
+</ol>
+
+<p><strong><span><span><span><span>Note:</span></span></span></span></strong><span><span><span><span> The above workaround will not work if the EA subscription account uses an invoice method for payment. The Invoice PII blocks the action when you try to convert the EA subscription to a BizSpark offer. The error message states, &ldquo;Invoice is not allowed for this order. Amount is above credit check threshold.&rdquo; Increasing the threshold on the account will not work, and the conversion will still fail with the same error. </span></span></span></span></p>
+
+<p><strong>Scenario #8</strong><span> &ndash; Customer wants to purchase or convert a paid support plan.</span></p>
+
+<p>Purchase or conversion of a paid support plan can be performed by the customer directly via self-serve action in the Account portal, however, if they have issues or problems, ASMS can assist with this process.</p>
+
+<ol>
+	<li>Gain customer approval for the paid support plan change.</li>
+	<li>Verify the required support languages are available (only Pro-direct is limited).</li>
+	<li>The paid support conversion can then be processed through CMAT.</li>
+</ol>
+
+<p><strong>Note:</strong> For more information, see the Paid Technical Support TSG (<a href="https://internal.support.services.microsoft.com/en-us/help/2777322" managed-link="" target="_blank">TSG 2777322</a>).</p>
+
+<p>Customer facing content - How do I purchase Azure support?</p>
+
+<p>See <a href="https://azure.microsoft.com/en-us/support/plans/" managed-link="" target="_blank">http://www.windowsazure.com/en-us/support/plans/</a> for additional support plan details.</p>
+
+<p><strong><span><span><span><span>Workarounds for converting EA subscription with Invoice PII: </span></span></span></span></strong></p>
+
+<ol start="1">
+	<li><span><span><span><span>Perform Subscription Ownership Transfer (SoT) of the EA Subscription (tied to Invoice) from the current EA Account to an EA Account under the same enrollment which does not have any PII associated with it.</span></span></span></span></li>
+	<li><span><span><span><span>Make sure to select &ldquo;Without payment instrument&rdquo; before doing the transfer. This will ensure the invoice tied to the EA sub removes after SoT under the destination account. </span></span></span></span>
+	<ol start="1" style="list-style-type:lower-alpha">
+		<li><span><span><span><span>If there is no eligible account without a PII, then the customer can add a new account to EA and then purchase an EA subscription under that account. </span></span></span></span></li>
+	</ol>
+	</li>
+	<li><span><span><span><span>Convert the EA Subcription (now without a PII) from EA to Sponsorship offer. </span></span></span></span></li>
+	<li><span><span><span><span>Perform SoT of the Sponsorship subscription from EA Account to an account which is non-EA. </span></span></span></span></li>
+	<li><span><span><span><span>Convert the Sponsorship subscription to the desired offer type that the customer chooses.</span></span></span></span></li>
+</ol>
+
+<h4><strong><a id="Loss of Billing History After MOSP Offer Conversion to AIRS or EA" name="Loss of Billing History After MOSP Offer Conversion to AIRS or EA"></a>Loss of Billing History After MOSP Offer Conversion to AIRS or EA</strong></h4>
+
+<p>Before converting a Microsoft Online Subscription Program (MOSP) subscription to an Azure Internal Registrations System (AIRS) or EA subscription, you should instruct the customer to back up their billing history. After conversion, the entire path to get billing details will change and the customer will lose access to their previous billing history. If they stay within MOSP, they will still be able to see their billing details.</p>
+
+<h4><strong><a id="How to Change an Offer Type in CMAT" name="How to Change an Offer Type in CMAT"></a>How to Change an Offer Type in CMAT</strong></h4>
+
+<ol>
+	<li>From the <em>Commerce &gt; Subscriptions</em> screen in CMAT, click the existing offer under Offer Name.</li>
+	<li>On the <em>Convert Subscription Plan</em> screen, choose <strong>Select a new plan</strong> and click the blue arrow.</li>
+	<li>On the next screen, choose the new offer, then click the blue right arrow.<br>
+	<br>
+	<strong>Note:</strong> Always verify the offer number of the target offer before clicking the blue arrow. Some offers have similar names, but the underlying offer number will always be unique.<br>
+	<br>
+	<strong>Secondary Note:</strong> Not all offers can be changed to other offers. See the list of approved scenarios above before moving forward.</li>
+	<li>On the next screen, select the payment instrument and enter comments as needed, then click the blue right arrow.</li>
+	<li>On the next screen, add the SR number and confirm the subscription offer conversion by clicking the blue check box.<br>
+	<span asset="4015716" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4015716]</span></li>
+	<li>After converting a subscription, always verify the OfferCategories string as explained in the next section.</li>
+	<li>Let the customer know that changing the offer type will not change the subscription name. They will need to change the name in the accounts portal.</li>
+</ol>
+
+<h4><strong><a id="How to Verify the Offer Category in Jarvis" name="How to Verify the Offer Category in Jarvis"></a>How to Verify the Offer Category in Jarvis</strong></h4>
+
+<p>After a subscription is converted from one Offer Type to another Offer Type, you should verify in RDFE that the subscription&#39;s Offer Category has been updated. There are issues with some conversions where the Subscription will appear to be converted successfully in CMAT but is still considered to be the old subscription type in RDFE. This can cause several issues, such as subscription-specific options not being available to the converted subscription, or the new subscription type missing benefits it should have. For example, converting a Pay-As-You-Go subscription to BizSpark Plus/MS4SU and not having the BizSpark Plus/MS4SU credits showing up after conversion.</p>
+
+<ol>
+	<li>In Jarvis, go to <em>AzureRT/Subscription Management/Get Subscription with Details</em></li>
+	<li>Enter the subscription GUID of the subscription you&#39;re verifying and click <strong>Execute</strong>.</li>
+	<li>In the output, look for the string OfferCategories: near the top of the output. It will look like this:<br>
+	<br>
+	<code>OfferCategories:Azure_Platform_All;Azure_Paid;Azure_Consumption;Azure_MSDN;Azure_Credit;Azure_MS-AZR-0064P</code></li>
+	<li>If the Offer Type (the MS-AZR-00xxP string) does not match the intended Subscription type, or if anything else seems incorrect with the whole Offer Categories string, the Offer Categories may need to be updated. To get the Offer Categories of a subscription updated, please escalate a CRI to the ASMS Service Engineering (ASE) team - http://aka.ms/asecri</li>
+</ol>
+
+<h4><strong><a id="Unable to Remove the Spending Limit/Offer Conversion" name="Unable to Remove the Spending Limit/Offer Conversion"></a>Unable to Remove the Spending Limit/Offer Conversion</strong></h4>
+
+<p>If the customer receives the error &quot;The service use location is incomplete,&quot; please make sure the &ldquo;Ship To&rdquo; address is complete. This can be done two different ways.</p>
+
+<ol>
+	<li>Go to the <em>Billing &gt; Order</em> tab in CMAT and click <strong>Update Order Address. </strong>This is the same as the &ldquo;Ship To&rdquo; address displayed in other places.</li>
+	<li>Have the customer update the &ldquo;Ship To&rdquo; address at <a href="https://commerce.microsoft.com/PaymentHub/Profile" managed-link="">https://commerce.microsoft.com/PaymentHub/Profile</a> or by going to <em>Subscription</em> in the accounts portal, selecting the subscription, and clicking on <strong>Change subscription address</strong>.</li>
+</ol>
+
+<p><span asset="4015717" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4015717]</span></p>
+
+<h3><strong><a id="Online References" name="Online References"></a>Online References</strong></h3>
+
+<ul>
+	<li><a href="https://azure.microsoft.com/en-us/support/legal/offer-details/" managed-link="">Azure Active Offers</a></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h3><strong><a id="TSG Change Log" name="TSG Change Log"></a>TSG Change Log</strong></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>Date </strong></p>
+			</td>
+			<td>
+			<p><strong>Updated By </strong></p>
+			</td>
+			<td>
+			<p><strong>Content Updated </strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>02/05/2018</td>
+			<td>kuharr</td>
+			<td>Added MS4SU (BizSpark plus replacement)</td>
+		</tr>
+		<tr>
+			<td>09/18/2018</td>
+			<td>v-ajbur</td>
+			<td>Added scenario 9 &quot;EA customer Wnats to Convert to a non-EA account.</td>
+		</tr>
+		<tr>
+			<td>19/17/2018</td>
+			<td>v-adhigg</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>12/6/2018</td>
+			<td>v-brgosn</td>
+			<td>Added Scenario 10 details regarding Paid Support conversions.</td>
+		</tr>
+		<tr>
+			<td>03/15/2019</td>
+			<td>v-brgosn</td>
+			<td>Added Note to Scenario 9.</td>
+		</tr>
+		<tr>
+			<td>05/06/2019</td>
+			<td>v-ajbur</td>
+			<td>Added details about checking pending charges to Support Scenarios.</td>
+		</tr>
+		<tr>
+			<td>5/16/2019</td>
+			<td>v-ajbur</td>
+			<td>Removed two scenarios and added a step to Scenario #1.</td>
+		</tr>
+		<tr>
+			<td>11/6/2020</td>
+			<td>mievan</td>
+			<td>Added <em>Policy </em>guidance on how to solve for conversion error messages received in CMAT.&nbsp;</td>
+		</tr>
+	</tbody>
+</table>

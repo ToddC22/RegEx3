@@ -1,0 +1,327 @@
+﻿<header><h1>Procedure: M365 Commerce: How M365 Accounts and Billing Tier 1 supports VL customers on PCN remap when customer provisioned their licenses on wrong tenant</h1></header><div class="kb-references-section section">
+<p class="sbody-h3"><span asset="4462485" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4462485]</span></p>
+
+<h3 class="sbody-h3"><span class="text-base"><span class="text-base">Content</span></span></h3>
+
+<p class="indent-1 sbody-h3"><span class="text-base"><span class="text-base"></span></span><a bookmark-id="applies" href="#applies" managed-link="" target="">1. Applies to</a><br>
+<a bookmark-id="policy" href="#policy" managed-link="" target="">2. Guidance</a><br>
+<a bookmark-id="process" href="#process" managed-link="" target="">3. Procedure</a><br>
+<a bookmark-id="suppdocs" href="#suppdocs" managed-link="" target="">4. Supporting documents</a><br>
+<a bookmark-id="version" href="#version" managed-link="" target="">5. Version history</a></p>
+&nbsp;
+
+<h3 class="sbody-h3">1. Applies to <a class="bookmark" id="applies"></a></h3>
+
+<div class="indent"><span class="text-base">The following services:</span> All services<br>
+<span class="text-base">The following advocate roles:</span> The appropriate first tier VL support advocate&nbsp;in each region<br>
+<span class="text-base">The following markets:</span> All markets (For detailed information about product-specific availability, see <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2748142" id="kb-link-1" managed-link="" target="_blank">2748142 Informational: M365 Commerce: Markets where Microsoft Online Services are available</a>.)</div>
+&nbsp;
+
+<h4 class="sbody-h4">Scenario<br>
+&nbsp;</h4>
+Volume Licensing (VL) customers provisioned their VL licenses on one tenant but had intended to provision them on another.<br>
+<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a><br>
+<span class="text-base"></span>
+
+<h3 class="sbody-h3">2. Guidance<a class="bookmark" id="policy"></a></h3>
+
+<p>Follow the steps in <span class="text-base">Process</span> to support VL customers when they provisioned their VL licenses on one tenant but had intended to provision them on another.<br>
+<br>
+<span class="text-base">Important: Do not use the Public Customer Number (PCN) tenant remap process for activations blocked by the EA tag.</span><br>
+<br>
+For other VL scenarios, refer to the article <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2820242" id="kb-link-2" managed-link="" target="_blank">2820242 Informational: M365 Commerce: Supporting Volume Licensing customers</a>.<br>
+About which admin roles from each tool are entitled to support, please refer to <span class="text-base">Guidance</span> section in article <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2820242" id="kb-link-3" managed-link="" target="_blank">2820242 Informational: M365 Commerce: Supporting Volume Licensing customers</a>.</p>
+
+<p><span lang="EN-GB"><span><span><span>For customer who asks for VL remap due to migration and is part of the </span></span></span></span><span lang="EN-GB"><span><span><span><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/:x:/t/M365DealEscalatoins/ETPED_inN9hEvhfMUyAcBUcBUt6TuZVV_A5KwBLGfq-zQw?e=qi5SaX&amp;CID=BD4E4A72-F171-422E-8722-43043D0ABDA9&amp;wdLOR=c91D06D47-A8C5-4F2B-BDC9-06B30B4DD43D" managed-link="" target="_blank">tenant migration list</a></span></span></span></span><span lang="EN-GB"><span><span><span>, the customer should be provided an additional 90 day extension </span></span></span></span><span lang="EN-GB"><span><span><span>on the grace period to give 180 days automatically.</span></span></span></span></p>
+
+<p><span lang="EN-GB"></span></p>
+
+<p><span><span><span>Note: Treat remapping requests with highest priority as the customer is blocked and not able to use the service. Cases should be resolved if possible, within 24 hours.&nbsp;</span></span></span><span><span><span>Escalate as soon as possible after completing the steps, to Tier 2/POD SME. </span></span></span><span lang="EN-GB"></span><br>
+<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a></p>
+
+<h3 class="sbody-h3">3. Procedure<a class="bookmark" id="process"></a></h3>
+
+<ol class="sbody-num_list">
+	<li>Enter the Commerce Management Agent Tool (CMAT) and select <span class="text-base">Quick Access </span>&gt; <span class="text-base">Lookup VL Payloads</span>. Input customer&#39;s VL Agreement Number, and select <span class="text-base">Search.</span>
+
+	<div class="kb-collapsible kb-collapsible-collapsed"><br>
+	<span asset="4557476" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4557476]</span><br>
+	<span asset="4557477" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4557477]</span></div>
+	</li>
+	<li>On the VL Payloads page, expand the details of the Payload in question. The Error Message field will display &ldquo;EA tag found, Provisioning skipped&rdquo;.
+	<div class="kb-collapsible kb-collapsible-collapsed"><br>
+	<span asset="4557478" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4557478]</span></div>
+	</li>
+	<li>The tenant the payload was attempting to activate against will have an <span class="text-base">ea </span>tag with the value <span class="text-base">approved</span>.
+	<div class="kb-collapsible kb-collapsible-collapsed"><br>
+	<span asset="4557479" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4557479]</span></div>
+	</li>
+	<li>This tag indicates the tenant has VL licenses purchased through the QuickStart (QS) Program, which is not compatible with other purchase channels.</li>
+	<li>If either or both of the above conditions are true, <span class="text-base">do not perform a PCN tenant remap </span>as this will have a negative impact on the customer&#39;s service. Refer the customer to their reseller to purchase from VLSC.</li>
+	<li>If neither condition exists, proceed to the next step to begin the process of remapping the tenant.</li>
+	<li><span lang="EN-GB"><span><span><span>If the customer asks for VL remap due to migration, verify if the customer is part of the </span></span></span></span><span lang="EN-GB"><span><span><span><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/:x:/t/M365DealEscalatoins/ETPED_inN9hEvhfMUyAcBUcBUt6TuZVV_A5KwBLGfq-zQw?e=qi5SaX&amp;CID=BD4E4A72-F171-422E-8722-43043D0ABDA9&amp;wdLOR=c91D06D47-A8C5-4F2B-BDC9-06B30B4DD43D" managed-link="" target="_blank">tenant migration list</a></span></span></span></span><span lang="EN-GB"><span><span><span>. If yes, provide an additional 90-day extension </span></span></span></span><span lang="EN-GB"><span><span><span>on the grace period to give 180 days automatically when proceeding <a bookmark-id="Step b" href="#Step b" managed-link="">Step b,2</a>.</span></span></span></span></li>
+</ol>
+<span class="text-base">Note:</span> If public switched telephone network (PSTN) conferencing is currently provisioned on a tenant with the same currency as the agreement, moving this agreement to a tenant with a different country (different currency) will disable the ability to use this as a payment option. In case the issues are identified, the cases should be escalated to the VL Hub team.
+
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td" width="15%"><span class="text-base">a. Steps</span></td>
+			<td class="sbody-td" width="85%">1. Explain to the customer how the PCN tenant remaps process works, call out the following points:
+			<ul class="sbody-free_list">
+				<li>We need to receive confirmation from the global admin of the source tenant or VL admin. Only one written confirmation is required.&nbsp;If the customer doesn&rsquo;t know who they are, please proceed as described in the below sections <span class="text-base"><a bookmark-id="s1" href="#s1" managed-link="" target="">Specific to remapping request for EMEA when VL contact does not know the tenant name and the global admins</a></span> and <span class="text-base"><a bookmark-id="s2" href="#s2" managed-link="" target="">Specific to remapping request for EMEA when a&nbsp;Global admin does not know the VL admin/contact</a></span>.</li>
+				<li>We cannot split subscriptions&nbsp;found under 1 EA&nbsp;between multiple tenants.</li>
+				<li>The desired target tenant needs to be existing before we can transfer the licenses.</li>
+				<li>No data will be transferred to the desired target tenant.</li>
+				<li><span><span><span lang="EN-GB"></span><span lang="EN-GB"><span>Licenses on the incorrect/source tenant will go In Grace period for 90 days or 180 days for customers on the <u><span><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/:x:/t/M365DealEscalatoins/ETPED_inN9hEvhfMUyAcBUcBUt6TuZVV_A5KwBLGfq-zQw?e=qi5SaX&amp;CID=BD4E4A72-F171-422E-8722-43043D0ABDA9&amp;wdLOR=c91D06D47-A8C5-4F2B-BDC9-06B30B4DD43D" managed-link="" target="_blank">tenant migration list</a></span></u><span>, </span>so that customers can back up their data. </span></span></span></span></li>
+			</ul>
+			<br>
+			2. Entitle the customer only on the current tenant, following&nbsp;<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2791751" id="kb-link-4" managed-link="" target="_blank">2791751 Procedure: M365 Commerce: How to verify and entitle a customer (including POBO)</a>.<br>
+			<a class="bookmark" id="s1"></a>
+
+			<div class="faq-section" faq-section="">
+			<div class="faq-panel">
+			<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Specific to remapping request for EMEA when VL contact does not know the tenant name and the global admins</span></span></div>
+
+			<div class="faq-panel-body" faq-panel-body="">
+			<div class="kb-collapsible kb-collapsible-collapsed">If the OSM/VL admin or VL contact does not know the tenant name and the global admin of the tenant where the licenses are activated.<br>
+			<br>
+			Tier 1 advocate responsibility:
+			<ol class="sbody-num_list">
+				<li>Ask OSM/VL admin or VL contact for the company name, address and customer email domain e.g. <span class="sbody-italic">contoso.com</span>.</li>
+				<li>Verify in CMAT if the tenant Global/Company/Billing admin belongs to the same company (e.g. same email address).
+				<ul class="sbody-free_list">
+					<li><span class="text-base">If yes, </span>offer the customer that you will contact the Company/Global/Billing admin via phone and then you will send an email to and add the OSM/VL admin or VL contact to the email. If the&nbsp;tenant has multiple Company/Global/Billing admins, work through the list until you find someone that can assist.</li>
+					<li><span class="text-base">If no, </span>request assistance from the POD SME via Yammer. The POD SME will then review the case with the POD Lead.</li>
+				</ul>
+				</li>
+				<li>Call the current Company/Global/Billing admin and explain the situation and inform the admin that you will add the OSM/VL admin or VL contact to your email.</li>
+				<li>Send an email to the Company/Global/Billing admin and cc the OSM/VL admin and VL Contact. Here&#39;s the template:<br>
+				<br>
+				<span class="text-base"><span class="sbody-italic">Subject:</span></span><span class="sbody-italic"> Courtesy Inquiry: Office 365 tenant name xx.onmicrosoft.com</span><br>
+				<span class="sbody-italic"></span><span class="sbody-italic"></span>
+				<p><span><em><span><br>
+				Hi &lt;customer first name&gt;:</span></em><span><br>
+				<br>
+				<em>Thanks for contacting Microsoft 365 support. As we discussed via &lt;phone, email, voicemail&gt; I&rsquo;m &nbsp;following up to let you know that &lt;colleague name&gt; (&lt;email&gt;) has requested to speak with you about your Office 365 account. They would like to transfer the EA licenses from:<br>
+				<br>
+				<strong>Active tenant</strong> xx.onmicrosoft.com<br>
+				to<br>
+				<strong>New tenant</strong> xyz.onmicrosoft.com</em><br>
+				<br>
+				<em>I need your approval to move the licenses. Please let me know how you&rsquo;d like to proceed.</em><br>
+				<br>
+				<em>If you need more information you can reply to let me know.<br>
+				<br>
+				Your service request number is %%servicerequestid%% in case you need it.<br>
+				<br>
+				<strong>Thanks again,</strong></em></span><br>
+				<br>
+				<strong><em><u><span>First and Last Name</span></u></em></strong><br>
+				<em><u><span>Microsoft Customer Service and Support<br>
+				Phone Number<br>
+				Email address</span></u></em></span></p>
+				</li>
+			</ol>
+			</div>
+			</div>
+			</div>
+			</div>
+			<br>
+			<a class="bookmark" id="s2"></a>
+
+			<div class="faq-section" faq-section="">
+			<div class="faq-panel">
+			<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Specific to remapping request for EMEA when Global admin does not know the VL admin/contact</span></span></div>
+
+			<div class="faq-panel-body" faq-panel-body="">
+			<div class="kb-collapsible kb-collapsible-collapsed">If the global admin does not know the OSM/VL admin or VL contact where the agreements/licenses are activated.
+			<ul class="sbody-free_list">
+				<li>The advocate is allowed to provide the VL admin/contact to the global admin.</li>
+				<li>The advocate should inform the global admin that we will reach out to the VL contact (if not available via call we will write an email and cc the global admin) asking to get the VL template filled out.</li>
+			</ul>
+			</div>
+			</div>
+			</div>
+			</div>
+			<br>
+			3. Entitle the customer on the agreement, following&nbsp;<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2801563" id="kb-link-5" managed-link="" target="_blank">2801563 Procedure: M365 Commerce: How to verify and entitle Volume Licensing customer(s)</a>.<br>
+			<br>
+			4. Proceed to <a bookmark-id="Step b" href="#Step b" managed-link="">step b</a>.</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">b. Suggested script</span></td>
+			<td class="sbody-td"><span class="sbody-italic">&ldquo;This change will result in all subscriptions under the Public Customer Number (PCN) being moved to the new tenant. No information or users will be transferred in this process &ndash; only licenses will be transferred.&rdquo; </span><span class="sbody-italic"></span><br>
+			<br>
+			<span class="text-base">Note:</span> If the customer wishes to split their subscriptions between domains, they will need to follow up with their licensing specialist or partner to create a new PCN. Please instruct partners to follow the same process to create a PCN with their licensing specialist.</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><a id="Step b" name="Step b">b. Steps</a></td>
+			<td class="sbody-td">1. Request permission to place the subscription into InGracePeriod. Users will have access to their service while the subscription is InGracePeriod. Make sure to verify if the customer is part of the <a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/:x:/t/M365DealEscalatoins/ETPED_inN9hEvhfMUyAcBUcBUt6TuZVV_A5KwBLGfq-zQw?e=qi5SaX&amp;CID=BD4E4A72-F171-422E-8722-43043D0ABDA9&amp;wdLOR=c91D06D47-A8C5-4F2B-BDC9-06B30B4DD43D" managed-link="" target="_blank">tenant migration list</a><span lang="EN-GB">. If so, provide 180 days for grace period.</span>
+			<p><span><span><span><span>If the customer is concerned about losing access to their service, check the Current Status End Date in CMAT after the subscription is put into InGracePeriod to determine when the subscription will move into Disabled status. This is the date access to the service will be lost.<br>
+			<span asset="4557492" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4557492]</span></span></span></span></span></p>
+
+			<div class="kb-collapsible kb-collapsible-collapsed">
+			<p><span><span lang="EN-US"><span><span><span>2. Once permission is obtained, put the subscription into InGracePeriod. If the subscription is already Disabled or InGracePeriod, no further action is needed before proceeding to the next step.</span></span></span></span></span></p>
+
+			<p><span><span lang="EN-US"><span><span><span>3. Once the customer has been entitled on the source tenant and the agreement, and the remap process was presented,&nbsp;use the following email template to email the contact requesting their authorization for the remap.</span></span></span></span></span></p>
+
+			<p><span><em><span><span>Hi </span></span></em><span><span>&lt;</span></span><em><span> customer first name</span></em><span><span> &gt;,<br>
+			<br>
+			<em>Thanks for contacting Microsoft 365 support. The remap will move all &nbsp;subscriptions under the Public Customer Number (PCN) xxx from the source domain xx.onmicrosoft.com to the new tenant xyz.onmicrosoft.com. Here&rsquo;s the information I need to continue with the remap:</em></span></span></span></p>
+
+			<table class="table">
+				<tbody>
+					<tr>
+						<td width="236"><span><span><span><span>Enrollment number</span></span></span></span></td>
+						<td width="237">
+						<p>&nbsp;</p>
+						</td>
+					</tr>
+					<tr>
+						<td width="236"><span><span><span><span>Subscriptions moving to new tenant</span></span></span></span></td>
+						<td width="237"><span><span><span><span>&lt;Subscription type and seat count&gt;</span></span></span></span></td>
+					</tr>
+					<tr>
+						<td width="236"><span><span><span><span>Subscriptions to remain on existing tenant</span></span></span></span></td>
+						<td width="237"><span><span><span><span>&lt;Subscription type and seat count&gt;</span></span></span></span></td>
+					</tr>
+					<tr>
+						<td width="236"><span><span><span><span>Incorrect/Current tenant Domain: </span></span></span></span></td>
+						<td width="237"><span><span><span><span>&lt;*.onmicrosoft.com domain the subscription(s) is/are currently provisioned on&gt;</span></span></span></span></td>
+					</tr>
+					<tr>
+						<td width="236"><span><span><span><span>Correct/Destination tenant Domain</span></span></span></span></td>
+						<td width="237"><span><span><span><span>&lt;*.onmicrosoft.com domain the customer wants the subscription(s) provisioned under.&gt;</span></span></span></span><br>
+						&nbsp;</td>
+					</tr>
+					<tr>
+						<td width="236"><span><span><span><span>Reason for remap request</span></span></span></span></td>
+						<td width="237">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p><span><span><span><br>
+			<em>Please double check the form for accuracy before replying. When I&rsquo;ve received the completed form, I&rsquo;ll continue processing the request.<br>
+			<br>
+			Your service request number is %%servicerequestid%% in case you need it.<br>
+			<br>
+			<strong>Thanks again,</strong><br>
+			<br>
+			<strong>First and Last Name</strong><br>
+			Microsoft Customer Service and Support<br>
+			Phone Number<br>
+			Email address</em></span></span></span><br>
+			<br>
+			4. Proceed to step&nbsp;c.&nbsp;</p>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">c. Suggested script</td>
+			<td class="sbody-td"><em>&quot;When I receive the email authorization, I will escalate your request to have the subscriptions activated under the new tenant. You will be contacted when the process is complete.&quot;</em></td>
+		</tr>
+		<tr>
+			<td class="sbody-td">c. Steps</td>
+			<td class="sbody-td">
+			<p><span><span lang="EN-US"><span><span><span>1. Create a work item for the escalation team or follow process per region.</span></span></span></span></span><span><span lang="EN-US"></span></span><span><span lang="EN-US"><span><span><span><br>
+			<br>
+			2. Include the information:</span></span></span></span></span><span><span lang="EN-US"><span><span><span><br>
+			a. The template filled by customer together.<br>
+			b. A screenshot of the email message that includes the header. The email must be from Global admin from the source tenant or OSM/VL admin.<br>
+			c. If the customer&rsquo;s email is in a language other than English, send a Word file that contains a translation of the email.</span></span></span></span></span></p>
+			<span lang="EN-US"><span><span><span>3. Escalate.<br>
+			After escalation, Tier 2 will begin handling the case as described in article </span></span></span></span><span lang="EN-US"><span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3165892" managed-link="" target="_blank">3165892 Procedure: M365 Commerce: How Tier 2/POD SME support VL customers when they provisioned their licenses on wrong tenant</a></span></span></span><span lang="EN-US"><span><span><span>.<br>
+			<br>
+			4. Email customer and inform him that you escalated the request to have the subscriptions activated under the new tenant. Let him know that he will be contacted when the process is complete.</span></span></span></span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a><br>
+&nbsp;
+<h3 class="sbody-h3">4. Supporting documents</h3>
+
+<div class="indent"><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2820242" id="kb-link-8" managed-link="" target="_blank">2820242 Informational: M365 Commerce: Supporting Volume Licensing customers</a><br>
+<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2791751" id="kb-link-9" managed-link="" target="_blank">2791751 Procedure: M365 Commerce: How to verify and entitle a customer (including POBO)</a><br>
+<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3165892" id="kb-link-10" managed-link="" target="_blank">3165892 Procedure: M365 Commerce: How Tier 2/POD SME support VL customers when they provisioned their licenses on wrong tenant</a>.</div>
+
+<p><br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">5. Version history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<th class="sbody-th"><span class="text-base">CI#</span></th>
+			<th class="sbody-th"><span class="text-base">Date</span></th>
+			<th class="sbody-th"><span class="text-base">Brief description of changes</span></th>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">62366</td>
+			<td class="sbody-td">16/5/2017</td>
+			<td class="sbody-td">Referenced sample for <strong>Tenant Discovery Email</strong> in section 3.<br>
+			Process:&nbsp;<strong>Specific to remapping request for EMEA when Global admin does not know the VL admin/contact</strong>.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">68437</td>
+			<td class="sbody-td">Nov. 2, 2017.</td>
+			<td class="sbody-td">Replaced the following items:<br>
+			Consumption Billing &gt; Communications Credits&nbsp;<br>
+			PSTN Conferencing &gt; Audio Conferencing<br>
+			Cloud PBX &gt; Phone System</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">99849</td>
+			<td class="sbody-td">Mar.27, 2019</td>
+			<td class="sbody-td">Add &ldquo;Speak Up&rdquo; to all Commerce articles.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">102134</td>
+			<td class="sbody-td">May 27, 2019</td>
+			<td class="sbody-td">Updated the email template of step b (escalating to the VL Hub team).</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">109211</td>
+			<td class="sbody-td">Oct 25, 2019</td>
+			<td class="sbody-td">Updated an InGrace period policy</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">111006</td>
+			<td class="sbody-td">December 16, 2019</td>
+			<td class="sbody-td">
+			<p>Article title update and term changes. Also removed empty sections.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">116222</td>
+			<td class="sbody-td">April 13, 2020</td>
+			<td class="sbody-td"><span><span><span>Updated Remap process.</span></span></span></td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><a href="https://dev.azure.com/contentidea/ContentIdea/_workitems/edit/123684" managed-link="" target="_blank">123684</a></td>
+			<td class="sbody-td">September 29, 2020</td>
+			<td class="sbody-td">Updated the customer facing email template in the article.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<h3 class="sbody-h3"><a class="bookmark" id="version"></a></h3>
+<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a></div>
+<div class="kb-securedata-section section">Product Bug Number: <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems#id=46057&amp;_a=edit" id="kb-link-11" target="_self">CI 46057</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems#_a=edit&amp;id=46105&amp;triage=true" id="kb-link-12" target="_self">CI 46105</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/54450" id="kb-link-13" target="_self">CI 54450</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems?id=54242&amp;_a=edit" id="kb-link-14" target="_self">CI 54242</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/56759" id="kb-link-15" target="_self">CI 56759</a>, <a bookmark-id="" data-content-id="" data-content-type="" href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems/edit/58526?fullScreen=false" managed-link="" target="_blank">CI 58526</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems?id=62366&amp;triage=true&amp;fullScreen=true&amp;_a=edit" managed-link="" target="_blank">CI 62366</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems?_a=edit&amp;id=65120&amp;triage=true" managed-link="">CI 65120</a>,&nbsp;<a data-content-id="" data-content-type="" href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems?id=99894&amp;_a=edit" managed-link="" target="">CI 99894</a>, <a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/102134/?triage=true" managed-link="" target="_blank">CI 102134</a>, <a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/109211" managed-link="">CT 109211</a>,&nbsp;<a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/111006" target="_blank">CT 111006</a>, <a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/116222" managed-link="" target="_blank">CT 116222</a>, <a href="https://dev.azure.com/contentidea/ContentIdea/_workitems/edit/123684" managed-link="" target="_blank">CT123684</a><br>
+Author ID (email alias): v-wendya<br>
+Writer ID (email alias): v-vicewa<br>
+SME ID (email alias): adong<br>
+Contributor ID (email alias):</div>

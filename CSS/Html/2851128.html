@@ -1,0 +1,118 @@
+﻿<header><h1>Azure Support - Monetary Credit</h1></header><div class="kb-generic-section section">&nbsp;
+<h1><br>
+<strong>Azure Monetary Credit </strong></h1>
+
+<h1>Scope</h1>
+
+<ul>
+	<li><span>Applies to Free trial or MSDN/MPN/BizSpark offers. </span></li>
+	<li><span>Customer needs to have a credit card for signing up for the monetary credit free trial, MPN and BizSpark&nbsp;offer, not for MSDN subscriptions.</span></li>
+	<li><span>Customer signing up for monetary credit offer will automatically get a fixed credit amount e.g. $100/month for the offer duration.</span></li>
+	<li><span>Customer will have ability to turn off the monetary cap. By default cap is on. The cap can be put back on all MC offer except the free trial.</span></li>
+	<li><span>No rollover of the monetary credit i.e. the credit is &ldquo;use it&rdquo; or &ldquo;lose it&rdquo; every billing cycle.</span></li>
+	<li><span><span><span>&nbsp;</span></span></span><span>Once the offer expires, auto renew will depend on what the <span>renewal path is configured in the offer</span></span><span>. During offer renewal, the remaining credit will lapse.</span></li>
+	<li>If the customer chooses not to proactively removing the spending limit, and then the sub&nbsp;hits the spending limit, the subscription will become disabled (in CMAT,&nbsp;Entitlement Status and Fulfillment&nbsp;status set to Suspended).&nbsp; To recover from this, the customer can remove the spending limit which should bring the subscription back to active immediately.</li>
+</ul>
+
+<h1>Business Rules</h1>
+
+<ul>
+	<li>
+	<div>Customers that previously purchased a Free Trial (regardless if it&rsquo;s an old or new free trial) cannot sign up for another</div>
+	</li>
+	<li>The offer gallery should only display the initial month MPN, MSDN Pro, MSDN Premium and the new MSDN Ultimate and Free Trial offers (depending on the customer&rsquo;s entitlements). It should not display the old Free Trial, old MSDN offers, old MPN offer or the 2nd month onward version of the MSDN Pro, MPN, and MDSN Premium offers</li>
+	<li><span>Free </span>Trial will to migrate to the Pay-As-You-Go offer at the end of 30 days if customer has provided credit card information and removed the monetary cap.&nbsp;</li>
+	<li>The new initial month MSDN Pro, Premium and MPN offers need to automatically migrate to their equivalent version after 30 days and any monetary cap that they had on their prior offer needs to roll to the new offer.</li>
+	<li>MSDN Dev/Test offer cannot be used for production applications.</li>
+	<li>There will be no tax on the included monetary credit amount. Anything beyond the included amount will be taxed and reported as revenue.</li>
+</ul>
+
+<h1>Customer Partner Experience Impact &amp; Scenarios</h1>
+
+<p>Positive.<span>&nbsp; </span>Customers will have more flexibility to try different Azure services during their trial/ MSDN terms.</p>
+
+<ol>
+	<li><span>Customer</span> sign up for Free/MSDN offer -&gt; Cap is on by default -&gt; Customer gets $X/month credit for offer duration -&gt; Customer uses the credit up to $X or less -&gt; Service is disabled if usage hits $x -&gt; Service is enabled the next billing cycle with $x credit -&gt; Customers will have re-deploy their services.</li>
+	<li>Customer sign up for Free/MSDN offer -&gt; Cap is on by default -&gt; Customer gets $X credit for offer duration -&gt; Customer uses the credit up to $X or less -&gt; Service is disabled if usage hits $x -&gt; Customer turns off the cap during billing cycle -&gt; service is resumed in the next billing cycle -&gt; Customer can turn on the cap again if they want.</li>
+</ol>
+
+<h1>&nbsp;</h1>
+
+<p>&nbsp;</p>
+
+<p>
+&nbsp;
+
+<h1>CMAT Experience</h1>
+
+<p>The details tab in CMAT will show the remaining monetary credit that the customer has</p>
+
+<p>CMAT STATUSES FOR SPENDING LIMIT (Monetary Cap Status)</p>
+
+<p>set - spending limit is set</p>
+
+<p>auto_set - spending limit is removed for current billing period</p>
+
+<p>not_set - no spending limit</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>If they request to transition early they will see this screen:</p>
+
+<p><span asset="4015703" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">4015703</span><span>&nbsp;</span></p>
+
+<p>If they request to stay on the legacy offer they will see this screen:</p>
+
+<h1><span asset="4015704" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">4015704</span><span>&nbsp;</span></h1>
+
+<h1>&nbsp;</h1>
+
+<h1>Known issues and bugs</h1>
+
+<p>&nbsp;</p>
+
+<p><span><span>1.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>Switching to a different offer in CMAT will not change the text on the UX. The offer however changes. The customer will continue to see the old offer name prior to the switch. This has been bugged with no ETA.</p>
+
+<p><span><span>2.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>Offer conversion history in CMAT does not show the correct offer number. However the offer name changes and support can understand the customers conversion history using the name.</p>
+
+<p>Eg: If 12p was converted to 50p. The CMAT history should show the previous offer as 12p and the current offer as 50p. This doesn&rsquo;t happen and shows both the current and previous as 50p. However, the offer name shows that previously he had &ldquo;Windows Azure MSDN Ultimate&rdquo; and now he has &ldquo;Windows Azure benefit for MSDN Ultimate (Dev/Test)&rdquo;</p>
+
+<p><span><span>3.<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>Page 1 of the invoice will show tax for the overage amount which is the proposed design of Monetary credit. Page 2 will show tax for the whole amount including for the free monetary credit which is incorrect (The included monetary credit amount is not taxed to the customer). The amount shown on page 1 is accurate and will be charged to the customer. Page 2 will drive customer confusions.<span>&nbsp;</span></p>
+
+<div>
+<div id="_com_1">
+<p>&nbsp;</p>
+
+<p><strong><u>Spending Limit Delay to activate subscription after Spending Limit has been removed. </u></strong></p>
+
+<p>&nbsp;</p>
+
+<p>Sync subscription that is affected with the Spending Limit Status Delay&nbsp;using&nbsp;Jarvis Portal Action:</p>
+
+<p>*******************************************</p>
+
+<p>In Jarvis: Azure Resource Manager /&nbsp;Subscription State Management /&nbsp;Synchronize subscription from RDFE</p>
+
+<p>Subscription: Subscription ID</p>
+
+<p>**********************************************</p>
+
+<p>&nbsp;</p>
+
+<p><span>Important note: </span></p>
+
+<ul>
+	<li>
+	<div>It is with the utmost importance to check the subscription status in both ARM and RDFE endpoint.</div>
+	</li>
+	<li>
+	<div>If the customer is unable to either remove the spending limit,&nbsp;or the services do not start (at least an hour after the spending limit has been removed), engage ASE (TSG #<a bookmark-id="" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3093263" managed-link="" target="_blank">3093263</a>) or WASU (TSG #<a bookmark-id="" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2630659" managed-link="" target="_blank">2630659</a>).</div>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+</div>
+</div>
+</div>

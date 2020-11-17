@@ -1,0 +1,120 @@
+﻿<header><h1>ASMS - EA SLA and SIE Credit Requests</h1></header><div class="kb-generic-section section">
+<p><span lang="EN">Submit a </span><a href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder="><span lang="EN">ModTrack</span></a><span lang="EN"> request to update&nbsp;this TSG.</span></p>
+
+<h3><a id="Overview" name="Overview">Overview</a></h3>
+
+<p>This TSG provides guidance for assisting customers with EA Service Level Agreement (SLA) and Service Impacting Event (SIE) credit requests.</p>
+
+<h4>Context</h4>
+
+<p>The Azure Compute Pre-Purchase (CPP) Plan, previously known as the Azure Compute Promo, is an offer that gives customers with steady state, predictable workloads a significant discount when they pre-purchase Azure compute for 12 months. It is available in the Enterprise Agreement (EA) and visible in the EA Portal.</p>
+
+<h3><a id="Policy" name="Policy">Policy</a></h3>
+
+<p>Credit empowerments must be exercised with strict adherence to the credit policies:</p>
+
+<ul style="list-style-type:disc">
+	<li>
+	<p>All SIE requests must be reported within 120 days of the requested dates.</p>
+	</li>
+	<li>
+	<p>For all SIE requests, the services listed must match the story provided by the customer.</p>
+	</li>
+	<li>
+	<p>For SIE credits, even those reported in the <a href="http://bemis.partners.extranet.microsoft.com/302/Pages/3119077">Service Health Dashboard</a>, a technical evaluation is <strong>required</strong> to verify that this particular customer was impacted. This is because most SIEs are partial impacts, so not all customers are impacted.</p>
+	</li>
+</ul>
+
+<h3><a id="CustomerExperienceAndProvisioning" name="CustomerExperienceAndProvisioning">Customer Experience and Provisioning</a></h3>
+
+<p>In the EA Portal, the customer&rsquo;s CPP amount will show up as a credit in the <em>Included Units</em> column. The customer will not incur usage charges until these Included Units are consumed. Once they are consumed, additional usage will be priced at the negotiated rates in the EA Customer Price Sheet.</p>
+
+<h3><a id="SupportScenarios" name="SupportScenarios">Support Scenarios</a></h3>
+
+<h4>Checking for Applied Credits in the EA Portal</h4>
+
+<ol style="list-style-type:decimal">
+	<li>
+	<p>Navigate to the EA portal.</p>
+	</li>
+	<li>
+	<p>Click the <strong>Reports</strong> tab.</p>
+	</li>
+	<li>
+	<p>Change the view from <em>Monthly</em> to <em>Quarterly</em>.</p>
+	</li>
+	<li>
+	<p>Select the period during which the credit would be applied.</p>
+	</li>
+	<li>
+	<p>Expand the <strong>Adjustments</strong> tab. Any applied credits are displayed here.</p>
+	</li>
+	<li>
+	<p>Hover over the reason code to view the case number associated with the case that the credit was applied to.</p>
+	</li>
+</ol>
+
+<h4>Checking Whether a Customer has a CPP Plan</h4>
+
+<ol style="list-style-type:decimal">
+	<li>
+	<p>Navigate to the EA portal.</p>
+	</li>
+	<li>
+	<p>Click the <strong>Reports</strong> tab.</p>
+	</li>
+	<li>
+	<p>Under <em>Usage Summary</em>, click the month for which the SLA Credit will be processed.</p>
+	</li>
+	<li>
+	<p>Scroll down and check for listed Included Units. If Included Units are visible, the customer has purchased a CPP Plan.</p>
+	</li>
+</ol>
+
+<p><strong>Note: </strong>When a customer orders a CPP SKU, it is for a specific type of machine in a specific data center. We do not provide a list of all the CPP purchases a customer has made. However, when the purchased machines are configured, the monthly allocation will appear in the <em>Usage Summary</em> report in the EA Portal.</p>
+
+<h4>Calculating Credits Purchased on a CPP Plan</h4>
+
+<p>Credits are purchased by number of machines of a certain class per month. For example, if a customer purchased 70 A2 VMs per year in US East 2, the following calculation determines how many credits will appear as purchased in the EA portal.</p>
+
+<ul style="list-style-type:disc">
+	<li>
+	<p>Monthly machines are calculated as running 744 hours per month. 70 times 744 equals 52,080 purchased hours of A2 VMs per month. Since A2 VMs are reported in 100-hour increments in the EA portal Usage Summary, the credit will appear in the EA portal as 52,080/100 = <strong>520.8</strong> Included Units per month before any credits are used.</p>
+	</li>
+	<li>
+	<p>Different machine types use different units of measurement. For example, D3 and D4 VMs use a 10-hour unit of measurement in the Usage Summary report, so a purchase of 70 of those VMs would appear in the EA portal as 52,080/10 = <strong>5208</strong> Included Units per month before any credits are used.</p>
+	</li>
+	<li>
+	<p>In general, the formula below calculates the number of VMs purchased based on their units of measurement: <strong>Number of VMs =</strong> <strong>(Included Quantity * Unit of Measure) / 744</strong>.</p>
+	</li>
+</ul>
+
+<h3>TSG Change Log</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="132">
+			<p><span><strong>Date </strong></span></p>
+			</td>
+			<td width="139">
+			<p><span><strong>Updated By </strong></span></p>
+			</td>
+			<td width="344">
+			<p><span><strong>Content Updated </strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p><span><span>02/11/2020</span></span></p>
+			</td>
+			<td width="139">
+			<p><span><span>v-ishan</span></span></p>
+			</td>
+			<td width="344">
+			<p><span><span>Comprehensive Rewrite: Updated TSG content and formatting as part of the TSG refresh project.</span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>

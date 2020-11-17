@@ -1,0 +1,273 @@
+﻿<header><h1>Procedure: M365 TS: Fiddler Trace Support</h1></header><div class="kb-summary-section section"><span asset="4462485" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4462485]</span><br>
+<span class="text-base"></span>
+<h3 class="sbody-h3"><span class="text-base">Contents<a class="bookmark" id="toc"></a></span></h3>
+
+<ul class="sbody-free_list">
+	<li><a bookmark-id="sum" href="#sum" managed-link="" target="">Summary</a></li>
+	<li><a bookmark-id="assumptions" href="#assumptions" managed-link="" target="">Assumptions</a></li>
+	<li><a bookmark-id="procedure" href="#procedure" managed-link="" target="">Procedure</a></li>
+	<li><a bookmark-id="more" href="#more" managed-link="" target="">More information</a>
+	<ul class="sbody-free_list">
+		<li><a bookmark-id="Related articles" href="#Related articles" managed-link="">Related articles</a></li>
+		<li><a bookmark-id="version" href="#history" managed-link="" target="">Version history</a></li>
+	</ul>
+	</li>
+</ul>
+
+<h3 class="sbody-h3">Summary<a class="bookmark" id="sum"></a></h3>
+<span class="text-base"><br>
+Who</span> should follow this procedure?
+
+<ul class="sbody-free_list">
+	<li><span><span><span><span><span>Support Engineers (SEs) who need to use Fiddler trace (Network Capture diagnostics) in Rave. </span></span></span></span></span></li>
+</ul>
+<span class="text-base">What</span> is this procedure about?
+
+<ul class="sbody-free_list">
+	<li><span><span><span><span>This article explains how to: </span></span></span></span>
+
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span>Securely create and send a Rave Fiddler Tracer package to the customer.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>Help customers package, password-encrypt, and retrieve Fiddler Tracer diagnostics from the customer.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>Securely retrieve and open Fiddler trace network captures by using Rave.</span></span></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+<span class="text-base">When</span> should this guidance and procedure be followed?
+
+<ul class="sbody-free_list">
+	<li>Every time you need to collect a Fiddler trace.</li>
+</ul>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to top</a>
+
+<h3 class="sbody-h3">Assumptions<a class="bookmark" id="assumptions"></a></h3>
+&nbsp;
+
+<ul class="sbody-free_list">
+	<li>Key terms:
+	<ul class="sbody-free_list">
+		<li><span class="text-base"></span><span><span><span><span><span>Fiddler. Fiddler is a third-party (non-Microsoft) web debugging proxy that logs all HTTP(S) traffic between a user&#39;s computer and the Internet. It includes a powerful event-based scripting subsystem (Fiddler Tracer) and can be extended by using any Microsoft .NET language. SEs following this article&rsquo;s instructions should already have installed on their computer the latest version of the Fiddler2 debugging tool. It is a Microsoft-approved tool, but it is manufactured by a company that is independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of this tool.</span></span></span></span></span>
+
+		<ul>
+			<li><span><span><span><span><span>Fiddler tool shows up as &ldquo;Network Capture&rdquo; diagnostics in Rave.&nbsp;This tool can be used for all customer cases in Rave including Cloud and Onprem case types (ignore the &lsquo;onprem only&rsquo; indication in Rave itself).</span></span></span></span></span></li>
+			<li>Advocates and engineers are only authorized to use tools approved by TrIP as included in this article for logging HTTP(S) traffic. Other tools, including browser F12 developer tracing functionality, are not approved for this purpose.</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to top</a>
+
+<h3 class="sbody-h3">Procedure</h3>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span><strong><span><span><span>Create and send a Fiddler Tracer package</span></span></span></strong></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<ol>
+	<li><span><span><span><span>Click <strong>Run Diagnostics</strong>.<br>
+	<span asset="4500042" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4500042]</span></span></span></span></span></li>
+	<li><span><span><span><span>Type in &ldquo;fiddler&rdquo; in the search box and then <strong>Select </strong>the result.&nbsp;<strong>Note</strong>: Make sure that &ldquo;<strong>Filter by product</strong>&rdquo; is selected first and then type in &ldquo;Fiddler&rdquo; in the search box.<br>
+	<span asset="4500043" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4500043]</span></span></span></span></span></li>
+	<li>You will go to this page. To communicate the Unique Key to the customer, click <strong>Email Customer</strong>, type in the customer&rsquo;s email address and click <strong>Send Email.&nbsp;<span asset="4500044" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4500044]</span></strong>&nbsp;<span asset="4500046" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4500046]</span></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span><strong><span><span><span>Customer runs the Fiddler Trace</span></span></span></strong></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><span><span><span>The Customer will receive the email in their inbox. They should:</span></span></span></p>
+
+<ol>
+	<li><span><span><span>Click the link in the email: </span></span></span><a data-content-id="" data-content-type="" href="https://aka.ms./SaRA-Assisted" managed-link="" target="_blank">https://aka.ms./SaRA-Assisted</a><span><span><span>.<br>
+	<span asset="4500047" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4500047]</span></span></span></span></li>
+	<li>Enter the Unique Key in the box and click <strong>Next.<br>
+	<span asset="4500048" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4500048]</span></strong></li>
+	<li><span><span><span><span><span>It will prompt for installing Fiddler certificates. Click <strong>Yes</strong>. Then click <strong>Next</strong>.<br>
+	<span asset="4500049" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4500049]</span></span></span></span></span></span></li>
+	<li>Click <strong>Start</strong> to begin capturing the log.<br>
+	<span asset="4500050" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4500050]</span></li>
+	<li>Go reproducing the problem, and then come back here. After reproducing the problem, click <strong>Stop</strong> to stop recording, create the log files and restart applications.<br>
+	<span asset="4500051" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4500051]</span></li>
+	<li>Enter the Unique Key in the box to secure the network capture, and make note of the key so as to supply it to support technicians upon request. Then click <strong>Next</strong>.&nbsp;<span asset="4500052" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4500052]</span></li>
+	<li>Logging is now complete and click <strong>Next.<br>
+	<span asset="4500053" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4500053]</span></strong></li>
+	<li>Now the customers have collected the log files, they should upload them to the support <span lang="EN-US"><span><span> advocate</span></span></span> by following the instructions showed in below screenshot.&nbsp;<br>
+	<span asset="4500054" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4500054]</span></li>
+</ol>
+
+<p><strong><span><span><span>Notes</span></span></span></strong><span><span><span>: </span></span></span></p>
+
+<ul>
+	<li><span><span><span>By clicking the Microsoft Support Site link showed in the above screenshot, customers will go to DTM workspace. Then click <strong>Add files</strong> to upload the log files which can be found via clicking the hyperlink under &ldquo;here&rdquo; in step 2.<br>
+	<span asset="4500055" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4500055]</span></span></span></span></li>
+</ul>
+
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span><strong><span><span>Retrieve, open and review the Fiddler package</span></span></strong></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<ul>
+	<li><span><span><span><span><span>Customer password protects / sends Fiddler trace through DTM / alternate method.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Customer shares protected file password with SE through different medium (email, verbally).</span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span>Under <strong>Customer problem</strong>, the support engineer can see the files uploaded by the customer. If you don&rsquo;t see the files, just click <strong>Sync attachments</strong>.</span></span></span></span></span><span><span><span><span><span><br>
+<span asset="4500056" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4500056]</span></span></span></span></span></span></p>
+
+<p><span><strong><span><span><span>Note</span></span></span></strong><span><span><span>: Before you open any of the files, scan each with your computer&rsquo;s standard security scanning software to make sure they are safe. Never open a file from a customer without first scanning it for viruses and other malware. If the log files are safe, you can begin your review and analysis. When you have finished working with the logs, immediately delete all traces of the log files from your computer. </span></span></span></span></p>
+</div>
+</div>
+</div>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><strong>Using Fiddler trace for Mobile and Mac support scenario</strong></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><span><span><span><span><span>SE communicates to customer to disable proxy settings and return system preferences to original state, following use of Fiddler trace and support scenario completion.</span></span></span></span></span></p>
+
+<p><span><span><span><span>Mac and Mobile related support scenarios with Fiddler are not supported in Sara currently (ETA unknown).&nbsp; <strong><em>Exclusive to Mac and mobile support scenarios</em></strong>, support engineers can follow the instructions below to support customers:&nbsp; </span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span>Mac: </span></span></span></span><span><span><span><a href="https://docs.telerik.com/fiddler/configure-fiddler/tasks/ConfigureForMac">https://docs.telerik.com/fiddler/configure-fiddler/tasks/ConfigureForMac</a></span></span></span></li>
+	<li><span><span><span>Mobile: </span></span></span><span><span><span><a href="https://docs.telerik.com/fiddler/configure-fiddler/tasks/configureforios"><span><span><span>https://docs.telerik.com/fiddler/configure-fiddler/tasks/configureforios</span></span></span></a> a</span></span></span><span><span><span>nd&nbsp;</span></span></span><a href="https://docs.telerik.com/fiddler/configure-fiddler/tasks/ConfigureForAndroid" managed-link="">https://docs.telerik.com/fiddler/configure-fiddler/tasks/ConfigureForAndroid</a></li>
+</ul>
+
+<p><strong><span><span><span><span>Note:</span></span></span></span></strong><span><span><span><span> This should only be used as the last resource and <strong>cannot</strong> be used for any scenarios currently supported by Sara.</span></span></span></span></p>
+</div>
+</div>
+</div>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span><span><span><span><u><span>Using icesdptool as a workaround when recording is needed,&nbsp;</span><span>or Fiddler in SaRa is not working</span></u></span></span></span></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><span><span>If recording is needed during the process of collecting Fiddler/network trace with the customer, engineers may use SDP<span> <a data-content-id="" data-content-type="" href="https://aka.ms/icesdptool%c2%a0" managed-link="" target="_blank">https://aka.ms/icesdptool </a></span>as a workaround until the Rave Network trace is integrated with <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4464265" managed-link="" target="_blank">PSR recording</a> feature. Follow below procedure: </span></span></p>
+
+<ol>
+	<li><span><span><span><span><span>Download the IdentityAuthTracing&shy;_Diagnostic_global.diagcab following SDP package directly from <a href="http://aka.ms/icesdptool" target="_blank"><span>http://aka.ms/icesdptool</span></a>.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Run this tool and use it to capture the diagnostics information while reproducing the issue. Here are the detailed steps:</span></span></span></span></span>
+	<p><span><strong><span><span><span>Diagnostic Tool Instructions:</span></span></span></strong></span></p>
+
+	<ol>
+		<li><span><span><span><span><span>When the initial dialog comes up, click <strong><span>Next</span></strong>.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>Click <strong><span>Next</span></strong> on the description screen.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>It will prompt for installing Fiddler certificates. Click <strong><span>Yes</span></strong>.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>Click <strong><span>Next</span></strong> on the &#39;Logging will begin when you click Next&#39; window.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>The wizard will attempt to <strong><span>close all open Office applications and processes</span></strong>. If any is open, it will warn you about it, providing you enough time to save your work and close it. If not, it will terminate the process(es) at the end of the allotted time.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>When you are presented with the &#39;Logging is in progress&#39; window, you are now ready to <strong><span>reproduce your scenario/bug/issue</span></strong>. DO NOT click &#39;Stop&#39; until you have completed your &quot;repro&quot;!</span></span></span></span></span></li>
+		<li><span><span><span><span><span>After you have repro&#39;d your scenario, please come back to this (above) dialog and then click <strong><span>Stop</span></strong>.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>The wizard will attempt to remove the fiddler certificate it had installed earlier. Please click <strong><span>Yes</span></strong>.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>The wizard will prompt you for a password to safeguard your trace files. Please <strong><span>provide a password</span></strong>. You can enter &quot;<strong><span>1234</span></strong>&quot; as the password (aka the Default password). However, if for personal reasons you decide to enter a different password, please ensure that you communicate that separately to the team doing investigation downstream.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>When you get to the final dialog, please select <strong><span>Close the troubleshooter</span></strong> to properly complete the SDP diagnostic process.</span></span></span></span></span></li>
+	</ol>
+	</li>
+</ol>
+
+<p><span><strong><span><span><span>Note</span></span></span></strong><span><span><span>: ICESDPTool collects info as per <a href="https://support.microsoft.com/en-us/help/3093873/sdp-3-c6406ad7-cdd8-406e-a409-a7f0c676ccb3-office-sign-in-and-authenti" target="_blank"><span>3093873-Office Sign-in and Authentication Diagnostic</span></a>:</span></span></span></span></p>
+
+<p><span><em><span><span><span>Windows Step Recorder (.mht)</span></span></span></em></span></p>
+
+<p><span><em><span><span><span>Fiddler Trace (.saz)</span></span></span></em></span></p>
+
+<p><span><em><span><span><span>Event Trace Logs (.etl)</span></span></span></em></span></p>
+
+<p><span><em><span><span><span>Registry Dump, Before and After (.reg)</span></span></span></em></span></p>
+
+<p><span><em><span><span><span>Windows CredManager Cache (.txt)</span></span></span></em></span></p>
+
+<ol start="3">
+	<li><span><span><span><span><span><span>Gather the diagnostics information collected (this has fiddler traces, too) in the following location: C:\Users\&lt;username&gt;AppData\Local\ElevatedDiagnostics. </span></span></span></span></span></span></li>
+</ol>
+
+<ol start="4">
+	<li><span><span><span><span><span>Request the customer to upload the information via Rave file exchange (via DTMv2) options. For DTMv2 guidance, see <a href="https://internal.support.services.microsoft.com/en-us/help/2895143" target="_blank"><span>2895143-Frontline technical support DTM usage policy</span></a>.</span></span></span><span><span><br>
+	<br>
+	<strong><span>Note</span></strong><span>: icesdptool may not work with all products. </span></span></span></span></span></li>
+</ol>
+</div>
+</div>
+</div>
+
+<p><br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to top</a></p>
+
+<h3 class="sbody-h3"><span><br>
+More information</span></h3>
+
+<h3 class="sbody-h3"><a id="Related articles" name="Related articles"></a>Related articles</h3>
+
+<ul>
+	<li><span><span><span><span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/office365/troubleshoot/support/run-fiddler-trace" managed-link="" target="_blank">How to run (SaRA) Fiddler Trace</a></span></span></span></span></li>
+</ul>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading="" faq-panel-id="version"><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">&nbsp;Version history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<th class="sbody-th"><span class="text-base">CI</span></th>
+			<th class="sbody-th"><span class="text-base">Date</span></th>
+			<th class="sbody-th"><span class="text-base">Brief description of changes</span></th>
+		</tr>
+		<tr>
+			<td class="sbody-td"><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/119475/">119475</a></td>
+			<td class="sbody-td">June 8, 2020</td>
+			<td class="sbody-td">Add a clarification sentence (related to F12).</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">104673</td>
+			<td class="sbody-td">7/26/2019</td>
+			<td class="sbody-td">Added info that Fiddler trace can be used for all customer cases in Rave including Cloud and Onprem case types.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">104988</td>
+			<td class="sbody-td">8/1/2019</td>
+			<td class="sbody-td">Added info: make sure that &ldquo;Filter by product&rdquo; is selected first and then Type in &ldquo;Fiddler&rdquo; in the search box, so fiddler ( Network Capture) will show up for online also.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">106628</td>
+			<td class="sbody-td">8/29/2019</td>
+			<td class="sbody-td">Added icesdptool work around.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">108770</td>
+			<td class="sbody-td">10/10/2019</td>
+			<td class="sbody-td">Update a subtitle to &quot;<span class="faq-panel-show link-expand-text ng-binding" ng-class="panel.displayType">Using icesdptool as a workaround when recording is needed,&nbsp;or Fiddler in SaRa is not working</span> &quot;.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">109703</td>
+			<td class="sbody-td">Oct. 29, 2019</td>
+			<td class="sbody-td">Add public content <strong>How to run (SaRA) Fiddler Trace</strong> as a reference.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">111006</td>
+			<td class="sbody-td">December 12, 2019</td>
+			<td class="sbody-td">
+			<p>Article title update and term changes. Also removed empty sections.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<h3 class="sbody-h3"><a class="bookmark" id="history"></a></h3>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to top</a></div>

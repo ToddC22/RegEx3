@@ -1,0 +1,27 @@
+﻿<header><h1>Microsoft Edge prompts for credentials when you visit a website through an authenticated proxy</h1></header><p>When you use Microsoft Edge to visit an Internet site through an authenticated proxy that&nbsp;either is in a transparent configuration or uses a load balancer, you are prompted for credentials.&nbsp;</p>
+
+<div>&nbsp;</div>
+<p>To avoid this behavior, add the proxy IP address to the following Group Policy policy:</p>
+
+<pre>
+\Administrative Templates\Network\Network Isolation\Internet Proxy Server for Apps</pre>
+
+<div>&nbsp;</div>
+
+<p><strong>Note&nbsp;</strong>Enter only the&nbsp;IP address. The proxy name does not have any effect in&nbsp;this policy.</p>
+
+<div>&nbsp;</div>
+<p>This behavior is by design.</p>
+
+<div>&nbsp;</div>
+<p>The Edge content process for the Internet zone does not have the enterprise credential capability. This is a security measure to prevent sending your credentials automatically on the Internet.</p>
+
+<p>When Edge tries to authenticate, LSASS checks whether Edge is authenticating by using a proxy. That is the only scenario that we should automatically authenticate in the Internet zone.</p>
+
+<p>LSASS verifies the status of Edge through the firewall service. The service has a record of the proxy that indicates whether the authenticating server is a proxy.</p>
+
+<p>If the proxy is a transparent proxy or if the proxy is behind a load balancer, that means that the IP of the proxy that we are using differs from the resolvable address. In this situation, the proxy check fails in the firewall service, and Edge has to prompt for credentials.</p>
+<p>Writer: delhan<br>
+Editor: v-jesits</p>
+
+<p><a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems/edit/68965?fullScreen=false">Content Idea Request 68965</a></p>

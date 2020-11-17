@@ -1,0 +1,435 @@
+﻿<header><h1>Procedure: Root Cause Analysis</h1></header><p><span asset="4462485" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4462485]</span></p>
+
+<h3><span lang="EN-GB">Who should use this article?</span></h3>
+
+<p><span lang="EN-GB">Support Engineer (CSS) | Escalation Engineer (CSS) | Duty Manager&nbsp;| Team Manager&nbsp;| Technical Advisor&nbsp;</span></p>
+
+<h3><span lang="EN-GB">What is this article about?</span></h3>
+
+<p><span lang="EN-GB">Root Cause Analysis (RCA) is the process of identifying the cause of a technical issue after the issue has been remediated. It should only be performed at customer request and with clear boundaries set in advance to the extent both parties will invest in identifying cause. Where cause is required to be found before an issue can be resolved, that is considered troubleshooting and is out of scope for this procedure.</span></p>
+
+<h3>Table of Contents</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><a bookmark-id="Steps" href="#Steps" managed-link=""><span>Steps</span></a></p>
+			</td>
+			<td>
+			<ul>
+				<li><a bookmark-id="Scope" href="#Scope" managed-link="">Scope</a></li>
+				<li><a bookmark-id="RCA Entitlement" href="#RCA Entitlement" managed-link="">RCA Entitlement</a></li>
+				<li><a bookmark-id="Details" href="#Details" managed-link="">Details</a></li>
+				<li><a bookmark-id="Guidance" href="#Guidance" managed-link="">Guidance</a></li>
+			</ul>
+
+			<p><span><strong> </strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a bookmark-id="Deviations or workarounds" href="#Deviations or workarounds" managed-link=""><span>Deviations or workarounds</span></a></p>
+			</td>
+			<td>
+			<p><span><strong> </strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a bookmark-id="Supporting information or articles" href="#Supporting information or articles" managed-link=""><span>Supporting information&nbsp;or articles</span></a></p>
+			</td>
+			<td>
+			<p><span><strong> </strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a bookmark-id="Templates" href="#Templates" managed-link=""><span>Templates</span></a></p>
+			</td>
+			<td>
+			<p><span><strong> </strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a bookmark-id="Frequently asked questions" href="#Frequently asked questions" managed-link=""><span>Frequently asked questions</span></a></p>
+			</td>
+			<td>
+			<p><span> </span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3><a id="Steps" name="Steps"></a>Steps</h3>
+
+<h4><a id="Scope" name="Scope"></a>Scope</h4>
+
+<ul>
+	<li><span><span lang="EN-GB"></span>Customers who have purchased Microsoft Unified Support or Premier Support, and the customer reported issue is related to on-premise technology or a hybrid deployment of Cloud technology and on-premise technology. (Excluding Azure Stack)</span></li>
+	<li><span><span lang="EN-GB"></span>If the customer reported cloud related issues is part of a Service Incident, a root cause analysis of a major service incident will be published on the relevant service portal. Post-Service Incident RCA for O365/M365 is called a Post Incident Review (PIR).</span></li>
+	<li>RCA related to <strong>Support for Mission Critical </strong>cases is <strong>out of scope</strong> for this procedure and continues to have access to unlimited RCA delivered by DTU and CSS engineers.</li>
+	<li>RCA related to Support for&nbsp; Mission Critical CritSit cases should follow RCA guidance in the <a href="https://support.microsoft.com/authoring/article/4456542?locale=en" managed-link="" target="_blank">KB 4456542&nbsp;| Procedure: SMC CritSit (formerly PMC CritSit).</a></li>
+	<li><span lang="EN-GB">Customers who have purchased O365 Engineering Direct (Support++) or O365 Dedicated as part of their Unified Performance Support Agreement are entitled to only request a Post Incident Review (PIR) for core Office 365 products, EXO, SPO, Skype, Teams, and OneDrive for Business. All other workloads and services are out of scope and a PIR cannot be requested. See <a href="https://internal.support.services.microsoft.com/en-us/help/4456938" managed-link="" target="_blank">4456938 | Procedure: O365 Engineering Direct (Support++)</a> and <a href="https://microsoft.sharepoint.com/teams/o365engineeringdirect" managed-link="" target="_blank">https://microsoft.sharepoint.com/teams/o365engineeringdirect</a>.</span></li>
+</ul>
+
+<h4><a id="RCA Entitlement" name="RCA Entitlement"></a>RCA Entitlement<a id="RCA Entitlement" name="RCA Entitlement"></a></h4>
+
+<p>Below table shows entitlement by support offering to request root cause analysis for a break-fix incident after resolution has been determined. All customers are entitled to receive root cause analysis where root cause is required to resolve a break-fix incident.&nbsp;Customer expectation should not be set that we can deliver root cause of an issue without first confirming that an appropriate level of information is available to inform the RCA investigation.</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="268">&nbsp;</td>
+			<td colspan="3" width="406">
+			<p><span><strong>Customer support offering</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="268">
+			<p><span><strong>Technology</strong></span></p>
+			</td>
+			<td width="141">
+			<p><span><strong>Premier/Unified</strong></span></p>
+			</td>
+			<td width="136">
+			<p><span><strong>Broad Commercial</strong></span></p>
+			</td>
+			<td width="129">
+			<p><span><strong>Partner</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="268">
+			<p><span><strong>Windows</strong></span></p>
+			</td>
+			<td width="141">
+			<p><span><strong>Yes</strong></span></p>
+			</td>
+			<td width="136">
+			<p><span><strong>No</strong></span></p>
+			</td>
+			<td width="129">
+			<p><span><strong>Yes for PSfP</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="268">
+			<p><span><strong>Azure and Identity</strong></span></p>
+			</td>
+			<td width="141">
+			<p><span><strong>Yes [1]</strong></span></p>
+			</td>
+			<td width="136">
+			<p><span><strong>Yes [1]</strong></span></p>
+			</td>
+			<td width="129">
+			<p><span><strong>Yes [1]</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="268">
+			<p><strong><span>Data and AI &ndash; On-Premise</span></strong></p>
+			</td>
+			<td width="141">
+			<p><span><strong>Yes</strong></span></p>
+			</td>
+			<td width="136">
+			<p><span><strong>No</strong></span></p>
+			</td>
+			<td width="129">
+			<p><span><strong>Yes for PSfP</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="268"><strong>Data and AI &ndash; Azure services</strong></td>
+			<td width="141"><strong>Yes [1]</strong></td>
+			<td width="136"><strong>Yes [1]</strong></td>
+			<td width="129"><strong>Yes [1]</strong></td>
+		</tr>
+		<tr>
+			<td width="268"><strong>Data and AI &ndash; Power BI</strong></td>
+			<td width="141"><strong>Yes [1] [2]</strong></td>
+			<td width="136"><strong>Yes [1] [2]</strong></td>
+			<td width="129"><strong>Yes [1] [2]</strong></td>
+		</tr>
+		<tr>
+			<td width="268">
+			<p><span><strong>Dynamics - Online</strong></span></p>
+			</td>
+			<td width="141">
+			<p><span><strong>Yes [3]</strong></span></p>
+			</td>
+			<td width="136">
+			<p><span><strong>Yes [3]</strong></span></p>
+			</td>
+			<td width="129">
+			<p><span><strong>Yes [3]</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="268">
+			<p><span><strong>Dynamics - On-Premise</strong></span></p>
+			</td>
+			<td width="141">
+			<p><span><strong>Yes</strong></span></p>
+			</td>
+			<td width="136">
+			<p><span><strong>No</strong></span></p>
+			</td>
+			<td width="129">
+			<p><span><strong>Yes for PSfP</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="268">
+			<p><span><strong>Modern Workplace - On-Premise (Office, Exchange, SharePoint, Skype, etc)</strong></span></p>
+			</td>
+			<td width="141">
+			<p><span><strong>Yes</strong></span></p>
+			</td>
+			<td width="136">
+			<p><span><strong>No</strong></span></p>
+			</td>
+			<td width="129">
+			<p><span><strong>Yes for PSfP</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="268">
+			<p><span><strong>Microsoft 365</strong></span></p>
+			</td>
+			<td width="141">
+			<p><span><strong>Yes [4]</strong></span></p>
+			</td>
+			<td width="136">
+			<p><span><strong>Yes [4]</strong></span></p>
+			</td>
+			<td width="129">
+			<p><span><strong>Yes [4]</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="268">
+			<p><span><strong>Developer</strong></span></p>
+			</td>
+			<td width="141">
+			<p><span><strong>Yes</strong></span></p>
+			</td>
+			<td width="136">
+			<p><span><strong>No</strong></span></p>
+			</td>
+			<td width="129">
+			<p><span><strong>Yes for PSfP</strong></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>[1] Azure RCA is available as standard for Premier and Broad Commercial customers following service interruptions on the Azure portal. Customers can request RCA for smaller outages and other technical issues by raising a support request.<br>
+[2] For PowerBI, see internal criteria for RCA based on the severity and impact of the issue here: <a href="https://pbiwiki.com/wiki/RCA_Process" managed-link="" target="_blank">https://pbiwiki.com/wiki/RCA_Process</a>.<br>
+[3] Dynamics 365 RCA is available as standard for Premier and Broad Commercial customers following service interruptions on the Dynamics portal. Premier customers and ASfP/PSfP level partners are entitled to request RCA for smaller outages and other technical issues by raising a support request.<br>
+[4] RCA for High Impact Microsoft 365 Service Incidents a<span><span><span><span><span><span>re called Post Incident Reviews (PIR) and are available on Microsoft 365 admin center. If posts end with &ldquo;We&#39;ll publish a post-incident report within five business days.&rdquo;, a PIR will be received. Note: The final post (or Service Incident Report) for an incident can be found in LYNX by typing the incident ID (e.g. EX123456).</span></span></span></span></span></span></p>
+
+<ul>
+	<li><span><span lang="EN-GB"></span>If a PIR is published for a specific incident, customers can be directed to Service Health Dashboard (SHD) to access it. And support engineers can look up the incident in <a href="https://lynx.office.net/#/incidents" target="_blank">LYNX</a> and check the PIR.</span></li>
+	<li><span><span><span><span>If the final post ends with the statement &ldquo;This is the final update for this event&rdquo;, then no PIR is coming out for that particular post.</span></span></span></span></li>
+	<li><span><span><span><span>If a PIR is not provided, the system will provide a Root Cause or final status (for every post).</span></span></span></span></li>
+	<li><span><span></span></span><span><span><span><span><span><span><span>For select critical issues, CSS can be engaged to help determine root cause of an identified issue provided RCA is possible and does not conflict with privacy, security and/or other Microsoft policy restrictions.</span></span></span></span><span><span>&nbsp;If support identifies that it&#39;s not possible to deliver root cause then ensure to manage the customer expectations throughout and explain what blockers exist to finding root cause</span></span></span></span></span></li>
+</ul>
+
+<h4><a id="Details" name="Details"></a>Details</h4>
+
+<ol>
+	<li><span lang="EN-GB">When completing troubleshooting on a Premier/ Unified case, If the customer requests further effort to identify root cause then:</span>
+
+	<ul>
+		<li>If you identify that RCA is not possible based on the scenario and technology involved, communicate to the customer and proceed with closure of the break-fix support case.<br>
+		<br>
+		<span lang="EN-GB">For Premier customers only, inform the customer&#39;s IM of their request to proceed with additional Root Cause Analysis investigation and check that the customer has enough Advisory hours available to continue.</span></li>
+		<li>Create a new support case against the Advisory line item on the contract.&nbsp;
+		<ul>
+			<li>If you are unable to create the case, contact the support phone line (with the customer on hold if necessary) for them to create the case&nbsp;then take ownership of it.</li>
+			<li><span>Root Cause Analysis cases can be Severity B/C/Standard only and not raised to Severity 1/A/Critical.</span></li>
+			<li>For cases<strong> where root cause may potentially be related to multiple separate issues it is valid to create separate</strong> <strong>cases </strong>to investigate each possible cause. Case numbers for all related RCA cases should be captured in the related break-fix case where possible, or in each RCA case.</li>
+		</ul>
+		</li>
+		<li>Close the related break-fix case after documenting the request for an RCA and the case number of the RCA case. Provide the RCA case number to the customer in the closing email.</li>
+	</ul>
+	</li>
+	<li>Meet initial response and scope all new RCA cases following standard procedures. RCA scoping should include the case number of the break-fix case and an estimate of hours Microsoft will contribute to the RCA effort<span lang="EN-GB">. Unified Support cases should not exceed 10 hours or 25% of the labor on the related break-fix support case (whichever is greater):</span>
+	<ul>
+		<li><span lang="EN-GB">One (1) hour prior to the scoped limit being reached, ensure the customer is aware of the upcoming limit.</span></li>
+		<li><span lang="EN-GB">When the labor limit is reached, discuss with the customer the conclusion of any RCA work completed and whether they would like to rescope to proceed with further hours or to close the case.</span></li>
+		<li><span lang="EN-GB">If re-scoping to increase scoped hours, contact the IM before continuing to confirm the customer has enough Advisory hours available to continue.</span></li>
+	</ul>
+	</li>
+</ol>
+
+<div class="divvalue">
+<h4><a id="Guidance" name="Guidance"></a>Guidance</h4>
+
+<ul>
+	<li>RCA work must always be carried out on a separate case from reactive troubleshooting, except where root cause is required as part of troubleshooting to resolve a break-fix support case.</li>
+	<li>RCA is differentiated from break-fix troubleshooting based on whether the scoped break-fix issue is considered resolved. Where the scoped issue is not currently present, but you believe is likely to reoccur in the short term or mitigated by a workaround that cannot be used permanently, the case should be considered still in the troubleshooting phase.</li>
+	<li><span><span><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>When working across technologies to service a request for root cause analysis:</span></span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>CSS Engineers should be aware that a customer&rsquo;s eligibility for RCA for one product or technology area does not extend to all products or technology areas, for example Broad Commercial Azure (RCA eligible) and Broad Commercial Windows (RCA ineligible), refer to the <a bookmark-id="RCA Entitlement" href="#RCA Entitlement" managed-link="">RCA Eligibility Table</a> for guidance.</span></span></span></span></span></span></li>
+		<li><span><span><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>CSS Engineers are permitted to request collaboration with another team if the customer is eligible for RCA for the owning team&rsquo;s technology.&nbsp; </span></span></span></span></span></span>
+		<ul style="list-style-type:disc">
+			<li><span><span><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>Collaborating engineers should contribute to RCA activities wherever possible, however there may be times where this may not be possible for example, direction from the Product Group.&nbsp; Under these circumstances, collaborating engineers must work with the owning engineer to set appropriate customer expectations around the RCA restrictions for the product or technology area.</span></span></span></span></span></span></li>
+		</ul>
+		</li>
+		<li><span><span><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>Cases are not permitted to be transferred to another team if the customer isn&rsquo;t eligible for RCA based on the other team&rsquo;s product or technology area.</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<p><span><a href="https://internal.support.services.microsoft.com/top#top"><span>Return to top</span></a></span></p>
+
+<h3><span><a id="Deviations or workarounds" name="Deviations or workarounds"></a>Deviations or workarounds</span></h3>
+</div>
+
+<p>Additional RCA case entitlement details for Premier Escalation teams in Office 365/Microsoft 365, follow Review Procedure for SME/TL/TA/PTA/SEE from article <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4494380" managed-link="" target="_blank">4494380-How to handle RCA cases for Premier General</a>.</p>
+
+<p>For those customers that are reporting issues with on-premise products, engineers or their managers should review the customers entitlement in Service Desk, as the CKP CareGiver Report will only return entitlement information for companies with an O365 tenancy.</p>
+
+<ul>
+	<li>For more details on finding entitlement information in Service Desk see below steps from Service Desk Case User Guide:</li>
+</ul>
+
+<p><strong><span lang="EN-GB">Entitlement Tile in SD</span></strong></p>
+
+<p><span lang="EN-GB">Understanding SLA is important to how quickly you respond. Understanding the customer&rsquo;s type of support is also important to how you handle and adhere to certain business processes for Professional and Premier which is what the Entitlement tile shows you.</span></p>
+
+<ul>
+	<li>Service Name - Friendly name of the entitlement the customer used to open the case in Ibiza (like Market Service Package)</li>
+	<li>Service Level - Either Professional or Premier</li>
+	<li>Unit Type - Professional might be Unlimited or Incident, Premier might be Hours</li>
+	<li>Unit Count - Number of incidents remaining</li>
+</ul>
+
+<p><span lang="EN-GB"><a href="https://internal.support.services.microsoft.com/top#top"><span>Return to top</span></a></span></p>
+
+<h3><a id="Supporting information or articles" name="Supporting information or articles"></a>Supporting&nbsp;information or articles</h3>
+
+<ul>
+	<li><a href="https://learn.microsoft.com/activity/S991004/launch#/" target="_blank">RCA Case Creation Training&nbsp;</a></li>
+</ul>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">KB 4342944&nbsp;| Informational Asset: Support for Mission Critical (SMC)</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><span asset="4342944" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4342944]</span></p>
+</div>
+</div>
+</div>
+
+<ul>
+</ul>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">KB 4343101 |&nbsp;Informational Asset: Microsoft Support Offering Types</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><span asset="4343101" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4343101]</span></p>
+</div>
+</div>
+</div>
+
+<p><span lang="EN-GB"><a href="https://internal.support.services.microsoft.com/top#top"><span>Return to top</span></a></span></p>
+
+<h3><span><a id="Templates" name="Templates"></a>Templates</span></h3>
+
+<ul>
+	<li>None</li>
+</ul>
+
+<p><span lang="EN-GB"><a href="https://internal.support.services.microsoft.com/top#top"><span>Return to top</span></a></span></p>
+
+<h3><a id="Frequently asked questions" name="Frequently asked questions"></a>Frequently asked questions</h3>
+
+<ul>
+	<li>None</li>
+</ul>
+
+<p><span lang="EN-GB"><a href="https://internal.support.services.microsoft.com/top#top"><span>Return to top</span></a></span></p>
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Version History</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>Item</strong></p>
+			</td>
+			<td>
+			<p><strong>Title</strong></p>
+			</td>
+			<td>
+			<p><strong>Date</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/123086/?triage=true" managed-link="">CT 123086</a></td>
+			<td>Changed TAM to IM</td>
+			<td>September 7, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/120988/?triage=true">CT 120988</a></td>
+			<td>Cross-SBU: Update KB 4456527 - Clarification of RCA case scope</td>
+			<td>July 14, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/120065/?triage=true">CT 120065</a></td>
+			<td>[sp3659 AEEKM] clarification added for RCA article 4456527</td>
+			<td>June 23, 2020</td>
+		</tr>
+		<tr>
+			<td><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/115242" managed-link="" target="_blank">CT 115242</a></td>
+			<td>Add 4494380 reference link.</td>
+			<td>March 16, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/114790/?triage=true">CT 114790</a></td>
+			<td>
+			<p><span><span><span><span>Updated the details under </span></span></span><strong><span><span><span>RCA Entitlement.</span></span></span></strong></span></p>
+			</td>
+			<td>March 2, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/114613/?triage=true" managed-link="" target="_blank">CT 114613</a></td>
+			<td>Updated the title of 4343114 Informational: Microsoft Support Offering Types</td>
+			<td>March 2, 2020</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/114071/?triage=true">CT 114071</a></p>
+			</td>
+			<td>
+			<p>[AEEKM] - New update in Procedure: Root Cause Analysis</p>
+			</td>
+			<td>
+			<p>February 12, 2020</p>
+			</td>
+		</tr>
+		<tr>
+			<td><span>N/A</span></td>
+			<td><span>Migrated from Onestop (CSS BPM Procedure - 604-Ver.23)</span></td>
+			<td><span>August 2, 2018</span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>

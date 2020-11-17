@@ -1,0 +1,310 @@
+﻿<header><h1>Procedure: Microsoft 365 subscription billing was unsuccessful</h1></header><p><span asset="4049349" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4049349]</span></p>
+
+<p>&nbsp;</p>
+
+<p><span asset="4557567" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4557567]</span></p>
+
+<h3>Who should use this article?</h3>
+
+<ul>
+	<li>Accounts &amp; Billing</li>
+	<li>Office</li>
+	<li>Sales</li>
+</ul>
+
+<h3>What is this article about?</h3>
+
+<p><span><span><span><span><span>This article describes what happens when a customer&rsquo;s payment instrument is no longer valid on a Microsoft 365 subscription.</span></span></span></span></span></p>
+
+<h3><a id="top" name="top"></a>Table of contents</h3>
+
+<ol>
+	<li>
+	<h4><a bookmark-id="1" href="#1" managed-link="">Dunning overview</a></h4>
+	</li>
+	<li>
+	<h4><span><a bookmark-id="2" href="#2" managed-link="">Dunning status in MST</a></span></h4>
+	</li>
+	<li>
+	<h4><a bookmark-id="3" href="#3" managed-link="">Dunning cycle</a></h4>
+	</li>
+	<li>
+	<h4><a bookmark-id="4" href="#4" managed-link="">Expiration notifications</a></h4>
+	</li>
+</ol>
+<div class="kb-moreinformation-section section"><a href="https://vkbexternal.partners.extranet.microsoft.com/VKBWebService/ViewContent.aspx?scid=KB;en-US;2844665" target="_blank"><span class="text-base"></span></a>
+<h3><a id="1" name="1"></a>1. Dunning overview</h3>
+
+<p>Dunning is an internal term used to describe a subscription account with a past due balance. This results from a bad payment instrument, either a credit card that has expired or a prepaid balance that has been exhausted and can&rsquo;t cover their payment.</p>
+
+<p><span>Scenario: A customer has purchased a Microsoft 365 subscription with recurring billing. The customer&rsquo;s credit card expired after a couple of years. When Microsoft tries to charge the credit card, the customer will get a decline message from the bank. They will later open Office and get a message that they need to update their billing account information to ensure that Office continues to work.<br>
+<br>
+If Microsoft billing system isn&rsquo;t able to charge the customer it will kick off what is called a dunning cycle. A dunning cycle is a process based on a preconfigured schedule to periodically ping the user (customer) to perform a certain action. Each failed ping will result in certain actions, such as reminder email, a locked account, or ban PI.</span></p>
+
+<p><strong><span>Important</span></strong><span>: Per </span><span>Corporate, External, and Legal Affairs</span><span> (CELA) guidance, <strong>do not</strong> communicate the grace period to customers.</span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="2" name="2"></a>2. Dunning status in MST</h3>
+
+<p><span>First 27 days: DUNNING GRACE: Status = InDunning AND Subscription History Event = Enter Dunning</span></p>
+
+<p><span>After 27 days: DUNNING LOCKED: Status=Suspended AND Subscription History Event +PauseRevenueRecoginition<br>
+<span asset="4519636" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4519636]</span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="3" name="3"></a>3. Dunning cycle</h3>
+
+<p>Here&rsquo;s the current behavior of dunning:</p>
+
+<ol>
+	<li><span>During the first 27 days: We will continue to retry billing seven times, every three to four days. Seven email alerts are sent to the customer, and the customer can still use the product.</span></li>
+	<li><span>After 27 days: The subscription is suspended, and the Skype monthly plan is canceled. OneDrive still functions properly. The&nbsp;customer can still use Office. The Microsoft billing system will try to bill the customer three more times evenly spaced throughout this period. Alerts will appear within the product about a billing problem, which points to the user&rsquo;s <a data-content-id="" data-content-type="" href="https://account.microsoft.com" managed-link="" target="_blank">https://account.microsoft.com</a> page where they can update their payment information.</span></li>
+	<li><span>After 54 days: The subscription enters the expired state. A customer now only has a grace period of five to seven days of full functionality.</span></li>
+	<li><span>After 59 to 61 days: Office goes into <strong>Reduced Functionality Mode</strong>, and access to Office through other devices (mobile, slate) will be denied. </span>
+	<ol style="list-style-type:lower-alpha">
+		<li><span>No further attempts are made at billing the customer.</span></li>
+		<li><span>If the customer renews in this period: </span>
+		<ul style="list-style-type:disc">
+			<li><span>The subscription is restored to <strong>Active status</strong>.</span></li>
+			<li><span>The subscription anniversary date changes to the date on which the charge succeeds.</span></li>
+		</ul>
+		</li>
+	</ol>
+	</li>
+	<li><span>After 90 days: The subscription enters a canceled state and cannot be renewed. The extra 1TB of OneDrive is removed from the customer&rsquo;s account.</span></li>
+</ol>
+
+<p>Microsoft will never remove the customer&rsquo;s data on OneDrive simply because their subscription has expired. However, they may not be able to upload files. If the customer has a OneDrive plan for 100GB a year and if they cancel Office subscription, the customer won&rsquo;t be able to upload a file if it exceeds their storage size of 100GB.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="4" name="4"></a>4.&nbsp;Expiration notifications</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><strong><span>Error </span></strong></span></p>
+			</td>
+			<td>
+			<p><span><strong><span>Advocate action </span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>The customer will see one of following error messages on account.microsoft.com page:</p>
+
+			<p class="indent-1"><em>There&rsquo;s problem with your current payment method. Please add a new one or update your current payment details. </em><br>
+			<br>
+			<em>We&rsquo;ve run into a problem with your Office Subscription. The payment method you used isn&rsquo;t working anymore. Please update your payment information to keep using Office. (A link to update payment information). </em></p>
+			</td>
+			<td>
+			<p>A payment cannot be processed to renew the subscription. The customer must update their payment instrument or add a new payment instrument.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Pre-expiration warning (From 30 days prior to expiration) The&nbsp;customer will receive the following error when they open Office product:</p>
+
+			<p class="indent-1"><em>Renew Your Subscription: To keep using your Office applications without interruption, please renew by &lt;Date, Year&gt;. (Options: Buy Now, Remind me Later). </em></p>
+			</td>
+			<td>
+			<p>Ask customer to select <strong>Buy Now</strong> to renew.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Subscription suspended after multiple failed attempts to collect payment from a customer. A customer will receive the following message.</p>
+
+			<p class="indent-1"><em>Account Notice </em><br>
+			<br>
+			<em>We&rsquo;ve run into a problem with your Microsoft 365 subscription, and we need your help to fix it. Go to your Account/Remind me Later. </em></p>
+			</td>
+			<td>
+			<p>Take the customer to account.microsoft.com help them update their payment information or you can update payment instrument in MST.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<ul>
+				<li>When subscription has expired. The&nbsp;customer will receive the following error if they try to open Office product:<br>
+				<br>
+				<em>Your subscription has expired </em><br>
+				<br>
+				<em>Most of the features of Microsoft &lt;Product Name&gt; have been disabled. Choose option below to reactivate. </em>
+				<ul>
+					<li><span><em><span>Buy &ndash; I want to renew or buy Office.</span></em></span></li>
+					<li><span><em><span>Enter Key &ndash; I have a product key. </span></em></span></li>
+					<li><span><em><span>Sign in &ndash; Add this computer to an active account.</span></em></span></li>
+				</ul>
+				</li>
+				<li>The customer will see the following error message on account.microsoft.com page:</li>
+			</ul>
+
+			<p class="indent-1"><span><em><span>Your Office subscription has expired. Please renew your subscription to keep using your Office subscription (</span></em><span>Option: <em>Renew Now). </em></span></span></p>
+
+			<p class="indent-1"><span><em><span>This subscription has expired. Renew now. </span></em></span></p>
+			</td>
+			<td>
+			<p>Take the customer to <strong>Services &amp; subscriptions</strong> page on account.microsoft.com to renew their subscription.<br>
+			&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>The customer using Office University and their subscription has expired.</p>
+
+			<p class="indent-1"><em>Read-Only: Your notes will continue to sync. To take new notes, go to Settings and select Licensing options. </em></p>
+
+			<p>When the customer goes to <strong>Licensing Option</strong> it will state:</p>
+
+			<p class="indent-1"><em>Account: &lt;customer&rsquo;s account name&gt; </em><br>
+			<br>
+			<em>Your Office Subscription has expired. </em><br>
+			<br>
+			<em>You can continue to view and sync notes. To take new notes, please renew Office Subscription. (Option button &ndash; Buy). </em></p>
+			</td>
+			<td>
+			<p>Ask the customer to select the <strong>Buy </strong>button to renew or take them to <strong>Services &amp; subscriptions</strong> page on account.microsoft.com then select <strong>Renew Now</strong>. &nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>The customer is using Office University and receives a pre-expiration warning (From 30 days prior to expiration) in the product:</p>
+
+			<p class="indent-1"><em>Your Office subscription expires in &lt;days&gt;. After that, you can continue to view and sync notes. To take new notes, please renew your Office subscription. For more details, go to Settings and select Licensing Options. </em></p>
+			</td>
+			<td>
+			<p>Ask the customer to select the <strong>Buy </strong>button to renew or take them to <strong>Services &amp; subscriptions</strong> page on account.microsoft.com then select <strong>Renew Now</strong>.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>The customer has a Microsoft 365 subscription in dunning and the customer is attempting to purchase a different version of Microsoft 365 (Family or Personal) or wants to change from monthly to yearly.</td>
+			<td>Help them pay the past due balance and then assist them with a conversion to a different version of Microsoft 365.</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span>The customer&#39;s subscription is in dunning, but customer has moved to a different country/region and has a new payment instrument (PI) for that region only. Customer may not have access to old PI from previous region. Customer still wants to continue their Microsoft 365 subscription in the new region with their new PI.</span></p>
+			</td>
+			<td>
+			<ul>
+				<li>Verify the proof of move by looking at the old PI and billing address in MST (if available).</li>
+				<li>Inform the customer the only way you can cancel the existing amount due is if you add the new PI to the account and purchase a new subscription on behalf of the customer.</li>
+				<li>If the customer agrees, cancel the subscription in dunning, then purchase (POBO) the new subscription with the new PI.</li>
+			</ul>
+
+			<p><strong>Important: </strong>See KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4578369" managed-link="" target="_blank">4578369 Procedure: Purchase on behalf of (POBO) Consent</a> and KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4053527" managed-link="" target="_blank">4053527 TUG: MST: Purchase on behalf of (POBO)</a> for information on POBO and <strong>mandatory </strong>consent actions.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span>The customer is using PayPal as the payment instrument for a recurring subscription, but renewal fails with an authorization error shown in MST. The customer wants to renew the subscription, but the Pay Now returns a transaction not complete error.</span></p>
+			</td>
+			<td>
+			<p><span>Advise the customer to check funding sources on their PayPal account and add another credit/debit card to the PayPal account as a funding source if possible.</span></p>
+
+			<p><span>With the customer&rsquo;s consent, you may also use the Change Payment workflow to charge a non-PayPal PI directly when attempting to complete the Pay Now process.</span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<a bookmark-id="top" href="#top" managed-link="">Return to top</a></div>
+<div class="kb-securedata-section section">
+<p><strong><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span>August 2018</strong></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"><span class="bold btn-link link-expand-text">Change history</span></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>Item</strong></p>
+			</td>
+			<td>
+			<p><strong>Title</strong></p>
+			</td>
+			<td>
+			<p><strong>Date</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/158301" managed-link="">CONTENT TRACKING 158301</a></td>
+			<td>Cross LOB: POBO project - KB 2846004 - Add link to MST TUG/New KB in last row</td>
+			<td>9/9/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/153727">CONTENT TRACKING 153727</a></td>
+			<td>Proj: Office: Alta project for rebranding within Office</td>
+			<td>4/21/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/153796">CONTENT TRACKING 153796</a></td>
+			<td>Billing: Adding PayPal scenario to KB 2846004 Procedure: Microsoft 365 subscription billing was unsuccessful</td>
+			<td>4/17/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/153441" managed-link="">CONTENT TRACKING 153441</a></td>
+			<td>Multi LOB (A&amp;B O365)- KB: 2846004 Edit exception for cancelling subscriptions in dunning</td>
+			<td>4/2/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/151746">CONTENT TRACKING 151746</a></td>
+			<td>A&amp;B: Update guidance for switching to Monthly to Yearly in dunning on KB 2846004 Procedure: Microsoft 365 subscription billing was unsuccessful</td>
+			<td>2/18/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/148873">CONTENT TRACKING 148873</a></td>
+			<td>Billing: Add dunning overview and MST info on KB 2846004 Procedure: A&amp;B: Microsoft 365 subscription billing was unsuccessful</td>
+			<td>11/4/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/144073">CONTENT TRACKING 144073</a></td>
+			<td>Batch Title Restatement - AB-SuppParts-Rewards</td>
+			<td>5/29/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/143947">CONTENT TRACKING 143947</a></td>
+			<td>Cross LoB: Bulk restatement request - AB&nbsp;</td>
+			<td>5/23/2019</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/139347" role="heading">Content Tracking 139347</a></p>
+			</td>
+			<td>Office: Review and update KB 2846004 Process: Microsoft 365 subscription billing was unsuccessful</td>
+			<td>2/4/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/135514" role="heading">Content Tracking 135514</a></td>
+			<td>A&amp;B : Update KB 2846004 Process: Tier 1 - An Microsoft 365 subscription billing was unsuccessful</td>
+			<td>11/6/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/135514" role="heading">Content Tracking 135514</a></td>
+			<td>A&amp;B : Update KB 2846004 Process: Tier 1 - An Microsoft 365 subscription billing was unsuccessful</td>
+			<td>10/23/2018</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/133386" role="heading">Content Tracking 133386</a></p>
+			</td>
+			<td>
+			<p>Update KB 2846004 replace commerce.microsoft.com to account.microsoft.com</p>
+			</td>
+			<td>
+			<p>8/13/2018</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>
+</div>

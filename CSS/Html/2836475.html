@@ -1,0 +1,299 @@
+﻿<header><h1>Procedure: M365 Commerce: Self-serve subscription removal and tenant deletion request</h1></header><div class="kb-references-section section">
+<p class="sbody-h3"><span asset="4462485" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4462485]</span></p>
+
+<h3 class="sbody-h3"><span class="text-base">Content</span></h3>
+
+<div class="indent">
+<div class="indent">
+<div class="indent">
+<div class="indent"><a bookmark-id="applies" href="#applies" managed-link="" target="">Applies to</a><br>
+<a bookmark-id="policy" href="#policy" managed-link="" target="">Guidance</a><br>
+<a bookmark-id="process" href="#process" managed-link="" target="">Procedure</a><br>
+<a bookmark-id="exceptions" href="#exceptions" managed-link="" target="">Exceptions</a><br>
+<a bookmark-id="support" href="https://internal.support.services.microsoft.com/en-us/help/2836475#support" managed-link="" target="_blank">Supporting documents</a><br>
+<a bookmark-id="version" href="https://internal.support.services.microsoft.com/en-us/help/2836475#version" managed-link="" target="_blank">Version history</a></div>
+</div>
+</div>
+</div>
+
+<h3>&nbsp;&nbsp;<span>Applies to</span></h3>
+
+<h3 class="sbody-h3"><a class="bookmark" id="applies"></a></h3>
+
+<div class="indent"><span class="text-base">The following services:</span> All services</div>
+
+<div class="indent"><span class="text-base">The following advocate roles:</span> T1, T2/POD SME</div>
+
+<div class="indent"><span class="text-base">The following markets:</span> All markets (For detailed information about product-specific availability, see <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2748142" id="kb-link-1" managed-link="" target="_blank">2748142: Markets where Microsoft Online Services are available </a>)</div>
+
+<h4 class="sbody-h4">Scenario</h4>
+
+<ul>
+	<li class="indent">If the customer is listed as a Global/Company, Tenant, or Billing Admin on the account, AND they are wanting to remove a subscription or delete their tenant.</li>
+	<li class="indent"><span><span><span><span>If the customer has an available billing account ID (trail or paid) shown on the account page in CMAT, AND is asking for a billing country change.</span></span></span></span></li>
+</ul>
+
+<p class="indent"><strong><span lang="EN-US"></span><span><span><span>Note: </span></span></span></strong><span><span><span>If customer has a CSP relationship, they will not be able to follow the self-serve tenant delete process.</span></span></span><br>
+<strong><span lang="EN-US"><span><span><br>
+Note</span></span></span></strong><span lang="EN-US"><span><span>: If customer has Windows Store for Business subscription, look for Windows Store for Business trial and cancel the subscription. Subscription will be deprovisioned in 10 calendar days.</span></span></span></p>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a><br>
+<span class="text-base"></span>
+
+<h3 class="sbody-h3">Guidance<a class="bookmark" id="policy"></a></h3>
+
+<p><span><span><span>Company/Tenant admins now have the ability to self-remove (aka lockout/de-provision) a subscription within <a data-content-id="" data-content-type="" href="https://admin.microsoft.com/" managed-link="" target="_blank">MAC </a>&ldquo;Preview Mode&rdquo; portal and self-delete their tenant from the Azure Active Directory within <a data-content-id="" data-content-type="" href="https://aad.portal.azure.com/" managed-link="" target="_blank">AADAC</a> portal. </span></span></span></p>
+
+<p><span><span><span>These capabilities are restricted to Managed Tenants ONLY, and the ability to self-remove and/or self-delete can only be performed by the Company/Tenant Administrator role. </span></span></span></p>
+
+<ul>
+	<li><span><span><span>Only &lsquo;Managed Tenants&rsquo; can be self-deleted. Unmanaged Tenants (aka Viral tenant) cannot be self-deleted. </span></span></span></li>
+</ul>
+
+<p><span><span><span><br>
+Support should always recommend and assist eligible customers through the customer led self-remove/self-delete processes. </span></span></span></p>
+
+<p><strong><span><span><span>NOTE:</span></span></span></strong><span><span><span> </span></span></span></p>
+
+<ul>
+	<li><span><span><span>Tenant deletion is an irreversible process and will result in permanent data loss. </span></span></span></li>
+	<li><strong>Tenant deletion is the only way to change the billing country</strong> of a tenant who has an available Billing Account ID (trail or paid) shown on the account page in CMAT.</li>
+</ul>
+
+<p><br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a></p>
+
+<h3 class="sbody-h3"><a id="process" name="process"></a>Procedure&nbsp;</h3>
+
+<p><strong>1. How to delete a subscription</strong><br>
+<span><span><span>&nbsp; </span></span></span><span><span><span><br>
+Customer<span><span><span lang="EN-US"><span><span>/Tenant now have the ability to self-remove all subscriptions including &lsquo;Company Owned&rsquo; and &lsquo;Individually Owned/ IW or</span></span></span> <span lang="EN-US"><span><span><span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/office365/admin/misc/self-service-sign-up?redirectSourcePath=%252fen-us%252farticle%252fusing-self-service-sign-up-in-your-organization-4f8712ff-9346-4c6c-bb63-a21ad7a62cbd&amp;view=o365-worldwide" managed-link="" target="_blank">self-service sign-up</a></span></span></span></span><span lang="EN-US"><span><span>&rsquo; subscriptions. </span></span></span></span></span></span></span></span></p>
+
+<ul class="indent-8">
+	<li><span><span><span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-delete-howto#delete-a-subscription-in-the-microsoft-365-admin-center" managed-link="" target="_blank">Using the M365 Admin Center Portal</a></span></span></span></li>
+	<li><span><span><span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/billing/billing-how-to-cancel-azure-subscription" managed-link="" target="_blank">Using the Azure Active Directory Admin Center portal</a></span></span></span></li>
+	<li><a href="https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-delete-howto#delete-a-subscription" managed-link="" target="_blank">Delete a subscription</a></li>
+</ul>
+
+<p><strong>For NOAM</strong></p>
+
+<p><span><span><span><span>If customer is unable to delete the subscription using the steps provided above, Tier 1 ambassadors can <span><span><span>request an exception for Manual subscription deletion by submitting Rave AR request to Tier 3. </span></span></span> </span></span></span></span></p>
+
+<p><span><span><span>If the option to delete is missing or the customer is getting an error removing following standard process and needs the subscription removed without waiting for lifecycle deletion (Currently Volume license and GCC subscriptions cannot be self-deleted):</span></span></span></p>
+
+<p><span><span><span>Please email the customer the following template to authorization the deletion of the subscription(s). Verify the details in the authorization to ensure that is fully completed and the correct subscription are listed for deletion. Then attach the form to the AR request for review and processing.</span></span></span></p>
+
+<div class="alert-band">
+<div class="alert alert-info" role="alert">
+<div class="row">
+<div class="col-xs-24">
+<p><span><span><span><span><span>Please be advised that subscription deletion is an irreversible action and will result in permanent loss of your data in that subscription(s). We strongly recommend that you let your subscription(s) naturally expire. If you want us to continue with this request, please reply to this email and provide the following information.<br>
+<br>
+Tenant name: </span></span></span></span></span><span><span><span><span><span><br>
+Tenant Domain:<br>
+Subscription(s) Type/Name: / Seat count: </span></span></span></span></span><span><span><span><span><span><br>
+xxx / xxx</span></span></span></span></span><span><span><span><span><span><br>
+xxx / xxx</span></span></span></span></span><span><span><span><span><span><br>
+Current Expiration date: ___<br>
+<br>
+ATTENTION: All customer data that was stored in the online service (including any cached or backed-up copies) will be immediately deleted at the time that the request is processed despite any other agreement that you may have with Microsoft. </span></span></span></span></span><span><span><span><span><span><br>
+<br>
+Do you authorize Microsoft to manually de-provision the subscription(s) indicated earlier?<br>
+Please indicate your authorization to continue by typing your name and your user ID (also known as OrgID) in the space below </span></span></span><br>
+<span><span><span><br>
+Name:_______________________________<br>
+OrgID:_______________________________<br>
+(For example: {user}@{domain}.onmicrosoft.com)</span></span></span></span></span></p>
+</div>
+</div>
+</div>
+</div>
+
+<p><span><strong><span><span><span>Windows Store for Business Trial</span></span></span></strong><span><span><span> cannot be deprovisioned with lockout codes. The subscription will deprovision 10 days after it has been disabled. </span></span></span></span></p>
+
+<p><strong>2. How to delete a tenant</strong><br>
+<span><span><span><span><br>
+Customer: <strong>delete the empty tenant from AAD: </strong></span></span></span></span></p>
+
+<p><span><span><span><span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-delete-howto#prepare-the-tenant-for-deletion" managed-link="" target="_blank">Prepare tenant for deletion in AAD Admin Center</a>&nbsp;</span></span></span></span></p>
+
+<p><span><strong><span><span><span>Note: </span></span></span></strong><span><span><span>If customer is unable to delete the tenant themselves, support will follow the process described in the <a bookmark-id="exceptions" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2836475#exceptions#exceptions" managed-link="" target="_blank">Exceptions</a> section.</span></span></span></span></p>
+
+<p><a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a></p>
+
+<h3 class="sbody-h3"><a id="exceptions" name="exceptions"></a>Exceptions <a class="bookmark" id="exceptions"></a></h3>
+
+<p><span><strong><span><span>Explain the process to the customer and obtain their approval to proceed the tenant deletion process. </span></span></strong></span></p>
+
+<p><span> </span></p>
+
+<p><span><span><span>Please clarify that this process is irreversible and will result in permanent loss of data despite any other agreement that the customer may have with Microsoft.</span></span></span><br>
+<br>
+<span>It may take up to 15 business days to process the request. Use the following script to set up a call with the customer &ldquo;May I schedule a follow-up call to give you an update on the progress of your request? What day and time would work best for you?&rdquo;</span></p>
+
+<p><strong>Tier 1 Steps</strong></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<ol>
+				<li>&nbsp;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;<span><span><span><span><span>Tenant deletion Request</span></span></span></span></span></li>
+			</ol>
+
+			<p class="indent-1">&nbsp;</p>
+
+			<p class="indent-1"><span><span><span><span><span><span><span><span>&#8203;<strong>Instructions: </strong>Send the Tenant Delete Authorization Form to the customer by using ticketing system email.</span></span></span></span></span></span></span></span></p>
+
+			<p class="indent-1"><span><span><span><span><strong><span><span><span>Email Template: </span></span></span></strong><span><span><span>Tenant Delete Authorization Form</span></span></span></span></span></span></span></p>
+
+			<p class="indent-1"><span><span><span><span><span><span><span>Hi &lt;customer first name&gt;<br>
+			<br>
+			Thanks for contacting Microsoft 365 subscriptions about your request to permanently delete tenant, &lt;tenant name&gt;. Case #&lt;number&gt; has been created to track the progress of your request. Tenant Deletion is an irreversible action and permanently lose your data. We strongly recommend that you let your tenant naturally expire. If you want us to continue with this request, reply to this email and provide the following information.<br>
+			<br>
+			Tenant name:__________<br>
+			(For example: {your domain}.onmicrosoft.com)</span></span></span></span></span></span></span></p>
+
+			<p class="indent-1"><span><span><span><span><span><span><span>ATTENTION: All your customer data stored in the online service (including any cached or backed-up copies) will be deleted when we delete your tenant regardless of any other agreement that you may have with Microsoft.<br>
+			<br>
+			Do you authorize Microsoft to manually delete all M365 and Azure user data, and permanently remove the tenant and user accounts indicated above?<br>
+			<br>
+			Indicate your authorization to continue by typing your name and your OrgID in the space here:<br>
+			<br>
+			Name:_______________________________</span></span></span></span></span></span></span></p>
+
+			<p class="indent-1"><span><span><span><span><span><span><span><br>
+			OrgID:_______________________________<br>
+			(For example: {user}@{domain}.onmicrosoft.com)<br>
+			<br>
+			Thanks,</span></span></span></span></span></span></span></p>
+
+			<p class="indent-1"><span><span><span><span><strong><span><span><span>First and Last Name</span></span></span></strong></span></span></span></span></p>
+
+			<p class="indent-1"><span><span><span><span><span><span><span>Microsoft Customer Service and Support</span></span></span></span></span></span></span></p>
+
+			<p class="indent-1"><span><span><span><span><span><span><span>Phone Number</span></span></span></span></span></span></span></p>
+
+			<p class="indent-1"><span><span><span><span><span>Email address</span></span></span></span></span></p>
+
+			<ol start="2">
+				<li><span><span><span><span><span>Verify in Rave or CMAT that all subscriptions in the tenant are in deprovisioned state only, if not refer back to the <strong>step 3.1</strong> <strong>Remove all subscriptions from tenant. </strong></span></span></span></span></span></li>
+				<li><span><span><span><span><span>Verify that the domain in the customer authorization form matches the tenant GUID in CMAT. </span></span></span></span></span></li>
+				<li><span><span><span><span><span>Open an assistance request to T3 and make sure Rave case contain the escalation template to T3.<br>
+				<br>
+				<strong>Note</strong>: When escalating, please also include the screenshots of error message and provide the Service Desk case number if available.</span></span></span></span></span></li>
+			</ol>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><strong><span><span><span>Note:</span></span></span></strong><span><span><span> Tier 3 should complete verification following the steps in article </span></span></span><span><span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3147534" managed-link="" target="_blank">3147534: Out of cycle tenant delete request process for escalated cases</a></span></span></span><span><span><span>.</span></span></span></p>
+
+<p><a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a></p>
+
+<h3 class="sbody-h3"><a id="support" name="support"></a>Supporting documents <a class="bookmark" id="suppdocs"></a></h3>
+
+<p><a data-content-id="" data-content-type="" href="/en-us/help/3147534" id="kb-link-18" managed-link="" target="_blank">3147534: Out of cycle tenant delete request process for escalated cases </a><br>
+<a data-content-id="" data-content-type="" href="/en-us/help/2778091" id="kb-link-19" managed-link="" target="_blank">2778091: How to escalate a Service Request to Tier 3, Engineering</a><br>
+<a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-delete-howto#prepare-the-tenant-for-deletion" managed-link="" target="_blank">Prepare tenant for deletion in AAD Admin Center</a><br>
+<a href="https://internal.support.services.microsoft.com/en-us/help/4564762" target="_blank">4564762: Informational: M365: Assistance Request V2 for Broad Commercial support</a>&nbsp;<br>
+<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a></p>
+
+<h3 class="sbody-h3"><a id="version" name="version"></a></h3>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Version history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<th class="sbody-th">CI#</th>
+			<th class="sbody-th">Date</th>
+			<th class="sbody-th">Brief description of changes</th>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/123812" managed-link="" target="_blank">123812</a></td>
+			<td>October 10, 2020</td>
+			<td>NOAM process change.</td>
+		</tr>
+		<tr>
+			<td><a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/119895" managed-link="" tabindex="0" target="_blank">119895</a></td>
+			<td>June 19, 2020</td>
+			<td>Replace escalation center with assistance request</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">119145</td>
+			<td class="sbody-td">June 5, 2020</td>
+			<td class="sbody-td"><span><span><span><span>Added exception to KB 2836475 Self-serve subscription removal and tenant deletion request</span></span></span></span></td>
+		</tr>
+		<tr>
+			<td class="sbody-td">116731</td>
+			<td class="sbody-td">April 17, 2020</td>
+			<td class="sbody-td">Update customer facing email template</td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/114976/?workitem=115106">115106</a></td>
+			<td class="sbody-td">March 10, 2020</td>
+			<td class="sbody-td">Replace Modern Viewpoint with &quot;Rave or CMAT&quot;</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">112307</td>
+			<td class="sbody-td">December 27, 2019</td>
+			<td class="sbody-td">Updated the section of &ldquo;Exception&rdquo;.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">111006</td>
+			<td class="sbody-td">December 13, 2019</td>
+			<td class="sbody-td">Article title update and term changes.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">110760</td>
+			<td class="sbody-td">November 22, 2019</td>
+			<td class="sbody-td"><span lang="EN-US"><span><span>Added a note for Windows Store for Business in the scenario section.</span></span></span></td>
+		</tr>
+		<tr>
+			<td class="sbody-td">102130</td>
+			<td class="sbody-td">May 28, 2019</td>
+			<td class="sbody-td">Updated the policy for country change cases.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">101913</td>
+			<td class="sbody-td">May 27, 2019</td>
+			<td class="sbody-td">Updated the corresponding content in the section &ldquo; policy&rdquo; &amp; &ldquo;procedure&rdquo; since there is no manual IW subscription deletion process anymore, customer will be able to delete managed and unmanaged subscription from admin center.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">99896</td>
+			<td class="sbody-td">April 4, 2019</td>
+			<td class="sbody-td">Add Policy in TAG.<br>
+			Add Process in TAG.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">99894</td>
+			<td class="sbody-td">March 27, 2019</td>
+			<td class="sbody-td">Add &ldquo;Speak Up&rdquo; to all Commerce articles.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">98724</td>
+			<td class="sbody-td">March 25, 2019</td>
+			<td class="sbody-td">Revised article with self-service information on subscription removal and tenant deletion.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">97782</td>
+			<td class="sbody-td">February 25, 2019</td>
+			<td class="sbody-td">Split the involved content of article into two parts, EMEA and NOAM &amp;APGC. Added extra steps to explain the customer the EMEA &ndash; related process.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p class="sbody-h3"><a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a></p>
+</div>
+<div class="kb-securedata-section section">Author ID (email alias): cstum, v-wendya,&nbsp;&nbsp;<br>
+Writer ID (email alias): dansu, v-rchakr, v-hofern, v-maqiu, a-fllica, v-meip, v-gloma<br>
+SME ID (email alias): cstum<br>
+Contributor ID (email alias): aaronb</div>

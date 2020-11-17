@@ -1,0 +1,945 @@
+﻿<header><h1>Billing: SQL Query Library</h1></header><p>This is the SQL Query Library for Accounts and Billing.&nbsp;Queries below include both the basic syntax for individual databases,&nbsp;and syntax updated for&nbsp;BigQuery.</p>
+
+<p><strong>Tip:</strong>&nbsp;Use the Table of Contents below or your browser&#39;s <strong>Find&nbsp;</strong>function to quickly scroll to a specific query.<a id="top" name="top"></a></p>
+
+<h3><strong>A</strong></h3>
+
+<ul>
+	<li><a bookmark-id="AccountActivationCodeLookup" href="#AccountActivationCodeLookup" managed-link="">Account Activation Code Lookup</a></li>
+	<li><a bookmark-id="AccountAuditLookup" href="#AccountAuditLookup" managed-link="">Account Audit Lookup</a></li>
+	<li><a bookmark-id="AccountCreditCardAudit" href="#AccountCreditCardAudit" managed-link="">Account Credit Card Audit</a></li>
+	<li><a bookmark-id="AccountStatus" href="#AccountStatus" managed-link="">Account Status</a></li>
+	<li><a bookmark-id="AgencyLinkingStatus" href="#AgencyLinkingStatus" managed-link="">Agency Linking Status</a></li>
+</ul>
+
+<h3><strong>B</strong></h3>
+
+<ul>
+	<li><a bookmark-id="BadPaymentCard" href="#BadPaymentCard" managed-link="">Bad Payment Card</a></li>
+	<li><a bookmark-id="BillingDocument" href="#BillingDocument" managed-link="">Billing Document</a></li>
+	<li><a bookmark-id="BillingDocumentLookup" href="#BillingDocumentLookup" managed-link="">Billing Document Lookup</a></li>
+	<li><a bookmark-id="BillingThreshold" href="#BillingThreshold" managed-link="">Billing Threshold</a></li>
+	<li><a bookmark-id="BillMeNowAudit" href="#BillMeNowAudit" managed-link="">Bill Me Now Audit</a></li>
+	<li><a bookmark-id="Boleto01PaymentSlipConfirmation" href="#Boleto01PaymentSlipConfirmation" managed-link="">Boleto 01 - Payment Slip Confirmation</a></li>
+	<li><a bookmark-id="Boleto02PaymentReceiptConfirmationbyPaymentProvider" href="#Boleto02PaymentReceiptConfirmationbyPaymentProvider" managed-link="">Boleto 02 - Payment Receipt Confirmation by Payment Provider</a></li>
+	<li><a bookmark-id="Boleto03aPaymentReceiptConfirmationbyMicrosoftBillingSystem" href="#Boleto03aPaymentReceiptConfirmationbyMicrosoftBillingSystem" managed-link="">Boleto 03a - Payment Receipt Confirmation by Microsoft Billing System</a></li>
+	<li><a bookmark-id="PaymentReceiptConfirmationbyMicrosoftBillingSystemFailure" href="#PaymentReceiptConfirmationbyMicrosoftBillingSystemFailure" managed-link="">Boleto 03b - Payment Receipt Confirmation by Microsoft Billing System - Failure</a></li>
+	<li><a bookmark-id="Boleto04PaymentTransaction" href="#Boleto04PaymentTransaction" managed-link="">Boleto 04 &ndash; Payment Transaction</a></li>
+	<li><a bookmark-id="Brazil Taxes – Boleto: CNPJ Historical changes" href="#Boleto 05 – Brazil/ Taxes: CNPJ Historical Changes" managed-link="" target="">Brazil Taxes &ndash; Boleto: CNPJ Historical changes</a></li>
+</ul>
+
+<h3><strong>C</strong></h3>
+
+<ul>
+	<li><a bookmark-id="CELAUserLookup" href="#CELAUserLookup" managed-link="">CELA User Lookup</a></li>
+	<li><a bookmark-id="ConsolidatedInvoiceSAPBillingLookup" href="#ConsolidatedInvoiceSAPBillingLookup" managed-link="">Consolidated Invoice SAP Billing Lookup</a></li>
+	<li><a bookmark-id="CreditsCounterpartLookup" href="#CreditsCounterpartLookup" managed-link="">Credits Counterpart Lookup</a></li>
+	<li><a bookmark-id="CustomerAccountLookUp" href="#CustomerAccountLookUp" managed-link="">Customer Account Look Up by AccountID &ndash; Advertiser or Managing Account</a></li>
+	<li><a bookmark-id="CustomerCreditHolds" href="#CustomerCreditHolds" managed-link="">Customer Credit Holds</a></li>
+	<li><a bookmark-id="CustomerFraudQuery" href="#CustomerFraudQuery" managed-link="">Customer Fraud Status</a></li>
+	<li><a bookmark-id="CustomerInvitation" href="#CustomerInvitation" managed-link="">Customer Invitation</a></li>
+</ul>
+
+<h3><strong>D</strong></h3>
+
+<ul>
+	<li><a bookmark-id="DelayedActionQueue" href="#DelayedActionQueue" managed-link="">Delayed Action Queue (For Account Pauses)</a></li>
+	<li><a bookmark-id="DevTokenToEmail" href="#DevTokenToEmail" managed-link="">Dev Token to Email</a></li>
+	<li><a bookmark-id="DMC – SearchAds Total Billed Amount" href="#DMC – SearchAds Total Billed Amount" managed-link="">DMC &ndash; SearchAds Total Billed Amount</a></li>
+	<li><a bookmark-id="dmc  social ads" href="#dmc  social ads" managed-link="">DMC &ndash; SocialAds Total Billed Amount</a></li>
+</ul>
+
+<h3><strong>E</strong></h3>
+
+<ul>
+	<li><a bookmark-id="EmailNotificationByAccount" href="#EmailNotificationByAccount" managed-link="">Email Notification by Account</a></li>
+	<li><a bookmark-id="EmailNotificationByEmailAddress" href="#EmailNotificationByEmailAddress" managed-link="">Email Notification by Email Address</a></li>
+</ul>
+
+<h3><strong>F</strong></h3>
+
+<ul>
+	<li><a bookmark-id="FindAccountTeamBoB" href="#FindAccountTeamBoB" managed-link="">Find Account Team&#39;s Book of Business (BoB)</a></li>
+	<li><a bookmark-id="FindActiveAgencyUserAccessToAccounts" href="#FindActiveAgencyUserAccessToAccounts" managed-link="">Find Active Agency User Access to Accounts</a></li>
+	<li><a bookmark-id="FindAgencyAccounts" href="#FindAgencyAccounts" managed-link="">Find Agency Accounts</a></li>
+	<li><a bookmark-id="FindAggregatorCouponAccount" href="#FindAggregatorCouponAccount" managed-link="">Find Aggregator Coupon Account</a></li>
+	<li><a bookmark-id="FindCustomerAccountAudit" href="#FindCustomerAccountAudit" managed-link="">Find Customer Account Audit</a></li>
+	<li><a bookmark-id="FindCustomerAccounts" href="#FindCustomerAccounts" managed-link="">Find Customer Accounts</a></li>
+	<li><a bookmark-id="FindFinancialInfoAccount" href="#FindFinancialInfoAccount" managed-link="">Find Financial Info of Account</a></li>
+	<li><a bookmark-id="FindPaymentInstrumentOfCustomer" href="#FindPaymentInstrumentOfCustomer" managed-link="">Find Payment Instrument of Customer</a></li>
+	<li><a bookmark-id="FindPrepayTransactionInfo" href="#FindPrepayTransactionInfo" managed-link="">Find Prepay Transaction Information</a></li>
+	<li><a bookmark-id="FindPrimaryContact" href="#FindPrimaryContact" managed-link="">Find Primary Contact</a></li>
+	<li><a bookmark-id="FindUserRolesPermissionsExternal" href="#FindUserRolesPermissionsExternal" managed-link="">Find User Roles and Permissions for External Customers</a></li>
+	<li><a bookmark-id="AB_SQL_FindUserRolesPermissionsInternalUsersMSDomain" href="#AB_SQL_FindUserRolesPermissionsInternalUsersMSDomain" managed-link="">Find User Roles and Permissions for Internal Users - MS Domain</a></li>
+	<li><a bookmark-id="AB_SQL_FindUserRolesPermissionsInternalUsersNonMSDomain" href="#AB_SQL_FindUserRolesPermissionsInternalUsersNonMSDomain" managed-link="">Find User Roles and Permissions for Internal Users - Non-MS Domain</a></li>
+</ul>
+
+<h3><strong>I</strong></h3>
+
+<ul>
+	<li><a bookmark-id="InvoiceDocumentForExcel" href="#InvoiceDocumentForExcel" managed-link="">Invoice Document for Excel</a></li>
+	<li><a bookmark-id="InvoicesOutstandingPastDueUnpaid" href="#InvoicesOutstandingPastDueUnpaid" managed-link="">Invoices &ndash; Outstanding, Past Due, or Unpaid</a></li>
+</ul>
+
+<h3><strong>P</strong></h3>
+
+<ul>
+	<li><a bookmark-id="PayAmountDueAudit" href="#PayAmountDueAudit" managed-link="">Pay Amount Due Audit</a></li>
+	<li><a bookmark-id="PaymentTransactions" href="#PaymentTransactions" managed-link="">Payment Transactions</a></li>
+	<li><a bookmark-id="Paperless BillingBillingsettingspagereviewstatusforspecifiedSAPID" href="#Paperless BillingBillingsettingspagereviewstatusforspecifiedSAPID" managed-link="">Paperless Billing &ndash; Billing settings page review status for specified SAP ID</a></li>
+	<li><a bookmark-id="PaperlessBillingInvoicedeliveryemailstatus" href="#PaperlessBillingInvoicedeliveryemailstatus" managed-link="">Paperless Billing &ndash; Invoice delivery email status</a></li>
+	<li><a bookmark-id="PaperlessBillingWhatareInvoiceSettings" href="#PaperlessBillingWhatareInvoiceSettings" managed-link="">Paperless Billing &ndash; What are Invoice Settings?</a></li>
+	<li><a bookmark-id="PaperlessBillingWhereisAPContactdatalocated" href="#PaperlessBillingWhereisAPContactdatalocated" managed-link="" target="">Paperless Billing &ndash; Where is AP Contact data located?</a></li>
+	<li><a bookmark-id="PaperlessBillingWhetherSAPIDhasinvoicesthatshouldbesenttoAPContact" href="#PaperlessBillingWhetherSAPIDhasinvoicesthatshouldbesenttoAPContact" managed-link="">Paperless Billing &ndash; Whether SAP ID has invoices that should be sent to AP Contact</a></li>
+	<li><a bookmark-id="PilotsIsCustomerOptedintoPilot" href="#PilotsIsCustomerOptedintoPilot" managed-link="">Pilots &ndash; Is Customer Opted into Pilot?</a></li>
+</ul>
+
+<h3><strong>S</strong></h3>
+
+<ul>
+	<li><a bookmark-id="SalesJournalCreditsAndDebits" href="#SalesJournalCreditsAndDebits" managed-link="">Sales Journal Credits and Debits</a></li>
+	<li><a bookmark-id="SalesJournalLookupForAggregatorInvoiceCreditsAndDebits" href="#SalesJournalLookupForAggregatorInvoiceCreditsAndDebits" managed-link="">Sales Journal Lookup for Aggregator Invoice Credits and Debits</a></li>
+	<li><a bookmark-id="SalesJournalLookupforConsolidatedInvoiceCreditsandDebitsWithSAPBillingDocumentNbr" href="#SalesJournalLookupforConsolidatedInvoiceCreditsandDebitsWithSAPBillingDocumentNbr" managed-link="">Sales Journal Lookup for Consolidated Invoice Credits and Debits With SAPBillingDocumentNbr</a></li>
+	<li><a bookmark-id="SalesJournalLookupForCredits" href="#SalesJournalLookupForCredits" managed-link="">Sales Journal Lookup for Credits</a></li>
+	<li><a bookmark-id="SalesJournalLookupForInvoiceCreditsAndDebits" href="#SalesJournalLookupForInvoiceCreditsAndDebits" managed-link="">Sales Journal Lookup for Invoice Credits and Debits</a></li>
+	<li><a bookmark-id="SalesJournalLookupForInvoiceCreditsAndDebitsAggregator" href="#SalesJournalLookupForInvoiceCreditsAndDebitsAggregator" managed-link="">Sales Journal Lookup for Invoice Credits and Debits with AggregatorBillingDocumentID</a></li>
+	<li><a bookmark-id="SalesJournalLookupForInvoiceCreditsAndDebitsSAP" href="#SalesJournalLookupForInvoiceCreditsAndDebitsSAP" managed-link="">Sales Journal Lookup for Invoice Credits and Debits with&nbsp;SAPBillingDocumentNbr</a></li>
+	<li><a bookmark-id="SAPCustomerLookup" href="#SAPCustomerLookup" managed-link="">SAP Customer Lookup</a></li>
+</ul>
+
+<h3><strong>T</strong></h3>
+
+<ul>
+	<li><a bookmark-id="TwCFindPIIDataofUsersinBingAdsDB" href="#TwCFindPIIDataofUsersinBingAdsDB" managed-link="" target="">TwC &ndash; Find PII Data of Users in Microsoft Advertising DB</a></li>
+</ul>
+
+<h3><strong>V</strong></h3>
+
+<ul>
+	<li><a bookmark-id="PayNow" href="#PayNow" managed-link="">Verify Pay Now Function Selected</a></li>
+</ul>
+
+<p>&nbsp;</p>
+<p>Please update your queries with these syntax to the beginning and end of each query for the&nbsp;BigQuery&nbsp;Database.</p>
+
+<p aria-level="2" paraeid="{1349d0d2-4faa-4cff-8c47-06c73c495179}{20}" paraid="1074010481" role="heading"><strong>AppsConsolidated&nbsp;</strong><br>
+with&nbsp;sql.AppsConsolidatedDb.cte&nbsp;as&nbsp;<br>
+(&nbsp;<br>
+   &nbsp; &nbsp; -- your query here --&nbsp;<br>
+)&nbsp;option(cache(off));&nbsp;<br>
+select&nbsp;*&nbsp;from&nbsp;cte&nbsp;</p>
+
+<p paraeid="{1349d0d2-4faa-4cff-8c47-06c73c495179}{94}" paraid="1491149076"><strong>Billing&nbsp;</strong><br>
+With&nbsp;sql.BillingDBPartitionedAzure.cte&nbsp;as&nbsp;<br>
+(&nbsp;<br>
+  &nbsp; &nbsp; -- your query here --&nbsp;<br>
+)option(cache(off));&nbsp;<br>
+select&nbsp;*&nbsp;from&nbsp;CTE&nbsp;</p>
+
+<p paraeid="{1349d0d2-4faa-4cff-8c47-06c73c495179}{166}" paraid="1431505728"><strong>Notifications&nbsp;</strong><br>
+with&nbsp;sql.NotificationDB.cte&nbsp;as&nbsp;<br>
+(&nbsp;<br>
+ &nbsp; &nbsp; -- your query here --&nbsp;<br>
+)&nbsp;option(cache(off));&nbsp;<br>
+select&nbsp;*&nbsp;from&nbsp;cte&nbsp;</p>
+
+<p paraeid="{1349d0d2-4faa-4cff-8c47-06c73c495179}{244}" paraid="1145269677"><strong>CCDB Central Store</strong>&nbsp;<br>
+with&nbsp;sql.CentralStoreDb.CTE&nbsp;as&nbsp;<br>
+(&nbsp;<br>
+&nbsp; &nbsp; -- your query here --&nbsp;<br>
+)option(cache(off));&nbsp;<br>
+select&nbsp;*&nbsp;from&nbsp;CTE&nbsp;</p>
+
+<p paraeid="{ba85875f-9826-4402-9987-6097d46e5aca}{77}" paraid="667056716"><strong>Sales Journal&nbsp;&nbsp;</strong><br>
+with&nbsp;sql.BillingDBPartitionedAzure.cte1&nbsp;as&nbsp;<br>
+(&nbsp;<br>
+&nbsp; &nbsp;-- your query here --&nbsp;<br>
+)&nbsp;option(partition(21,22),&nbsp;cache(off));&nbsp;<br>
+select&nbsp;*&nbsp;from&nbsp;cte1&nbsp;</p>
+<p><a id="AccountActivationCodeLookup" name="AccountActivationCodeLookup"></a><span asset="4339716" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4339716]</span><br>
+<br>
+/*<br>
+Created: 2/16/2018<br>
+Last Modified/Reviewed: &nbsp;6/11/2018<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p>&nbsp;</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="AccountAuditLookup" name="AccountAuditLookup"></a><span asset="4339718" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4339718]</span></p>
+
+<p>/*<br>
+Created: 10/30/2017<br>
+Last Modified/Reviewed: &nbsp;6/11/2018<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><code><a id="AccountCreditCardAudit" name="AccountCreditCardAudit"></a></code><span asset="4339719" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4339719]</span></p>
+
+<p>/*<br>
+Created: 04/24/2012<br>
+Last Modified/Reviewed: &nbsp;04/24/2012<br>
+Created by &nbsp;: Kris Evans&nbsp;<br>
+Modified by : Kris Evans<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><code><a id="AccountStatus" name="AccountStatus"></a></code><span asset="4339850" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4339850]</span></p>
+
+<p>/*<br>
+Created: 3/1/2018<br>
+Last Modified/Reviewed: &nbsp;3/1/2018<br>
+Created by &nbsp;: Alex Lee&nbsp;<br>
+Modified by : Alex Lee&nbsp;<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="AgencyLinkingStatus" name="AgencyLinkingStatus"></a><span asset="4339851" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4339851]</span></p>
+
+<p>/*<br>
+Created: 3/1/2018<br>
+Last Modified/Reviewed: &nbsp;3/1/2018<br>
+Created by &nbsp;: Alex Lee&nbsp;<br>
+Modified by : Alex Lee&nbsp;<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="BadPaymentCard" name="BadPaymentCard"></a>&nbsp;<span asset="4339852" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4339852]</span></p>
+
+<p>/*<br>
+Created: 3/1/2018<br>
+Last Modified/Reviewed: &nbsp;3/1/2018<br>
+Created by &nbsp;: Alex Lee&nbsp;<br>
+Modified by : Alex Lee&nbsp;<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><code><a id="BillingDocument" name="BillingDocument"></a></code><span asset="4340562" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340562]</span>/*<br>
+<br>
+Created: 3/1/2018<br>
+Last Modified/Reviewed: &nbsp;3/1/2018<br>
+Created by &nbsp;: Alex Lee&nbsp;<br>
+Modified by : Alex Lee&nbsp;<br>
+*/<br>
+&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="BillingDocumentLookup" name="BillingDocumentLookup"></a><span asset="4340561" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340561]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 12/4/2017<br>
+Last Modified/Reviewed:&nbsp; 9/23/2018<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><code><a id="BillingThreshold" name="BillingThreshold"></a></code><span asset="4340564" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340564]</span></p>
+
+<p>/*<br>
+Created: 04/24/2012<br>
+Last Modified/Reviewed: 3/1/2018<br>
+Created by &nbsp;: Kris Evans&nbsp;<br>
+Modified by : Alex Lee<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="BillMeNowAudit" name="BillMeNowAudit"></a><span asset="4340565" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340565]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 04/24/2012<br>
+Last Modified/Reviewed: &nbsp;3/1/2018<br>
+Created by &nbsp;: Kris Evans&nbsp;<br>
+Modified by : Alex Lee<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="Boleto01PaymentSlipConfirmation" name="Boleto01PaymentSlipConfirmation"></a><span asset="4503886" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503886]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 4/30/2019<br>
+Last Modified/Reviewed: &nbsp;4/30/2019<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="Boleto02PaymentReceiptConfirmationbyPaymentProvider" name="Boleto02PaymentReceiptConfirmationbyPaymentProvider"></a><span asset="4503892" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503892]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 4/26/2019<br>
+Last Modified/Reviewed: &nbsp;4/26/2019<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="Boleto03aPaymentReceiptConfirmationbyMicrosoftBillingSystem" name="Boleto03aPaymentReceiptConfirmationbyMicrosoftBillingSystem"></a><span asset="4503893" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503893]</span></p>
+
+<p>&nbsp;</p>
+
+<p><br>
+/*<br>
+Created: 4/26/2019<br>
+Last Modified/Reviewed: &nbsp;4/26/2019<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/&emsp;<br>
+&nbsp;</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="PaymentReceiptConfirmationbyMicrosoftBillingSystemFailure" name="PaymentReceiptConfirmationbyMicrosoftBillingSystemFailure"></a><span asset="4503894" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503894]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 4/26/2019<br>
+Last Modified/Reviewed: &nbsp;4/26/2019<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="Boleto04PaymentTransaction" name="Boleto04PaymentTransaction"></a><span asset="4503895" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503895]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 5/8/2019<br>
+Last Modified/Reviewed: &nbsp;5/8/2019<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p paraeid="{14f88b85-e599-4ca3-8848-9626e4c7633b}{181}" paraid="519609789"><a id="Brazil Taxes – Boleto: CNPJ Historical changes" name="Brazil Taxes – Boleto: CNPJ Historical changes"><span asset="4586033" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4586033]</span></a></p>
+
+<p paraeid="{14f88b85-e599-4ca3-8848-9626e4c7633b}{181}" paraid="519609789">/*&nbsp;<br>
+Created: 09/22/2020&nbsp;<br>
+Last Modified/Reviewed:   09/22/2020&nbsp;<br>
+Created by &nbsp;: Brenda Pessoa&nbsp;<br>
+Modified by&nbsp;: Brenda Pessoa&nbsp;<br>
+*/&nbsp;</p>
+
+<p paraeid="{14f88b85-e599-4ca3-8848-9626e4c7633b}{181}" paraid="519609789"><a aria-live="assertive" bookmark-id="top" data-bi-name="content-anchor-link" href="https://support.microsoft.com/api/preview#top" managed-link="" tabindex="0">Back to Top</a></p>
+<p><a id="CELAUserLookup" name="CELAUserLookup"></a><span asset="4340566" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340566]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 3/1/2018<br>
+Last Modified/Reviewed: &nbsp;3/1/2018<br>
+Created by &nbsp;: Alex Lee<br>
+Modified by : Alex Lee<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="ConsolidatedInvoiceSAPBillingLookup" name="ConsolidatedInvoiceSAPBillingLookup"></a><span asset="4340735" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340735]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 2/16/2018<br>
+Last Modified/Reviewed: &nbsp;4/22/2018<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="CreditsCounterpartLookup" name="CreditsCounterpartLookup"></a><span asset="4340737" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340737]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 12/4/2017<br>
+Last Modified/Reviewed: &nbsp;6/11/2018<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="CustomerAccountLookUp" name="CustomerAccountLookUp"></a><span asset="4481053" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4481053]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 11/21/2018<br>
+Last Modified/Reviewed: 11/21/2018<br>
+Created by : Tatsumi Masuda<br>
+Modified by : Tatsumi Masuda<br>
+*/<br>
+&nbsp;</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+
+<p>&nbsp;</p>
+<p><a id="CustomerCreditHolds" name="CustomerCreditHolds"></a><span asset="4469581" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4469581]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 9/23/2018<br>
+Last Modified/Reviewed: &nbsp;9/23/2018<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="CustomerFraudQuery" name="CustomerFraudQuery"></a><span asset="4340738" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340738]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 3/1/2018<br>
+Last Modified/Reviewed: &nbsp;3/1/2018<br>
+Created by &nbsp;: Alex Lee&nbsp;<br>
+Modified by : Alex Lee<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="CustomerInvitation" name="CustomerInvitation"></a><span asset="4340739" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340739]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 3/1/2018<br>
+Last Modified/Reviewed: &nbsp;3/1/2018<br>
+Created by &nbsp;: Alex Lee&nbsp;<br>
+Modified by : Alex Lee<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="DelayedActionQueue" name="DelayedActionQueue"></a><span asset="4340741" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340741]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 4/5/2018<br>
+Last Modified/Reviewed: &nbsp;11/20/2018<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="DevTokenToEmail" name="DevTokenToEmail"></a><span asset="4340743" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340743]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 3/1/2018<br>
+Last Modified/Reviewed: &nbsp;3/1/2018<br>
+Created by &nbsp;: Alex Lee&nbsp;<br>
+Modified by : Alex Lee<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="DMC – SearchAds Total Billed Amount" name="DMC – SearchAds Total Billed Amount"></a><span asset="4589279" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4589279]</span><br>
+<br>
+<span><span><span><span><span>/*</span></span></span></span></span><span><span><span><span><br>
+<span>Created: 10/14/2020</span><br>
+<span>Last Modified/Reviewed: 10/14/2020</span><br>
+<span>Created by : Tatsumi Masuda </span><br>
+<span>Modified by : Tatsumi Masuda</span><br>
+<span>Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance</span><br>
+<span>*/</span></span></span></span></span></p>
+<p><a id="dmc  social ads" name="dmc  social ads">&nbsp;</a><br>
+<span asset="4590209" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4590209]</span><span><span><span><span><span><br>
+/*</span></span></span></span></span><span><span><span><span><br>
+<span>Created: 10/14/2020</span><br>
+<span>Last Modified/Reviewed: 10/14/2020</span><br>
+<span>Created by : Tatsumi Masuda </span><br>
+<span>Modified by : Tatsumi Masuda</span><br>
+<span>Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance</span><br>
+<span>*/</span></span></span></span></span></p>
+<p><a id="EmailNotificationByAccount" name="EmailNotificationByAccount"></a><span asset="4340744" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340744]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 3/1/2018<br>
+Last Modified/Reviewed: &nbsp;3/1/2018<br>
+Created by &nbsp;: Alex Lee&nbsp;<br>
+Modified by : Alex Lee<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="EmailNotificationByEmailAddress" name="EmailNotificationByEmailAddress"></a><span asset="4340745" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340745]</span></p>
+
+<p>/*<br>
+Created: 4/22/2018<br>
+Last Modified/Reviewed: 5/3/2018<br>
+Created by &nbsp;: Tatsumi Masuda<br>
+Modified by : Tatsumi Masuda<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="FindAccountTeamBoB" name="FindAccountTeamBoB"></a><span asset="4340940" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340940]</span></p>
+
+<p>/*<br>
+Created: 04/23/2018<br>
+Last Modified/Reviewed:&nbsp; 12/14/2018<br>
+Created by&nbsp; : Alex Lee<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="FindActiveAgencyUserAccessToAccounts" name="FindActiveAgencyUserAccessToAccounts"></a><span asset="4340941" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340941]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 3/1/2018<br>
+Last Modified/Reviewed: &nbsp;4/23/2018<br>
+Created by &nbsp;: Alex Lee&nbsp;<br>
+Modified by : Alex Lee<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="FindAgencyAccounts" name="FindAgencyAccounts"></a><span asset="4340942" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340942]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 3/1/2018<br>
+Last Modified/Reviewed: &nbsp;3/1/2018<br>
+Created by &nbsp;: Alex Lee&nbsp;<br>
+Modified by : Alex Lee<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="FindAggregatorCouponAccount" name="FindAggregatorCouponAccount"></a><span asset="4340945" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340945]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 3/1/2018<br>
+Last Modified/Reviewed: &nbsp;3/1/2018<br>
+Created by &nbsp;: Alex Lee&nbsp;<br>
+Modified by : Alex Lee<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="FindCustomerAccountAudit" name="FindCustomerAccountAudit"></a><span asset="4340957" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340957]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 1/28/2018<br>
+Last Modified/Reviewed: &nbsp;4/22/2018<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="FindCustomerAccounts" name="FindCustomerAccounts"></a><span asset="4340960" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340960]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 3/1/2018<br>
+Last Modified/Reviewed: &nbsp;3/1/2018<br>
+Created by &nbsp;: Alex Lee&nbsp;<br>
+Modified by : Alex Lee<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="FindFinancialInfoAccount" name="FindFinancialInfoAccount"></a><span asset="4481307" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4481307]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 11/25/2018<br>
+Last Modified/Reviewed: &nbsp;11/25/2018<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="FindPaymentInstrumentOfCustomer" name="FindPaymentInstrumentOfCustomer"></a><span asset="4340972" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340972]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 11/10/2017<br>
+Last Modified/Reviewed: &nbsp;6/11/2018<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="FindPrepayTransactionInfo" name="FindPrepayTransactionInfo"></a><span asset="4340978" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340978]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 4/22/2018<br>
+Last Modified/Reviewed: &nbsp;4/22/2018<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="FindPrimaryContact" name="FindPrimaryContact"></a><span asset="4340980" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340980]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 11/20/2017<br>
+Last Modified/Reviewed:&nbsp; 9/23/2018<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="FindUserRolesPermissionsExternal" name="FindUserRolesPermissionsExternal"></a><span asset="4478898" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4478898]</span></p>
+
+<p>&nbsp;</p>
+
+<p><br>
+/*<br>
+Created: 3/1/2018<br>
+Last Modified/Reviewed: &nbsp;11/21/2018<br>
+Created by &nbsp;: Alex Lee&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><span asset="4502527" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4502527]</span><a id="AB_SQL_FindUserRolesPermissionsInternalUsersMSDomain" name="AB_SQL_FindUserRolesPermissionsInternalUsersMSDomain"></a></p>
+
+<p>/*<br>
+Created: 4/15/2019<br>
+Last Modified/Reviewed:&nbsp; 4/15/2019<br>
+Created by&nbsp; : Alex Lee<br>
+Modified by : Tatsumi Masuda<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><span asset="4502528" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4502528]</span><a id="AB_SQL_FindUserRolesPermissionsInternalUsersNonMSDomain" name="AB_SQL_FindUserRolesPermissionsInternalUsersNonMSDomain"></a></p>
+
+<p>/*<br>
+Created: 4/15/2019<br>
+Last Modified/Reviewed:&nbsp; 4/15/2019<br>
+Created by&nbsp; : Alex Lee<br>
+Modified by : Tatsumi Masuda<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p>&nbsp;</p>
+<p><a id="InvoiceDocumentForExcel" name="InvoiceDocumentForExcel"></a><span asset="4340995" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4340995]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 3/1/2018<br>
+Last Modified/Reviewed: &nbsp;3/1/2018<br>
+Created by &nbsp;: Alex Lee&nbsp;<br>
+Modified by : Alex Lee<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="InvoicesOutstandingPastDueUnpaid" name="InvoicesOutstandingPastDueUnpaid"></a><span asset="4481297" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4481297]</span></p>
+
+<p>/*<br>
+Created: 11/13/2018<br>
+Last Modified/Reviewed:&nbsp; 12/5/2018<br>
+Created by&nbsp; : Tatsumi Masuda<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="PayAmountDueAudit" name="PayAmountDueAudit"></a>&nbsp;<span asset="4466957" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4466957]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 04/24/2012<br>
+Last Modified/Reviewed: &nbsp;10/3/2018<br>
+Created by &nbsp;: Kris Evans&nbsp;<br>
+Modified by : Alex Lee<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="PaymentTransactions" name="PaymentTransactions"></a><span asset="4341022" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4341022]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 3/1/2018<br>
+Last Modified/Reviewed: &nbsp;3/1/2018<br>
+Created by &nbsp;: Alex Lee&nbsp;<br>
+Modified by : Alex Lee<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="Paperless BillingBillingsettingspagereviewstatusforspecifiedSAPID" name="Paperless BillingBillingsettingspagereviewstatusforspecifiedSAPID"></a><span asset="4481255" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4481255]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 11/13/2018<br>
+Last Modified/Reviewed: &nbsp;11/13/2018<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/&nbsp;</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="PaperlessBillingInvoicedeliveryemailstatus" name="PaperlessBillingInvoicedeliveryemailstatus"></a><span asset="4481285" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4481285]</span></p>
+
+<p>/*<br>
+Created: 11/13/2018<br>
+Last Modified/Reviewed:&nbsp; 12/20/2018<br>
+Created by&nbsp; : Tatsumi Masuda<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="PaperlessBillingWhatareInvoiceSettings" name="PaperlessBillingWhatareInvoiceSettings"></a><span asset="4481295" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4481295]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 11/13/2018<br>
+Last Modified/Reviewed: &nbsp;11/13/2018<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/&nbsp;</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+
+<p>&nbsp;</p>
+<p><a id="PaperlessBillingWhereisAPContactdatalocated" name="PaperlessBillingWhereisAPContactdatalocated"></a><span asset="4481076" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4481076]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 11/8/2018<br>
+Last Modified/Reviewed: 11/8/2018<br>
+Created by : Tatsumi Masuda<br>
+Modified by : Tatsumi Masuda<br>
+*/<br>
+&nbsp;</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+
+<p>&nbsp;</p>
+<p><a id="PaperlessBillingWhetherSAPIDhasinvoicesthatshouldbesenttoAPContact" name="PaperlessBillingWhetherSAPIDhasinvoicesthatshouldbesenttoAPContact"></a><span asset="4481284" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4481284]</span></p>
+
+<p>/*<br>
+Created: 11/13/2018<br>
+Last Modified/Reviewed:&nbsp; 12/20/2018<br>
+Created by&nbsp; : Tatsumi Masuda<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="PilotsIsCustomerOptedintoPilot" name="PilotsIsCustomerOptedintoPilot"></a><span asset="4481071" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4481071]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 11/25/2018<br>
+Last Modified/Reviewed:&nbsp; 12/20/2018<br>
+Created by&nbsp; : Tatsumi Masuda<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+
+<p>&nbsp;</p>
+<p><a id="SalesJournalCreditsAndDebits" name="SalesJournalCreditsAndDebits"></a><span asset="4341034" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4341034]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 3/5/2018<br>
+Last Modified/Reviewed: &nbsp;3/5/2018<br>
+Created by &nbsp;: Alex Lee&nbsp;<br>
+Modified by : Alex Lee<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="SalesJournalLookupForAggregatorInvoiceCreditsAndDebits" name="SalesJournalLookupForAggregatorInvoiceCreditsAndDebits"></a><span asset="4341038" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4341038]</span></p>
+
+<p>/*<br>
+Created: 11/16/2017<br>
+Last Modified/Reviewed:&nbsp; 4/15/2019<br>
+Created by&nbsp; : Tatsumi Masuda<br>
+Modified by : Tatsumi Masuda</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="SalesJournalLookupforConsolidatedInvoiceCreditsandDebitsWithSAPBillingDocumentNbr" name="SalesJournalLookupforConsolidatedInvoiceCreditsandDebitsWithSAPBillingDocumentNbr"></a><span asset="4481300" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4481300]</span></p>
+
+<p>/*<br>
+Created: 11/21/2018<br>
+Last Modified/Reviewed:&nbsp; 4/15/2019<br>
+Created by&nbsp; : Tatsumi Masuda<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="SalesJournalLookupForCredits" name="SalesJournalLookupForCredits"></a><span asset="4341039" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4341039]</span></p>
+
+<p>/*<br>
+Created: 4/22/2018<br>
+Last Modified/Reviewed:&nbsp; 4/15/2019<br>
+Created by&nbsp; : Tatsumi Masuda<br>
+Modified by : Tatsumi Masuda</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="SalesJournalLookupForInvoiceCreditsAndDebits" name="SalesJournalLookupForInvoiceCreditsAndDebits"></a><span asset="4341040" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4341040]</span></p>
+
+<p>/*<br>
+Created: 11/7/2017<br>
+Last Modified/Reviewed:&nbsp; 4/15/2019<br>
+Created by&nbsp; : Tatsumi Masuda<br>
+Modified by : Tatsumi Masuda</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="SalesJournalLookupForInvoiceCreditsAndDebitsAggregator" name="SalesJournalLookupForInvoiceCreditsAndDebitsAggregator"></a><span asset="4469585" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4469585]</span></p>
+
+<p>/*<br>
+Created: 9/23/2018<br>
+Last Modified/Reviewed:&nbsp; 4/15/2019<br>
+Created by&nbsp; : Tatsumi Masuda<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="SalesJournalLookupForInvoiceCreditsAndDebitsSAP" name="SalesJournalLookupForInvoiceCreditsAndDebitsSAP"></a><span asset="4469586" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4469586]</span></p>
+
+<p>/*<br>
+Created: 9/23/2018<br>
+Last Modified/Reviewed:&nbsp; 4/15/2019<br>
+Created by&nbsp; : Tatsumi Masuda<br>
+Modified by : Tatsumi Masuda</p>
+
+<p>&nbsp;</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="SAPCustomerLookup" name="SAPCustomerLookup"></a><span asset="4341041" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4341041]</span></p>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 2/16/2018<br>
+Last Modified/Reviewed: &nbsp;7/6/2018<br>
+Created by &nbsp;: Tatsumi Masuda&nbsp;<br>
+Modified by : Tatsumi Masuda<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="TwCFindPIIDataofUsersinBingAdsDB" name="TwCFindPIIDataofUsersinBingAdsDB"></a><span asset="4481304" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4481304]</span></p>
+
+<p>&nbsp;</p>
+
+<p><br>
+/*<br>
+Created: 11/21/2018<br>
+Last Modified/Reviewed: &nbsp;11/21/2018<br>
+Created by &nbsp;: Tatsumi Masuda<br>
+Modified by : Tatsumi Masuda<br>
+Note: If the query takes longer than 45 minutes to return with result, please stop the query so it will not affect the server performance<br>
+*/</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to Top</a></p>
+<p><a id="PayNow" name="PayNow"></a></p>
+
+<ol>
+	<li><span>Run Account ID on </span><a href="https://tools.cp.microsoft.com/Timeline/"><span>Timeline Tool</span></a><span> to find transactions.</span>
+
+	<ol style="list-style-type:lower-alpha">
+		<li><span>Select a transaction in question.</span></li>
+		<li><span>Note the general timeframe of the transaction that occurred. For example, a timestamp of 2019-10-30T19:32:29Z,&nbsp; use 19:00:00 for the general hour of that day.&nbsp;</span></li>
+	</ol>
+	</li>
+	<li>Open <a href="https://bingads.kusto.windows.net:443/BingAdsUI" managed-link="">Kusto</a>.&nbsp;</li>
+	<li><span>Copy and paste the below query under database Bing Ads_Client Center Tracing_Adsapps_info:</span></li>
+</ol>
+
+<p class="indent-1"><span asset="4533244" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4533244]</span></p>
+
+<ol start="4">
+	<li>Input <strong>Timestamp </strong>and <strong>accountId </strong>within the <strong>Message contains</strong> filter of the query.</li>
+	<li>Run the Query.</li>
+	<li><span>You will receive a transaction envelope</span>.<br>
+	<br>
+	&nbsp;&nbsp; <span>a.&nbsp; Double click the envelope body to view details.</span><br>
+	&nbsp;&nbsp; b.&nbsp; <span>The drop&nbsp;down will expand with message data.</span>
+	<div>&nbsp;</div>
+
+	<div>Some Data Details of Importance:</div>
+
+	<div>&lsquo;Calltype&rsquo; 1 = User Action</div>
+
+	<div>&lsquo;Calltype&rsquo; 0 = System Action</div>
+	</li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p>/*<br>
+Created: 11/22/2019<br>
+Last Modified/Reviewed: &nbsp;11/22/2019<br>
+Created by &nbsp;: Jordan Parker<br>
+Modified by : Jordan Parker<br>
+*/</p>
+<p>For any additions or edits to the SQL queries in this library, please email Tatsumi Masuda (tamasuda@microsoft.com), Alex Lee (alele@microsoft.com), and Jeh Chow (shchow@microsoft.com).</p>
+
+<p><span asset="4025558" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4025558]</span></p>
+<p><strong>Article writer:</strong> Madeleine Golding , Debadatta Dutta, Amarendra Ranjan<br>
+<strong>Article contributors:</strong>&nbsp;Alex Lee, Tatsumi Masuda, Jordan Parker,Brenda Pessoa<br>
+<strong>Date of last update:</strong> October 01,&nbsp;2020&nbsp;<br>
+<strong>Description of last updates:</strong> Content added in section<strong> B: Boleto 05 &ndash; Brazil/ Taxes: CNPJ Historical Changes</strong><br>
+<strong>Function Selected </strong>per Jennifer Jang</p>
+
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span> </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p>May 1 2019: Added new queries for <strong>Find User Roles and Permissions for Internal Users &ndash; MS Domain, Find User Roles and Permissions for Internal Users &ndash; Non-MS Domain. </strong>Updated queries for <strong>Sales Journal Lookup For Consolidated Invoice Credits &amp; Debits With SAPBillingDocumentNbr, Sales Journal Lookup For Invoice Credits &amp; Debits With SAPBillingDocumentNbr, Sales Journal Lookup For Invoice Credits &amp; Debits With AggregatorBillingDocumentID, Sales Journal Lookup For Invoice Credits &amp; Debits, Sales Journal Lookup For Invoice Credits, Sales Journal Lookup For Aggregator Invoice Credits &amp; Debits, Invoices &ndash; Outstanding, Past Due, or Unpaid, Find Account Team&rsquo;s Book of Business (BoB), Find Users and Role Permissions for Internal Users, Paperless Billing - Invoice delivery email status, Paperless Billing &ndash; Whether SAP ID has invoices that should be sent to AP Contact, Pilots &ndash; Is Customer Opted Into Pilot? </strong>Deleted query for <strong>Find User Roles and Permissions for Internal Users</strong>.</p>
+
+<p>December 6:&nbsp;Added new queries for&nbsp;<strong>Customer Account Look Up by AccountID &ndash; Advertiser or Managing Account, Pilots &ndash;Is Customer Opted into Pilot?,&nbsp;Paperless Billing &ndash; Where is AP Contact data located?,&nbsp;Paperless Billing &ndash; What are Invoice Settings?,&nbsp;Paperless Billing &ndash; Billing settings page review status for specified SAP ID,&nbsp;Paperless Billing &ndash; Whether SAP ID has invoices that should be sent to AP Contact,&nbsp;Paperless Billing &ndash; Invoice delivery email status,&nbsp;Invoices &ndash; Outstanding, Past Due, or Unpaid, Sales Journal Lookup for Consolidated Invoice Credits and Debits With SAPBillingDocumentNbr,&nbsp;TwC &ndash; Find PII Data of Users in Microsoft Advertising DB,&nbsp;Find Financial Info of Account.</strong>&nbsp;Updated queries for&nbsp;&nbsp;<strong>Sales Journal Lookup for Invoice Credits and Debits with SAPBillingDocumentNbr, Sales Journal Lookup for Invoice Credits and Debits With AggregatorBillingDocumentID,&nbsp;Sales Journal Lookup for Invoice Credits and Debits,&nbsp;Sales Journal Lookup for Credits,&nbsp;Sales Journal Lookup for Aggregator, Invoice Credits and Debits,&nbsp;Delayed Action Queue (For Account Pauses),&nbsp;Find User Roles and Permissions for External Customers.</strong></p>
+
+<p><span>November 26: Added new queries for&nbsp;</span><strong>Find User Roles and Permissions for External Customers </strong><span>and&nbsp;</span><strong>Find User Roles and Permissions for Internal Users</strong><span>. Updated queries for&nbsp;</span><strong>Sales Journal Lookup For Invoice Credits &amp; Debits With SAPBillingDocumentNbr</strong><span>,&nbsp;</span><strong>Sales Journal Lookup For Invoice Credits &amp; Debits With AggregatorBillingDocumentID</strong><span>,&nbsp;</span><strong>Sales Journal Lookup For Invoice Credits &amp; Debits</strong><span>,&nbsp;</span><strong>Sales Journal Lookup For Credits</strong><span>, and&nbsp;</span><span><strong>Sales Journal Lookup For Aggregator Invoice Credits &amp; Debits</strong>. Deleted query for <strong>Find Customer Account Users and Role Permissions</strong>.</span></p>
+
+<p>October 22: Added new queries for <strong>Customer Credit Holds</strong>,&nbsp;<strong>Sales Journal Lookup For Invoice Credits &amp; Debits With AggregatorBillingDocumentID</strong>, and&nbsp;<strong>Sales Journal Lookup For Invoice Credits &amp; Debits With SAPBillingDocumentNbr</strong>. Edited existing queries for&nbsp;<strong>BillingDocumentLookup </strong>and&nbsp;<strong>FindPrimaryContact</strong>.</p>
+
+<p>October 8: Added new&nbsp;query for&nbsp;<strong>Pay Amount Due</strong>. Modified <strong>Find Customer Account Users and Role Permissions</strong> query.</p>
+
+<p>May 8: Added new queries for <strong>Customer Fraud Status</strong>, <strong>Boleto 01 - Payment Slip Confirmation</strong></p>
+
+<p>December 23, 2019: Changed \ Updated&nbsp;<strong>Verify Pay Now Function Selected</strong> query.</p>
+
+<p>October 1, 2020: Added new queries for&nbsp;<strong>Boleto 05 &ndash; Brazil/ Taxes: CNPJ Historical Changes</strong></p>

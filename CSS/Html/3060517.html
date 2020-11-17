@@ -1,0 +1,20 @@
+﻿<header><h1>External senders receive a &#39;550.5.4.1 [user@contoso.com]: Recipient address rejected: Access denied&#39; NDR when they send mail to an Office 365 user</h1></header><div class='kb-symptoms-section section'>When external senders send email messages to an Office 365 user, they receive a nondelivery report (NDR) that contains the following error message:<div class='indent'><div class='sbody-error'>&#39;550 5.4.1 [&lt;nosuchuser&gt;@&lt;recipient_domain&gt;]: Recipient address rejected: Access denied&#39;.</div></div></div><div class='kb-cause-section section'>The message that was sent to user@contoso.com was rejected by Directory Based Edge Blocking (DBEB) because it considers the recipient address to be an invalid address. The message was rejected because there&#39;s no valid object in Office 365 that matches the SMTP address of the recipient in Exchange Online.<br><br><span class='text-base'>Note</span> DBEB is enabled when the domain is set to <span class='text-base'>Authoritative</span>. If the domain is set to <span class='text-base'>Internal Relay</span>, messages to invalid users are rejected and senders receive a &#39;550 5.1.1 RESOLVER.ADR.RecipNotFound; Not found&#39; error instead.</div><div class="kb-resolution-section section">To resolve this issue, follow these steps:
+<ol class="sbody-num_list">
+	<li>Make sure that the user exists in the cloud.</li>
+	<li>Create and run the <span class="text-base">Provisioning - Recipient Object Full Sync Request</span>.</li>
+	<li>After the SOP is completed, run the&nbsp;<span class="text-base">Provisioning - Company Object full sync.</span></li>
+</ol>
+
+<p><span><span><span><strong>Note</strong> Dynamic Distribution groups (both on-premises and EXO) are not supported by DBEB.</span></span></span></p>
+
+<p><span><span><span>Also, you need to run Directory Based Edge Blocking Recovery Action SOP for the affected user. Mentioned Action is available in Viewpoint.</span></span></span></p>
+
+<p><span class="text-base">Note</span>&nbsp;If these steps do not resolve the issue, engage the appropriate component team as outlined in the following Microsoft Knowledge Base article:</p>
+
+<div class="indent"><a href="/en-us/help/2986948" id="kb-link-1">2986948 </a> SMTP responses from Exchange Online and Exchange Online Protection</div>
+</div>
+<div class='kb-securedata-section section'>DG non-delivery Exchange Online/Mail Flow/Someone tried sending an email message to my organization and received a non-delivery report (NDR) Exchange Online Protection/Mail Flow/Someone tried sending an email message to my organization and received a non-delivery report (NDR)</div><div class="kb-securedata-section section">Product Bug Number: <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/13918" id="kb-link-2" target="_self">CI 13918</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/23998" id="kb-link-3" target="_self">CI 23998</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems?_a=edit&amp;id=64827&amp;triage=true" managed-link="" target="_blank">CI 64827</a>,&nbsp;<br>
+Author ID (email alias): caoic<br>
+Writer ID (email alias): v-lanac<br>
+Tech Review ID (email alias):<br>
+Contributor ID (email alias): brucewil</div>

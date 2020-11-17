@@ -1,0 +1,212 @@
+﻿<header><h1>Azure Support: Azure Kubernetes Services</h1></header><p class="kb-generic-section section">&nbsp;</p>
+
+<p class="kb-generic-section section">&nbsp;</p>
+
+<p class="kb-generic-section section" lang="en-IN"><span>Service Description:</span></p>
+
+<div class="kb-generic-section section">
+<ul style="list-style-type:disc" type="disc">
+	<li><span>Azure Container Service (ACS) is a container management service that manages creation of all the compute resources, that will be needed to host and run containers in Azure. ACS goal is to eliminate the need for you to install, operate, and scale your own cluster management infrastructure. ACS will create VMs, VM Scale Sets, storage accounts, availability sets, network security groups, virtual networks, network interfaces and other resources on your behalf. You can use ACS to manage docker containers on Linux VMs in Azure using open source container management tools like Mesos, Swarm &amp; DockerMachine.</span></li>
+</ul>
+</div>
+
+<p lang="en-IN">&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p lang="en-IN"><span>How Does Azure Container Service Work?</span></p>
+
+<ul style="list-style-type:disc" type="disc">
+	<li>
+	<p><span><span><span><span><span><span><span lang="EN-IN">Azure provides a choice of either Docker Swarm or Apache Mesos (with DCOS Marathon and DCOS Chronos frameworks) for orchestration. </span></span></span></span></span></span></span></p>
+	</li>
+	<li lang="en-IN"><span>More info at: </span><a href="https://azure.microsoft.com/en-in/documentation/articles/container-service-deployment/"><span>https://azure.microsoft.com/en-in/documentation/articles/container-service-deployment/</span></a></li>
+</ul>
+
+<p lang="en-IN"><span>&nbsp;</span></p>
+
+<p>&nbsp;</p>
+
+<p><span>What is the difference between running containers on regular V2 VM vs running Azure Container service based container cluster?</span></p>
+
+<ul style="list-style-type:disc" type="disc">
+	<li><span>ACS is more convenient and will run well (E.g.: Marathon with Cassandra etc. will take 2 weeks, but with the DCoS package on ACS it will take 5min).</span></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p lang="en-IN"><span>How can customer provision the service?</span></p>
+
+<ul style="list-style-type:disc" type="disc">
+	<li lang="en-IN">Customers can use one of the templates provided to deploy a Mesos or Docker Swarm cluster. More information at: <a href="https://azure.microsoft.com/en-in/documentation/articles/container-service-deployment/">https://azure.microsoft.com/en-in/documentation/articles/container-service-deployment/</a>.</li>
+</ul>
+
+<p><span><span><span><span><span><span><span lang="EN-IN">What are the limitation of using ACS (Quota, size, Orchestrator type, OS of VMs etc)?</span></span></span></span></span></span></span></p>
+
+<p>&nbsp;</p>
+
+<ul style="list-style-type:disc" type="disc">
+	<li><span>Quota</span><span>: None specific to ACS &ndash; Same as with they run into today.</span></li>
+	<li><span>Size</span><span>: All sizes supported by CRP.</span></li>
+	<li><span>Orchestrator Type:</span><span> Mesos, SwarmPreview, OpenDcosPreview (Only these are available during Public preview).</span></li>
+	<li><span>OS for the VMs</span><span>: Ubuntu only for now; 14.04 LTS (Mesos and Docker) and OpenDcos will be on 16.04.</span></li>
+	<li><span>All clusters only support max 40 Agents and min 1 agent min 1 master; Max masters 5 (get choices of 1,3 and 5 to do quorum)</span></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><span>What services does Azure Container service support?</span></p>
+
+<ul style="list-style-type:disc" type="disc">
+	<li><span>Support everything that CRP VMs support</span></li>
+</ul>
+
+<p lang="en-IN">&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p lang="en-IN"><span>Pricing/Billing</span><span>:</span></p>
+
+<ul style="list-style-type:disc" type="disc">
+	<li lang="en-IN"><span>ACS is currently available for Standard A-series Linux Virtual Machines. You are only charged for the compute instances you choose, as well as the other underlying infrastructure resources consumed such as storage and networking. </span></li>
+	<li lang="en-IN"><span>There are no incremental charges for the ACS itself. </span></li>
+	<li lang="en-IN"><span>For details on the virtual machine prices, visit the </span><a href="https://azure.microsoft.com/en-in/pricing/details/virtual-machines/"><span>Virtual Machine pricing page</span></a><span>.</span></li>
+	<li lang="en-IN"><span>Ref: </span><a href="https://azure.microsoft.com/en-in/pricing/details/container-service/"><span>https://azure.microsoft.com/en-in/pricing/details/container-service/</span></a></li>
+</ul>
+
+<p lang="en-IN">&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p lang="en-IN"><span>Default and hard limits:</span></p>
+
+<ul style="list-style-type:disc" type="disc">
+	<li><span>None specific to ACS</span></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><span>Partner Engagement:</span></p>
+
+<p>Azure Container Instance (ACI) and Azure Container Services (AKS/ACS) are two different services. Select the appropriate engagement path based on customer request Partner Engagement Path;</p>
+
+<ol style="list-style-type:decimal" type="1">
+	<li value="1">For Azure Container Instance (ACI) Quota - Create ICM using the&nbsp;<a href="https://icm.ad.msft.net/imp/v3/incidents/cri?tmpl=01R3c3">template link.</a> (please notice that only the amount of container groups can be increased. The limit of 4 cores and 16 Gb RAM per single Container Group cannot be exceeded)</li>
+	<li value="2">AKS currently doesn&rsquo;t have quota limit. The quota limit is on the Compute. So if customers asked to increase the quota, its quota for their VM Cores. Do NOT open ICMs for AKS quota limit; you should instead assist the customer with increasing the VM Cores for the customer subscriptions.&nbsp;The CSS Wiki for AKS can be found <a href="https://www.csssupportwiki.com/index.php?title=curated:Azure/Azure_Kubernetes_Service/Work_Flows&amp;stable=1" managed-link="" target="_blank">here</a></li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;<span><span lang="EN-IN">Region Availability:</span></span></p>
+
+<p><span><span lang="EN-IN"> </span></span></p>
+
+<p><span><strong><span lang="EN-IN">Batch :</span></strong><span lang="EN-IN"> Except US DoD East and US DoD Central Batch service is available in all other regions. </span> </span></p>
+
+<p><span><strong><span lang="EN-IN">Registry :</span></strong><span lang="EN-IN"> Except US Gov Virginia, US Gov Iowa, US DoD East, US DoD Central, Germany Central, Germany Northeast, West India, Korea Central, Korea South Registry service is available in all other regions.</span></span></p>
+
+<p><span><strong><span lang="EN-IN">Fabric service</span></strong><span lang="EN-IN"> is available Globally.</span></span></p>
+
+<p><span><strong><span lang="EN-IN">Container service</span></strong><span lang="EN-IN"> is available in the following regions: East US, East US 2, Central US, North Central US, South Central US, West US, Brazil South, North Europe, West Europe, Southeast Asia, East Asia, Australia East, Australia Southeast, Central India, Japan East, Japan West</span></span></p>
+
+<p><span><span lang="EN-IN"><strong>Azure Kubernetes Service</strong> <strong>(AKS)</strong>&nbsp;Visit the public facing page for a list of available regions: <a data-content-id="" data-content-type="" href="https://azure.microsoft.com/en-in/global-infrastructure/services/?products=kubernetes-service&amp;regions=all" managed-link="" target="_blank">https://azure.microsoft.com/en-in/global-infrastructure/services/?products=kubernetes-service&amp;regions=all</a>.&nbsp;</span></span></p>
+
+<p lang="en-IN"><span>SLA:</span></p>
+
+<ul style="list-style-type:disc" type="disc">
+	<li lang="en-IN">Azure Container Service (ACS) is a free service, therefore it does not have a financially backed SLA. However, for the availability of underlying Virtual Machines the Virtual Machine SLA applies. See the <a href="https://azure.microsoft.com/en-us/support/legal/sla/virtual-machines/"><u>Virtual Machines SLA</u></a> for more details.</li>
+</ul>
+
+<p lang="en-IN"><span>Does the release involve/require any 3rd Party company involvement for support/usage? If so, how can customer contact them?</span></p>
+
+<ul style="list-style-type:disc" type="disc">
+	<li><span>Yes. Mesosophere are providing 2/3</span><span>rd</span><span> level support. </span></li>
+	<li><span>They will be put into contact by our CSS teams when appropriate. </span></li>
+	<li><span>Contact in CSS is Kiran Gantikota (AZURE) &lt;</span><a href="mailto:Kiran.Gantikota@microsoft.com"><span>Kiran.Gantikota@microsoft.com</span></a><span>&gt;. </span></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><span>SME:</span><span>&nbsp;</span></p>
+
+<p lang="en-IN"><span>First contact resolution:</span></p>
+
+<ul style="list-style-type:disc" type="disc">
+	<li lang="en-IN"><span>Use ICM filing instructions above</span></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>Online Reference:&nbsp;</p>
+
+<ul>
+	<li>Service available region list can be found&nbsp;here</li>
+	<li>Pricing page can be found <a href="https://azure.microsoft.com/en-in/pricing/details/kubernetes-service/" managed-link="" target="_blank">here.&nbsp;</a></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><strong><u><span><span>TSG CHANGE LOG:</span></span></u></strong></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="74">
+			<p><strong><span>Date </span></strong></p>
+			</td>
+			<td width="96">
+			<p><strong><span>Updated By</span></strong></p>
+			</td>
+			<td width="195">
+			<p><strong><span>Content Updated</span></strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="74">9/4/2018</td>
+			<td width="96">shsims</td>
+			<td width="195">Updated Online Refrence section with pricing and region links.</td>
+		</tr>
+		<tr>
+			<td width="74">8/17/2018</td>
+			<td width="96">shsims</td>
+			<td width="195">Updated title and removed ICM for AKS</td>
+		</tr>
+		<tr>
+			<td width="74">3/30/2018</td>
+			<td width="96">shsims</td>
+			<td width="195">Updated engagement paths</td>
+		</tr>
+		<tr>
+			<td width="74">
+			<p>1/24/2018</p>
+			</td>
+			<td width="96">
+			<p>v-navkha</p>
+			</td>
+			<td width="195">
+			<p>Updated ICM template</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="74">11/02/2018</td>
+			<td width="96">v-brgosn</td>
+			<td width="195">Updated AKS Region availability</td>
+		</tr>
+		<tr>
+			<td width="74">09/23/2019</td>
+			<td width="96">v-ereric</td>
+			<td width="195">Removed Anees as SME callout</td>
+		</tr>
+		<tr>
+			<td width="74">6/7/2020</td>
+			<td width="96">mievan&nbsp;</td>
+			<td width="195">Updated region availability list for AKS.&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>

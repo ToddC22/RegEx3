@@ -1,0 +1,632 @@
+﻿<header><h1>ASMS – Azure US Government</h1></header><p><span><span><span lang="EN"><span><span>Submit a </span></span></span><span lang="EN"><span><span><a href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder="><span><span><span>ModTrack</span></span></span></a></span></span></span><span lang="EN"><span><span> request to update this TSG.</span></span></span></span></span></p>
+
+<h3><a id="Overview" name="Overview"></a>Overview</h3>
+
+<p><span><span><span><span><span>Azure Government offers U.S. Public sector customers physical and network-isolated instances of Microsoft Azure. Only Fairfax (FF) Support Engineers (SEs) can provide support to FF customers. </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>If you are a Non-Fairfax SE, see the <em><span>For Non-Fairfax Support Engineers</span></em> section of this TSG. </span></span></span></span></span></p>
+
+<h4><a id="Fairfax to Arlington " name="Fairfax to Arlington "></a>Fairfax to Arlington&nbsp;</h4>
+
+<p>Arlington is a backend change where Fairfax customers will have all authentication and endpoints in US Government Cloud only to comply with&nbsp;International Traffic in Arms Regulations&nbsp;(ITAR)&nbsp;compliance requirements.&nbsp;More information about Arlington can be found&nbsp;<a href="https://microsoft.sharepoint.com/:w:/r/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/Arlington.docx?d=wb9b494c38a204880b8df6371a046a76a&amp;csf=1&amp;e=K3mqMV" managed-link="" target="_blank">here.</a></p>
+
+<p><span><span><span><span><span>The following offers are available to Fairfax customers:</span></span></span></span></span></p>
+
+<ol>
+	<li><span><strong><span><span><span>MS-AZR-USGov-0003P</span></span></span></strong><span><span><span> (Government Pay-As-You-Go)</span></span></span></span></li>
+	<li><span><strong><span><span><span>MS-AZR-USGov-0015P</span></span></span></strong><span><span><span> (Internal Government Offer for internal customers who want to deploy to US Gov. Datacenters)</span></span></span></span></li>
+	<li><span><strong><span><span><span>MS-AZR-USGov-0017P </span></span></span></strong><span><span><span>(External Government Enterprise Agreement (EA) offer)</span></span></span></span></li>
+	<li><span><strong><span><span><span>MS-AZR-USGov-0036P</span></span></span></strong><span><span><span> (Sponsored offer with a payment instrument (PI))</span></span></span></span></li>
+	<li><span><strong><span><span><span>MS-AZR-USGov-0044P</span></span></span></strong><span><span><span> (Free Trial offer)</span></span></span></span></li>
+	<li><span><strong><span><span><span>MS-AZR-USGov-0143P</span></span></span></strong><span><span><span> (Sponsored offer without a PI)</span></span></span></span></li>
+</ol>
+
+<p><span><span><strong><span><span><span>Differences Between Fairfax and Commercial Azure Offers</span></span></span></strong></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>Fairfax has a separate Management Portal</span></span></span>&nbsp;<span><span><span>(</span></span></span><span><span><a href="https://portal.azure.us/">https://portal.azure.us</a></span></span><span><span><span>).</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>There are a limited number of services offered (although the Engineering team continues to release services to reach parity with Commercial Azure.)</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>All credentials are manually provisioned. Office 365 Directory Integration with Azure is not supported.</span></span></span></span></span></span></li>
+</ul>
+
+<h3><a id="Policy" name="Policy"></a>Policy</h3>
+
+<h4><a id="General" name="General"></a>General</h4>
+
+<ul>
+	<li><span><span><span><span>Confirm that your customer has a Fairfax subscription. (See the list of available subscriptions in the <span>Overview</span> section.)</span></span></span></span>
+
+	<ul style="list-style-type:circle">
+		<li><span><span><span><span>A government email address does not automatically mean that your customer has a Fairfax account.</span></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<h4><a id="For Non-Fairfax Support Engineers" name="For Non-Fairfax Support Engineers"></a>Non-Fairfax Support Engineers</h4>
+
+<p><span><strong><span><span><span><span>Non-Fairfax SEs are not allowed to work Fairfax cases. </span></span></span></span></strong><br>
+<span><span><span><span>If you think you&rsquo;ve received a Fairfax case, check your customer&rsquo;s subscriptions against the list of possible subscriptions in the <em><span>Overview</span></em>.&nbsp;</span></span></span></span></span><span><span><span><span><span>For guidance on how to </span></span></span></span></span>identify an ASMS Azure Government Case in Service Desk Case, click <a href="https://microsoft.sharepoint.com/:w:/r/teams/ASMS/_layouts/15/Doc.aspx?sourcedoc={31679AFA-27A7-4DCA-9EAF-14EC39B87CD0}&amp;file=Identification%20of%20ASMS%20Azure%20Government%20Cases%20in%20Service%20Desk.docx&amp;action=default&amp;mobileredirect=true&amp;DefaultItemOpen=1" managed-link="" target="_blank">here</a>.&nbsp;</p>
+
+<p><span><span>If confirmed that you have received a Fairfax case incorrectly, reach out to the&nbsp;<strong><a href="mailto: asmsffxmt@microsoft.com" managed-link="" target="_blank">asmsffxmt</a>&nbsp;</strong>DL&nbsp;for assistance and next steps.</span></span></p>
+
+<h4><a id="For Customers That Opened a Fairfax Ticket from Their Commercial Account (Change Eligibility)" name="For Customers That Opened a Fairfax Ticket from Their Commercial Account (Change Eligibility)"></a>Customers That Opened a Fairfax Ticket from Their Commercial Account</h4>
+
+<p>If there is a need to open a US Gov. case, walk customer through opening one using <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fportal.azure.us%2F&amp;data=02%7C01%7Cv-adhigg%40microsoft.com%7C7ee9b72eabbd410cb2e808d81c4f4c54%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637290474188419427&amp;sdata=V26fupDdzEBgOU2aCOiELvg6KPvy3ryU1GMsSr2Qq%2Fw%3D&amp;reserved=0">https://portal.azure.us/</a>.</p>
+
+<h3><a id="Customer Experience and Provisioning" name="Customer Experience and Provisioning"></a>Customer Experience and Provisioning</h3>
+
+<ul>
+	<li>Fairfax has separate portals from Commercial Azure:
+	<ul style="list-style-type:circle">
+		<li><span><span><span><span>Fairfax Management portal (</span></span></span><span><span><a href="https://portal.azure.us/">https://portal.azure.us</a></span></span><span lang="EN"><span><span>)</span></span></span> </span></li>
+		<li><span><span><span><span>Fairfax Account portal (</span></span></span><a href="https://account.windowsazure.us/Subscriptions">https://account.windowsazure.us/Subscriptions</a><span lang="EN"><span><span>)</span></span></span></span></li>
+	</ul>
+	</li>
+	<li>Services (by datacenter) are available on the <span><span><a href="https://azure.microsoft.com/en-us/global-infrastructure/regions/">Azure regions</a></span></span><span> page.</span></li>
+	<li><span><span><span><span>Customers can submit support tickets using the </span></span></span><a href="https://portal.azure.us/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview"><span><span>Help and Support</span></span></a><span><span><span> blade on the Azure portal.</span></span></span></span></li>
+	<li><span><span><span><span>Fairfax support plans can be found on the </span></span></span><span><span><a href="https://azure.microsoft.com/en-us/support/plans/government/">Azure Government support options</a></span></span><span><span><span> page.</span></span></span></span></li>
+	<li>Steps to add a Partner via MPN ID in the Azure Government portal can be found in&nbsp;<a href="https://internal.support.services.microsoft.com/en-us/help/2836909" managed-link="">TSG 2836909</a>.</li>
+</ul>
+
+<h3><a id="Support Scenarios" name="Support Scenarios"></a>Support Scenarios</h3>
+
+<p><span><span><span><span><span>ASMS engineers will be able to look up customer information using the </span></span></span><span><span><a href="https://cmat.tools.cp.microsoft.com/Customer/CustomerSearch">Commerce Management Agent Tool (CMAT)</a></span></span><span><span><span> and </span></span></span><span><span><a href="https://jarvis-west.dc.ad.msft.net/?page=actions&amp;acisEndpoint=Fairfax">Azure Govt US Jarvis</a></span></span><span><span><span>. </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>For these cases, Fairfax ASMS engineers will handle account ownership and eligibility, communications with the customer, and all necessary escalations.</span></span></span></span></span></p>
+
+<h4><span><span><span><span><span><a id="How to Check for Dual Federation" name="How to Check for Dual Federation"></a>How to Check for Dual Federation</span></span></span></span></span></h4>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Use the customer&rsquo;s domain in the following URLs.
+	<ul style="list-style-type:circle">
+		<li><strong>Commercial (Global) Cloud:</strong> <a href="https://login.microsoftonline.com/%3cdomain%3e/.well-known/openid-configuration">https://login.microsoftonline.com/<strong>&lt;domain&gt;</strong>/.well-known/openid-configuration</a></li>
+		<li><strong>US Government Cloud:</strong> <a href="https://login.microsoftonline.us/%3cdomain%3e/.well-known/openid-configuration">https://login.microsoftonline.us/<strong>&lt;domain&gt;</strong>/.well-known/openid-configuration</a></li>
+	</ul>
+	</li>
+	<li>If the customer is dual federated, both URLs will generate token endpoints. (See the following examples using <em>chicagopolice.org</em>.)</li>
+	<li>If the customer is not dual federated, one of the URLs will generate an <em>invalid tenant</em> error.</li>
+	<li>The <em>tenant_region_scope</em> (shown in <strong>bold</strong> in the following examples) will show the tenant region.</li>
+</ul>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Example on Commercial (Global) Cloud</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p>URL:&nbsp;<a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin.microsoftonline.com%2Fchicagopolice.org%2F.well-known%2Fopenid-configuration&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914578950300&amp;sdata=uwnVAdh53J%2FlY5zeldfje88b62pV%2BoEqeFLHVEaVlow%3D&amp;reserved=0">https://login.microsoftonline.com/<strong>chicagopolice.org</strong>/.well-known/openid-configuration</a></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td><span><span><span><span>{&quot;token_endpoint&quot;:&quot;</span></span></span></span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin.microsoftonline.com%2F011d3193-4145-424b-8d8d-4475e6ed932d%2Foauth2%2Ftoken&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914578960298&amp;sdata=BbJbR16kLjCe%2Bf%2F3KKiSyKOKTzuk%2FH5CwxIRXFK0VP4%3D&amp;reserved=0"><span><span><span>https://login.microsoftonline.com/011d3193-4145-424b-8d8d-4475e6ed932d/oauth2/token</span></span></span></a><span><span><span><span>&quot;,&quot;token_endpoint_auth_methods_supported&quot;:[&quot;client_secret_post&quot;,&quot;private_key_jwt&quot;,&quot;client_secret_basic&quot;],&quot;jwks_uri&quot;:&quot;</span></span></span></span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin.microsoftonline.com%2Fcommon%2Fdiscovery%2Fkeys&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914578960298&amp;sdata=nUlRRiRZSAuq496NCrTtwrxCbt9na7iGCwCHpeNwhc4%3D&amp;reserved=0"><span><span><span>https://login.microsoftonline.com/common/discovery/keys</span></span></span></a><span><span><span><span>&quot;,&quot;response_modes_supported&quot;:[&quot;query&quot;,&quot;fragment&quot;,&quot;form_post&quot;],&quot;subject_types_supported&quot;:[&quot;pairwise&quot;],&quot;id_token_signing_alg_values_supported&quot;:[&quot;RS256&quot;],&quot;response_types_supported&quot;:[&quot;code&quot;,&quot;id_token&quot;,&quot;code id_token&quot;,&quot;token id_token&quot;,&quot;token&quot;],&quot;scopes_supported&quot;:[&quot;openid&quot;],&quot;issuer&quot;:&quot;</span></span></span></span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsts.windows.net%2F011d3193-4145-424b-8d8d-4475e6ed932d%2F&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914578970296&amp;sdata=qMGoqRVwuadX%2F3qLuBxZCizEtjaTkixfQOk9wk2txVY%3D&amp;reserved=0"><span><span><span>https://sts.windows.net/011d3193-4145-424b-8d8d-4475e6ed932d/</span></span></span></a><span><span><span><span>&quot;,&quot;microsoft_multi_refresh_token&quot;:true,&quot;authorization_endpoint&quot;:&quot;</span></span></span></span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin.microsoftonline.com%2F011d3193-4145-424b-8d8d-4475e6ed932d%2Foauth2%2Fauthorize&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914578970296&amp;sdata=QXaCLIgm%2Fb0jVDyhxoy3VCIBZ53w7Tkq9e%2F%2Fs9%2BPY1U%3D&amp;reserved=0"><span><span><span>https://login.microsoftonline.com/011d3193-4145-424b-8d8d-4475e6ed932d/oauth2/authorize</span></span></span></a><span><span><span><span>&quot;,&quot;http_logout_supported&quot;:true,&quot;frontchannel_logout_supported&quot;:true,&quot;end_session_endpoint&quot;:&quot;</span></span></span></span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin.microsoftonline.com%2F011d3193-4145-424b-8d8d-4475e6ed932d%2Foauth2%2Flogout&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914578970296&amp;sdata=AlgOplTE%2FuZJi6syBDLB3Osjxr4C8bylZnxwoIH9o18%3D&amp;reserved=0"><span><span><span>https://login.microsoftonline.com/011d3193-4145-424b-8d8d-4475e6ed932d/oauth2/logout</span></span></span></a><span><span><span><span>&quot;,&quot;claims_supported&quot;:[&quot;sub&quot;,&quot;iss&quot;,&quot;cloud_instance_name&quot;,&quot;cloud_instance_host_name&quot;,&quot;cloud_graph_host_name&quot;,&quot;msgraph_host&quot;,&quot;aud&quot;,&quot;exp&quot;,&quot;iat&quot;,&quot;auth_time&quot;,&quot;acr&quot;,&quot;amr&quot;,&quot;nonce&quot;,&quot;email&quot;,&quot;given_name&quot;,&quot;family_name&quot;,&quot;nickname&quot;],&quot;check_session_iframe&quot;:&quot;</span></span></span></span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin.microsoftonline.com%2F011d3193-4145-424b-8d8d-4475e6ed932d%2Foauth2%2Fchecksession&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914578980294&amp;sdata=cO0El04t7Y32NYP2yL2nWSsjWSgQkGaRXVJp8XPt01A%3D&amp;reserved=0"><span><span><span>https://login.microsoftonline.com/011d3193-4145-424b-8d8d-4475e6ed932d/oauth2/checksession</span></span></span></a><span><span><span><span>&quot;,&quot;userinfo_endpoint&quot;:&quot;</span></span></span></span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin.microsoftonline.com%2F011d3193-4145-424b-8d8d-4475e6ed932d%2Fopenid%2Fuserinfo&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914578980294&amp;sdata=ufBToVh%2F1mxe8WuAsClPMx2b%2FlBgX3HnJktPNC%2F0xxQ%3D&amp;reserved=0"><span><span><span>https://login.microsoftonline.com/011d3193-4145-424b-8d8d-4475e6ed932d/openid/userinfo</span></span></span></a><span><span><span><span>&quot;,<strong>&quot;tenant_region_scope&quot;:&quot;NA&quot;</strong>,&quot;tenant_region_sub_scope&quot;:&quot;GCC&quot;,&quot;cloud_instance_name&quot;:&quot;microsoftonline.com&quot;,&quot;cloud_graph_host_name&quot;:&quot;graph.windows.net&quot;,&quot;msgraph_host&quot;:&quot;graph.microsoft.com&quot;,&quot;rbac_url&quot;:&quot;</span></span></span></span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fpas.windows.net&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914578990285&amp;sdata=1mQzj4kuAGd74D4bRJfDDkc%2FvkqCZV14mAxbxwBcivs%3D&amp;reserved=0"><span><span><span>https://pas.windows.net</span></span></span></a><span><span><span><span>&quot;}</span></span></span></span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Example on US Government Cloud</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p>URL:&nbsp;<a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin.microsoftonline.us%2Fchicagopolice.org%2F.well-known%2Fopenid-configuration&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914578990285&amp;sdata=2KNpKNWOsCfl9lm%2FxFifmyl5kzHCt0nL1rJwu4pnAUg%3D&amp;reserved=0">https://login.microsoftonline.us/<strong>chicagopolice.org</strong>/.well-known/openid-configuration</a></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td><span><span><span>{&quot;token_endpoint&quot;:&quot;</span></span></span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin.microsoftonline.us%2Ffee703f4-a1ea-480e-be0b-db4fc9b84cfc%2Foauth2%2Ftoken&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914579000274&amp;sdata=dhWLo%2F4hrSrTVGgfepaCJvePhVAW%2BiviHDDIa12geYM%3D&amp;reserved=0"><span><span>https://login.microsoftonline.us/fee703f4-a1ea-480e-be0b-db4fc9b84cfc/oauth2/token</span></span></a><span><span><span>&quot;,&quot;token_endpoint_auth_methods_supported&quot;:[&quot;client_secret_post&quot;,&quot;private_key_jwt&quot;,&quot;client_secret_basic&quot;],&quot;jwks_uri&quot;:&quot;</span></span></span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin.microsoftonline.us%2Fcommon%2Fdiscovery%2Fkeys&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914579000274&amp;sdata=BTxfCtmbTtSn1pCnqlFvCG%2BOptQcw1uOVLOm1FhiV3Y%3D&amp;reserved=0"><span><span>https://login.microsoftonline.us/common/discovery/keys</span></span></a><span><span><span>&quot;,&quot;response_modes_supported&quot;:[&quot;query&quot;,&quot;fragment&quot;,&quot;form_post&quot;],&quot;subject_types_supported&quot;:[&quot;pairwise&quot;],&quot;id_token_signing_alg_values_supported&quot;:[&quot;RS256&quot;],&quot;response_types_supported&quot;:[&quot;code&quot;,&quot;id_token&quot;,&quot;code id_token&quot;,&quot;token id_token&quot;,&quot;token&quot;],&quot;scopes_supported&quot;:[&quot;openid&quot;],&quot;issuer&quot;:&quot;</span></span></span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsts.windows.net%2Ffee703f4-a1ea-480e-be0b-db4fc9b84cfc%2F&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914579010269&amp;sdata=EaXXBCnZ%2BKNcihIQLBLn1Mc6aCzc7bmmVW%2Fj1p4DGYs%3D&amp;reserved=0"><span><span>https://sts.windows.net/fee703f4-a1ea-480e-be0b-db4fc9b84cfc/</span></span></a><span><span><span>&quot;,&quot;microsoft_multi_refresh_token&quot;:true,&quot;authorization_endpoint&quot;:&quot;</span></span></span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin.microsoftonline.us%2Ffee703f4-a1ea-480e-be0b-db4fc9b84cfc%2Foauth2%2Fauthorize&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914579010269&amp;sdata=rR7UznIk4uGnpaRM2fLVKI%2B7BlBR81tyW%2BUwuLOhuh8%3D&amp;reserved=0"><span><span>https://login.microsoftonline.us/fee703f4-a1ea-480e-be0b-db4fc9b84cfc/oauth2/authorize</span></span></a><span><span><span>&quot;,&quot;http_logout_supported&quot;:true,&quot;frontchannel_logout_supported&quot;:true,&quot;end_session_endpoint&quot;:&quot;</span></span></span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin.microsoftonline.us%2Ffee703f4-a1ea-480e-be0b-db4fc9b84cfc%2Foauth2%2Flogout&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914579020263&amp;sdata=XcgGH4zYOcTfcoqPb2xM4hk7JyGoXOgalgVGghCF6sw%3D&amp;reserved=0"><span><span>https://login.microsoftonline.us/fee703f4-a1ea-480e-be0b-db4fc9b84cfc/oauth2/logout</span></span></a><span><span><span>&quot;,&quot;claims_supported&quot;:[&quot;sub&quot;,&quot;iss&quot;,&quot;cloud_instance_name&quot;,&quot;cloud_instance_host_name&quot;,&quot;cloud_graph_host_name&quot;,&quot;msgraph_host&quot;,&quot;aud&quot;,&quot;exp&quot;,&quot;iat&quot;,&quot;auth_time&quot;,&quot;acr&quot;,&quot;amr&quot;,&quot;nonce&quot;,&quot;email&quot;,&quot;given_name&quot;,&quot;family_name&quot;,&quot;nickname&quot;],&quot;check_session_iframe&quot;:&quot;</span></span></span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin.microsoftonline.us%2Ffee703f4-a1ea-480e-be0b-db4fc9b84cfc%2Foauth2%2Fchecksession&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914579020263&amp;sdata=2u3XWOhF1p2uXlkklj3peSvd24n5kTNbch%2BX0gDicXM%3D&amp;reserved=0"><span><span>https://login.microsoftonline.us/fee703f4-a1ea-480e-be0b-db4fc9b84cfc/oauth2/checksession</span></span></a><span><span><span>&quot;,&quot;userinfo_endpoint&quot;:&quot;</span></span></span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin.microsoftonline.us%2Ffee703f4-a1ea-480e-be0b-db4fc9b84cfc%2Fopenid%2Fuserinfo&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914579030257&amp;sdata=eHew3Fsk0uw%2F1KtLkFvlmQ4iCoWJM%2FN59pobFtGS%2Bfs%3D&amp;reserved=0"><span><span>https://login.microsoftonline.us/fee703f4-a1ea-480e-be0b-db4fc9b84cfc/openid/userinfo</span></span></a><span>&quot;,<strong>&quot;tenant_region_scope&quot;:&quot;USGov&quot;</strong>,&quot;cloud_instance_name&quot;:&quot;microsoftonline.us&quot;,&quot;cloud_graph_host_name&quot;:&quot;graph.windows.net&quot;,&quot;msgraph_host&quot;:&quot;graph.microsoft.com&quot;,&quot;rbac_url&quot;:&quot;</span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fpasff.usgovcloudapi.net&amp;data=02%7C01%7Cbolee%40microsoft.com%7Cc5d37a20d2bc4483e61b08d77f5e2161%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637117914579030257&amp;sdata=hrEHPTq5fPOWZeYtQ5b0FK2r2gr%2Fq%2F%2FE0al1vEOvD5Y%3D&amp;reserved=0">https://pasff.usgovcloudapi.net</a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<h4><span><a id="How to Convert an Offer to a Government EA Account" name="How to Convert an Offer to a Government EA Account"></a>How to Convert an Offer to a Government EA Account</span></h4>
+
+<p><span><span><span>You can convert an offer using the following process:</span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span><span><span><span>Check that the account has been added to an Enterprise Agreement, and that it has been activated.</span></span><br>
+	<strong><span><span>Note: </span></span></strong><span><span>Azure Government Free Trials and Sponsored Accounts require that your customer has already purchased an EA and has added it to their account.</span></span></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span><span>Notify the customer that any remaining entitlement or benefits will be lost once the conversion occurs. </span></span><br>
+	<span><span>(For example, if the customer still has $200 USD left on their Trial, it will be lost once the account is converted to an Azure Government EA subscription.)</span></span></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span><span>After the account has been successfully added to an EA Government enrollment and activated, the customer&rsquo;s existing Azure Government subscription will be converted to an Azure Government EA subscription</span></span><span><span>.</span></span></span></span></span></span></span></span></li>
+</ol>
+
+<h4><span><a id="How to Perform a Subscription Ownership Transfer (SOT)" name="How to Perform a Subscription Ownership Transfer (SOT)"></a>How to Perform a Subscription Ownership Transfer (SOT)</span></h4>
+
+<p><span><span><span>Subscription Ownership Transfers (SOTs) in the EA portal are self-serve to customers. The <em>Help</em> section of the EA portal should have documentation available to your customer on how to complete the process.</span></span></span></p>
+
+<p><span><span><span>If your customer needs help with a Subscription transfer, refer to <a href="https://internal.support.services.microsoft.com/en-us/help/3040383">TSG 3040383</a> for information on how to handle a SE-assisted transfer.</span></span></span></p>
+
+<p><strong><span><span><span>Note the following:</span></span></span></strong></p>
+
+<ul>
+	<li><span><span><span>Both sides of the transfer need to be within the Azure Fairfax Tenant.</span></span></span>
+
+	<ul style="list-style-type:circle">
+		<li><span><span><span>SOTs from Azure Commercial to Azure Government (Fairfax) and vice versa are <strong>not</strong> supported.</span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span>For EA Government Subscriptions, both the source and destination account must also be added as an <em>Account</em> within the EA Government enrollment.</span></span></span></span></span></li>
+	<li><span><span><strong><span><span><span>Warning:</span></span></span></strong><span><span><span> Transferring to a <strong>different </strong>Azure Government domain/tenant will result in your customer losing all Service Administrators (SAs), Co-Administrators (CAs) and anyone configured in roles-based access control (RBAC). Be sure that your customer is aware of this and that the SA, CA, and RABAC personnel need to be re-added.</span></span></span></span></span></li>
+</ul>
+
+<h4><span><a id="How to Request a Quota Increase" name="How to Request a Quota Increase"></a>How to Request a Quota Increase</span></h4>
+
+<p><span><span><span><span><span>Use the Capacity Management template below (</span></span></span><span><span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FSTCM%2FCompute%2F_layouts%2F15%2FWopiFrame.aspx%3Fsourcedoc%3D%257b8f7ff874-7352-4079-b033-cf1d4a09f1f9%257d%26action%3Dview%26wd%3Dtarget%2528RDQuota%2520Management.one%257C4235ce54-1a14-4f18-adaf-eb256d9b2ddf%252FFairfax%2520Ticket%2520Templates%257C1b98cf02-25c9-4e4e-bdf5-5f73051bf78a%252F%2529&amp;data=02%7C01%7Cshsims%40microsoft.com%7C42216bc6beab4a02edc908d6dfc6f327%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636942442904557485&amp;sdata=8EA81Q3Cla3x%2FgKxstQkGM3uUwQR9lpCI5xa5zP%2Bgh8%3D&amp;reserved=0">Fairfax Quota Template</a></span></span><span><span><span>) to submit a request for a quota increase. Quota Increase requests for multiple regions and/or VM Types <strong>must</strong> be split into multiple RDQuota tickets per Region and per SKU basis.<br>
+<strong>Exception:</strong> More than 10 regions/VM types can be created as a single RDQuota ticket.<br>
+<strong>Note:</strong> If you need access to the Capacity Management DevOps (TFS) instance, see the <span>Engagement and Escalation Path</span> section. </span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Links:</span></span></span></strong></span></span></p>
+
+<ul>
+	<li><span><span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FSTCM%2FCompute%2F_layouts%2F15%2FWopiFrame.aspx%3Fsourcedoc%3D%257b8f7ff874-7352-4079-b033-cf1d4a09f1f9%257d%26action%3Dview%26wd%3Dtarget%2528RDQuota%2520Management.one%257C4235ce54-1a14-4f18-adaf-eb256d9b2ddf%252FFairfax%2520Ticket%2520Templates%257C1b98cf02-25c9-4e4e-bdf5-5f73051bf78a%252F%2529&amp;data=02%7C01%7Cshsims%40microsoft.com%7C42216bc6beab4a02edc908d6dfc6f327%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636942442904557485&amp;sdata=8EA81Q3Cla3x%2FgKxstQkGM3uUwQR9lpCI5xa5zP%2Bgh8%3D&amp;reserved=0">Fairfax Quota Template</a><a href="http://vstfrd:8080/Azure/Fairfax/_workitems?_a=new&amp;witd=RDQuota&amp;%5bSystem.Title%5d=%3cTeam/Company%3e%20-%20Quota%20Increase%20-%20%3cdatacenter%3e&amp;%5bMicrosoft.Azure.ScenarioSponsor%5d=Fairfax%20CSS&amp;%5bSystem.AreaPath%5d=Fairfax%5cCapacity%20Management%5cQuota"><span><span><span><span><span> </span></span></span></span></span></a></span></span></li>
+	<li><a data-content-id="" data-content-type="" href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FSTCM%2FCompute%2F_layouts%2F15%2FWopiFrame.aspx%3Fsourcedoc%3D%257b8f7ff874-7352-4079-b033-cf1d4a09f1f9%257d%26action%3Dview%26wd%3Dtarget%2528RDQuota%2520Management.one%257C4235ce54-1a14-4f18-adaf-eb256d9b2ddf%252FQuota%2520Ticket%2520Templates%257Cde669606-8d84-4b11-bdb2-e844dea7bdb7%252F%2529&amp;data=02%7C01%7Cv-brgosn%40microsoft.com%7C261a021bd3f74a3907ea08d67da12261%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636834528436133395&amp;sdata=CX9TEhK5Ee3KRt3%2BNOE4UTnCEleyLrPuwZHswuJDJWk%3D&amp;reserved=0" managed-link="" target="_blank">Submitting a Fairfax HDI Quota Request</a></li>
+	<li><span><span><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/ASMS/_layouts/15/Doc.aspx?sourcedoc=%7B981F265A-1457-4589-9B3D-AD37B1855C79%7D&amp;file=FFBatchCore.docx&amp;action=default&amp;mobileredirect=true"><span><span>Interim Fairfax Batch Quota</span></span></a></span></span></span></span> </span></span></li>
+</ul>
+
+<h4><span><a id="How to Perform a Data Migration" name="How to Perform a Data Migration"></a>How to Perform a Data Migration</span></h4>
+
+<p><span><span><span><span><span>For data migration, like commercial subscriptions, we <strong>do not </strong>support <em>selective service transfer</em>.<strong> </strong>(Transfers of only a selected hosted service or storage service from one subscription to another). </span></span></span><br>
+<span><span><span>If a data migration occurs, <strong>everything must migrate</strong>.</span></span></span><br>
+<strong><span><span><span>Warning:</span></span></span></strong><span><span><span> Data Migrations from Azure Commercial to Azure Government (Fairfax) and vice versa are <strong>not</strong> supported.</span></span></span><span><span><span><br>
+<strong>Note:</strong> Data migrations are not supported for Azure Fairfax subscriptions if the tenant ID is different, as we are unable to add a Live or Microsoft ID to an Azure Fairfax subscription.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Fairfax Engineers</span></span></span></strong><span><span><span><br>
+Work with your customer on confirming that the prerequisites are met for a migration.<br>
+See the following links for more details:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><a href="https://internal.support.services.microsoft.com/en-us/help/2856526"><span><span><span>TSG 2856526</span></span></span></a></span></span></span><span><span><span> for Simple Data Migrations.</span></span></span></span></span></li>
+	<li><span><span><span><span><span><a href="https://internal.support.services.microsoft.com/en-us/help/2892044"><span><span><span>TSG 2892044</span></span></span></a></span></span></span><span><span><span> for Forced Data Migrations.</span></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://azure.microsoft.com/en-us/global-infrastructure/regions/">Azure Services by region</a></span></span></span></span></li>
+</ul>
+
+<h4><span><a id="How to Generate a Usage Report" name="How to Generate a Usage Report"></a>How to Generate a Usage Report</span></h4>
+
+<ul>
+	<li><span><span><span><strong><span><span><span>Free Trial</span></span></span></strong><span><span><span> &ndash; Customers can download their report by going to the </span></span></span><span><span><a href="https://account.windowsazure.us/Subscriptions">Fairfax Account portal</a></span></span><span><span><span>. </span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>Enterprise Agreement</span></span></span></strong><span><span><span> &ndash; Customers can download their report by going to the EA portal.</span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>Sponsorship</span></span></span></strong><span><span><span> &ndash; See the following steps:</span></span></span></span></span></span>
+	<ol>
+		<li><span><span><span><span><span>Open a <em>private</em> browser window.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>Navigate to </span></span></span><span lang="EN"><span><span><a href="http://www.microsoftazuresponsorships.com/"><span><span><span>www.microsoftazuresponsorships.com</span></span></span></a>.</span></span></span></span></span></li>
+		<li><span><span><span lang="EN"><span><span>Click <strong>Check Your Balance</strong>.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>Sign in with your Azure Government Sponsored account email.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>You will then be directed to a page where you can see the following information:</span></span></span></span></span>
+		<ul style="list-style-type:disc">
+			<li><span><span><span><span><span>Remaining Balance</span></span></span></span></span></li>
+			<li><span><span><span><span><span>Used</span></span></span></span></span></li>
+			<li><span><span><span><span><span>Sponsorship Amount</span></span></span></span></span></li>
+			<li><span><span><span><span><span>End Date</span></span></span></span></span></li>
+			<li><span><span><span><span><span>Start Date</span></span></span></span></span></li>
+		</ul>
+		</li>
+	</ol>
+	</li>
+</ul>
+
+<h4><span lang="EN"><a id="How to Update the Service Administrator" name="How to Update the Service Administrator"></a>How to Update the Service Administrator </span></h4>
+
+<p><span>Use the following process to change or update the Service Administrator:</span></p>
+
+<ol>
+	<li><span><span><span lang="EN"><span><span>Log into the </span></span></span><span lang="EN"><span><a href="https://account.windowsazure.us/Subscriptions">Fairfax Account Portal</a></span></span><span lang="EN"><span><span> using the Account Owner&rsquo;s ID. </span></span></span></span></span></li>
+	<li><span><span><span lang="EN"><span><span>Click on the <strong>Subscriptions</strong> tab. </span></span></span></span></span></li>
+	<li><span><span><span lang="EN"><span><span>Select the subscription that you wish to change the Service Administrator on. </span></span></span></span></span></li>
+	<li><span><span><span lang="EN"><span><span>Click on <strong>Edit Subscription Details</strong>.</span></span></span></span></span></li>
+</ol>
+
+<h4><span>How to Request Department of Defense (DoD) Whitelisting </span></h4>
+
+<p><span><span><span><span><span>For guidance on how to request this action&nbsp;</span></span></span><strong><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/:w:/r/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/DoDWhitelisting.docx?d=wc8c3d7021a0f43a8b0bb251808ca0eda&amp;csf=1&amp;web=1&amp;e=8qb1Om" managed-link="" target="_blank">click here.</a></strong><br>
+<br>
+If a customer needs to be approved for DoD, refer them to the <a href="https://azure.microsoft.com/en-us/global-infrastructure/government/contact/" managed-link="" target="_blank">Contact me about Microsoft Azure Government </a>page.</span></span></p>
+
+<h4><span><a id="How to Troubleshoot a Premier Support Notification" name="How to Troubleshoot a Premier Support Notification"></a>How to Troubleshoot a Premier Support Notification</span></h4>
+
+<p><span><span><span><span><span>We occasionally have cases in which a Fairfax customer sees that they have Premier Support in the Management portal but has never purchased a Premier Support plan.<br>
+Use the following steps to remove the notification:</span></span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span><span>Use the</span></span></span> <span lang="EN"><span><a href="http://ckpreports.corp.microsoft.com/Reports/Pages/Report.aspx?ItemPath=/CKP+Reports/CareGiver+Azure">Cloud Knows Premier (CKP)</a></span></span><span><span><span> tool to search by the subscription ID and look up who the Technical Account Manager (TAM) is.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Reach out to the TAM and let them know about the customer&rsquo;s issue. </span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Ask the TAM to decline the match in CKP.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Add your case notes.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Transfer the case to the appropriate technical team and request assistance for engaging the Platform team. </span></span></span>　</span></span></span></li>
+</ol>
+
+<p><span><span><strong><span><span><span>Note: </span></span></span></strong><span><span><span>You can read more about support contract mapping in </span></span></span><span><span><a href="https://internal.support.services.microsoft.com/en-us/help/3216942">TSG 3216942</a></span></span><span><span><span>.</span></span></span></span></span></p>
+
+<h4><span>How to Request a Password Reset</span></h4>
+
+<p><span><span><span><span><span>If you receive a Fairfax Password Reset case from a customer or a Duty Manager, take the following steps to route it over to the Identity team: </span></span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span><span>Update the internal case title to include: <strong>MISROUTE TO ASMS</strong>.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Enter a Pre-Scope task (or equivalent) with a short explanation of why you are routing the case to the Identity team. </span></span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span><strong><span><span>Example:</span></span></strong><span><span> Support of Azure Gov password resets is owned by the Identity team.</span></span></span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span>Update the <strong>Routing Product</strong> of the case to <em>Azure AD Sign-In and MFA</em><strong> </strong>and the <strong>Support Topic</strong> to <em>Routing Azure Active Directory\Passwords\Problem with a user resetting or changing their password</em>, in which the case will then be routed to the correct queue based on those settings.</span></span></span></span></span></span></li>
+</ol>
+
+<p><span><span><strong><span><span><span>Note: </span></span></span></strong><span><span><span>If your customer is a MSCInternal Trial customer, you can have them email the </span></span></span><span><span><span>Fairfax Internal Subscription Admins</span></span></span><span><span><span> for a password reset. </span></span></span></span></span></p>
+
+<h4><a id="US Gov. Active Directory Licenses Premium" name="US Gov. Active Directory Licenses Premium"></a>US Gov. Active Directory Licenses Premium</h4>
+
+<p><strong>Note:</strong>&nbsp;US Gov. Active Directory Premium is only supported for EA Gov. at this time. EA Gov. customers can reach out to their Reseller to purchase.</p>
+
+<p>Azure Gov. customers who bought P1 or P2 Gov. Active Directory licenses can request for onboarding <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.office.com%2FPages%2FResponsePage.aspx%3Fid%3Dv4j5cvGGr0GRqy180BHbRxNPdwsoURVAvBOuwtchaJZUNzVOOUxDTTdXVEM4SjFBWTdRRzU2MDkzRC4u&amp;data=02%7C01%7Cv-brgosn%40microsoft.com%7C03fe3e03f0f647969fc208d73613f85b%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637037331728968712&amp;sdata=Ab2clV3CS8Oe47A9yueQBaA7f810M5TWdQ9Qdoc6bTw%3D&amp;reserved=0">here</a>.</p>
+
+<p>Escalation alias on Gov. Active Directory Onboarding questions: <a href="mailto:emsusgov@microsoft.com" managed-link="" target="_blank"><span><span>emsusgov@microsoft.com</span></span></a>.</p>
+
+<p>For more information, please see the <a data-content-id="" data-content-type="" href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Finternal.support.services.microsoft.com%2Fen-us%2Fhelp%2F4515682&amp;data=02%7C01%7Cv-brgosn%40microsoft.com%7C03fe3e03f0f647969fc208d73613f85b%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637037331728968712&amp;sdata=qgWacpsxpdCXZZJ8Za828577zkVfNVJpWWefZeEqP4k%3D&amp;reserved=0" managed-link="" target="_blank">O365 Government License TSG</a>.</p>
+
+<p>Additional Gov. Cloud Onboarding details <a href="https://nam06.safelinks.protection.outlook.com/ap/w-59584e83/?url=https%3A%2F%2Fmicrosoft.sharepoint.com%2F%3Aw%3A%2Fr%2Fsites%2FInfopedia_G03KC%2F_layouts%2F15%2FWopiFrame.aspx%3Fsourcedoc%3D%257b77af3028-8287-4605-a5ab-9b390102aa80%257d%26action%3Ddefault%26DefaultItemOpen%3D1&amp;data=02%7C01%7Cv-brgosn%40microsoft.com%7C03fe3e03f0f647969fc208d73613f85b%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637037331728968712&amp;sdata=5wb8K%2BazcNslds4WU9weqbp%2B8hUCKdCDxdHbVuCtMCo%3D&amp;reserved=0">here</a>.</p>
+
+<h4><a id="How to Perform Penetration Testing" name="How to Perform Penetration Testing"></a>How to Perform Penetration Testing</h4>
+
+<p><span>Please complete the process by going to <a href="https://portal.msrc.microsoft.com/en-us/engage/pentest" managed-link="" target="_blank">Submit Azure Service Penetration Testing Notification</a>. For more information about penetration testing, please refer to the <a href="https://docs.microsoft.com/en-us/azure/security/azure-security-pen-testing" managed-link="" target="_blank">Penetration Testing</a> <span>document.</span>&nbsp;</span></p>
+
+<h4><span><span><span><span><a id="USNAT Cases" name="USNAT Cases"></a>How to Handle USNAT Cases</span></span></span></span></h4>
+
+<p><span><span><span><span><span>Cases entitled for USNAT require the owning support engineer to have USNAT permissions enabled in Service Desk. Also, the USNAT program is only available for Premier customers. To be approved for USNAT permissions you must be a U.S. citizen. </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>If you are assigned a case locked down with an USNAT entitlement and you do not have USNAT permissions in Service Desk, use the following directions:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span>If you <strong>are</strong> a US citizen, follow the instructions on the <a href="https://microsoft.sharepoint.com/teams/USGovCloudSupport/SitePages/How.aspx">Microsoft US Government Support</a> site to get temporary access for the specific case. </span></span></span></span></span>
+
+	<ul style="list-style-type:circle">
+		<li><span><span><span><span><span>You should also begin the process of attaining permanent (&ldquo;standing&rdquo;) USNAT access by using the same link.</span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span>If you are<strong> not</strong> a US citizen, let the duty managers (<a href="mailto:wadm@microsoft.com">WADM</a> DL) know that you do not have USNAT access and that they will need to assign the case to an engineer that does.</span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span> <strong>Note</strong>: USNAT is a different program than US Gov. However, most ASMS US Gov engineers also have USNAT permissions enabled in Service Desk.</span></span></span></span></span></p>
+
+<h3><a id="Engagement and Escalation Path" name="Engagement and Escalation Path"></a>Engagement and Escalation Path</h3>
+
+<p><span><span><span>See the following table for scenarios and engagement paths:</span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="312">
+			<p><span><strong><span><span>Scenario or Team</span></span></strong></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><strong><span><span><span>Engagement Path</span></span></span></strong></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span><span><span>How do I identify an Azure Government Tenant?</span></span></span></strong></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><span><span><span>Check the Frequently Asked Questions section <span><a href="https://docs.microsoft.com/en-us/azure/azure-government/documentation-government-plan-identity"><span>here</span></a></span>. </span></span></span><br>
+			<span><span><span>(See question &ldquo;How do I identify an Azure Government tenant?&rdquo;)</span></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span><span>The original case scope has been completed, but the customer asks some follow-up questions about their Fairfax subscription.</span></span></strong></span></p>
+
+			<p><span><strong> </strong></span></p>
+
+			<p><span><strong><span><span>Note:</span></span></strong><span><span> Verify that your customer has an active Azure Government Subscription. </span></span></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><span><span><span>Send a Problem or Task to the <strong>ASMS US Gov MT</strong>&nbsp;queue. Include the following:</span></span></span></span></span></p>
+
+			<ul>
+				<li><span><span><span><span><span><span>Active Azure Gov subscription details (if any):</span></span></span></span></span></span></li>
+				<li><span><span><span><span><span><span>Actions needed from Fairfax (US Gov.) Team:</span></span></span></span></span></span></li>
+				<li><span><span><span><span><span><span>Actions taken so far:</span></span></span></span></span></span></li>
+				<li><span><span><span><span><span><span>Issue:</span></span></span></span></span></span></li>
+				<li><span><span><span><span><span><span>Customer details:</span></span></span> </span></span></span>
+				<ul style="list-style-type:circle">
+					<li><span><span><span><span><span><span>Name:</span></span></span></span></span></span></li>
+					<li><span><span><span><span><span><span>Email:</span></span></span></span></span></span></li>
+					<li><span><span><span><span><span><span>Phone number:</span></span></span></span></span></span></li>
+				</ul>
+				</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span><span>I need access to the Capacity Management ADO&nbsp;instance.</span></span></strong></span></p>
+			</td>
+			<td width="313">
+			<ol>
+				<li>Make sure you are part of the wasmsglobal DL.</li>
+			</ol>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span><span><span>Commerce Platform</span></span></span></strong></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><span><span>Follow the existing engagement path.<br>
+			(See the </span></span></span><span><span><a href="https://internal.support.services.microsoft.com/en-us/help/2651579">PayOps TSG (TSG 2651579)</a></span></span><span><span><span> for more information.)</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span><span><span>Technical and identity issues</span></span></span></strong></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><span><span>Route the case to the appropriate technical team.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span><span><span>Azure Government EA Team </span></span></span></strong></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><span><span>Send a Problem to the <strong>Azure Government EA </strong>queue.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span><span><span>Azure Government Sponsored or Internal Team</span></span></span></strong></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><span><span>Send a Problem to the <strong>Azure Government Internal, Sponsored, and Trial </strong>queue. </span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span><span><span>Azure Government Free Trial</span></span></span></strong></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><span>You can email the </span></span><span><span><span>US Government Cloud Eligibility</span></span></span><span><span> alias for Free Trial inquiries.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span><span><span>Government Cloud Solution Provider (CSP) Support</span></span></span></strong></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><span><span><span><span><span><span><span>For any CSP inquiries that get submitted to ASMS but should be supported by the Partner Center team, transfer the case to the <em><strong>CSS PE NA Majorel Valencia FF EN T1 queue</strong>.</em></span></span></span></span></span></span></span></span></span></p>
+
+			<p><span><span><span><span><span><span><span><span><span> After moving the case, also send an email to the <a href="mailto:Azure_CSP@microsoft.com">ASMS Fairfax\CSP Discussion</a> alias to let them know a case is pending their pickup. Members of the CSP team are on that alias and will be alerted of the case to be picked up. </span></span></span></span> </span></span></span></span></span></p>
+
+			<p><span><span><span><span><span><span>For a full breakdown of what CSP topics the Partner Center team supports compared to what ASMS supports, see <a href="https://internal.support.services.microsoft.com/en-us/help/4032735">TSG 4032735</a>. </span></span></span></span></span></span></p>
+
+			<p><span><span><strong><span><span><span>Note the following:</span></span></span></strong></span></span></p>
+
+			<ul>
+				<li><span><span><span><span><span>Azure Government subscription requests such as quota increases or&nbsp;DoD whitelisting and the like are still within our scope.</span></span></span></span></span></li>
+				<li><span><span><span><span><span>Data migration to a different tenant is not supported. </span></span></span></span></span></li>
+				<li>SOTs for Azure Government&nbsp;CSPs are&nbsp;supported. See the SOT section of&nbsp;<a href="https://internal.support.services.microsoft.com/en-us/help/3078989" managed-link="">TSG 3078989</a> for&nbsp;guidance.</li>
+			</ul>
+
+			<p><span><span><span lang="EN"><span><span>For Fairfax Escalation CSP questions and inquiries, reach out to the </span></span></span><span lang="EN"><span><span>ASMS Fairfax\CSP Discussion</span></span></span><span lang="EN"><span><span> alias <a href="Azure_CSP@microsoft.com" managed-link="" target="_blank">Azure_CSP@microsoft.com</a>. </span></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span><span>The Ibiza portal is down, and your customer needs to submit a ticket. </span></span></strong></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><span><span>Customers can use </span></span></span><span lang="EN"><span><span><a href="https://aka.ms/azureportalhelp"><span><span><span>https://aka.ms/azureportalhelp</span></span></span></a></span></span></span><span lang="EN"><span><span> to file a ticket if the portal is down. However, this is not advertised widely.<br>
+			<br>
+			<strong>Note: </strong>We are working on a blade for Gov. on the Azure Status page that will link to this to help surface it in the flow of trouble shooting that a customer might do.</span></span></span>　</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span><span><span>Last Resort &ndash; Technical Inquiries</span></span></span></strong></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><span><span>If you are stuck on a Fairfax technical question, you may contact the </span></span></span><span><span><span>Azure Government Technical Help</span></span></span><span><span><span> list. </span></span></span><span lang="EN"><span><span><br>
+			<br>
+			<strong>Note:</strong> This list reaches over 300+ employees. Use it only if no other escalation path yields a result.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span><span><span>Escort Service<br>
+			(Jarvis and CST)</span></span></span></strong></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><span><span>If you need to perform a Write operation (outside of quota, which goes to Fairfax WACAP) in Fairfax Jarvis, you will need to request an escort and do the Write Operation yourself.<br>
+			<br>
+			Use this link for directions on how to request an escort for both: </span></span></span><span><span><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/:w:/r/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/JIT%20FF%20Escort.docx?d=w047ac15869ea469f924a002523b73a44&amp;csf=1&amp;e=cba9Tw" managed-link="" target="_blank">JIT Escort Process</a></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312"><strong>FedRamp</strong></td>
+			<td width="313">
+			<ul>
+				<li>Azure Government Customers can email <a data-content-id="" data-content-type="" href="mailto:AzFedDoc@microsoft.com" managed-link="" target="_blank">Azure Federal Documentation</a> if they have issues downloading FedRamp information from the Service Portal.&nbsp;</li>
+				<li><a href="https://microsoft.sharepoint.com/teams/Azure_Government_Engineering/SitePages/Azure-Public-and-Azure-Government-Services---FedRAMP-High,-DoD-IL4-and-DoD-IL5-Roadmap.aspx" managed-link="" target="_blank">Azure FedRamp Compliance Roadmap</a>&nbsp;(Internal only)</li>
+				<li><a href="https://docs.microsoft.com/en-us/azure/security/compliance/azure-services-in-fedramp-auditscope" managed-link="">FedRamp compliance status for certified Azure Commercial and Azure Government Services</a></li>
+				<li>SEs can email <a data-content-id="" data-content-type="" href="mailto:azcertonboarding@microsoft.com" managed-link="" target="_blank">azcertonboarding@microsoft.com</a> for questions regarding certification and onbaording status.</li>
+			</ul>
+			<br>
+			&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3><a id="Online References" name="Online References"></a>Online References</h3>
+
+<h4><a id="Customer References" name="Customer References"></a>Customer References</h4>
+
+<ul>
+	<li><a href="https://azure.microsoft.com/en-us/offers/azure-government/">How to Buy Fairfax Azure</a></li>
+	<li><span><span><a href="https://azure.microsoft.com/en-us/global-infrastructure/regions/">Azure regions page</a></span></span></li>
+	<li><span><span><span><span><span><span><span><span><a href="https://account.windowsazure.us/Subscriptions">Account portal</a></span></span> </span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span><span><a href="https://portal.azure.us/">Fairfax Management portal</a></span></span> </span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span><span><a href="https://azure.microsoft.com/global-infrastructure/government/">External Fairfax landing page</a></span></span></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span><span><a href="https://feedback.azure.com/forums/558487-azure-government">Fairfax Customer Feedback link</a></span></span></span></span></span></span></span></span></li>
+	<li><a href="https://docs.microsoft.com/en-us/azure/azure-government/documentation-government-plan-identity#frequently-asked-questions" managed-link="" target="_blank">Frequently asked questions</a></li>
+</ul>
+
+<h4><a id="Support Engineer References" name="Support Engineer References"></a>Support Engineer References</h4>
+
+<ul>
+	<li><span><span><span><span><span><span><span><span><a href="https://learn.microsoft.com/activity/S2460611/launch">Fairfax training</a></span></span></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span><span><a href="https://jarvis-west.dc.ad.msft.net/?page=actions&amp;acisEndpoint=Fairfax">Jarvis</a></span></span> </span></span></span></span></span></span></li>
+</ul>
+
+<h3><a id="TSG Change Log" name="TSG Change Log"></a>TSG Change Log</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><strong>Date </strong></span></p>
+			</td>
+			<td width="11%">
+			<p><span><strong>Updated By </strong></span></p>
+			</td>
+			<td width="76%">
+			<p><span><strong>Content Updated </strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>01<span><span><span><span><span>/14</span></span></span></span><span><span><span>/2019</span></span></span></span></p>
+			</td>
+			<td width="11%">
+			<p><span><span><span><span>v-adhigg</span></span></span></span></p>
+			</td>
+			<td width="76%">
+			<p><span><span><span><span><span>Comprehensive Rewrite: Updated TSG content and formatting as part of the TSG Refresh Project.</span></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>01/22/2019</td>
+			<td width="11%">v-brgosn</td>
+			<td width="76%">Updated HDI Quota Request link as&nbsp;<span>WACAP now supports HDI quota.</span></td>
+		</tr>
+		<tr>
+			<td>03/13/2019</td>
+			<td width="11%">v-ajbur</td>
+			<td width="76%">Added &quot;How to Perform Penetration Testing&quot; to Support Scenarios.</td>
+		</tr>
+		<tr>
+			<td>06/04/2019</td>
+			<td width="11%">shsims</td>
+			<td width="76%">Updated Fairfax Quota template&nbsp;</td>
+		</tr>
+		<tr>
+			<td>06/25/2019</td>
+			<td width="11%">shsims</td>
+			<td width="76%">Added content about Arlington&nbsp;</td>
+		</tr>
+		<tr>
+			<td>07/16/2019</td>
+			<td width="11%">mievan</td>
+			<td width="76%"><span><span><span><span><span>Added guidance on how to </span></span></span></span></span><span>identify an ASMS Azure Government Case in Service Desk Case.&nbsp;</span></td>
+		</tr>
+		<tr>
+			<td>09/10/2019</td>
+			<td width="11%">v-brgosn</td>
+			<td width="76%">Added Active Directory Licenses<strong> </strong>details.</td>
+		</tr>
+		<tr>
+			<td>09/26/2019</td>
+			<td width="11%">v-ereric</td>
+			<td width="76%">Added FedRamp row to Engagement and Escalation table.</td>
+		</tr>
+		<tr>
+			<td>10/14/2019</td>
+			<td width="11%">v-ereric</td>
+			<td width="76%">Added Frequently asked questions link.</td>
+		</tr>
+		<tr>
+			<td>10/30/2019</td>
+			<td width="11%">v-adhigg</td>
+			<td width="76%">Minor formatting fixes and addition of anchor links.</td>
+		</tr>
+		<tr>
+			<td>12/3/2019</td>
+			<td width="11%">v-ereric</td>
+			<td width="76%">Updated CSP support row via ModTrack 2543.</td>
+		</tr>
+		<tr>
+			<td>02/28/2020</td>
+			<td width="11%">v-katzma</td>
+			<td width="76%">Removed references to guaranteed technical support for Fairfax customers per ModTrack 2709.</td>
+		</tr>
+		<tr>
+			<td>04/03/2020</td>
+			<td width="11%">v-ishan</td>
+			<td width="76%">Updated link for DoD Whitelisting requests as per ModTrack 2772.</td>
+		</tr>
+		<tr>
+			<td>04/20/2020</td>
+			<td width="11%">mievan</td>
+			<td width="76%">Updated steps for JIT escort service process.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>05/18/2020</td>
+			<td width="11%">kuharr</td>
+			<td width="76%">Removed 15708 for ADO access.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>05/27/2020</td>
+			<td width="11%">mievan</td>
+			<td width="76%">Updated guidance doc for DoD whitelisting.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>06/07/2020</td>
+			<td width="11%">mievan</td>
+			<td width="76%">Updated Government CSP engagement queue, in Engagement and Escalation Path table.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>06/27/2020</td>
+			<td width="11%">mievan</td>
+			<td width="76%">Replaced <em>US Gov. Queue</em> with&nbsp;<em>ASMS US Gov MT</em>.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>06/30/2020</td>
+			<td width="11%">v-adhigg</td>
+			<td width="76%">Updated the Policy section with current tool guidance. Also updated guidance on USNAT cases.</td>
+		</tr>
+		<tr>
+			<td>07/01/2020</td>
+			<td width="11%">v-adhigg</td>
+			<td width="76%">Added directions on checking for dual federation.</td>
+		</tr>
+		<tr>
+			<td>07/28/2020</td>
+			<td width="11%">v-adhigg</td>
+			<td width="76%">Added note about SOTs being supported for US Government CSPs.</td>
+		</tr>
+		<tr>
+			<td>08/05/2020</td>
+			<td width="11%">v-ishan</td>
+			<td width="76%">Added reference to steps for adding Partner in MPN TSG as per ModTrack 3070.</td>
+		</tr>
+		<tr>
+			<td>09/08/3030</td>
+			<td width="11%">mievan</td>
+			<td width="76%">
+			<p>Replaced ASMSFFX1&nbsp;DL with&nbsp;asmsffxmt&nbsp;DL for Non&nbsp;Non-Fairfax Support Engineers.&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>9/18/2020</td>
+			<td width="11%">mievan</td>
+			<td width="76%">Added CST option to <em>Escort Service</em> guidance.&nbsp;</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,740 @@
+﻿<header><h1>Procedure: Collaboration</h1></header><p><span asset="4462485" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4462485]</span></p>
+
+<h3>Who should use this article?</h3>
+
+<p><span><span><span><span><span><span><span><span><span><span><span><span>Support Engineer&nbsp;|&nbsp;Escalation Engineer&nbsp;|&nbsp;Technical Advisor | Business Process Manager | Duty Manager</span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<h3><span><span><span><span><span><span><span><span><span><span>What is this article about?</span></span></span></span></span></span></span></span></span></span></h3>
+
+<p><span><span><span><span><span><span><span><span><span><span>This procedure is to be used&nbsp;when assistance is required to progress, a case, either across technology or within the same technology. </span></span></span></span></span></span></span></span></span></span></p>
+
+<p>Collaboration is when one engineer requests another engineer with a different skillset to help solve a customer issue. When implemented through current case management tools, collaboration requires dispatching an object to a queue.</p>
+
+<h3>Table of Contents</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<h4><a bookmark-id="Overview" href="#Overview" managed-link="">Overview</a></h4>
+			</td>
+			<td>
+			<ul>
+				<li><a bookmark-id="SDtoRave" href="#SDtoRave" managed-link=""><span><span><span><span><span><span><span><span><span>Collaboration from Service Desk to Rave</span></span></span></span></span></span></span></span></span></a></li>
+				<li><a bookmark-id="RavetoSD" href="#RavetoSD" managed-link=""><span><span><span><span><span>Collaboration from Rave to Service Desk</span></span></span></span></span></a></li>
+				<li><a bookmark-id="SD" href="#SD" managed-link=""><span><span><span><span><span>Collaboration within Service Desk</span></span></span></span></span></a></li>
+				<li><a bookmark-id="Rave" href="#Rave" managed-link=""><span><span><span><span><span>Collaboration within Rave</span></span></span></span></span></a></li>
+				<li><a bookmark-id="Raveassistance" href="#Raveassistance" managed-link=""><span><span><span><span><span>Rave Assistance Q&amp;A</span></span></span></span></span></a></li>
+				<li><a bookmark-id="ACE" href="#ACE" managed-link=""><span><span><span><span><span>Collaboration within Azure CXP ACE</span></span></span></span></span></a></li>
+			</ul>
+
+			<p class="MsoToc2"><span><span><span><ins cite="mailto:Eunice%20Zeng" datetime="2019-08-28T12:27"> </ins></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4><a bookmark-id="Deviations or workarounds" href="#Deviations or workarounds" managed-link="">Deviations or workarounds</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<h4><a bookmark-id="Supporting information or articles" href="#Supporting information or articles" managed-link="">Supporting information or articles</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<h4><a bookmark-id="Templates" href="#Templates" managed-link="">Templates</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<h4><a bookmark-id="Frequently asked questions" href="#Frequently asked questions" managed-link="">Frequently asked questions</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3><a id="Overview" name="Overview"></a>Overview</h3>
+
+<p><em><a bookmark-id="Proc2" href="#Proc2" managed-link="">***See Deviations or workarounds***</a></em></p>
+
+<p><strong>When to Swarm or Collaborate?</strong></p>
+
+<p>Use <a href="https://internal.support.services.microsoft.com/help/4464163" target="_blank">4464163 Procedure: Swarming</a> to step through the collaboration procedure &nbsp;in real time with engineers that support a different but relevant technology, where available. Work with the engineer to assist case progression while retaining ownership and managing the customer experience end-to-end.</p>
+
+<p>If swarming does not enable real time collaboration with engineers in the relevant technology, or that technology is not enabled for cross-technology swarming, then continue with collaboration procedure below.</p>
+
+<p><span><span><span>See article<strong> </strong></span></span></span><strong><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Finternal.support.services.microsoft.com%2Fhelp%2F4488309&amp;data=01%7C01%7Cv-zejing%40microsoft.com%7Cff51d76843e84e08377208d6d4c3e342%7C72f988bf86f141af91ab2d7cd011db47%7C1&amp;sdata=xgvgTWsTexnWob9PzizERhVfIv9PgBIIkKNOAfH6PNM%3D&amp;reserved=0" target="_blank"><span><span><span>4488309 Informational: Case mangement tool product support list</span></span></span></a></strong><span><span><span> to understand which product is being supported by which ticketing system. </span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><span><span><strong><span><span>Rave Assistance Request Notification</span></span></strong></span></span></span></p>
+
+			<ul style="list-style-type:disc">
+				<li><span><span><span><span><strong>Assistance Requests</strong> are a key way premier engineers are seeking help from experts in the different technologies. The <strong>Assistance request</strong> tab allows engineers to either accept or update the request without assigning it to themselves.</span></span></span></span></li>
+				<li><span><span><span><span><span>Service Desk Engineer </span></span><span>needs to monitor within Rave for <strong>Assistance Requests</strong> (Collaboration Requests) from Rave Engineer (refer to Step 4 under <strong>Collaboration from Rave to Service Desk</strong>). There is <strong>NO</strong> alert functionality from Rave when a new collaboration comes in, so Service Desk Engineer will need to be logged into Rave to check for new Assistance Requests. Rave does <strong>NOT</strong> automatically refresh when new data is available, so users will need to click the <strong>Refresh </strong>button in the upper right corner of Rave. Check with your Manager or Team Lead if you should be monitoring Rave for Assistance Requests.</span></span></span></span></li>
+				<li><strong><span><span><span><span>TIP</span></span></span></span></strong><span><span><span><span>: The <strong>Case </strong></span></span></span></span><strong><span><span><span>Ninja for Outlook</span></span></span></strong><span><span><span> value-add app can be configured to pop up a desktop notification when a new Rave Assistance Request arrives (Show Incoming Tasks) for a Support Area that you monitor.&nbsp; Case Ninja for Outlook can also be configured to alert you when an Assistance Request is assigned to you. For more information on <strong>Case Ninja for Outlook</strong> click </span></span></span><span><span><span><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/EAST/SitePages/Outlook-Case-Ninja.aspx" managed-link="" target="_blank">here</a>.</span></span></span></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading="" faq-panel-id="SDtoRave">&lt;&gt;<span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span><span><span><span><u><span>Collaboration from Service Desk to Rave</span></u></span></span></span></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<ul>
+	<li>
+	<h4><span><span><strong><u><span><span><span>Broad Commercial/Professional Office 365 (Cloud)</span></span></span></u></strong></span></span><br>
+	<u><span><a href="https://internal.support.services.microsoft.com/en-us/help/4346610#Proc2"><em><span><span><span>***See Deviations or workarounds***</span></span></span></em></a><span> </span></span></u></h4>
+	</li>
+	<li>
+	<h4><u><span><strong><span><span><span>Premier (On-Premise &amp; Cloud) and Broad Commercial/Professional (<span>On-Premise &amp; No Cloud)</span></span></span></span></strong><span> </span><span> </span></span></u></h4>
+	</li>
+</ul>
+
+<p class="indent-1"><span><span><span><span>The following steps to create a Collaboration Task in Service Desk are only applicable for <strong>Premier (On-Premise &amp; Cloud) </strong>case and <strong>Broad Commercial/Professional (On-Premise &amp; No Cloud)</strong> case.&nbsp; <span><span><strong><span><span><span><span>Steps 6-9 </span></span></span></span></strong><span><span><span><span>are applicable to<strong> Rave engineers.</strong></span></span></span></span> </span><span><span><span> </span></span></span></span></span></span></span></span></p>
+
+<p class="indent-1"><span><span> </span></span></p>
+
+<p class="indent-1"><span><strong><span><span><span>Note: </span></span></span></strong><span><span><span>If Rave Assistance Request is <strong>NOT</strong> able to be created for any reason, contact <strong>Tech Routers/TR:</strong> </span></span></span><span><span><span><a data-content-id="" data-content-type="" href="https://support.microsoft.com/en-us/help/4051701/global-customer-service-phone-numbers" managed-link="" target="_blank">Global Customer Service phone numbers</a></span></span></span><span><span><span> or </span></span></span><span><span><span><a data-content-id="" data-content-type="" href="https://support.microsoft.com/en-us/help/4515535/new-microsoft-services-hub-web-site-now-available" managed-link="" target="_blank">Premier Support contact</a></span></span></span><span><span><span> to have a new case created.</span></span></span></span></p>
+
+<ol>
+	<li>
+	<p class="indent-1">Service Desk&nbsp;engineer creates a&nbsp;Collaboration task&nbsp;in Service Desk.<br>
+	For successful collaboration to Rave, steps 1 and 2 must be performed together. For example, you cannot take a pre-existing collaboration task, that has been around for some time and &lsquo;re-route&rsquo; it to Rave.&nbsp; The Rave system only monitors for task creation events where the target SAP of the task maps to Rave.&nbsp; Changing the SAP later will not work. This is a known limitation.<br>
+	<span asset="4498807" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498807]</span></p>
+	</li>
+	<li>
+	<p class="indent-1">Service Desk engineer must:</p>
+
+	<ul>
+		<li>
+		<p class="indent-1">Select&nbsp;<strong>Route by Area Path.</strong></p>
+		</li>
+		<li>
+		<p class="indent-1">Correct&nbsp;the product topics for Rave (e.g. Office ) (See <a href="https://internal.support.services.microsoft.com/help/4488309" target="_blank">4488309&nbsp;| Informational: Case management tool product support list</a> for details).</p>
+		</li>
+		<li>
+		<p class="indent-1">Add&nbsp;detailed <strong>Description</strong> and <strong>Service Desk engineer&#39;s name &amp; alias </strong>so Rave engineer can contact directly.</p>
+		</li>
+		<li>
+		<p class="indent-1">Include&nbsp;&quot;<strong>Region&quot; &amp; &quot;Time Zone&quot;</strong> such as <strong>NOAM</strong>&nbsp;<strong>| UTC-5 | 15:30*| </strong>in the <strong>Description.&nbsp;</strong></p>
+		</li>
+		<li>
+		<p class="indent-1">Copy and paste&nbsp;the <strong>Task Description</strong> in <strong>Notes.<br>
+		Important: Do NOT </strong>use<strong> &quot;Assign to Agent&quot;</strong><br>
+		*Callback time is optional but please include if agreed to with the customer<br>
+		<strong><span asset="4498808" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498808]</span></strong></p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p class="indent-1"><span><span><span><span><span><span>Service Desk engineer clicks on <strong>Submit</strong> and transfers the case to the <strong>MSaaS Rave Transfers </strong>queue.</span></span></span></span><span> </span></span></span><br>
+	<span asset="4498839" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498839]</span></p>
+	</li>
+	<li>
+	<p class="indent-1"><span><span><span><span><span>Service Desk engineer clicks <strong>End</strong> to save the Service Desk case. The Service Desk engineers will need to end the session to kick off the collaboration notification to Rave.</span></span></span></span></span><span><span><span><span><span><span> </span></span></span></span><span> </span></span></span></p>
+	</li>
+	<li>
+	<p class="indent-1"><span><span><span><span><span><span>Service Desk engineer can <strong>use the external Rave link to check Rave assistance request collaboration status</strong>. <strong>Rave assistance url&nbsp;</strong>is on the collaboration Task in SD. &nbsp;</span></span></span></span></span></span><br>
+	<span asset="4524165" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4524165]</span></p>
+	</li>
+	<li>
+	<p class="indent-1"><strong>Assistance Request</strong> is created in Rave and will be routed to the correct E+D support area for <strong>Rave engineer</strong> to accept.&nbsp;<br>
+	<span asset="4498809" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498809]</span></p>
+	</li>
+	<li>
+	<p class="indent-1"><strong>Rave engineer</strong> will select <strong>Accept.&nbsp;</strong>Assistance Request will be assigned to him/herself and the case will indicate this is an assistance requested case to be worked on.<br>
+	<span asset="4498803" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498803]</span><br>
+	<span asset="4498802" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498802]</span><br>
+	If it is an incorrect collaboration request, Service Desk engineer should cancel the Collaboration task in Service Desk.&nbsp; Then add a note to the corresponding Rave case indicating this request needs to be canceled.&nbsp;<br>
+	<span asset="4498834" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498834]</span><br>
+	<strong>Rave engineer</strong> who picks up the assistance request will need to select <strong>Cancel</strong> on the Assistance request to cancel out this request.&nbsp;<br>
+	<span asset="4498790" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498790]</span></p>
+	</li>
+	<li>
+	<p class="indent-1">To see all Email and Notes coming from Service Desk in the Assistance Request, <strong>Rave engineer</strong> will need to filter on <strong>External</strong> in the upper toolbar for Communications (see <strong>Steps 1, 2 </strong>and<strong> 3 </strong>in<strong>&nbsp;</strong>below grahic). This could also be a workaround for helping to identify the Service Desk Engineer who has submitted the collaboration request as well.<br>
+	<span asset="4500884" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4500884]</span></p>
+	</li>
+	<li>
+	<p class="indent-1">When the work is complete, the <strong>Rave engineer</strong> selects <strong>Close assistance</strong> from the <strong>Actions</strong> pane.<br>
+	<span asset="4498805" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498805]</span><br>
+	<strong>Note: </strong>It&rsquo;s best practice for Rave engineers to close Assistance Request when task is completed.</p>
+	</li>
+	<li>
+	<p class="indent-1">When collaboration is complete, Service Desk engineer can <strong>Cancel the Collaboration Task</strong> or be prompted to <strong>Cancel Tasks &amp; Save </strong>when Service Desk case is closed.<br>
+	<span asset="4507238" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4507238]</span><br>
+	<br>
+	<strong>Note: </strong><span><span><span><span>The <strong>Assigned To </strong>status in the SD case will be left unchanged. <strong>Collaboration Tasks and Assistance Requests State/Status are NOT synced between Service Desk and Rave</strong>.</span></span></span></span></p>
+	</li>
+</ol>
+</div>
+</div>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading="" faq-panel-id="RavetoSD"><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span><span><span><span><u><span>Collaboration from Rave to Service D</span></u>esk</span></span></span></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p>&nbsp;</p>
+
+<ul>
+	<li>
+	<h4><span><span><strong><u><span><span><span>Broad Commercial/Professional Office 365 (Cloud)</span></span></span></u></strong></span></span><u><span><span> </span></span><br>
+	<em><a bookmark-id="Proc2" href="#Proc2" managed-link="">***See Deviations or workarounds***</a></em></u></h4>
+	</li>
+	<li>
+	<h4><span><span> </span></span><u><span><strong><span><span><span>Premier (On-Premise &amp; Cloud) and Broad Commercial/Professional (On-Premise &amp; No Cloud)</span></span></span></strong></span></u></h4>
+	</li>
+</ul>
+
+<p class="indent-1"><span><span><span><span>The following steps to create a <strong>Request assistance</strong> in Rave are only applicable for <strong>Premier (On-Premise &amp; Cloud) </strong>and <strong>Broad Commercial/Professional (On-Premise &amp; No Cloud)</strong> cases.&nbsp;<span><span><span><span><span><span><strong><span><span><span><span>Steps 5-7</span></span></span></span></strong><span><span><span><span> are applicable to <strong>Service Desk engineers</strong>.</span></span></span></span> </span><span><span><span> </span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p class="indent-1"><span><span><span><span><span><span><span> </span></span></span></span></span></span></span></p>
+
+<ol>
+	<li>
+	<p class="indent-1">Rave engineers to open a <strong>Request assistance</strong> in Rave.<br>
+	<span asset="4498797" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498797]</span></p>
+	</li>
+	<li>
+	<p class="indent-1">Select which area to get assistance from.&nbsp;The request can be selected from the existing support area in Rave. If duty manager contact info is needed to route the collaboration request, see article <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-US/help/4345311" managed-link="" target="_blank">4345311 Informational: Duty Manager Contact Information </a>for details. <span asset="4498799" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498799]</span></p>
+
+	<p class="indent-1"><strong>Coll</strong><strong>aboration Support Area Cheat Sheet</strong></p>
+
+	<table class="table">
+		<tbody>
+			<tr>
+				<td><strong>M365 Commerce to GFS collaboration, </strong>see article <strong><a href="https://internal.support.services.microsoft.com/en-us/help/4569539">4569539</a> </strong>for details</td>
+				<td>
+				<ul>
+					<li><span><span><span><span><span>CAICollections: </span></span><span><span>Collections and dunning for customers who pay by invoice</span></span></span></span></span></li>
+					<li><span><span><span><span><span>CAICAT: </span></span><span><span>Refunds for Invoice customers and credit card customers who no longer have an active card for the refund (manual refund requests)</span></span></span></span></span></li>
+					<li><span><span><span><span><span>CAICashApps: </span></span><span><span>Missing payment investigation for an account paid by invoice. Transferring a balance</span></span></span></span></span></li>
+					<li><span><span><span><span>CAICreditRisk: Credit reviews, analysis, limits, holds, Insurance and bad debt</span></span></span></span></li>
+				</ul>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	</li>
+	<li>
+	<p class="indent-1">Rave engineers should add <strong>Region and Time Zone</strong> such as <strong>NOAM | UTC-5 |15:30 UTC*| Need help with mailflow </strong>in the Description section when going through the assistance request procedure, then select <strong>Request.</strong><br>
+	*Callback time is optional but please include if agreed to with the customer<br>
+	<span asset="4498800" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498800]</span></p>
+	</li>
+	<li>
+	<p class="indent-1">If it&nbsp;<span><span><span><span>is an incorrect collaboration request, E&amp;D <strong>Rave engineer</strong> should cancel the assistance request from the Rave case, select <strong>Cancel</strong> on the Assistance request to cancel out this request.<br>
+	<span asset="4509299" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4509299]</span></span></span></span></span></p>
+
+	<div>
+	<div class="indent-1">&nbsp;</div>
+	</div>
+	</li>
+	<li>
+	<p class="indent-1"><span><strong><span><span><span><span>Service Desk engineer</span></span></span></span></strong><span><span><span><span> clicks on <strong>Assistance request</strong> in </span></span></span></span></span><a href="https://rave.office.net/"><span><span><span>Rave</span></span></span></a><span><span><span><span> to monitor for new collaboration requests.&nbsp; <strong>Service Desk engineer</strong> can filter the appropriate <strong>Support area</strong> (such as Azure, SQL, Developer, etc.) for new <strong>Assistance request</strong>.&nbsp;<strong><span><span><span><span>Service Desk engineer</span></span></span></span></strong><span><span><span><span> then can select&nbsp;<strong>Accept </strong>or update the request without&nbsp;assigning it&nbsp;to him or herself.<br>
+	<span asset="4498801" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498801]</span></span></span></span></span></span></span></span></span></p>
+
+	<div>
+	<p class="indent-1"><span><strong><span><span><span>Important:</span></span></span></strong><span><span><span> Please note the <strong>Description</strong> of the Assistance request as it is <u>only available while Assistance request is in queue</u>.&nbsp; Once Assistance request is accepted, the <strong>Description is not persisted in the Rave case</strong>.</span></span></span></span></p>
+
+	<p class="indent-1"><span><span><span><span>Once assigned, the assistance request will show owner working on the Assistance.<br>
+	<span asset="4498803" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498803]</span><br>
+	<span asset="4498802" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498802]</span></span></span></span></span></p>
+
+	<p class="indent-1"><span><span><strong><span><span><span>Note: </span></span></span></strong></span><span><span><span>You may see a reference to a <strong>Secondary ticket</strong>, sometimes known as a <strong>Shadow case</strong> found in the Rave Case summary. Please <strong>DO</strong> <strong>NOT</strong> touch or work this case in Service Desk. Notes are not synced from Rave to Service Desk so you will not see the Rave engineer&rsquo;s progress.&nbsp; Also, changes made to the shadow case are not &lsquo;synced&rsquo; to the Rave case.&nbsp; For example, if you updated the Severity on the shadow case, the Rave engineer would not see this in the Rave case.&nbsp; The <strong>Shadow case/Secondary ticket </strong>exists to support backend services needed for interoperability between Rave and Service Desk. <strong>Service Desk Engineer works the Assistance request in Rave.</strong></span></span></span><span> </span></span></p>
+	</div>
+	</li>
+	<li>
+	<p class="indent-1"><strong>Service Desk&nbsp;users</strong>&nbsp;monitoring&nbsp;<strong>Assistance requests</strong>&nbsp;(such as Duty Managers, Queue Incident Managers or Queue Accountability Managers) in Rave can also filter the appropriate Support Area, click on the corresponding Rave Case number, locate the&nbsp;<strong>Assistance</strong>&nbsp;and click on&nbsp;<strong>Update to assign</strong>.&nbsp;If engineers search this by themselves, they can select&nbsp;<strong>Accept</strong>.<br>
+	<span><span><span><span><span>In the Unassigned AR view, there is an Ellipsis that has the options of Accept or Update.&nbsp;</span></span></span></span></span></p>
+
+	<div>
+	<div class="indent-1"><span asset="4563069" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4563069]</span></div>
+
+	<div class="indent-1"><span asset="4563070" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4563070]</span></div>
+	</div>
+
+	<p class="indent-1"><br>
+	<span><span><span><span><span><span><span><span><span><span>The <strong>Update</strong> button within the case allows for assignment/reassignment of an AR or transfer to another support area.</span></span></span></span></span><br>
+	<span asset="4563067" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4563067]</span></span></span></span></span></span></p>
+
+	<p class="indent-1"><span><span><span><span><strong>Note:</strong> In order to assign an assistance request to another user, you need to have one of the following roles (Premier Lead, Group Admin, Site Admin) and be within the same Rave org as the Assistance request. Requests for Service Desk users are sent to support areas within the CSS-C&amp;AI Rave organization, so users within Modern Workplace will not be able to assign requests to Service Desk users. </span></span></span></span></p>
+
+	<p class="indent-1"><span><span><span><span><span>You may see a reference to a <strong>Secondary ticket</strong>, sometimes known as a <strong>Shadow case</strong> found in the Rave Case summary. Please <strong>DO</strong> <strong>NOT</strong> assign or route this case in Service Desk.&nbsp; Notes are not synced from Rave to Service Desk so Service Desk engineer will not see the Rave engineer&rsquo;s progress.&nbsp; Also, changes made to the shadow case are not &lsquo;synced&rsquo; to the Rave case.&nbsp; For example, if Service Desk engineer updated the Severity on the shadow case, the Rave engineer would not see this in the Rave case.&nbsp; The <strong>Shadow case/Secondary ticket </strong>exists to support backend services needed for interoperability between Rave and Service Desk. <strong>Service Desk Engineer works the Assistance request in Rave.<br>
+	<span asset="4509303" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4509303]</span></strong></span></span></span></span></span></p>
+	</li>
+	<li>
+	<p class="indent-1">When the collaboration&nbsp;is complete, Service Desk&nbsp;engineer needs to select <strong>Close assistance</strong> from the <strong>Actions</strong> pane.<br>
+	<span asset="4498805" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498805]</span><br>
+	<strong>Note</strong>:&nbsp;An Assistance Request needs to be closed before the Rave engineer can&nbsp;close the Rave case.&nbsp;</p>
+	</li>
+</ol>
+</div>
+</div>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading="" faq-panel-id="SD"><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span><span><span><span><u><span>Collaboration </span></u><u><span><span>wi</span></span></u><u><span>thin Service Desk</span></u></span></span></span></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<ol>
+	<li>Complete the&nbsp;<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4346609" managed-link="" target="_blank">4346609 Template: Summary</a> and put in Notes.</li>
+	<li>Transfer&nbsp;a new&nbsp;Collaboration task&nbsp;to a queue with the transfer reason set to Administrative Reroute:
+	<ul>
+		<li>Follow routing rules for selecting queue. If you determine the incorrect queue was selected, then check that&nbsp;Area Path,&nbsp;Support Language, and Country of Origin&nbsp;are correct.</li>
+		<li>Expected Response time for a collaboration request matches the initial response goal by service level and severity.</li>
+	</ul>
+	</li>
+	<li>Follow up on all customer/partner commitments while you wait for a response to the collaboration request:
+	<ul>
+		<li>If your task is not picked up by an engineer within the expected response time, email queue Duty Manger to request an update.</li>
+	</ul>
+	</li>
+	<li>As soon as you have made contact with the receiving engineer:
+	<ul>
+		<li>Discuss the issue with the receiving engineer, bringing the customer/partner into the conversation as necessary.</li>
+		<li>It remains the responsibility of the case owner to ensure that all customer/partner commitment goals are met.</li>
+	</ul>
+	</li>
+</ol>
+
+<p><strong>Note:</strong> If a collaboration is needed from a user or team that&nbsp;doesn&#39;t have&nbsp;access to Service Desk, use Rave.&nbsp;</p>
+</div>
+</div>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading="" faq-panel-id="Rave"><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span><span><span><span><u><span>Collaboration within Rave</span></u></span></span></span></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p>If a collaboration is needed in Rave, Assistance Request feature in Rave can be used.</p>
+
+<p><strong><u>Request assistance by using Rave Assistance:</u></strong></p>
+
+<ol>
+	<li>Open the Rave case and select<strong> Request assistance</strong> from the <strong>Actions</strong> pane.<br>
+	<span asset="4346570" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346570]</span></li>
+	<li>Select the Team you need assistance from,&nbsp;add <strong>Region and Time Zone</strong> such as <strong>NOAM | UTC-5 |15:30*| Need help with mailflow </strong>in the Description section and then click <strong>Request</strong>.<br>
+	*Callback time is optional but please include if agreed to with the customer.<br>
+	<span asset="4346571" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346571]</span></li>
+	<li>The Assistance pane will show the information of the sought-out collaborative engineer.</li>
+</ol>
+
+<p><span><strong><span><span><span>Note</span></span></span></strong><span><span><span>: Please make sure you create an internal note in the case so that the collaborative engineer could have a clear understanding on what kind of help you are looking for.</span></span></span></span></p>
+
+<p><span><span><span>If it is an incorrect collaboration request, Rave engineer should cancel the assistance request from the Rave case, select <strong>Cancel</strong> on the Assistance request to cancel out this request.&nbsp;<br>
+<span asset="4498790" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498790]</span></span></span></span></p>
+
+<p><strong><em>Provide assistance by using Rave Assistance:</em></strong></p>
+
+<ol>
+	<li>Click the <strong>Unassigned Cases</strong> tab and then click the <strong>Assistance Requests</strong> tab.</li>
+	<li>Click <strong>Accept </strong>to start providing assistance on the case.<br>
+	<span asset="4346582" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346582]</span></li>
+	<li>Review full details of the case history and notes by the case owner, use internal notes to assist them and contact the customers directly if needed.</li>
+	<li>The case is added to the <strong>My cases view</strong>, and it is marked as an <strong>ASSISTANCE </strong>case.</li>
+	<li>When the work is complete, select <strong>Close assistance</strong> from the <strong>Actions</strong> pane.<br>
+	<span asset="4346583" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346583]</span></li>
+</ol>
+
+<p><span><strong><span><span><span>Note</span></span></span></strong><span><span><span><span>: An Assistance Request needs to be closed before the case can be closed. If a user starts collaborating on a case and then moves to take ownership, he/she should first close the assistance request via case actions. For more information, please refer to </span></span></span></span><strong><span><span><span>Rave Assistance Q&amp;A</span></span></span></strong><span><span><span><span>.</span></span></span></span></span></p>
+</div>
+</div>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading="" faq-panel-id="Raveassistance"><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><strong>Rave Assistance Q&amp;A</strong></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><strong><span lang="EN-GB">Q: When should I use the Assistance feature?</span></strong></p>
+
+<p><span lang="EN-GB">A: When you need to collaborate with someone and don&rsquo;t know the collaborative engineer&rsquo;s name.</span></p>
+
+<p><strong><span lang="EN-GB">Q: Can I use the Assistance feature to request assistance from a specific engineer rather than a team?</span></strong></p>
+
+<p><span lang="EN-GB">A: Currently no. When you request assistance, you specify a team. Any user who has the appropriate skills will see the assistance case and will be able to accept it.</span></p>
+
+<p><strong><span lang="EN-GB">Q: How many people can I request assistance from at one time on a ticket?</span></strong></p>
+
+<p><span lang="EN-GB">A: There is no limit. You can request assistance from as many teams as needed.</span></p>
+
+<p><strong><span lang="EN-GB">Q: When I create an Assistance request, is there another ticket number?</span></strong></p>
+
+<p><span lang="EN-GB">A: From the Rave side, there&rsquo;s just one case number. This case will appear in the My cases view for the case owner and any user who has accepted the case to provide assistance.</span></p>
+
+<p><span lang="EN-GB">From the SD side, there will be a SD case and a corresponding Rave case (the numbers will be different).&nbsp; </span></p>
+
+<p><strong><span lang="EN-GB">Q: What skills will a user need to see assistance cases?</span></strong></p>
+
+<p><span lang="EN-GB">A: There is no additional skill required. All users can see assistance cases. However, you must have the appropriate skills to see the case. For example, if the case is a Premier Escalation case and the case owner needs assistance from the EnterpriseOneDrive team, you will need to have both the Premier Escalation and EnterpriseOneDrive skills to see the case. The same is true for the language of the case.</span></p>
+
+<p><strong><span lang="EN-GB">Q: What case information will a user see when they accept an Assistance case?</span></strong></p>
+
+<p><span lang="EN-GB">A: The full Rave case history can be found in Rave.&nbsp; However, if the request is initiated from SD, the case communication will be copied from SD case to Rave case and also whatever was written in the SD collaboration task will show up in the Assistance Request Description filed. &nbsp;&nbsp;&nbsp;</span><br>
+<span asset="4498795" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498795]</span></p>
+
+<p><strong><span lang="EN-GB">Q: How can I tell which cases I own vs. those for which I&rsquo;m providing assistance?</span></strong></p>
+
+<p><span lang="EN-GB">A: In your My cases view, you&rsquo;ll see the blue <strong>ASSISTANCE</strong> stamp on cases for which you are providing assistance.</span></p>
+
+<p><strong><span lang="EN-GB">Q: How can I tell who the main case owner is?</span></strong></p>
+
+<p><span lang="EN-GB">A: The case owner (agent) is displayed in the Case Summary pane.</span></p>
+
+<p><strong><span lang="EN-GB">Q: How can I tell if my assistance request has been accepted?</span></strong></p>
+
+<p><span lang="EN-GB">A: The Assistance pane will show the name of the user who has accepted the assistance request.</span></p>
+
+<p><strong><span lang="EN-GB">Q: What happens if I close the case before the Assistance case has been closed?</span></strong></p>
+
+<p><span lang="EN-GB">A: Rave won&rsquo;t allow the case to be closed until the Assistance case has been closed.</span></p>
+
+<p><span lang="EN-GB">SD cases CAN be closed with an open Rave assistance request. </span></p>
+
+<p><strong><span lang="EN-GB"></span></strong></p>
+
+<p class="ng-scope"><strong><span lang="EN-GB">Q: Can I </span></strong><strong><span lang="EN-GB">transfer or </span></strong><strong><span lang="EN-GB">reassign an Assistance Request that I accepted?</span></strong></p>
+
+<p class="ng-scope"><span lang="EN-GB">A: Yes, the Assistance Request owner can transfer or re-assign the current Assistance Request to another Support area or Agent by clicking on</span>&nbsp;<strong>Update</strong> button in the Assistance pane.&nbsp;In order to reassign an Assistance Request to another user, you need to have one of the following roles (Premier Lead, Group Admin, Site Admin) and be within the same Rave org as the Assistance request. Requests for Service Desk users are sent to support areas within the CSS-C&amp;AI Rave organization, so users within Modern Workplace will not be able to assign requests to Service Desk users.<span lang="EN-GB"></span></p>
+
+<p class="ng-scope"><strong><span lang="EN-GB">Q: Can I accept or make update to the Unassigned Assistance Requests?</span></strong></p>
+
+<p class="ng-scope"><span lang="EN-GB">A: Yes, </span>an&nbsp;<strong>Accept</strong> or <strong>Update</strong>&nbsp;button in the Assistance pane allows users to&nbsp;<strong>Accept or Update</strong>&nbsp;the assistance request by moving the request to another support area or assigning it to a user. In order to reassign an Assistance Request to another user, you need to have one of the following roles (Premier Lead, Group Admin, Site Admin) and be within the same Rave org as the Assistance request. Requests for Service Desk users are sent to support areas within the CSS-C&amp;AI Rave organization, so users within Modern Workplace will not be able to assign requests to Service Desk users.</p>
+
+<p class="ng-scope"><span><strong><span><span><span>Q: Can a Collaboration Task from SD be rerouted to update Assistance Request support area in Rave?</span></span></span></strong></span></p>
+
+<p class="ng-scope"><span><span><span><span>A: No, updating the Collaboration Task from Windows to Office as an example will not work in Assistance Request in Rave. A new Collaboration Task for Office should be created in order to have a proper Assistance Request generated in Rave. </span></span></span></span></p>
+
+<p><span lang="EN-GB"></span></p>
+
+<p><strong><span lang="EN-GB">Q: What notifications will I see?</span></strong></p>
+
+<p><span lang="EN-GB">A: You can see when an Assistance case has been accepted or closed by looking in the Assistance pane. You can see when case notes have been updated by checking the case communication history.</span></p>
+
+<p><strong><span lang="EN-GB">Q: Is the Assistance feature available for all users?</span></strong></p>
+
+<p><span lang="EN-GB">A: Assistance Request is available to all support, however O365 Broad Commercial&nbsp;support engineers can accept RA, but not submit a RA.&nbsp; &nbsp;</span></p>
+</div>
+</div>
+
+<div class="faq-panel-heading" faq-panel-heading="" faq-panel-id="Raveassistance"><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><strong>Rave Assistance Q&amp;A</strong></span></div>
+
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading="" faq-panel-id="ACE"><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><strong>Collaboration with Azure CXP ACE</strong></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><span><span><span><span><span><span>Some US Government cases will route to the Azure CXP ACE team initially. At times the Azure CXP ACE may need technical expertise from a CSS engineer to solve their customers problems. When this happens the ACE engineer will open a new case (just like a normal customer would), that CSS will use to provide assistance. These customers have special confidentiality agreements that require CSS to proceed as explained below.</span></span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span><span>Expectations for these cases:</span></span></span></span></strong></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span><span>Cases will be created as a generic customer and will have the Azure CXP ACE engineer as the primary customer contact (contact details).</span></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span>Cases will be identified as being an assistance request from Azure CXP ACE and contain a reference to this knowledge article.</span></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span>Cases will include the question or information the ACE Engineer needs.</span></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span>Cases will include limited information about the issue and the real customer behind the questions &ndash; ACE will determine what information can be shared.</span></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span>Case severity will be set based on the customer scenario, so respect the severity and response SLAs accordingly &ndash; only ACE will have full details of the customer scenario.</span></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span>Cases will be used for a single request for assistance &ndash; they will not be kept open to ask questions for different customer engagement that ACE is handling.</span></span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><strong><span><span><span><span>Customer data expectations:</span></span></span></span></strong></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span><span>No information about the real customer and its cloud subscription/tenant will be available to CSS in Service Desk. This means that tools that rely on customer accounts like ASC will not be usable.</span></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span>Some data that comes from the technology itself can be shared. Example: Error messages, the status of a field in a log file, etc.</span></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span>You can engage other CSS engineers to help with the collaboration case. Any data that is shared in the case to CSS can be shared with any engineer in CSS necessary to address the question from ACE.</span></span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><strong><span><span><span><span>Expectations for the CSS Engineer:</span></span></span></span></strong></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span><span>Treat these cases as you would cases from an external customer. This will impact case prioritization, labor logging, and what channels you respond with.</span></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span>Answer questions to the best of your ability. Keep your mindset on walking the Azure CXP ACE through your troubleshooting steps. Provide guidance and suggestions for next steps and things the ACE should look for.</span></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span>Do not ask questions about the customer themselves.</span></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span>Do ask about the technical errors being encountered, and specific results that may be seen in a log file.</span></span></span></span></span></span></span>
+	<ul style="list-style-type:circle">
+		<li><span><span><span><span><span><span><span>Example: You advise the ACE Engineer to access ASC for the customer account, run a specific test, and let you know the results.</span></span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span><span>Do share data queries that need to be performed with the ACE engineer.</span></span></span></span></span></span></span>
+	<ul style="list-style-type:circle">
+		<li><span><span><span><span><span><span><span>Example: You need to know a specific result from a Kusto query, so you share it with the ACE engineer that works with the customer to generate the additional data needed.</span></span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span><span>If you do not hear from the ACE engineer or feel the severity has been set incorrectly, do not contact the account&rsquo;s IM. Instead contact the ACE OneGov Leads team: &lt;</span></span></span></span><span><span><a href="mailto:aceonegovleads@microsoft.com" target="_blank" title="mailto:aceonegovleads@microsoft.com"><span><span><span>aceonegovleads@microsoft.com</span></span></span></a></span></span><span><span><span><span>&gt;.</span></span></span></span></span></span></span></li>
+</ul>
+
+<ul>
+	<li><span><span><span><span><span><span><span>Once you have helped, get confirmation the ACE Engineers question are answered, then close the case.</span></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span>You will not be asked to submit an ICM escalation to engineering nor participate in a root cause analysis.</span></span></span></span></span></span></span></li>
+</ul>
+</div>
+</div>
+</div>
+
+<p><a aria-live="assertive" bookmark-id="top" data-bi-name="content-anchor-link" href="https://support.microsoft.com/api/preview#top" managed-link="" tabindex="0">Return to top</a></p>
+
+<h3><a id="Deviations or workarounds" name="Deviations or workarounds"></a>Deviations or workarounds</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p>The<strong> Rave Request Assistance Collaboration </strong>case action is available with <strong>Premier (On-Premise &amp; Cloud) case </strong>and<strong> Broad Commercial/Professional</strong> <strong>(On-Premise &amp; No Cloud) case. </strong>The <strong>Rave Request Assistance</strong> <strong>Collaboration </strong>case action is <strong>NOT</strong> available with <strong>Broad Commercial/Professional Office 365 (Cloud)</strong>, <strong>Intune&nbsp;</strong>nor <strong>Restricted Access</strong> cases.<strong> </strong></p>
+
+			<p><strong><span><span><span>Note:</span></span></span></strong><span><span><span> When Engineers have a Professional Service Desk case, collaboration with Rave engineers via a Collaboration Task on the Service Desk case is <strong>ONLY Possible</strong> when the receiving Rave team supports <strong>On-Prem products</strong>.<strong> </strong></span></span></span></p>
+
+			<p><strong><span><span><span>Key indications:</span></span></span></strong></p>
+
+			<ul>
+				<li><span><span>If Service Desk Engineers create a collaboration and it does <strong>NOT</strong> generate an <strong>External Uri link</strong> in the collaboration task after being routed to MSaaS Rave Transfers, then the collaboration needs to happen using the <strong>Exception</strong> process. </span></span></li>
+				<li><strong><span><span>Updating</span></span></strong><span><span> existing collaboration tasks&rsquo; SAP and transferring it to MSaaS Rave Transfers will <strong>NOT</strong> create an Assistance Request in Rave. The SAP must be set to one that is in scope for Rave when <strong>creating</strong> the Collaboration Task.<br>
+				<span asset="4555293" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4555293]</span></span></span><br>
+				&nbsp;</li>
+			</ul>
+
+			<p class="indent-1"><span><strong>Sample supported&nbsp;on-prem Rave teams:</strong></span><br>
+			<span><span><span><span><span>EnterpriseIntune</span></span></span></span></span><br>
+			<span><span><span><span><span>Office OnPrem (Office 2013, Office 2016, Office 2019, Access, Word, Excel, etc)</span></span></span></span></span><br>
+			<span><span><span><span><span>Server/ Products (Exchange Server, SharePoint Server, etc)</span></span></span></span></span><br>
+			<span><span><span><span><span>SCCM</span></span></span></span></span></p>
+
+			<p class="indent-1"><span><strong><span><span><span>Sample unsupported&nbsp;Cloud Rave teams:</span></span></span></strong></span><br>
+			<span><span><span><span><span>Office 365</span></span></span></span></span><br>
+			<span><span><span><span><span>Microsoft Teams</span></span></span></span></span><br>
+			<span><span><span><span><span>SharePoint Online</span></span></span></span></span><br>
+			<span><span><span><span><span>Exchange Online</span></span></span></span></span></p>
+
+			<ul>
+				<li><strong>Broad Commercial/Professional Office 365 (Cloud), Intune: </strong>
+
+				<ul>
+					<li><u><strong>Collaboration from Service Desk to Rave:</strong></u>
+
+					<p class="ng-scope">If Service Desk Engineer needs to create a Collaboration Task for an Office 365 (Cloud/Online) area path, Service Desk Engineer can either create a NEW, free Service Desk case or contact <strong>Tech Routers/TR</strong> to create a free Service Desk case with Service Desk Engineer as the contact person, then <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4457521" managed-link="" target="_blank">transfer/photocopy this new free Service Desk case to Rave</a> for collaboration.</p>
+
+					<p class="ng-scope"><strong>Note:</strong> Service Desk Engineer will know a new, free Service Desk case is needed for Rave collaboration when the <strong>Rave assistance</strong> <strong>url</strong> was not created (on the collaboration Task in SD - see Step 5 under <strong>Collaboration from Service Desk to Rave</strong> for an example) , when a Collaboration Task is transferred to an Office 365 (Cloud/Online) area path (Task will need to be cancelled).</p>
+
+					<p class="ng-scope">If Service Desk Engineer did <strong>NOT</strong> create the new free Service Desk case, the Service Desk Engineer needs to provide the existing Service Desk case number to <strong>Tech Routers/TR</strong> and specify it is a new Rave collaboration case request.</p>
+
+					<p class="ng-scope"><strong>Note: </strong>Service Desk Engineer is the primary contact in the Rave case. Rave Engineer works the collaboration case in Rave, exchanging emails, phone calls with Service Desk Engineer like a customer. <strong>Service Desk Engineer does NOT touch the new case created for collaboration</strong> with Rave Engineer. Service Desk Engineer exchanges emails, phone calls with Rave Engineer in <strong>existing Service Desk case</strong>, however, <strong>Do NOT add Rave Engineer as a contact to the existing Service Desk case</strong> which will risk exposing internal emails to the actual customer. Notes captured and available in respective primary cases.</p>
+					</li>
+					<li><u><strong>Collaboration from Rave to Service Desk:</strong></u>
+					<ul>
+						<li>Assistance Request is not to be used for collaboration with SD for Broad Commercial cloud cases, Rave Engineer should contact <strong>Tech Routers/TR</strong>, provide the existing Rave case number, and request a NEW, free Service Desk case to be created for collaboration. <strong>Tech Routers/TR </strong>will then create a new, free Service Desk case with Rave Engineer as the contact person, then transfer the case in Service Desk for collaboration.</li>
+					</ul>
+					</li>
+					<li>
+					<p><strong>Note: </strong>Rave Engineer is the primary contact in the Service Desk case. Service Desk Engineer works the new collaboration case in Service Desk normally, exchanging emails, phone calls with Rave Engineer like a customer. Rave Engineer exchanges emails, phone calls with Service Desk Engineer in existing Rave case. Notes captured and available in respective primary cases.</p>
+					</li>
+					<li>See <strong>Tech Routers/TR: <a href="https://support.microsoft.com/help/4051701" target="_blank">Global Customer Service phone numbers</a> </strong>or<strong> <a data-content-id="" data-content-type="" href="https://support.microsoft.com/en-us/help/4515535/new-microsoft-services-hub-web-site-now-available" managed-link="" target="_blank">Premier Support contact</a>.</strong></li>
+				</ul>
+				</li>
+				<li><strong>Restricted Access (RA)</strong>:
+				<ul>
+					<li>For US Nat, EEA and Regional Restriction: All work is done in Service Desk</li>
+					<li>Azure Government and German Cloud: Case can be worked in Rave. If collaboration is needed, Service Desk will be used</li>
+				</ul>
+				</li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a aria-live="assertive" bookmark-id="top" data-bi-name="content-anchor-link" href="https://support.microsoft.com/api/preview#top" managed-link="" tabindex="0">Return to top</a></p>
+
+<h3><a id="Supporting information or articles" name="Supporting information or articles"></a>Supporting information or articles</h3>
+
+<ul>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4488309" managed-link="" target="_blank">4488309 Informational: Case mangement tool&nbsp;product support list</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4502219" managed-link="" target="_blank">4502219&nbsp;Collaboration and transfer cheat sheet</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4456917" managed-link="" target="_blank">4456917 Policy: Collaboration</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4339885" managed-link="" target="_blank">4339885 Office 365 Premier Support in Rave</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2500396" managed-link="" target="_blank">2500396 Office 365 redirect resource sheet</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4464163" managed-link="" target="_blank">4464163 Procedure:&nbsp;Swarming</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4457521" managed-link="" target="_blank">4457521 Procedure: Transfer Ownership</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4024872" managed-link="" target="_blank">4024872 Office 365 Modern Support Case Workflow process for Pod</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://msaas.support.microsoft.com/queue" managed-link="" target="_blank">MSaaS Support Portal</a></li>
+</ul>
+
+<p><a aria-live="assertive" bookmark-id="top" data-bi-name="content-anchor-link" href="https://support.microsoft.com/api/preview#top" managed-link="" tabindex="0">Return to top</a></p>
+
+<h3><a id="Templates" name="Templates"></a>Templates</h3>
+
+<ul>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4346609" managed-link="" target="_blank">4346609 Template: Summary</a></li>
+</ul>
+
+<p><a aria-live="assertive" bookmark-id="top" data-bi-name="content-anchor-link" href="https://support.microsoft.com/api/preview#top" managed-link="" tabindex="0">Return to top</a></p>
+
+<h3><a id="Frequently asked questions" name="Frequently asked questions"></a>Frequently asked questions</h3>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><strong>Q: What is the difference between Swarming and Collaboration?</strong></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p>A: Collaboration is when one engineer requests another engineer with a different skillset to help solve a customer issue. When implemented through current case management tools, collaboration requires dispatching an object to a queue.</p>
+
+<p>Swarming is a method of collaboration, established in real time, that enables multiple engineers with different skill sets to work together as a virtual-team to solve a customer issue.</p>
+</div>
+</div>
+</div>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><strong>Q: When to use either Swarming or Collaboration</strong><strong><span lang="ZH-CN">？</span></strong></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p>A: Swarming should be the preferred method of collaboration for all situations where there is a live customer issue and a customer waiting for resolution. Swarming enables a shift in Microsoft support where customers don&rsquo;t need to wait for the right engineer to be found, but instead engineers with the right skillset are engaged in real-time to immediately continue solving the customer issue.</p>
+</div>
+</div>
+</div>
+
+<p><a aria-live="assertive" bookmark-id="top" data-bi-name="content-anchor-link" href="https://support.microsoft.com/api/preview#top" managed-link="" tabindex="0">Return to top</a></p>
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Version History</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td><strong>Item</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Date</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/124507" managed-link="" target="_blank">CT 124507</a></td>
+			<td>Removed some CAIxxx related information.</td>
+			<td>Oct. 22, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/124089/?triage=true">CT 124089</a></td>
+			<td>Updated the Collaboration cheat sheet between Rave and SD, and removed a Note under SD to Rave.</td>
+			<td>October 10, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/123679/?triage=true">CT 123679</a></td>
+			<td>Added a clarification related to BC AR under Deviations or workarounds</td>
+			<td>September 27, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/123086/?triage=true" managed-link="">CT 123086</a></td>
+			<td>Changed TAM to IM</td>
+			<td>September 7, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/120584/?triage=true">CT 120584</a></td>
+			<td>Global - 4346610 - Procedure: Collab update to ACE collab intro</td>
+			<td>July 2, 2020</td>
+		</tr>
+		<tr>
+			<td><a data-content-id="" data-content-type="" href="https://dev.azure.com/contentidea/ContentIdea/_workitems/edit/120284" managed-link="" target="">CT 120284</a></td>
+			<td>Global - Updated 4346610 - Adjust new ACE collaboration guidance - Deadline: June 28th, 2020&nbsp;</td>
+			<td>June 24, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/119738/?triage=true">CT 119738</a></td>
+			<td>[AEEKM] Add&nbsp; - ACE Collaboration Request Handling Process</td>
+			<td>June 17, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/119195/?triage=true">CT 119195</a></td>
+			<td>[AEEKM] CXD 4346610 - Update content</td>
+			<td>June 1, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/117822" managed-link="" target="_blank"><span><span><span><span>CT 117822</span></span></span></span></a></td>
+			<td>Update AR screen shots and additional requirements on reassignment.</td>
+			<td>May 15, 2020</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/117526">CT</a>&nbsp;</span></span></span><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/117526">117526</a></p>
+			</td>
+			<td>Remove SCCM from deviation list and add one FAQ to RA section</td>
+			<td>May 7, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/116775/?triage=true">CT 116775</a></td>
+			<td>Added a highlighted Note section under <strong>Add&nbsp;detailed&nbsp;Description&nbsp;and&nbsp;Service Desk engineer&#39;s name &amp; alias&nbsp;so Rave engineer can contact directly.</strong></td>
+			<td>April 16, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/115875/?triage=true">CT 115875</a></td>
+			<td>Added a note section in <strong>2. Deviations or workarounds</strong></td>
+			<td>March 25, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/114460/?triage=true">CT 114460</a></td>
+			<td>
+			<p><span><span><span><span>Added a </span></span></span><span><span><span>n</span></span></span><span><span><span>ote section under Step 1. </span></span></span><span><span><span>Service Desk engineer creates a Collaboration task in Service Desk.</span></span></span></span></p>
+			</td>
+			<td>February 21, 2020</td>
+		</tr>
+		<tr>
+			<td><span><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/114257/?triage=true">CT 114257</a></span></td>
+			<td><span>[AEEKM] - Add Intune to the Rave to SD collaboration workaround procedure</span></td>
+			<td>February 20, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/113105/?triage=true">CT 113105</a></td>
+			<td>Updated DM alias in Collaboration Support Area Cheat Sheet</td>
+			<td>January 16, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/111684/?triage=true">CT 111684</a></td>
+			<td>
+			<p><span><span><span><span>Added the new info of <strong>Transfer and Reassign Assistance Requests</strong> under <strong>Rave Assistance Q&amp;A </strong>section.</span></span></span></span></p>
+			</td>
+			<td>December 2, 2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/109623/?triage=true" managed-link="">CT 109623</a></td>
+			<td>SPU1842 - Updated the Collaboration process from Service Desk to Rave and updated the new feature of Assistance Request.</td>
+			<td>October 25, 2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/106937/?triage=true">CT 106937</a></td>
+			<td>SPU1667 &ndash; Replaced the image under <strong>Collaboration from Service Desk to Rave,</strong> for there is no more Exchange under Office Product routing product.</td>
+			<td>September 4, 2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/106741">CT 106741</a></td>
+			<td>SPU1616 &ndash; Added <strong>FSLogix </strong>to the <strong>CAIWinUserEXP</strong> under the <strong>Collaboration Support Area Cheat Sheet</strong>.</td>
+			<td>August 28, 2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/105077">CT 105077</a></td>
+			<td>Added&nbsp;Region and Time Zone info for Rave to SD, SD to Rave and within Rave when going through the assistance request procedure. And added CAIWinSecurity info in Collaboration Support Area Cheat Sheet.</td>
+			<td>August 5, 2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/104379">CI 104379</a></td>
+			<td>Replaced Radius with MSaaS Support Portal (<a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmsaas.support.microsoft.com%2Fqueue&amp;data=02%7C01%7Cv-zejing%40microsoft.com%7C11636ea21c8d409433c708d709a77b11%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636988487235578193&amp;sdata=FemUbJbiHL6UkywQc8qNXzdVzZiSI59lUojv8O76vUs%3D&amp;reserved=0">https://msaas.support.microsoft.com/queue</a>).&nbsp;&nbsp;</td>
+			<td>July 17, 2019</td>
+		</tr>
+		<tr>
+			<td><span><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/109418" managed-link="" target="_blank">CT 109418</a></span></td>
+			<td><span>Rename request to change CAIWinAAD to CAIWinDS for Rave to Service Desk Collaboration.</span></td>
+			<td>Oct. 22, 2019</td>
+		</tr>
+		<tr>
+			<td><span><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/113312" managed-link="" target="_blank">CT 113312</a></span></td>
+			<td>Updated the Windows info under Collaboration cheat sheet.</td>
+			<td>Jan 21, 2020</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>

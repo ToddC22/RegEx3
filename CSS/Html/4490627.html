@@ -1,0 +1,1082 @@
+﻿<header><h1>ASMS - Modern Commerce Overview</h1></header><p class="MsoTitle"><span lang="EN"></span><span lang="EN">Submit a </span><a href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder="><span lang="EN">ModTrack</span></a><span lang="EN"> request to update this TSG.</span></p>
+
+<h3><a id="Overview" name="Overview">Overview</a></h3>
+
+<p><span lang="EN">This TSG provides a high-level overview of the Modern Commerce Platform project and the support scenarios ASMS may encounter when assisting Modern customers. </span></p>
+
+<p><span lang="EN">The Modern Commerce platform includes a new rating system, a new catalog/offer system (BigCat), new agreements, new invoicing, and a new end-to-end purchase experience.</span></p>
+
+<p><span lang="EN">There are two Modern offers:</span></p>
+
+<ol>
+	<li>
+	<p><span lang="EN"></span><strong><span lang="EN">17G</span></strong><span lang="EN"> for standard subscriptions</span></p>
+	</li>
+	<li>
+	<p><span lang="EN"></span><strong><span lang="EN">148G</span></strong><span lang="EN"> for DevTest subscriptions.</span></p>
+	</li>
+</ol>
+
+<p><strong><span lang="EN">Note</span></strong><span lang="EN">: This offer covers all Modern offers. Each channel is reflected in documentation as Customer Led (Modern Web Direct), Partner Led (Modern CSP) and Field Led (Modern EA-like). All customer segments operate identically in the Modern Commerce Platform.</span></p>
+
+<h3><a name="_Hlk496687051">Policy </a></h3>
+
+<ul>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">New Field Led customers are EA-like and some Field Led customers are renewing EA customers who are shepherded through the new system and Modernized.</span></p>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Products available at GA will be Devices, Perpetual Software (Volume Licenses) and Azure.</span></p>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Eventually all Commercial products will be available on Modern and will show up on one customer invoice (no ETA).</span></p>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Additionally, the Azure Marketplace is fully Modern and all customer Marketplace purchases are on the Modern Platform.</span></p>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Field Led Azure Modern (FLAM) customers are automatically entitled to an Azure Standard Support plan at no charge. They may choose to upgrade to a Premier Support plan which will show as an Asset in the customer&rsquo;s CST profile. There are no plans at this time to charge FLAM customers for the Azure Standard Support plan.</span></p>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Always engage ASE first when you are asked to engage ACE (unless there is an emergency).</span></p>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Do not use the ASE template as a way to open IcM tickets to any other team. ASE is not the same as IcM.</span></p>
+	</li>
+	<li>
+	<p><strong><span>Important</span></strong>: When assisting a customer, you may be required to provide them with a copy of details that contain Personal Identifiable Information (PII) (Ex: copy of invoice). In these scenarios, you must always be sure to delete these downloads from your computer&rsquo;s hard drive <span>as soon as you are done using them. This is to </span><span>avoid accidently exposing the customer&rsquo;s PII.</span></p>
+	</li>
+</ul>
+
+<h3><a name="_Hlk496687128">Customer Experience and Provisioning </a></h3>
+
+<p><span lang="EN">The Modern Commerce Platform is organized around customer assets.</span></p>
+
+<p><span lang="EN">An asset could be (but is not limited to):</span></p>
+
+<ul>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Usage Rating Asset, which is the container an Azure subscription uses to report usage to Commerce.</span></p>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Invoice Sections, which are also known as Projects in CST. Invoice Sections provide customers with functionality to logically separate sets of Assets on a given Invoice..</span></p>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Billing Profiles, known as Billing Groups in CST, which are used for: </span></p>
+
+	<ul style="list-style-type:circle">
+		<li>
+		<p><span lang="EN"></span><span lang="EN">Payment instrument management.</span></p>
+		</li>
+		<li>
+		<p><span lang="EN"></span><span lang="EN">Pricing scope which defines the discounts and prices to which a customer is entitled. </span></p>
+		</li>
+		<li>
+		<p><span lang="EN"></span><span lang="EN">Reservation products and marketplace SaaS products which were previously known as Marketplace Dev Services.</span></p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Billing Accounts, which are known as Organizations in CST. A Billing Account is the Legal Entity of a customer.</span></p>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Commerce Root, which is an internal-only term and can have multiple Billing Accounts representing different organizations within a company (e.g. Contoso US and Contoso Asia).</span></p>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Most assets will be transferrable both within a Commerce Root and also between Commerce Roots. &#8203;</span></p>
+	</li>
+</ul>
+
+<p><span lang="EN">&#8203;For more information and an overview of Modern Assets, refer to </span><a href="https://internal.support.services.microsoft.com/en-US/help/4492506"><span lang="EN">TSG 4492506</span></a><span lang="EN">.</span></p>
+
+<h4><strong>Platform Overview</strong></h4>
+
+<p>Azure Modern Commerce is field led and includes&nbsp;net new, non-Azure customers, and some renewing Azure EA customers that meet a certain set of criteria.</p>
+
+<ul>
+	<li>FL = Field Led</li>
+	<li>CL= Customer Led</li>
+	<li>PL= Partner Led</li>
+</ul>
+
+<p>The end-to-end flow at a high level is captured below:</p>
+
+<p>&#8203;&#8203;<span asset="4491664" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4491664]</span></p>
+
+<p><strong>End-to-End Flow</strong></p>
+
+<ol>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">The Customer receives communication from the Field through an Opportunity.</span></p>
+
+	<ul style="list-style-type:disc">
+		<li>
+		<p><span lang="EN"></span><span lang="EN">Field establishes base level of information (Sales Profile and Legal Entity).</span></p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">The Field builds a quote in Quote Center.</span></p>
+
+	<ul style="list-style-type:disc">
+		<li>
+		<p><span lang="EN"></span><span lang="EN">Quote can include (but not limited to):</span></p>
+
+		<ul style="list-style-type:circle">
+			<li>
+			<p><span lang="EN"></span><span lang="EN">Azure Pass (Commerce Rating Asset - 17G or 148G)</span></p>
+			</li>
+			<li>
+			<p><span lang="EN"></span><span lang="EN">Devices (Hololens, Surface, etc.)</span></p>
+			</li>
+			<li>
+			<p><span lang="EN"></span><span lang="EN">Volume Licenses (Perpetual Software)</span></p>
+			</li>
+			<li>
+			<p><span lang="EN"></span><span lang="EN">Azure consumption discounts</span></p>
+
+			<ul style="list-style-type:disc">
+				<li>
+				<p><span lang="EN"></span><span lang="EN">Discounts can include (but not limited to) specific SKUs, resources, blanket Azure consumption discounts, etc.</span></p>
+				</li>
+			</ul>
+			</li>
+			<li>
+			<p><span lang="EN"></span><span lang="EN">Azure Pre-Payment, previously known as paid monetary commitment</span></p>
+			</li>
+			<li>
+			<p><span lang="EN"></span><span lang="EN">Azure Promotional Credit, previously know as Monetary Credit</span></p>
+			</li>
+			<li>
+			<p><span lang="EN"></span><span lang="EN">Monetary credit (sign up bonus from MS - applied to Commitment balance)</span></p>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">The Customer receives an e-mail with a link to the Store for Business (SfB) or the Microsoft Admin Center (MAC) with a shopping cart experience with all the quoted material.</span></p>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Once the Customer has reviewed and approves the quote, they are sent through a purchase workflow in SfB/MAC to purchase all products in their cart.</span></p>
+
+	<ul style="list-style-type:disc">
+		<li>
+		<p><span lang="EN"></span><span lang="EN">During the purchase, the Customer will be prompted to fill in additional details about their company and provide a Payment Instrument (PI).</span></p>
+		</li>
+		<li>
+		<p><span lang="EN"></span><span lang="EN">A Billing Account and Billing Profile (formally billing group) will be automatically created in the Modern Commerce Platform with Monetary Commitment (MC) as the primary/default payment method (if configured during quoting) and Check/Wire as the backup payment method.</span></p>
+
+		<ul style="list-style-type:circle">
+			<li>
+			<p><span lang="EN"></span><span lang="EN">Field Led customers (only) have the ability to create new Billing Profiles (Formerly Billing Group) via self-serve. More details on this ability can be found here: </span><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fbilling%2Fbilling-mca-section-invoice&amp;data=02%7C01%7Cmievan%40microsoft.com%7Ca509e2149d9b44f0689c08d7907617e3%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637136709184893105&amp;sdata=0iz%2FycgTr6M%2Fp9QWgjpMt8w0cDOHe6m2ohHhLrRL1bw%3D&amp;reserved=0"><span lang="EN">https://docs.microsoft.com/en-us/azure/billing/billing-mca-section-invoice</span></a><span lang="EN">.<br>
+			<strong>Note:</strong> Self-serve transfers between billing groups is currently not supported. Support can assist customers with this action by using the Asset Transfer functionality in CST.</span></p>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">After purchase of an Azure Pass is complete, an Azure subscription for each Azure Pass type (17G and 148G) will be automatically provisioned and attached to the Customer&#39;s Modern Commerce account.</span></p>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Upon consumption, Reservation purchases, and Marketplace purchases in Azure, each RP will send usage to Commerce.</span></p>
+
+	<ol>
+		<li>
+		<p><span lang="EN"></span>Commerce calculates price based on usage.</p>
+		</li>
+		<li>
+		<p><span lang="EN"></span>Modifies based on the Azure Pass rating (Production or Dev/Test discount).</p>
+		</li>
+		<li>
+		<p><span lang="EN"></span>Modifies based on Quoted discounts.</p>
+		</li>
+		<li>
+		<p><span lang="EN"></span>Sends full cost to Modern Billing.</p>
+		</li>
+		<li>
+		<p><span lang="EN"></span>Invoices on the 5th of every month for the previous calendar month.</p>
+		</li>
+	</ol>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">The Customer receives their invoice on the 5th of every month for consumption and purchases in the previous month.</span></p>
+
+	<ul style="list-style-type:disc">
+		<li>
+		<p><span lang="EN"></span><span lang="EN">This invoice includes all purchases through the above flow.</span></p>
+		</li>
+	</ul>
+	</li>
+</ol>
+
+<p><span lang="EN">Customers can manage their Commerce assets through either <a href="https://admin.microsoft.com/">Microsoft Admin Center</a> or Ibiza.</span></p>
+
+<p><span lang="EN">For more detailed steps on possible customer experiences, review the </span><a href="https://microsoft.sharepoint.com/:w:/r/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/ASMS-Modern%20Commerce%20User%20Experience.docx?d=w2753a20e18d64c84a86d6d18b15e1cb2&amp;csf=1&amp;e=3e2mIj" target="_blank"><span lang="EN">Modern Commerce User Experience</span></a><span lang="EN"> document. </span></p>
+
+<p><span lang="EN">Below is an example structure of a customer&#39;s assets with a Modern Commerce footprint:</span></p>
+
+<p><span asset="4491667" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4491667]</span></p>
+
+<p><strong>Customer Footprints</strong></p>
+
+<p>Azure customers can have multiple Commerce footprints, depending on their sales channel.</p>
+
+<p>Use the table below to determine which channel is used for each customer.&nbsp;</p>
+
+<ul>
+	<li>CR = Commerce/Customer Root</li>
+	<li>FLAM = Field Led Azure Modern</li>
+	<li>CST = Customer Support Tool</li>
+</ul>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="138">
+			<p><strong>Channel/Motion </strong></p>
+			</td>
+			<td width="138">
+			<p><strong>Entities</strong></p>
+			</td>
+			<td width="138">
+			<p><strong>Base Azure</strong></p>
+			</td>
+			<td width="138">
+			<p><strong>RI Purchases</strong></p>
+			</td>
+			<td width="138">
+			<p><strong>Marketplace</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="138">
+			<p>Web Direct</p>
+			</td>
+			<td width="138">
+			<p>Footprint</p>
+
+			<p>Support Tool</p>
+			</td>
+			<td width="138">
+			<p>OMS/Legacy</p>
+
+			<p>CMAT, EA Admin</p>
+			</td>
+			<td width="138">
+			<p>Modern CR1</p>
+
+			<p>CST, CMAT, EA Admin</p>
+			</td>
+			<td width="138">
+			<p>Modern CR1</p>
+
+			<p>CST</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="138">
+			<p>CSP</p>
+			</td>
+			<td width="138">
+			<p>Footprint</p>
+
+			<p>Support Tool</p>
+			</td>
+			<td width="138">
+			<p>OMS/Legacy</p>
+
+			<p>CMAT</p>
+			</td>
+			<td width="138">
+			<p>Modern CR2</p>
+
+			<p>CST, CMAT</p>
+			</td>
+			<td width="138">
+			<p>FLAM CR2</p>
+
+			<p>CST, CSC</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="138">
+			<p>EA</p>
+			</td>
+			<td width="138">
+			<p>Footprint</p>
+
+			<p>Support Tool</p>
+			</td>
+			<td width="138">
+			<p>OMS/Legacy</p>
+
+			<p>CMAT</p>
+			</td>
+			<td width="138">
+			<p>Modern CR3</p>
+
+			<p>CST, CMAT, EA Admin</p>
+			</td>
+			<td width="138">
+			<p>FLAM CR3</p>
+
+			<p>CST</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="138">
+			<p>FLAM<br>
+			Happy Path/Modern Customer</p>
+			</td>
+			<td width="138">
+			<p>Footprint</p>
+
+			<p>Support Tool</p>
+			</td>
+			<td width="138">
+			<p>FLAM/Modern CR4</p>
+
+			<p>CST</p>
+			</td>
+			<td width="138">
+			<p>FLAM/Modern CR4</p>
+
+			<p>CST</p>
+			</td>
+			<td width="138">
+			<p>FLAM/Modern CR4</p>
+
+			<p>CST</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h3><a name="_Hlk496687096">Support Scenarios</a></h3>
+
+<p>Use the following support scenarios to best determine how to assist the customer.&nbsp;</p>
+
+<h4>Offer Conversions&nbsp;</h4>
+
+<ul>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Offer conversions supported (17G to 148G or 148G to 17G). </span></p>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Use CST or CMAT to convert the offer as applicable. Reference&nbsp;the below table for details.</span></p>
+
+	<ul>
+		<li>
+		<p><strong>Note: </strong>If an attempt is made to convert a Legacy subscription on a MCA to another legacy offer via CST,&nbsp;it will fail with the following error message: &quot;<em>Get Product Subscripiton Eligibility Failed. LegacyToLegacyIsNotSupported - Conflict: account __&nbsp;is linked to a modern account, but its type as the transfer destination is WD instead.&quot;</em><br>
+		<br>
+		This is by design, as this action is not allowed.&nbsp;Legacy offers under modern accounts must be converted to 17G only.</p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><strong><span lang="EN">Note:</span></strong><span lang="EN"> ACE Tier 1 &ndash; Subscription Lifecycle should only be contacted through the ASE escalation path. ASE will engage ACE and get back to you with an appropriate response. For more information, see </span><a href="https://internal.support.services.microsoft.com/en-us/help/3093263" target="_blank"><span lang="EN">TSG 3093263</span></a><span lang="EN">.</span></p>
+	</li>
+</ul>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td><strong>Account</strong></td>
+			<td><strong>Subscription</strong></td>
+			<td><strong>Convert to Legacy Offer</strong></td>
+			<td><strong>Convert to Modern offer</strong></td>
+		</tr>
+		<tr>
+			<td>Modern</td>
+			<td>Modern</td>
+			<td>Not allowed</td>
+			<td>N/A</td>
+		</tr>
+		<tr>
+			<td>Modern</td>
+			<td>Legacy</td>
+			<td>Not allowed</td>
+			<td>Allowed via CST only.</td>
+		</tr>
+		<tr>
+			<td>Legacy</td>
+			<td>Legacy</td>
+			<td>Allowed via CMAT only.</td>
+			<td>Not allowed.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h4>Subscription Ownership Transfers (SOT)&nbsp;</h4>
+
+<ul>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">When assisting a customer with an SOT you should follow the normal SOT process outlined in </span><a href="https://internal.support.services.microsoft.com/en-US/help/3040383" target="_blank"><span lang="EN">TSG 3040383</span></a><span lang="EN">. However, you should note the following when assisting customers who have Marketplace purchases:</span></p>
+
+	<ul style="list-style-type:circle">
+		<li>
+		<p><span lang="EN"></span><span lang="EN">If the customer has a legacy account, you will need to look the customer up via CMAT.</span></p>
+		</li>
+		<li>
+		<p><span lang="EN"></span><span lang="EN">If the customer is on modern, you will need to look the customer up via CST. </span></p>
+		</li>
+		<li>
+		<p><span lang="EN">Self-serve asset transfer steps can be found <a href="https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/mca-request-billing-ownership">here</a>.</span></p>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<p><strong><span lang="EN">Note:</span></strong><span lang="EN"> If transfer eligibility details are not clear in CMAT or CST, escalate to PayOps&nbsp;f<span><span lang="EN"><span>or Partner Led and Customer Led customers. For Field Led MCA customers, escalate to Azure BizOps.</span></span></span></span></p>
+
+<h4><span lang="EN"></span>Migrating to MCA</h4>
+
+<p><span id="part1">If a customer wants to migrate to a Modern Commerce Agreement (MCA), refer their information to Inside Sales using <a href="http://aka.ms/Grow" managed-link="" target="_blank">this CSS promotional form</a>. Additional information about the CSS promotion can be found <a href="https://microsoft.sharepoint.com/teams/CSS/SitePages/Advise-Me.aspx?web=1" managed-link="" target="_blank">here</a>. </span></p>
+
+<h4>Billing and Usage Validation&nbsp;</h4>
+
+<ul style="list-style-type:disc">
+	<li>Standard processes should be followed for Billing and Usage Validation.</li>
+	<li>To learn more about the&nbsp;billing permission levels see&nbsp;<a href="http://aka.ms/mcapiauthz" managed-link="" target="_blank">http://aka.ms/mcapiauthz</a>.&nbsp;</li>
+	<li>
+	<p>If a customer is unable to view the Pay Now option, provide the customer with the following&nbsp;link: <em>https://portal.azure.com/#blade/Microsoft_Azure_Billing/PayNowBlade/invoiceId/&lt;invoiceID&gt;</em></p>
+
+	<p><strong>Note:</strong>&nbsp;&lt;invoiceID&gt; will be replaced with the invoice number the customer is attempting to pay.</p>
+	</li>
+	<li>Customer Support Tool (CST) specific actions can be found <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4487922" managed-link="" target="_blank">here </a>or in the&nbsp;<a href="https://learn.microsoft.com/activity/S2787841/launch/">CST Overview training</a>.&nbsp;</li>
+	<li><span><span><span><span>When a customer signs an MCA and migrates their subscriptions, the charges against that subscription move with it to the new billing mechanism (MCA). Customers may inquire about overbilling or overlapping usage dates once they have received their first MCA invoice.<br>
+	<br>
+	In these instances, you should note that t</span></span>here is no double billing, as subscription charges are either rated under their legacy billing agreement or the MCA, not both.&nbsp;</span></span>
+	<ul style="list-style-type:circle">
+		<li>For example:&nbsp;<br>
+		<br>
+		<span><span><span><span>A PAYG customer moves to Modern on September 4th. Usage from that time forward will show up on the Oct 5th MCA invoice, generated for the September charges. However, the customer will also receive an invoice outlining the usage prior to the move, covering their July10th - Aug 9th billing cycle (as this is the way the Legacy billing cycles works).</span></span></span></span><span><span><span><span><br>
+		<br>
+		The customer should be able to download their usage files for each invoice and see when the charges stopped on the PAYG under the Legacy billing model, and charges picked back up on the MCA invoice post the migration.</span></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<h4>Quota Increase Experience for ASMS</h4>
+
+<ul style="list-style-type:disc">
+	<li><strong>Quota increases for 17G</strong> and <strong>148G</strong> subscriptions should treated handled&nbsp;following the normal quota process. See TSGs&nbsp;<a href="https://internal.support.services.microsoft.com/en-US/help/2834676" managed-link="" target="_blank">2834676</a> and&nbsp;<a href="https://internal.support.services.microsoft.com/en-US/help/4086154" managed-link="" target="_blank">4086154</a>.&nbsp;</li>
+	<li>The current quota limitations are available here: <a href="https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits">Azure subscription and service limits, quotas, and constraints</a>.</li>
+</ul>
+
+<h4>Credits and Refunds</h4>
+
+<ul>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Standard credit and refunds policies should be followed.</span></p>
+	</li>
+	<li>
+	<p><span lang="EN"></span><span lang="EN">Customer Support Tool (CST) specific actions can be found </span><a href="https://internal.support.services.microsoft.com/en-us/help/4487922" target="_blank"><span lang="EN">here </span></a><span lang="EN">or in the </span><a href="https://learn.microsoft.com/activity/S2787841/launch/"><span lang="EN">CST Overview training</span></a><span lang="EN">. </span></p>
+	</li>
+</ul>
+
+<h4>Pricing&nbsp;</h4>
+
+<ul>
+	<li>
+	<p>Customers are limited to one of 17 currencies.</p>
+	</li>
+	<li>
+	<p>USD &ndash; US Dollar</p>
+	</li>
+	<li>AUD - Australian dollar</li>
+	<li>BRL - Brazilian real</li>
+	<li>CAD - Canadian dollar</li>
+	<li>CHF - Swiss franc</li>
+	<li>CNY - Chinese yuan</li>
+	<li>DKK - Danish krone</li>
+	<li>EUR &ndash; Euro</li>
+	<li>GBP - British pound</li>
+	<li>INR - Indian rupee</li>
+	<li>JPY - Japanese yen</li>
+	<li>KRW &ndash; Korean Won</li>
+	<li>NOK - Norwegian krone</li>
+	<li>NZD - New Zealand dollar</li>
+	<li>RUB - Russian ruble</li>
+	<li>SEK &ndash; Swedish Krona</li>
+	<li>TWD &ndash; Taiwan Dollar</li>
+</ul>
+
+<ul style="list-style-type:circle">
+	<li>
+	<p>All pricing is in USD and will have an exchange rate applied based on the customer&#39;s account address.</p>
+
+	<ul style="list-style-type:circle">
+		<li>Exchange Rates (FXRates) are determined at the end of each month for the following month&#39;s rate and each invoice is calculated using this rate.&nbsp;</li>
+		<li>Customer invoices will show the applied Exchange Rate each month.</li>
+		<li>Current and historical rates, as well as a rate calculator, can be found here: <a href="https://microsoft.sharepoint.com/teams/treasury/forex/Pages/default.aspx">https://microsoft.sharepoint.com/teams/treasury/forex/Pages/default.aspx</a>&#8203;&#8203;.</li>
+		<li>Currency mapping by location can be found in this spreadsheet: <a href="http://assetsprod.microsoft.com/modern-offers-country-currency-availability.xlsx">http://assetsprod.microsoft.com/modern-offers-country-currency-availability.xlsx&#8203;</a>.</li>
+		<li>The pricing displayed to the customer in all local currencies supported in Modern is accurate at time of purchase. There is no additional FX rate applied.</li>
+	</ul>
+	</li>
+	<li>
+	<p>All Azure consumption is priced in USD.</p>
+	</li>
+</ul>
+
+<h4><strong><a id="AcceptingMCA" name="AcceptingMCA"></a>Accepting Microsoft Customer Agreements (MCA)</strong></h4>
+
+<p><strong>Note</strong>: MCAs are not eligible for the Public Sector.</p>
+
+<p>When converting from an EA agreement to a MCA agreement, some customers are experiencing the following error when trying to accept their MCA Agreement.&nbsp;</p>
+
+<p class="indent-1"><em>&#8203;&quot;A Microsoft Customer Agreement is required to complete the setup of your billing account. We couldn&#39;t find an agreement associated with the Enterprise Agreement enrollment </em><em>&nbsp;</em><em>______. If you think this is an error, contact Azure Support.&quot;</em></p>
+
+<p>In these instances, do the following to assist the customer:&nbsp;</p>
+
+<ol>
+	<li>Confirm that the email the customer is using to sign-in with, matches the authentication type in the EA portal.<br>
+	<br>
+	<strong>Note:</strong> &#8203;If the email has a work or school account authentication in the EA portal, then they need to sign-in using that same work or school account to accept the agreement.<br>
+	&nbsp;</li>
+	<li>If you have verified that the customer is using the correct email but still experiencing an error, engage the Azure Commercial Experience &#8203;&#8203;Tier 1 team using <a data-content-id="" data-content-type="" href="https://portal.microsofticm.com/imp/v3/incidents/create?tmpl=z1n392" managed-link="" target="_blank">this IcM</a>.</li>
+</ol>
+
+<p>Under MCA agreement, there should be 2 plans quoted:</p>
+
+<ul>
+	<li>Microsoft Azure</li>
+	<li>Microsoft Azure DevTest</li>
+</ul>
+
+<div>If either of the plans are not available under assets, then EA to MCA transition will fail and we have to engage ACE team to contact the seller to quote the missing Azure Plan to the customer.</div>
+
+<div>&nbsp;</div>
+
+<div>
+<p><strong>Note:</strong>&nbsp;ACE&nbsp;should only be contacted through the ASE escalation path. ASE will engage&nbsp;ACE&nbsp;and get back to you with an appropriate response. For more information, see&nbsp;<a data-bi-name="content-anchor-link" href="https://internal.support.services.microsoft.com/en-us/help/3093263" managed-link="" tabindex="0" target="_blank">TSG 3093263</a></p>
+</div>
+
+<div>Alternatively, if accepting MCA quote fails on Azure portal, this direct URL can be used by the person who received the email to accept the MCA quota: <a href="https://businessstore.microsoft.com/en-us/manage/organization/agreements" managed-link="" target="_blank">https://businessstore.microsoft.com/en-us/manage/organization/agreements</a>.&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>After this is accepted, when the same user goes to Azure Portal under Cost Management + Billing, they will see a new MCA Billing Account where their role will be Billing Profile owner.</div>
+
+<div>&nbsp;</div>
+
+<div>Then they can start the transition from EA to MCA if they are the EA Admin or they can make an existing EA Admin Billing Profile Owner via Access Control IAM under Cost Management Billing Account blade.</div>
+
+<div>&nbsp;</div>
+
+<p>Public facing article on how to setup billing in MCA: <a href="https://docs.microsoft.com/en-us/azure/billing/billing-mca-setup-account" target="_blank">https://docs.microsoft.com/en-us/azure/billing/billing-mca-setup-account</a></p>
+
+<div>
+<p><span lang="EN">Public facing article on how to organize the MCA Account: </span><a href="https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/mca-section-invoice">https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/mca-section-invoice</a></p>
+</div>
+
+<div>
+<h4>Edit Company Information&nbsp;</h4>
+
+<p><span lang="EN">CST does not currently offer the option to edit customer name, address, and other company information.&nbsp;&nbsp;Self-serve functionality is available in <a href="https://admin.microsoft.com/">MAC</a> for customers <strong>who do not have amendments to their MCA.</strong></span></p>
+
+<p><span lang="EN">For customers who have amendments to their MCA, please follow the process outlined in <a href="https://internal.support.services.microsoft.com/en-us/help/4535714" managed-link="" target="_blank">TSG&nbsp;</a><span lang="EN"><a href="https://internal.support.services.microsoft.com/en-us/help/4535714" managed-link="" target="_blank">4535714</a>.&nbsp;</span>&nbsp;</span></p>
+
+<p><span lang="EN"></span></p>
+
+<p><span lang="EN">If self-service fails via Microsoft Admin Center, please submit an <a href="https://portal.microsofticm.com/imp/v3/incidents/create?tmpl=eD1Sy1" managed-link="" target="_blank">IcM </a>to update company information.</span></p>
+</div>
+
+<h3>Glossary</h3>
+
+<p>Below is a list of common terms and acronyms for Modern Commerce, for the platform and FLAM.&nbsp;</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="386">
+			<p><strong>Term</strong></p>
+			</td>
+			<td width="386">
+			<p><strong>Definition</strong></p>
+			</td>
+			<td width="386">
+			<p><strong>Examples</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>Admin Center (SfB Admin Center)</p>
+			</td>
+			<td width="386">
+			<p>Customer portal in SfB for managing invoices, payments, Commerce Assets, company profile, etc.</p>
+			</td>
+			<td width="386">Ibiza shows the same types of information as SfB/Admin Center.</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>Asset</p>
+			</td>
+			<td width="386">Management object in Modern Commerce which represents footprint of ownership and management usually acquired through a purchase.</td>
+			<td width="386">Azure Access Pass - Azure Standard, which can be multiple 17g subscriptions that roll up to the same Billing Group.</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>Azure Access Pass</p>
+			</td>
+			<td width="386">
+			<p>Commerce Rating Asset that provides rating context and Commerce access to Azure subscriptions. Many subscriptions can be tied to one Azure Access Pass (Commerce Rating Asset).</p>
+
+			<p>An Azure Access Pass (Azure specific product) is purchasable throug Field Led quotes for free and is a pre-requisite for all Azure consumption and overage billing. It is used for rating and billing for consumption-based Azure (not RI).</p>
+
+			<p>The Access Pass is configured with a billing group to pay for the charges. Multiple Azure Subs can be billed against an Access Pass enabling collective graduated pricing. Customers can also move Azure Subs across Access Passes. Azure Subs are used as an Azure deployment and management container.</p>
+			</td>
+			<td width="386">
+			<p>Customer can have 2 Production Azure subscriptions (0017G) tied to a 17G Commerce Rating Asset.</p>
+
+			<p>17G is the Azure Pass, so customer can have 2 Production Azure subscriptions (0017G) tied to a 17G.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>Billing Profile (Billing Group)</p>
+			</td>
+			<td width="386">
+			<p>Commerce Asset for PI management.</p>
+			</td>
+			<td width="386">
+			<p>An invoice is generated for each Billing Profile. The invoice is broken down into Invoice Sections/Projects and then in to Azure Access Passes under those Invoice Sections.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="386">Billing Account/Organization</td>
+			<td width="386">Commerce Asset that identifies the Legal Entity and Sold-to information for a customer.</td>
+			<td width="386">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>Commerce Root (Commercial Root, Customer Root, Legal Entity, Billing Account-Ibiza)</p>
+			</td>
+			<td width="386">
+			<p>Top-level Asset that identifies a customer and is parent to all customer assets.</p>
+			</td>
+			<td width="386">
+			<p>N/A</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>Credits (Ibiza)</p>
+			</td>
+			<td width="386">
+			<p>Combination of Paid Monetary Credit and Microsoft-provided Monetary Credits (from sales for incentive or Azure BizOps for SIE). Each credit is represented in &quot;lots&quot;.</p>
+			</td>
+			<td width="386">N/A</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>Customer Support Tool (CST)</p>
+			</td>
+			<td width="386">
+			<p>Support tooling for Modern Commerce customers and transactions. The replacement for CMAT&nbsp;(Service Desk - Customer View).&nbsp;</p>
+			</td>
+			<td width="386">
+			<p>N/A</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>FLAM (Field Led Azure Modern, Modern Commerce Platform)</p>
+			</td>
+			<td width="386">
+			<p>Project name for Azure Modernized Customers that are onboarded through the Field (Sales) team.</p>
+			</td>
+			<td width="386">N/A</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>Invoice Sections (Projects, Invoice Segments)</p>
+			</td>
+			<td width="386">
+			<p>In Ibiza, the concept of Project is being simplified and logically attached to a billing group, creating the concept of Invoice Segments.</p>
+			</td>
+			<td width="386">
+			<p>On a customer invoice, the Invoice will be broken down in to &quot;Invoice Sections&quot; on the detail pages.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>Lot (Purchase Record)</p>
+			</td>
+			<td width="386">
+			<p>Line item in Commerce to represent a purchase record. This is mainly used with regards to Monetary Credit.</p>
+			</td>
+			<td width="386">N/A</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>Marketplace SaaS (Dev Services)</p>
+			</td>
+			<td width="386">
+			<p>Monthly subscription-based third-party products on the Azure Marketplace.</p>
+			</td>
+			<td width="386">
+			<p>SendGrid</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>MCAPI (Modern Commerce API)</p>
+			</td>
+			<td width="386">
+			<p>Commerce Platform API for clients (such as Ibiza and Store for Business) to transact with Modern Commerce (to replace OMS).</p>
+			</td>
+			<td width="386">N/A</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>Paid Monetary Credit (Monetary Commitment)</p>
+			</td>
+			<td width="386">
+			<p>Upfront money the customer commits to at time of purchasing quote through SfB. Paid Monetary Credit amount is immediately billed and invoiced.</p>
+			</td>
+			<td width="386">
+			<p>N/A</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>Quote Center (QC)</p>
+			</td>
+			<td width="386">
+			<p>Field (Sales) focused portal for creating customer quotes. Can include discounts, Monetary Credits, Monetary Commitment, etc. Quote is published and transacted (purchased) through SfB.</p>
+			</td>
+			<td width="386">N/A</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>Rating Asset (Azure Access Pass)</p>
+			</td>
+			<td width="386">
+			<p>Commerce Object that contains rating context.</p>
+			</td>
+			<td width="386">
+			<p>Azure Access Pass - 17G or 148G. This will not be exposed to the customer in any way.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>Store for Business (SfB)</p>
+			</td>
+			<td width="386">
+			<p>New UST (Universal Store) Storefront where all Modern commercial transactions will take place.</p>
+			</td>
+			<td width="386">Customers will eventually be able to transact on more than Azure and Perpetual Software via SfB.</td>
+		</tr>
+		<tr>
+			<td width="386">
+			<p>Usage Rating Asset</p>
+			</td>
+			<td width="386">
+			<p>Asset connected to each Azure subscription. This asset is not exposed to customers. There is a 1:1 relationship between a Usage Rating Asset and an Azure Subscription. Transfer of FLAM Azure Subscription is done at the Usage Asset level.</p>
+			</td>
+			<td width="386">N/A<br>
+			&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3><br>
+<a id="Engagement and Escalation Path" name="Engagement and Escalation Path">Engagement and Escalation Path</a></h3>
+
+<p>For questions or scenarios not mentioned in this TSG or related TSGs, engage your TA/PTA for further assistance. &nbsp;</p>
+
+<p>Before engaging any of the teams mentioned below, be sure to check that the customer details are properly reflecting the following:</p>
+
+<ul>
+	<li><em>Field Led</em> for&nbsp;Azure Ops engagement.&nbsp;</li>
+	<li><em>Customer</em> or <em>Partner Led</em> for PayOps engagement.&nbsp;</li>
+</ul>
+
+<p><strong>Note:</strong> ACE&nbsp;should only be contacted through the ASE escalation path. ASE will engage&nbsp;ACE&nbsp;and get back to you with an appropriate response. For more information, see&nbsp;<a data-bi-name="content-anchor-link" href="https://internal.support.services.microsoft.com/en-us/help/3093263" managed-link="" tabindex="0" target="_blank">TSG 3093263</a>.&nbsp;</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td><strong>Issue Description&nbsp;</strong></td>
+			<td><strong>Engagement Path MCA Field Led</strong></td>
+			<td><strong>Engagement Path MCA Customer Led &amp; Partner Led</strong></td>
+		</tr>
+		<tr>
+			<td>Customer disputes quoted discounts</td>
+			<td>Direct the customer to work with their Field/Insight Salesperson.</td>
+			<td>Direct the customer to work with their Field/Insight Salesperson.</td>
+		</tr>
+		<tr>
+			<td>Customer receives &quot;<em>Can&#39;t set up the billing account&quot;&nbsp;</em>error while accepting MCA agreement on the Azure portal.</td>
+			<td>
+			<p><span><span><span>Before escalating to this team, you must first verify the email the customer is&nbsp;signing in with matches the authentication type in the EA portal.</span></span></span></p>
+
+			<p><strong><span><span><span>Note: </span></span></span></strong><span><span><span>If an email has a work or school account authentication type in the EA portal, then they need to sign in using a work or school account to accept the agreement.</span></span></span></p>
+			<span><span><span>If determined that the email and authentication type match, but the customer is still experiencing issues, submit an IcM: <a data-content-id="" data-content-type="" href="https://portal.microsofticm.com/imp/v3/incidents/create?tmpl=z1n392" managed-link="" target="_blank">https://portal.microsofticm.com/imp/v3/incidents/create?tmpl=z1n392</a></span></span></span></td>
+			<td>
+			<p>Before escalating to this team, you must first verify the email the customer is signing in with matches the authentication type in the EA portal.</p>
+
+			<p><strong><span><span><span>Note: </span></span></span></strong><span><span><span>If an email has a work or school account authentication type in the EA portal, then they need to sign in using a work or school account to accept the agreement.</span></span></span></p>
+			<span><span><span>If determined that the email and authentication type match, but the customer is still experiencing issues, submit an IcM: </span></span></span><a data-content-id="" data-content-type="" href="https://portal.microsofticm.com/imp/v3/incidents/create?tmpl=z1n392" managed-link="" target="_blank">https://portal.microsofticm.com/imp/v3/incidents/create?tmpl=z1n392</a>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Issues in Store for Business or Admin Center</td>
+			<td>Use the existing engagement paths to contact O365 support.</td>
+			<td>Use the existing engagement paths to contact O365 support.</td>
+		</tr>
+		<tr>
+			<td>Issues with application of quoted discount</td>
+			<td><a data-content-id="" data-content-type="" href="https://msazure.visualstudio.com/Azure%20Ops/_dashboards/dashboard/f13d38a5-d669-4055-afac-e5a13174457b" managed-link="" target="_blank">Azure Ops</a></td>
+			<td>PayOps</td>
+		</tr>
+		<tr>
+			<td>Issues with Asset Management in the Azure Portal&nbsp;</td>
+			<td>ASE</td>
+			<td>ASE</td>
+		</tr>
+		<tr>
+			<td>Issues with Asset Transfer</td>
+			<td><a data-content-id="" data-content-type="" href="https://msazure.visualstudio.com/Azure%20Ops/_dashboards/dashboard/f13d38a5-d669-4055-afac-e5a13174457b" managed-link="" target="_blank">Azure Ops</a></td>
+			<td>PayOps</td>
+		</tr>
+		<tr>
+			<td>Issues with Easy Button EA to Modern Conversion in the Azure Portal&nbsp;</td>
+			<td>ACE (via ASE)</td>
+			<td>
+			<p>ACE (via ASE)</p>
+			</td>
+		</tr>
+		<tr>
+			<td>Issues with Modern Commerce Permissions</td>
+			<td>Once confirmed that the customer should have permission, escalate to <a data-content-id="" data-content-type="" href="https://msazure.visualstudio.com/Azure%20Ops/_dashboards/dashboard/f13d38a5-d669-4055-afac-e5a13174457b" managed-link="" target="_blank">Azure Ops</a>.</td>
+			<td>Once confirmed that the customer should have permimssion, escalate to PayOps.</td>
+		</tr>
+		<tr>
+			<td>Issues with providing customer a credit</td>
+			<td>
+			<p><span><span><span><span><a data-content-id="" data-content-type="" href="https://msazure.visualstudio.com/Azure%20Ops/_workitems/create/Credit%20Issue?templateId=cca61eb4-e237-469c-ad61-f5f9514eb2ed" managed-link="" target="_blank">Azure Ops (EA Credit Request Form</a>)<br>
+			<br>
+			Follow the credit process outlined in <a href="https://internal.support.services.microsoft.com/en-US/help/4094770" managed-link="" target="_blank">TSG&nbsp;</a><span><span><span><span><a href="https://internal.support.services.microsoft.com/en-US/help/4094770" managed-link="" target="_blank">4094770</a>.&nbsp;</span></span></span></span></span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span><a data-content-id="" data-content-type="" href="https://msazure.visualstudio.com/Azure%20Ops/_workitems/create/Credit%20Issue?templateId=cca61eb4-e237-469c-ad61-f5f9514eb2ed" managed-link="" target="_blank">Azure Ops (EA Credit Request Form</a>)</span></span></span></span></p>
+
+			<p><span><span><span><span>Follow the credit process outlined in <a href="https://internal.support.services.microsoft.com/en-US/help/4094770" managed-link="" target="_blank">TSG&nbsp;</a><span><span><span><span><a href="https://internal.support.services.microsoft.com/en-US/help/4094770" managed-link="" target="_blank">4094770</a>.&nbsp;</span></span></span></span></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>Issues with negotiated pricing, terms of MCA signed, or monetary credit given</td>
+			<td>Direct the customer to work with their Field/Insight Salesperson.</td>
+			<td>Not Applicable &ndash; There is no negotiation of pricing for these customers.</td>
+		</tr>
+		<tr>
+			<td>Issues with Pricing Scope</td>
+			<td><a data-content-id="" data-content-type="" href="https://msazure.visualstudio.com/Azure%20Ops/_dashboards/dashboard/f13d38a5-d669-4055-afac-e5a13174457b" managed-link="" target="_blank">Azure Ops</a></td>
+			<td>PayOps</td>
+		</tr>
+		<tr>
+			<td>Issues/bugs with Marketplace</td>
+			<td><a data-content-id="" data-content-type="" href="https://msazure.visualstudio.com/Azure%20Ops/_dashboards/dashboard/f13d38a5-d669-4055-afac-e5a13174457b" managed-link="" target="_blank">Azure Ops</a></td>
+			<td>PayOps</td>
+		</tr>
+		<tr>
+			<td>Issues/errors in the Billing tabs of Cost Management + Billing blade</td>
+			<td><span><span><span>ACE (via ASE)</span></span></span></td>
+			<td><span><span><span>ACE (via ASE)</span></span></span></td>
+		</tr>
+		<tr>
+			<td>Issues with converting 17G to/from 148G&nbsp;</td>
+			<td><a href="https://msazure.visualstudio.com/Azure%20Ops/_dashboards/dashboard/f13d38a5-d669-4055-afac-e5a13174457b">Azure Ops</a></td>
+			<td>PayOps</td>
+		</tr>
+		<tr>
+			<td>Questions or issues with Perpetual Software</td>
+			<td>M365 Support</td>
+			<td>M365 Support</td>
+		</tr>
+		<tr>
+			<td>Issues with CST</td>
+			<td><a href="https://msazure.visualstudio.com/Azure%20Ops/_dashboards/dashboard/f13d38a5-d669-4055-afac-e5a13174457b">Azure Ops</a></td>
+			<td>PayOps</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3><br>
+<a id="Online References" name="Online References">Online References</a></h3>
+
+<ul>
+	<li><a href="http://assetsprod.microsoft.com/modern-offers-country-currency-availability.xlsx">Currency mapping by location</a> (.xslx)</li>
+	<li><a href="https://microsoft.sharepoint.com/teams/treasury/forex/Pages/default.aspx">Current and historical Exchange Rates</a></li>
+	<li><a href="https://docs.microsoft.com/en-us/azure/cost-management/understand-cost-mgt-data">Supported Azure Cost Management Offers</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/betaazureSM/ASMS%20Supportability/Modern%20Support%20Experience.aspx" managed-link="" target="_blank">Customer Support Tool (CST) User Experience - Wiki</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4487922" managed-link="" target="_blank">CSS CST User Guide</a></li>
+</ul>
+
+<p><strong>External (Customer Facing) Online References</strong></p>
+
+<ul>
+	<li><a href="https://docs.microsoft.com/en-us/azure/billing/billing-mca-overview">Get started with your billing account for a Microsoft Customer Agreement</a></li>
+	<li><a href="https://docs.microsoft.com/en-us/azure/billing/billing-mca-understand-your-bill">Understand the charges on your Microsoft Customer Agreement&#39;s invoice</a></li>
+	<li><a href="https://docs.microsoft.com/en-us/azure/billing/billing-mca-download-tax-document">View the tax documents for your Microsoft Customer Agreement</a></li>
+	<li><a href="https://docs.microsoft.com/en-us/azure/billing/billing-mca-understand-your-usage">Understand terms on your Azure usage and charges CSV for a Microsoft Customer Agreement</a></li>
+	<li><a href="https://docs.microsoft.com/en-us/azure/billing/billing-mca-understand-pricesheet">Understand the terms in your price sheet for a Microsoft Customer Agreement</a></li>
+	<li><a href="https://docs.microsoft.com/en-us/azure/billing/billing-mca-section-invoice">Create sections on your invoice to organize your costs</a></li>
+	<li><a href="https://docs.microsoft.com/en-us/azure/billing/billing-mca-create-subscription">Create an additional Azure subscription for Microsoft Customer Agreement</a></li>
+	<li><a href="https://docs.microsoft.com/en-us/azure/billing/billing-mca-setup-account">Set up your billing account for a Microsoft Customer Agreement</a></li>
+	<li><a href="https://docs.microsoft.com/en-us/azure/billing/billing-mca-enterprise-operations">Complete Enterprise Agreement tasks in your billing account for a Microsoft Customer Agreement </a></li>
+	<li><a href="https://docs.microsoft.com/en-us/azure/billing/billing-mca-request-billing-ownership">Get billing ownership of Azure subscriptions from other users</a></li>
+	<li><a href="https://docs.microsoft.com/en-us/azure/billing/billing-mca-create-subscription">Create an additional Azure subscription for Microsoft Customer Agreement</a></li>
+	<li><a href="https://docs.microsoft.com/en-us/azure/billing/billing-mca-enterprise-operations">Complete Enterprise Agreement tasks in your billing account for a Microsoft Customer Agreement </a></li>
+</ul>
+
+<h4><strong>Training&nbsp;</strong></h4>
+
+<ul>
+	<li>Modern Commerce Overview:&nbsp;&nbsp;<a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fperformancemanager8.successfactors.com%2Fsf%2Flearning%3FdestUrl%3Dhttps%253a%252f%252fmicrosoft%252eplateau%252ecom%252flearning%252fuser%252fdeeplink%255fredirect%252ejsp%253flinkId%253dITEM%255fDETAILS%2526componentID%253dS2823615%2526componentTypeID%253dONLINE%252dCOURSE%2526revisionDate%253d1548243720000%2526fromSF%253dY%26company%3Dmicrosof01P2&amp;data=02%7C01%7Cmievan%40microsoft.com%7Cbb1f4b613d8e4bba316308d691280380%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636855998377247495&amp;sdata=Z13RtJvVjmUzF4yviyZNtDpeTk4QD0ayYzl7u5wNC6g%3D&amp;reserved=0" originalsrc="https://performancemanager8.successfactors.com/sf/learning?destUrl=https%3a%2f%2fmicrosoft%2eplateau%2ecom%2flearning%2fuser%2fdeeplink%5fredirect%2ejsp%3flinkId%3dITEM%5fDETAILS%26componentID%3dS2823615%26componentTypeID%3dONLINE%2dCOURSE%26revisionDate%3d1548243720000%26fromSF%3dY&amp;company=microsof01P2" shash="yfuBZTuiPsvuw6iokdvHknV3u0sBjcNknW//Jm/TTx8dUbffhCTIOUDGMOpT/xXogiR57XSWs7nXCStZhDA/QKFHvTyE+bE0WY71p+amLGBIhxyyTNWfPSFUOZDd7vsNKtBI4G28FSIOH8ti7KHCoQPRHhbOAgHQwKG4uOF7sOM=">SuccessFactors</a> or <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Factivity%2FS2823615%2Flaunch%2F&amp;data=02%7C01%7Cmievan%40microsoft.com%7Cbb1f4b613d8e4bba316308d691280380%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636855998377257504&amp;sdata=Gc3twOdOWaNTBD%2FjZcKvjFG4twZWoLEpieDJt7LsGa0%3D&amp;reserved=0" originalsrc="https://learn.microsoft.com/activity/S2823615/launch/" shash="DjxvlnoZCiZUSEg6toYFHhEEykb74oqFwi5Gxwk13oaLC0863rWlWg+/umhFrImaw6FnhkbVu8pxh4R4/TTl8r+4cwBIeD0OOTsf1bHp8WOlTfpkrkG+45OC4ihxMAM8olpc+WaJ3MPGPVgo1HW+3GQyiAdtb3rn8c0tHnr1boU=">Learning</a></li>
+	<li>Modern Customer&nbsp;Experience:&nbsp;<a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fperformancemanager8.successfactors.com%2Fsf%2Flearning%3FdestUrl%3Dhttps%253a%252f%252fmicrosoft%252eplateau%252ecom%252flearning%252fuser%252fdeeplink%255fredirect%252ejsp%253flinkId%253dITEM%255fDETAILS%2526componentID%253dS2823621%2526componentTypeID%253dONLINE%252dCOURSE%2526revisionDate%253d1548248340000%2526fromSF%253dY%26company%3Dmicrosof01P2&amp;data=02%7C01%7Cmievan%40microsoft.com%7Cbb1f4b613d8e4bba316308d691280380%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636855998377267512&amp;sdata=sSe1QPNVlu4Kl041a%2BmpBLgqMwv%2BmG20q7trrH3SeNI%3D&amp;reserved=0" originalsrc="https://performancemanager8.successfactors.com/sf/learning?destUrl=https%3a%2f%2fmicrosoft%2eplateau%2ecom%2flearning%2fuser%2fdeeplink%5fredirect%2ejsp%3flinkId%3dITEM%5fDETAILS%26componentID%3dS2823621%26componentTypeID%3dONLINE%2dCOURSE%26revisionDate%3d1548248340000%26fromSF%3dY&amp;company=microsof01P2" shash="tpYHPseBcRD1WPfFXhaRX2IsqyP/x9rOGdntGlxit3TUss1/5P5X8telRlgvBI9FbfYepNWf/6CZaNFRYGUt+5vD8TEQZglttAspCT7dN4T78Q2IEMlfk1cbeet6YLeTfnLo6xA4nDc+oTNIWzRGp8XovKfKd3McEixqXH4PoVc=">SuccessFactors</a> or <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Factivity%2FS2823621%2Flaunch%2F&amp;data=02%7C01%7Cmievan%40microsoft.com%7Cbb1f4b613d8e4bba316308d691280380%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636855998377267512&amp;sdata=t5nFf7bij6hhRC7yVBgZvZh21EI%2B%2Bb5KSeRVLXoWHyI%3D&amp;reserved=0" originalsrc="https://learn.microsoft.com/activity/S2823621/launch/" shash="vZ/kc/LUduCPrdfIjRtyqLncklUDtBg2F0YcD80bk1e1Js9kltIMR1rTt5S8x6FlwI99HIdJ/K0PbP/hRnIn9biOXX0+2jWt9mqFDiNqydZpyPYH15yjLoibAiwIIa+kiGNQ090vD7TJHcfFEIA2e3QAdn99shYe+f3yi7q1XdI=">Learning</a></li>
+	<li>Service Desk Customer View (CST):&nbsp;<a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fperformancemanager8.successfactors.com%2Fsf%2Flearning%3FdestUrl%3Dhttps%253a%252f%252fmicrosoft%252eplateau%252ecom%252flearning%252fuser%252fdeeplink%255fredirect%252ejsp%253flinkId%253dONLINE%255fCONTENT%255fSTRUCTURE%2526componentID%253dS2787841%2526componentTypeID%253dONLINE%252dCOURSE%2526revisionDate%253d1545212880000%2526fromSF%253dY%26company%3Dmicrosof01P2&amp;data=02%7C01%7Cmievan%40microsoft.com%7Cbb1f4b613d8e4bba316308d691280380%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636855998377287529&amp;sdata=NvSSqqlOu4w%2FA3gJ5QOoAcd2wGrrnWkWN0hHP8mke%2Bw%3D&amp;reserved=0" originalsrc="https://performancemanager8.successfactors.com/sf/learning?destUrl=https%3a%2f%2fmicrosoft%2eplateau%2ecom%2flearning%2fuser%2fdeeplink%5fredirect%2ejsp%3flinkId%3dONLINE%5fCONTENT%5fSTRUCTURE%26componentID%3dS2787841%26componentTypeID%3dONLINE%2dCOURSE%26revisionDate%3d1545212880000%26fromSF%3dY&amp;company=microsof01P2" shash="dhbBKBmq/ih87qzkbYPV0mLWF1+gD9UTgutNFs4yN3vcbO9zDpp73DAK3lkd21/6NggXgPjn0JtqBLQSJeXRMpiHYCdObg17qhUfrYBpJkQdJaaCEwZEG6YJKzdDdWeHUy+btSY7n2BWzthho9TEzN3Vyz61ohYULLiZg/TXcoA=">SuccessFactors</a> or <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Factivity%2FS2787841%2Flaunch%2F&amp;data=02%7C01%7Cmievan%40microsoft.com%7Cbb1f4b613d8e4bba316308d691280380%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636855998377297538&amp;sdata=q2VwU9ER5I7NVwG7eZRf5YwK6gTXFvo1AeEVrz1dAG0%3D&amp;reserved=0" originalsrc="https://learn.microsoft.com/activity/S2787841/launch/" shash="hcI3BLoQ1i50i7fNoZr9+hJXjvJwQIxCz5gqDxtXgE3UgmX/WM0ARtWn57kTGP39ixldpmpYVdR++K7rxIvE0vZ75XtSnN8gD0+bDxxJ9N7b7QDTxHvJNZwjT0hlnfC5QuyymSnpVaQChVCS1KNJtSIoH0nFNF9mdzLOG2RaXCE=">Learning</a></li>
+	<li>CST User Experience (Sep 2019):&nbsp;<a href="https://learningplayer.microsoft.com/activity/s7301935/launch" managed-link="" target="_blank">Brownbag</a><br>
+	&nbsp;</li>
+</ul>
+
+<h3><a id="TSG Change Log" name="TSG Change Log">TSG Change Log</a></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="132">
+			<p>Date</p>
+			</td>
+			<td width="126">
+			<p>Updated By</p>
+			</td>
+			<td width="364">
+			<p>Content Updated</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p>02/28/2019</p>
+			</td>
+			<td width="126">
+			<p>v-brgosn</p>
+			</td>
+			<td width="364">
+			<p>Created TSG.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">05/03/2019</td>
+			<td width="126">mievan</td>
+			<td width="364">Added guidance on assisting customers with MCA errors.&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">05/10/2019</td>
+			<td width="126">v-bgosn</td>
+			<td width="364">Added Can&#39;t set up the billing account error to Escalation path section.&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">05/22/2019</td>
+			<td width="126">v-brgosn</td>
+			<td width="364">Added MCA Agreement details.</td>
+		</tr>
+		<tr>
+			<td width="132">05/31/2019</td>
+			<td width="126">shsims</td>
+			<td width="364">Updated Self Serve SOT note</td>
+		</tr>
+		<tr>
+			<td width="132">06/06/2019</td>
+			<td width="126">v-brgosn</td>
+			<td width="364">Alphabetized lists, and made other formatting updates.</td>
+		</tr>
+		<tr>
+			<td width="132">10/21/2019</td>
+			<td width="126">v-ruclar</td>
+			<td width="364">Added note to &quot;Accepting MCA section&quot; MT-2472</td>
+		</tr>
+		<tr>
+			<td width="132">10/31/2019</td>
+			<td width="126">v-brgosn</td>
+			<td width="364">Added Edit Company Information support scenario.</td>
+		</tr>
+		<tr>
+			<td width="132">11/11/2019</td>
+			<td width="126">v-ereric</td>
+			<td width="364">Added additional info to Support Scenarios.</td>
+		</tr>
+		<tr>
+			<td width="132">1/3/2019</td>
+			<td width="126">mievan</td>
+			<td width="364">Under step #4 of Customer Experience and Provisioning, added details about creating Billing Profiles via self-serve for Field Led customers only.</td>
+		</tr>
+		<tr>
+			<td width="132">2/6/2020</td>
+			<td width="126">v-katzma</td>
+			<td width="364">Added support scenario for customer migration to MCA per ModTrack 2658.</td>
+		</tr>
+		<tr>
+			<td width="132">02/13/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Updated ICM link as per ModTrack 2673.</td>
+		</tr>
+		<tr>
+			<td width="132">02/21/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Updated ICM link as per ModTrack 2671.</td>
+		</tr>
+		<tr>
+			<td width="132">02/26/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Updated processes, terminology, and links as per ModTrack 2701.</td>
+		</tr>
+		<tr>
+			<td width="132">5/1/2020</td>
+			<td width="126">mievan</td>
+			<td width="364">Updated CST Engineering IcM Link.&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">05/19/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added clarification to pricing details as per ModTrack 2824.</td>
+		</tr>
+		<tr>
+			<td width="132">07/28/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added Engagement Path table entry on issues with negotiated pricing as per ModTrack 3048.</td>
+		</tr>
+		<tr>
+			<td width="132">8/26/2020</td>
+			<td width="126">mievan</td>
+			<td width="364">Updated Engagement Path Table to direct to engage AzureOps for Field Led customer, and added MCA Customer Led &amp; Partner Led Engagement paths.&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">10/1/2020</td>
+			<td width="126">mievan</td>
+			<td width="364">Added information about how billing and usage works after a migration from Legacy to MCA.&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">10/13/2020</td>
+			<td width="126">mievan</td>
+			<td width="364">
+			<p>Added <em><span>Policy </span></em>guidance on handling customer PII.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">10/22/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added Conversions table as per ModTrack 3240.</td>
+		</tr>
+		<tr>
+			<td width="132">11/6/2020</td>
+			<td width="126">mievan</td>
+			<td width="364">Added guidance on how to resolve for conversion error messages.&nbsp;</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,432 @@
+﻿<header><h1>ASMS – Usage Validation and Billing Verification</h1></header><p>Submit a <a href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder=">ModTrack</a> request to update this TSG.</p>
+
+<h3><a id="Overview" name="Overview"></a><strong>Overview</strong></h3>
+
+<p>This article outlines how to handle customer questions about unexpected Azure usage and charges. Customers will often open support cases with the ASMS team because they have received their Azure invoice and see unexpected usage and charges on their bill. Use this article to inform your approach to these customers.</p>
+
+<p><strong>Note:</strong> Be sure to check <a href="https://microsoft.sharepoint.com/teams/ASMS_Runtime_Operations/SitePages/Message%20Center.aspx">Message Center</a> for current alerts and issues. Customer usage and billing complaints are sometimes based on currently ongoing issues, and additional guidance might be available there.</p>
+
+<p><strong>Examples of what your customer might say:</strong></p>
+
+<ul>
+	<li>I didn&#39;t change my usage patterns, so the extra high charges must be a bug or Microsoft&#39;s fault!</li>
+	<li>Microsoft needs to refund me because there is no way I used this much Azure!</li>
+	<li>Why does my bill show such high charges?</li>
+	<li>Why is there a sudden spike in usage this month? What caused it?</li>
+	<li>I am an internal user with the Azure Internal Registration System (AIRS), where is my usage report?
+	<ul style="list-style-type:circle">
+		<li>Send these customers to the detailed usage page on the&nbsp;<a data-content-id="" data-content-type="" href="aka.ms/airs" managed-link="" target="">AIRS site</a>.</li>
+	</ul>
+	</li>
+	<li>ASMS handles usage validation cases (not the AIRS team).
+	<ul style="list-style-type:circle">
+		<li>Engage your technical advisor (TA) or partner technical advisor (PTA) prior to engaging&nbsp;the concerned team to investigate.</li>
+		<li>Create a task to the TA or PTA using the below template:<br>
+		Task Title: Internal 15P Subscription Usage Report<br>
+		<br>
+		Account Owner Live ID:<br>
+		<br>
+		Subscription GUID/s:<br>
+		<br>
+		Date Range: Write out the date (i.e March 3, 2016 to May 5, 2016) rather than the short date (i.e. 3/3/2016 to 5/5/2016)<br>
+		<br>
+		Service:</li>
+	</ul>
+	</li>
+</ul>
+
+<h3><a id="Policy" name="Policy"></a><strong>Policy</strong></h3>
+
+<p>The most important aspect to these cases is to set customer expectations appropriately. In these instances, you should note the following:</p>
+
+<ul>
+	<li>It is unlikely that Microsoft will be able to determine the root cause of the increased usage and associated charges besides what is already visible in the detailed usage data, which is available for the customer to download from their portal.</li>
+	<li>Microsoft does not scan or monitor customers&#39; Azure deployment, virtual machines, networks, data transfers, etc., due to security concerns and customer privacy. For Microsoft to proactively scan customer deployments would be a major security and privacy concern, so we don&#39;t do it with the customer&#39;s best interests in mind.</li>
+	<li>While Microsoft can help educate customers on how to monitor their Azure usage, it is ultimately the responsibility of the customer to monitor their own usage.</li>
+	<li>There are a few things that Microsoft can check to shed some light on the increased usage, but the investigation can typically take <strong>30 days or more</strong>.</li>
+</ul>
+
+<p>If you encounter a case with an issue that is older than 90 days (making a Master Data Services (MDS) analysis impossible), consider giving your customer a Customer and Partner Experience (CPE) credit.<br>
+(The steps to do so are covered in the <a bookmark-id="Consider a CPE Credit" href="#Consider a CPE Credit" managed-link=""><em>Consider a CPE Credit</em></a> section.)</p>
+
+<h3><a id="Support Scenario" name="Support Scenario"></a><strong>Support Scenario</strong></h3>
+
+<h4><a id="Gather Your Customer’s Information" name="Gather Your Customer’s Information"></a><strong>1. Gather Your Customer&rsquo;s Information</strong></h4>
+
+<p>Gather all relevant information from the customer pertaining to the higher-than-expected usage or charges, including but not limited to:</p>
+
+<ul>
+	<li>All subscription-related data such as WLID, account ID, subscription ID, subscription GUID, etc.</li>
+	<li>The name of the Azure service or deployment that is showing the higher-than-expected usage or charges.</li>
+	<li>The exact date and time range of the higher-than-expected usage or charges.</li>
+	<li>Your customer&rsquo;s invoice(s) showing the contested charges.</li>
+</ul>
+
+<h4><a id="Triage Your Customer’s Request" name="Triage Your Customer’s Request"></a>2<strong>. Triage Your Customer&rsquo;s Request</strong></h4>
+
+<p>Determine if this is a usage validation or billing verification request.</p>
+
+<p><a id="Billing Verification" name="Billing Verification"></a><strong>Billing Verification</strong></p>
+
+<p><strong>Example:</strong> Your customer&rsquo;s verbatim states &ldquo;My invoice says I have been charged $30 for 750 hours usage on VM-xxx, but the usage file for the same month only displays a total of 350 hours usage for VM-xxx, what is the reason for this discrepancy?&quot;</p>
+
+<p>Review the usage file to ensure the validity of the customer&rsquo;s claim using standard troubleshooting questions.</p>
+
+<p><a id="(Delete Flag if seen)" name="(Delete Flag if seen)"></a><strong>For example:</strong></p>
+
+<ul>
+	<li>Do you also see the discrepancy that the customer is seeing?</li>
+	<li>Do the usage and invoice reports match and show identical information?</li>
+	<li>Are the VM SKUs the same across the reports?</li>
+	<li>Are there multiple instances of the same SKUs?</li>
+	<li>Is there a disagreement between the price your customer is getting charged vs. the price quoted on the Azure portal?
+	<ul style="list-style-type:circle">
+		<li>If this is your situation, engage your TA and the Product Marketing Manager (PMM) for the associated service.
+		<ul style="list-style-type:square">
+			<li>If the price is wrong on the portal, the PMM will submit a change to get the price fixed on the portal.</li>
+			<li>If the issue is with pricing of the service on the bill, work with PayOps to resolve it. (See the&nbsp;PayOps Engagement TSG (<a href="https://internal.support.services.microsoft.com/en-us/help/2651579/asms-payops-engagement">TSG 2651579</a>)).</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<p>If everything seems correct, but there is still an error in billing, engage PayOps using the PayOps Engagement TSG (<a href="https://internal.support.services.microsoft.com/en-us/help/2651579/asms-payops-engagement">TSG 2651579</a>).</p>
+
+<p><a id="Usage Validation" name="Usage Validation"></a><strong>Usage Validation</strong></p>
+
+<p><strong>Example:</strong> Your customer&rsquo;s verbatim states &ldquo;In last month&rsquo;s usage file, I see charges or usage for Storage displaying over 1 TB per day for 2 days in the billing cycle, but on the other 28 days, it is 100 MB. I only had 100 MB data storage and did not make any changes to my services or storage.&rdquo;</p>
+
+<p>For these types of requests, engage the ASE team.</p>
+
+<p><strong><a id="Engaging the ASE Team" name="Engaging the ASE Team"></a>Engaging the ASE Team</strong></p>
+
+<p>The ASE team can attempt to obtain further compute, storage, and bandwidth usage verification data.</p>
+
+<p><strong><span>IMPORTANT:</span></strong><span> See the <a bookmark-id="SQL Azure Billing Team (SQL Billing Validation Only)" href="#SQL Azure Billing Team (SQL Billing Validation Only)" managed-link="">SQL Azure Billing Team (SQL Billing Validation Only)</a> and <a bookmark-id="Web Apps" href="#Web Apps" managed-link="">Web Apps</a> sections for important exceptions to filing an IcM.</span></p>
+
+<p>File a <a href="http://aka.ms/asecri">Customer Reported Incident</a> (CRI) to ASE and include the following details:</p>
+
+<ul>
+	<li>The name of the service and the date and time range of the disputed usage.</li>
+	<li>The total monetary value of the higher-than-expected charges.</li>
+	<li>Confirmation on whether the problem <strong>is still occurring</strong>, or if this was a past issue which is no longer occurring.</li>
+	<li>Attach the full Usage Report without editing the full version.
+	<ul style="list-style-type:circle">
+		<li><strong>Note:</strong> Be sure to include the aggregated usage report along with the Recon file for CSP usage and billing validation.</li>
+	</ul>
+	</li>
+	<li>Call out the VM or Storage account in question:
+	<ul style="list-style-type:circle">
+		<li>Potential questions for ASE:
+		<ol>
+			<li>Was there a known Live Site Incident (LSI) at the general time of the customer&#39;s high usage?</li>
+			<li>Was a &quot;Failed Inner DC Whitelist issue&quot; at fault?</li>
+			<li>Can any names of the customer deployments/services/database tables/VM names/etc. be identified to help narrow down the issue?</li>
+		</ol>
+		</li>
+	</ul>
+	</li>
+	<li>Wait for the ASE response.</li>
+</ul>
+
+<p><strong>Note: </strong>See <a href="https://internal.support.services.microsoft.com/en-us/help/3093263/azure-support-ase-engagement">TSG 3093263</a> (ASE Engagement) for additional details.</p>
+
+<h4><a id="Consider a CPE Credit" name="Consider a CPE Credit"></a><strong>3. Consider a CPE Credit</strong></h4>
+
+<p>Due to the Azure platform limitation of collecting customer-specific usage info, it is unlikely that we will be able to give a definitive root cause of what caused the higher-than-expected charges. Based on the results from the previous steps, there may be general info we can give the customer, and we may also be able to engage other partner teams to help determine why the usage was so high even though we consider it valid. Possible scenarios for excess charges include a misbehaving database table or a loop in one of their website&rsquo;s ASP.NET pages.</p>
+
+<p>Our main goal is to satisfy the customer, so if you sense that they will not be satisfied with the information (or lack of information) we can provide, you can consider a one-time CPE credit:</p>
+
+<ul>
+	<li>Calculate the amount of the credit based on the total amount of the higher-than-expected charges.</li>
+	<li>Follow <a href="https://internal.support.services.microsoft.com/en-us/help/2646823">TSG 2646823</a> (How to Handle Azure Credit Requests) to process the credit.</li>
+</ul>
+
+<h4><a id="Instruct the Customer on How to Monitor Their Usage in the Future" name="Instruct the Customer on How to Monitor Their Usage in the Future"></a><strong>4. Instruct the Customer on How to Monitor Their Usage in the Future</strong></h4>
+
+<p>As explained above, Microsoft does not collect specific usage data from customer deployments. Customers may request the IP address involved in high data transfers, or usernames and passwords of users logging into their VMs and running up charges, etc. <strong>We do not have this information</strong>! This is up to the customer to monitor. Below are some useful tips for customers to monitor their deployments in the future.</p>
+
+<ul>
+	<li>Help your customers manage costs with <strong>Cost Management</strong> and <strong>Azure Budgets</strong>. More details are available in the following links:&nbsp;
+
+	<ul style="list-style-type:circle">
+		<li><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/billing/billing-cost-management-budget-scenario" managed-link="" target="_blank">Manage costs with Azure Budgets</a></li>
+		<li><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/cost-management/manage-budgets" managed-link="" target="_blank">Create and manage Budgets in Cloudyn</a></li>
+		<li><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/cost-management/tutorial-acm-create-budgets" managed-link="" target="_blank">Tutorial: Create and manage Azure budgets</a></li>
+	</ul>
+	</li>
+	<li>For <strong>storage usage</strong>, the customer can enable <em>Storage Analytics</em><em>.</em> Enabling Storage Analytics logs gives customers the ability to have per-transaction logging. The logs are quite detailed, and customers can do end-to-end tracing and debugging on their own. More details are available in the following links:
+	<ul style="list-style-type:circle">
+		<li><a href="http://msdn.microsoft.com/en-us/library/windowsazure/hh343270.aspx">MSDN Storage Analytics Overview</a></li>
+		<li><a href="http://blogs.msdn.com/b/windowsazurestorage/archive/2011/08/03/windows-azure-storage-logging-using-logs-to-track-storage-requests.aspx">Using Logs to Track Storage Requests</a></li>
+		<li><a href="http://msdn.microsoft.com/en-us/library/azure/hh343259.aspx">Storage Analytics Log Format</a></li>
+		<li><a href="http://azure.microsoft.com/en-us/documentation/articles/storage-monitor-storage-account/">Monitor a storage account in the Azure Portal</a></li>
+	</ul>
+	</li>
+	<li>For <strong>network-related usage</strong>, the customer can use a network capture tool such as Microsoft Network Monitor or Fiddler.
+	<ul style="list-style-type:circle">
+		<li><a href="http://www.microsoft.com/en-us/download/details.aspx?id=4865">Network Monitor</a></li>
+		<li><a href="http://www.telerik.com/fiddler">Fiddler</a></li>
+	</ul>
+	</li>
+</ul>
+
+<p><strong>Note:</strong> Fiddler is not supported by Microsoft.</p>
+
+<ul>
+	<li>For issues related to Virtual Machines with a Windows OS image, the <strong>Host OS Event Logs</strong> can be used.
+
+	<ul style="list-style-type:circle">
+		<li><a href="http://msdn.microsoft.com/en-us/library/windows/desktop/aa363632(v=vs.85).aspx">Windows Event Logs</a></li>
+	</ul>
+	</li>
+</ul>
+
+<ul>
+	<li>For <strong>Platform as a Service (PaaS) deployments</strong>, enable diagnostics in the application.
+
+	<ul style="list-style-type:circle">
+		<li><a href="https://docs.microsoft.com/en-us/azure/cloud-services/cloud-services-dotnet-diagnostics">Enabling Azure Diagnostics in Azure Cloud Services</a></li>
+	</ul>
+	</li>
+</ul>
+
+<ul>
+	<li>For <strong>Infrastructure as a Service (IaaS) deployments</strong>, enable diagnostics in ASP.NET applications.
+
+	<ul style="list-style-type:circle">
+		<li><a href="http://msdn.microsoft.com/en-us/library/vstudio/bb885203(v=vs.100).aspx">Enabling Tracing in ASP.NET Web Services</a></li>
+	</ul>
+	</li>
+	<li>Enable Internet Information Services (IIS) Logging in IIS:
+	<ul style="list-style-type:circle">
+		<li><a href="http://technet.microsoft.com/en-us/library/cc754631(v=WS.10).aspx">Enable or Disable Logging in IIS 7</a></li>
+		<li><a href="https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-85/enhanced-logging-for-iis85">Enhanced Logging for IIS 8.5</a></li>
+	</ul>
+	</li>
+	<li>Azure App Service:
+	<ul style="list-style-type:circle">
+		<li><a href="http://azure.microsoft.com/en-us/documentation/articles/web-sites-enable-diagnostic-log/">Enable diagnostics logging for web apps in Azure App Service</a></li>
+	</ul>
+	</li>
+</ul>
+
+<p><strong>&#39;Poolmanager&#39; Resource Group Not Visible for Customer</strong></p>
+
+<div>You may receive a case where your customer cannot find the resource group <strong>Poolmanager</strong> and the corresponding storage accounts <strong>md-xxxxxx</strong> on their portal.&nbsp; However, this is the expected behavior when using Managed disks.<br>
+&nbsp;<br>
+When Managed disks are deployed, the customer can view disks for their VMs, however, they cannot see the actual storage accounts &amp; resource groups, because the storage accounts and corresponding resource groups are managed in Microsoft Internal Subscription.</div>
+
+<div>&nbsp;</div>
+
+<div>Managed disks means the customer is using disks, but doesn&#39;t need to worry about disk availability and storage accounts as this is managed internally. Unmanaged disks can be found within the storage account in a subscription normally but with Managed disks, the actual storage account must be viewed by using &quot;Disk Export&quot;.</div>
+
+<div>&nbsp;</div>
+
+<div><strong>Note:</strong> Managed disks are the same as Unmanaged disks, they are page blobs and have to be put into a storage account in a resource group.</div>
+
+<div>&nbsp;</div>
+
+<div>For additional guidance on Managed Disks, see the following documents.</div>
+
+<ul>
+	<li><a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/faq-for-disks#managed-disks-and-storage-service-encryption" managed-link="" target="_blank">Azure Managed Disks FAQs</a></li>
+	<li><a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/managed-disks-overview" managed-link="" target="_blank">Introduction to Azure Managed Disks</a></li>
+</ul>
+
+<div>&nbsp;</div>
+
+<h3><a id="Engagement Paths" name="Engagement Paths"></a><strong>Engagement Paths</strong></h3>
+
+<h4><strong><a id="Radius" name="Radius"></a>MSaaS Support Portal</strong></h4>
+
+<p><a href="https://msaas.support.microsoft.com/" managed-link="" target="_blank">MSaaS Support Portal</a> is an&nbsp;internal web site which lists all support teams and queues. Use this tool when searching for the correct queue to send a customer&#39;s case to.&nbsp;</p>
+
+<ul>
+	<li>If you are unable to find the correct queue using the MSaas Support Portal, please follow <a href="https://internal.support.services.microsoft.com/en-us/help/3104062">TSG 3104062</a> (Misroutes) to engage the Duty Managers (DMs) for assistance.</li>
+</ul>
+
+<p><strong>Note:</strong> Find more guidance on the <a data-bi-name="content-anchor-link" href="https://microsoft.sharepoint.com/:w:/r/teams/ASMS/_layouts/15/Doc.aspx?sourcedoc=%7B5A42FE0D-5025-4AA0-9EE6-AD57D1374814%7D&amp;file=MSaaS%20-%20Search%20for%20Queue%20Information%20Without%20A%20Case.docx&amp;action=default&amp;mobileredirect=true" managed-link="" tabindex="0" target="_blank">MSaaS Support Portal</a>.</p>
+
+<h4><a id="SQL Azure Billing Team (SQL Billing Validation Only)" name="SQL Azure Billing Team (SQL Billing Validation Only)"></a><strong>SQL Azure Billing Team (SQL Billing Validation Only)</strong></h4>
+
+<p>Before escalating, check the SQL team OneNote for the solution - <a href="onenote:https://microsoft.sharepoint.com/teams/sqldsdt/Shared Documents/Billing/SAWA V2/SAWA V2 Billing Notes/@Live Site Operation/TSG - Billing Core.one#BILLTSG0026%20How%20to%20resolve%20billing%20dispute&amp;section-id={E40489A6-62D8-466B-B1D3-44D4FBC11B43}&amp;page-id={70CCF448-9797-4FC9-BFA3-2A107A82801C}&amp;end" managed-link="" target="_blank">How to solve a billing dispute</a></p>
+
+<p><strong>Note:</strong> Do not assign SQLVM billing IcM tickets to the Azure SQLDB team, the impacted service and owning service <strong>should not</strong> be &ldquo;Azure SQL DB&rdquo; as they do not own the SQLVM services. All VM billing validation requests need to go to ASE.</p>
+
+<p>If you are unsure if you should escalate to the Azure SQL DB queue, please verify with a TA before creating an IcM ticket.</p>
+
+<p>Go to <a data-content-id="" data-content-type="" href="https://portal.microsofticm.com/imp/NewIncident.aspx" managed-link="" target="_blank">IcM</a>.</p>
+
+<ul>
+	<li><strong>Impacted Service:</strong> Azure SQL DB</li>
+	<li><strong>Impacted Components:</strong> Billing</li>
+	<li><strong>Owning Service:</strong> Azure SQL DB</li>
+	<li><strong>Owning Team:</strong> Billing</li>
+	<li><strong>Severity rules:</strong> Normally Severity is 3 for billing CRI investigation. You can raise a Severity 2 if you suspect there is a widespread billing issue impacting many customers.</li>
+	<li><strong>Customer Subscription ID:</strong></li>
+	<li><strong>Server Name:</strong> This is the format xyz123.database.windows.net. <strong>Note:</strong> MySQL or SQL running on Azure VM (*.cloudapp.windows.net:port_number) are not the same product as SQL Azure Db.</li>
+	<li><strong>Server Region:</strong> Determined by doing a ping from command line anywhere, so this operation can be performed by SEs.</li>
+</ul>
+
+<ul>
+	<li><strong>Database Name: </strong><strong>T</strong>he specific database that the customer is reporting a billing issue with.</li>
+	<li><strong>Usage report:</strong> Obtained from the above steps listed in this TSG.</li>
+	<li><strong>Date Range of the issue: </strong>This is the start and end dates for when the customer has a concern about the usage or billing.</li>
+	<li><strong>What is the specific issue reported by the customer? </strong></li>
+</ul>
+
+<p>Be as specific as possible. Ask specific questions about what you notice on the customer&rsquo;s bill.</p>
+
+<h4><a id="Web Apps" name="Web Apps"></a><strong>Web Apps</strong></h4>
+
+<p>To check on Web Apps, reach out to the <a data-content-id="" data-content-type="" href="https://icm.ad.msft.net/imp/v3/incidents/create?tmpl=h22j1f" managed-link="" target="_blank">Web Apps</a> team.</p>
+
+<p>For Web Apps CRI, please assign <strong>App Service (Web Apps) </strong>as the service and <strong>Windows Azure Website Servicing</strong> as the assigned team.</p>
+
+<h3><a id="Online References" name="Online References"></a><strong>Online References</strong></h3>
+
+<p><strong>Billing</strong></p>
+
+<ul>
+	<li><a href="https://docs.microsoft.com/en-us/previous-versions/azure/reference/mt219001(v=azure.100)" managed-link="" target="_blank">How to get consumption data for an Azure subscription</a>, including information on <a href="https://docs.microsoft.com/en-us/previous-versions/azure/reference/mt219001%28v%3Dazure.100%29?redirectedfrom=MSDN#frequently-asked-questions" managed-link="" target="_blank">what Azure does with late usage</a></li>
+</ul>
+
+<p><strong>Deployments - IaaS</strong></p>
+
+<ul>
+	<li><a href="http://azure.microsoft.com/en-us/documentation/articles/web-sites-enable-diagnostic-log/">Enable diagnostics logging for web apps in Azure App Service</a></li>
+	<li><a href="http://technet.microsoft.com/en-us/library/cc754631(v=WS.10).aspx">Enable or Disable Logging in IIS 7</a></li>
+	<li><a href="http://msdn.microsoft.com/en-us/library/vstudio/bb885203(v=vs.100).aspx">Enabling Tracing in ASP.NET Web Services</a></li>
+	<li><a href="https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-85/enhanced-logging-for-iis85">Enhanced Logging for IIS 8.5</a></li>
+</ul>
+
+<p><strong>Deployments - PaaS</strong></p>
+
+<ul>
+	<li><a href="https://docs.microsoft.com/en-us/azure/cloud-services/cloud-services-dotnet-diagnostics">Enabling Azure Diagnostics in Azure Cloud Services</a></li>
+</ul>
+
+<p><strong>Host OS Event Logs</strong></p>
+
+<ul>
+	<li><a href="http://msdn.microsoft.com/en-us/library/windows/desktop/aa363632(v=vs.85).aspx">Windows Event Logs</a></li>
+</ul>
+
+<p><strong>Tools</strong></p>
+
+<ul>
+	<li><a href="https://radius/">Radius</a> &ndash; Product Group and queue routing tool</li>
+	<li><a href="https://icm.ad.msft.net/imp/v3/incidents/cri">IcM</a></li>
+</ul>
+
+<p><strong>Usage -&nbsp;Storage</strong></p>
+
+<ul>
+	<li><a href="http://msdn.microsoft.com/en-us/library/windowsazure/hh343270.aspx">MSDN Storage Analytics Overview</a></li>
+	<li><a href="http://msdn.microsoft.com/en-us/library/azure/hh343259.aspx">Storage Analytics Log Format</a></li>
+	<li><a href="http://blogs.msdn.com/b/windowsazurestorage/archive/2011/08/03/windows-azure-storage-logging-using-logs-to-track-storage-requests.aspx">Using Logs to Track Storage Requests</a></li>
+</ul>
+
+<p><strong>Usage - Network-Related</strong></p>
+
+<ul>
+	<li><a href="http://www.telerik.com/fiddler">Fiddler</a></li>
+	<li><a href="http://www.microsoft.com/en-us/download/details.aspx?id=4865">Network Monitor</a></li>
+</ul>
+
+<h3><strong>TSG Change Log</strong></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="132">
+			<p><strong>Date </strong></p>
+			</td>
+			<td width="126">
+			<p><strong>Updated By </strong></p>
+			</td>
+			<td width="364">
+			<p><strong>Content Updated </strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p>&nbsp;04/19/2018</p>
+			</td>
+			<td width="126">
+			<p>kuharr</p>
+			</td>
+			<td width="364">
+			<p>Removed personally identifiable information (PII).</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p>&nbsp;09/10/2018</p>
+			</td>
+			<td width="126">
+			<p>v-brgosn</p>
+			</td>
+			<td width="364">
+			<p>Comprehensive Rewrite: Updated TSG content and formatting as part of the TSG Refresh Project.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">10/17/2018</td>
+			<td width="126">v-brgosn</td>
+			<td width="364">Added content regarding Cost Management and Azure Budgets.</td>
+		</tr>
+		<tr>
+			<td width="132">11/13/2018</td>
+			<td width="126">v-adhigg</td>
+			<td width="364">Added a note to the&nbsp;<em>Engaging the ASE</em><em>&nbsp;Team</em> section.</td>
+		</tr>
+		<tr>
+			<td width="132">11/14/2018</td>
+			<td width="126">v-adhigg</td>
+			<td width="364">Added a scenario to the <em>Billing Verification</em> section.</td>
+		</tr>
+		<tr>
+			<td width="132">04/23/2019</td>
+			<td width="126">kuharr</td>
+			<td width="364">Added SQL OneNote to self serve solutions</td>
+		</tr>
+		<tr>
+			<td width="132">06/11/2019</td>
+			<td width="126">v-brgosn</td>
+			<td width="364">Added &#39;Poolmanager not visible&#39; Support Scenario.</td>
+		</tr>
+		<tr>
+			<td width="132">07/31/2019</td>
+			<td width="126">v-ruclar</td>
+			<td width="364">Added &#39;Important&#39; note and links to Engaging ASE section.</td>
+		</tr>
+		<tr>
+			<td width="132">08/08/2019</td>
+			<td width="126">v-ereric</td>
+			<td width="364">Replaced Radius mention with MSaaS Support Portal.</td>
+		</tr>
+		<tr>
+			<td width="132">09/26/2019</td>
+			<td width="126">v-ruclar</td>
+			<td width="364">Updated Web Apps IcM link. MT-2392</td>
+		</tr>
+		<tr>
+			<td width="132">04/20/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Updated AIRS link as per ModTrack 2797.</td>
+		</tr>
+		<tr>
+			<td width="132">06/30/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Added link to public-facing website on consumption data and late usage per ModTrack 2999, reorganized the <em>Online References</em> section, and minor reformatting throughout.</td>
+		</tr>
+		<tr>
+			<td width="132">11/06/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Updated the IcM link under the <em>SQL Azure Billing Team (SQL Billing Validation Only)</em> section per ModTrack 3276.</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,138 @@
+﻿<header><h1>Intune: Windows Autopilot devices Advanced Troubleshooting</h1></header><p><span asset="4476087" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4476087]</span></p>
+
+<ul>
+	<li><strong>Content Idea (CI):&nbsp;</strong><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/121690">121690</a></li>
+</ul>
+<p>Azure\Microsoft Intune\Intune: Enrollment\Window</p>
+<h3>Autopilot Workflow:</h3>
+
+<p><span asset="4576821" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576821]</span></p>
+
+<h3 dir="ltr">Using MDM Diagnostics Tool:</h3>
+
+<p dir="ltr">We can MDM Diagnostics to collect detailed information of Autopilot events.</p>
+
+<p dir="ltr"><code>MDMDiagnosticsTool.exe -area Autopilot -cab c:\Autopilot.cab</code></p>
+
+<p dir="ltr">This gathers most of the available logs related to Windows Autopilot, OOBE, MDM, Azure AD, etc. It also gathers the hardware details (via the hardware hash), registry information, and much more. We&rsquo;ll go through that in detail in a moment.</p>
+
+<p dir="ltr"><code>MDMDiagnosticsTool.exe -area Autopilot;TPM -cab c:\autopilot.cab</code></p>
+
+<p dir="ltr">This adds additional TPM diagnostics to the previous set of logs. Those details would be needed when you are having issues with a self-deploying or white glove scenario. There&rsquo;s no harm in gathering them in other scenarios, but there are cases where the additional TPM info can generate error messages or popups, so to avoid people thinking that&rsquo;s somehow related to their issue, you can leave it off for other scenarios.</p>
+
+<p dir="ltr"><span asset="4576822" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576822]</span></p>
+
+<p dir="ltr">Resulting cab file contains all these log files which are essential for the analysis.</p>
+
+<p dir="ltr"><span asset="4576823" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576823]</span></p>
+
+<h3 dir="ltr">Using Get-AutopilotDiagnostics Script:</h3>
+
+<ul dir="ltr">
+	<li>This script displays diagnostics information of Autopilot profile settings, policies, apps and certificate profiles.</li>
+	<li>Applicable from Windows 10 1903 version.</li>
+	<li>Install-Script -Name&nbsp;Get-AutopilotDiagnostics</li>
+	<li>You can get the script from this powershell gallery:&nbsp;<a href="https://www.powershellgallery.com/packages/Get-AutopilotDiagnostics/">https://www.powershellgallery.com/packages/Get-AutopilotDiagnostics/</a></li>
+</ul>
+
+<p class="indent-1" dir="ltr"><span asset="4576824" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576824]</span></p>
+
+<ul dir="ltr">
+	<li>Enable the script execution using Set-ExecutionPolicy Bypass</li>
+</ul>
+
+<p class="indent-1" dir="ltr"><span asset="4576826" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576826]</span></p>
+
+<ul dir="ltr">
+	<li>Now execute the PowerShell script with online switch which allows you to access using your Tenant credentials.</li>
+</ul>
+
+<p class="indent-1" dir="ltr"><span asset="4576827" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576827]</span></p>
+
+<h3 dir="ltr">User driven Autopilot Scenario:</h3>
+
+<p dir="ltr">This shows details of Tenant ID, Tenant Domain, ZTDID and registration details.</p>
+
+<p dir="ltr"><span asset="4576830" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576830]</span></p>
+
+<p dir="ltr"><span asset="4576831" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576831]</span></p>
+
+<p dir="ltr">Then it shows Device and User ESP with details of Client apps, policies and Certificates.</p>
+
+<p dir="ltr"><span asset="4576832" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576832]</span></p>
+
+<p dir="ltr">Timeline view showing important events of this process:</p>
+
+<p dir="ltr"><span asset="4576833" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576833]</span></p>
+
+<h3 dir="ltr">User Driven Hybrid Azure AD Join Scenario</h3>
+
+<p dir="ltr">Important things to note here is the Hybrid Azure AD join scenario and Offline Domain Join blob acquired by device from ODJ Connector.</p>
+
+<p dir="ltr"><span asset="4576834" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576834]</span></p>
+
+<p dir="ltr">Device ESP and User ESP(if any) : Gives overview of policies, apps and Certificates that are applied to the user and the device.</p>
+
+<p dir="ltr"><span asset="4576835" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576835]</span></p>
+
+<p dir="ltr">Timeline shows step by step events in detail for Autopilot profile, MDM Enrollment, ODJ and IME stuffs.</p>
+
+<p dir="ltr"><span asset="4576836" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576836]</span></p>
+
+<h3 dir="ltr">Using Registry Tool:</h3>
+
+<p><span><span>Check this path from Registry for the Autopilot event: </span></span><strong><span><span><span>HKLM\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot</span></span></span></strong></p>
+
+<p dir="ltr"><span asset="4576837" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576837]</span></p>
+
+<h3 dir="ltr">Using Netsetup Logs:</h3>
+
+<p dir="ltr">Navigate to C:\Windows\debug\Netsetup.log to get Netsetup logs for analysis.</p>
+
+<h4 dir="ltr">Hybrid Autopilot:</h4>
+
+<p dir="ltr"><span asset="4576839" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576839]</span></p>
+
+<p dir="ltr"><span asset="4576840" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576840]</span></p>
+
+<p dir="ltr"><span asset="4576841" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576841]</span></p>
+
+<h4 dir="ltr">Autopilot (Non-Hybrid):</h4>
+
+<p dir="ltr">&nbsp;</p>
+
+<p dir="ltr"><span asset="4576842" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576842]</span></p>
+
+<h3 dir="ltr">Using Kusto Explorer:</h3>
+
+<p dir="ltr">Intune Event shows clear view of Autopilot events in a step by step manner.</p>
+
+<p dir="ltr"><span asset="4576843" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576843]</span></p>
+
+<p dir="ltr">To check if the ZTD co-relation is successful:</p>
+
+<p dir="ltr"><span asset="4576844" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576844]</span>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;</p>
+
+<p dir="ltr">Dmp logs provides more insights of Autopilot Events:</p>
+
+<p dir="ltr"><span asset="4576845" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576845]</span></p>
+
+<h3 dir="ltr">Using Intune Kusto Troubleshooter (IKT):</h3>
+
+<p dir="ltr">IKT shares success/failure events from which we can isolate the issue.</p>
+
+<p dir="ltr"><span asset="4576847" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576847]</span></p>
+
+<h3 dir="ltr">Using Graph Explorer:</h3>
+
+<p dir="ltr">Graph&nbsp;call to view the profile/device would be a&nbsp;Get&nbsp;call to the following URL:</p>
+
+<p dir="ltr">https://graph.microsoft.com/beta/deviceManagement/windowsAutopilotDeviceIdentities/{managedDeviceID}</p>
+
+<p dir="ltr"><span asset="4576854" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576854]</span></p>
+
+<p dir="ltr">Graph call to check if Autopilot Deployment profile settings:</p>
+
+<p dir="ltr">https://graph.microsoft.com/beta/deviceManagement/WindowsAutopilotDeploymentProfiles/{EntDMID}</p>
+
+<p dir="ltr"><span asset="4576857" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4576857]</span></p>

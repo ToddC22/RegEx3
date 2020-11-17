@@ -1,0 +1,870 @@
+﻿<header><h1>Technical Guide: MPA: Windows 10 Activation Errors</h1></header><div class="kb-summary-section section"><a id="top"><span asset="4049349" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4049349]</span></a>
+<h3 class="sbody-h3">Who should use this article?</h3>
+
+<ul class="sbody-free_list">
+	<li>Communities</li>
+	<li>Office</li>
+	<li>Product Activation&nbsp;</li>
+	<li>Social Media agents</li>
+	<li>Windows</li>
+</ul>
+
+<h3 class="sbody-h3">What is this article about?</h3>
+This article provides information about Windows 10 activation, and how to troubleshoot activation errors.<br>
+<br>
+<span class="text-base"><strong>Note: </strong>This process does not apply to SMB or Commercial customers</span><br>
+<br>
+Related public content about activation errors:<br>
+&nbsp;
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="sbody-italic"><a href="http://windows.microsoft.com/en-us/windows-10/activation-in-windows-10" id="kb-link-1" target="_self">Activation in Windows 10</a></span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="sbody-italic"><a href="http://windows.microsoft.com/en-us/windows-10/activation-errors-windows-10" id="kb-link-2" target="_self">Get help with Windows 10 activation errors</a></span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<h3>&nbsp;</h3>
+
+<h3>Important first steps</h3>
+
+<p>&nbsp;</p>
+
+<p><span><span><span><span>When you are troubleshooting Windows 10 activation errors, the customer should be on the latest version of Windows 10, including updates. From <strong>Start</strong>, search for <strong>check for updates</strong>, select <strong>Check for Updates</strong> from the search results, and then follow the on-screen instructions.</span></span></span></span></p>
+
+<p>In version 1709 or higher, it is important to note that the PID can&rsquo;t be used to find the product key. It will show the edition, but if you put the PID into the KIT tool, it will show as blocked because the PID matches a default key, even if the customer used a valid product key to install.&nbsp;<br>
+<br>
+<span class="text-base">Also</span>: Original Equipment Manufacturers (OEMs) cannot hand out product keys or provide activation overrides. The OEM is responsible for providing new PCs with a licensed Operating System at the point of purchase. Once activated for the first time, any action that causes a system to become non-activated is the responsibility of Microsoft Support to help address with the user.</p>
+
+<h3>Table of Contents</h3>
+&nbsp;
+
+<p>&nbsp;</p>
+
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><a bookmark-id="1" href="#1" managed-link="" target="">1.The Activation troubleshooter in Windows 10 version 1607</a></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><a bookmark-id="1.1" href="#1.1" managed-link="" target="">1.1 Re-Activation of a Windows 10 digital license after a user has made a motherboard change (version 1607 and&nbsp;later&nbsp;only)</a></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><a bookmark-id="2" href="#2" managed-link="" target="">2. General information about Windows 10 Activation</a></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">
+			<p><a bookmark-id="2.1" href="#2.1" managed-link=""><span><span><span><span>2.1 Error Codes with multiple causes &amp; solutions (0x803F7001, 0xC004C003, 0xC004C008)</span></span></span></span></a></p>
+			</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><a bookmark-id="2.2" href="#2.2" managed-link="" target="">2.2 Error Codes 0xC004C060, 0xC004C4A2</a></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><a bookmark-id="2.3" href="#2.3" managed-link="" target="">2.3 Error Codes 0xC004C4A2, 0x803FA067L, 0xC004C001, 0xC004C004, 0xC004F004, 0xC004C007, 0xC004F005, 0xC004C00F, 0xC004C010, 0xC004C00E, 0xC004C4A4, 0xC004C4A5, 0xC004B001, 0xC004F010, 0xC004F050, 0x80004005</a></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><a bookmark-id="3.1" href="#3.1" managed-link="" target="">3.1 Error Code 0xC004F034</a></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><a bookmark-id="3.2" href="#3.2" managed-link="" target="">3.2 Error Code 0xC004f210</a></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><a bookmark-id="3.3" href="#3.3" managed-link="" target="">3.3 Error Codes 0xC004E016, 0x8007232B, 0xC004F074, 0xC004F038, 0x8007007B</a></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><a bookmark-id="4.1" href="#4.1" managed-link="" target="">4.1 Error Code 0xC004FC03</a></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><a bookmark-id="4.2" href="#4.2" managed-link="" target="">4.2 Error Codes 0x8007267C, 0x8024402C</a></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><a bookmark-id="4.3" href="#4.3" managed-link="" target="">4.3 Error Codes 0xD0000272, 0xC0000272, 0xc004C012, 0xC004C013, 0xC004C014</a></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><a bookmark-id="5.1" href="#5.1" managed-link="" target="">5.1 Error Codes 0xc004c770, 0x803FA071</a></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><a bookmark-id="5.2" href="#5.2" managed-link="" target="">5.2 Error Code 0xC004F00F</a></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><a bookmark-id="5.3" href="#5.3" managed-link="" target="">5.3 Error Code 0xC004C020</a></td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><a bookmark-id="5.4" href="#5.4" managed-link="">5.4 Error Code 0x87E10BC6</a></td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><a bookmark-id="5.5" href="#5.5" managed-link="">5.5&nbsp;Error Codes 0x800704CF, 0xC004F211, 0xC004F212, 0xC004F213</a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<br>
+<a class="bookmark" id="1"></a><br>
+&nbsp;
+<h4 class="sbody-h4">1. The Activation troubleshooter in Windows 10 version 1607 and later</h4>
+<br>
+<br>
+<img alt="" class="graphic" src="https://internalasset.blob.core.windows.net/asset/images/3181732.png" title=""><br>
+<br>
+On a non-Activated PC with Windows 10 Anniversary Update or later, select&nbsp;<span class="text-base">Settings</span>, <span class="text-base">Update and Security,</span> and then <span class="text-base">Activation</span>. You will see the <span class="text-base">Troubleshoot</span> button. The troubleshooter can help resolve several known issues a few of which are listed below. Please run the troubleshooter as the first step to any activation error.<br>
+<br>
+If the customer is signing in with a local account, they might be prompted to change to a Microsoft Account (MSA) sign in. This will allow the troubleshooter to check if the customer&#39;s license is already associated with their MSA, or allow the customer to associate it now. Only MSA sign ins can be associated with the license, local accounts can&rsquo;t.<br>
+&nbsp;
+<ol class="sbody-num_list">
+	<li>If the user has a digital license associated to their PC for a different edition, the troubleshooter can detect this and suggest a solution to the customer. If they have installed Windows 10 Home and have a license for Windows 10 Pro the troubleshooter will offer to upgrade the edition to match. If they have installed Windows 10 Pro and they have a license to Windows 10 Home, they must backup their data and do a clean install of Windows 10 Home Edition.</li>
+	<li>If the customer has changed their motherboard, their system might need to re-activate.</li>
+</ol>
+<a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a>
+
+<h4 class="sbody-h4"><br>
+<a class="bookmark" id="1.1"></a><br>
+1.1 Re-Activation of a Windows 10 digital license after a user has made a motherboard change (version 1607 or later&nbsp;only)</h4>
+<br>
+The Windows 10 digital license is tied to the HardwareID of the PC. If the user changes their motherboard, this HardwareID changes, and the PC will become non-Activated. In some cases, the user can solve this by running the troubleshooter and re-activating their PC with their existing digital license. For this to happen, they must:
+<ol class="sbody-num_list">
+	<li>Be connected to the internet</li>
+	<li>Have been running Windows 10 Anniversary Update (version 1607) prior to changing their motherboard</li>
+	<li>Signing into Windows 10 using a Microsoft account</li>
+</ol>
+<br>
+To launch the troubleshooter, select&nbsp;<span class="text-base">Settings, Security and Update,</span> and <span class="text-base">Activation</span>. You will see a Troubleshoot button on non-activated PCs. After running this, if the user is still not activated they are offered the link &ldquo;I changed hardware on this device recently. If the user is not already running a Microsoft Account, they will be asked to sign in to see a list of eligible PCs associated with the users Microsoft account. The user can select the correct one and have their PC re-activated.<br>
+<br>
+<img alt="" class="graphic" src="https://internalasset.blob.core.windows.net/asset/images/3181749.png" title=""><br>
+<br>
+<img alt="" class="graphic" src="https://internalasset.blob.core.windows.net/asset/images/3181750.png" title=""><br>
+<br>
+If the user does not have an eligible PC or the re-activation fails, see&nbsp;<a href="/help/3082672" id="kb-link-3" target="_self">3082672</a> Policy: MPA: Windows 10 Motherboard Replacement (MBR) and Device Exchange<br>
+<br>
+<a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a><br>
+<a class="bookmark" id="2"></a>
+
+<h4 class="sbody-h4">2. General information about Windows 10 Activation</h4>
+<br>
+Activation helps verify that your copy of Windows is genuine and hasn&rsquo;t been used on more devices than the Microsoft Software License Terms allow. Depending on how the customer got their copy of Windows 10, activation will use either a digital license (formerly called digital entitlement) or a 25-character product key.<br>
+&nbsp;
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">How the customer got Windows 10</span></td>
+			<td class="sbody-td"><span class="text-base">Activation method</span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Upgraded to Windows 10 for free from an eligible device running a genuine copy of Windows 7 or Windows 8.1, prior to July 30, 2016.<br>
+			<br>
+			Or<br>
+			<br>
+			Windows Insider upgraded to the newest Windows 10 Insider Preview build on an eligible device that was running an activated previous version of Windows and Windows 10 Preview.</td>
+			<td class="sbody-td">Digital license</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Purchased from the Microsoft Store and successfully activated Windows 10 one of the following products:<br>
+			<br>
+			&middot; Genuine Windows 10<br>
+			<br>
+			&middot; Windows 10 Pro upgrade</td>
+			<td class="sbody-td">Digital license</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Purchased a copy of Windows 10 from an authorized retailer.</td>
+			<td class="sbody-td">Product key<br>
+			<br>
+			(On a label inside the box Windows 10 came in.)</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Purchased a digital copy (ESD) of Windows 10 from an authorized retailer.</td>
+			<td class="sbody-td">Product key<br>
+			<br>
+			(In the confirmation email you received after buying Windows 10 or in a digital locker accessible through the retailer&rsquo;s website.)</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">A Volume Licensing agreement for Windows 10 or MSDN subscription.</td>
+			<td class="sbody-td">Product key</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Purchased a new device running Windows 10.</td>
+			<td class="sbody-td">Product key<br>
+			<br>
+			(Pre&ndash;installed on your device, included with the device packaging, or included as a card or on the Certificate of Authenticity (COA) attached to the device.)</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<br>
+<br>
+Digital license is made available to a device which upgrades from Windows 7 or Windows 8.x to Windows 10. Starting Windows 10 Version 1511 (November update), the customer will be able to see information on the Activation page when a device is activated using a digital license.<br>
+<br>
+<img alt="" class="graphic" src="https://internalasset.blob.core.windows.net/asset/images/3112365.png" title=""><br>
+<br>
+<span>When you upgrade from Windows 7 or 8.1 to Windows 10 or if the PC is activated using a digital entitlement, then no Product Key is entered and a 5x5 Default Key remains with an associated default PID. This 5x5 key is a generic key and cannot be used for activation of Windows 10. When a generic key or the IID of such a key is looked up in PACSR or KIT, it will show as blocked. </span><br>
+<br>
+<a class="bookmark" id="2.1"></a>
+
+<h4 class="sbody-h4">2.1 Error Codes with multiple causes &amp; solutions (0x803F7001, 0xC004C003, 0xC004C008)</h4>
+
+<p><strong>Important</strong>: The following hexadecimal error codes (0x803F7001, 0xC004C003, 0xC004C008) can have different causes and solutions. If the customer is reporting one of these errors, you need to ask for the full text of the error the customer is getting, and match it to the text in the table below.</p>
+
+<p>&nbsp;</p>
+
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><strong><span class="text-base">Activation error</span></strong></td>
+			<td class="sbody-td"><strong><span class="text-base">Windows 10 version&nbsp;1607 (Anniversary Update) and later<br>
+			<br>
+			Digital license, Windows 10 5x5 key </span></strong></td>
+			<td class="sbody-td">
+			<p><span><strong><span><span><span>Windows 10 version 1809 (October 2018 Update)</span></span></span></strong></span></p>
+
+			<p>&nbsp;</p>
+			<strong><span><span><span><span>Digital license, Windows 10 5x5 key</span></span></span></span></strong></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><strong>Windows is not activated as your previous version of Windows on this device was not activated prior to upgrade to Windows 10</strong> (Error code 0x803F7001)<br>
+			<br>
+			<strong>Windows can&rsquo;t activate right now</strong> (Error code: 0x803F7001)</td>
+			<td class="sbody-td">Let the customer know the reason for the error is there is no valid Windows license found for the device.<br>
+			<br>
+			If the customer mentions that they want the Free Upgrade Offer program, see:
+			<ul class="sbody-free_list">
+				<li>PA agents:&nbsp;<a href="/help/3100924" id="kb-link-4" target="_self">3100924</a>MPA - Windows 10 upgrade: Exception Process</li>
+				<li>All other agents:&nbsp;<a href="/help/3099777" id="kb-link-5" target="_self">3099777</a>Windows 10 upgrade: Exception Process</li>
+			</ul>
+			If the motherboard was replaced on a device that had previously upgraded to Windows 10 and no change was done to the operating system, see&nbsp;<a href="/help/3082672" id="kb-link-6" target="_self">3082672</a> White Glove Policy: Windows 10 Motherboard Replacement (MBR)<br>
+			<br>
+			Make sure the customer was successfully activated. If activation failed, please ask the customer for the error code and search this document for next steps.</td>
+			<td class="sbody-td">
+			<p><span><span><span><span>Let the customer know the reason for the error is there is no valid Windows license found for the device.<br>
+			<br>
+			If the customer mentions that they want the Free Upgrade Offer program, see: </span></span></span></span></p>
+
+			<ul>
+				<li><span><span><span><span><span>PA agents see KB <a href="https://internal.support.services.microsoft.com/help/3100924" target="_self">3100924 MPA Windows 10 upgrade exception</a></span></span></span></span></span></li>
+				<li><span><span><span><span><span>All other agents see KB <a href="https://internal.support.services.microsoft.com/help/3099777" target="_self">3099777 Process: Windows 10 upgrade exception</a></span></span></span></span></span></li>
+			</ul>
+			<span><span><span><span>If the motherboard was replaced on a device that had previously upgraded to Windows 10 and no change was done to the operating system, see KB <a href="https://internal.support.services.microsoft.com/help/3082672" target="_self">3082672 Policy: MPA: Windows 10 Motherboard Replacement (MBR) and Device Exchange</a><br>
+			<br>
+			<br>
+			Make sure the customer was successfully activated. If activation failed, please ask the customer for the error code and search this document for next steps.</span></span></span></span></td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><strong>This product key didn&#39;t work. </strong>(Error code: 0xC004C003)</td>
+			<td class="sbody-td">(5x5 product key only) The customer entered a product key that can&rsquo;t be used to activate Windows. For example, the product key is no longer valid. They&#39;ll need to enter a valid Windows 10 product key or buy a new license through the Microsoft Store.<br>
+			If a key is abused by being installed on multiple PCs, it can be blocked from future usage and will show as no longer valid.</td>
+			<td class="sbody-td">(5x5 product key only) The customer entered a product key that can&rsquo;t be used to activate Windows. For example, the product key is no longer valid. They&#39;ll need to enter a valid Windows 10 product key or buy a new license through the Microsoft Store.<br>
+			If a key is abused by being installed on multiple PCs, it can be blocked from future usage and will show as no longer valid.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><strong>The activation server reported that the product key has exceeded its unlock limit.</strong><br>
+			(Error code: 0xC004C008)</td>
+			<td class="sbody-td">Inform the customer that the error is seen if the product key has already been used on another PC, or it&#39;s being used on more PCs than the Microsoft Software License Terms allow. They will need to buy a product key for each one of their PCs to activate Windows on them.</td>
+			<td class="sbody-td">Inform the customer that the error is seen if the product key has already been used on another PC, or it&#39;s being used on more PCs than the Microsoft Software License Terms allow. They will need to buy a product key for each one of their PCs to activate Windows on them.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><strong>Windows reported that there was a problem with the product key of the previous version of Windows</strong> (Error codes: 0x803F7001, 0xC004C003, 0xC004C008, possibly others)</td>
+			<td class="sbody-td">N/A</td>
+			<td class="sbody-td">
+			<p><span><span><span>Run the Windows 10 Activation Troubleshooter: <strong>Start</strong> &gt; <strong>Settings </strong> &gt; <strong>Update &amp; Security </strong> &gt; <strong>Activation </strong> and then select <strong>Troubleshoot</strong>. </span></span> </span></p>
+			<span><span><span><span>Check if you have a paper copy of your Windows 25-character product key to activate Windows 10. </span></span></span></span></td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><strong>Windows reported that there was a problem with your OEM product key.</strong> (Error codes: 0x803F7001, 0xC004C003, 0xC004C008, possibly others)</td>
+			<td class="sbody-td">N/A</td>
+			<td class="sbody-td">
+			<p><span><span><strong><span><span>Your PC was purchased with Windows 10 preinstalled, and you&rsquo;re receiving t</span></span>his</strong><strong><span><span> activation error on first boot</span></span></strong>.  While rare, this can happen if there&rsquo;s a manufacturing error where a proper Windows 10 product key wasn&rsquo;t included in your PC&rsquo;s hardware. Try running the Activation Troubleshooter. Select <strong><span><span>Start</span></span></strong> &gt; <strong><span><span>Settings </span></span></strong> &gt; <strong><span><span>Update &amp; Security </span></span></strong> &gt; <strong><span><span>Activation </span></span></strong> and then select <strong><span><span>Troubleshoot</span></span></strong>. If the troubleshooter can&rsquo;t activate your PC, contact your PC&rsquo;s manufacturer.  </span></span></p>
+
+			<p>&nbsp;</p>
+			<strong><span><span><span><span>Agent</span></span></span></span></strong><span><span><span><span>: If the customer only has a digital license (rather than the 5x5 product key), you can try to extract the product key manually. After getting the 5x5 product key (or if the customer has it already), try entering it using <strong>Change product key</strong>.</span></span></span></span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<br>
+<a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a><br>
+<br>
+<a class="bookmark" id="2.2"></a>
+
+<h4 class="sbody-h4">2.2 Error Codes 0xC004C060, 0xC004C4A2</h4>
+
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">Activation Error</span></td>
+			<td class="sbody-td"><span class="text-base"><span class="text-base"></span>Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<span class="text-base"></span><br>
+			<span class="text-base">Digital license</span></td>
+			<td class="sbody-td"><span class="text-base">Windows 10 version&nbsp;1607 (Anniversary Update) and later<br>
+			<br>
+			Windows 10 5x5 key </span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">This product key didn&#39;t work. (Error code: 0xC004C060, 0xC004C4A2)</td>
+			<td class="sbody-td">Not applicable.</td>
+			<td class="sbody-td">The customer entered a product key that can&rsquo;t be used to activate Windows. For example, the product key is no longer valid. They&#39;ll need to enter a valid Windows 10 product key or buy a new license through the Microsoft Store.<br>
+			<span>If a key is abused by being installed on multiple PCs, it can be blocked from future usage and will show as no longer valid.</span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<br>
+<br>
+<a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a><br>
+<br>
+<a class="bookmark" id="2.3"></a>
+
+<h4 class="sbody-h4">2.3 Error Codes 0xC004C4A2, 0x803FA067L, 0xC004C001, 0xC004C004, 0xC004F004, 0xC004C007, 0xC004F005, 0xC004C00F, 0xC004C010, 0xC004C00E, 0xC004C4A4, 0xC004C4A5, 0xC004B001, 0xC004F010, 0xC004F050, 0x80004005</h4>
+&nbsp;
+
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">Activation error</span></td>
+			<td class="sbody-td"><span class="text-base"><span class="text-base"></span>Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<br>
+			<span class="text-base">Digital license</span></td>
+			<td class="sbody-td"><span class="text-base"><span class="text-base"></span>Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<br>
+			<span class="text-base">Windows 10 5x5 key</span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">This product key didn&#39;t work.<br>
+			<br>
+			(Error code: 0xC004C4A2, 0x803FA067L, 0xC004C001, 0xC004C004, 0xC004F004, 0xC004C007, 0xC004F005, 0xC004C00F, 0xC004C010, 0xC004C00E, 0xC004C4A4, 0xC004C4A5, 0xC004B001, 0xC004F010, 0xC004F050)<br>
+			<br>
+			Unspecified error. (Error code: 0x80004005)</td>
+			<td class="sbody-td">Not applicable.</td>
+			<td class="sbody-td">The customer entered a product key that can&rsquo;t be used to activate Windows. For example, the product key is not formatted correctly.<br>
+			<br>
+			Ask the customer for the product key, and check it in the Key Information Tool (KIT).<br>
+			<br>
+			If submitting the product key doesn&rsquo;t return any information or results in an error, review the characters of the key with the customer to see if it was entered incorrectly.<br>
+			<br>
+			If the key is being entered correctly, they&#39;ll need to enter a valid Windows 10 product key or buy a new license through the Store.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<br>
+<a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a><br>
+<br>
+<a class="bookmark" id="3.1"></a>
+
+<h4 class="sbody-h4">3.1 Error Code 0xC004F034<br>
+&nbsp;</h4>
+
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">Activation Error</span></td>
+			<td class="sbody-td"><span class="text-base"><span class="text-base"></span>Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<br>
+			<span class="text-base">Digital license</span></td>
+			<td class="sbody-td"><span class="text-base"><span class="text-base"></span>Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<br>
+			<span class="text-base">Windows 10 5x5 key</span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">License could not be found or was invalid.<br>
+			<br>
+			(Error code: 0xC004F034)</td>
+			<td class="sbody-td">Not Applicable</td>
+			<td class="sbody-td">Inform the customer that the error is seen if the product key entered is for a device that will activate against a KMS server or for a different version of <span class="text-base">Windows</span>.
+			<ol class="sbody-num_list">
+				<li>To manually return the device to the correct licensing channel, have them enter the default key so their Windows 10 licensing can be restored to Consumer channel. This is important to do before entering the regular product key. The customer will have to do this through a command line for it work:<br>
+				<br>
+				* From <strong>Start</strong>, search for <strong>cmd</strong><br>
+				* Choose <strong>Command Prompt</strong> from the results<br>
+				* At the command prompt, type <strong>slmgr /ipk</strong> [product key]<br>
+				[product key] is the appropriate key for the edition, below:</li>
+			</ol>
+
+			<p>Windows 10 Home: YTMG3-N6DKC-DKB77-7M9GH-8HVX7</p>
+
+			<p>Windows 10 Pro: VK7JG-NPHTM-C97JM-9MPGT-3V66T for Pro</p>
+
+			<p>Windows 10 Home N: 4CPRK-NM3K3-X6XXQ-RXX86-WXCHW</p>
+
+			<p>Windows 10 Pro N: 2B87N-8KFHP-DKV6R-Y2C8J-PKCKT</p>
+
+			<p>Windows 10 Home Single Language: BT79Q-G7N6G-PGBYW-4YWX6-6F4BT</p>
+
+			<p>Windows 10 Home Country Specific: 7B6NC-V3438-TRQG7-8TCCX-H6DDY</p>
+
+			<p><span><span><span><span>While step 1 WILL NOT change the error, it will still change the licensing channel. Proceed to step 2:</span></span></span></span></p>
+
+			<ol class="sbody-num_list" start="2">
+				<li>Now enter the Windows 10 5x5 key or sign into Microsoft Store to retrieve license and complete activation</li>
+			</ol>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<br>
+<a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a><br>
+<br>
+<a class="bookmark" id="3.2"></a>
+
+<h4 class="sbody-h4">3.2 Error Code 0xC004f210</h4>
+&nbsp;
+
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">Activation error</span></td>
+			<td class="sbody-td"><span class="text-base"><span class="text-base">Windows 10 version 1607 (Anniversary update) and later</span></span><br>
+			<br>
+			<span class="text-base">Digital license or 5x5 product key</span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">The product key you entered cannot be used to activate this edition (Error code: 0xC004f210)</td>
+			<td class="sbody-td">Run the Activation Troubleshooter: open Settings, Update and Security, Activation, and then select Troubleshoot on non-activated PCs.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<br>
+<a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a><br>
+<a class="bookmark" id="3.3"></a>
+
+<h4 class="sbody-h4">3.3 Error Codes 0xC004E016, 0x8007232B, 0xC004F074, 0xC004F038, 0x8007007B</h4>
+&nbsp;
+
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">Activation error</span></td>
+			<td class="sbody-td"><span class="text-base"><span class="text-base"></span>Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<br>
+			<span class="text-base">Digital license, Windows 7, 8.x, or 10 5x5 key</span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Error installing product key<br>
+			<br>
+			(Error code: 0xC004E016)<br>
+			<br>
+			DNS name does not exist.<br>
+			<br>
+			(Error code: 0x8007232B, 0xC004F074, 0xC004F038)<br>
+			<br>
+			The filename, directory name, or volume label syntax is incorrect. (Error code: 0x8007007B)</td>
+			<td class="sbody-td">Inform the customer that the error is seen if the product key entered is for a different version or the Enterprise edition of Windows 10 that can&#39;t be used to activate Windows 10 Home or Windows 10 Core editions.<br>
+			&nbsp;
+			<ol class="sbody-num_list">
+				<li>Based on the Edition of Windows 10 a customer is running have them enter the default key so their Windows 10 licensing can be restored to Consumer channel. This is important to do before entering the regular product key. The customer will have to do this through a command line for it work:<br>
+				<br>
+				* From <strong>Start</strong>, search for <strong>cmd</strong><br>
+				* Choose <strong>Command Prompt</strong> from the results<br>
+				* At the command prompt, type <strong>slmgr /ipk</strong> [product key]<br>
+				[product key] is the appropriate key for the edition, below:
+				<ul class="sbody-free_list">
+					<li>Windows 10 Home: YTMG3-N6DKC-DKB77-7M9GH-8HVX7</li>
+					<li>Windows 10 Pro: VK7JG-NPHTM-C97JM-9MPGT-3V66T for Pro</li>
+					<li>Windows 10 Home N: 4CPRK-NM3K3-X6XXQ-RXX86-WXCHW</li>
+					<li>Windows 10 Pro N: 2B87N-8KFHP-DKV6R-Y2C8J-PKCKT</li>
+					<li>Windows 10 Home Single Language: BT79Q-G7N6G-PGBYW-4YWX6-6F4BT</li>
+					<li>Windows 10 Home Country Specific: 7B6NC-V3438-TRQG7-8TCCX-H6DDY</li>
+				</ul>
+				</li>
+				<li>Now enter the Windows 10 5x5 key or sign into Microsoft Store to retrieve license and complete activation</li>
+			</ol>
+			<br>
+			&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<br>
+<a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a><br>
+<br>
+<a class="bookmark" id="4.1"></a>
+
+<h4 class="sbody-h4">4.1 Error Code 0xC004FC03</h4>
+&nbsp;
+
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">Activation error</span></td>
+			<td class="sbody-td"><span class="text-base"><span class="text-base"></span>Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<br>
+			<span class="text-base">Digital license</span></td>
+			<td class="sbody-td"><span class="text-base"><span class="text-base"></span>Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<br>
+			<span class="text-base">Windows 10 5x5 key</span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">A networking problem has occurred while activating your copy of Windows. (Error code: 0xC004FC03)</td>
+			<td class="sbody-td">Inform the customer that the error is seen if there are connectivity issues, or if firewall settings are preventing <span class="text-base">Windows</span> from completing the <span class="text-base">activation</span> process online.<br>
+			<br>
+			If the error has not resolved within a few hours, we will need to help activate offline. Refer to KB:
+			<ul class="sbody-free_list">
+				<li>Up &amp; Running and Technical Support agents should see KB <a href="/help/3099777" id="kb-link-9" target="_self">3099777</a>for this process.</li>
+				<li>PA agents for Global English or China should refer to KB <a href="/help/3100924" id="kb-link-10" target="_self">3100924</a>.</li>
+			</ul>
+			</td>
+			<td class="sbody-td">Inform the customer that the error is seen if there are connectivity issues, or if firewall settings are preventing Windows from completing the activation process online.<br>
+			<br>
+			If the customer has a Windows 10 key, ask the customer to enter <span class="text-base">SLUI 04</span> in the <span class="text-base">Search </span>box, and then tap or click <span class="text-base">SLUI 04</span>. Follow the instructions on the screen and read the IID.<br>
+			&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<br>
+<a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a><br>
+<a class="bookmark" id="4.2"></a>
+
+<h4 class="sbody-h4">4.2 Error Code 0x8007267C</h4>
+&nbsp;
+
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">Activation error</span></td>
+			<td class="sbody-td"><span class="text-base"><span class="text-base"></span>Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<br>
+			<span class="text-base">Digital license, Windows 10 5x5 key</span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Connect to Internet to activate Windows<br>
+			<br>
+			(Error code: 0x8007267C)<br>
+			<br>
+			Unable to reach Windows activation servers<br>
+			<br>
+			(Error code: 0x8024402C)</td>
+			<td class="sbody-td">If the customer sees this error inform them that the error is seen if there are connectivity issues or the activation service is not reachable.<br>
+			<br>
+			If the customer is already connected to the internet and sees this error, there is no additional troubleshooting required. When the activation service is reachable the client will automatically activate if a valid license is available on the device.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<br>
+<a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a><br>
+<a class="bookmark" id="4.3"></a>
+
+<h4 class="sbody-h4">4.3 Error Codes 0xD0000272, 0xC0000272, 0xc004C012, 0xC004C013, 0xC004C014</h4>
+&nbsp;
+
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">Activation error</span></td>
+			<td class="sbody-td"><span class="text-base"><span class="text-base"></span>Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<br>
+			<span class="text-base">Digital license</span></td>
+			<td class="sbody-td"><span class="text-base"><span class="text-base"></span>Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<br>
+			<span class="text-base">Windows 10 5x5 key</span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Windows couldn&rsquo;t be activated right now. We&rsquo;ll keep trying to activate it for you<br>
+			<br>
+			(Error code 0xD0000272, 0xC0000272, 0xc004C012, 0xC004C013, 0xC004C014)</td>
+			<td class="sbody-td">Not Applicable</td>
+			<td class="sbody-td">If the customer sees this error inform them that the error is seen if the activation server is temporarily unavailable, and their copy of Windows will automatically activate when the service comes back online.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<br>
+<a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a><br>
+<br>
+<a class="bookmark" id="5.1"></a>
+
+<h4 class="sbody-h4">5.1 Error Codes 0xc004c770, 0x803FA071</h4>
+&nbsp;
+
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">Activation error</span></td>
+			<td class="sbody-td"><span class="text-base"><span class="text-base"></span>Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<br>
+			<span class="text-base">Digital license</span></td>
+			<td class="sbody-td"><span class="text-base"><span class="text-base"></span>Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<br>
+			<span class="text-base">Windows 10 5x5 key</span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">This product key is already being used on another PC.<br>
+			<br>
+			(Error code: 0xc004c770, 0x803FA071)</td>
+			<td class="sbody-td">Not Applicable</td>
+			<td class="sbody-td">Inform the customer that the error is seen if the product key has already been used on another PC, or it&#39;s being used on more PCs than the Microsoft Software License Terms allow. They will need to buy a product key for each one of their PCs to activate Windows on them.<br>
+			&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<br>
+<a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a><br>
+<a class="bookmark" id="5.2"></a>
+
+<h4 class="sbody-h4">5.2 Error Code 0xC004F00F</h4>
+&nbsp;
+
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">Activation error</span></td>
+			<td class="sbody-td"><span class="text-base">Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<br>
+			<span class="text-base">Digital license</span></td>
+			<td class="sbody-td"><span class="text-base">Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<br>
+			<span class="text-base">Windows 10 5x5 key</span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">This PC isn&rsquo;t activated anymore. If you reinstalled Windows or made changes to your hardware recently, contact customer support.<br>
+			<br>
+			(Error code: 0xC004F00F)</td>
+			<td class="sbody-td">Not Applicable</td>
+			<td class="sbody-td">If the customer sees this error when using their Windows 10 key ask the customer if there were any hardware changes to the device, such as replacing the motherboard. If yes, the customer should follow the override process through the PA IVR or <span>collect the IID and use PACSR to provide the override </span>.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<br>
+<br>
+<a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a><br>
+<a class="bookmark" id="5.3"></a>
+
+<h4 class="sbody-h4">5.3 Error Code 0xC004C020</h4>
+&nbsp;
+
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">Activation error</span></td>
+			<td class="sbody-td"><span class="text-base">Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<br>
+			<span class="text-base">Digital license</span></td>
+			<td class="sbody-td"><span class="text-base">Windows 10 version&nbsp;1607 (Anniversary Update) and later</span><br>
+			<br>
+			<span class="text-base">Windows 10 5x5 key</span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">The activation server reported that the Multiple Activation Key has exceeded its limit.<br>
+			<br>
+			(Error code: 0xC004C020)</td>
+			<td class="sbody-td">Not Applicable</td>
+			<td class="sbody-td">This error occurs when a Volume License (a license that has been bought from Microsoft by a business to install Windows on multiple PCs) has been used on more PCs than the Microsoft Software License Terms allow.<br>
+			<br>
+			To fix the problem, the customer will need to use a different product key to activate their PC. Direct the customer to contact their organization&#39;s support person for more info.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p><br>
+<a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a></p>
+
+<h4><a id="5.4" name="5.4"></a>5.4 Error Code 0x87E10BC6</h4>
+
+<p><span><span><span><span>An error occurred with our activation server or licensing service. Wait a few minutes and then try the following Windows 10 Pro License Recovery steps. </span></span></span></span></p>
+
+<p><span><span><span><span>Select the <strong>Start</strong> button, then select <strong>Settings </strong>&gt; <strong>Update &amp; security </strong>&gt; <strong>Activation </strong>, and then select <strong>Troubleshoot</strong> to run the Activation troubleshooter.<br>
+<br>
+When the troubleshooter is complete, select <strong>Go to Store</strong> to launch the Store app. If the Store app shows there was a problem, select <strong>Try again</strong>.<br>
+<br>
+After a few minutes, you should see a message thanking you for activating genuine Windows, followed by another message showing that Windows was activated. </span></span></span></span></p>
+
+<p><span><span><span><span>For more info about the troubleshooter, see </span></span></span></span><a href="https://support.microsoft.com/en-us/help/20527" target="_blank"><span><span><span><u>Using the Activation troubleshooter</u></span></span></span></a><span><span><span><span>.</span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="" target=""><u>Return to top</u></a></p>
+
+<h4><a id="5.5" name="5.5"></a>5.5&nbsp;Error Codes 0x800704CF, 0xC004F211, 0xC004F212, 0xC004F213</h4>
+
+<p>&nbsp;</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong><span><span><span><span>Activation error</span></span></span></span></strong></p>
+			</td>
+			<td width="36%">
+			<p><strong><span><span><span><span>Windows 10 version 1607 (Anniversary Update) and later<br>
+			<br>
+			Digital license, Windows 10 5x5 key </span></span></span></span></strong></p>
+			</td>
+			<td width="35%">
+			<p><strong><span><span><span><span>Windows 10 version 1809 (October 2018 Update)</span></span></span></span></strong></p>
+
+			<p>&nbsp;</p>
+
+			<p><strong><span><span><span><span>Digital license, Windows 10 5x5 key</span></span></span></span></strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>Windows can&rsquo;t activate right now (Error code: 0x800704cF)</span></span></span></span></p>
+			</td>
+			<td width="36%">
+			<p><span><span><span><span>Let the customer know the reason for the error is there is no valid Windows license found for the device.<br>
+			<br>
+			If the customer mentions that they want the Free Upgrade Offer program, see: </span></span></span></span></p>
+
+			<ul>
+				<li><span><span><span><span><span>PA agents see KB <a href="https://internal.support.services.microsoft.com/help/3100924" target="_self">3100924 MPA Windows 10 upgrade exception</a></span></span></span></span></span></li>
+				<li><span><span><span><span><span>All other agents see KB <a href="https://internal.support.services.microsoft.com/help/3099777" target="_self">3099777 Process: Windows 10 upgrade exception</a></span></span></span></span></span></li>
+			</ul>
+
+			<p><span><span><span><span>If the motherboard was replaced on a device that had previously upgraded to Windows 10 and no change was done to the operating system, see KB <a href="https://internal.support.services.microsoft.com/help/3082672" target="_self">3082672 Policy: MPA: Windows 10 Motherboard Replacement (MBR) and Device Exchange</a><br>
+			<br>
+			Make sure the customer was successfully activated. If activation failed, please ask the customer for the error code and search this document for next steps.</span></span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span><span><span><span>Let the customer know the reason for the error is there is no valid Windows license found for the device.<br>
+			<br>
+			If the customer mentions that they want the Free Upgrade Offer program, see: </span></span></span></span></p>
+
+			<ul>
+				<li><span><span><span><span><span>PA agents see KB <a href="https://internal.support.services.microsoft.com/help/3100924" target="_self">3100924 MPA Windows 10 upgrade exception</a></span></span></span></span></span></li>
+				<li><span><span><span><span><span>All other agents see KB <a href="https://internal.support.services.microsoft.com/help/3099777" target="_self">3099777 Process: Windows 10 upgrade exception</a></span></span></span></span></span></li>
+			</ul>
+
+			<p><span><span><span><span>If the motherboard was replaced on a device that had previously upgraded to Windows 10 and no change was done to the operating system, see KB <a href="https://internal.support.services.microsoft.com/help/3082672" target="_self">3082672 Policy: MPA: Windows 10 Motherboard Replacement (MBR) and Device Exchange</a><br>
+			<br>
+			Make sure the customer was successfully activated. If activation failed, please ask the customer for the error code and search this document for next steps.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>Windows reported that the hardware of your device has changed. Error Code 0xC004F211 </span></span></span></span></p>
+			</td>
+			<td width="36%">
+			<p><span><span><span><span>N/A</span></span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span><span><strong><span><span><span>You changed the hardware on a previously activated Windows 10 PC</span></span></span></strong><span><span><span>.  A Windows license is associated with your PC hardware. If you make significant hardware changes, such as replacing your motherboard, Windows won&rsquo;t be able to find a matching license the next time you start your PC.  If Windows was preinstalled on the PC, then a new license is required if you have made a change such as replacing the motherboard. To purchase a new Windows license, select the <strong>Start</strong> button &gt; <strong>Settings </strong> &gt; <strong>Update &amp; Security </strong> &gt; <strong>Activation </strong>, and then select <strong>Go to Microsoft Store</strong>.  </span></span></span> </span></span></p>
+
+			<p><span><span><span><span><span>If you have a Windows product key you used on your PC before the hardware change, enter it by selecting the <strong>Start</strong> button &gt; <strong>Settings </strong> &gt; <strong>Update &amp; Security </strong> &gt; <strong>Activation </strong> and then selecting <strong>Change product key</strong>. </span></span></span> </span></span></p>
+
+			<p><span><span><span><span><span>In addition, Microsoft provides an exception path for transferring a Windows License after a hardware change. You&rsquo;ll need to be signed in to the same </span></span></span><span><span><a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Faccount.microsoft.com%2F&amp;data=02%7C01%7Cv-matham%40microsoft.com%7C7228c8cc849d45b2e1df08d6258da4ac%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636737687613586640&amp;sdata=oue49IEM9BMpX8HWjDM5%2BPVQH4Txl7z79RtxNuivvC4%3D&amp;reserved=0" target="_blank"><span>Microsoft account</span></a><span> before making the hardware change and to use the exception path.  </span> </span></span></span></span></p>
+
+			<p><span><span><span><span>To access this exception path, the <strong>Start</strong> button &gt; <strong>Settings </strong> &gt; <strong>Update &amp; Security </strong> &gt; <strong>Activation </strong> and then select <strong>Troubleshoot</strong>. If the troubleshooter can&rsquo;t resolve the issue, you&rsquo;ll see a link to reactivate after a hardware change. Select it to follow this path. For more info, see </span></span></span></span><span><span><span><a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fen-us%2Fhelp%2F20530&amp;data=02%7C01%7Cv-matham%40microsoft.com%7C7228c8cc849d45b2e1df08d6258da4ac%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636737687613586640&amp;sdata=h9iIGX%2F1tgn3J47q2bomAB8kluYVGMsu6%2FLEOtddu00%3D&amp;reserved=0" target="_blank"><span>Reactivating Windows 10 after a hardware change</span></a><span>. </span></span></span></span></p>
+
+			<p>&nbsp;</p>
+
+			<p><strong><span><span><span><span>Agent</span></span></span></span></strong><span><span><span><span>: If the above steps don&rsquo;t resolve the issue, and the customer has a 5x5 product key, perform an override. </span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>The product key used on this PC didn&#39;t work with this edition of Windows. You might need to get in touch with the store or company you bought Windows from, enter a different product key, or go to the Store to buy genuine Windows. Error Code </span></span></span></span><span><span><span><span>0xC004F212</span></span></span></span></p>
+			</td>
+			<td width="36%">
+			<p><span><span><span><span>N/A</span></span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span><span><strong><span><span>You reinstalled the wrong edition of Windows 10</span></span></strong><span><span>.  When you reinstall Windows 10 using a digital license, you&rsquo;re asked to choose which edition to install. If you choose an edition other than the one you&rsquo;re licensed to use, you may receive the above error.  </span></span> </span></span></p>
+
+			<p><span><span><span><span>If you think you installed the wrong edition, select the <strong>Start</strong> button &gt; <strong>Settings </strong> &gt; <strong>Update &amp; Security </strong> &gt; <strong>Activation </strong> and then select <strong>Troubleshoot</strong>. If the troubleshooter detects a valid Windows 10 digital license for an edition not current installed, it will let you know, and show you how to install the correct edition. </span></span> </span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span>Windows reported that no product key was found on your device. Error Code 0xC004F213</span></span></span></p>
+			</td>
+			<td width="36%">
+			<p><span><span><span><span>N/A</span></span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span><span><span><span>This happens when the customer has replaced the motherboard and clean installed. No product key was found. The customer might have skipped activation during setup.</span></span></span></span></p>
+
+			<p>&nbsp;</p>
+
+			<p><span><span><span><span>Run the Activation troubleshooter and reactivate. If the customer doesn&rsquo;t have a valid product key, they will need to purchase one.</span></span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<br>
+<a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a></div>
+<div class="kb-securedata-section section">
+<p><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span><strong>August 2018</strong></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><span><strong><span>Item</span></strong> </span></span></p>
+			</td>
+			<td>
+			<p><span><span><strong><span>Title</span></strong> </span></span></p>
+			</td>
+			<td width="179">
+			<p><span><span><strong><span>Date</span></strong> </span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/158233">CONTENT TRACKING 158233</a></td>
+			<td>Product Activation: Update KB 3105116 to remove left nav links</td>
+			<td width="179">8/20/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/144062">CONTENT TRACKING 144062</a></td>
+			<td>Batch Title Restate - MPA</td>
+			<td width="179">5/28/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/133812" role="heading">Content Tracking 133812</a></td>
+			<td>List of articles need the Product Activation keyword</td>
+			<td width="179">8/31/2018</td>
+		</tr>
+		<tr>
+			<td><a href="tfsirt:8080/tfs/IRT1/CSS IRT/_workitems?id=123797&amp;fullScreen=false&amp;_a=edit" managed-link="" target="_blank">Content Tracking 123797</a></td>
+			<td>Add Speak Up Express asset box for the articles in portals 423 and 421</td>
+			<td width="179">1/15/2018</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><a aria-level="1" class="caption" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/120353" role="heading">Content Tracking 120353</a></span></p>
+			</td>
+			<td>
+			<p><span>SU661: SHOW: MBR Activation Content - Licensing Server Failure</span></p>
+			</td>
+			<td width="179">
+			<p><span><span><span>11/13/2017</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="https://microsoft.visualstudio.com/OS/_workitems/edit/13717943" managed-link="" target="_blank">Task 13717943</a></td>
+			<td>RS3: Content Scrub to track changes for Default Key to move between editions</td>
+			<td width="179">7/6/2018</td>
+		</tr>
+		<tr>
+			<td><a href="https://microsoft.visualstudio.com/OS/_workitems/edit/19098775" managed-link="" target="_blank">Task 19098775</a></td>
+			<td>Update 3105116 for RS5</td>
+			<td width="179">10/4/2018</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+Author ID (email alias): shubhas<br>
+Writer ID (email alias): v-matham<br>
+Tech Review ID (email alias): shubhas, angelatu</div>

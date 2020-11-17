@@ -1,0 +1,328 @@
+﻿<header><h1>ASMS – EA Scenarios</h1></header><form action="/" id="form1" method="post">
+<p paraeid="{4cb9474f-5168-45b9-96f9-f622b124c805}{36}" paraid="1475424209"><span lang="EN">Submit a </span><a href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder="><span lang="EN"><span><span>ModTrack</span></span></span></a><span lang="EN"> request to update this TSG.</span></p>
+
+<h3><a id="Overview" name="Overview"><span><span>Overview</span></span></a><span><span> </span></span></h3>
+
+<p><span><span><span>This TSG provides guidance to help determine which Enterprise Agreement (EA) scenarios are handled by ASMS, and which scenarios are handled by the Enterprise Azure Operations (EAO) team. </span></span></span></p>
+
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<p class="alert-title">EA Scope Transition to ASMS</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p>Some new scenarios are now owned by ASMS as part of the EA scope transition. For more information on these scenarios, see the&nbsp;<a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/ASMS_Runtime_Operations/Lists/Scheduled%20Events%20%20Message%20Center/DispForm.aspx?ID=214" managed-link="" target="">Message Center post</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+<h3>&nbsp;</h3>
+
+<h3><a id="Policy" name="Policy"><span>Policy</span></a></h3>
+
+<ul>
+	<li>
+	<p><span><span>For the scenarios listed under the <span><a bookmark-id="2872061" href="#2872061" managed-link="">EAO Scope</a> </span></span></span><span><span> </span></span><span><span>section, send the entire case to the EAO team (Azure EA Portal Support) as soon as the scenario has been identified.&nbsp;</span></span></p>
+	</li>
+	<li>
+	<p>For some of the scenarios owned by ASMS, additional steps and information can be found in the <strong><span>Help</span></strong> section of the EA Portal. As well as in the respective TSGs.&nbsp;<br>
+	<strong><span>Note</span></strong>: The customer can also access the help section directly by logging into the EA Portal.<br>
+	<span asset="4467048" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4467048]</span></p>
+	</li>
+</ul>
+
+<h4><span>Finding an Enrollment Number Without Contacting the Customer </span><span><span> </span></span></h4>
+
+<p>In some cases, customers may not know their Enrollment number or have not provided it in the case. Use the below guidance to find the customer&#39;s Enrollment number without having to ask them for it.</p>
+
+<ul>
+	<li>
+	<p><span>Use </span><span><span> </span></span><span><span> </span></span>the company name noted in CMAT or in the customer&rsquo;s signature to search for the enrollment in the <a href="https://ea.azure.com/">EA Portal</a>.</p>
+	</li>
+	<li>
+	<p>If you&rsquo;re still unable to find the Enrollment number, try searching the domain in CMAT.</p>
+	</li>
+	<li>
+	<p>If the company name contains multiple words, try <span>searching in the </span><a href="https://ea.azure.com/">EA Portal</a> <span><span> </span></span><span><span> </span></span>using individual words. </p>
+	</li>
+	<li>
+	<p><span>The EA Enrollment number can also be found through Azure Support Center (ASC) by launching ASC from Service Desk (SD) while the case is open. If the customer has an Enrollment number, it will be displayed on the ASC screen as depicted below:</span><span><span> </span></span><br>
+	<span asset="4467049" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4467049]</span></p>
+	</li>
+	<li>
+	<p>If, in ASC or CMAT,&nbsp;the customer&#39;s enrollment details show as&nbsp;<em>N/A</em>, do the following to find the customer&#39;s Enrollment number:</p>
+
+	<ol>
+		<li>
+		<p>Navigate to&nbsp;<a data-auth="Verified" href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdataexplorer.azure.com%2Fclusters%2Fazsc%2Fdatabases%2Fasccosmos&amp;data=04%7C01%7Cv-ishan%40microsoft.com%7Ca2d7bae68a9a4a559e9908d86af17557%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637376932619127314%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=7jMGf%2FiqPG%2FtwTbhgvZh0%2FxGJbZX4AUKxPzMEu8hQ1c%3D&amp;reserved=0" originalsrc="https://dataexplorer.azure.com/clusters/azsc/databases/asccosmos" rel="noopener noreferrer" shash="plPSRQRJxCrN4Xo+spDa4SkdeiGGOkguEEX+VEyrogLvsZGPb96m2EhC+3Qmuc29CUHlFJlb1U9CoTJaMKEUQs1GhMIco2IVHzG30AGB7YisJMG5DPEgegrE/tcB1plZZwu0gHXEmcPULZJJjeJsKqRJPjuce21nBYdtiQpUjJA=" target="_blank" title="Original URL: https://dataexplorer.azure.com/clusters/azsc/databases/asccosmos. Click or tap if you trust this link.">https://dataexplorer.azure.com/clusters/azsc/databases/asccosmos</a>.<br>
+		<br>
+		<strong>Note:</strong>&nbsp;ASC access is required to use the Azure Data Explorer.</p>
+		</li>
+		<li>
+		<p>On the&nbsp;<em>Query&nbsp;</em>tab, under&nbsp;<em>azsc</em>, select&nbsp;<strong>asccosmos</strong><strong>.</strong></p>
+		</li>
+		<li>
+		<p>Run the following command:</p>
+
+		<table class="table">
+			<tbody>
+				<tr>
+					<td>
+					<p><em>Customer_Subscriptions&lt;Return/Enter key&gt;</em></p>
+
+					<p><em>|&nbsp;where&nbsp;SubscriptionId&nbsp;contains&nbsp;&quot;&lt;Subscription&nbsp;GUID&gt;&quot;</em></p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p><strong>Note:&nbsp;</strong>In place of&nbsp;<em>&lt;Subscription GUID&gt;</em>, enter the customer&#39;s subscription GUID. In place of&nbsp;<em>&lt;Return/Enter key&gt;</em>, press the return/enter key.</p>
+		</li>
+		<li>
+		<p>In the results, the customer&#39;s Enrollment number will be visible.</p>
+		</li>
+	</ol>
+	</li>
+	<li>You can also use the Customer Portal tool to find the Enrollment number using the subscription GUID. Use the following link to access the tool: <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcaicustomers.microsoftonline.com%2F&amp;data=02%7C01%7Cv-ajbur%40microsoft.com%7Ca27f2f2fc6634817a85208d6a28a7238%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636875112831307707&amp;sdata=KhhsXMurBjT6Pn6AX7ymnhAkC7KPeLDbfbxZc23omUU%3D&amp;reserved=0">https://caicustomers.microsoftonline.com/</a>.</li>
+	<li>&nbsp;If you are unsuccessful in finding the Enrollment Number after attempting the above steps, you may request the information from the customer.<br>
+	&nbsp;</li>
+</ul>
+
+<h4>Adding the missing Enrollment Number to the case</h4>
+
+<p>When working on an EA case, ensure the Enrollment ID is listed in the <em>Enrollment ID</em>&nbsp;field of the case management tool. If it is not listed, you should manually add it before closing the case.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h3><a id="CustomerExperienceAndProvisioning" name="CustomerExperienceAndProvisioning"><span>Customer Experience and Provisioning </span></a></h3>
+
+<p>In addition to the self-serve actions listed in the <strong><span>Help </span></strong>section of the EA Portal, here are some additional actions that can be taken by or on behalf of the customer:</p>
+
+<ol>
+	<li>
+	<p><strong><span>TAM or salesperson wants access to Azure Health Report.</span></strong></p>
+
+	<ul style="list-style-type:circle">
+		<li>
+		<p>Direct them to: <a href="https://microsoft.sharepoint.com/teams/ceinsights" target="_blank">https://microsoft.sharepoint.com/teams/ceinsights</a>.</p>
+		</li>
+		<li>
+		<p>If they need support for the tool, they can email the C+E BI Support alias at <a href="cebisup@microsoft.com" managed-link="">cebisup@microsoft.com</a>.</p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><strong><span>EA customer requests to change the Company Name on an EA invoice.</span></strong></p>
+
+	<ul style="list-style-type:disc">
+		<li>
+		<p>Direct the customer to their Account Manager, as this is out of scope for both the ASMS and Enterprise Azure Operations teams.</p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><strong><span>Azure True-up</span></strong></p>
+
+	<ul style="list-style-type:disc">
+		<li>
+		<p>Refer to the Enterprise Agreement True-up Guide: Click <a href="http://sharepoint/sites/fastrack/_layouts/15/WopiFrame.aspx?sourcedoc=%7be1c88458-7f07-4643-a15f-dc3635e1f722%7d&amp;action=default" target="_blank">here </a>for more details.</p>
+		</li>
+	</ul>
+	</li>
+</ol>
+
+<h3><a name="SupportScenarios"><span><span>Support Scenarios</span></span><span><span> </span></span><span><span><span> </span></span></span><span><span><span> </span></span></span><span><span><span> </span></span></span></a></h3>
+
+<p><span><span><span>The following is a list of scenarios handled by EAO and a list of scenarios handled by ASMS. Leverage this list to determine how to best support your customer.</span></span></span></p>
+
+<p><span><strong><span><span><span>Note: </span></span></span></strong><span><span><span><span>For guidance supporting customers with </span></span></span></span><span><span><span><span>Programmatically Created Subscriptions</span></span></span></span><span><span><span><span>, see </span></span></span></span></span><a href="https://internal.support.services.microsoft.com/en-us/help/4090378"><span><span><span>TSG 4090378</span></span></span></a><span><span><span>.</span></span></span></p>
+
+<h4><a id="EAOScope" name="EAOScope"><span><span>EAO Scope</span></span></a><span><span> </span></span><span><span><span> </span></span></span><span><span><span> </span></span></span><span><span><span> </span></span></span><span><span><span> </span></span></span><span><span><span> </span></span></span></h4>
+
+<p><span><span><span>The scenarios in this section are handled by the EAO team. Should you receive a case related to any of the below scenarios, follow the aligned guidance to transfer the case or engage the EAO Team accordingly. </span></span></span></p>
+
+<p><strong>Internal Microsoft Employee Support</strong><br>
+Cases submitted by Internal Microsoft Employees that reach the&nbsp;<em>ASMS EAL MCA queue</em>, should be transferred to the <em>MSaaS Azure EA Help - Internal Audiences queue</em> for the EA Portal team to handle the case,&nbsp;irrespective of the scenario/scope.&nbsp;</p>
+
+<h4><span>ASMS Scope</span></h4>
+
+<p>This section provides guidance for handling EA-related support scenarios that fall under ASMS scope.</p>
+
+<p><span><strong>Users and Administrators</strong></span><strong><span><span> </span></span></strong></p>
+
+<p>The TSGs in this section provide guidance on EA Portal roles and permissions.</p>
+
+<ul>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-US/help/4537089&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688290469&amp;sdata=B1y1hqTT7WI7bOPaeQDGqgqnWuBncUWw3k8Ml3BfN08%3D&amp;reserved=0"><span>General Information about the EA Portal</span></a><span> &ndash; </span><span><span>Provides general information about the EA Portal.</span></span></p>
+	</li>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-us/help/2661348&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688270558&amp;sdata=esbVZbdmhJQ0kowp69nQcSvmwoUqmbzmMMEDkyK80s8%3D&amp;reserved=0"><span>Add or Remove EA Administrator</span></a><span> &ndash; </span><span>Provides guidance on how to assist customers in adding and removing EA Administrators. </span></p>
+	</li>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-US/help/4537343&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688270558&amp;sdata=dO9Aw7b9RNhD7mH54rzYDxBECoVwcUCfl1DA9gy0Z5A%3D&amp;reserved=0"><span>Add A New EA Account</span></a><span> &ndash; </span><span><span>Provides guidance on how to add a new account to an EA via the EA portal.</span></span></p>
+	</li>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-US/help/2870258&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688280514&amp;sdata=LA4Ea4HUP9gnmSi8L1tITd5zxVk0PvEioGOVAFacwxc%3D&amp;reserved=0"><span>EA Portal Authentication and Access Issues</span></a><span> &ndash; </span><span>Provides guidance on how to troubleshoot </span>EA Portal<span> login issues. Also covers adding users to EA accounts, validating and updating user PUIDs.</span></p>
+	</li>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-US/help/2658519&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688280514&amp;sdata=X3XgoXrbHG0PLUxzWEKsdhxJJJxBxlFrkGt8Ot9OgDY%3D&amp;reserved=0"><span>EA Activation Email</span></a><span> &ndash; </span><span><span>Provides guidance on assisting EA customers with email activation issues.</span></span></p>
+	</li>
+	<li>
+	<p><a href="https://internal.support.services.microsoft.com/en-us/help/4538616"><span>EA Price Markup Feature</span></a><span> &ndash; </span><span><span>Provides guidance on assisting customers with the Markup feature, as it relates to Azure pricing.</span></span><span><span> </span></span></p>
+	</li>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-us/help/4538376&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688370119&amp;sdata=gO6Kf8UTFVIZYrttWX30Zq/BV3Q8TEtuvhOyRlpgZdM%3D&amp;reserved=0"><span>Add Support to EA Enrollment</span></a><span> &ndash; </span>Provides guidance on adding technical support to EA enrollments.<span><span> </span></span></p>
+	</li>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-us/help/4539288&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688360163&amp;sdata=FA9rYz5BkHKoyh/6Zt%2Bgc7ZQe15OQMueJX93XpnBhlA%3D&amp;reserved=0"><span>Enrollment not Found in EA Portal</span></a><span> &ndash; </span>Provides guidance on finding previous enrollments in the Portal.<span><span> </span></span></p>
+	</li>
+</ul>
+
+<p><strong>Enrollment Invoicing</strong></p>
+
+<p>The TSGs in this section provide guidance related to the purchase and billing experience.</p>
+
+<ul>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-us/help/4537845&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688300424&amp;sdata=vKngeeNn8Y9xLl4eM6vFKOEehA2ChRHTqb3uLZKoy3k%3D&amp;reserved=0">Add Notification Contact to EA</a> <span>&ndash;</span> Provides guidance on adding Notification Contacts to enrollments, as well as stopping or changing the frequency of email notifications.</p>
+	</li>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-US/help/4536699&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688310382&amp;sdata=l3pwKI/Mr8P5cQOwpUW7yIb2jIpQr41Htp7b8Qb7/tg%3D&amp;reserved=0">Change EA Invoice Purchase Number</a> &ndash; Provides guidance on how customers can change the purchase order (PO) number on their invoice.</p>
+	</li>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-us/help/4538368&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688310382&amp;sdata=37JUGU63%2BEpIoXjWPVQhf67/2vWhiwFEOmBsU%2BZf1gI%3D&amp;reserved=0">EA Combined Overage and Marketplace Invoices</a> &ndash; Provides guidance on how to read and understand combined Overage and Marketplace invoices.</p>
+	</li>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-us/help/3090329&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688320339&amp;sdata=/tMvDcfsqrE1THsb7aktVaP0xqO4bkEBRRIWNnNwlec%3D&amp;reserved=0">How to apply EA Overage to Azure Pre-payment</a> &ndash; Provides guidance on applying EA Overage to Azure Pre-payment.</p>
+	</li>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-us/help/4537972&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688320339&amp;sdata=NDMnN6d9l6HoED1FXklG48hjadYX5S32RmUz1WtnfZU%3D&amp;reserved=0">EA Billing Cycles and Channel Modes</a> &ndash; Provides guidance on the various billing modes and billing cycles available to EA customers.</p>
+	</li>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-us/help/4541485&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688330293&amp;sdata=buUoseSuOoDOMWUx6O3hGdNDCt3IIUxS5GbGGl42nVg%3D&amp;reserved=0">EA Azure Commitment Discount (ACD)</a> <span>&ndash;</span> Provides guidance on EA Azure Commitment Discount (ACD).</p>
+	</li>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-us/help/2661744&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688330293&amp;sdata=82Gdtc71NuIk/rOM6ID69xeQfzSsUT8lLSuxQV2HPOA%3D&amp;reserved=0">Understanding EA Billing and Invoice Issues</a> &ndash; Provides guidance on troubleshooting EA billing and invoice issues. Applies to Direct Customers and Partners.</p>
+	</li>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-us/help/4539970&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688340251&amp;sdata=GqHok0DGps1T3M3zNSZLbgKIJiAxB4A6%2BJuc8xu/Qgw%3D&amp;reserved=0">Azure EA Services and Charges</a> <span>&ndash;</span><span><span> </span></span> Provides guidance on understanding Azure services and charges.<span><span> </span></span></p>
+	</li>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-us/help/4537666&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688360163&amp;sdata=Q/ql3ADbT5e1h1I/VUzRLQ8jRqGkOQfQl/ua8zRhmls%3D&amp;reserved=0"><span>EA CPS Special Pricing</span></a><span> &ndash; </span>Provides guidance on Customer/Channel Price Sheet (CPS) Special Pricing.<span><span> </span></span></p>
+	</li>
+	<li>
+	<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-US/help/4536963&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688370119&amp;sdata=qPSRzN7Spsb7CxgnuDYBWd4unv1/0LSvzbKLOEx2unM%3D&amp;reserved=0"><span>EA Pricing</span></a><span> &ndash; </span>Provides guidance on EA-related pricing (price protection, regional pricing, general availability (GA) pricing, graduated pricing, conversion from usage details to usage summary, and rounding rules).<span><span> </span></span></p>
+	</li>
+	<li>
+	<p>SIE Credits &ndash; When an EA customer requests a Service Impacting Event (SIE) credit, ASMS should work with the EAO team accordingly. Requests for processing SIE credits for indirect customers should come from the Partner. See the following TSGs for additional guidance:</p>
+
+	<ul style="list-style-type:circle">
+		<li>
+		<p><a href="https://internal.support.services.microsoft.com/en-us/help/2658533"><span lang="EN-IN">TSG 2658533</span></a> (EA Credits Escalations)</p>
+		</li>
+		<li>
+		<p><a href="https://internal.support.services.microsoft.com/en-us/help/3119077"><span lang="EN-IN">TSG 3119077</span></a> (EA SLA and SIE Credit Requests)</p>
+		</li>
+		<li>
+		<p><a href="https://internal.support.services.microsoft.com/en-us/help/4094770"><span lang="EN-IN">TSG 4094770</span></a> (EA Credit Request &ndash; TFS Ticket Process)<span><span> </span></span></p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><a href="https://internal.support.services.microsoft.com/en-us/help/4583253">Change EA Country of Usage on Overage Invoice</a> &ndash; Provides guidance on changing the EA Country of Usage on an Overage Invoice.</p>
+	</li>
+</ul>
+
+<p><strong>Usage and API</strong></p>
+
+<p>The TSGs in this section provide guidance on EA reporting.</p>
+
+<ul>
+	<li><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-us/help/4536524&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688350205&amp;sdata=YRmsw/otk2psDemnN/puwWy9As7H4DSmWDceD7RK8kk%3D&amp;reserved=0"><span>EA Reporting API Troubleshooting</span></a><span> &ndash; </span>Provides guidance on troubleshooting API reports.<span><span> </span></span></li>
+	<li><a href="https://nam06.safelinks.protection.outlook.com/?url=https://internal.support.services.microsoft.com/en-us/help/4540198&amp;data=02%7c01%7cmievan%40microsoft.com%7cd9610bc2ad6844c4350808d7cd197926%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637203381688350205&amp;sdata=Wq4RGrYExlGYLsW04q87FtH8MF/yYT9mYWABRYvfTQY%3D&amp;reserved=0"><span>EA Reports and Pricelists Requests</span></a><span> &ndash; </span>Provides guidance on understanding EA reports and pricelists.<span><span> </span></span><span><span><span> </span></span></span></li>
+</ul>
+
+<p><strong>Destructive Scenarios</strong></p>
+
+<p>The TSGs in this section provide guidance on terminating and transferring EAs. These scenarios are considered &quot;destructive,&quot; and contain actions which must be carried out by managers.</p>
+
+<ul>
+	<li><a href="https://internal.support.services.microsoft.com/en-us/help/4582802">Terminating Enterprise Agreements</a> <span>&ndash; </span>Provides guidance on how to handle EA termination requests, as well as reactivations of terminated EAs.</li>
+	<li><a href="https://internal.support.services.microsoft.com/en-us/help/4581903">Transferring EA Enrollments</a> &ndash; Provides an overview of EA enrollment transfers, and guidance on how to perform them.</li>
+	<li><a href="https://internal.support.services.microsoft.com/en-us/help/4581847">Transferring EA Accounts</a> &ndash; Provides an overview of EA account transfers, and guidance on how to perform them.<span><span> </span></span></li>
+</ul>
+
+<div>
+<div>&nbsp;</div>
+</div>
+
+<h3>&nbsp;</h3>
+
+<h3>Engagement and Escalation Path</h3>
+
+<p>Follow the guidance in&nbsp;<a data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4563342" managed-link="" rel="noreferrer noopener" tabindex="0" target="_blank" title="https://internal.support.services.microsoft.com/en-us/help/2872061">TSG 4563342</a>&nbsp;for any questions you may have about the above processes.</p>
+
+<h3>Training&nbsp;</h3>
+
+<p>The above EA scenarios were trained in a wave style model, as part of the <em>EA Portal Billing to ASMS Frontline Scope Transition</em>&nbsp;project. You can find the links to each of these trainings here:&nbsp;<a data-content-id="" data-content-type="" href="https://ready.azurewebsites.net/csslearning/2790" managed-link="" rel="noreferrer noopener" tabindex="-1" target="_blank" title="https://ready.azurewebsites.net/csslearning/2790">https://ready.azurewebsites.net/csslearning/2790</a>&nbsp;&gt; under the <em>ASMS Specialist Training</em> tab.&nbsp;</p>
+
+<h3><span>Online References</span></h3>
+
+<p><a href="https://internal.support.services.microsoft.com/en-us/help/4553068" managed-link=""><span><span>TSG 4553068</span></span></a> <span><span>provides the operational guidelines needed to support the new EA scenarios that have been transitioned from the EAO team to ASMS.</span></span><span><span> </span></span></p>
+
+<h3><span>TSG Change Log </span></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="132">
+			<p><span><strong>Date </strong></span></p>
+			</td>
+			<td width="126">
+			<p><span><strong>Updated By </strong></span></p>
+			</td>
+			<td width="364">
+			<p><span><strong>Content Updated </strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p><span><span>07/07/2020</span></span></p>
+			</td>
+			<td width="126">
+			<p><span><span>v-ishan</span></span></p>
+			</td>
+			<td width="364">
+			<p><span><span>Comprehensive Rewrite: Updated TSG content and formatting as part of the TSG Refresh Project. </span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">09/08/2020</td>
+			<td width="126">mievan</td>
+			<td width="364">Added Internal Microsoft Employee Support scenario under EAO Scope.&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">09/18/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added Wave 4 ASMS Scope scenarios.</td>
+		</tr>
+		<tr>
+			<td width="132">9/28/2020</td>
+			<td width="126">mievan</td>
+			<td width="364">Added guidance to <em>Policy</em> section, to callout adding missing Enrollment Numbers to the case.</td>
+		</tr>
+		<tr>
+			<td width="132">10/6/2020</td>
+			<td width="126">mievan</td>
+			<td width="364">Added <em>Training </em>section and link to new EA scope trainings.&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">10/07/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added steps to find Enrollment number in Azure Data Explorer as per ModTrack 3187.</td>
+		</tr>
+	</tbody>
+</table>
+</form>

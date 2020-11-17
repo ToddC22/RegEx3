@@ -1,0 +1,628 @@
+﻿<header><h1>ASMS – How to Cancel a Subscription</h1></header><p>Submit a <a href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder=">ModTrack</a> request to update this TSG.<br>
+&nbsp;</p>
+
+<h3><a id="Overview" name="Overview"></a>Overview</h3>
+
+<p>This article provides workflows on how customers can cancel their subscriptions, how engineers can help customers cancel their subscriptions, and the various cancellation policies and processes associated with subscription cancellation.<br>
+&nbsp;</p>
+
+<h3><a id="Policy" name="Policy"></a>Policy</h3>
+
+<h4><strong><a id="Suppliers and Vendors" name="Suppliers and Vendors"></a>Suppliers and Vendors</strong></h4>
+
+<p>Supplier and internal vendor ASMS Support Engineers must obtain Technical Advisor (TA) or Partner Technical Advisor (PTA) approval before suspending or canceling any subscriptions in the Commerce Management Agent Tool (CMAT).</p>
+
+<p>Use the TA/PTA engagement template in <a href="https://internal.support.services.microsoft.com/en-us/help/2929022#TA%2FPTA%20Engagement">TSG 2929022</a> to send these requests to your TA or PTA.</p>
+
+<p>Some suppliers include:</p>
+
+<ul>
+	<li><strong>Mindtree</strong></li>
+	<li><strong>TekExperts</strong></li>
+	<li><strong>Wipro</strong></li>
+	<li><strong>110/Launch Consulting</strong></li>
+	<li><strong>NTT</strong></li>
+	<li><strong>Vendors in Korea and Taiwan</strong><br>
+	&nbsp;</li>
+</ul>
+
+<h4><strong><a id="Pay-As-You-Go Offers" name="Pay-As-You-Go Offers"></a>Pay-As-You-Go Offers</strong></h4>
+
+<p>Customers can cancel at any time without any penalty fees. They will still owe the balance for any unbilled or unpaid monthly consumption.<br>
+&nbsp;</p>
+
+<h4><strong><a id="Commitment Offers" name="Commitment Offers"></a>Commitment Offers</strong></h4>
+
+<p>The Microsoft Online Subscriber Agreement (MOSA) allows Microsoft to charge customers for the remainder of their commitment term. However, this is often waived at the discretion of the Microsoft Azure Billing Team, although the customer still owes for any unbilled or unpaid overages that they might have incurred.<br>
+&nbsp;</p>
+
+<h4><strong><a id="Azure Internal Registration System (AIRS) Subscriptions" name="Azure Internal Registration System (AIRS) Subscriptions"></a>Azure Internal Registration System (AIRS)</strong><strong> Subscriptions </strong></h4>
+
+<p>It can take up to two weeks for internal subscriptions to be reviewed once they have gone into a <em>Disable&nbsp;Review</em> status. In these instances, you can communicate the following to your customer:</p>
+
+<blockquote>
+<p>Subscriptions go into a <em>Disable Review</em> status when they are labeled as production subscriptions. Due to this status, they must be carefully reviewed before they can be cancelled. Please note that it can take up to two weeks for the subscriptions to be reviewed and cancelled.</p>
+</blockquote>
+
+<p><strong>Note</strong>: For subscriptions in a Disable Review process longer than three weeks, or instances where an EA subscription is in Disable Review after <span>cancellation and deprovisioning, </span>reach out to the Azure Internal Offer team through an <span asset="4497459" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4497459]</span> <span asset="4498193" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498193]</span> to review and manually disable the subscription.&nbsp;</p>
+
+<p>After three weeks, send the <span asset="4498193" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498193]</span> to AIRS Team with a <span asset="4498193" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498193]</span> Title/Subject line &quot;Disable Review feature to be removed&quot; to avoid any push-backs, as the AIRS Team does not cancel or delete AIRS subscriptions. Do not mention subscription deletion or cancellation on subject lines to AIRS Team.</p>
+
+<p><strong>Note:</strong> An approval from a principal or partner level Dev Manager is required to remove subscriptions from <em>DisableReview</em> when its Services Administrator is not available to approve it. If the subscription is not department-owned, then an email from their direct manager is required. Attach the approval email and note this in the task.</p>
+
+<p><strong>Important: This operation is only to be performed by the AIRS team. ASMS is not authorized to perform the DisableReview Operation.&nbsp;</strong><br>
+&nbsp;</p>
+
+<p><strong><a id="Authorization" name="Authorization"></a>Authorization</strong></p>
+
+<p>The Account Owner, Service Admin, Co-admin, and RBAC Owner (Subscription level) can make a request to cancel or request an ownership transfer.</p>
+
+<p>AIRS cancellation requests can also come from Managers, Requestors, and Finance.</p>
+
+<p><strong><a id="Legacy MINT Subs Cancellation" name="Legacy MINT Subs Cancellation"></a>Legacy MINT Subscription Cancellation</strong></p>
+
+<p>The AIRS team may cancel the subscription only with the&nbsp;approval of the team that owns the subscription.</p>
+
+<h4><strong><a id="Account Management" name="Account Management"></a>Account Management</strong></h4>
+
+<ul>
+	<li>Cancellation of a subscription will cause the permanent deletion of a customer&rsquo;s data to occur 90 days after the cancellation date, after which time Microsoft will be unable to recover the data.
+	<ul style="list-style-type:circle">
+		<li>It is important to make sure that the customer understands the cancellation cycle and what impacts it may have on their data.</li>
+		<li><strong>Note:</strong> For more information, please see <a href="https://internal.support.services.microsoft.com/en-us/help/2646880">TSG 2646880</a>.</li>
+	</ul>
+	</li>
+	<li>The customer&#39;s profile and billing information will remain in the system after cancellation.</li>
+	<li>If your customer doesn&rsquo;t want to cancel their subscription but wants to stop charges for a deployment, they can manually delete their deployed Azure packages using the Azure Management Portal.
+	<ul style="list-style-type:circle">
+		<li>In this case, all application data will be removed, and the customer will not receive further charges. However, the customer&rsquo;s profile and billing information will remain in the system, and they will be billed for usage at the next billing cycle.</li>
+		<li><strong>Exception:</strong> Virtual machines (VMs) can be stopped/deallocated to pause billing without outright deletion.</li>
+	</ul>
+	</li>
+	<li><span>If a customer cancels a paid Azure Support plan, they are billed for the remainder of the subscription term. For more information, see <a data-content-id="" data-content-type="" href="https://azure.microsoft.com/en-us/support/plans/" managed-link="" target="_blank">Compare support plans</a>.</span></li>
+</ul>
+
+<p>Always engage ASE first when you are asked to engage ACE (unless there is an emergency).</p>
+
+<p>Do not use the ASE template as a way to open ICM tickets to any other team. ASE is not the same as ICM.</p>
+
+<h3><a id="Customer Experience and Provisioning" name="Customer Experience and Provisioning"></a>Customer Experience and Provisioning</h3>
+
+<h4><a id="Customer Cancellation" name="Customer Cancellation"></a>Customer Cancellation</h4>
+
+<p>Use these directions to assist your customer with the public facing <a href="https://azure.microsoft.com/en-us/documentation/articles/billing-how-to-cancel-azure-subscription/">How to Cancel process</a>.</p>
+
+<ol>
+	<li>Select your subscription from the <a href="https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade">Subscriptions page in the Azure portal</a>.</li>
+	<li>Select the subscription that you want to cancel and click <strong>Cancel subscription</strong>.&nbsp;<br>
+	(See the following screenshot.)<br>
+	<span asset="4471442" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4471442]</span></li>
+</ol>
+
+<ol start="3">
+	<li>Follow the prompts and finish the cancellation.<br>
+	&nbsp;</li>
+</ol>
+
+<h4><a id="AIRS cancellations" name="AIRS cancellations"></a>AIRS Cancellations</h4>
+
+<div>If the current account owner and current service administrator are not able to process <a href="https://docs.microsoft.com/en-us/azure/billing/billing-how-to-cancel-azure-subscription" managed-link="" target="_blank">self-cancellation via these steps</a>, the standard procedure for Azure Internal Consumption subscription (MS-AZR-0015p) cancellation requests is to have <a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/azureinternal/SitePages/Azure%20Internal%20Support.aspx" managed-link="" target="_blank">Azure Internal Support</a> assign a new service administrator on the subscription(s) needing cancellation.</div>
+
+<div>&nbsp;</div>
+
+<div>More information can be found at <a href="aka.ms/azrinternal" managed-link="" target="_blank">Azure Internal Portal</a> under the &quot;Update a Subscription&rsquo;s Service Administrator&quot; section, which states:</div>
+
+<div>&nbsp;</div>
+
+<div><strong>Is the current Service Admin on the subscription still at Microsoft?&nbsp;</strong></div>
+
+<div>If so, please reach out to the current Service Admin and ask them to update the Service Admin by following the below steps:</div>
+
+<ol>
+	<li>Sign in to <a href="https://portal.azure.com/" target="_blank">https://portal.azure.com</a>.</li>
+	<li>Click the subscription blade.</li>
+	<li>Click on the specific subscription.</li>
+	<li>Click on <strong>Properties</strong>.</li>
+	<li>Click <strong>Service Admin</strong>.<br>
+	&nbsp;</li>
+</ol>
+
+<div><strong>Is this a Bulk Service Admin update (updating the SA on 10+ subs to a new Service Admin)?</strong></div>
+
+<div>Please confirm that you have approval from the account owner, requester, or manager listed on the registration to update the Service Admin on the sub. Additionally, please provide a document with the list of Subscriptions GUIDs, Current Service Admin, and the New Service Admin. <a href="https://support.microsoft.com/en-us/getsupport?wf=0&amp;tenant=classiccommercial&amp;oaspworkflow=start_1.0.0.0&amp;locale=en-us&amp;supportregion=en-us&amp;pesid=16267&amp;ccsid=636392710931361485&amp;forceorigin=esmc" managed-link="" target="_blank">Submit a ticket</a> to request the bulk service admin update.</div>
+
+<div>&nbsp;</div>
+
+<div>Per the <a href="https://microsoft.sharepoint.com/teams/azureinternal/SitePages/FAQ.aspx" managed-link="" target="_blank">Azure Internal Portal FAQ</a>, accessible to all internal employees, we detail the cancellation process in two ways (under the &quot;Subscriptions&quot; section):</div>
+
+<div>&nbsp;</div>
+
+<div><strong>How do I cancel a Subscription?</strong></div>
+
+<ol>
+	<li>Login to <a href="https://portal.azure.com/" target="_blank">https://portal.azure.com</a></li>
+	<li>In the center of the screen you will see &quot;Subscriptions&quot;</li>
+	<li>Select the subscription you wish to cancel and a new screen will appear to the right</li>
+	<li>Up near the top of the screen you&#39;ll see &quot;Cancel Sub&quot;</li>
+	<li>You will be prompted to delete all resources prior to cancelling the subscription, so make sure you deprovision all services running on the subscription.</li>
+	<li>You&#39;ll be prompted to enter the subscription name - on the screen you&#39;ll see &quot;Subscription Status&quot; and then a name such as &quot;Microsoft Azure Internal Consumption&quot;</li>
+	<li>Complete the next fields and then at the bottom select <strong>Cancel Sub</strong><br>
+	&nbsp;</li>
+</ol>
+
+<p><strong>Someone has left the company, how do I cancel their subscriptions or move them to another account, and then cancel the account?</strong></p>
+
+<ol>
+	<li>Verify that the Manager reflected on the AIRS registration is associated with the subscription.</li>
+	<li>If the Manager is listed on the AIRS registration, escalate a task to your technical advisor (TA), partner technical advisor (PTA), or team lead (TL) to have the manager, or whoever the customer designates, to be added as a co-admin.<br>
+	<br>
+	If the Manager is not reflected on the AIRS registration, they do not have the authority to request a subscription cancellation.</li>
+	<li>Once the Manager is added as a co-admin to the subscription, they can review the resources and cancel the subscription.</li>
+</ol>
+
+<p>Azure Internal Support is only able to cancel subscriptions in situations where technical difficulties or other business critical reasoning prevents self-cancellation (as we do not cancel subscriptions on behalf of account owners and service administrators due to liability issues). In these situations, we will need approval from their Partner Director or Principal PM or equivalent to cancel the subscription, as the account owner approval will not suffice for internal subscriptions. These are very rare escalation scenarios.&nbsp;If Account Admin, Co-Admin or Service Admin, is unable to cancel the Subscription, reach out to ASE team to understand why they are unable to cancel as it is likely a bug (This step is required). In order to unblock the customer, seek appropriate approval and help with cancellation.</p>
+
+<p><strong>Note: </strong>If a subscription needs to be cancelled and nobody in Microsoft has access to the sub, engage your TA to add the requestor as a co-admin to the subscription. Then the co-admin can delete the services and cancel the subscription from the portal normally.&nbsp;</p>
+
+<div>
+<p><strong>Note 2:</strong> If the Azure Internal consumption Subscription account owner left the company, and we need to identify the Subscription guid (e.g., to reassign the SA role to somebody else), we can search by account owner&#39;s email in BIOS at <a href="aka.ms/airs" managed-link="">aka.ms/airs</a>. Given that the AIRS Subscription guids will be listed in the Subscription column of the results, even if the Account owner&#39;s PUID does not exist anymore in Jarvis and in CMAT the account is not searchable any longer.</p>
+
+<p>Example: the FTE user&nbsp;left MS, and his AIRS Subscription remained active, causing charges to his manager. In BIOS you can locate the Subscription GUID even if the account is orphaned in CMAT and the PUID does not exist in Jarvis queries.<br>
+&nbsp;</p>
+</div>
+
+<h3><a id="Support Scenarios" name="Support Scenarios"></a>Support Scenarios</h3>
+
+<h4><a id="CancellationofCSPOffers" name="CancellationofCSPOffers"></a>Cancellation of CSP Offers</h4>
+
+<p>Customers do not have access to cancel their CSP Subscriptions. They need to contact their Partners for assistance in cancellation.</p>
+
+<p>Follow these steps to deprovision a CSP Subscription:</p>
+
+<ol>
+	<li>The Admin Agent must provide an approval email which acknowledges:
+	<ol style="list-style-type:lower-alpha">
+		<li>Cancellation will result in Complete Data Loss</li>
+		<li>Microsoft cannot recover any data lost due to this process</li>
+	</ol>
+	</li>
+	<li>Provide the approval email to PayOps and they will perform the deprovision process.</li>
+</ol>
+
+<div>
+<p><strong>Note</strong>: The subscription may take up to 7 days to register as &ldquo;deleted&rdquo; in CMAT and will then no longer appear in the Partner portal.</p>
+</div>
+
+<h4><a id="Support Engineer Subscription Cancellation" name="Support Engineer Subscription Cancellation"></a>Support Engineer Subscription Cancellation (<strong>FTE Only</strong>)</h4>
+
+<p>Only use this process when a customer is unable to cancel on their own.</p>
+
+<ol>
+	<li>Verify that the customer making the request is the Account Admin before proceeding with a cancellation request.</li>
+</ol>
+
+<ul class="indent-1">
+	<li>Do not accept any cancellation confirmation other than a cancellation confirmation coming directly from the Account Admin&#39;s Microsoft Subscriber Account (MSA) or OrgID.</li>
+</ul>
+
+<ol start="2">
+	<li>If the Account Admin is unable to send an email confirming their approval of Microsoft cancelling the subscription on their behalf, follow the approval guidelines for a <strong>Forced SOT</strong> from the Subscription Ownership Transfer TSG (<a href="https://internal.support.services.microsoft.com/en-us/help/3040383" rel="noopener" target="_blank">TSG 3040383</a>).</li>
+	<li>Always attempt to retain the customer per the <strong>Retention Offer Scenarios</strong> table below. If the customer still wants to cancel and is unable or unwilling to do so themselves via the portal, continue to Step 4.<br>
+	&nbsp;</li>
+</ol>
+
+<p><strong>Retention Offer Scenarios </strong></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="12%">
+			<p><strong>Reason</strong></p>
+			</td>
+			<td width="31%">
+			<p><strong>Scenario</strong></p>
+			</td>
+			<td>
+			<p><strong>Retention Offer</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="12%">
+			<p>No reason</p>
+			</td>
+			<td width="31%">
+			<p>Your customer wants to cancel, and no reason is stated or offered.</p>
+			</td>
+			<td>
+			<ol>
+				<li>If no previous goodwill credit has been given, offer a goodwill credit for cancellation retention reasons of 25% off next month&rsquo;s invoice.</li>
+				<li>Only provide the offer if the customer is willing to stay on the Microsoft Azure platform.</li>
+			</ol>
+			</td>
+		</tr>
+		<tr>
+			<td width="12%">
+			<p>Unexpected bill</p>
+			</td>
+			<td width="31%">
+			<p>Customer is surprised by bill and has suspended or stopped deployments.</p>
+			</td>
+			<td>
+			<ol>
+				<li>Verify that the unexpected bill is not the result of a known billing bug or issue.</li>
+				<li>Let your customer know there is messaging on the development portal, in customer FAQs, and on offer pages regarding explanations of the charges on their bill.</li>
+				<li>Offer a 25% credit on next month&rsquo;s invoice, only after verifying that the customer has never received a goodwill credit previously.</li>
+			</ol>
+			</td>
+		</tr>
+		<tr>
+			<td width="12%">
+			<p>Non-service related concerns</p>
+			</td>
+			<td width="31%">
+			<p>Your customer requests a first month credit for non-service related concerns.</p>
+			</td>
+			<td>
+			<ol>
+				<li>Provide the customer with offer usage information on the external offer page.</li>
+				<li>No credit should be offered.</li>
+			</ol>
+			</td>
+		</tr>
+		<tr>
+			<td width="12%">
+			<p>Due to costs</p>
+			</td>
+			<td width="31%">
+			<p>Your customer indicates that the Azure service is too expensive.</p>
+			</td>
+			<td>
+			<ol>
+				<li>No credit offer should be provided if your customer states the service is too expensive and wants to cancel.</li>
+			</ol>
+
+			<p><strong>Note</strong>: Always verify that the charges the customer feels are too expensive are valid and not due to a billing bug. Be sure to explain the charges in detail, as the customer may not correctly understand how charges accrue.</p>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2" width="12%">
+			<p>Billing errors</p>
+			</td>
+			<td width="31%">
+			<p>Your customer indicates they were billed in error.</p>
+			</td>
+			<td>
+			<ol>
+				<li>Provide the credit amount billed in error.</li>
+			</ol>
+			</td>
+		</tr>
+		<tr>
+			<td width="31%">
+			<p>Your customer never received a first-time courtesy credit.</p>
+			</td>
+			<td>
+			<ol>
+				<li>Offer a 25% credit on their next month&rsquo;s invoice.<br>
+				No Enterprise Azure Operations approval required.</li>
+			</ol>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2" width="12%">
+			<p>Service issues</p>
+			</td>
+			<td width="31%">
+			<p>Azure service is inaccessible via the Management Portal.</p>
+			</td>
+			<td>
+			<ol>
+				<li>Provide 100% credit for charges when their service was inaccessible.</li>
+				<li>Prorate the credit on their monthly charges.<br>
+				Enterprise Azure Operations approval is not required.</li>
+				<li>If your customer is not satisfied with the credit offer, escalate to your TA with the <a href="https://internal.support.services.microsoft.com/en-us/help/2929022#TA%2FPTA%20Engagement">TA/PTA Engagement template</a>.<br>
+				Provide the full details of the issue and the customer&rsquo;s request.<br>
+				Also include all invoices in dispute and the steps you&rsquo;ve taken to appease the customer.</li>
+			</ol>
+			</td>
+		</tr>
+		<tr>
+			<td width="31%">
+			<p>Services did not meet Service Level Agreement (SLA) guidelines.</p>
+			</td>
+			<td>
+			<ol>
+				<li>Confirm the missed SLA with the hosting service team.</li>
+				<li>Provide credit only if the service failed to meet SLA at appropriate levels.<br>
+				(See <a href="https://internal.support.services.microsoft.com/en-us/help/2646823">TSG 2646823</a> for more details.)<br>
+				No Enterprise Azure Operations approval is required.</li>
+			</ol>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<ol start="4">
+	<li>In CMAT, navigate to the&nbsp;<strong>Subscription&nbsp;</strong>tab and select the subscription that the customer wishes to cancel.</li>
+	<li>Navigate to&nbsp;<strong>LIFECYCLE AND STATUS &gt; Status&nbsp;</strong>and click the blue <strong>Status</strong>. This will bring up a new window.</li>
+	<li>For&nbsp;<em>Action,&nbsp;</em>select&nbsp;<strong>Suspend&nbsp;</strong>and for&nbsp;<em>Reason</em>, select&nbsp;<strong>Customer Cancellation</strong>.<br>
+	<br>
+	<strong>Note:</strong> Do not use the <strong>Customer Immediate Cancellation</strong><em>&nbsp;</em>option.&nbsp;That option is for deprovisioning.</li>
+</ol>
+
+<ol start="7">
+	<li>Enter the Service Request (SR) number in the <em>Cancellation Comment</em> field.</li>
+	<li>Verify the process by going back to the line item and selecting the status <strong>Active</strong> from the subscription&rsquo;s dropdown menu. Select <strong>Disable</strong> from action dropdown menu in <em>Subscription Status</em>.</li>
+	<li>If this was an invoice customer, contact Global Financial Services (GFS)&nbsp;and let them know if you credited back any charges, past or present (as it will affect their collections efforts.)</li>
+</ol>
+
+<p><strong>Note:</strong> For more information on GFS engagement, see&nbsp;<a href="https://internal.support.services.microsoft.com/en-us/help/2647567">TSG 2647567</a>.<br>
+&nbsp;</p>
+
+<h4><a id="Customer Requests to Delete Entire Azure Account" name="Customer Requests to Delete Entire Azure Account"></a>Customer Requests to Delete Entire Azure Account</h4>
+
+<p>A customer may ask that we delete their entire Azure &ldquo;account&rdquo;. Verify exactly what the customer wants deleted as customers may use the terms <em>subscription</em>, <em>account</em>, and <em>profile</em> interchangeably. Customers may not know the correct term for what they are requesting, so before making any changes, always verify exactly what they wish to have deleted.</p>
+
+<p>If you confirm the customer does want to have their entire Azure account deleted, advise the customer we are unable to delete their account profile. However, we can remove their credit card information so that no more payments will be processed once their subscriptions are deprovisioned. To do this, go to CMAT and remove their credit card information. Then verify the resource is deprovisioned to avoid any further charges.</p>
+
+<p>If a customer wants to remove a PI from their account and requests to delete their subscription, confirm there are no pending charges.</p>
+
+<p><strong>Note:</strong> You must first receive AA approval before completing this request. Inform the AA that data is not recoverable once a subscription has been deleted.</p>
+
+<p><strong>SE Directions</strong></p>
+
+<ol>
+	<li>Verify that the subscriptions status in CMAT is set to PI removed.</li>
+	<li>Notify the customer that their subscription has been cancelled and&nbsp;their PI has been removed.</li>
+	<li>Close your case.</li>
+</ol>
+
+<p><strong>Note:</strong> If the customer requests to keep their case open until the lifecycle of the subscription is complete, respect their request.</p>
+
+<h3><a id="Engagement and Escalation Path" name="Engagement and Escalation Path"></a>Engagement and Escalation Path</h3>
+
+<h3><strong><span><span><a id="CancelNow" name="CancelNow"></a>Request to Cancel Now</span></span></strong><strong><span> or </span></strong><strong><span><span>Immediate </span></span></strong><strong><span>D</span></strong><strong><span><span>elet</span></span></strong><strong><span>ion and D</span></strong><strong><span><span>e-provision</span></span></strong></h3>
+
+<h4><a id="Legacy Support Plan Deletion Requests" name="Legacy Support Plan Deletion Requests"></a>Legacy Support Plan Deletion Requests</h4>
+
+<ol>
+	<li>Ensure your customer has suspended their subscription.
+	<ul style="list-style-type:circle">
+		<li>If your customer cannot suspend it from the portal:
+		<ul style="list-style-type:square">
+			<li>Obtain approval, authorization, and a business justification from the account owner authorizing to delete their support plan.</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li>In Service Desk, create a collaboration task for your TA, PTA, TL to delete the support plan.</li>
+</ol>
+
+<p>Requests approved for immediate cancel are:</p>
+
+<ul>
+	<li><span>Tenant deletion</span></li>
+	<li><span>Remove customer PI from an account</span></li>
+	<li><span>Delete all customer data and PII from Azure</span></li>
+</ul>
+
+<p><strong>Note</strong>: For tenant deletion requests, engage PayOps after the support plan has been deleted by your TA, PTA, or TL. The <strong>delete</strong> button in CMAT only deletes the subscription, not the entitlements. Tenants cannot be released until its entitlements are deleted.</p>
+
+<h4><a id="Modern Support Plan Deletion Requests" name="Modern Support Plan Deletion Requests"></a>Modern Support Plan Deletion Requests</h4>
+
+<p>Modern support plans act like SaaS-based Marketplace purchases (because they have a&nbsp;<em>future billing/term-based&nbsp;</em>behavior.)</p>
+
+<p>There are two ways to cancel support plans:</p>
+
+<ul>
+	<li>Disable the auto-renew option for the subscription.
+	<ul style="list-style-type:circle">
+		<li>This will keep the subscription active until the next billing cycle, at which point it will be cancelled.</li>
+	</ul>
+	</li>
+	<li>Return the purchase.
+	<ul style="list-style-type:circle">
+		<li>This will immediately cancel the subscription and does not trigger any automatic credits.</li>
+	</ul>
+	</li>
+</ul>
+
+<h4><strong><a id="Non-SupportPlanDeletionRequests" name="Non-SupportPlanDeletionRequests"></a>Non-Support Plan Deletion Requests</strong></h4>
+
+<p>This section does not apply to <a bookmark-id="EAandAIRSSubscriptionDeletionRequests" href="#EAandAIRSSubscriptionDeletionRequests" managed-link="">EA and AIRS Subscription Deletion Requests</a>.</p>
+
+<ol>
+	<li><span> Ensure your customer has suspended their subscription.</span>
+
+	<ul style="list-style-type:circle">
+		<li><span>If your customer cannot suspend it from the portal:</span>
+
+		<ol style="list-style-type:lower-alpha">
+			<li><span> Obtain approval, authorization, and a business justification from the account owner authorizing the deletion of their subscription.</span></li>
+			<li><span> Inform your customer it can take up to 7 days for subscriptions to be deleted.</span></li>
+			<li>If you are a Supplier needing subscription deletion/cancellation, send a collaboration task to a PTA/FTE. If you are a FTE, continue to step 2.</li>
+		</ol>
+		</li>
+	</ul>
+	</li>
+	<li><span> Verify the approval and business justification from the AA for deletion.</span></li>
+	<li><span> In CMAT, use the <strong>Suspend &gt; Customer Immediate Cancellation</strong> action to cancel the subscription.</span>
+	<ul style="list-style-type:circle">
+		<li><span>This suspends subscriptions for 7 days.</span></li>
+	</ul>
+	</li>
+	<li><span> Inform your customer that the subscription will be suspended for an additional 7 days, per our data retention policy. It will then be deleted (de-provisioned) automatically.</span></li>
+</ol>
+
+<p><strong>Note: </strong><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3093263" managed-link="" target="_blank">Engage ASE</a> if a subscription is not automatically deleted 7 days after the immediate cancellation action or for any other issues during the cancellation process.</p>
+
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><strong>Approvers for MCA subscription deprovision requests</strong></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>For any cancellation or deletion requests to be performed by support, the approval email has to be provided by the &#39;Account Owner&#39; or &#39;Billing Group Owner/ Billing Account Owner&#39; for the&nbsp;Customer Account ID/CRID.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>These roles can be checked&nbsp;on CST&nbsp;under Access Control (IAM) &gt; User&nbsp;roles (MCAPI). If the user&rsquo;s/ requestor&#39;s email ID is listed as&nbsp;<a href="mailto:username_mail.com#EXT#@company.onmicrosoft.com" target="_blank">username_mail.com#EXT#@company.onmicrosoft.com</a>, we can leverage ASC to get actual email ID or we can consider the text before # as email by replacing _ with @.&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>In this case, email ID will be&nbsp;<a href="mailto:username@mail.com" target="_blank">username@mail.com</a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<h4><a id="EAandAIRSSubscriptionDeletionRequests" name="EAandAIRSSubscriptionDeletionRequests"></a>EA and AIRS Subscription Deletion Requests</h4>
+
+<p>These types of accounts are exceptions to the above processes and have separate lifecycle and cancellation management processes.</p>
+
+<p class="ng-scope">EA and AIRS subscriptions go to <strong>DisableReview</strong> when cancelled. These are manually reviewed by the AIRS team.</p>
+
+<ol class="ng-scope" style="list-style-type:decimal">
+	<li>For EA and AIRS cancellation requests, obtain necessary approvals:
+	<ul style="list-style-type:circle">
+		<li><strong>EA</strong> &ndash; Account administrator, EA administrator</li>
+		<li><strong>AIRS</strong> &ndash; Account administrator, AIRS requestor, AIRS manager, AIRS approver</li>
+	</ul>
+	</li>
+	<li>Attach the approvals to the case.</li>
+</ol>
+
+<ol class="ng-scope" start="3" style="list-style-type:decimal">
+	<li>In Service Desk, create a collaboration task for your <strong>Suppliers &gt; Reach out to PTA, FTEs &gt; </strong>and continue to step 4.</li>
+	<li>In CMAT, use the <strong>Suspend &gt;Customer Immediate Cancellation</strong> action to suspend the subscription.</li>
+	<li>Once cancelled, If the Entitlement State of the sub moves to &quot;DisableReview&quot;, proceed to step 6. If the Entitlement state of the sub does not move to &quot;DisableReview&quot;, the process is complete and the sub should get De-provisioned automatically after 7 days.</li>
+	<li>engage the AIRS team via the <a class="managed-link content-anchor-link" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://msaas.support.microsoft.com/queue/48764b42-0230-e711-8139-002dd8151759" tabindex="0" target="_blank">MSaaS Azure Internal Offer (MSFT only)</a> queue for them to manually review and disable the subscription. Include the following information:</li>
+</ol>
+
+<ul class="indent-3 ng-scope" style="list-style-type:circle">
+	<li><strong>Subscription GUID</strong>
+
+	<ul style="list-style-type:circle">
+		<li><strong>Subscription Type</strong></li>
+		<li><strong>EA Number or AIRS Registration Number</strong></li>
+		<li><strong>Cancellation Approver</strong>: Account administrator/EA administrator/ Requestor/Manager</li>
+		<li><strong>Reason for cancellation</strong></li>
+	</ul>
+	</li>
+</ul>
+
+<ol class="ng-scope" start="6" style="list-style-type:decimal">
+	<li><strong>Suppliers</strong>: Engage the AIRS team directly <strong><em>after</em></strong> your PTA has suspended the subscription.</li>
+</ol>
+
+<p class="ng-scope">The subscription is deleted (de-provisioned) 7 days after the day of cancellation (or after the AIRS team performs the operation).</p>
+
+<h4><a id="DisableReviewDetails" name="DisableReviewDetails"></a>Disable Review Details</h4>
+
+<p>There are a few other offer types that go to <strong>DisableReview</strong> upon cancellation. Few examples are: Sponsorship, Azure Pass, some PAYG subscriptions etc. (The actual list varies based on various factors). Follow the steps under (3) for such scenarios.</p>
+
+<ul>
+	<li><span><strong>Disable Review</strong> <strong>Cases</strong>: Follow the <a bookmark-id="Non-SupportPlanDeletionRequests" href="#x__For_non-support_plan" managed-link="" target="">Non-Support Plan Deletion Requests</a> process for any case that moves to <strong>Disable Review</strong> state for deletion requests.</span></li>
+	<li><span><strong>Free Trial (44P) subscriptions</strong>: Deleted 2 days after the immediate cancellation process has been performed.</span></li>
+	<li><span><strong>Executive and High-Priority</strong>: Follow these directions for escalations which require immediate deletion of subscriptions:</span>
+	<ul style="list-style-type:circle">
+		<li><span>Create a Priority 1 task with the ASE/CXP team to engage the ACE team.</span></li>
+		<li><span>Include these approvals:</span>
+		<ul style="list-style-type:square">
+			<li><span>CELA - ACE team: <strong>Justin Widlund</strong> (CELA)</span></li>
+			<li><span>Approval from <strong>Vivek Dalvi</strong> (Partner GM)<br>
+			<br>
+			<strong>Note:</strong>&nbsp;ACE&nbsp;should only be contacted through the ASE escalation path. ASE will engage&nbsp;ACE&nbsp;and get back to you with an appropriate response. For more information, see&nbsp;<a data-bi-name="content-anchor-link" href="https://internal.support.services.microsoft.com/en-us/help/3093263" managed-link="" tabindex="0" target="_blank">TSG 3093263</a>.</span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li><span><span><span><span><strong>7-Day Policy Messaging</strong></span></span></span></span></li>
+</ul>
+
+<p>Deleting a subscription deletes all the underlying resources and data. It&rsquo;s a terminal state and a subscription, once deleted, can&rsquo;t be recovered. Hence, to avoid service disruption due to accidental deletion, we keep the subscription disabled for a few days after we receive your request to cancel the subscription. In the disabled state, you&rsquo;ve limited access to your services and aren&#39;t charged. You can re-activate your subscription at any point of time before it gets permanently deleted.</p>
+
+<h4>Subscription Lifecyle Diagram</h4>
+
+<p><span asset="4527752" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4527752]</span></p>
+
+<h4><a id="Re-EnableImmediatelyCancelledSubscriptions" name="Re-EnableImmediatelyCancelledSubscriptions"></a>Re-Enable Immediately Cancelled Subscriptions</h4>
+
+<p>Subscriptions can only be re-enabled after an immediate cancellation if your customer makes their request before the 7-day suspension has ended.</p>
+
+<p>Follow the below instructions to re-enable immediately cancelled subscriptions:</p>
+
+<ol>
+	<li><span> <strong>Suppliers</strong>: Engage your PTA to perform these steps.</span></li>
+	<li><span> Suspend the subscription (again) for subscriptions with a <strong>Customer Immediate Cancellation</strong> status:</span>
+	<ul style="list-style-type:circle">
+		<li><span>Select the status code <strong>Customer cancellation</strong>.</span></li>
+	</ul>
+	</li>
+	<li><span> The option to re-enable the subscription should now be available.</span></li>
+</ol>
+
+<p>&nbsp;</p>
+
+<h3><a id="Online References" name="Online References"></a><strong>Online References</strong></h3>
+
+<ul>
+	<li><a href="https://docs.microsoft.com/en-us/azure/billing/billing-how-to-cancel-azure-subscription">How to cancel your subscription for Azure</a> (Public facing)</li>
+	<li><a href="https://azuremarketplace.microsoft.com/en-us/marketplace/?source=datamarket">Azure Marketplace</a></li>
+	<li><a href="https://account.windowsazure.com/Subscriptions">Azure Billing Portal</a><br>
+	&nbsp;</li>
+</ul>
+
+<h3><a id="TSG Change Log" name="TSG Change Log"></a>TSG Change Log</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="132">
+			<p><strong>Date </strong></p>
+			</td>
+			<td width="126">
+			<p><strong>Updated By </strong></p>
+			</td>
+			<td width="364">
+			<p><strong>Content Updated </strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">04/20/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Changed CABS link to AIRS link in Note 2 as per ModTrack 2797.</td>
+		</tr>
+		<tr>
+			<td width="132">04/30/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Revised bullet 1.c. under the &#39;Non-Support Plan Deletion Requests&#39; heading per ModTrack 2791.</td>
+		</tr>
+		<tr>
+			<td width="132">05/19/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Updated Authorization information as per ModTrack 2876.</td>
+		</tr>
+		<tr>
+			<td width="132">06/08/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Removed TA/PTA engagement instructions as per ModTrack 2883.</td>
+		</tr>
+		<tr>
+			<td width="132">06/09/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Altered process for suppliers and FTEs needing subscription deleting as per ModTrack 2911.</td>
+		</tr>
+		<tr>
+			<td width="132">06/11/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Replaced GCS with GFS per ModTrack 2939.</td>
+		</tr>
+		<tr>
+			<td width="132">10/19/2020</td>
+			<td width="126">v-adhigg</td>
+			<td width="364">Updated cancelation directions for Modern support plans.</td>
+		</tr>
+		<tr>
+			<td width="132">10/20/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Updated steps to cancel subscription as per ModTrack 3246.</td>
+		</tr>
+		<tr>
+			<td width="132">10/26/2020</td>
+			<td width="126">v-kproctor</td>
+			<td width="364">Added new section, &#39;Legacy MINT Subscription Cancellation&#39;, under&nbsp;Azure Internal Registration System (AIRS) Subscriptions.</td>
+		</tr>
+		<tr>
+			<td width="132">11/11/2020</td>
+			<td width="126">v-penjo</td>
+			<td width="364">Added new section &#39;Approvers for MCA subscription deprovision requests&#39;.</td>
+		</tr>
+	</tbody>
+</table>

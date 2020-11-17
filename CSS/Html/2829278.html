@@ -1,0 +1,476 @@
+﻿<header><h1>Procedure: M365 TS: How to perform entitlement in Office 365</h1></header><div class="kb-summary-section section">
+<p class="sbody-h3"><span asset="4462485" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4462485]</span></p>
+
+<h3 class="sbody-h3">Contents<a class="bookmark" id="toc"></a></h3>
+
+<ul class="sbody-free_list">
+	<li><a bookmark-id="Summary" href="#sum" managed-link="" target="">Summary</a></li>
+	<li><a bookmark-id="Assumptions" href="#assumptions" managed-link="" target="">Assumptions</a></li>
+	<li><a bookmark-id="Procedure" href="#procedure" managed-link="" target="">Procedure</a></li>
+	<li><a bookmark-id="More information" href="#more" managed-link="" target="">More information</a>
+	<ul class="sbody-free_list">
+		<li><a bookmark-id="Related articles" href="#related" managed-link="" target="">Related articles</a></li>
+		<li><a bookmark-id="Version history" href="#history" managed-link="" target="">Version history</a></li>
+	</ul>
+	</li>
+</ul>
+
+<h3 class="sbody-h3"><a id="Summary" name="Summary"></a>Summary</h3>
+<span class="text-base">Who</span> should follow this procedure?
+
+<ul class="sbody-free_list">
+	<li>Frontline support engineers (SEs).</li>
+</ul>
+<span class="text-base">What</span> is this procedure about?
+
+<ul class="sbody-free_list">
+	<li>This procedure describes how to use the case ticketing system&nbsp;to determine whether a caller or a web-submitted case is entitled to support.</li>
+	<li>The purpose of entitlement is to:
+	<ol class="sbody-num_list">
+		<li><span class="text-base">Protect </span>customer information.</li>
+		<li><span class="text-base">Preclude </span>unauthorized persons from receiving support.</li>
+		<li><span class="text-base">Prevent </span>&ldquo;social engineering&rdquo; attempts to trick you into revealing confidential information.</li>
+	</ol>
+	</li>
+</ul>
+<span class="text-base">When</span> should this procedure be followed?
+
+<ul class="sbody-free_list">
+	<li>When opening a completely new case received from a caller directly.</li>
+	<li>When a caller contacts Frontline SE on a direct line for a new or existing case -- instead of calling Commercial Customer Service technical routers (CCS TR) and being transferred to an engineer.</li>
+	<li>When handling cases with specific exceptions that require Frontline entitlement as described in <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2755056" managed-link="" target="_blank">2755056 Procedure: M365: Supporting cases transferred from tech routers</a>.</li>
+	<li><span class="text-base">Note: </span>When calling back a customer on an existing entitled case, confirm you are speaking to the correct admin handling the case, as described in&nbsp;<a bookmark-id="supplemental note" href="#supplemental note" managed-link="">Supplemental notes</a> in this article.</li>
+	<li>When handling cases that are related to SFBO Customer Proprietary Network Information (CPNI)/ Public Switched Telephone Network (PSTN) PIN&nbsp;for both web and phone (regardless if it&rsquo;s from Tech Router).</li>
+</ul>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to top</a>
+
+<h3 class="sbody-h3"><a id="Assumptions" name="Assumptions"></a>Assumptions&nbsp;</h3>
+
+<ul class="sbody-free_list">
+	<li>Entitlement begins with an anonymous caller requesting support. Do not assume the caller is authorized until you complete the entitlement process below.</li>
+	<li><span><span><span><span><span><span>The current ticketing system for M365 is Rave, majority of the case entitlement information can be confirmed in Rave.&nbsp; </span></span></span></span></span></span></li>
+	<li>Status of the subscription does not affect entitlement process.</li>
+	<li>Most phone cases routed to Frontline SEs are already entitled by CCS TR and do not require Frontline entitlement, except as described in <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2755056" managed-link="" target="_blank">2755056 Procedure: M365: Supporting cases transferred from tech routers</a><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2755056" managed-link="" target="_blank">.</a></li>
+	<li><span><span><span><span><span>A support engineer should still perform the same entitlement process for all cases transferred from Service Desk to ensure support is engaging the appropriate administrators.</span></span></span></span></span>
+	<ul class="indent-2">
+		<li><span>If the customer is an admin:</span>
+		<ul style="list-style-type:disc" type="disc">
+			<li><span>And the case has correct tenant info, proceed in supporting the customer.</span></li>
+			<li><span>And the case does not have the correct tenant info, close the current case, either:</span>
+			<ul style="list-style-type:disc" type="disc">
+				<li><span>Create a new case on behalf of the customer on the customer tenant.</span></li>
+				<li><span>If you do not have the appropriate permissions level to create cases, engage your SME/TL/TM to perform above action.</span></li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li><span>If the customer is not an admin:</span>
+		<ul>
+			<li><span>Redirect the customer to their admin and close the case.</span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to top</a>
+
+<h3 class="sbody-h3"><a id="Procedure" name="Procedure"></a>Procedure</h3>
+
+<p>Entitlement requires you to confirm that callers are eligible and qualified to receive Frontline SE support as indicated by customer records in the support ticketing system.</p>
+
+<p><span><span><span><span><span>There are two ways for customers to request support:</span></span></span></span></span></p>
+
+<p><span><span> </span></span></p>
+
+<p><span><span><strong><span><span><span>Web cases</span></span></span></strong><span><span><span>: when customer creates a web support request through logging into the M365 Admin Portal, there are three potential modality options: Phone, Email or Chat. When working on a web case, support entitlement should focus on verifying if the case contact info matches the admin&rsquo;s record on file. </span></span></span></span></span></p>
+
+<p><span><span> </span></span></p>
+
+<p><span><span><strong><span><span><span>IVR cases:</span></span></span></strong><span><span><span> when a caller calls into support, an IVR phone case will be created in Rave. </span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>If Rave recognizes the phone number, a corresponding customer profile will show up in the case. Support entitlement can follow the web case entitlement, focus on verifying if the case contact info matches the admin&rsquo;s record on file.</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span> </span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>If Rave does not recognize the incoming phone number, no tenant info is available. In this scenario, when support <span><span><span>gets to below screen, ask about the <strong>Company details, </strong>select an Admin contact based on the conversation with the caller. If the Admin contact, first and last name in Rave match caller&rsquo;s info, associate this tenant with the case. After case association, support will gain full tenant access in Rave, <strong>re-confirm</strong> case entitlement by&nbsp;</span></span></span>going through the complete <strong>entitlement checklist</strong> in the article. If the caller is not able to pass entitlement, follow the procedures described in </span></span><span><span><strong>Troubleshooting entitlement</strong> </span></span><span><span>including use LogMeIn</span></span>.<span><span><span> If all these actions fail, support should ask caller to work with an admin within the company to create a request through M365 Admin Center.<br>
+	<span asset="4586283" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4586283]</span></span></span></span></span></span></span></span></li>
+</ul>
+
+<h4 class="sbody-h4"><a id="entitlement checklist" name="entitlement checklist"></a>Entitlement checklist</h4>
+
+<div class="kb-collapsible kb-collapsible-expanded">Verify and document the following information. If you cannot locate the appropriate customer information, see <a bookmark-id="tsh" href="#tsh" managed-link="" target="">Troubleshooting entitlement</a> in this article.<br>
+&nbsp;
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<th class="sbody-th"><span class="text-base">Required entitlement information</span></th>
+			<th class="sbody-th"><span class="text-base">Example</span></th>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Caller&#39;s first and last name</td>
+			<td class="sbody-td"><span><span><span>John Doe</span></span></span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">email address</td>
+			<td class="sbody-td">john@contoso.com<br>
+			john@contoso.onmicrosoft.com</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Telephone number or mobile phone number (if listed)</td>
+			<td class="sbody-td">Area co plus number</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Admin role</td>
+			<td class="sbody-td">All admin types are eligible for entitlement for any case except password reset, which is restricted to Company admins only.&nbsp;<br>
+			<br>
+			In Rave, the names of some admin roles vary from the official role names in Office 365. For a complete list, refer to <a bookmark-id="app" href="#app" managed-link="" target="">Appendix</a>.<br>
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">
+			<p><span><span><span><span>Alternate email address</span></span></span></span></p>
+			<span><span><span><span>(This is optional if ALL above validation passed. However this is <strong>REQUIRED</strong> if one of the above validation failed.)</span></span></span></span></td>
+			<td class="sbody-td"><a href="mailto:jeff@fabrikam.com">john@fabrikam.com</a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p>&nbsp;</p>
+</div>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Detailed entitlement procedures</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><span>Use this section if you need to refer to details about using specific tools or if you&rsquo;re having trouble with verifying the required entitlement information listed above.&nbsp;</span></p>
+
+<div class="kb-collapsible kb-collapsible-collapsed">
+<p class="sbody-h5 text-subtitle"><span><strong>To verify admin info</strong>: </span></p>
+
+<ol class="sbody-num_list">
+	<li><span>Verify that the requestor matches the admin role in &lsquo;Customer Profile&rsquo; tab in Rave.&nbsp;Click the admin&rsquo;s name to see more details such as alternate email address, or phone.</span></li>
+	<li><span><span><span><span><span>The nature of the service request needs to match the admin type. If a billing admin asks to make changes in Exchange, contact company&rsquo;s Global Admin to receive written confirmation before fulfilling the request.&nbsp;&nbsp;&nbsp; </span></span></span></span></span></li>
+	<li><span>Complete <a bookmark-id="entitlement checklist" href="#entitlement checklist" managed-link="" target="">Entitlement checklist</a>&nbsp;and enter confirmation details in&nbsp;case notes.</span></li>
+</ol>
+
+<p class="sbody-h5 text-subtitle"><strong><span>To verify subscription type &ndash; Trial or Paid &amp; SKU</span></strong></p>
+
+<p>In Rave, when you navigate to Company profile, there is a second tab about subscription where you can find details about subscriptions.</p>
+
+<p class="sbody-h5 text-subtitle"><span><strong>To verify CPNI/PSTN PIN-related request</strong>:</span></p>
+<span>If a service request is related to SFBO CPNI/PSTN PIN, such as the service request has &ldquo;PSTN&rdquo; in the display name, refer to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3122455" id="kb-link-7" managed-link="" target="_blank">3122455: Authenticating admin for requests that subject to SFBO CPNI/PSTN PIN requirements</a>.</span>
+
+<p class="sbody-h5 text-subtitle"><span><strong>To verify Premier status</strong>:</span></p>
+
+<ol class="sbody-num_list">
+	<li><span>Each tenant has special tags in Rave &lsquo;Customer Profile&rsquo; tab for support to quickly identify the type of the customer.&nbsp;Follow article <a href="https://internal.support.services.microsoft.com/en-us/help/4339885" target="_blank">4339885-Office 365 Premier Support in Rave</a> to support Premier request.</span>
+
+	<ul>
+		<li>If a case is marked for&nbsp;<strong>Premier General,&nbsp;</strong>it will be visible under the Quick facts the tag&nbsp;<strong>Premier customer</strong>.</li>
+		<li>If a case is marked for&nbsp;<strong>Premier Escalation,&nbsp;</strong>it will be visible under the Quick facts the tag&nbsp;<strong>Premier customer&nbsp;</strong>and near the case number is a&nbsp;<strong>Gold Diamond</strong>.</li>
+	</ul>
+	</li>
+</ol>
+<span><span class="text-base"><strong>To verify Partner status</strong>:</span><a class="bookmark" id="partner"></a><br>
+Partner entitlement is typically handled by CCS TR. If a partner bypasses CCS TR and contacts a Frontline SE directly, refer to the following:</span>
+
+<ul class="sbody-free_list">
+	<li><a href="https://internal.support.services.microsoft.com/en-us/help/4462573" managed-link="" target="_blank"><span><span><span><span>4462573<span><span><span><span>: Cloud Partner Entitlement P</span></span></span></span>olicy</span></span></span></span></a></li>
+</ul>
+
+<p><span><strong><span class="text-base">Entitling generic admins</span></strong><br>
+<br>
+Generic Admin accounts are identified by username only and may be used by multiple persons.&nbsp;A sample of a&nbsp;generic admin account is when the username matches &#39;admin@&#39; or &#39;administrator@&#39;. All other admin accounts are considered specific to a given user.</span></p>
+
+<ol class="sbody-num_list">
+	<li><span>On the Administrators tab.</span></li>
+	<li><span>confirm telephone number (if available), email address, and the alternate email address.</span></li>
+	<li><span>Enter confirmation details in case notes.</span></li>
+</ol>
+<br>
+<span><strong><span class="text-base">Entitling non-admins</span></strong><br>
+<br>
+Entitled customer admins may request Frontline to contact or work with a partner or other non-admin to resolve an issue. This is permissible only under the conditions described in <a bookmark-id="non-admin options" href="#options" managed-link="" target="">non-admin options</a> below.<br>
+<br>
+<span class="text-base">Important:</span> In accordance with internal security guidance, limit your communication to only explaining the <span><a bookmark-id="non-admin options" href="#options" managed-link="" target="">non-admin options</a></span>. Do not advise, request, or recommend any options. Carefully document non-admin customer requests and related decisions in case notes in the case.&nbsp;<br>
+<br>
+In this scenario, any admin type may open a case to request approval for a non-admin to work on a project but it still needs to contain documented approval from a Company Administrator.<br>
+<br>
+<strong><span class="text-base"><a id="non-admin options" name="non-admin options"></a>Non-admin options <a class="bookmark" id="options"></a></span></strong><br>
+To delegate tasks to a non-admin, the entitled customer admin must choose one of the following options:</span>
+
+<ul class="sbody-free_list">
+	<li><span><span class="text-base">Unlicensed admin</span>. Customer admin may create an unlicensed admin account for the person working on their behalf. This account can be restricted to one of the more restricted admin types in order to prevent unwanted access to customer information and services. </span>
+
+	<ul class="sbody-free_list">
+		<li><span><span class="text-base">Note:</span> The non-admin does not have to be a named user of the customer&rsquo;s subscription. For more information about admin accounts, see <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2861104" id="kb-link-12" managed-link="" target="_blank">2861104: Providing support to non-admins</a>.</span></li>
+	</ul>
+	</li>
+	<li><span><span class="text-base">Written authorization.</span> Customer admin may approve the non-admin to work on their behalf. Written authorization from a Company admin must be one of the following: </span>
+	<ul class="sbody-free_list">
+		<li><span>A Company admin makes an entry into the open case, using their Microsoft&nbsp;365 admin center access to the case.</span></li>
+		<li><span>A Company admin replies to an email message sent by you from within the ticketing system.</span></li>
+	</ul>
+	</li>
+</ul>
+<span><span class="text-base">Note: </span>The customer&rsquo;s email message must be sent by a Company admin and must document the following:</span>
+
+<ul class="sbody-free_list">
+	<li><span>The name and User ID of the customer admin who will supervise the non-admin&rsquo;s work.</span></li>
+	<li><span>Non-admin contact&rsquo;s full name.</span></li>
+	<li><span>Non-admin contact&rsquo;s telephone # and O365 email address.</span></li>
+	<li><span>A statement of scope of support that the non-admin will provide.</span></li>
+</ul>
+<span><span class="text-base">Note:</span> While working with an approved non-admin, the Frontline SEs must include the customer&rsquo;s Company admin on all email messages with the non-admin.</span>
+
+<p class="sbody-h5 text-subtitle"><strong><span>Redirecting non-entitled admins<a class="bookmark" id="rdr"></a></span></strong></p>
+
+<ul class="sbody-free_list">
+	<li><span>Explain the support guidance as described in <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2861104" id="kb-link-13" managed-link="" target="_blank">2861104: Providing support to non-admins</a>.</span></li>
+	<li><span>Provide support only to customer admins who are identified as administrators in the case ticketing system.<br>
+	<span class="text-base">Note</span><span class="text-base">:</span> Strictly avoid providing any name or contact information. </span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<a class="bookmark" id="tsh"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Troubleshooting entitlement </span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><span>This section includes solutions for specific scenarios or &ldquo;corner cases.&rdquo;</span></p>
+
+<div class="kb-collapsible kb-collapsible-collapsed">
+<p class="sbody-h5 text-subtitle"><strong><span>Caller cannot provide required entitlement information</span></strong></p>
+
+<ol class="sbody-num_list">
+	<li><span>If you cannot verify the caller or if you suspect that you are not communicating with an authorized customer admin, stop providing support and prevent any access to account information.</span></li>
+	<li><span>Tell the person requesting support that they must become an administrator on the account before support can continue.</span></li>
+	<li><span>Inform an admin on the customer account of the unauthorized attempt to obtain technical support on the account.</span></li>
+	<li><span>For additional information, refer to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2861104" id="kb-link-15" managed-link="" target="_blank">2861104: Providing support to non-admins</a>.</span></li>
+</ol>
+<span><span class="text-base">Important</span><span class="text-base">:</span> Limit your engagement to asking only direct questions and then crosschecking the answers with the appropriate records in the case ticketing system. Strictly avoid giving out any personally identifiable information (PII) such as the name of an admin or any other details.</span><br>
+&nbsp;
+<p class="sbody-h5 text-subtitle"><strong><span>Caller or admin not appearing in tools</span></strong></p>
+
+<ol class="sbody-num_list">
+	<li><span>If the caller is not in <span>Rave</span>&nbsp;because their tenant was just created, use LogMeIn to watch the customer sign in, following the procedure&nbsp;defined in <span lang="EN-US"><span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2774213" managed-link="" target="_blank">2774213: Procedure: M365 TS: LogMeIn Usage Guidance</a></span></span></span>. </span></li>
+	<li><span>If the caller is verified as an admin in <span>Rave</span> or by using LogMeIn but does not appear in the case ticketing system, choose <strong>Enter Manually</strong> in the Administrator Email filed when creating a case in Rave, complete the rest of required information accordingly. This does not apply to non-admins.</span></li>
+</ol>
+
+<ul class="indent-9 sbody-num_list">
+	<li><span><span><span><span>If the caller is not an admin but requests for an admin elevation (</span></span></span></span><span><span><span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2887514" managed-link="" target="_blank">2887514: O365 Elevation Procedure</a></span></span></span></span><span><span><span><span>)</span></span></span></span><span><span><span><span>, transfer the case to Office 365 data protection team.&nbsp; </span></span></span></span></li>
+</ul>
+<span><span class="text-base">Case ticketing system is down:</span><br>
+<br>
+Refer to the following:</span>
+
+<ul class="sbody-free_list">
+	<li><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2879066" id="kb-link-18" managed-link="" target="_blank">2879066: Office 365 primary tools down procedure</a></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to top</a>
+
+<h3 class="sbody-h4"><a id="supplemental note" name="supplemental note"></a>Supplemental notes <a class="bookmark" id="sup"></a></h3>
+
+<p><span><span><span><span>Verifying customers in callback model.<strong> </strong>When calling back customers on an existing <span>case</span> that has already been entitled, you need to confirm that you are speaking to the correct admin handling the case. Use the following required guidelines: </span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span>State your name and provide the case number. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>Depending on how the call is answered, ask for or confirm first and last name of the entitled admin/case creator. </span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span>If answered by receptionist or answering service, ask for the admin by first and last name.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>If answered by the admin and only the first name is used, confirm last name.</span></span></span></span></span>
+		<ul style="list-style-type:disc">
+			<li><span><span><span><span><span>Example: &ldquo;Thank you John. Just to confirm, can I also have your last name?&rdquo;</span></span></span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span>Never share any account information with an unentitled caller. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>If the contact number in the case is different than the number stored in customer records in the case ticketing system, ensure that the admin confirms the number.</span></span></span></span></span></li>
+</ul>
+
+<h3 class="sbody-h3"><a id="More information" name="More information"></a>More information<a class="bookmark" id="more"></a></h3>
+
+<h4 class="sbody-h4">Appendix<a class="bookmark" id="app"></a></h4>
+<span class="text-base">Admin types in Office 365</span><br>
+&nbsp;
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<th class="sbody-th"><span class="text-base">Office 365 Name</span></th>
+			<th class="sbody-th"><span class="text-base">Rave Name</span></th>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Global Administrator</td>
+			<td class="sbody-td">Company Administrator</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Billing Administrator</td>
+			<td class="sbody-td">Billing Administrator</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Service Administrator</td>
+			<td class="sbody-td">Service Support Administrator</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">User Management Administrator</td>
+			<td class="sbody-td">User Account Administrator</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Password Administrator</td>
+			<td class="sbody-td">Helpdesk Administrator</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Exchange Administrator</td>
+			<td class="sbody-td">Exchange Service Administrator</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">SharePoint Administrator</td>
+			<td class="sbody-td">SharePoint Service Administrator</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Skype for Business Administrator</td>
+			<td class="sbody-td">Lync Service Administrator</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td">Compliance Administrator</td>
+			<td class="sbody-td">Compliance Administrator</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to top</a><br>
+<a class="bookmark" id="related"></a>
+
+<h4 class="sbody-h4"><a id="Related articles" name="Related articles">Related articles</a></h4>
+
+<div class="kb-collapsible kb-collapsible-expanded">
+<ul class="sbody-free_list">
+	<li><a aria-live="assertive" data-bi-name="content-anchor-link" href="https://internal.support.services.microsoft.com/en-us/help/4024872" managed-link="" tabindex="0" target="_blank">4024872:&nbsp;Office 365 Modern Support case workflow process for Pod</a><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3097394" managed-link="" target="_blank"> </a></li>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2755056" managed-link="" target="_blank">2755056 Procedure: M365: Supporting cases transferred from tech routers</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2861104" id="kb-link-27" managed-link="" target="_blank">2861104: Provide support to non-admins</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4339885" target="_blank">4339885-Office 365 Premier Support in Rave</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2879066" id="kb-link-29" managed-link="" target="_blank">2879066: Office 365 primary tools down procedure</a></li>
+	<li><span lang="EN-US"><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2774213" managed-link="" target="_blank">2774213: Procedure: M365 TS: LogMeIn Usage Guidance</a></span></li>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2500396" id="kb-link-33" managed-link="" target="_blank">2500396: Office 365 redirect resource sheet</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2714453" id="kb-link-35" managed-link="" target="_blank">2714453: Office 365 how to get account ownership verification</a></li>
+	<li><a href="https://internal.support.services.microsoft.com/en-us/help/4462573" managed-link="" target="_blank"><span><span><span><span><span><span>4462573: Cloud Partner Entitlement Policy</span></span></span></span></span></span></a></li>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3122455" id="kb-link-38" managed-link="" target="_blank">3122455: Authenticating admin for requests that subject to SFBO CPNI/PSTN PIN requirements</a></li>
+	<li><span><span><span><span><a data-content-id="" data-content-type="" href="https://supportability.visualstudio.com/ModernStack/_wiki/wikis/ModernStack/375908/Just-In-Time-Access-Feature-for-the-Commercial-Business-Unit" managed-link="" target="_blank">Just In Time Access Feature</a></span></span></span></span></li>
+</ul>
+</div>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to top</a><br>
+<a class="bookmark" id="history"></a><br>
+&nbsp;<a id="Version history" name="Version history"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Version history</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p>&nbsp;</p>
+
+<div class="kb-collapsible kb-collapsible-collapsed">
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<th class="sbody-th"><span>CI #</span></th>
+			<th class="sbody-th"><span>Date</span></th>
+			<th class="sbody-th"><span>Brief description of changes</span></th>
+		</tr>
+		<tr>
+			<td class="sbody-td"><span><span><span><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/123810" managed-link="" target="_blank">123810</a></span></span></span></td>
+			<td class="sbody-td">October 5, 2020</td>
+			<td class="sbody-td">Updated a scenario for IVR case entitlement.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/122150" managed-link="" target="_blank">122150</a></td>
+			<td class="sbody-td">August 17, 2020</td>
+			<td class="sbody-td">Clarified the different emphases for web cases and IVR cases.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/120861" managed-link="" target="_blank">120861</a></td>
+			<td class="sbody-td">July 13, 2020</td>
+			<td class="sbody-td">Removed archived reference</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">
+			<p><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/115293" target="_blank">115293</a></p>
+			</td>
+			<td class="sbody-td">March 17, 2020</td>
+			<td class="sbody-td">Removed &quot;Special Consumer related verification in ViewPoint (not Rave)&quot; Section.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">113816</td>
+			<td class="sbody-td">February&nbsp;7, 2020</td>
+			<td class="sbody-td">Update some of the entitlement verification from ViewPoint to Rave ticketing system.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">111006</td>
+			<td class="sbody-td">December 13, 2019</td>
+			<td class="sbody-td">Article title update and term changes. Also removed empty sections.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><span>111818</span></td>
+			<td class="sbody-td"><span>December 6, 2019</span></td>
+			<td class="sbody-td"><span>Add info about how engineers should handle the case post entitlement of the customer.</span></td>
+		</tr>
+		<tr>
+			<td class="sbody-td">111170</td>
+			<td class="sbody-td">November 26, 2019</td>
+			<td class="sbody-td"><span lang="EN-US"><span><span>Updated references to SDK 2774213&#39;s title.</span></span></span></td>
+		</tr>
+		<tr>
+			<td class="sbody-td">106962</td>
+			<td class="sbody-td">Septermber 12, 2019</td>
+			<td class="sbody-td">Updated the reference article of 4455927.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">106833</td>
+			<td class="sbody-td">Septermber 2, 2019</td>
+			<td class="sbody-td">Updated entitlement checklist and supplemental notes.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">104677</td>
+			<td class="sbody-td">July 25, 2019</td>
+			<td class="sbody-td">Added entitlement info for cases transferred from Service Desk.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">104676</td>
+			<td class="sbody-td">July 25, 2019</td>
+			<td class="sbody-td">Added speak up asset and tag &ldquo;SUE_O365TSPPP&rdquo;.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to top</a></div>
+<div class="kb-securedata-section section">Steps to reproduce:<br>
+Product Bug Number: <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=15753" id="kb-link-40" target="_self">CI 15753</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=16533" id="kb-link-41" target="_self">CI 16533</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=16650" id="kb-link-42" target="_self">CI 16650</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=17156" id="kb-link-43" target="_self">CI 17156,</a><a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=17859" id="kb-link-44" target="_self">CI 17859</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=18771" id="kb-link-45" target="_self">CI 18771</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=18624" id="kb-link-46" target="_self">CI 18624</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=18358" id="kb-link-47" target="_self">CI 18358</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=18332" id="kb-link-48" target="_self">CI 18332,</a><a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=20273" id="kb-link-49" target="_self">CI 20273</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=20623" id="kb-link-50" target="_self">CI20623, CI 20979, CI 21322</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=21606" id="kb-link-51" target="_self">CI 21606</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=22292" id="kb-link-52" target="_self">CI 22292, CI</a><a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=22414" id="kb-link-53" target="_self">22414</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=23247" id="kb-link-54" target="_self">CI 23247</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=23331" id="kb-link-55" target="_self">CI 23331</a>, CI <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=23665" id="kb-link-56" target="_self">23665, CI</a><a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=23768" id="kb-link-57" target="_self">23768</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=24116" id="kb-link-58" target="_self">CI 24116</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=24326" id="kb-link-59" target="_self">CI 24326</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=24689" id="kb-link-60" target="_self">CI 24689</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=25052" id="kb-link-61" target="_self">CI 25052</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=25778" id="kb-link-62" target="_self">CI 25778</a>, CI <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=25770" id="kb-link-63" target="_self">25770</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=25923" id="kb-link-64" target="_self">CI 25923</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=25654" id="kb-link-65" target="_self">CI 25654</a>, CI <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=26045" id="kb-link-66" target="_self">26045</a>, CI <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=26550" id="kb-link-67" target="_self">26550</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=25366" id="kb-link-68" target="_self">CI 25366</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=26965" id="kb-link-69" target="_self">CI 26965</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=26927" id="kb-link-70" target="_self">CI 26927</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=27371" id="kb-link-71" target="_self">CI 27371</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=27720" id="kb-link-72" target="_self">CI 27720</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=27874" id="kb-link-73" target="_self">CI 27874</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=27973" id="kb-link-74" target="_self">CI 27973</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=28051" id="kb-link-75" target="_self">CI 28051</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems#_a=edit&amp;id=15633" id="kb-link-76" target="_self">CI 15633</a>,<br>
+<a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/18103" id="kb-link-77" target="_self">CI 18103</a><a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems#_a=edit&amp;id=16313" id="kb-link-78" target="_self">CI 16313</a>,<a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/18103" id="kb-link-79" target="_self">CI 18103</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/18074" id="kb-link-80" target="_self">CI 18074</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/17209" id="kb-link-81" target="_self">CI 17209</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/19588" id="kb-link-82" target="_self">CI 19588</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/23555" id="kb-link-83" target="_self">CI 23555</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems#_a=edit&amp;id=34439" id="kb-link-84" target="_self">CI 34439</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/36763" id="kb-link-85" target="_self">CI 36763</a>,&nbsp;<a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems#_a=edit&amp;id=41629" id="kb-link-86" target="_self">CI 41629</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems#id=50134&amp;triage=true&amp;_a=edit" id="kb-link-87" target="_self">CI 50134</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/51545" id="kb-link-88" target="_self">CI 51545</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/53832?fullscreen=false" id="kb-link-89" target="_self">CI 53832</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/54267" id="kb-link-90" target="_self">CI 54267</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/54956?fullscreen=false" id="kb-link-91" target="_self">CI 54956</a>,&nbsp;<a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems?_a=edit&amp;id=73358&amp;triage=true" managed-link="" target="_blank">CI 73358</a>,&nbsp;<a data-content-id="" data-content-type="" href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems?_a=edit&amp;id=75665&amp;triage=true" target="_blank">CI 75665</a>,&nbsp;<a aria-live="rude" data-bi-name="content-anchor-link" href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems?_a=edit&amp;id=84083&amp;triage=true" managed-link="" tabindex="0" target="_blank">CI 84083</a>,&nbsp;<a aria-live="assertive" data-bi-name="content-anchor-link" href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems?id=88069&amp;triage=true&amp;fullScreen=false&amp;_a=edit" managed-link="" tabindex="0" target="_blank">CI 88069</a>,&nbsp;<a data-content-id="" data-content-type="" href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems?id=93076&amp;fullScreen=false&amp;_a=edit" managed-link="" target="_blank">CI 93076</a>,&nbsp;<a aria-live="assertive" data-bi-name="content-anchor-link" href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems?id=94639&amp;fullScreen=false&amp;_a=edit" managed-link="" tabindex="0" target="_blank">CI&nbsp;94639</a>,<a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems?_a=edit&amp;id=98682&amp;triage=true" target="_blank">CI 98682</a>,&nbsp;<a aria-live="assertive" data-bi-name="content-anchor-link" href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems?id=101921&amp;fullScreen=false&amp;_a=edit" managed-link="" tabindex="0" target="_blank">CI&nbsp;101921</a>, <a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/104676">CI 104676</a>,&nbsp;<a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/104677/" managed-link="" target="_blank">CI 104677</a>,&nbsp;<span><span><span><span><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/106833" managed-link="" target="_blank">CT 106833</a>,&nbsp;<a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/106962" managed-link="" target="_blank">CT 106962</a>,&nbsp;<span lang="EN-US"><span><span><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/111170" target="_blank">CT 111170</a>,&nbsp;<span><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/111818">CT 111818</a>,&nbsp;<a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/111006" target="_blank">CT 111006</a>,&nbsp;<a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/113816" managed-link="" target="_blank">CT 113816</a>,&nbsp;<a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/115293" target="_blank">CT 115293</a>, <a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/122150" managed-link="" target="_blank">CT 122150</a></span></span></span></span></span></span></span></span><br>
+Author ID (email alias): v-jokais<br>
+Writer ID (email alias): v-jokais, v-pedaca, dabut, v-riwil, v-maqiu, v-riwil, v-jaylew, v-hofern<br>
+Tech Review ID (email alias): mhowlett, dabut, v-pedaca, v-ppowel, v-elmorr, romanma, chanh, greganth, adong, dahans<br>
+Contributor ID (email alias):<br>
+Editor ID (email alias):</div>

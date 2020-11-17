@@ -1,0 +1,1118 @@
+﻿<header><h1>ASMS – How to Add and Edit Tax IDs</h1></header><p><span lang="EN">Submit a </span><span lang="EN"><a href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder="><span><span><span>ModTrack</span></span></span></a></span><span lang="EN"> request to update this TSG.</span></p>
+
+<h3><strong><a id="Known Issues" name="Known Issues"></a>Known Issues</strong></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="131">
+			<p><span><strong>Date </strong></span></p>
+			</td>
+			<td width="252">
+			<p><span><strong>Issue </strong></span></p>
+			</td>
+			<td width="305">
+			<p><span><strong>Approved Workaround </strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="131">
+			<p><span>07/17/2018</span></p>
+			</td>
+			<td width="252">
+			<p><span> As designed, the Marketplace Invoices for India Customers will not have Customer&#39;s GSTIN mentioned.</span></p>
+
+			<p><span>This is due to us billing customers from Singapore POS. Although, the customer&#39;s GSTIN should be mentioned on the Invoice as we are charging customer for GST and customer has updated same on their Azure Account.</span></p>
+			</td>
+			<td width="305">
+			<p><span>It has been confirmed that if a customer comes back for invoice regeneration with GSTIN request, we need to credit the customer until the design is <span>fixed</span><span> </span>. Payops will do the crediting and regenerate the invoice. &nbsp; Payops does not do any GSTIN crediting for any other reason.&nbsp;</span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+<div>&nbsp;</div>
+</div>
+
+<h3><strong><a id="Overview" name="Overview"></a>Overview</strong></h3>
+
+<p>This TSG provides guidance on how to verify the status and/or eligibility of tax-exempt or discounted tax customers. <span>Tax exemptions are available to charitable and non-profit organizations worldwide who meet the <span>tax exemption requirements</span></span><span>.</span> Discounted tax is available to customer related to Value Added Tax (VAT) in the European Union (EU).</p>
+
+<p><strong><span><span><span>Applies To:</span></span></span></strong><span><span><span> All Azure customers who meet the VAT, tax exempt or other tax requirements outlined in this article.</span></span></span></p>
+
+<h3><strong><a id="Policy" name="Policy"></a>Policy</strong></h3>
+
+<ul>
+	<li>
+	<p>Customers worldwide are subject to tax laws and Microsoft must comply with these laws when customers make purchases.</p>
+	</li>
+	<li>
+	<p>Tax laws can differ by Country, State, County, Province, and Municipality.&nbsp;However, a majority of the tax issues are addressed automatically within the billing system.</p>
+	</li>
+	<li>
+	<p>The European Union(EU) uses VAT ID for taxation purposes. EU customers should enter their VAT ID when they purchase an Azure Subscription.</p>
+	</li>
+	<li>
+	<p>Customers who do not have their VAT ID available or who have questions about VAT IDs should engage their local tax authority or tax adviser. ASMS cannot provide VAT IDs or tax advice.</p>
+	</li>
+	<li>
+	<p>EU (except Ireland) customers who have eligible VAT IDs and other customers who are Tax Exempt will trigger a zero-tax status in the billing system and a corresponding &ldquo;Reverse Charge&rdquo; statement on their invoice.</p>
+	</li>
+	<li>
+	<p>Marketplace add-ons are not eligible for tax exemption and VAT IDs should not be added<span><span><span>.</span></span></span></p>
+	</li>
+	<li>
+	<p><span>Chile now requires foreign service providers&nbsp;to charge a 19% value-added tax (VAT). This VAT applies to all digital sales from Microsoft to customers in Chile, including both business-to-business and business-to-consumer sales. </span></p>
+
+	<ul style="list-style-type:circle">
+		<li>
+		<p><span>Additional information is available in the&nbsp;<a href="https://microsoft.sharepoint.com/:b:/r/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/InternalUseOnly-FAQ%20-%20Chile%20Remote%20Seller%20VAT.pdf?csf=1&amp;web=1&amp;e=im6prf">Chile VAT Launch FAQ</a>.</span></p>
+		</li>
+		<li>
+		<p>See below for details on the <a bookmark-id="ChileTaxExemptionProcess" href="#ChileTaxExemptionProcess" managed-link="">Chile Tax Exemption Process</a>.</p>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<h3><strong><a name="_Hlk496687096"></a></strong><span><strong>Support Scenarios</strong> </span><span><span><span> </span></span></span><span><span><span> </span></span></span></h3>
+
+<h4><strong><a id="Customer Requests a VAT ID Update or Receives VAT Error at Purchase" name="Customer Requests a VAT ID Update or Receives VAT Error at Purchase"></a>Customer Requests a VAT ID Update or Receives VAT Error at Purchase</strong></h4>
+
+<p>Customers should add a VAT ID to their account during the initial purchase and account setup. Should a customer later realize they need to add, update, or experienced an error with their VAT ID, they must contact support. In these instances follow the below steps to assist the customer.</p>
+
+<ol>
+	<li>
+	<p><span>Validate the customer&rsquo;s VAT ID using the <a href="http://ec.europa.eu/taxation_customs/vies/vieshome.do" managed-link="">VIES VAT number validation</a> site.<br>
+	<strong>Note:</strong>&nbsp;This VAT ID&nbsp;should include both the country code and the number itself.</span></p>
+	</li>
+	<li>
+	<p><span>Was the VAT ID <span>valid</span></span><span>?</span></p>
+
+	<ul>
+		<li>
+		<p><span><span><strong>No:</strong> Redirect the customer to their local tax agency or internal billing department for further assistance. </span></span></p>
+		</li>
+		<li>
+		<p><span><span><strong>Yes:</strong><span>&nbsp;U</span></span></span><span><span>pdate the VAT ID in CMAT for the customer.<br>
+		(Directions how to do so below.)</span></span></p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p>In CMAT, navigate to the <em>Tax Information</em> section and click <strong>Add.</strong></p>
+	</li>
+</ol>
+
+<p class="indent-2"><span><span asset="4034344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">4034344</span></span></p>
+
+<ol start="4">
+	<li>
+	<p>In the <span><em>Add Tax Information</em> </span><span> </span>pop-up, select <span><strong>Vat ID</strong> </span><span> </span>from the drop-down.</p>
+	</li>
+	<li>
+	<p>Enter the new <strong>Vat ID</strong>.</p>
+	</li>
+	<li>
+	<p>Add a comment describing the change you are making.</p>
+	</li>
+	<li>
+	<p>Click the <strong>Save</strong> button.<br>
+	<strong>Note:</strong> <span>If you receive an error in CMAT</span><span> </span> while or after adding a VAT ID, escalate the issue to PayOps using&nbsp;<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2651579" managed-link="" target="_blank">TSG 2651579</a>.</p>
+	</li>
+</ol>
+
+<p class="indent-1"><span>&#8203;&#8203;&#8203;&#8203;<span><span asset="4034345" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">4034345</span></span></span></p>
+
+<p class="indent-1"><strong>Note:</strong> <span> When adding a Tax ID to a US or Canadian account, the user may get 1 or 2 incorrect emails from the system</span>. Please let the customer know that they will receive an automated email or two asking for more documentation with a link that doesn&#39;t work and that they can ignore those as they will have already given all the documentation we need to support.</p>
+
+<h4><strong><a id="Customer Charged VAT but Their Country Does Not Charge VAT" name="Customer Charged VAT but Their Country Does Not Charge VAT"></a>Customer Charged VAT but Their Country Does Not Charge VAT</strong></h4>
+
+<p><span><span>Previously charged VAT can be refunded via CMAT, on all invoices up to one year&nbsp;prior</span></span><span>. </span><span>For guidance on </span><span> </span><span>how to process customer refunds, reference </span><a href="https://internal.support.services.microsoft.com/en-us/help/2646823">TSG </a><a href="https://internal.support.services.microsoft.com/en-us/help/2646823" managed-link="" target="_blank"> 2646823</a><span> and </span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3084129" target="_blank">TSG 3084129</a>.<span> </span></p>
+
+<p><span><span>The </span>table below lists the territories where 0% VAT has been made acceptable by Tax and LCA teams:</span> <span> </span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="100">
+			<p align="center"><strong><span>To Country</span></strong></p>
+			</td>
+			<td colspan="2" width="360">
+			<p align="center"><strong><span>To Province (Short Code)</span></strong></p>
+			</td>
+			<td width="163">
+			<p align="center"><strong><span>To City</span></strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2" width="100">
+			<p align="center"><span>DK</span></p>
+			</td>
+			<td width="282">
+			<p align="center"><span>FAROE ISLANDS</span></p>
+			</td>
+			<td width="78">
+			<p align="center"><span>FO</span></p>
+			</td>
+			<td rowspan="20" width="163">
+			<p align="center">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="282">
+			<p align="center"><span>GREENLAND</span></p>
+			</td>
+			<td width="78">
+			<p align="center"><span>GL</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="100">
+			<p align="center"><span>FI</span></p>
+			</td>
+			<td width="282">
+			<p align="center"><span>ALAND ISLANDS</span></p>
+			</td>
+			<td width="78">
+			<p align="center"><span>AX</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2" width="100">
+			<p align="center"><span>FR</span></p>
+			</td>
+			<td width="282">
+			<p align="center"><span>REUNION</span></p>
+			</td>
+			<td width="78">
+			<p align="center"><span>RE</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="282">
+			<p align="center"><span>GUADELOUPE</span></p>
+			</td>
+			<td width="78">
+			<p align="center"><span>GP</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="100">
+			<p align="center"><span>DE or CH</span></p>
+			</td>
+			<td width="282">
+			<p align="center"><span>BUSINGEN</span></p>
+			</td>
+			<td width="78">
+			<p align="center">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="100">
+			<p align="center"><span>DE</span></p>
+			</td>
+			<td width="282">
+			<p align="center"><span>HELIGOLAND</span></p>
+			</td>
+			<td width="78">
+			<p align="center">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="5" width="100">
+			<p align="center"><span>NL</span></p>
+			</td>
+			<td width="282">
+			<p align="center"><span>ARUBA</span></p>
+			</td>
+			<td width="78">
+			<p align="center"><span>AW</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="282">
+			<p align="center"><span>CURACAO</span></p>
+			</td>
+			<td width="78">
+			<p align="center"><span>CW</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="282">
+			<p align="center"><span>SINT MAARTEN</span></p>
+			</td>
+			<td width="78">
+			<p align="center"><span>SX</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="282">
+			<p align="center"><span>NETHERLANDS ANTILLES</span></p>
+			</td>
+			<td width="78">
+			<p align="center"><span>AN</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="282">
+			<p align="center"><span>Bonaire</span></p>
+			</td>
+			<td width="78">
+			<p align="center">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="5" width="100">
+			<p align="center"><span>ES</span></p>
+			</td>
+			<td width="282">
+			<p align="center"><span>CANARY ISLANDS</span></p>
+			</td>
+			<td width="78">
+			<p align="center"><span>CN</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="282">
+			<p align="center"><span>CEUTA</span></p>
+			</td>
+			<td width="78">
+			<p align="center"><span>CE</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="282">
+			<p align="center"><span>MELILLA</span></p>
+			</td>
+			<td width="78">
+			<p align="center"><span>ML</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="282">
+			<p align="center"><span>Las Palmas</span></p>
+			</td>
+			<td width="78">
+			<p align="center">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="282">
+			<p align="center"><span>Santa Cruz de Tenerife</span></p>
+			</td>
+			<td width="78">
+			<p align="center">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="3" width="100">
+			<p align="center"><span>GB</span></p>
+			</td>
+			<td width="282">
+			<p align="center"><span>GIBRALTAR</span></p>
+			</td>
+			<td width="78">
+			<p align="center"><span>GI</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="282">
+			<p align="center"><span>JERSEY</span></p>
+			</td>
+			<td width="78">
+			<p align="center"><span>JE</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="282">
+			<p align="center"><span>GUERNSEY</span></p>
+			</td>
+			<td width="78">
+			<p align="center"><span>GG</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="3" width="100">
+			<p align="center"><span>IT</span></p>
+			</td>
+			<td colspan="2" rowspan="3" width="360">
+			<p align="center">&nbsp;</p>
+			</td>
+			<td width="163">
+			<p align="center"><span>CAMPIONE DITALIA</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="163">
+			<p align="center"><span>LAKE LUGANO</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="163">
+			<p align="center"><span>LIVIGNO</span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h4><span><strong><a id="Tax Exemption Status Requests" name="Tax Exemption Status Requests"></a>Tax Exemption Status Requests</strong> </span><span><span> </span></span></h4>
+
+<p>Customers who claim to be tax exempt but their VAT ID or tax-exempt status is not in CMAT, can submit their Tax Exemption Certificate to Microsoft and have their tax status updated. Typically,<span> </span> only charitable organizations are tax exempt, but some non-profit organizations may also be eligible.</p>
+
+<p><strong><a id="Cloud Soulution Provider (CSP) Tax Exemption Process" name="Cloud Soulution Provider (CSP) Tax Exemption Process"></a>Cloud Soulution Provider (CSP) Tax Exemption Process: </strong><br>
+Partners wanting to add withholding tax certificates&nbsp;can download the form at <a href="https://nam06.safelinks.protection.outlook.com/?url=https://docs.microsoft.com/en-us/partner-center/withholding-tax-credit-form&amp;data=02%7c01%7ckuharr%40microsoft.com%7c804df4952703483a669308d7fdb61f01%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637256830951478197&amp;sdata=pYQMxCdt2%2BLt3kCNfPqEdy51be3bPKuzRKr6VfCjg5Q%3D&amp;reserved=0" target="_blank">https://docs.microsoft.com/en-us/partner-center/withholding-tax-credit-form</a>&nbsp;and follow the noted process in the doc.&nbsp;</p>
+
+<p><strong><a id="Colombia Tax Exemption Process" name="Colombia Tax Exemption Process"></a>Colombia&nbsp;Tax Exemption Process:</strong></p>
+
+<p>If a Colombian customer asks to have their Tax ID added to the profile, follow the steps below:</p>
+
+<ol>
+	<li>Ask the customer to provide a <strong>Registro &Uacute;nico Tributario (RUT) certificate</strong>.</li>
+	<li>Ensure that the customer&#39;s <strong>Tax Exemption form</strong> is attached to the case and that the customer filled it out completely.</li>
+	<li>Locate the <strong>N&uacute;mero de Identificaci&oacute;n Tributaria (NIT) number</strong> on the <em>Tax Exemption form</em>.</li>
+	<li>Validate the NIT using the <a href="https://muisca.dian.gov.co/WebRutMuisca/DefConsultaEstadoRUT.faces">RUT Status Check page</a>.</li>
+	<li>In CMAT, click <strong>Add</strong> next to <em>Tax Information</em>.</li>
+	<li>Under <em>Type</em>, select <strong>Vat ID</strong>.</li>
+	<li>Enter the <strong>NIT number</strong> under <em>ID</em>.</li>
+	<li>Add Comments (as&nbsp;needed), and then click <strong>Next</strong>.</li>
+	<li>Add a case number and finish the process.</li>
+</ol>
+
+<p><strong><a id="ChileTaxExemptionProcess" name="ChileTaxExemptionProcess"></a>Chile Tax Exemption Process:</strong></p>
+
+<p>If a Chilean customer asks to have their Tax ID added to the profile, follow the steps below:</p>
+
+<ol>
+	<li>
+	<p>Ask the customer to provide a&nbsp;Registro &Uacute;nico Tributario (RUT) Number.</p>
+	</li>
+	<li>
+	<p>Navigate to&nbsp;<a href="https://palena.sii.cl/cvc/dte/ee_empresas_dte.html" managed-link="">https://palena.sii.cl/cvc/dte/ee_empresas_dte.html</a>&nbsp;and enter the RUT and the Checker Digit.</p>
+	</li>
+	<li>
+	<p>If the RUT is valid, proceed to CST and locate the customer&#39;s account.</p>
+	</li>
+	<li>
+	<p>Navigate&nbsp;to <em>Billing Accounts (LE)</em>.</p>
+	</li>
+	<li>
+	<p>Under<em>TAX Details&nbsp;</em>select <strong>Add Tax Details</strong>.</p>
+	</li>
+	<li>
+	<p>Select <strong>INTLEXEMPT </strong>(it is the only available option).</p>
+	</li>
+	<li>
+	<p>Add the RUT and the Checker Digit.</p>
+	</li>
+	<li>
+	<p>Add a case number and comment.</p>
+	</li>
+	<li>
+	<p>Click <strong>next </strong>to complete the process.</p>
+	</li>
+</ol>
+
+<p><strong>For customers based outside the US/EU:</strong></p>
+
+<p>Tax Exempt status is not visible in CMAT. If the customer requests to update their account status, follow the steps below:</p>
+
+<ol>
+	<li>Send the customer the Regional Tax form for their region and request that the customer provide their Tax Certificate and the completed regional Withholding Tax Credit form.</li>
+	<li>Customers can provide soft copies via email or mail/fax copies to the address provided in the form.</li>
+</ol>
+
+<ul class="indent-5">
+	<li class="indent-1"><a href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/WHT%20Credit%20Form%20Germany%20Only.docx" target="_blank">Germany Only</a></li>
+	<li class="indent-1"><a href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/WHT%20Credit%20Form%20Global%20except%20Germany.docx" target="_blank">Global (Excluding Germany)</a></li>
+</ul>
+
+<ol start="3">
+	<li>Upon receiving the customer&rsquo;s Tax Exemption forms, review them to ensure they are complete. The forms must include:</li>
+</ol>
+
+<ul>
+	<li class="indent-1">Customer&rsquo;s name and address.</li>
+	<li class="indent-1">Microsoft Corporation or Microsoft is completely spelled out (the terms MSFT, MS Corp or other variations are not acceptable).</li>
+	<li class="indent-1">Form is signed and dated.</li>
+</ul>
+
+<ol start="4">
+	<li>Apply any tax refunds via CMAT as needed, following the standard empowerment levels for any current tax charges. Past charges will need to be determined by PayOps.</li>
+</ol>
+
+<ul>
+	<li class="indent-1">Reference <a href="https://internal.support.services.microsoft.com/en-us/help/2651579" target="_blank">TSG 2651579</a> to engage PayOps and request that the customer&rsquo;s account be updated to tax exempt. Be sure to attach the forms provided by the customer.</li>
+	<li class="indent-1">If the customer is requesting a refund of any past tax charges, include that information in the PayOps ticket.</li>
+</ul>
+
+<p class="indent-1"><strong>Note</strong>: PayOps will determine if it is applicable and appropriate for Microsoft to provide the tax refund. PayOps will own the determination as to where the customer should pursue tax credits or refunds. There may be a date effective within the tax exemption certificate or other terms and conditions specifying proper procedure for a tax refund. Most of the time, when a valid tax exemption certificate is received by MSFT, ASMS will credit back historical taxes paid by the customer (all tax 1 years old and under).</p>
+
+<p class="indent-1"><strong>Note</strong>: PayOps can only trigger last 1 yrs tax refund.</p>
+
+<ol start="5">
+	<li>Upon confirmation from PayOps of the completed update, inform the customer that their tax status is now &ldquo;Exempt&rdquo; and future invoices will not have sales tax charges.</li>
+	<li>Inform the customer of any tax credits provided.</li>
+</ol>
+
+<p class="indent-1"><strong>Note</strong>: If Microsoft Corp Tax deems a customer&rsquo;s Tax Exemption form as invalid, the PayOps team will revert the customer&rsquo;s tax exemption status.</p>
+
+<ol start="7">
+	<li>Once the customer has been updated, code and close the case as normal.</li>
+</ol>
+
+<h4><strong><a id="Customer Requests for a Stamp and Signed Tax Document" name="Customer Requests for a Stamp and Signed Tax Document"></a>Customer Requests&nbsp;a Stamp and Signed Tax Document</strong></h4>
+
+<p>The customer may request a tax document&nbsp;be signed and stamped by Microsoft. In such cases,&nbsp;verify below data from the customer:</p>
+
+<ul>
+	<li>Customer entity name</li>
+	<li><span>VAT</span> ID</li>
+	<li>Postal address</li>
+	<li><span><span>Postal address&nbsp;</span></span><span><span>to send the form to</span></span></li>
+</ul>
+
+<p><span><span>When you have gathered the above data, send an&nbsp;email to the&nbsp;<a href="mailto:eocvatof@microsoft.com">EOC VAT TEAM</a>&nbsp;distribution list</span></span><span><span>, and they will send the stamped and signed form to customer.</span></span></p>
+
+<p><span><span>The countries below are in scope&nbsp;where a stamp is required:</span></span></p>
+
+<ul>
+	<li><span><span>Croatia</span></span></li>
+	<li><span><span>Germany</span></span></li>
+	<li><span><span>Greece</span></span></li>
+	<li><span><span>Italy</span></span></li>
+	<li><span><span>Portugal</span></span></li>
+	<li><span><span>Serbia</span></span></li>
+</ul>
+
+<h4><strong><a id="Irish Tax Residency Certificate (for use in the EU)" name="Irish Tax Residency Certificate (for use in the EU)"></a>Irish Tax Residency Certificate (for use in the EU)</strong></h4>
+
+<p>Customers may ask to see this certificate for further information on double taxation agreements. Please use to following link to access the document and email it to the requester:</p>
+
+<ul>
+	<li><a href="https://microsoft.sharepoint.com/:b:/r/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/Irish%20Tax%20Residency%20Certificate%20for%202020.pdf?csf=1&amp;e=1DRyZ3" managed-link="" target="_blank">Tax Residency - 2020 MIOL</a></li>
+	<li><a href="https://microsoft.sharepoint.com/:b:/r/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/Ireland%20-%202019%20-%20MIOL.pdf" managed-link="" target="_blank">Tax Residency - 2019 MIOL</a></li>
+	<li><a href="https://microsoft.sharepoint.com/:b:/r/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/Ireland%20-%202018%20-%20MIOL.pdf" managed-link="" target="_blank"><span>Tax Residency - 2018 MIOL</span></a></li>
+	<li><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/:b:/r/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/Ireland%20-%202017%20-%20MIOL.pdf" managed-link="" target="_blank">Tax Residency - 2017 MIOL</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/:b:/r/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/Ireland%20-%202016%20-%20MIOL.pdf" managed-link="" target="_blank">Tax Residency - 2016 MIOL</a></li>
+</ul>
+
+<p><strong><span>Note:</span></strong><span> Similar to billing and invoicing inquiries, tax document and tax certificate requests should be referred to their EA provider.</span></p>
+
+<h4><strong><a id="Singapore-Malaysia Tax Residency Certificate" name="Singapore-Malaysia Tax Residency Certificate"></a>Singapore-Malaysia Tax Residency Certificate</strong></h4>
+
+<p>For customers that ask for this certificate, use to following link to access the document and email it to the requester:</p>
+
+<ul>
+	<li>
+	<p><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/:b:/r/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/Singapore-Malaysia%20Tax%20Residency%20Certificate%20for%202020.pdf?csf=1&amp;web=1&amp;e=QBPxik" managed-link="" target="_blank">Singapore-Malaysia Tax Residency Certificate for 2020</a></p>
+	</li>
+</ul>
+
+<h4><strong><a id="South Africa VAT Certificate (TCC)" name="South Africa VAT Certificate (TCC)"></a>South Africa VAT Certificate (TCC)</strong></h4>
+
+<p>For customers that ask for this certificate, use to following link to access the document and email it to the requester:</p>
+
+<ul>
+	<li><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/:b:/r/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/Microsoft%20South%20Africa%20TCC%20(VAT%20Certificate)%202020.pdf?csf=1&amp;web=1&amp;e=i75Dpw" managed-link="" target="_blank">Microsoft South Africa VAT Certificate (TCC) 2020</a></li>
+</ul>
+
+<h4><strong><a id="VAT Tax can be entered in CMAT for the following countries" name="VAT Tax can be entered in CMAT for the following countries"></a>VAT Tax can be entered in CMAT for the following countries:</strong></h4>
+
+<ul>
+	<li>Armenia</li>
+	<li>Bangladesh</li>
+	<li>Belarus</li>
+	<li>Malaysia</li>
+	<li>Norway</li>
+	<li>
+	<p>Singapore</p>
+	</li>
+</ul>
+
+<h4><strong><a id="Customer Requests Hard Copy Tax Invoice (HCTI)" name="Customer Requests Hard Copy Tax Invoice (HCTI)"></a>Customer Requests Hard Copy Tax Invoice (HCTI)</strong></h4>
+
+<p>Due to regional laws in some countries, a Hard Copy Tax Invoice (HCTI) must be sent to customers (most customers normally receive a PDF invoice). PayOps Execution prints the PDFs and physically mails them to the following countries (and can mail them upon request to the others noted):</p>
+
+<table class="table">
+	<tbody>
+		<tr height="80">
+			<td height="80" width="181"><strong>Countries</strong></td>
+			<td width="293"><strong>Hard copy invoice (signed and stamped)</strong></td>
+		</tr>
+		<tr height="20">
+			<td height="20" width="181">Albania</td>
+			<td width="293">Y (on request)</td>
+		</tr>
+		<tr height="20">
+			<td height="20" width="181">Armenia</td>
+			<td width="293">Y (on request)</td>
+		</tr>
+		<tr height="20">
+			<td height="20" width="181">Azerbaijan</td>
+			<td width="293">Y (on request)</td>
+		</tr>
+		<tr height="20">
+			<td height="20" width="181">Belarus</td>
+			<td width="293">Y (on request)</td>
+		</tr>
+		<tr height="20">
+			<td height="20" width="181">Bosnia and Herzegovina</td>
+			<td width="293">Y (on request)</td>
+		</tr>
+		<tr height="20">
+			<td height="20" width="181">Georgia</td>
+			<td width="293">Y (on request)</td>
+		</tr>
+		<tr height="20">
+			<td height="20" width="181">Kazakhstan</td>
+			<td width="293">Y (on request)</td>
+		</tr>
+		<tr height="20">
+			<td height="20" width="181">Kyrgystan</td>
+			<td width="293">Y (on request)</td>
+		</tr>
+		<tr height="20">
+			<td height="20" width="181">Moldva</td>
+			<td width="293">Y (on request)</td>
+		</tr>
+		<tr height="20">
+			<td height="20" width="181">Russia</td>
+			<td width="293">Y</td>
+		</tr>
+		<tr height="20">
+			<td height="20" width="181">Taiwan</td>
+			<td width="293">Y (on request)</td>
+		</tr>
+		<tr height="40">
+			<td height="40" width="181">Tajikistan</td>
+			<td width="293">Y (on request)</td>
+		</tr>
+		<tr height="20">
+			<td height="20" width="181">Ukraine</td>
+			<td width="293">Y (on request)</td>
+		</tr>
+		<tr height="20">
+			<td height="20" width="181">Uzbekistan</td>
+			<td width="293">Y (on request)</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><strong>Note:</strong> The HCTI states &ldquo;This is not an invoice &ndash; for tax purposes only.&rdquo; Some customers may not be able to register this document for financial purposes as it&rsquo;s not an &ldquo;official&rdquo; invoice. Some customers may require an HCTI and a signed Delivery Acceptance Form (DAF).&nbsp; In these instances, you will need to engage PayOps Execution to complete these requests. Reference <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2927087" target="_blank">TSG 2927087</a> for the steps on how to engage PayOps Execution.</p>
+
+<h4><strong><a id="Updating GST ID for New Zealand Customers" name="Updating GST ID for New Zealand Customers"></a>Updating GST ID for New Zealand Customers</strong></h4>
+
+<p>New Zealand customers&nbsp;can update their&nbsp;GST ID numbers to avoid GST charges. When a New Zealand customer requests to update their GST ID number, first confirm the customer&#39;s current&nbsp;GST ID number.&nbsp;This GST ID number must be updated in the system to ensure that the customer is invoiced with NIL GST going forward, and also to enable credit and rebill if there has been an invoice issued with GST. The steps to update a New Zealand GST ID number are the same as for any other country.</p>
+
+<h4><strong><a id="Updating GSTIN ID for India Region Customers" name="Updating GSTIN ID for India Region Customers"></a>Updating GSTIN ID for India Region Customers</strong></h4>
+
+<p>Microsoft charges Goods and Services Tax (GST) on digital supplies to customers in India. To make sure that this GST is correctly charged, customers with an India account will need to add GSTIN information to their Azure account so that the correct TAX amount can be collected.</p>
+
+<p>To update a GSTIN ID follow the steps below:</p>
+
+<ol>
+	<li>
+	<p>In CMAT, navigate to the <strong>Tax Information</strong> section and click <strong>Add.</strong></p>
+	</li>
+	<li>
+	<p>In the <em>Add Tax Information</em> pop-up, select the correct <strong>country</strong> or <strong>region</strong>, and select <strong>GSTNID</strong>.</p>
+	</li>
+</ol>
+
+<p class="indent-2"><span><span><span asset="4034347" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">4034347</span></span></span></p>
+
+<p><span><span><span> </span></span></span></p>
+
+<ol start="3">
+	<li>
+	<p><span> Enter </span><span> </span>the new <strong>GSTN ID</strong> in the correct GSTIN format below (CMAT will not accept incorrectly formatted GSTIN IDs).</p>
+
+	<ul>
+		<li>
+		<p><span>Microsoft does not validate the GSTIN against the specific customer or entity. Customers can add any valid GSTIN to their Azure account.</span></p>
+		</li>
+		<li>
+		<p>HSN Code (Harmonized Commodity Description coding) for GST is <strong>9973</strong>.<span> </span><span> </span></p>
+		</li>
+	</ul>
+	</li>
+</ol>
+
+<p><span> </span></p>
+
+<p class="indent-2"><span><span asset="4034348" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">4034348</span></span></p>
+
+<ol start="4">
+	<li>
+	<p>Add a <strong>comment</strong>, and then click the <strong>Save</strong> button.</p>
+	</li>
+	<li>
+	<p><span>If you receive an error in CMAT, escalate the issue to PayOps using </span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2651579" target="_blank">TSG 2651579</a>.</p>
+	</li>
+</ol>
+
+<h4><a id="Handling GSTIN Scenarios" name="Handling GSTIN Scenarios"></a><strong>Handling GSTIN Scenarios</strong></h4>
+
+<p>For guidance on handling GSTIN scenarios, please reference <a href="http://sharepoint/sites/fastrack/_layouts/15/WopiFrame2.aspx?sourcedoc={588d1b43-4d35-4c6f-a8a3-0f771bc2ab62}&amp;action=default" managed-link="" target="_blank">Handling India GST Scenarios</a>.</p>
+
+<p>If a customer comes back to us for a past GSTIN credit, we do not do that, they will need to work with their local tax authority for the refund.&nbsp;</p>
+
+<h4><strong><a id="India Region Customer Requests TDS Tax Credit" name="India Region Customer Requests TDS Tax Credit"></a>India Region Customer Requests TDS Tax Credit</strong></h4>
+
+<p>India customers are entitled to claim up to 10% Tax Deducted at Source (<span>TDS).</span>&nbsp;To do so, they must submit the following TDS documents to the APOC office:</p>
+
+<ul>
+	<li><span><span><span><span><a href="http://sharepoint/sites/fastrack/_layouts/15/WopiFrame.aspx?sourcedoc=%7bb421e020-e433-4cbc-96ab-e34eaa3bcb36%7d&amp;action=default" target="_blank">Tax Deducted at Source Credit Form</a></span></span></span></span></li>
+	<li>Digitally signed TDS Certificate (provided by the customer).</li>
+</ul>
+
+<p>SE&#39;s should help the customer submit their digitally signed TDS documents by engaging PayOps Execution&nbsp;following the guidelines in the link: <a href="https://microsoft.sharepoint.com/teams/CP_PayOps/SitePages/Submitting%20a%20Service%20Request%20in%20VSO%20for%20PayOps.aspx?WikiPageMode=Edit&amp;InitialTabId=Ribbon.EditingTools.CPEditTab&amp;VisibilityContext=WSSWikiPage&amp;" managed-link="" target="_blank">Submitting a Service Request</a> (select PayOps Execution option) or <a href="https://internal.support.services.microsoft.com/en-us/help/2647567" managed-link="" target="_blank">TSG 2647567</a> for further validation and application. This process is applicable for customers paying via Invoice pay or Credit card.</p>
+
+<p><strong>Note: </strong>There is no self-service option for the customer to submit TDS certificates directly to PayOps.</p>
+
+<p><strong>Processing TDS Tax Credits</strong><br>
+<br>
+<strong>Note:</strong> There is no self-service option for the customer to submit TDS certificates directly to PayOps.</p>
+
+<p><strong>Credit card customers:</strong></p>
+
+<ol>
+	<li><span> The customer&rsquo;s card is charged 100% of the invoice amount automatically.</span></li>
+	<li><span> The customer submits a completed <a href="http://sharepoint/sites/fastrack/_layouts/15/WopiFrame.aspx?sourcedoc=%7bb421e020-e433-4cbc-96ab-e34eaa3bcb36%7d&amp;action=default" target="_blank">Tax Deducted at Source Credit Form</a> and digitally-signed TDS Certificate.</span></li>
+	<li><span> ASMS executes PayOps and attaches the customer&#39;s completed form and digitally-signed TDS Certificate.</span></li>
+	<li><span> PayOps validates and processes 10% of the TDS credit as a refund back to customer&rsquo;s credit card.</span></li>
+</ol>
+
+<p><strong>Check/wire customers:</strong></p>
+
+<ol>
+	<li class="NumberedList">The customer will pay 90% of their invoice amount.</li>
+	<li class="NumberedList">The customer submits a completed <a href="http://sharepoint/sites/fastrack/_layouts/15/WopiFrame.aspx?sourcedoc=%7bb421e020-e433-4cbc-96ab-e34eaa3bcb36%7d&amp;action=default" target="_blank">Tax Deducted at Source Credit Form</a> and digitally-signed TDS Certificate.</li>
+	<li class="NumberedList">ASMS executes PayOps and attaches the customer&#39;s completed form and digitally-signed TDS Certificate.</li>
+	<li class="NumberedList">PayOps validates and create a VSO ticket for the GFS team.</li>
+	<li class="NumberedList">The GFS team clears 10% of the unpaid invoice amount in SAP as a payment from customer.</li>
+</ol>
+
+<p class="NumberedList"><strong>The customer will see this 10% amount included, as follows:</strong></p>
+
+<ul class="indent-2">
+	<li class="Bullet"><strong>Legacy:</strong> In the Payment section of their next invoice.</li>
+	<li class="Bullet"><strong>Legacy and Modern:</strong> On the customer portal in the Amount Paid section.</li>
+	<li class="Bullet"><strong>SAP:</strong> If the customer has already paid 100% of their invoice amount, but they submit the TDS certificate later, GFS posts this 10% TDS as an over-payment in SAP. It then uses this amount to offset the customer&rsquo;s future invoices, so they pay less for future invoices.</li>
+</ul>
+
+<p class="Bullet NumberedList"><strong>Note:</strong> Currently, over-payment amounts cannot currently be found on the Ibiza portal.</p>
+
+<p><strong><a id="India Region Tax Reclamation: Miscellaneous Credits" name="India Region Tax Reclamation: Miscellaneous Credits"></a>India Region Tax Reclamation: Miscellaneous Credits</strong></p>
+
+<p>Indian law prohibits tax credits to be returned to vendors (merchants) once the government has received them.</p>
+
+<p>There is a Withholding Tax&nbsp;(<strong><span>WHT</span></strong><span>)</span> process where customers pay part of their tax directly to the government and part of it to the vendor. This results in several important items:</p>
+
+<ul>
+	<li>
+	<p>The tax credits option has been removed in CMAT for Indian customers.</p>
+	</li>
+	<li>
+	<p>Indian customers are legally allowed to reclaim taxes they have paid.</p>
+
+	<ul style="list-style-type:circle">
+		<li>
+		<p>PayOps issues these as Miscellaneous Credits at a loss since it has already paid the Indian government taxes and cannot legally reclaim them.</p>
+		</li>
+		<li>
+		<p>Use these templates when working with Payops:</p>
+
+		<ul>
+			<li>
+			<p><a data-content-id="" data-content-type="" href="https://microsoft.visualstudio.com/OSGS/_workitems/create/Service%20Request?templateId=9bbbddee-8e30-46ca-926a-f53136b881c5&amp;ownerId=54cd0dc1-800e-4788-882e-251ea51259cd" managed-link="" target="_blank">ASMS WHT Request Template</a></p>
+			</li>
+			<li>
+			<p><a data-content-id="" data-content-type="" href="https://microsoft.visualstudio.com/OSGS/_workitems/create/Service%20Request?templateId=88ca5204-2002-44b8-87b6-ed87045078be&amp;ownerId=54cd0dc1-800e-4788-882e-251ea51259cd" managed-link="" target="_blank">WebDirect Credit Request</a></p>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<div>
+<div>&nbsp;</div>
+</div>
+
+<h4><strong><a id="India Region Customer Requests &quot;No Permanent Establishment&quot; Certificate" name="India Region Customer Requests &quot;No Permanent Establishment&quot; Certificate"></a>India Region Customer Requests &quot;No Permanent Establishment&quot; Certificate</strong></h4>
+
+<p>India customers on invoice mode of payment (mostly companies) may request a &ldquo;No Permanent Establishment&rdquo; Certificate from Microsoft for taxation purposes. In those instances, provide the below documents to the customer:</p>
+
+<ul>
+	<li><span><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/2017%20-%20Form%206166%20Microsoft%20Regional%20Sales%20Corp.pdf" target="_blank">2017 Form 6166 for MRS Corporation</a></span></li>
+	<li><span><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/MRSC%20No%20PE%20letter%20for%20FY%202017-18.pdf" target="_blank">2017 No Permanent Establishment Letter</a></span></li>
+	<li><span><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/MRSC%20Form%2010F%202017-18.pdf" target="_blank">2017 Form 10F</a></span><br>
+	&nbsp;</li>
+</ul>
+
+<h4><strong><a id="Brazilian Taxes" name="Brazilian Taxes"></a>Brazilian Taxes</strong></h4>
+
+<p>Customers in Brazil can pay their taxes directly to the Brazilian tax authority, and then short-pay their Microsoft invoices. The customer must provide a copy of their tax payment receipt to Microsoft to clear their balance.</p>
+
+<p><span>Engage GFS, following the process outlined in&nbsp;</span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2647567" target="_blank">TSG 2647567</a>. Request a customer account adjustment and attach the customer&rsquo;s receipts.<span> </span><span> </span></p>
+
+<h4><strong><a id="Validating Tax Exemption Forms" name="Validating Tax Exemption Forms"></a>Validating Tax Exemption Forms</strong></h4>
+
+<p><strong>Only for USA Customers:</strong></p>
+
+<p>ASMS is empowered to review Tax Exemption forms from customers. If you receive Tax Exemption forms from a customer, follow the steps below before creating a technical advisor&nbsp;or partner technical advisor (TA or PTA) Task.</p>
+
+<p><strong>SE Actions:</strong></p>
+
+<ol style="list-style-type:decimal" type="1">
+	<li value="1">
+	<p>Ensure that the Tax Exemption form is attached to the<br>
+	Service Desk<br>
+	case and the customer filled it out completely.</p>
+	</li>
+	<li>The following information must be included on the exemption forms:
+	<ul style="list-style-type:circle" type="circle">
+		<li>Seller (MS) Name/Address</li>
+		<li>Customer (Tax Payer) Full legal Name</li>
+		<li>Signature and/or effective date of exemption</li>
+		<li>State(s) the certificate is applicable to</li>
+		<li>Customer (Tax payer) Number</li>
+		<li>Reason for exemption</li>
+		<li>Type of Property/Service being purchased</li>
+		<li>If certificate is applicable for all current and future transactions or just the current transaction</li>
+		<li>Signature</li>
+		<li>Title</li>
+		<li>Printed name of the signature</li>
+	</ul>
+	</li>
+	<li>Double-check the customer forms to ensure it has been properly filled out.</li>
+	<li>Use the Internal ASMS Escalations template found in <a href="https://internal.support.services.microsoft.com/en-us/help/2929022">TSG 2929022</a> to engage your TA.</li>
+</ol>
+
+<p class="indent-1"><strong>Note:</strong></p>
+
+<ul>
+	<li class="indent-1">The customer&rsquo;s address on the certificate does not need to match the address in our system. However, if the customer&rsquo;s ship-to address does not match the State listed on the certificate or the ship-to address is later updated to a different state, we may need to request a new certificate as certificates are State specific.</li>
+	<li class="indent-1">Five US states don&rsquo;t have a sales tax, so if you get customer requests where the ship-to address is in one of the states below, you don&#39;t need to ask for a Tax form or Tax ID:
+	<ul style="list-style-type:circle">
+		<li class="indent-1">Alaska (Note: some cities in AK have a local sales tax, so you may still need to obtain exemption certificates at the local level)</li>
+		<li class="indent-1">Delaware</li>
+		<li class="indent-1">Montana</li>
+		<li class="indent-1">New Hampshire</li>
+		<li class="indent-1">Oregon</li>
+	</ul>
+	</li>
+	<li class="indent-1">Fields in the validation checklist are for reference purposes only. Since certificates vary by State and by type of exemption, they require different information. The general rule is to ensure that all fields on the certificates are filled out and the customer&rsquo;s legal name matches the customer name in our system.</li>
+	<li class="indent-1">You may receive forms from USA customers with no place for a Tax ID number on the form, and when checking the customer informs you they do not have one in their state of residence. It is ok to pass these forms on for further validation. If the form has a place for a Tax ID but that field is not filled out with a Tax ID, then we should get the Tax ID from the customer before proceeding.</li>
+	<li class="indent-1">Different states can have different formats for Tax Exempt certificates issued by their tax authority. Here is list of <a href="https://teams7.teamscert.com/microsoft/forms.asp?Client=microsoft">exemption forms</a> by State. Not all forms are listed, as some states (e.g. FL) only accept State-issued forms and the customer will need to get a form through official state channels.</li>
+</ul>
+
+<ol style="list-style-type:decimal" type="1">
+	<li value="5">Engage via TA Task to have the TA review the Tax Exemption form.</li>
+	<li>Once the TA has successfully updated the account, they will update the task, instructing you to proceed with refunding tax charges using the normal process.</li>
+	<li>Follow the normal refund process outlined in <a href="https://internal.support.services.microsoft.com/en-us/help/2646823" managed-link="" target="_blank">TSG 2646823</a> and <a href="https://internal.support.services.microsoft.com/en-us/help/3084129">TSG 3084129</a>.</li>
+</ol>
+
+<p><strong>Note</strong>: You can refund the customer as far back as they can provide documentation for exemption or up to one year&nbsp;prior, whichever comes first.</p>
+
+<p>If a customer requests anything beyond one year prior, advise them to contact their local tax authorities, as we would have handed the tax over to them.</p>
+
+<p><strong>TA/PTA Actions</strong></p>
+
+<ul>
+	<li><span><span><span><span>The TA or PTA will review the Tax Exemption form to confirm that the customer has filled it out completely and correctly using the guidelines in </span></span></span></span><span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4012644" managed-link="" target="">TSG 4012644</a><span><span>. </span></span></span></span>
+
+	<ul style="list-style-type:circle">
+		<li>For <strong>Legacy</strong> customers, they will then update the tax exemption status in CMAT.</li>
+		<li>For <strong>Modern</strong> customers, they will then update the tax exemption status in CST using <span><span><span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4487926#6" managed-link="" target="">TSG 4487926</a>.</span></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<div>
+<h3><strong><span><a id="Engagement and Escalation Path" name="Engagement and Escalation Path"></a>Engagement and Escalation Path</span></strong></h3>
+</div>
+
+<p><span><span><span>You may need to engage the following teams:</span></span></span></p>
+
+<ul>
+	<li><span><span><span>Global Financial Services (GFS)</span></span></span></li>
+	<li><span><span><span>PayOps</span></span></span></li>
+	<li><span><span><span>Payops Execution</span></span></span></li>
+</ul>
+
+<h3><span><strong><a id="Online References" name="Online References"></a>Online References</strong></span></h3>
+
+<ul>
+	<li><a href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/MRSC%20Form%2010F%202017-18.pdf" target="_blank">2017 Form 10F</a></li>
+	<li><a href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/2017%20-%20Form%206166%20Microsoft%20Regional%20Sales%20Corp.pdf" target="_blank">2017 Form 6166 for MRS Corporation</a></li>
+	<li><a href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/MRSC%20No%20PE%20letter%20for%20FY%202017-18.pdf" target="_blank">2017 No Permanent Establishment Letter</a></li>
+	<li><a href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/TaxWithholdingForm%20-%20AOC.pdf" target="_blank">AOC Form</a></li>
+	<li><a href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/TaxWithholdingForm%20-%20APOC.pdf" target="_blank">APOC Form</a></li>
+	<li><span><a href="https://microsoft.sharepoint.com/:b:/r/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/InternalUseOnly-FAQ%20-%20Chile%20Remote%20Seller%20VAT.pdf?csf=1&amp;web=1&amp;e=im6prf">Chile VAT Launch FAQ</a></span></li>
+	<li><a data-content-id="" data-content-type="" href="https://enterprisevertex.microsoft.com/ECM" managed-link="" target="_blank">ECM webform</a></li>
+	<li><a data-content-id="" data-content-type="" href="http://ec.europa.eu/taxation_customs/vies/vieshome.do" managed-link="" target="_blank">European Commission website to check VAT</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/tax/taxoperations/IndirectTax/ECM/Pages/default.aspx" managed-link="" target="_blank">Exemption Certificate Management (ECM)</a> site with checklists and other information to validate tax certificates.</li>
+	<li>GOC <a data-content-id="" data-content-type="" href="https://support.microsoft.com/en-us/getsupport/hostpage.aspx?tenant=ClassicCommercial&amp;locale=en-us&amp;supportregion=en-us&amp;pesid=15590&amp;sd=&amp;oaspworkflow=start_1.0.0.0&amp;wf=0&amp;ccsid=635427407225507991" managed-link="" target="_blank">Webform </a></li>
+	<li>Irish Tax Residency <a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/:b:/r/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/Microsoft%20Ireland%20Operations%20Limited.pdf?csf=1&amp;e=alHWu6" managed-link="" target="_blank">Form</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://sharepoint/sites/fastrack/_layouts/15/WopiFrame2.aspx?sourcedoc=%7b54dc6e0e-311b-4c64-88ad-2f5e0194a26e%7d&amp;action=default" managed-link="" target="_blank">MCIPL GST Form</a></li>
+	<li><a data-content-id="" data-content-type="" href="http://sharepoint/sites/fastrack/_layouts/15/WopiFrame2.aspx?sourcedoc=%7b57fc2686-e9c7-4ae4-9b59-7922361946b1%7d&amp;action=default" managed-link="" target="_blank">PAN Card (Copy)</a></li>
+	<li>State <a data-content-id="" data-content-type="" href="https://teams7.teamscert.com/microsoft/forms.asp?Client=microsoft" managed-link="" target="_blank">exemption forms</a></li>
+	<li><a href="http://sharepoint/sites/fastrack/_layouts/15/WopiFrame.aspx?sourcedoc=%7bb421e020-e433-4cbc-96ab-e34eaa3bcb36%7d&amp;action=default" target="_blank">Tax Deducted at Source Credit Form</a></li>
+	<li><a href="http://azure.microsoft.com/en-us/pricing/faq/" target="_blank">VAT rate charged for Azure purchases in the EU</a></li>
+</ul>
+
+<h3><strong><a id="TSG Change Log" name="TSG Change Log"></a>TSG Change Log</strong></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="132">
+			<p><span><strong>Date </strong></span></p>
+			</td>
+			<td width="126">
+			<p><span><strong>Updated By </strong></span></p>
+			</td>
+			<td width="364">
+			<p><span><strong>Content Updated </strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p><span> 07/27/2018</span></p>
+			</td>
+			<td width="126">
+			<p>v<span>-ajbur</span></p>
+			</td>
+			<td width="364">
+			<p class="paragraph"><span><span><span>Comprehensive Rewrite: Updated TSG content and formatting as part of the TSG Refresh Project. </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p>08/07/2018</p>
+			</td>
+			<td width="126">
+			<p>v<span>-ajbur</span></p>
+			</td>
+			<td width="364">
+			<p>Added new links to the section &quot;India Region Customer Requests TDS Tax Credit&quot;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">09/04/2018</td>
+			<td width="126">v-brgosn</td>
+			<td width="364">Updated<span> &quot;India Region Customer Requests TDS Tax Credit&quot;&nbsp; section to escalate to CBO instead of WOCS</span></td>
+		</tr>
+		<tr>
+			<td width="132">09/06/2018</td>
+			<td width="126">v-ajbur</td>
+			<td width="364">Updated Validating Tax Exemption Forms section to include states that don&#39;t charge sales tax.</td>
+		</tr>
+		<tr>
+			<td width="132">09/20/2018</td>
+			<td width="126">v-ajbur</td>
+			<td width="364">Updated &quot;India Customer Requests TDS Credit&quot; section</td>
+		</tr>
+		<tr>
+			<td width="132">10/18/2018</td>
+			<td width="126">kuharr</td>
+			<td width="364">Updated Withholding forms from WOCS</td>
+		</tr>
+		<tr>
+			<td width="132">01/04/2019</td>
+			<td width="126">v-ajbur</td>
+			<td width="364">Added section &quot;Handling GSTIN Scenarios&quot;</td>
+		</tr>
+		<tr>
+			<td width="132">02/01/2019</td>
+			<td width="126">v-brgosn</td>
+			<td width="364">Added Note regarding Irish Tax document requests.</td>
+		</tr>
+		<tr>
+			<td width="132">02/05/2019</td>
+			<td width="126">kuharr</td>
+			<td width="364">Added 2019 Irish Tax document</td>
+		</tr>
+		<tr>
+			<td width="132">03/06/2019</td>
+			<td width="126">v-brgosn</td>
+			<td width="364">Added Note clarifying TDS Certificate submission process.</td>
+		</tr>
+		<tr>
+			<td width="132">05/28/2019</td>
+			<td width="126">kuharr</td>
+			<td width="364">
+			<p>PayOps has stopped processing DAFs/HCTIs for credit card customers in Ukraine, Azerbaijan, Kazakhstan and Belarus. They can still get one on request via payops.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">07/02/2019</td>
+			<td width="126">v-ereric</td>
+			<td width="364">Updated steps under&nbsp;Validating Tax Exemption Forms.</td>
+		</tr>
+		<tr>
+			<td width="132">07/10/2019</td>
+			<td width="126">v-ruclar</td>
+			<td width="364">Added Ireland Tax Residency 2016 and 2017 PDFs.</td>
+		</tr>
+		<tr>
+			<td width="132">07/12/2019</td>
+			<td width="126">v-ruclar</td>
+			<td width="364">Updated WOCS to GCS.</td>
+		</tr>
+		<tr>
+			<td width="132">08/27/2019</td>
+			<td width="126">v-adhigg</td>
+			<td width="364">
+			<p>Updated TSG as part of ModTrack 2262.<br>
+			Updated the&nbsp;<em>Customer Requests a VAT ID Update or Receives VAT Error at Purchase</em> section.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">10/30/2019</td>
+			<td width="126">v-brgosn</td>
+			<td width="364">Updated details regarding PayOps credit of tax charges.</td>
+		</tr>
+		<tr>
+			<td width="132">10/31/2019</td>
+			<td width="126">v-adhigg</td>
+			<td width="364">
+			<p>Updated TSG as part of ModTrack 2508.<br>
+			Added Taiwan to the list of countries able to recieve hard copy tax invoices (on request).</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">11/05/2019</td>
+			<td width="126">v-ereric</td>
+			<td width="364">Added India Region Tax Reclamation: Miscellaneous Credits section.</td>
+		</tr>
+		<tr>
+			<td width="132">11/8/2019</td>
+			<td width="126">kuharr</td>
+			<td width="364">Added Colombia&nbsp;tax exempt proccess.&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">11/18/2019</td>
+			<td width="126">kuharr</td>
+			<td width="364">
+			<p>GSTIN refunds (not connected to invoice regens) are done by local tax authorities, not Microsoft.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">12/20/2019</td>
+			<td width="126">v-johath</td>
+			<td width="364">Added a list of Countries (now charging VAT Taxes).</td>
+		</tr>
+		<tr>
+			<td width="132">01/27/2020</td>
+			<td width="126">mievan</td>
+			<td width="364">Added 2020 Irish Tax Residency Certificate&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">03/03/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Updated references to PayOps Fargo to PayOps Execution as per ModTrack 2712.</td>
+		</tr>
+		<tr>
+			<td width="132">04/13/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Updated MCIPL GST form links as per ModTrack 2757.</td>
+		</tr>
+		<tr>
+			<td width="132">04/13/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Updated India customers&#39; tax claim limit as per ModTrack 2761.</td>
+		</tr>
+		<tr>
+			<td width="132">04/20/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Updated section on updating GST ID numbers for New Zealand customers as per ModTrack 2786.</td>
+		</tr>
+		<tr>
+			<td width="132">05/13/2020</td>
+			<td width="126">v-adhigg</td>
+			<td width="364">Corrected spelling of&nbsp;Colombia.</td>
+		</tr>
+		<tr>
+			<td width="132">06/11/2020</td>
+			<td width="126">mievan</td>
+			<td width="364">Added tax withholding process for CSP customers.&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">06/26/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Added the Singapore-Malaysia Tax Residency Certificate section per ModTrack 2927.</td>
+		</tr>
+		<tr>
+			<td width="132">06/26/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Updated the years back that can be refunded in the Validating Tax Exemption Forms section for under SE step #4 and under the Customer Charged VAT but Their Country Does Not Charge VAT section, and added guidelines if refund request is for more than one year previous per ModTrack 2928.</td>
+		</tr>
+		<tr>
+			<td width="132">06/26/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Updated the team name Global Credit Services (GCS) to Global Financial Services per ModTrack 2939.</td>
+		</tr>
+		<tr>
+			<td width="132">07/01/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Updated the team name &quot;CBO&quot; to &quot;PayOps Execution&quot; where applicable.</td>
+		</tr>
+		<tr>
+			<td width="132">07/02/2020</td>
+			<td width="126">v-adhigg</td>
+			<td width="364">Updated the TA/PTA Directions section of&nbsp;<em>Validating Tax Exemption Forms.</em></td>
+		</tr>
+		<tr>
+			<td width="132">07/20/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Added the South Africa VAT Certificate section per ModTrack 3044.&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">07/20/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Removed the link for CBO maintained website of example forms, added link to Exemption Certificate Management (ECM) site, and reorganized the <em>Online Resources</em> section per ModTrack 3010.</td>
+		</tr>
+		<tr>
+			<td width="132">07/24/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Added the&nbsp;<em>Greek Tax Legislation</em> section per ModTrack 3059.</td>
+		</tr>
+		<tr>
+			<td width="132">07/28/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Amended the&nbsp;<em>Greek Tax Legislation</em> section with additional information per ModTrack 3064.</td>
+		</tr>
+		<tr>
+			<td width="132">07/29/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Renamed the <em>Greek Tax Legislation</em> heading to <em>Customer Requests a Stamp and Signed Tax Document</em>.</td>
+		</tr>
+		<tr>
+			<td width="132">10/05/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added links to PayOps templates as per ModTrack 3211.</td>
+		</tr>
+		<tr>
+			<td width="132">10/06/2020</td>
+			<td width="126">v-kproctor</td>
+			<td width="364">Updated and added new content to the <em>Processing TDS Tax Credits</em> section.</td>
+		</tr>
+		<tr>
+			<td width="132">10/08/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added information on Chile VAT to Policy section.</td>
+		</tr>
+		<tr>
+			<td width="132">10/13/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added Chile Tax Exemption proces as per ModTrack 3231.</td>
+		</tr>
+	</tbody>
+</table>

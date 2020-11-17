@@ -1,0 +1,712 @@
+﻿<header><h1>Procedure: VLS/DEV/WWL: Transfer to O365 Commerce/Billing &amp; O365 Data Protection (Photocopy)</h1></header><p><span asset="4489629" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4489629]</span></p>
+<h3><strong><span><span><span><span>Description</span></span></span></span></strong></h3>
+
+<p><span><span><span><span>This article outlines the&nbsp;procedure of transferring ownership of a Service Desk case (via Photocopy) to&nbsp;the following teams&nbsp;when the customer&#39;s issue is out of scope for&nbsp;the VL/DEV/WWL teams:</span></span></span></span></p>
+
+<ul>
+	<li>Office 365 Commerce/Billing</li>
+	<li>Data Protection team (for issues such as password reset or IW elevation when no admin exists on the tenant)</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h3><strong><span><span><span><span>Applies to</span></span></span></span></strong></h3>
+
+<ul>
+	<li><strong><span><span><span>Region: </span></span></span></strong><span><span><span>All (Global)</span></span></span>&nbsp;</li>
+	<li><span><span><span><strong><span>Role:&nbsp;</span></strong></span></span></span>
+	<ul style="list-style-type:circle">
+		<li><span><span><span>Volume License (<span><span><span>VL), Developer Program (DEV) and&nbsp;World-Wide Learning (WWL) Advocates&nbsp;(commercial LOB&rsquo;s)</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><strong><span>Service:&nbsp;</span></strong>Partner, Unified Support</span></span></span></li>
+	<li><span><span><span><strong><span>Product:</span></strong> Cloud products (commercial billing issues &amp; data protection issues)</span></span></span></li>
+	<li><strong><span><span><span>Country:</span></span></span></strong><span><span><span> All</span></span></span></li>
+	<li><span><span><span><strong><span>Language:</span></strong> All</span></span></span></li>
+</ul>
+
+<h3><span><span><a id="rtt" name="rtt"></a>Table of Contents</span></span></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="50%"><span><span><span><a bookmark-id="overview" href="https://internal.support.services.microsoft.com/en-us/help/4503896#hilevel" managed-link="" target="">Overview by Scenario</a></span></span></span></td>
+			<td width="50%">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="282"><span><span><span><a bookmark-id="guideline" href="https://internal.support.services.microsoft.com/en-us/help/4503896#general" managed-link="" target="">General Guidelines</a></span></span></span></td>
+			<td width="350">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="282"><a bookmark-id="procedure steps" href="#procedure steps" managed-link=""><span><span><span>Procedure&nbsp;Steps</span></span></span></a></td>
+			<td width="350">
+			<ul>
+				<li><span><span><span><span>Verify caller is an Admin</span></span></span></span>
+				<ul style="list-style-type:circle">
+					<li><span><span><span><span>Perform PII verification for O365 Commerce/ billing transfer scenarios&nbsp; (Procedure- Personal identifiable information)</span></span></span></span></li>
+					<li><span><span><span><span>Not applicable to Data protection cases </span></span></span></span></li>
+				</ul>
+				</li>
+				<li><span><span><span><span><a href="https://internal.support.services.microsoft.com/en-us/help/4503896#BeforeTransfer">Before transferring a case from Service Desk to the Office 365 commerce/billing team</a>,&nbsp;change the SAP to:</span></span></span></span>
+				<ul style="list-style-type:circle">
+					<li><span><span><span><span><span>Office Products/Commerce O365/Commerce O365/Licensing, Subscriptions, and Billing</span></span></span></span></span></li>
+				</ul>
+				</li>
+				<li><a bookmark-id="BeforeTransfer" href="#BeforeTransfer" managed-link=""><span lang="EN-GB"><span><span><span><span>To transfer </span></span></span></span></span>to the Data Protection team</a>, change the SAP to:
+				<ul style="list-style-type:circle">
+					<li><span><span><span><span><span>Office Products/Office 365/Office 365 User and Domain Management/Sign-In and Passwords/Admin password reset</span></span></span></span></span></li>
+				</ul>
+				</li>
+				<li><span><span><span><span><a href="https://internal.support.services.microsoft.com/en-us/help/4503896#transfer">Transfer the case</a></span></span></span></span></li>
+				<li><span><span><span><span><a href="https://internal.support.services.microsoft.com/en-us/help/4503896#ProvideRaveCaseNumber">Provide the Rave case number to the customer</a></span></span></span></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td width="282"><span><span><span><a href="https://internal.support.services.microsoft.com/en-us/help/4503896#WebForm">WebForm Cases</a></span></span></span></td>
+			<td width="350">
+			<p>Only the title and customer statement will be visible in the rave case.</p>
+
+			<p><span><span><span>Update the title with all the relevant information, including the tenant name and a short description of the issue </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="282"><span><span><span><a href="https://internal.support.services.microsoft.com/en-us/help/4503896#moreinfo">Additional Info on Service Desk &amp; Rave Cases</a></span></span></span></td>
+			<td width="350">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p><a id="overview" name="overview"></a></p>
+<div class="alert-band">
+<div class="alert alert-info" role="alert">
+<p class="alert-title">Check if the caller is a customer of a Partner</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p>Some customers who purchased their subscription through a partner are required to contact the partner for support. Follow the instructions below to determine call handling.</p>
+
+<ol>
+	<li><span><span><span><span><span>Refer to the Partner Information section</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Search for the following entries:</span></span></span></span></span>
+	<ol start="1" style="list-style-type:lower-alpha">
+		<li><span><span><span><span><span>A Partner name appears:</span></span></span></span></span>
+		<ol start="1" style="list-style-type:lower-roman">
+			<li><span><span><span><span><span>Search for the partner type listed on the right to the partner name, such as:</span></span></span></span></span>
+			<ul>
+				<li><span><span><span><span><span>Syndicated</span></span></span></span></span></li>
+				<li><span><span><span><span><span>Reseller</span></span></span></span></span></li>
+				<li><span><span><span><span><span>Support Partner</span></span></span></span></span></li>
+			</ul>
+			</li>
+			<li><span><span><span><span><span>Select the right arrow to expand the Partner Details</span></span></span></span></span></li>
+			<li><span><span><span><span><span>Process the call according to the partner type:</span></span></span></span></span>
+			<ul>
+				<li><span><span><span><span><span>SyndicatedPartnerTenant: (NOAM only): </span></span></span></span></span>
+				<ul style="list-style-type:circle">
+					<li><span><span><span><span><span>Refer to the customer to support.godaddy.com or 480-505-8877. </span></span></span></span></span></li>
+				</ul>
+				</li>
+				<li><span><span><span><span><span>ResellerPartnerTenant: </span></span></span></span></span>
+				<ul style="list-style-type:circle">
+					<li>Refer the caller to their partner. If the customer does not know their Partner, this information can be found in the Admin Center at admin.microsoft.com, under the support area.</li>
+				</ul>
+				</li>
+				<li><span><span><span><span><span>Support PartnerTenant:</span></span></span></span></span>
+				<ul style="list-style-type:circle">
+					<li><span><span><span><span><span>Proceed with case creation.</span></span></span></span></span></li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ol>
+		</li>
+		<li><span><span><span><span><span>No Partner name appears:</span></span></span></span></span>
+		<ol start="1" style="list-style-type:lower-roman">
+			<li>This entry indicates that the tenant is &ldquo;not&rdquo; a customer of a partner</li>
+			<li><span><span><span><span><span>Proceed to the case creation </span></span></span></span></span></li>
+		</ol>
+		</li>
+	</ol>
+	</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<p><span asset="4505434" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4505434]</span></p>
+
+<p><span asset="4505418" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4505418]</span></p>
+
+<p><a bookmark-id="rtt" href="#rtt" managed-link="">Return to top</a></p>
+<p><a id="guideline" name="guideline"></a><span asset="4504695" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4504695]</span></p>
+
+<p><a bookmark-id="rtt" href="#rtt" managed-link="">Return to top</a></p>
+<p><a id="procedure steps" name="procedure steps"></a></p>
+
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<p class="alert-title">IMPORTANT</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p>Before transferring any case, beyond the specifics outlined below for this scenario, you <strong>must ensure you are also following all requirements outlined in the <a bookmark-id="general" href="#general​" managed-link="" target="">General Guidelines for all Transfers</a></strong> above.</p>
+
+<p>While the specific steps vary by scenario, they always include:</p>
+
+<ul style="list-style-type:disc">
+	<li>Update the case internal title to reflect it was a misroute</li>
+	<li>Including in the&nbsp;case title why you are transferring the case to another team</li>
+	<li>Tenant name, and issue description<span lang="DE"><span> </span></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="alert-band">
+<div class="alert alert-info" role="alert">
+<p class="alert-title">Important:</p>
+
+<div class="row">
+<div class="col-xs-24">
+<ul>
+	<li>Do not include any PII in the title</li>
+	<li>Make titles as concise as possible, while Service Desk allows very long titles, Rave does not</li>
+	<li>Service Desk cases&rsquo; notes are not visible in the rave case<span lang="DE"><span> </span></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>
+
+<ol>
+	<li><a id="BeforeTransfer" name="BeforeTransfer"></a><strong>Before transferring a case from Service Desk to the Office 365 Commerce/Billing team or Office 365 Data Protection, perform the following tasks:</strong></li>
+</ol>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+			<p><strong><span lang="EN-GB"><span><span>O365 Commerce/Billing</span></span></span></strong><span lang="EN-GB"></span></p>
+			</td>
+			<td>
+			<p><strong><span lang="EN-GB"><span><span>O365 Data Protection</span></span></span></strong><span lang="EN-GB"></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong><span lang="EN-GB"><span>Verify that the case hasn&#39;t previously been transferred to Rave</span></span></strong><span lang="EN-GB"></span></p>
+
+			<div class="alert-band">
+			<div class="alert alert-info" role="alert">
+			<p class="alert-title">Important</p>
+
+			<div class="row">
+			<div class="col-xs-24">
+			<p>Previous transfers strictly within Service Desk do not impact this, only a previous transfer to Rave (which creates a duplicate Photocopy case) prevents transferring to a Rave queue.</p>
+			</div>
+			</div>
+			</div>
+			</div>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>
+			<p><span lang="EN-GB"><span><span>Each Service Desk case can only be photocopied to Rave ONCE, either at case creation time or case transfer time. </span></span></span><span lang="EN-GB"></span></p>
+
+			<ol>
+				<li><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>If the Service Desk case was transferred to you from elsewhere, look to see if the <strong><span><span>Assigned To</span></span></strong> field shows <strong><span><span><span><span><span>offagent@microsoft.com</span></span></span></span></span></strong>. </span></span></span></span></li>
+				<li><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>If so&nbsp;this indicates that the case was already transferred to Rave previously&nbsp;and cannot be transferred again. Create a new case for the customers issue and transfer it to the O365 Commerce/Billing team or O365 Data Protection team.</span></span></span></span></li>
+			</ol>
+			</td>
+			<td>
+			<p><span lang="EN-GB"><span><span>Same as&nbsp;O365 Commerce/Billing</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong><span lang="EN-GB"><span><span>Ensure that the issue is in scope for the team you are transferring to:</span></span></span></strong><span lang="EN-GB"></span></p>
+			</td>
+			<td>
+			<ul>
+				<li><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span><a href="https://internal.support.services.microsoft.com/en-US/help/2788351" target="_blank"><span><span>2788351 Commerce support boundaries in EMEA</span></span></a></span></span></span><span lang="EN-GB"></span></span></li>
+				<li><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span><a href="https://internal.support.services.microsoft.com/en-US/help/2790263" target="_blank"><span><span>2790263 Commerce support boundaries in NOAM &amp; LATAM</span></span></a></span></span></span></span></li>
+				<li><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span><a href="https://internal.support.services.microsoft.com/en-US/help/3141130" target="_blank"><span><span>3141130 Commerce support boundaries in Asia</span></span></a></span></span></span></span></li>
+			</ul>
+			</td>
+			<td>
+			<ul>
+				<li><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>Admin unable to access tenant</span></span></span></span></li>
+				<li><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>No Admin available </span></span></span></span>
+				<ul style="list-style-type:circle">
+					<li><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>Admin(s) left company</span></span></span></span></li>
+					<li><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>Admin(s) extended unavailability</span></span></span></span></li>
+				</ul>
+				</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong><span lang="EN-GB"><span>For Webform cases:</span></span></strong><span lang="EN-GB"></span></p>
+			</td>
+			<td>
+			<p><span lang="EN-GB"><span><span>If the scope is not clear, see the <a href="https://internal.support.services.microsoft.com/en-us/help/4503896#WebForm"><span><span>WebForm Cases</span></span></a> section below for additional instructions.</span></span></span><span lang="EN-GB"></span></p>
+
+			<p><strong>Note</strong>: the customer statement cannot be changed, provide details in the title</p>
+			</td>
+			<td>
+			<p><span lang="EN-GB"><span><span>Same as&nbsp;O365 Commerce/Billing</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong><span lang="EN-GB"><span><span>Confirm (using CMAT) whether the </span></span></span></strong><strong><span lang="EN-GB"><span>customer <span>is a Global Admin or Billing Admin</span></span></span></strong><span lang="EN-GB"></span></p>
+			</td>
+			<td>
+			<p><span lang="EN-GB"><span><span>Only transfer (via Rave) to O365 Commerce/Billing when the person is either a global or billing admin.</span></span></span><span lang="EN-GB"></span></p>
+
+			<p><span lang="EN-GB"><span><span>If they are not than ask them to have the Admin call to open a case with the O365 Billing team, and close the Service Desk case with <strong><span>RCA = Redirect\Administrator</span></strong></span></span></span></p>
+			</td>
+			<td>
+			<p><span lang="EN-GB"><span><span>A non-Admin may work with the Data Protection team if no Admin is unavailable (e.g. they have left the company or&nbsp;are on a long term absence)</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="6">
+			<p><strong><span lang="EN-GB"><span>Update these fields</span></span></strong><span lang="EN-GB"></span></p>
+			</td>
+			<td>
+			<p><strong><span lang="EN-GB"><span><span>Customer Statement</span></span></span></strong></p>
+
+			<p><span lang="EN-GB"><span><span>If this is a new phone case, add a short description of the issue (one sentence),&nbsp;include the tenant name</span></span></span><span lang="EN-GB"></span></p>
+
+			<p>Any specific information such as when the customer is available, alternate phone numbers, urgency &amp; impact details, etc</p>
+			</td>
+			<td>
+			<p><span lang="EN-GB"><span><span>Same as&nbsp;O365 Commerce/Billing</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<ul>
+				<li><span><span lang="EN-GB"></span><strong><span lang="EN-GB"><span><span>Internal Title</span></span></span></strong><span lang="EN-GB"><span><span>: <em><span>Misroute from </span></em>&lt;REGION&gt;<em><span> VL team : topic billing question</span></em></span></span></span></span></li>
+				<li><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>Case Title: <em><span>Misroute from </span></em>&lt;REGION&gt;<em><span> VL team : topic billing question&nbsp;</span></em>tenant name</span></span></span></span></li>
+			</ul>
+			</td>
+			<td>
+			<ul>
+				<li><span><span lang="EN-GB"></span><strong><span lang="EN-GB"><span><span>Internal Title</span></span></span></strong><span lang="EN-GB"><span><span>: <em><span>Misroute from </span></em>&lt;REGION&gt;<em><span> VL team : Data Protection issue</span></em></span></span></span></span></li>
+				<li><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>Case Title: <em><span>Misroute from </span></em>&lt;REGION&gt;<em><span> VL team : Data Protection issue</span></em></span></span></span></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span lang="EN-GB"><span>Service Desk Notes are not visible in Rave,</span></span></p>
+
+			<p>All important information must be in the title</p>
+
+			<p><span lang="EN-GB"><span><span>The notes are important for tracking purpose.</span></span></span></p>
+
+			<p><span lang="EN-GB"><span>Use the following template </span></span></p>
+
+			<ul style="list-style-type:circle">
+				<li><span><span lang="EN-GB"></span><span lang="EN-GB"><span>Issue description:</span></span></span></li>
+				<li><span><span lang="EN-GB"></span><span lang="EN-GB"><span>tenant:</span></span></span></li>
+				<li><span><span lang="EN-GB"></span><span lang="EN-GB"><span>Admin Confirmation: </span></span></span></li>
+			</ul>
+
+			<p><span lang="EN-GB"><span>Customer was confirmed <strong>in CMAT</strong> as a global or billing admin (required for Commerce/Billing support)</span></span></p>
+			</td>
+			<td>
+			<p>Same as O365 Commerce/Billing</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong><span lang="EN-GB"><span><span>Select Status</span></span></span></strong><span lang="EN-GB"><span><span>: Initial contact pending</span></span></span></p>
+			</td>
+			<td>
+			<p><span lang="EN-GB"><span><span>Same as&nbsp;O365 Commerce/Billing</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong><span lang="EN-GB"><span>SAP Fields:</span></span></strong></p>
+
+			<ul>
+				<li><span><span lang="EN-GB"></span><strong><span lang="EN-GB"><span>Product Family</span></span></strong><span lang="EN-GB"><span>: Office Products</span></span></span></li>
+				<li><span><span lang="EN-GB"></span><strong><span lang="EN-GB"><span>Product</span></span></strong><span lang="EN-GB"><span>: Commerce O365</span></span></span></li>
+				<li>
+				<p><strong>Support topic</strong>: Commerce O365</p>
+				</li>
+				<li>
+				<p><strong>Support subtopic</strong>: Licensing, Subscriptions, and Billing</p>
+				</li>
+			</ul>
+			</td>
+			<td>
+			<p>SAP: <strong>Office Products/Office 365/Office 365 User and Domain Management/Sign-In and Passwords/Admin password reset</strong></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Example Case with Required Info</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><span asset="4503968" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503968]</span></p>
+</div>
+</div>
+</div>
+
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<p class="alert-title">Important</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><span>Copy the case # to the cliptray (and save in a separate doc as needed), as you need this later when you want to look up the Rave case that was automatically created via PhotoCopy when the case is transferred.</span><br>
+<span>Upon transferring the Service Desk case window automatically closes.</span><br>
+<span>Note also that if you don&rsquo;t refresh the Home Page in Service Desk, the case will be still visible.</span></p>
+</div>
+</div>
+</div>
+</div>
+
+<p><a bookmark-id="rtt" href="#rtt" managed-link="">Return to top</a></p>
+
+<ol start="2">
+	<li><a id="transfer" name="transfer"></a><strong>Transfer the case</strong>
+
+	<ol start="1" style="list-style-type:lower-alpha">
+		<li>Change the SAP:<br>
+		<span asset="4561992" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4561992]</span></li>
+		<li><span>Use the <strong><span>Transfer Case</span></strong> feature in Service Desk and choose Misroute as reason</span>
+		<div class="faq-section" faq-section="">
+		<div class="faq-panel">
+		<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Show Me</span></div>
+
+		<div class="faq-panel-body" faq-panel-body="">
+		<p><span asset="4503972" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503972]</span></p>
+		</div>
+		</div>
+		</div>
+		</li>
+		<li>Verify that the queue is <strong>MSaaS Rave Transfers</strong> and click <strong>Submit </strong>to transfer the Service Desk case to the MSaaS Rave Transfers queue
+		<div class="faq-section" faq-section="">
+		<div class="faq-panel">
+		<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Show Me</span></div>
+
+		<div class="faq-panel-body" faq-panel-body="">
+		<p>Example for Data protection:</p>
+
+		<p><span asset="4503973" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503973]</span></p>
+
+		<p>Example for Commerce</p>
+
+		<p><span asset="4561994" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4561994]</span></p>
+		</div>
+		</div>
+		</div>
+		</li>
+		<li><span><span lang="EN-GB">Click ok to complete the transfer.&nbsp;</span></span>
+		<div class="faq-section" faq-section="">
+		<div class="faq-panel">
+		<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Show Me</span></div>
+
+		<div class="faq-panel-body" faq-panel-body="">
+		<p><span asset="4503974" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503974]</span></p>
+		</div>
+		</div>
+		</div>
+		<span><span lang="EN-GB"></span></span>
+
+		<ol start="1" style="list-style-type:lower-roman">
+			<li><span><span lang="EN-GB"></span></span><span lang="EN-GB">Notice after you click ok the case is gone from your visibility! </span></li>
+			<li><span lang="EN-GB">Copy/Paste the SR number before transferring as you need&nbsp;to reopen the case window to see the Rave number which you will provide to the customer.</span></li>
+		</ol>
+		</li>
+		<li><span><span>Once the Service Desk case is transferred search by the SR number to again see the transferred case in SD.</span></span>
+		<ol start="1" style="list-style-type:lower-roman">
+			<li><span><span><span><span>Notice: The case is not visible under <strong>My Cases &amp; Tasks</strong> after clicking the refresh button or in the history view : </span></span></span></span></li>
+		</ol>
+		</li>
+		<li><span><span>The Service Desk case has automatically assigned to </span></span><strong><span><span lang="EN-US"><span><span><span>offagent@microsoft.com | Office Premier A</span></span></span></span></span></strong><span><span>.</span></span>
+		<div class="faq-section" faq-section="">
+		<div class="faq-panel">
+		<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Show Me</span></div>
+
+		<div class="faq-panel-body" faq-panel-body="">
+		<p><span asset="4503975" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503975]</span></p>
+		</div>
+		</div>
+		</div>
+
+		<ol start="1" style="list-style-type:lower-roman">
+			<li>This indicates that the Service Desk case has been used to automatically create a Rave case (via PhotoCopy) with the same contact, notes, and issue details.</li>
+		</ol>
+		</li>
+		<li>A new link will appear (directly above the Entitlement pane) titled <strong>View additional case details</strong>.&nbsp; Clicking this will display the <strong>Resource URL</strong>, which is the Rave case that was just created.
+		<div class="faq-section" faq-section="">
+		<div class="faq-panel">
+		<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Show Me</span></div>
+
+		<div class="faq-panel-body" faq-panel-body="">
+		<p><span asset="4503978" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503978]</span></p>
+		</div>
+		</div>
+		</div>
+		</li>
+		<li>The Rave case # can also be found in the Case History:
+		<ol start="1" style="list-style-type:lower-roman">
+			<li><span>In Case History there is a &ldquo;Case Updated&rdquo; entry that the &ldquo;External Case ID&rdquo; was &ldquo;changed to&rdquo; the Rave case #</span></li>
+			<li><span>While there are a lot of &ldquo;Case Updated&rdquo; entries in the Case History, there should be only one entry titled &ldquo;Agent Assigned&rdquo; and the &ldquo;Case Updated&rdquo; entry with the Rave case # should be immediately above that.</span></li>
+		</ol>
+		</li>
+		<li>If you have a Rave account, you can copy/paste the Resource URL into a browser tab/window and view the Rave case.</li>
+	</ol>
+	</li>
+</ol>
+
+<p><a bookmark-id="rtt" href="#rtt" managed-link="">Return to top</a><br>
+<br>
+&nbsp;</p>
+
+<ol start="3">
+	<li><a id="ProvideRaveCaseNumber" name="ProvideRaveCaseNumber"></a><strong>Provide the Rave case number to the customer:</strong>
+
+	<ol start="1" style="list-style-type:lower-alpha">
+		<li>The Rave case number will be visible in the <strong>Case History</strong>:
+
+		<div class="faq-section" faq-section="">
+		<div class="faq-panel">
+		<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Show Me</span></div>
+
+		<div class="faq-panel-body" faq-panel-body="">
+		<p><span asset="4503977" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503977]</span></p>
+		</div>
+		</div>
+		</div>
+
+		<ol start="1" style="list-style-type:lower-roman">
+			<li>The specific line will say <strong>External Case ID</strong> -- <strong>changed to</strong></li>
+			<li>The Rave case # is 8 digits long</li>
+			<li>The Case History entry will be titled<strong> Case Updated</strong>, however there will likely be a lot of Case History entries with this name</li>
+			<li>There should be only one entry in the Case History titled <strong>Agent Assigned</strong>, which will indicate that OffAgent@microsoft.com was assigned to the case.&nbsp; Expand the Case Updated entry directly above the Agent Assigned entry, it should contain the Rave case #</li>
+		</ol>
+		</li>
+		<li>Provide the Rave case # to the customer</li>
+		<li>Inform the customer that an Office 365 Billing Advocate will be reaching out to them to assist with resolving their issue.</li>
+	</ol>
+	</li>
+</ol>
+
+<div class="alert-band">
+<div class="alert alert-danger" role="alert">
+<p class="alert-title">Do Not Close Service Desk Case</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><span>Do not close the Service Desk&nbsp;case manually. Closing&nbsp;the Rave case will close the linked Service Desk&nbsp;case. However, closing the Service Desk case will not automatically close the photocopied Rave case.</span></p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<p class="alert-title">Data Protection</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p>Make it very clear that that the caller is not an Admin and the Data Protection team needs to be engaged.</p>
+</div>
+</div>
+</div>
+</div>
+
+<p><a bookmark-id="rtt" href="#rtt" managed-link="">Return to top</a></p>
+<h3><a id="WebForm" name="WebForm"></a>Scope is not Clear</h3>
+
+<p><span><span><span><span>If a webform case custo</span></span></span></span><span><span><span><span><span>mer has not provide enough information to accurately define the scope, please call the customer and collect the required information. </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>If the issue is determined to be in scope for O365 Commerce/Billing, inform the customer that you will transfer the case and provide the Rave case # during the phone call &ndash; no additional email needs to be sent.</span></span></span></span></span></p>
+
+<h3>Scope is Clearly O365 Commerce</h3>
+
+<p><span><span><span><span>If the scope is clearly an issue for O365 Commerce send an email from Service Desk using the template below.</span></span></span></span></p>
+
+<div class="alert-band">
+<div class="alert alert-info" role="alert">
+<p class="alert-title">Tip</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><span>Even after the Service Desk case has been transferred to Rave, you can still send email from Service Desk to the customer.</span></p>
+</div>
+</div>
+</div>
+</div>
+
+<p><span><span><span><span><strong>Title</strong></span></span></span></span></p>
+
+<p class="indent-1"><span><span><span><span><em>New SR number xxxx &ndash; your case is transferred to the Office 365 commerce team</em></span></span></span></span></p>
+
+<p><strong><span><span><span><span>Email Body Template</span></span></span></span></strong></p>
+
+<p class="indent-1"><span lang="EN-GB"><span><span><span><span>Dear &lt;</span></span></span></span></span><em><span lang="EN-GB"><span><span><span>insert customer name</span></span></span></span></em><span lang="EN-GB"><span><span><span><span>&gt;,</span></span></span></span></span><span lang="EN-GB"><span><span><span><br>
+<br>
+<span>Thank you for contacting Microsoft Volume Licensing Support.</span><br>
+<br>
+<span>My name is &lt;</span><em>insert your name</em><span>&gt; and I have received your request &lt;</span><em>insert SR here</em><span>&gt;(SD case).</span><br>
+<br>
+<span>After investigating your inquiry, it appears that our Office 365 Commerce team will be in the best position to assist you further with the issue you are experiencing.</span><br>
+<br>
+<span>From what I understand, <em>&lt;summary of the issue&gt;</em></span><br>
+<br>
+<span>In view of this, I have transferred your issue to this department who will be in contact with you shortly.</span><br>
+<br>
+<span>The Office 365 Commerce team will continue assisting you under a new Service Request: (xxxx)</span><br>
+<br>
+<em>&lt;insert appropriate signature&gt;</em></span></span></span></span></p>
+
+<div>
+<hr align="left" size="1" width="33%">
+<div>
+<div id="_com_1" language="JavaScript">&nbsp;</div>
+</div>
+</div>
+
+<p><a bookmark-id="rtt" href="#rtt" managed-link="">Return to top</a>&nbsp;</p>
+<p><span><span><strong><span><span><span>Updated Case Experience for Rave Transfers</span></span></span></strong></span></span></p>
+
+<p><span><span><span><span><span>New case Status values are set by the system to easily identify Rave transfers</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><strong><span><span><span>Transferred to External</span></span></span></strong><span><span><span> &ndash; the case was transferred to Rave</span></span></span></span></span></li>
+	<li><span><span><strong><span><span><span>Transferred from External</span></span></span></strong><span><span><span> &ndash; the case was transferred from Rave</span></span></span></span></span></li>
+</ul>
+
+<p><span asset="4547023" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4547023]</span></p>
+
+<p><span><span><span><span><span>A clickable Rave case link is added to the case <strong>Details</strong></span></span></span></span></span></p>
+
+<p><span asset="4547026" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4547026]</span></p>
+
+<p><span><span><span><span><span>Cases will be locked when they are transferred to Rave, and users will receive error when an attempt is made to edit the case:</span></span></span></span></span></p>
+
+<p><span asset="4547031" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4547031]</span></p>
+
+<p>&nbsp;</p>
+
+<h3><a id="moreinfo" name="moreinfo"></a>Automatic Routing and Case Closure</h3>
+
+<p>P<span><span><span><span><span>hotocopied Rave case will automatically be assigned to the proper Rave queue based on the related SAP information from Service Desk. </span></span></span></span></span></p>
+
+<p><span><span><span><span>Don&#39;t close the Service Desk case manually. Closing the Rave case will close the linked Service Desk case. However, closing the Service Desk case will not automatically close the photocopied Rave case.</span></span></span></span></p>
+
+<p><span><span><span><span>The Screenshot below shows a Service Desk case which was automatically closed when the Rave case was closed &ndash; even though the <strong>Status = Resolved</strong> no survey will be triggered!</span></span></span></span></p>
+
+<p><span asset="4503982" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503982]</span></p>
+
+<h3>The Rave UI</h3>
+
+<p>Advocates with Rave access can view the information in below directly.&nbsp; For those without Rave access, the screen caps of the Rave UI are included to provide additional information about how the integration between Service Desk and Rave works.</p>
+
+<h4>Rave Case Number</h4>
+
+<p><span asset="4503986" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503986]</span></p>
+
+<h4>SD Case # in Rave</h4>
+
+<p><span>On the Case Summary panel on the right side of the Rave case,&nbsp;you will be able to see the Service Desk&nbsp;case number in the Secondary ticket field</span></p>
+
+<p><span asset="4503990" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503990]</span></p>
+
+<p><span>Customer title, Contact, Eligibility information, case notes and communication will be transferred from the Service Desk case&nbsp;to the photocopied Rave case.&nbsp;</span></p>
+
+<p><span>Click<strong><span> External </span></strong>on <strong><span>Communication</span></strong> tab in Rave to look for SD case notes and communication details:</span></p>
+
+<p><span asset="4503993" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503993]</span></p>
+
+<p><span>SD case notes will look like this in Rave:</span></p>
+
+<p><span asset="4503995" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4503995]</span></p>
+
+<p><a bookmark-id="rtt" href="#rtt" managed-link="">Return to top</a></p>
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><strong>Change History</strong></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="20%">
+			<p><span><strong><span>Item</span></strong></span></p>
+			</td>
+			<td width="60%">
+			<p><span><strong><span>Title</span></strong></span></p>
+			</td>
+			<td width="20%">
+			<p><span><strong><span>Date</span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="96"><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/121431" managed-link="" target="_blank">COMMERCIAL CONTENT TRACKING 121431</a></td>
+			<td width="402">Added steps to validate admin and check if customer of partner</td>
+			<td width="126">August 21, 2020</td>
+		</tr>
+		<tr>
+			<td width="96"><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/116873" managed-link="" target="_blank">COMMERCIAL CONTENT TRACKING 116873</a></td>
+			<td width="402">Updated Rave titling guidance.</td>
+			<td width="126">May 07, 2020</td>
+		</tr>
+		<tr>
+			<td width="96"><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/114121" managed-link="" target="_blank">Commercial Content Tracking 114121</a></td>
+			<td width="402">
+			<p><span><span><span>Added <strong>Updated Case Experience for Rave Transfers</strong>.</span></span></span></p>
+			</td>
+			<td width="126">February 17, 2020</td>
+		</tr>
+		<tr>
+			<td width="96"><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/114121" managed-link="" target="_blank">Commercial Content Tracking 114121</a></td>
+			<td width="402">
+			<p><span><span><span>Added <strong>Updated Case Experience for Rave Transfers</strong>.</span></span></span></p>
+			</td>
+			<td width="126">February 17, 2020</td>
+		</tr>
+		<tr>
+			<td width="96"><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/111969/?triage=true" managed-link="" target="_blank">Commercial Content Tracking 111969</a></td>
+			<td width="402">Updated the scope of the article.</td>
+			<td width="126">December 30, 2019</td>
+		</tr>
+		<tr>
+			<td width="96">
+			<p><span><span><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/106432/?triage=true" managed-link="" target="_blank">Commercial Content Tracking 106432</a></span></span></p>
+			</td>
+			<td width="402">
+			<p><span><span>Added some screenshots to the entitlement process.</span></span></p>
+			</td>
+			<td width="126">
+			<p><span><span>August 21, 2019</span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>

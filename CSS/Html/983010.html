@@ -1,0 +1,57 @@
+﻿<header><h1>&quot;The language of this installation package is not supported by your system&quot; error when moving a SharePoint 2010 external list offline to Outlook 2010</h1></header><div class="kb-symptoms-section section">
+<p>When you try to transfer an external list offline to Outlook 2010, you receive the following error message:</p>
+
+<div class="sbody-error">The language of this installation package is not supported by your system.</div>
+
+<p>Additionally, if you try to take the list offline after you receive this message, you receive the following new error message:</p>
+
+<div class="sbody-error">.NET Framework 3.5 is not installed.</div>
+
+<p>This problem occurs under the following conditions:</p>
+
+<ul>
+	<li><strong>On a Windows XP-based computer</strong>
+
+	<ul>
+		<li>Microsoft Office 2010 is installed and is localized to a different language than the language that is used by Windows XP.</li>
+		<li>An Office 2010 Language Pack for a third language is installed.</li>
+		<li>.NET Framework 3.5 Service Pack 1 (SP1) is installed.</li>
+	</ul>
+	</li>
+	<li><strong>On a Microsoft SharePoint Server 2010</strong>
+	<ul>
+		<li>An enterprise access license is enabled.</li>
+		<li>An External Content type that is mapped to an Office item is imported.</li>
+		<li>An external list that uses this External Content type is created.</li>
+	</ul>
+	</li>
+</ul>
+The problem occurs when you change the Office 2010 language locale to match the language of the Office 2010 Language Pack.</div>
+<div class="kb-workaround-section section">To work around this problem, change the Windows XP language locale to match the language that is used by Office 2010 instead of the language that is used by the Language Pack. To do this, follow these steps:
+<ol class="sbody-num_list">
+	<li>Select <strong class="uiterm">Start</strong>, point to <strong class="uiterm">Settings</strong>, and then select <strong class="uiterm">Control Panel</strong>.</li>
+	<li>Double-click the <span class="sbody-userinput">Regional Options </span>icon.</li>
+	<li>In the <strong class="uiterm">Regional Options </strong>dialog box, select the check box for the correct language. &nbsp;</li>
+	<li><span>Select </span>the <strong class="uiterm">Set default </strong>button.</li>
+	<li>In the <strong class="uiterm">Select System Local </strong>dialog box, <span>select </span>the correct language, and then <span>select </span><strong class="uiterm">OK</strong>.</li>
+	<li>In the <strong class="uiterm">Regional Options </strong>dialog box, <span>select </span><strong class="uiterm">Apply</strong>.</li>
+	<li><span>Select </span><strong class="uiterm">Yes </strong>when you are prompted by the following message: &nbsp;
+	<div class="alert-band">
+	<div class="alert alert-info" role="alert">
+	<div class="row">
+	<div class="col-xs-24">
+	<p><span>Required files are already installed on your hard disk. Setup can use these existing files, or Setup can recopy them from your original Windows CD-ROM or from a network share.&nbsp;</span><br>
+	<br>
+	<span>Would you like to skip the file copying and use the existing files? (If you click No, you will be prompted to insert your Windows CD-ROM or to supply a different location where the files can be found.)</span></p>
+	</div>
+	</div>
+	</div>
+	</div>
+	</li>
+	<li>When you are prompted to restart your computer, <span>select </span><strong class="uiterm">Yes</strong>.&nbsp;&nbsp;</li>
+</ol>
+</div>
+<div class='kb-notice-section section'>BUG #: <a href='http://bugcheck/bugs/ContentMaintenance/129140.asp' title='Link only available for Microsoft corporate network users' target='_blank'>129140 (Content Maintenance)</a>; BUG #: <a href='http://bugcheck/bugs/Office14/745520.asp' title='Link only available for Microsoft corporate network users' target='_blank'>745520 (Office14)</a></div><div class="kb-securedata-section section"><span class="text-base">Author: prana<br>
+Writer: v-johnre; v-todmc<br>
+Tech Review; prana; sheyia; erica; markmead; harikumh; zsolti; russmax; rrogers<br>
+Editor:&nbsp;v-rhowar; v-jesits</span></div>

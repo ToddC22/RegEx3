@@ -1,0 +1,980 @@
+﻿<header><h1>Technical Guide: Surface: Touch issues</h1></header><p><span asset="4049349" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4049349]</span><strong><span><span><span>&nbsp;</span></span></span></strong></p>
+
+<h3><span><span>Who should use this article?</span></span></h3>
+
+<ul>
+	<li><span><span><span><span><span>Surface</span></span></span></span></span></li>
+</ul>
+
+<h3><span><span>What is this article about?</span></span></h3>
+
+<p><span><span><span><span>This article will help you in addressing touch issues.</span></span></span></span></p>
+
+<h3><a name="top"></a><span><span>Table of contents </span></span></h3>
+
+<h4><span><span><span><span>1.&nbsp;<a bookmark-id="1" href="#1" managed-link="">Touch issues (no single touch, no multi-touch)</a></span></span></span></span></h4>
+
+<h4><span><span><span><span>2.&nbsp;<a bookmark-id="2" href="#2" managed-link="">Phantom/ghost touch issues</a></span></span></span></span></h4>
+
+<h4><span><span><span>3.&nbsp;<a bookmark-id="3" href="#3" managed-link=""><span>Slow or inaccurate touch response</span>&nbsp;</a></span></span></span></h4>
+
+<p>&nbsp;</p>
+
+<h3><span><span><span><span><a id="1" name="1"></a>1. Touch issues (no single touch, no multi-touch)</span></span></span></span><span> </span></h3>
+
+<p><span><strong><span><span><span>Confirming the issue </span></span></span></strong></span></p>
+
+<p><span><span><span><span>When the customer touches the screen: </span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><strong><span><span>Single touch does not work (entire screen)</span></span></strong></span></span></span>
+
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span>The entire screen does not recognize the customer&rsquo;s touch input.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>This can be single-touch or multi-touch input.</span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><strong><span><span>Single touch does not work (partial screen)</span></span></strong></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span>Only a part of the screen does not recognize the customer&rsquo;s touch input, but other areas of the screen do recognize touch input. </span></span></span></span></span></li>
+		<li><span><span><span><span><span>This can be single touch or multi-touch input.</span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><strong><span><span>Multi-touch does not work</span></span></strong></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span>Features like pinch to zoom or touch with 2 or more fingers does not work. </span></span></span></span></span></li>
+		<li><span><span><span><span><span>Single touch (one finger) input does work. This means the customer can open apps using one finger. </span></span></span></span></span></li>
+		<li><span><span><span><span><span>Pen inking may also not work but is not the primary reason for the call.</span></span></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<p><span><strong><span><span><span>Confirmation/paraphrase</span></span></span></strong></span></p>
+
+<p><span><em><span><span><span>&quot;Just to make sure I understand your issue&hellip; &quot;</span></span></span></em></span></p>
+
+<ul>
+	<li><span><span><span><strong><em><span><span>Single touch does not work (entire screen)</span></span></em></strong></span></span></span>
+
+	<ul style="list-style-type:circle">
+		<li><span><span><span><em><span><span>&ldquo;... when you tap your screen, there is no touch response on any part of the screen.&rdquo; </span></span></em></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><strong><em><span><span>Single touch does not work (partial screen)</span></span></em></strong></span></span></span>
+	<ul style="list-style-type:circle">
+		<li><span><span><span><em><span><span>&ldquo;... when you tap an area of your screen, touch input is not recognized. However, touch is recognized on other parts of the screen.&quot;</span></span></em></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><strong><em><span><span>Multi-touch does not work</span></span></em></strong></span></span></span>
+	<ul style="list-style-type:circle">
+		<li><span><span><span><em><span><span>&ldquo;... single touch input is recognized on your screen, but multi-touch gestures do not work or do not respond.&rdquo;</span></span></em><span><span><br>
+		<br>
+		<strong>Note:</strong> What&rsquo;s a multi-touch gesture? Gestures such as pinch to zoom, or any gesture that uses two or more fingers qualifies as a multi-touch gesture.</span></span></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<p><span><strong><span><span><span>How to code</span></span></span></strong></span></p>
+
+<p><span><span><span><span>After confirming the issue, code the case. </span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><strong><span><span>Single touch does not work (entire screen)</span></span></strong></span></span></span>
+
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span>Surface Device &gt; Touchscreen &gt; Touch &gt; Touch does not respond (entire screen)</span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><strong><span><span>Single touch does not work (partial screen)</span></span></strong></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span>Surface Device &gt; Touchscreen &gt; Touch &gt; Touch does not respond (Partial Screen)</span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><strong><span><span>Multi-touch does not work</span></span></strong></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span>Surface Device &gt; Touchscreen &gt; Touch &gt; Multi-Touch does not respond (Single Touch Works)</span></span></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<p><span><strong><span><span><span>Resolution steps </span></span></span></strong></span></p>
+
+<p><span><span><span><span>Follow the steps in the order below until the issue is resolved or until all the steps have been completed. While following the steps, use the &quot;Why&quot; column to inform the customer why you are performing the step and, if successful, to better understand what the cause may have been. As you follow the steps, document the result of each one in your notes. Then proceed to the &quot;Is the issue resolved?&quot; section at the end of the table for next steps.</span></span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="153">
+			<p align="center"><span><strong><span><span><span>Step</span></span></span></strong></span></p>
+			</td>
+			<td width="258">
+			<p align="center"><span><strong><span><span><span>How</span></span></span></strong></span></p>
+			</td>
+			<td width="212">
+			<p align="center"><span><strong><span><span><span>Why</span></span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="153">
+			<p><span><span><span><span>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed</span></span></span></span></p>
+			</td>
+			<td width="258">
+			<p><span><span><span><span>Notes template:</span></span></span></span></p>
+
+			<ul>
+				<li><span><span><span><span><span>Check known issues&gt;&gt; </span></span></span></span></span></li>
+				<li><span><span><span><span><span>Run SDT or Windows Updates&gt;&gt;</span></span></span></span></span></li>
+				<li><span><span><span><span><span>Forced shutdown and restart&gt;&gt;</span></span></span></span></span></li>
+				<li><span><span><span><span><span>Uninstall Precise Touch and HID-Compliant Touch Screen drivers&gt;&gt;</span></span></span></span></span></li>
+				<li><span><span><span><span><span>Boot to UEFI&gt;&gt;</span></span></span></span></span></li>
+				<li><span><span><span><span><span>Reset&gt;&gt; </span></span></span></span></span></li>
+			</ul>
+
+			<p><span> </span></p>
+			</td>
+			<td width="212">
+			<p><span><span><span><span>This ensures a consistent format for capturing and reviewing case information. Performing this standard procedure helps prevent instances where a step was neglected to be performed.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="153">
+			<p><span><span><span><span>2. Check known issues</span></span></span></span></p>
+			</td>
+			<td width="258">
+			<p><span><span><span><span>From KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4072657" managed-link="" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select the customer&rsquo;s Surface model and check for the issue in the &ldquo;Touchscreen&rdquo; section.</span></span></span></span></p>
+
+			<p><span> </span></p>
+			</td>
+			<td width="212">
+			<p><span><span><span><span>There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</span></span></span></span></p>
+
+			<p><span><span><span><span>Check known issues regularly.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="153">3. Run SDT or Windows Updates (WU).<br>
+			<span><span><span><span>Make sure to run the Touch Screen Test in SDT.</span></span></span></span></td>
+			<td width="258">
+			<p><span><strong><span><span><span>For SDT:</span></span></span></strong><span><span><span> Have the customer go to <a href="http://aka.ms/surfacedt" target="_blank"><span>http://aka.ms/surfacedt</span></a>. </span></span></span></span></p>
+
+			<p><span><span><span><span>For WU: Go to <strong>Settings</strong> <strong>&gt;</strong> <strong>Update &amp; Security &gt; Windows Updates &gt; Check for updates</strong></span></span></span></span></p>
+			<strong><span><span><span><span>Note:</span></span></span></span></strong><span><span><span><span> Restart the Surface after installing updates. </span></span></span></span></td>
+			<td width="212">Updates have fixes to common problems, or issues. Ensuring the customer has all the latest updates on their Surface will ensure they have the best possible experience.</td>
+		</tr>
+		<tr>
+			<td width="153">
+			<p><span><span><span><span>4. Force the device to shut down and restart.</span></span></span></span></p>
+
+			<p><span><span><span><span>(varies by new vs. old generation)</span></span></span></span></p>
+			</td>
+			<td width="258">
+			<p><span><strong><span><span><span>Studio (all), Laptop (all), Pro (5th Gen), Pro 6, Book 2, and Go</span></span></span></strong><span><span><span>: Press and hold the power button for 20 seconds.</span></span></span></span></p>
+
+			<p><span><strong><span><span><span>Other devices:</span></span></span></strong><span><span><span> Press and hold the volume-up button and the power button at the same time for at least 15 seconds and then release both.</span></span></span></span></p>
+
+			<p><span><span><span><span>The Surface may boot to UEFI. This is normal. Have the customer exit UEFI.</span></span></span></span></p>
+
+			<p><span><span><span><span>Video available at <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4036280" managed-link="" target="_blank">Force a shut down and restart your Surface</a>.</span></span></span></span></p>
+			</td>
+			<td width="212">
+			<p><span><span><span><span>The device may be in a &ldquo;hung&rdquo; state. Force the Surface to completely turn off all power and restart.</span></span></span></span></p>
+
+			<p><span><span><span><span>Performing a Forced shutdown is like removing the battery from a laptop or unplugging a desktop PC. It resets the hardware and clears all the cache and memory for your hardware. </span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="153">
+			<p><span><span><span><span>5. Uninstall Intel Precise Touch device and the HID-Compliant Touch Screen driver and restart.</span></span></span></span></p>
+			</td>
+			<td width="258">
+			<p><span><span><span><span>1. <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4026149/windows-open-device-manager" managed-link="" target="_blank">Open Device Manager</a>.</span></span></span></span></p>
+
+			<p><span><span><span><span>2. Locate and expand <strong>Human Interface Devices</strong>.<br>
+			3. Expand <strong>Human Interface Devices.</strong></span></span></span></span></p>
+
+			<p><span><span><span><span>4. Right-click on <strong>HID-Compliant Touch Screen</strong> and select <strong>Uninstall</strong>. If there is more than one driver, uninstall those as well.</span></span></span></span></p>
+
+			<p><span><span><span><span>5. Right-click on <strong>Intel(R) Precise Touch Device</strong> and select <strong>Uninstall</strong>.</span></span></span></span></p>
+
+			<p><span><span><span><span><span asset="4519750" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4519750]</span></span></span></span><br>
+			<span><span><span><br>
+			6. From the <strong>Action</strong> menu, select <strong>Scan for hardware changes.</strong> You may also need to restart the Surface.</span></span></span></span></p>
+			</td>
+			<td width="212">
+			<p><span><span><span><span>Drivers are software that tell the hardware what to do, and how to do it. Uninstalling and reinstalling the driver (restart reinstalls) may resolve any issues that the driver is having at performing its designed tasks. </span></span></span></span></p>
+
+			<p><span><span><span><span>It&rsquo;s a good idea to check for updates after this step as well to ensure the customer has the latest version available. </span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="153">
+			<p><span><span><span><span>6. Boot to UEFI and see if the issue is present. </span></span></span></span></p>
+
+			<p><span><strong><span><span><span>If the issue occurs in UEFI</span></span></span></strong><span><span><span>, replace the device. </span></span></span></span></p>
+
+			<p><span><strong><span><span><span>If the issue does not occur in UEFI</span></span></span></strong><span><span><span>, continue troubleshooting.</span></span></span></span></p>
+			</td>
+			<td width="258">
+			<p><span><span><span><span>Go to <strong>Windows &gt; Power &gt; Shutdown</strong></span></span></span></span></p>
+
+			<p><span><span><span><span>Once the device is shutdown, <strong>press and hold the volume up button, </strong>and <strong>single press</strong> <strong>the power button</strong>.</span></span></span></span></p>
+
+			<p><span><span><span><span>The device will boot to the Surface logo, and you should see spinning dots. After the Surface logo, the device should boot to UEFI. </span></span></span></span></p>
+
+			<p><span><strong><span><span><span>Note</span></span></span></strong><span><span><span> Surface Pro 4, Book and newer ship with <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4023531/surface-how-to-use-surface-uefi" managed-link="" target="_blank">Surface UEFI</a> which is a white screen with several options on the left-hand side. Older devices (Surface Pro 3, Surface 3, and older) ship with an American Megatrends UEFI that has a black screen and only a few options. </span></span></span></span></p>
+			</td>
+			<td width="212">
+			<p><span><span><span><span>UEFI (Unified Extensible Firmware Interface) is an environment that exists completely outside of Windows and other installed applications. </span></span></span></span></p>
+
+			<p><span><span><span><span>If the issue exists in UEFI, then we know it&rsquo;s a hardware failure. </span></span></span></span></p>
+
+			<p><span><span><span><span>If the issue does not exist in UEFI, then we know the symptom is being influenced by software such as Windows or other applications. </span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="153">
+			<p><span><span><span><span>7. Reset</span></span></span></span></p>
+			</td>
+			<td width="258">
+			<p><span><strong><span><span><span>Better: </span></span></span></strong><span><span><span><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4023533" managed-link="" target="_blank">Reset from within Windows</a></span></span></span></span></p>
+
+			<p><span><span><span><span>Go to <strong>Start &gt; Settings &gt; Update &amp; security &gt; Recovery</strong>.</span></span></span></span></p>
+
+			<p><span><span><span><span>Under <strong>Reset this PC</strong>, select <strong>Get Started.</strong> Follow on screen instructions.</span></span></span></span></p>
+
+			<p><span><strong><span><span><span>Best:</span></span></span></strong><span><span><span> <a href="https://support.microsoft.com/help/4023512" target="_blank">USB recovery</a></span></span></span></span></p>
+
+			<p><span><span><span><span>The customer will need to download and set up a recovery image on a USB drive. Send the <a href="https://support.microsoft.com/surfacerecoveryimage" target="_blank">USB recovery link</a> to the customer and help them get started. Information on what size and type of drive is provided at the destination page.</span></span></span></span></p>
+
+			<p><span><em><span><span><span>-OR-</span></span></span></em></span></p>
+
+			<p><span><span><span><span>Set up an order to have a USB recovery drive sent to the customer.</span></span></span></span></p>
+
+			<p><span> </span></p>
+
+			<p><span><strong><span><span><span>Note:</span></span></span></strong><span><span><span> Fresh Start is not a good option when attempting to resolve touch issues due to the low likelihood of resolution. It is purposefully omitted as an option from this troubleshooting flow. </span></span></span></span></p>
+			</td>
+			<td width="212">
+			<p><span><strong><span><span><span>Reset from within Windows (better): </span></span></span></strong></span></p>
+
+			<ul>
+				<li><span><span><span><span><span>This option uses the devices Hard Drive Partition to reimage the device. </span></span></span></span></span></li>
+				<li><span><span><span><span><span>This option will delete personal data. </span></span></span></span></span></li>
+				<li><span><span><span><span><span>The customer will need to reinstall desktop apps. </span></span></span></span></span></li>
+				<li><span><span><span><span><span>The customer will need to run updates upon completion.</span></span></span></span></span></li>
+				<li><span><span><span><span><span>If there is an issue with the partition, the issue may still occur after the reset. </span></span></span></span></span></li>
+			</ul>
+
+			<p><span><strong><span><span><span>USB recovery (best):</span></span></span></strong> </span></p>
+
+			<ul>
+				<li><span><span><span><span><span>This option reimages the entire device, including the partition on the hard drive. </span></span></span></span></span></li>
+				<li><span><span><span><span><span>It is the most complete form of reset. </span></span></span></span></span></li>
+				<li><span><span><span><span><span>Customers will need to back up their personal data. </span></span></span></span></span></li>
+				<li><span><span><span><span><span>Customers will need to reinstall desktop apps. Customers will need to run updates after completion. </span></span></span></span></span></li>
+			</ul>
+
+			<p><span><span><span><span>If the issue occurs after a reset, then the root cause is very likely hardware related.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="623">
+			<p><span><strong><span><span><span>Is the issue resolved?</span></span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="153">
+			<p><span><strong><span><span><span>Yes, close the case</span></span></span></strong><span><span><span>: Once resolved, have the customer check for updates.</span></span></span></span></p>
+
+			<p><span> </span></p>
+			</td>
+			<td width="258">
+			<p><span><span><span><span>For SDT enabled sites, let the customer know about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a>.</span></span></span></span></p>
+
+			<p><span><span><span><span>For all other sites, check<strong> Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</span></span></span></span></p>
+
+			<p><span><span><span><span>KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4014334" managed-link="" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a></span></span></span></span></p>
+			</td>
+			<td width="212">
+			<p><span><span><span><span>Making sure Surface and Windows are up to date may help avoid this problem in the future.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="153">
+			<p><span><strong><span><span><span>No, replace the device</span></span></span></strong><span><span><span>: Set up an exchange for the customer based on the status of their warranty.</span></span></span></span></p>
+			</td>
+			<td width="258">
+			<p><span><span><span><span>Use KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2791320" managed-link="" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a>.</span></span></span></span></p>
+			</td>
+			<td width="212">
+			<p><span><span><span><span>There is likely a hardware problem with the Surface device.</span></span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span> </span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link=""><span><span><span>Return to top</span></span><span><span><span>&nbsp;</span></span></span></span></a></p>
+
+<h3><span><span><span><span><a id="2" name="2"></a>2. Phantom/ghost touch issues</span></span></span></span></h3>
+
+<div align="center"><span> </span></div>
+
+<p><strong><span><span><span><span>Confirming the issue </span></span></span></span></strong></p>
+
+<p class="paragraph"><span><span><span>When the Surface is on, regardless of whether the customer touches the screen: </span></span></span></p>
+
+<ul>
+	<li><span><span><span><span>The Surface behaves as though it is receiving touch input, but the customer is not touching the screen. </span></span></span></span></li>
+	<li><span><span><span><span>There may be white dots (touch indicators) appearing randomly on the screen. </span></span></span></span></li>
+	<li><span><span><span><span>This can occur on all or parts of the screen including along the edges.</span></span></span></span></li>
+	<li><span><span><span><span>Typically, the touch indicators are clustered together, can be spread throughout the entirety of the screen.</span></span></span></span></li>
+</ul>
+
+<p><span asset="4295701" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4295701]</span></p>
+
+<p>&nbsp;</p>
+
+<p><strong><span><span><span><span>Confirmation/paraphrase</span></span></span></span></strong></p>
+
+<p class="paragraph"><em><span><span><span>&quot;Just to make sure I understand your issue&hellip; &quot;</span></span></span></em></p>
+
+<ul>
+	<li><span><em><span><span><span>&ldquo; ...your Surface device is acting like you are touching the screen, though you are actually not touching the screen at all. Correct?&rdquo;</span></span></span></em></span></li>
+</ul>
+
+<p><strong><span><span><span><span>How to code</span></span></span></span></strong></p>
+
+<p class="paragraph"><span><span><span>After confirming the issue, code the case. </span></span></span></p>
+
+<ul>
+	<li><span><span><span><span>Surface Device &gt; Touchscreen &gt; Touch &gt; Phantom Touches</span></span></span></span></li>
+</ul>
+
+<p><strong><span><span><span><span>Resolution steps </span></span></span></span></strong></p>
+
+<p><span><span><span>Follow the steps in the order below until the issue is resolved or until all the steps have been completed. While following the steps, use the &quot;Why&quot; column to inform the customer why you are performing the step and, if successful, to better understand what the cause may have been. As you follow the steps, document the result of each one in your notes. Then proceed to the &quot;Is the issue resolved?&quot; section at the end of the table for next steps.</span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="173">
+			<p align="center" class="MsoHeading7"><strong><span><span><span>Step</span></span></span></strong></p>
+			</td>
+			<td width="200">
+			<p align="center" class="MsoHeading7"><strong><span><span><span>How</span></span></span></strong></p>
+			</td>
+			<td width="230">
+			<p align="center" class="MsoHeading7"><strong><span><span><span>Why</span></span></span></strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><span><span><span>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed. </span></span></span></p>
+			</td>
+			<td width="313">
+			<p class="MsoHeading7"><span><span><span>Notes template:</span></span></span></p>
+
+			<ul>
+				<li><span><span><span><span>Check known issues&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Restart&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Run SDT or Windows Updates&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Forced Shutdown&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Boot to UEFI&gt;&gt; </span></span></span></span></li>
+				<li><span><span><span><span>Uninstall HID-Compliant Touch Screen driver and restart&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Reset&gt;&gt;</span></span></span></span></li>
+			</ul>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>This ensures a consistent format for capturing and reviewing case information. Performing this standard procedure helps prevent instances where a step was neglected to be performed.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><span><span><span>2. Check known issues</span></span></span></p>
+			</td>
+			<td width="313">
+			<p class="MsoHeading7"><span><span><span>From KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4072657" managed-link="" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select the customer&rsquo;s Surface model and check for the issue in the &ldquo;Touchscreen&rdquo; section.</span></span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>Check known issues regularly.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><span><span><span>3. Restart</span></span></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><span>Go to <strong><span>Windows &gt; Power &gt; Restart</span></strong></span></span></span></p>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>Restarting the device puts the device, drivers, and operating system in a known good state. </span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>If the issue is resolved after a restart, we know it&rsquo;s a driver or software issue. Ensure the device is up to date.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><span><span><span>4. Run SDT or Windows Updates (WU).</span></span></span></p>
+
+			<p><span><span><span>Make sure to run the Touch Screen Test in SDT.</span></span></span></p>
+			</td>
+			<td width="313">
+			<p class="MsoHeading7"><strong><span><span><span>For SDT:</span></span></span></strong><span><span><span> Have the customer go to </span></span></span><a href="http://aka.ms/surfacedt" target="_blank"><span><span>http://aka.ms/surfacedt</span></span></a><span><span><span>. </span></span></span></p>
+
+			<p><span><span><span>For WU: Go to <strong>Settings &gt; Update &amp; Security &gt; Windows Updates &gt; Check for updates</strong></span></span></span></p>
+
+			<p><span><span><strong>Note:</strong> Restart the Surface after installing updates. </span></span></p>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>Updates have fixes to common problems, or issues. Ensuring the customer has all the latest updates on their Surface will ensure they have the best possible experience. </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><span><span><span>5. Force the device to shut down and restart.</span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>(varies by new vs. old generation)</span></span></span></p>
+			</td>
+			<td width="313">
+			<p class="MsoHeading7"><strong><span><span><span>Studio (all), Laptop (all), Pro (5th Gen), Pro 6, Book 2, and Go</span></span></span></strong><span><span><span>: Press and hold the power button for 20 seconds.</span></span></span></p>
+
+			<p class="MsoHeading7"><strong><span><span><span>Other devices:</span></span></span></strong><span><span><span> Press and hold the volume-up button and the power button at the same time for at least 15 seconds and then release both.</span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>The Surface may boot to UEFI. This is normal. Have the customer exit UEFI.</span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>Video available at </span></span></span><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4036280" managed-link="" target="_blank">Force a shut down and restart your Surface</a><span><span><span>.</span></span></span></p>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>The device may be in a &ldquo;hung&rdquo; state. Force the Surface to completely turn off all power and restart.</span></span></span></p>
+
+			<p><span><span><span>Performing a Forced shutdown is like removing the battery from a laptop or unplugging a desktop PC. It resets the hardware and clears all the cache and memory for your hardware. </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><span><span><span>6. Boot to UEFI and see if the issue is present. </span></span></span></p>
+
+			<p><strong><span><span><span>If the issue occurs in UEFI</span></span></span></strong><span><span><span>, replace the device. </span></span></span></p>
+
+			<p class="MsoHeading7"><strong><span><span><span>If the issue does not occur in UEFI</span></span></span></strong><span><span><span>, continue troubleshooting.</span></span></span></p>
+			</td>
+			<td width="313">
+			<p class="MsoHeading7"><span><span><span>Go to <strong><span>Windows &gt; Power &gt; Shutdown</span></strong></span></span></span></p>
+
+			<p><span><span><span>Once the device is shutdown, <strong><span>press and hold the volume up button, </span></strong>and <strong><span>single press</span></strong> <strong><span>the power button.</span></strong></span></span></span></p>
+
+			<p><span><span><span>The device will boot to the Surface logo, and you should see spinning dots. After the Surface logo, the device should boot to UEFI. </span></span></span></p>
+
+			<p><strong><span><span><span>Note:</span></span></span></strong><span><span><span> Surface Pro 4, Book and newer ship with </span></span></span><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4023531/surface-how-to-use-surface-uefi" managed-link="" target="_blank">Surface UEFI</a><span><span><span> which is a white screen with several options on the left-hand side. Older devices (Surface Pro 3, Surface 3, and older) ship with an American Megatrends UEFI that has a black screen and only a few options. </span></span></span></p>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>UEFI (Unified Extensible Firmware Interface) is an environment that exists completely outside of Windows and other installed applications. </span></span></span></p>
+
+			<p><span><span><span>If the issue exists in UEFI, then we know it&rsquo;s a hardware failure. </span></span></span></p>
+
+			<p><span><span><span>If the issue does not exist in UEFI, then we know the symptom is being influenced by software such as Windows or other applications. </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="paragraph"><span><span><span>7. Uninstall HID-Compliant Touch Screen driver and restart.</span></span></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><span>1. </span></span></span><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4026149/windows-open-device-manager" managed-link="" target="_blank">Open Device Manager</a><span><span><span>.</span></span></span></p>
+
+			<p><span>2. Go to <strong>Human Interface Devices</strong>.<br>
+			<br>
+			<span asset="4295712" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4295712]</span></span></p>
+
+			<p><span>3. Expand <strong>Human Interface Devices, </strong>and Right-click&nbsp;<strong>HID-Compliant Touch Screen</strong>.</span></p>
+
+			<p><span asset="4295713" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4295713]</span></p>
+
+			<p><span>4. Right-click on&nbsp;<strong>HID-Compliant Touch Screen</strong> and select <strong>Uninstall</strong>. If there is more than one driver, uninstall those as well.<br>
+			<br>
+			<span asset="4295714" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4295714]</span></span></p>
+
+			<p>&nbsp;</p>
+
+			<p><span><span><span>5. Restart the Surface and attempt to reproduce the issue. </span></span></span></p>
+			</td>
+			<td width="258">
+			<p><span><span><span>Drivers are software that tell the hardware what to do, and how to do it. Uninstalling and reinstalling the driver (restart reinstalls) may resolve any issues that the driver is having at performing its designed tasks. </span></span></span></p>
+
+			<p><span><span><span>It&rsquo;s a good idea to check for updates after this step as well to ensure the customer has the latest version available. </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="paragraph"><span><span><span>8. Reset</span></span></span></p>
+			</td>
+			<td width="313">
+			<p><strong><span><span><span>Better: </span></span></span></strong><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4023533" managed-link="" target="_blank">Reset from within Windows</a></p>
+
+			<p><span><span><span>Go to <strong><span>Start &gt; Settings &gt; Update &amp; security &gt; Recovery.</span></strong></span></span></span></p>
+
+			<p><span><span><span>Under <strong><span>Reset this PC</span></strong>, select <strong><span>Get Started.</span></strong> Follow on screen instructions.</span></span></span></p>
+
+			<p class="ng-scope"><strong><span><span><span>Best:</span></span></span></strong> <a href="https://support.microsoft.com/help/4023512" target="_blank"><span><span>USB recovery</span></span></a></p>
+
+			<p class="ng-scope"><span><span><span>The customer will need to download and set up a recovery image on a USB drive. Send the </span></span></span><a href="https://support.microsoft.com/surfacerecoveryimage" target="_blank"><span><span>USB recovery link</span></span></a><span><span><span> to the customer and help them get started. Information on what size and type of drive is provided at the destination page.</span></span></span></p>
+
+			<p class="ng-scope"><em><span><span><span>-OR-</span></span></span></em></p>
+
+			<p class="ng-scope"><span><span><span>Set up an order to have a USB recovery drive sent to the customer.</span></span></span></p>
+
+			<p class="paragraph"><strong><span><span><span>Note:</span></span></span></strong><span><span><span> Fresh Start is not a good option when attempting to resolve touch issues due to the low likelihood of resolution. It is purposefully omitted as an option from this troubleshooting flow. </span></span></span></p>
+			</td>
+			<td width="258">
+			<p><strong><span><span><span>Reset from within Windows (Better): </span></span></span></strong></p>
+
+			<ul>
+				<li><span><span><span><span>This option uses the devices Hard Drive Partition to reimage the device. </span></span></span></span></li>
+				<li><span><span><span><span>This option will delete personal data. </span></span></span></span></li>
+				<li><span><span><span><span>The customer will need to reinstall desktop apps. </span></span></span></span></li>
+				<li><span><span><span><span>The customer will need to run updates upon completion.</span></span></span></span></li>
+				<li><span><span><span><span>If there is an issue with the partition, the issue may still occur after the reset. </span></span></span></span></li>
+			</ul>
+
+			<p><strong><span><span><span>USB Recovery (Best):</span></span></span></strong></p>
+
+			<ul>
+				<li><span><span><span><span>This option reimages the entire device, including the partition on the hard drive. </span></span></span></span></li>
+				<li><span><span><span><span>It is the most complete form of reset. </span></span></span></span></li>
+				<li><span><span><span><span>Customers will need to back up their personal data. </span></span></span></span></li>
+				<li><span><span><span><span>Customers will need to reinstall desktop apps. Customers will need to run updates after completion. </span></span></span></span></li>
+			</ul>
+
+			<p class="MsoHeading7"><span><span><span>If the issue occurs after a reset, then the root cause is very likely hardware related.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="744">
+			<p class="MsoHeading7"><strong><span><span><span>Is the issue resolved?</span></span></span></strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><strong><span><span><span>Yes, close the case</span></span></span></strong><span><span><span>: Once resolved, have the customer check for updates.</span></span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="313">
+			<p><span><span><span>For SDT enabled sites, let the customer know about the </span></span></span><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a><span><span><span>.</span></span></span></p>
+
+			<p><span><span><span>For all other sites, <strong><span>check Settings &gt; Update &amp; Security &gt; Windows Update</span></strong> for updates.</span></span></span></p>
+
+			<p><span><span><span>KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4014334" managed-link="" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a></span></span></span></p>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>Making sure Surface and Windows are up to date may help avoid this problem in the future.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><strong><span><span><span>No, replace the device</span></span></span></strong><span><span><span>: Set up an exchange for the customer based on the status of their warranty.</span></span></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><span>Use KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2791320" managed-link="" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a></span></span></span></p>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>There is likely a hardware problem with the Surface device.</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a bookmark-id="top" href="#top" managed-link=""><span><span><span>Return to top</span></span><span><span><span>&nbsp;</span></span></span></span></a></p>
+
+<h3><span><span><span><span><a id="3" name="3"></a>3. Slow or inaccurate touch response</span></span></span></span></h3>
+
+<div align="center"><span> </span></div>
+
+<p><strong><span><span><span><span>Confirming the issue </span></span></span></span></strong></p>
+
+<p class="paragraph"><span><span><span>When the customer touches the screen: </span></span></span></p>
+
+<ul>
+	<li><span><span><span><span>The touch input takes a longer than expected time to register on the screen. </span></span></span></span></li>
+</ul>
+
+<p><strong><span><span><span>Example</span></span></span></strong><span><span><span>: The customer attempts to open an application by tapping on it with a single finger. Several seconds later, the tap registers on the device and the app opens. </span></span></span></p>
+
+<p><strong><span><span><span>Example</span></span></span></strong><span><span><span>: The customer is attempting to drag a window from one side of the screen to the other. When the customer taps on the window to drag it over, the window does not immediately drag with the customer&rsquo;s finger but takes several seconds to move. </span></span></span></p>
+
+<p><strong><span><span><span>Example</span></span></span></strong><span><span><span>: The customer attempts to swipe in from the right to bring up Action Center. Several seconds after the gesture is completed, Action Center opens. </span></span></span></p>
+
+<p><strong><span><span><span><span>Confirmation/paraphrase</span></span></span></span></strong></p>
+
+<p class="paragraph"><em><span><span><span>&quot;Just to make sure I understand your issue &hellip;&quot;</span></span></span></em></p>
+
+<ul>
+	<li><span><em><span><span><span>&ldquo; ...when you touch an icon or perform a touch gesture on your Surface screen, the Surface takes several seconds to register the touch input or gesture.&rdquo;</span></span></span></em></span></li>
+</ul>
+
+<p><strong><span><span><span><span>How to code</span></span></span></span></strong></p>
+
+<p class="paragraph"><span><span><span>After confirming the issue, code the case. </span></span></span></p>
+
+<ul>
+	<li><span><span><span><span>Surface Device &gt; Touchscreen &gt; Touch &gt; Touch is slow to respond</span></span></span></span></li>
+</ul>
+
+<p><strong><span><span><span><span>Resolution steps </span></span></span></span></strong></p>
+
+<p><span><span><span>Follow the steps in the order below until the issue is resolved or until all the steps have been completed. While following the steps, use the &quot;Why&quot; column to inform the customer why you are performing the step and, if successful, to better understand what the cause may have been. As you follow the steps, document the result of each one in your notes. Then proceed to the &quot;Is the issue resolved?&quot; section at the end of the table for next steps.</span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="173">
+			<p align="center" class="MsoHeading7"><strong><span><span><span>Step</span></span></span></strong></p>
+			</td>
+			<td width="200">
+			<p align="center" class="MsoHeading7"><strong><span><span><span>How</span></span></span></strong></p>
+			</td>
+			<td width="230">
+			<p align="center" class="MsoHeading7"><strong><span><span><span>Why</span></span></span></strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><span><span><span>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</span></span></span></p>
+			</td>
+			<td width="313">
+			<p class="MsoHeading7"><span><span><span>Notes template:</span></span></span></p>
+
+			<ul>
+				<li><span><span><span><span>Check known issues&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Restart&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Boot to UEFI&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Run SDT or Windows Updates&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Disable Unnecessary Programs&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Optimize Surface&rsquo;s Performance&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Reset&gt;&gt;</span></span></span></span></li>
+			</ul>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>This ensures a consistent format for capturing and reviewing case information. Performing this standard procedure helps prevent instances where a step was neglected to be performed.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><span><span><span>2. Check known issues.</span></span></span></p>
+			</td>
+			<td width="313">
+			<p class="MsoHeading7"><span><span><span>From KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4072657" managed-link="" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select the customer&rsquo;s Surface model and check for the issue in the &ldquo;Touchscreen&rdquo; section.</span></span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>Check known issues regularly.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><span><span><span>3. Restart</span></span></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><span>Go to <strong><span>Windows &gt; Power &gt; Restart</span></strong>.</span></span></span></p>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>Restarting the device puts the device, drivers, and operating system in a known good state. </span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>If the issue is resolved after a restart, we know it&rsquo;s a driver or software issue. Ensure the device is up to date.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><span><span><span>4. Boot to UEFI and see if the issue is present. </span></span></span></p>
+
+			<p><strong><span><span><span>If the issue occurs in UEFI</span></span></span></strong><span><span><span>, replace the device. </span></span></span></p>
+
+			<p class="MsoHeading7"><strong><span><span><span>If the issue does not occur in UEFI</span></span></span></strong><span><span><span>, continue troubleshooting.</span></span></span></p>
+			</td>
+			<td width="313">
+			<p class="MsoHeading7"><span><span><span>Go to <strong><span>Windows &gt; Power &gt; Shutdown</span></strong>.</span></span></span></p>
+
+			<p><span><span><span>Once the device is shutdown, <strong><span>press and hold the volume up button</span></strong>,<strong> </strong>and then <strong><span>single press</span></strong> <strong><span>the power button.</span></strong></span></span></span></p>
+
+			<p><span><span><span>The device will boot to the Surface Logo, and you should see spinning dots. After the Surface logo, the device should boot to UEFI. </span></span></span></p>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>UEFI (Unified Extensible Firmware Interface) is an environment that exists completely outside of Windows and other installed applications. </span></span></span></p>
+
+			<p><span><span><span>If the issue exists in UEFI, then we know it&rsquo;s a hardware failure. </span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>If the issue does not exist in UEFI, then we know the symptom is being influenced by software such as Windows or other applications. </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><span><span><span>5. Run SDT or Windows Updates (WU).</span></span></span></p>
+
+			<p><span><span><span>Make sure to run the Touch Screen Test in SDT.</span></span></span></p>
+			</td>
+			<td width="313">
+			<p class="MsoHeading7"><strong><span><span><span>For SDT:</span></span></span></strong><span><span><span> Have your customer go to </span></span></span><a href="http://aka.ms/surfacedt" target="_blank"><span><span>http://aka.ms/surfacedt</span></span></a><span><span><span>. </span></span></span></p>
+
+			<p><span><span><span>For WU: Go to <strong>Settings &gt; Update &amp; Security &gt; Windows Updates &gt; Check for updates</strong></span></span></span></p>
+
+			<p><span><span><strong>Note:</strong> Restart the Surface after installing updates. </span></span></p>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>Updates have fixes to common problems, or issues. Ensuring the customer has all the latest updates on their Surface will ensure they have the best possible experience. </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><span><span><span>6. Disable unnecessary programs.</span></span></span></p>
+			</td>
+			<td width="313">
+			<p class="MsoHeading7"><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/323527/how-to-use-and-troubleshoot-issues-with-windows-task-manager" managed-link="" target="_blank">Open Task Manager</a><span><span><span> by pressing CTRL+ALT+DEL. You may need to select More Details.</span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>Select the <strong><span>Startup</span></strong> tab.</span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>Have the customer review the programs and disable any programs that the customer deems unnecessary. If you do not know what a program is, or does, perform a Bing search or advise the customer to perform a Bing search.</span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>Once all unnecessary programs are removed, restart the Surface and test touch functionality.</span></span></span></p>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>Slow Touch Response typically means that the Surface does not have enough available resources to perform the function immediately. </span></span></span></p>
+
+			<p><span><span><span>Like most things, Surface will prioritize actions and inputs based on its workload at the time. If there are a lot of apps and processes running, the Surface may need to deprioritize the touch gesture until enough resources are available to perform the function. </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><span><span><span>7. Optimize Surface&rsquo;s Performance</span></span></span></p>
+			</td>
+			<td width="313">
+			<p class="MsoHeading7"><span><span><span>Use the </span></span></span><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4023507/surface-what-to-do-if-surface-is-running-slower?os=windows-10&amp;=undefined#solution3w10" managed-link="" target="_blank">Optimize your Surface for Performance</a><span><span><span> article on support.microsoft.com. </span></span></span></p>
+
+			<p><strong><span><span><span>Recommend Solutions within the above article:</span></span></span></strong></p>
+
+			<p><span><span><span>1. Check the Power Mode setting in use.</span></span></span></p>
+
+			<p><span><span><span>2. Use top Windows tips to improve Performance.</span></span></span></p>
+
+			<p><span><span><span>3. Identify hardware issues.</span></span></span></p>
+
+			<p><span><span><strong>Note:</strong> Is the customer saying their device is hot? If so, use the guidance in the section <span>Plug in and let your Surface cool down.</span></span></span><span></span></p>
+
+			<p><span><span><span>We&rsquo;ve already restarted the device, and that didn&rsquo;t fix it, so that section can be skipped.</span></span></span></p>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>Customers may have varying degrees of expectation based on their understand of computer hardware. </span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>Customers should be familiar with the best practices for ensuring their device performs at its best as often as possible.</span></span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="paragraph"><span><span><span>8. Reset</span></span></span></p>
+			</td>
+			<td width="313">
+			<p class="MsoHeading7"><strong><span><span><span>Good: </span></span></span></strong><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4026602/windows-10-give-your-pc-a-fresh-start" managed-link="" target="_blank">Fresh Start</a></p>
+
+			<p><span><span><span>Go to <strong><span>Start &gt; Settings &gt; Update &amp; security &gt; Recovery</span></strong>. </span></span></span></p>
+
+			<p><span><span><span>Under <strong><span>Fresh Start</span></strong>, select <strong><span>Additional info &gt; Get Started. </span></strong></span></span></span></p>
+
+			<p><strong><span><span><span>Better: </span></span></span></strong><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4023533" managed-link="" target="_blank">Reset from within Windows</a></p>
+
+			<p><span><span><span>Go to <strong><span>Start &gt; Settings &gt; Update &amp; security &gt; Recovery.</span></strong></span></span></span></p>
+
+			<p><span><span><span>Under <strong><span>Reset this PC</span></strong>, select <strong><span>Get Started.</span></strong> Follow on screen instructions.</span></span></span></p>
+
+			<p class="ng-scope"><strong><span><span><span>Best:</span></span></span></strong> <a href="https://support.microsoft.com/help/4023512" target="_blank"><span><span>USB recovery</span></span></a></p>
+
+			<p class="ng-scope"><span><span><span>The customer will need to download and set up a recovery image on a USB drive. Send the </span></span></span><a href="https://support.microsoft.com/surfacerecoveryimage" target="_blank"><span><span>USB recovery link</span></span></a><span><span><span> to the customer and help them get started. Information on what size and type of drive is provided at the destination page.</span></span></span></p>
+
+			<p class="ng-scope"><em><span><span><span>-OR-</span></span></span></em></p>
+
+			<p class="ng-scope"><span><span><span>Set up an order to have a USB recovery drive sent to the customer.</span></span></span></p>
+			</td>
+			<td width="258">
+			<p><strong><span><span><span>Fresh Start (good)</span></span></span></strong><span><span><span>: </span></span></span></p>
+
+			<ul>
+				<li><span><span><span><span>Fresh Start is the least intrusive form of reset. </span></span></span></span></li>
+				<li><span><span><span><span>Customers will not lose any files or personal information. </span></span></span></span></li>
+				<li><span><span><span><span>Customers will need to reinstall desktop programs. </span></span></span></span></li>
+				<li><span><span><span><span>Fresh Start also ensures the customer has all available updates once complete. </span></span></span></span></li>
+				<li><span><span><span><span>If there is an issue with Windows itself, the issue may still occur after a reset.</span></span></span></span></li>
+			</ul>
+
+			<p><strong><span><span><span>Reset from within Windows (better): </span></span></span></strong></p>
+
+			<ul>
+				<li><span><span><span><span>This option uses the devices Hard Drive Partition to reimage the device. </span></span></span></span></li>
+				<li><span><span><span><span>This option will delete personal data. </span></span></span></span></li>
+				<li><span><span><span><span>The customer will need to reinstall desktop apps. </span></span></span></span></li>
+				<li><span><span><span><span>The customer will need to run updates upon completion.</span></span></span></span></li>
+				<li><span><span><span><span>If there is an issue with the partition, the issue may still occur after the reset. </span></span></span></span></li>
+			</ul>
+
+			<p><strong><span><span><span>USB recovery (best):</span></span></span></strong></p>
+
+			<ul>
+				<li><span><span><span><span>This option reimages the entire device, including the partition on the hard drive. </span></span></span></span></li>
+				<li><span><span><span><span>It is the most complete form of reset. </span></span></span></span></li>
+				<li><span><span><span><span>Customers will need to back up their personal data. </span></span></span></span></li>
+				<li><span><span><span><span>Customers will need to reinstall desktop apps. Customers will need to run updates after completion. </span></span></span></span></li>
+			</ul>
+
+			<p class="MsoHeading7"><span><span><span>If the issue occurs after a reset, then the root cause is very likely hardware related.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="744">
+			<p class="MsoHeading7"><strong><span><span><span>Is the issue resolved?</span></span></span></strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><strong><span><span><span>Yes, close the case</span></span></span></strong><span><span><span>: Once resolved, have the customer check for updates.</span></span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="313">
+			<p><span><span><span>For SDT enabled sites, let the customer know about the </span></span></span><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a><span><span><span>.</span></span></span></p>
+
+			<p><span><span><span>For all other sites, <strong><span>check Settings &gt; Update &amp; Security &gt; Windows Update</span></strong> for updates.</span></span></span></p>
+
+			<p><span><span><span>KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4014334" managed-link="" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a></span></span></span></p>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>Making sure Surface and Windows are up to date may help avoid this problem in the future.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="173">
+			<p class="MsoHeading7"><strong><span><span><span>No, replace the device</span></span></span></strong><span><span><span>: Set up an exchange for the customer based on the status of their warranty.</span></span></span></p>
+			</td>
+			<td width="313">
+			<p><span><span><span>Use KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2791320" managed-link="" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a></span></span></span></p>
+			</td>
+			<td width="258">
+			<p class="MsoHeading7"><span><span><span>There is likely a hardware problem with the Surface device.</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a bookmark-id="top" href="#top" managed-link=""><span><span><span>Return to top</span></span><span><span><span>&nbsp;</span></span></span></span></a>&nbsp;</p>
+<p class="kb-securedata-section section"><strong><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span>&nbsp;December 2018</strong></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Change history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>Item</strong></p>
+			</td>
+			<td>
+			<p><strong>Title</strong></p>
+			</td>
+			<td width="98">
+			<p><strong>Date</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/152504">CONTENT TRACKING 152504</a><br>
+			</td>
+			<td>Surface: Reorder steps in section 1 of Screen TG</td>
+			<td width="98">3/9/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/147669">CONTENT TRACKING 147669</a></td>
+			<td>Surface: Align and update formatting for KB 3212772</td>
+			<td width="58">9/30/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/146981">CONTENT TRACKING 146981</a></td>
+			<td>{Surface}: {update agent tech guide 3212772 &nbsp;for touch issues}</td>
+			<td width="58">8/30/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/140039" role="heading">Content Tracking 140039</a></td>
+			<td>Project: Surface Consumer Content Request - bulk edit to tech guide instructions - &quot;Resolution steps&quot;</td>
+			<td width="58">2/14/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/138508" role="heading">Content Tracking 138508</a></td>
+			<td>PROJECT: Surface: SPM Only Consumer CPC Content Request - update Resolution steps text - 3203673</td>
+			<td width="58">12/28/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/138357" role="heading">Content Tracking 138357</a></td>
+			<td>Surface: SPM Only Consumer CPC Content Request Template: Incorrect link to SDT in Tech Guides</td>
+			<td width="58">12/20/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/135436" role="heading">135436</a></td>
+			<td>update &quot;Go to Start &gt; Settings &gt; Update &amp; security &gt; Windows Defender &quot; wording</td>
+			<td width="58">10/24/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/135430" role="heading">135430</a></td>
+			<td>update prods listed with &quot;Press and hold the power button for 20 seconds&quot; language</td>
+			<td width="58">10/24/2018</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/web/wi.aspx?pcguid=71a89b6f-e171-4c62-8b8c-6ac1ccf43b88&amp;id=134198" target="_blank">Content Tracking 134198</a></td>
+			<td>Update Best: USB recovery steps to also include the overview article</td>
+			<td width="58">9/17/2018</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/131674" role="heading">Content Tracking 131674</a></p>
+			</td>
+			<td>
+			<p>Surface: Consumer CPC Content Tracking Request - Move Touch TG 4295636 to 3212772</p>
+			</td>
+			<td width="58">7/13/2018</td>
+		</tr>
+		<tr>
+			<td>SIRT&nbsp;</td>
+			<td>mark &quot;how to code&quot; lines as &quot;no loc&quot;</td>
+			<td width="58">6/18/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/130049" role="heading">SIRT 130049</a></td>
+			<td>Surface: Touch Issues Slimfast - New KB</td>
+			<td width="58">5/21/2018</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="http://tfsirt:8080/tfs/irt1/css%20irt/_workitems/edit/104195?fullscreen=false" id="kb-link-33" target="_self">104195 (CSS IRT)</a><br>
+			<a href="http://tfsirt:8080/tfs/IRT1/CSS IRT/_workitems?id=123797&amp;fullScreen=false&amp;_a=edit" managed-link="" target="_blank">123797 (CSS IRT)</a><br>
+			<a aria-level="1" class="caption" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/125215" role="heading">Content Tracking 125215</a></p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+			<td width="58">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p><span class="text-base"><strong>Author/owner</strong>: </span><span class="text-base"> Zachary Stauber</span><br>
+<strong>Product Bug Numbe</strong>r: 94846<br>
+<strong>Writer ID (email alias)</strong>: v-johnre&nbsp;</p>

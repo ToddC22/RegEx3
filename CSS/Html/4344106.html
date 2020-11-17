@@ -1,0 +1,302 @@
+﻿<header><h1>ADPERF: TOOLS: Domain Controller AD Perf Data Collection Script</h1></header><span asset="4476087" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4476087]</span><ul><li><strong>Content Idea (CI): </strong><a managed-link="" href="https://aka.ms/CIEdit?id=86146" target="" data-content-type="" data-content-id="" bookmark-id="">86146</a></li></ul><div><div>
+  </div><div><h1 style="font-family:'Calibri Light', 'sans-serif';font-size:16pt;margin-bottom:0;margin-left:0;margin-right:0;margin-top:12pt;" dir="ltr">
+    <span style="color:#2F5496;font-style:normal;font-weight:normal;margin:0;padding:0;">Setup For Data Collection:</span>
+  </h1>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">&nbsp;</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.38in;margin-right:0;margin-top:0;text-indent:-0.25in;vertical-align:middle;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">1.</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Unzip the PerfScript.zip and place it into a location such as C:\temp. This will include two files. ADDS.xml and a text file ADPerfDataCollection.txt. Please rename the txt file to .ps1.</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.38in;margin-right:0;margin-top:0;vertical-align:middle;" dir="ltr">
+    <span style="font-style:normal;font-weight:bold;margin:0;padding:0;">**Note: </span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">If there is no ADDS.xml file it will instead use the default AD Data Collector set – You can also provide your own custom xml data collector as long as you name it ADDS.xml and include it in the same directory as the script.</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.38in;margin-right:0;margin-top:0;text-indent:-0.25in;vertical-align:middle;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">2.</span>
+    <span style="font-family:'Segoe UI', 'sans-serif';font-size:9.5pt;font-style:normal;font-weight:normal;margin:0;padding:0;">Download Procdump found here: </span>
+    <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/procdump">
+      <span style="color:#0000FF;font-style:normal;font-weight:normal;margin:0;padding:0;text-decoration:underline;">https://docs.microsoft.com/en-us/sysinternals/downloads/procdump</span>
+    </a>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;"> and unzip it to the same directory as above such as C:\temp.</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:bold;margin:0;padding:0;">Note:</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;"> If you do not wish to take a procdump of lsass skip this step.</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.38in;margin-right:0;margin-top:0;text-indent:-0.25in;vertical-align:middle;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">3.</span>
+    <span style="font-style:normal;font-weight:bold;margin:0;padding:0;">Only For 2012r2 and below:</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;"> Install WPR using the following directions:</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">We will need to download the Windows SDK on</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">&nbsp;</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Windows 2008 – 2012r2: </span>
+    <a href="http://msdn.microsoft.com/en-US/windows/desktop/bg162891">
+      <span style="color:#0000FF;font-style:normal;font-weight:normal;margin:0;padding:0;text-decoration:underline;">http://msdn.microsoft.com/en-US/windows/desktop/bg162891 </span>
+    </a>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;"> </span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Please scroll down to the section for Earlier Releases and download the appropriate version for your OS:</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Windows 8.1 for 2012r2</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Windows 8 for 2012</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Windows 7 and .Net Framework for 2008r2</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">&nbsp;</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">&nbsp;</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">Run the installer and choose “Install new or updated features”</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">&nbsp;</span>
+  </p>
+  <div style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr"><span asset="4572209" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4572209]</span><br></div>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">&nbsp;</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">Click Next</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">&nbsp;</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">Click Accept on the License page</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">&nbsp;</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">On the “Select the features you want to install” Page, only select “Windows Performance Toolkit”</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">&nbsp;</span>
+  </p>
+  <div style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr"><span asset="4572210" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4572210]</span><br></div>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">&nbsp;</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">Click install</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">&nbsp;</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">&nbsp;</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#000000;font-style:normal;font-weight:bold;margin:0;padding:0;">Running The AD Perf Script Collection:</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.38in;margin-right:0;margin-top:0;text-indent:-0.25in;vertical-align:middle;" dir="ltr">
+    <span style="color:#000000;display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">1.</span>
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;">Launch the AdPerfDataCollection.ps1 from an </span>
+    <span style="color:#000000;font-style:normal;font-weight:bold;margin:0;padding:0;">admin</span>
+    <span style="color:#000000;font-style:normal;font-weight:normal;margin:0;padding:0;"> powershell:</span>
+  </p>
+  <div style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.38in;margin-right:0;margin-top:0;" dir="ltr"><span asset="4572211" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4572211]</span><br></div>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.38in;margin-right:0;margin-top:0;text-indent:-0.25in;vertical-align:middle;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">2.</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Choose the appropriate Data Collection scenario for this case- your engineer should also advise which option should be run- If you are not sure, please ask!</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;text-indent:-0.25in;vertical-align:middle;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">a.</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Option 1 will enable logging immediately and start data collection. This option should be used if the server is currently in state and will continue to run until you press 'Enter.'</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;text-indent:-0.25in;vertical-align:middle;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">b.</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Option 2 will trigger based off a CPU % threshold that you set and run for as long as you define between 1-30 minutes (Default is 5). This option should be used for intermittent issue.</span>
+  </p>
+  <div style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr"><span asset="4572213" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4572213]</span><br></div>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;text-indent:-0.25in;vertical-align:middle;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">c.</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Option 3 will enable immediately and should be used when the machine is already experience high LSASS Memory usage and will continue to run until you press 'Enter.'</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;text-indent:-0.25in;vertical-align:middle;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">d.</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Option 4 will trigger based off a Memory % threshold that you set and run for as long as you define between 1-30 minutes (Default is 5). This should be used for intermittent issues or to capture data once in state.</span>
+  </p>
+  <div style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr"><span asset="4572214" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4572214]</span><br></div>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">&nbsp;</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;text-indent:-0.25in;vertical-align:middle;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">e.</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Option 5 is a triggered event and will trigger when all ATQ threads are in use.</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;text-indent:-0.25in;vertical-align:middle;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">f.</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Option 6 is for a baseline run of the data and will begin immediately and stop after 5 minutes by default. Please collect multiple baselines throughout the day for a good sample.</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.75in;margin-right:0;margin-top:0;text-indent:-0.25in;vertical-align:middle;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">g.</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Option 7 will collect a long-term baseline. It will collect initial information but then will continue to run just perf counters behind the scene until stopped by the 'Enter' key.</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">&nbsp;</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.38in;margin-right:0;margin-top:0;text-indent:-0.25in;vertical-align:middle;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">3.</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">After the data collection has finished you may zip up the folder C:\ADPerfData and upload it to the workspace for your case. Please be mindful that the AD Collector Set can take some time to finish on heavily taxed machines. Please wait until the script says it is done before uploading all data… the script will check every 30 seconds for the report.html to create and will let you know when it has finished (It checks for this up to an hour then completes even if the report is not present):</span>
+  </p>
+  <div style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.38in;margin-right:0;margin-top:0;" dir="ltr"><span asset="4572215" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4572215]</span><br></div>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;"> </span>
+  </p>
+  <h1 style="font-family:'Calibri Light', 'sans-serif';font-size:16pt;margin-bottom:0;margin-left:0;margin-right:0;margin-top:12pt;" dir="ltr">
+    <span style="color:#2F5496;font-style:normal;font-weight:normal;margin:0;padding:0;">Scenario Details:</span>
+  </h1>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;"> </span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Outlined below is what each scenario will capture.</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:bold;margin:0;padding:0;">All Scenarios:</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Enables 1644 Active Directory events with default thresholds</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Enables Netlogon Debug logging with flags 0x2080ffff</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Starts either the custom AD Data Collector Set or the built in Data Collector Set depending on the configuration.</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">LSA and LSP tracing</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">SamSrv Tracing</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Tasklist /svc and tasklist /v</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Dcdiag report</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Netstat report</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Copies Ntdsai.dll/samsrv.dll/lsasrv.dll/ntdsatq.dll to the central data path </span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:bold;margin:0;padding:0;">Scenario 1: </span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Two LSASS process miniplus dumps 5 seconds apart (if procdump is in same directory as script).  Runs the following command: procdump.exe lsass.exe -mp -n 2 -s 5 -AcceptEula</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Windows Performance Recorder profiles for GeneralProfile and CPU.  Runs the following command: WPR.exe -Start GeneralProfile -Start CPU</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:bold;margin:0;padding:0;">Scenario 2:</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:bold;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Identical to Scenario 1 but will only start collecting when the configured threshold is met.  Uses the performance counter \Processort Information(_Total)\% Processor Time and checks every 5 seconds.</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:bold;margin:0;padding:0;">Scenario 3:</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Windows Performance Recorder Profiles for GeneralProfile, Heap, and VirtualAllocation. Runs the following command: WPR.exe -Start GeneralProfile -Start Heap -Start VirtualAllocation</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Collects a single miniplus dump of LSASS.  Runs the following command: lsass.exe -mp -AcceptEula</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:bold;margin:0;padding:0;">Scenario 4: </span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:bold;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Identical to Scenario 3 but will only start collecting when the configured threshold is met.  Uses the performance counter Memory\% Committed Bytes In Use and checks every 5 seconds</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:bold;margin:0;padding:0;">Scenario 5:</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Three LSASS process miniplus dumps 5 seconds apart.  Runs the following command: procdump.exe lsass.exe -mp -n 3 -s 5 -AcceptEula</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:bold;margin:0;padding:0;">Scenario 6: </span>
+  </p>
+  <p style="background:#FFFFFF;font-family:'Lucida Console';font-size:11pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="color:#8B0000;display:inline-block;font-family:Calibri;font-size:9pt;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-family:Calibri;font-style:normal;font-weight:normal;margin:0;padding:0;">Enables 1644 Active Directory events with the following thresholds </span>
+    <span style="color:#8B0000;font-size:9pt;font-style:normal;font-weight:normal;margin:0;padding:0;">&quot;Search Time Threshold (msecs)&quot; 1, &quot;Expensive Search Results Threshold&quot; 0, &quot;Inefficient Search Results Threshold&quot; 0</span>
+  </p>
+  <p style="background:#FFFFFF;font-family:'Lucida Console';font-size:11pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="color:#8B0000;display:inline-block;font-family:Calibri;font-size:9pt;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-family:Calibri;font-style:normal;font-weight:normal;margin:0;padding:0;">Windows Performance Recorder Profiles for GeneralProfile, CPU, Heap, Virtual Allocation.  Runs the following command: WPR.exe -Start GeneralProfile -Start CPU -Start Heap -Start VirtualAllocation</span>
+  </p>
+  <p style="font-family:Calibri;font-size:11pt;margin-bottom:8pt;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Three LSASS process miniplus dumps 5 seconds apart.  Runs the following command: procdump.exe lsass.exe -mp -n 3 -s 5 -AcceptEula</span>
+  </p>
+  <p style="background:#FFFFFF;font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:bold;margin:0;padding:0;">Scenario 7: </span>
+  </p>
+  <p style="background:#FFFFFF;font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:bold;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Collects a single miniplus dump LSASS. Runs the following command: lsass.exe -mp -AcceptEula</span>
+  </p>
+  <p style="background:#FFFFFF;font-family:'Lucida Console';font-size:11pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="color:#8B0000;display:inline-block;font-family:Calibri;font-size:9pt;font-style:normal;font-weight:normal;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-family:Calibri;font-style:normal;font-weight:normal;margin:0;padding:0;">Enables 1644 Active Directory events with the following thresholds </span>
+    <span style="color:#8B0000;font-size:9pt;font-style:normal;font-weight:normal;margin:0;padding:0;">&quot;Search Time Threshold (msecs)&quot; 50, &quot;Expensive Search Results Threshold&quot; 10000, &quot;Inefficient Search Results Threshold&quot; 1000</span>
+  </p>
+  <p style="background:#FFFFFF;font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;text-indent:-0.25in;" dir="ltr">
+    <span style="display:inline-block;font-style:normal;font-weight:bold;margin:0;padding:0;text-indent:0;width:0.250in;">-</span>
+    <span style="font-style:normal;font-weight:normal;margin:0;padding:0;">Enables long and short running perfmon</span>
+  </p>
+  <p style="font-family:'Courier New';font-size:12pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#1F4E79;font-style:normal;font-weight:normal;margin:0;padding:0;">Logman.exe create counter </span>
+    <span style="color:#1F4E79;font-style:normal;font-weight:bold;margin:0;padding:0;">PerfLogLong</span>
+    <span style="color:#1F4E79;font-style:normal;font-weight:normal;margin:0;padding:0;"> -o &quot;c:\perflogs\PerfLogLong.blg&quot; -f bincirc -v mmddhhmm -max 300 -c &quot;\LogicalDisk(*)\*&quot; &quot;\Memory\*&quot; &quot;\Cache\*&quot; &quot;\Network Interface(*)\*&quot; &quot;\NTDS(*)\*&quot; &quot;\Netlogon(*)\*&quot; &quot;\Paging File(*)\*&quot; &quot;\PhysicalDisk(*)\*&quot; &quot;\Processor(*)\*&quot; &quot;\Processor Information(*)\*&quot; &quot;\Process(*)\*&quot; &quot;\Redirector\*&quot; &quot;\Server\*&quot; &quot;\System\*&quot; &quot;\Server Work Queues(*)\*&quot; -si 00:05:00</span>
+  </p>
+  <p style="font-family:'Courier New';font-size:12pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#1F4E79;font-style:normal;font-weight:normal;margin:0;padding:0;">&nbsp;</span>
+  </p>
+  <p style="font-family:'Courier New';font-size:12pt;margin-bottom:0;margin-left:0.50in;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="color:#1F4E79;font-style:normal;font-weight:normal;margin:0;padding:0;">Logman.exe create counter </span>
+    <span style="color:#1F4E79;font-style:normal;font-weight:bold;margin:0;padding:0;">PerfLogShort</span>
+    <span style="color:#1F4E79;font-style:normal;font-weight:normal;margin:0;padding:0;"> -o &quot;c:\perflogs\PerfLogShort.blg&quot; -f bincirc -v mmddhhmm -max 300 -c &quot;\LogicalDisk(*)\*&quot; &quot;\Memory\*&quot; &quot;\Cache\*&quot; &quot;\Network Interface(*)\*&quot; &quot;\NTDS(*)\*&quot; &quot;\Netlogon(*)\*&quot; &quot;\Paging File(*)\*&quot; &quot;\PhysicalDisk(*)\*&quot; &quot;\Processor(*)\*&quot; &quot;\Processor Information(*)\*&quot; &quot;\Process(*)\*&quot; &quot;\Redirector\*&quot; &quot;\Server\*&quot; &quot;\System\*&quot; &quot;\Server Work Queues(*)\*&quot; -si 00:00:05</span>
+  </p>
+  <p style="background:#FFFFFF;font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">
+    <span style="font-style:normal;font-weight:bold;margin:0;padding:0;"> </span>&nbsp;</p><p style="background:#FFFFFF;font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">Script can be retrieved from:</p><p style="background:#FFFFFF;font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0;margin-right:0;margin-top:0;" dir="ltr"><a>\\waynmc-main1\ADPerfDataCollector</a></p><p style="background:#FFFFFF;font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0;margin-right:0;margin-top:0;" dir="ltr">or</p><p style="background:#FFFFFF;font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0;margin-right:0;margin-top:0;" dir="ltr"><span lang="EN-GB" style="color:#002060;"><a href="http://aka.ms/adperfninjaBackup">http://aka.ms/adperfNinja</a>Backup&nbsp;</span></p><p><font color="#0b0396"><span style="color:rgb(0, 0, 0);"><b>ADPERF NINJA TRAINING by Justin Turner, Linda Taylor (SNAKE FIGHTER) and Wayne McIntyre can be found at </b></span><b><a href="http://aka.ms/adperfninja"><span style="color:rgb(0, 0, 0);">http://aka.ms/adperfninja</span></a></b><span style="color:rgb(0, 0, 0);"><b>&nbsp;</b></span></font></p><p style="background:#FFFFFF;font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0;margin-right:0;margin-top:0;" dir="ltr"><b></b><i></i><u></u><sub></sub><sup></sup><strike></strike><font color="#0b0396"></font><b></b><br></p><p style="background:#FFFFFF;font-family:Calibri;font-size:11pt;margin-bottom:0;margin-left:0;margin-right:0;margin-top:0;" dir="ltr"><b></b><i></i><u></u><sub></sub><sup></sup><strike></strike><br></p></div></div>

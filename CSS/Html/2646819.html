@@ -1,0 +1,315 @@
+﻿<header><h1>ASMS – How to Troubleshoot Credit Card Errors and Declines</h1></header><p><span lang="EN">Submit a </span><span lang="EN"><a href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder="><span>ModTrack</span></a></span><span lang="EN"> request to update this <span>TSG.</span></span> <span> </span></p>
+
+<div>
+<h3><strong><a id="Overview" name="Overview"></a>Overview</strong></h3>
+</div>
+
+<p>Customers purchasing Azure via a credit card (CC) can update their billing details any time via the Azure Portal. However, when customers encounter errors making payments, it is important to determine whether the issue is a potential problem with the Azure UI or a mismatch between data the customer is entering and data that is on file. This TSG provides guidance on how to troubleshoot such credit card errors and declines.</p>
+
+<h3><a id="Customer Experience and Provisioning" name="Customer Experience and Provisioning"></a><strong>Customer Experience and Provisioning</strong></h3>
+
+<p>When a customer tries to enter a <span>payment instrument (PI) </span><span> </span><span> </span>on the Azure Account Portal, their purchase is checked by a central credit card clearinghouse to make sure that the CC is valid, clear of fraudulent activity, has&nbsp;appropriate funds available, etc. For general credit card and purchase information, refer to <u><span><a href="https://internal.support.services.microsoft.com/en-us/help/2646778" target="_blank"><span>TSG 2646778</span></a></span></u>. You should also note the following:&nbsp;</p>
+
+<ul>
+	<li>
+	<p><span>Credit card details must match the information that the credit card company has on file.</span></p>
+
+	<ul style="list-style-type:circle">
+		<li>
+		<p><strong>Example</strong>:<em> </em>If the credit card has the company&rsquo;s financial office&rsquo;s address listed, the IT department cannot use the IT department&#39;s address. They must use the financial office&rsquo;s address for the credit card.<em> </em>The billing address country (credit card country) must match the shipping address country (Windows Live ID Country).<strong> </strong><strong>Note: </strong>The city field limit is a maximum of 64 characters.</p>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<ul>
+	<li>
+	<p><span><span><span>The system does not accept p</span><span class="x-hidden-focus">re-paid credit <span>and debit </span>cards, it may work at first but will fail before arranging the subscription.</span><span> </span></span></span></p>
+	</li>
+	<li>
+	<p><span><span><span>If the customer gets the error statement: </span><span>&ldquo;Error Code 30225,&rdquo;</span><span> </span><span> </span> <span> </span>this is almost always due to a user trying to use a pre-paid credit card, which is not allowed. </span></span></p>
+	</li>
+	<li>
+	<p><span><span>Virtual credit cards will work temporarily but are only good for 24 hours, so if the card gets <span>pinged</span><span> </span> after the 24-hour period, the subscription will disable due to bad PI.</span></span></p>
+	</li>
+	<li>
+	<p><span><span><span>Presently, we have no way to determine in CMAT if the user was using either a pre-paid or virtual CC</span><span> </span><span> </span> until the CST Tool launches.</span></span></p>
+	</li>
+	<li>
+	<p><span><span><span><span>If the customer gets stuck in the credit card verification stage and can&rsquo;t go any further, ask them to enable third-party cookies to see if that fixes the issue. </span></span><span> </span><span>Ask the customer to follow these steps:</span></span></span></p>
+	</li>
+</ul>
+
+<ol>
+	<li class="CxSpMiddle">
+	<p><span><span> Start Internet Explorer.</span></span></p>
+	</li>
+	<li class="CxSpMiddle">
+	<p><span><span> On the Tools menu, click Internet Options.</span></span></p>
+	</li>
+	<li class="CxSpMiddle">
+	<p><span><span> Click Privacy, and then click Advanced.</span></span></p>
+	</li>
+	<li class="CxSpMiddle">
+	<p><span><span> Click to clear the Override automatic cookie handling check box.<br>
+	<br>
+	<strong>Note</strong>: By default, this check box is not selected. The error occurs if for some reason the customer has previously selected the check box.</span></span></p>
+	</li>
+</ol>
+
+<div>
+<h3><strong><a id="Support Scenarios" name="Support Scenarios"></a>Support Scenarios</strong></h3>
+</div>
+
+<p><span>Credit Card Decline issues are not handled by PayOps<strong>,</strong></span> as they can only provide as much information as what is in CMAT. In these instances, do the following:</p>
+
+<ol>
+	<li>
+	<p>Gather details from CMAT (Note: Engineers should not share findings from CMAT as it could lead to phishing)</p>
+	</li>
+</ol>
+
+<ul>
+	<li class="indent-2">
+	<p>Confirm that the name entered matches the name imprinted on the credit card without any symbols/characters.</p>
+	</li>
+</ul>
+
+<p class="indent-3"><strong>Example:</strong> The card may read &ldquo;Joan A. Smith,&rdquo; but the customer should enter &ldquo;Joan A Smith&rdquo; without the period.</p>
+
+<ul>
+	<li class="indent-2">
+	<p><span><span>Confirm the address entered is the billing address and matches the credit card statement including street address, city, state, and zip/postal code.</span></span></p>
+	</li>
+	<li class="indent-2">
+	<p><span><span>Confirm credit is available and the card is valid for new purchases. </span></span></p>
+	</li>
+	<li class="indent-2">
+	<p><span><span>Inform customers who are outside of the United States to verify their credit card is valid before purchase</span></span></p>
+	</li>
+	<li class="indent-2">
+	<p><span><span>Confirm the customer is entering the Card Verification Value (CVV) code as it appears on the back or front of the credit card.</span></span></p>
+	</li>
+	<li class="indent-2">
+	<p><span><span>Ask the customer to check their bank records to confirm all the information is the same, including spelling and abbreviation.</span></span></p>
+	</li>
+</ul>
+
+<ol start="2">
+	<li>
+	<p>If all the preliminary troubleshooting steps have been taken to confirm that the customer&rsquo;s card is valid, but an error is still occurring, inform the customer that they will need to work with their bank to resolve credit card declines.<span> </span><span> </span></p>
+	</li>
+</ol>
+
+<div>
+<h4><strong><a id="Chargebacks" name="Chargebacks"></a>Chargebacks</strong></h4>
+</div>
+
+<p>Note the following about chargebacks:</p>
+
+<ul>
+	<li>
+	<p>A chargeback happens when customer-initiated funds are returned to a customer (not bank initiated) or when the customer has called the bank and disputed the charge as fraudulent or for other reasons.</p>
+	</li>
+</ul>
+
+<ul>
+	<li>
+	<p><span>SEs receive chargeback information in a chargeback file</span><span> </span>.</p>
+	</li>
+</ul>
+
+<ul>
+	<li>
+	<p>If the customer changes/updates the card associated with the subscription, that new card will be charged the amount of the open balance only. The amount already in &ldquo;Chargeback&rdquo; will not be pinged on the new card or the existing card.</p>
+	</li>
+</ul>
+
+<ul>
+	<li>
+	<p><span>Subscriptions automatically cancel right after the chargeback processes and the payment reverses.</span><span> </span><span> </span></p>
+	</li>
+</ul>
+
+<ul>
+	<li>
+	<p>You do not need to contact the customer&rsquo;s bank after a chargeback. The bank receives automated, precise transaction detail with the transaction ID from Microsoft.</p>
+	</li>
+</ul>
+
+<p><strong>Procedure for Chargebacks</strong></p>
+
+<p>Once a chargeback process begins, you should do the following:</p>
+
+<ol>
+	<li>
+	<p>Inform the customer that the Subscription has been canceled as the CC owner has disputed charges with the bank.</p>
+	</li>
+	<li>
+	<p>For customers wishing to reinstate their account, DO NOT reinstate a subscription that is disabled due to chargeback without first getting approval from your TA.</p>
+	</li>
+	<li>
+	<p><span> </span>If you see &ldquo;ChargeBackReversal&rdquo; on the CC, then there is no need to engage the TA, simply proceed with re-enabling the subscription.</p>
+	</li>
+</ol>
+
+<div>
+<div><span asset="4458293" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4458293]</span></div>
+</div>
+
+<div>
+<div>&nbsp;</div>
+
+<div>
+<h4><strong><a id="Credit Card Decline Types" name="Credit Card Decline Types"></a>Credit Card Decline Types</strong></h4>
+
+<p><span>In CMAT, the following decline types become visible when a PI error occurs:</span></p>
+
+<ol>
+	<li>
+	<p><span><span><strong>Payment Provider:</strong>&nbsp;When this error occurs&nbsp;customers receive the message, &quot;Authorization Failed&quot;.&nbsp;In almost all cases, this error is due to an issue flagged by the customer&#39;s Financial Institution. In these instances, do the following:&nbsp;</span></span></p>
+
+	<ol start="1" style="list-style-type:lower-alpha">
+		<li>
+		<p><span><span>C</span></span><span style="font-size:0.9375rem">onfirm this is a bank decline&nbsp;via CMAT, using the steps below:</span></p>
+
+		<ol start="1" style="list-style-type:lower-roman">
+			<li>
+			<p><span style="font-size:0.9375rem"></span><span style="font-size:0.9375rem">&nbsp;Enter customer&#39;s billable account.</span></p>
+			</li>
+			<li>
+			<p>Select&nbsp;the charge&nbsp;that failed based on date, amount and status.&nbsp;</p>
+			</li>
+			<li>
+			<p>Click the icon to expand the charge, select <strong>charge attempts</strong>&nbsp;to view the reason code.</p>
+			</li>
+		</ol>
+		</li>
+		<li>
+		<p><span style="font-size:0.9375rem">Ask the customer to contact their bank to resolve the issue with the card.</span><span style="font-size:0.9375rem">&#8203;&#8203;&#8203;&#8203;&#8203;</span></p>
+
+		<ul>
+			<li>If the customer or bank&nbsp;request a transaction GUID/ reference number, engage your TA/PTA for assistance.&nbsp;</li>
+		</ul>
+		</li>
+	</ol>
+	</li>
+	<li>
+	<p><span><strong>Risk:</strong> In the event this error appears, follow standard escalation process for Commerce Portal (CP) Risk/Fraud team engagement.</span></p>
+	</li>
+	<li>
+	<p><strong>Banned PI:</strong> The credit card has been banned by our system.</p>
+
+	<div>
+	<ul>
+		<li>Use the Unban PI function in CMAT and attempt to settle the customer&#39;s charge. See <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4010492" managed-link="" target="_blank">TSG 4010492</a> for more information.</li>
+	</ul>
+	</div>
+
+	<p>&nbsp;</p>
+	</li>
+</ol>
+
+<h4><strong><a id="Credit Card Declines: India Customers" name="Credit Card Declines: India Customers"></a>Credit Card Declines: India Customers</strong></h4>
+
+<p><span>Regulations in India require additional authentication for online credit card transactions. This regulation causes customer credit card declines to be at a high rate. <span>A resolution for </span></span><span> </span><span> </span><span> </span><span>this issue is in development and these scenarios should not be escalated.</span></p>
+
+<ul>
+	<li>
+	<p><span><span>Debit cards are not accepted in India.</span></span></p>
+	</li>
+	<li>
+	<p><span><span>American Express (AMEX) is no longer supported as a <span>PI </span><span> </span><span> </span>for Azure accounts in India. This includes customers in those regions signing up for Azure for the first time, as well as for customers with an existing AMEX card configured as PI and are trying to upgrade with a new AMEX card number (the existing AMEX will continue to work until the card expires, at which time they will need to choose a different card type or move to invoice if applicable).</span></span></p>
+	</li>
+</ul>
+
+<p><span>If <span>you are providing support to a customer that has AMEX, explain the issue regarding AMEX in India. You may then provide resources or support to set up the subscription with a new card.</span></span><span> </span></p>
+</div>
+
+<div>
+<h3><span><a id="Engagement and Escalation Path" name="Engagement and Escalation Path"></a><strong>Engagement and Escalation Path</strong> </span><span><span><span> </span></span></span></h3>
+
+<p><strong><span lang="EN-IN">Escalating Credit Card Issues (Banned PI Only)</span></strong></p>
+
+<p>If you cannot unban the PI with the <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Finternal.support.services.microsoft.com%2Fen-US%2Fhelp%2F4010492&amp;data=02%7C01%7Cv-ruclar%40microsoft.com%7C39797c83d31d4949c54608d7049acec0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636982935254536523&amp;sdata=HZBWB5VT1K926RjeaCFdM9R3E54%2Buxer6uIGCzBwxyI%3D&amp;reserved=0">Unban PI</a> function in CMAT, follow the below procedures to escalate:</p>
+
+<ul>
+	<li>
+	<p>Check CMAT to see if the required information is available: PI decline reason code, HIT blocker, etc.</p>
+
+	<ul>
+		<li>
+		<p>If this information is not available, engage your TA for further investigation.</p>
+		</li>
+		<li>
+		<p>If TAs need further assistance, the original SE should do the following:</p>
+
+		<ul>
+			<li>
+			<p><a href="https://internal.support.services.microsoft.com/en-us/help/2651579">Engage PayOps</a>.</p>
+			</li>
+			<li>
+			<p>Provide the TA&rsquo;s analysis on the ticket.</p>
+			</li>
+			<li><span><span><span lang="EN-IN"><span><span>Refer to </span></span></span><a href="https://internal.support.services.microsoft.com/en-us/help/2651579"><span><span><span>TSG 2651579</span></span></span></a><span lang="EN-IN"><span><span> to follow the PayOps engagement process for submitting issues.</span></span></span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<h3><span><a id="Online References" name="Online References"></a><strong>Online References</strong> </span><span><span><span> </span></span></span><span><span><span> </span></span></span></h3>
+
+<p><a href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/errorcodes.pdf" target="_blank">FDC Decline table</a></p>
+
+<h3><a id="TSG Change Log" name="TSG Change Log"></a><strong>TSG Change Log</strong></h3>
+</div>
+
+<div>
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="132">
+			<p><span><strong>Date </strong></span></p>
+			</td>
+			<td width="126">
+			<p><span><strong>Updated By </strong></span></p>
+			</td>
+			<td width="364">
+			<p><span><strong>Content Updated </strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p><span><span><span>08/15/2018</span></span><span><span> </span></span></span></p>
+			</td>
+			<td width="126">
+			<p>v<span><span>-ajbur</span></span></p>
+			</td>
+			<td width="364">
+			<p><span>Comprehensive Rewrite: Updated TSG content and formatting as part of the TSG Refresh Project. Removed outdated Credit reason and error code tables.&nbsp;</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">01/16/2019</td>
+			<td width="126">v-brgosn</td>
+			<td width="364">Updated Engagement and Escalation path details.</td>
+		</tr>
+		<tr>
+			<td width="132">07/11/2019</td>
+			<td width="126">v-ruclar</td>
+			<td width="364">Updated information related to banned PI and escalating crecit card issues.</td>
+		</tr>
+		<tr>
+			<td width="132">11/6/2020</td>
+			<td width="126">mievan</td>
+			<td width="364">Added additional guidance on how to troubleshoot credit card declines &quot;Authorization Failed&quot; error messages.&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+<div>&nbsp;</div>
+</div>
+</div>
+</div>

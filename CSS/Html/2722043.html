@@ -1,0 +1,199 @@
+﻿<header><h1>Procedure: M365 TS: How to request an increase in daily email recipient limit</h1></header><div class="kb-summary-section section">
+<p class="sbody-h3"><span asset="4462485" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4462485]</span></p>
+<br>
+<strong><span class="text-base">Who</span> should use this article?</strong>
+
+<p>Microsoft 365 TS supports</p>
+<strong><span class="text-base">What</span> is this article about?</strong>
+
+<p>This procedure describes how to communicate with customers requesting an increase in the daily email recipient limit and includes guidelines for rejecting increase requests.</p>
+
+<h3><a id="t" name="t"></a>Table of Content</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td><a bookmark-id="1" href="#1" managed-link="">Assumptions</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a bookmark-id="2" href="#2" managed-link="">Procedure</a></td>
+			<td><a bookmark-id="3" href="#3" managed-link="">- Rejecting customer requests to increase the daily email recipient limit</a><br>
+			<a bookmark-id="4" href="#4" managed-link="">- Escalation process for particular situations</a></td>
+		</tr>
+		<tr>
+			<td><a bookmark-id="5" href="#5" managed-link="">Change History</a></td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h3 class="sbody-h3"><a id="1" name="1"></a>Assumptions</h3>
+
+<ul class="sbody-free_list">
+	<li>The default maximum number of email recipients per 24-hour period (rolling window) for a single Exchange Online mailbox is now 10,000. Previously customers were limited to 1,500 and could request an increase to 6,000.</li>
+	<li>Currently there is no provision for an increase beyond the new default limit of 10,000.</li>
+	<li>Most requests for an increase will be rejected.</li>
+	<li>For particular situations, when&nbsp;a customer needs a recipient limit that&rsquo;s more than 10,000, follow the escalation process. Examples of such situations are the Dean of a University sending messages to all students, or a CEO of a company sending messages to all employees.</li>
+	<li>All Exchange Online mailboxes have been updated to accommodate the increased default limit of 10,000.</li>
+	<li>A recipient is defined as any entry on the <span class="text-base">TO</span>, <span class="text-base">CC</span> or <span class="text-base">BCC</span> lines. A distribution group in the shared address book is counted as a single item. A distribution group stored in the Contacts folder of a mailbox is expanded so that members of the group are counted individually.</li>
+	<li>This procedure is <span class="text-base">not </span>used to request an increase in the <span class="text-base">individual</span><span class="text-base">email</span> recipient limit of 500 per email message. <span class="text-base">Do not</span> use this procedure when the customer wants to increase the individual email limit of 500 recipients per individual email (&quot;total recipients&quot; include addresses in the To, CC, BCC, and distribution lists and each address in the distribution list is also counted if the addresses are stored as a local Contact instead of in the Office 365 shared address book). <span class="text-base">A request to increase the 500 recipient limit per individual email will always be denied. </span></li>
+	<li>The customer cannot use distribution groups or dynamic distribution groups as a workaround to this problem.</li>
+</ul>
+<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">R</a><a bookmark-id="t" href="#t" managed-link="">eturn to top</a>
+
+<h3 class="sbody-h3"><a id="2" name="2"></a>Procedure<a class="bookmark" id="procedure"></a></h3>
+
+<h4 class="sbody-h4"><a id="3" name="3"></a>Rejecting customer requests to increase the daily email recipient limit</h4>
+
+<ol class="sbody-num_list">
+	<li>Inform customers that Exchange Online is not intended to be used for Bulk Mail scenarios.</li>
+	<li>Refer customers to the current Exchange Online Service Description, which states the following: &ldquo;Exchange Online customers who need to send legitimate bulk commercial email (for example, customer newsletters) should use third-party providers that specialize in these services.&rdquo;</li>
+</ol>
+
+<p>For more information about recipient limits and alternatives, see <a href="https://technet.microsoft.com/library/exchange-online-limits.aspx" id="kb-link-1" target="_self">Recipient and sender limits</a>.</p>
+
+<p><a bookmark-id="toc" href="#toc" managed-link="" target="">R</a><a bookmark-id="t" href="#t" managed-link="">eturn to top</a></p>
+
+<h4 class="sbody-h4"><a id="4" name="4"></a>Escalation process for particular situations</h4>
+
+<ol class="sbody-num_list">
+	<li>Frontline support engineers (FL SEs) use the following template to send the customers a mail about the corresponding policy and questions to verify that the customers are compliant with these policies.</li>
+	<li>FL SEs work with customers to complete the questions before escalating.</li>
+	<li>Escalation tier validates and sanity-checks the data and then escalate to <strong>EOP:AntiSpam </strong>Engineering Group.</li>
+</ol>
+<span class="text-base"></span>
+
+<p><strong><span><span><span>To customer request for mail recipient increase</span></span></span></strong></p>
+
+<p><strong><span><span><span>Email Template:</span></span></span></strong><br>
+<span><span><span><br>
+Hi &lt;customer first name&gt;,</span></span></span></p>
+
+<p><span><span><span>Thanks for contacting Microsoft 365 subscription support. I understand you&rsquo;d like to increase the daily email recipient limit.<br>
+<br>
+Here are the about increasing limits:</span></span></span></p>
+
+<ul>
+	<li><span><span><span><span>Microsoft 365 is not intended to send mass unsolicited emails.</span></span></span></span></li>
+	<li><span><span><span><span>This policy applies to single and multiple accounts used for sending emails.</span></span></span></span></li>
+	<li><span><span><span><span>With an appropriate business justification, an exception for rate limit increase can be granted. (Examples of such situations are the Dean of a University sending messages to all students, or a CEO of a company sending messages to all employees.)</span></span></span></span></li>
+</ul>
+<strong><span><span><span>If you would like to request an exception,</span></span></span></strong> <span><span><span>please respond to my mail by </span></span></span> answering <span><span><span>the questions below</span></span></span>:
+
+<ol class="sbody-num_list">
+	<li>What is the business justification for such a large rate increase? Provide a short overview of what you are looking to accomplish?</li>
+	<li>Is this a one-time increase <span><span><span>or will you need a higher limit eventually</span></span></span>?</li>
+	<li>Have you considered to use a Distribution List (DL) to send the messages?</li>
+	<li>What is the nature of <span><span><span>email content</span></span></span>&nbsp;you need to send?&nbsp;
+	<ul class="sbody-alpha_list" style="list-style-type:circle">
+		<li>Transactional mail related to business (e.g. purchase orders, invoices, receipts, Terms and conditions change notification).</li>
+		<li>Recurring newsletters or notifications to customers</li>
+		<li>Marketing mail to potential customers who have not opted in to receive these messages</li>
+		<li>Message within a single tenant organization or subsidiaries under a parent company</li>
+		<li>Other - please specify</li>
+	</ul>
+	</li>
+	<li>Confirm that the intended recipients of these messages have either:
+	<ul class="sbody-alpha_list" style="list-style-type:circle">
+		<li>Directly opted in to receive these messages from your company (e.g. via an online subscription)</li>
+		<li>Indirectly opted in to receive these messages from your company (e.g. via 3rd&nbsp;party subscription)</li>
+		<li>An existing business relationship with your company</li>
+		<li>Employees of the company</li>
+		<li>Other - Please specify</li>
+	</ul>
+	</li>
+	<li>Confirm that you have mechanisms in-place to keep your email address distribution lists accurate and up-to-date, <span><span><span>specifically</span></span></span>:
+	<ul class="sbody-alpha_list" style="list-style-type:circle">
+		<li>Verifying email addresses that are being added to your distribution lists - to ensure that a recipient isn&rsquo;t being added without their consent? A typical way to do this is with a double opt-in.</li>
+		<li>Removing email addresses that no longer wish to receive their messages. Recommended ways to do this are to ensure a straightforward unsubscribe mechanism, and also to process bounce messages that you get in response to your messages.</li>
+		<li><span><span><span>Articulating&nbsp;</span></span></span>a method in your mail to opt-out from receiving further messages.</li>
+	</ul>
+	</li>
+</ol>
+
+<p><span><span><span>Once I receive this information, I continue working on your request.</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span><span><span>Thanks,</span></span></span></p>
+
+<p><strong><span><span><span>First and Last Name</span></span></span></strong></p>
+
+<p><span><span><span>Microsoft Customer Service and Support</span></span></span></p>
+
+<p><span><span><span>Phone Number</span></span></span></p>
+
+<p><span><span><span>Email address</span></span></span></p>
+<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">R</a><a bookmark-id="t" href="#t" managed-link="">eturn to top</a></div>
+<div class='kb-securedata-section section'>&quot;Recipient limits&quot; NoPartner O365E O365SB O365A </div><div class="kb-summary-section section"><a class="bookmark" id="history"></a>
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading="" faq-panel-id="5"><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Change History</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span>25654</span></td>
+			<td class="sbody-td"><span>Updated tag from BPOSSPPP to O365PPP, removed wave 14 tags and changed the PEs.</span></td>
+			<td class="sbody-td">Jul 15, 2014</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span>24508</span></td>
+			<td class="sbody-td">
+			<ul class="sbody-free_list">
+				<li><span>Under <span class="text-base">Assumptions</span>, add description of the particular situations.</span></li>
+				<li><span>Update some conflict content:Change &ldquo;Any requests for an increase will be rejected and there is no plan at this time to allow for any exceptions regardless of business case&rdquo; to &ldquo;Most requests for an increase will be rejected&rdquo;.</span></li>
+				<li><span>Under <span class="text-base">Procedure</span>, add content about escalation process for particular situations, which includes a template for questions.</span></li>
+			</ul>
+			</td>
+			<td class="sbody-td">Sep 28, 2015</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span>26405</span></td>
+			<td class="sbody-td"><span>Removed the following sentence with a broken link under <span class="text-base">Rejecting customer requests to increase the daily email recipient limit</span>: For more information about recipient limits and alternatives, see Bulk E-Mail and Daily Recipient Rate Limits.</span></td>
+			<td class="sbody-td">Oct 9, 2015</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span>27851</span></td>
+			<td class="sbody-td"><span>Re-inserted the following under <span class="text-base">Rejecting customer requests to increase the daily email recipient limit</span>: For more information about recipient limits and alternatives, see Recipient and sender limits.</span></td>
+			<td class="sbody-td">Nov 2, 2015</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">104676</td>
+			<td class="sbody-td"><span lang="EN-US"><span><span>Added &quot;Speak Up!&quot; asset and tag &quot;SUE_O365TSPPP&quot;.</span></span></span></td>
+			<td class="sbody-td">Jul 24, 2019</td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/111008">111008</a></td>
+			<td class="sbody-td">- Title change<br>
+			- Replace the &ldquo;policy&rdquo; in title and content with &ldquo;guideline&rdquo;<br>
+			- Apply the new template</td>
+			<td class="sbody-td">Nov 18, 2019</td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/116532" managed-link="" target="_blank">116532</a></td>
+			<td class="sbody-td">Updated customer facing email template.</td>
+			<td class="sbody-td">April 16, 2020</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+<a aria-live="assertive" bookmark-id="toc" data-bi-name="content-anchor-link" href="https://support.microsoft.com/api/preview#toc" managed-link="" tabindex="0" target="">R</a><a aria-live="assertive" bookmark-id="t" data-bi-name="content-anchor-link" href="https://support.microsoft.com/api/preview#t" managed-link="" tabindex="0">eturn to top</a></div>
+
+<div class="kb-securedata-section section">Steps to reproduce:<br>
+Product Bug Number: <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=11362" id="kb-link-2" target="_self">CI 11362</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=11996" id="kb-link-3" target="_self">CI 11996</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=12221" id="kb-link-4" target="_self">CI 12221</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=12605" id="kb-link-5" target="_self">CI 12605</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=13305" id="kb-link-6" target="_self">CI 13305</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=13195" id="kb-link-7" target="_self">CI 13195</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=14058" id="kb-link-8" target="_self">CI 14058</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=14061" id="kb-link-9" target="_self">CI 14061</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=14034" id="kb-link-10" target="_self">CI 14034</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=14356" id="kb-link-11" target="_self">CI 14356</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=15718" id="kb-link-12" target="_self">CI 15718</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=17852" id="kb-link-13" target="_self">CI 17852</a>, <a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/contentidea/lists/request/dispform.aspx?id=25654" id="kb-link-14" target="_self">CI 25654</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/24508" id="kb-link-15" target="_self">CI 24508</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/26405" id="kb-link-16" target="_self">CI 26405</a>, <a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/contentidea/contentidea/_workitems/edit/27851" id="kb-link-17" target="_self">CI 27851</a>,&nbsp;<a data-content-id="" data-content-type="" href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems/edit/61779?fullScreen=false" target="_blank">CI&nbsp;61779</a>, <a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/104676" managed-link="" target="_blank">CI&nbsp;104676</a>, <a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/116532" managed-link="" target="_blank">CT 116532</a><br>
+Author ID (email alias): jhayes<br>
+Writer ID (email alias): v-lavewo, vickieg, dabut, v-kiwil, v-hofern<br>
+Tech Review ID (email alias):<br>
+Contributor ID (email alias): v-kiwil, a-kauchi, v-jeseid, jhayes<br>
+Editor ID (email alias):<br>
+Confirm Article has been Tech Reviewed: Yes<br>
+Confirm Article released for Publishing: Yes</div>

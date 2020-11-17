@@ -1,0 +1,98 @@
+﻿<header><h1>A list of the Simple Network Time Protocol (SNTP) time servers that are available on the Internet</h1></header><div class="kb-notice-section section">BUG #: <a href="http://bugcheck/bugs/ContentMaintenance/117171.asp" target="_blank" title="Link only available for Microsoft corporate network users">117171 (Content Maintenance)</a></div>
+
+<div class="kb-notice-section section"><a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems/edit/96723">CONTENT IDEA REQUEST 96723</a></div>
+<div class='kb-summary-section section'>This article describes the Simple Network Time Protocol (SNTP) time servers that are available on the Internet.</div><div class="kb-moreinformation-section section">There are two levels, or tiers, of Network Time Protocol (NTP) time servers that are available on the Internet. The NTP is defined in Request for Comments (RFC) 1305.<br>
+<br>
+The first-level time servers are primarily intended to act as source time servers for second-level time servers. The first-level time servers may also be capable of providing mission-critical time services. Some first-level time servers may have a restricted access policy.<br>
+<br>
+Second-level time servers are intended for general SNTP time service needs. Second-level time servers usually enable public access. We recommend that you use second-level time servers for typical SNTP time server configuration because they are usually located on a closer network that can produce faster updates.<br>
+<br>
+We also recommend that you research any time server selection to make sure that it meets your specific time server requirements.
+<h3 class="sbody-h3">Time server list</h3>
+<span class="text-base">Note</span> When you click any of the following links, you may receive an error message that resembles the following:<br>
+&nbsp;
+<div class="sbody-error">There is a problem with this website&#39;s security certificate.<br>
+<br>
+The security certificate presented by this website was not issued by a trusted certificate authority.<br>
+<br>
+Security certificate problems may indicate an attempt to fool you or intercept any data you send to the server.<br>
+<br>
+<span class="text-base">We recommend that you close this webpage and do not continue to this website.</span></div>
+<br>
+If you receive this error message or a similar error message, you can continue to the website.<br>
+&nbsp;
+<ul class="sbody-free_list">
+	<li>For the list of Stratum One time servers, go to the following website:<br>
+	&nbsp;
+	<div class="indent"><a href="http://support.ntp.org/bin/view/Servers/StratumOneTimeServers" managed-link="" target="_blank">Stratum One Time Servers</a></div>
+	</li>
+	<li>For the list of Stratum Two time servers, go to the following website:<br>
+	&nbsp;
+	<div class="indent"><a href="http://support.ntp.org/bin/view/Servers/StratumTwoTimeServers" managed-link="" target="_blank">Stratum Two Time Servers</a></div>
+	</li>
+	<li>For the list of NTP pool servers, go to either of the following websites:<br>
+	&nbsp;
+	<div class="indent"><a href="http://support.ntp.org/bin/view/Servers/NTPPoolServers" managed-link="" target="_blank">NTP Pool Time Servers</a><br>
+	<br>
+	<a href="http://www.pool.ntp.org" managed-link="" target="_blank"><span>pool.ntp.org</span></a></div>
+	</li>
+</ul>
+Microsoft does not maintain a list of time servers or recommend one time server over another. These links are for your reference and research to select the time servers that are appropriate for your configuration. Microsoft does recommend that workgroup computers sync from the Microsoft NTP server (time.windows.com). If another time source is desired, we recommend that you use one of the Stratum Two time servers. To find the Stratum Two time servers that are available, go to the following website:<br>
+&nbsp;
+<div class="indent"><a href="http://support.ntp.org/bin/view/Servers/StratumTwoTimeServers" managed-link="" target="_blank">Stratum Two Time Servers</a></div>
+<br>
+<br>
+<span class="text-base">Note</span> Please read the &quot;Rules Of Engagement&quot; before you use the Stratum Two time servers list. To read the &quot;Rules of Engagement,&quot; go to the following website:<br>
+&nbsp;
+<div class="indent"><a href="http://support.ntp.org/bin/view/Servers/RulesOfEngagement" managed-link="" target="_blank">Rules of Engagement</a></div>
+<br>
+<br>
+Domain-joined member computers and application servers should be configured to synchronize time by using the domain hierarchy that is described in the &quot;Domain Hierarchy-Based Synchronization&quot; topic at the following Microsoft TechNet website:<br>
+&nbsp;
+<div class="indent"><a href="http://technet.microsoft.com/library/cc773013(WS.10).aspx" managed-link="" target="_blank">How the Windows Time Service Works</a></div>
+<br>
+<br>
+To synchronize non-domain-joined (workgroup) workstations or servers, go to the following Microsoft TechNet website:<br>
+&nbsp;
+<div class="indent"><a href="http://technet.microsoft.com/library/cc757721(WS.10).aspx" managed-link="" target="_blank">Configure a manual time source for a selected client computer</a></div>
+</div>
+<div class="kb-references-section section"><span>For more information about how to use time services in Windows Server and Windows NT, click the following article numbers to view the articles in the Microsoft Knowledge Base:</span><br>
+&nbsp;
+<div class="indent"><span><a href="/help/888794" id="kb-link-9">888794 </a> Considerations when hosting Active Directory domain controller in virtual hosting environments</span></div>
+
+<div class="indent">&nbsp;</div>
+
+<div class="indent"><span><a href="/help/216734" id="kb-link-11">216734 </a> How to configure an authoritative time server in Windows 2000</span><br>
+&nbsp;</div>
+
+<div class="indent"><span><a href="/help/224799" id="kb-link-12">224799 </a> Basic Operation of the Windows Time Service</span><br>
+&nbsp;</div>
+
+<div class="indent"><span><a href="/help/951531" id="kb-link-13">951531 </a> The W32Time service does not synchronize the CMOS clock time to the Internet time on a Windows XP or Windows Server 2003-based computer after the W32Time service stops</span><br>
+&nbsp;</div>
+
+<div class="indent"><span><a href="/help/875495" id="kb-link-14">875495 </a> How to detect and recover from a USN rollback in Windows Server 2003</span><br>
+&nbsp;</div>
+
+<div class="indent"><span><a href="/help/939322" id="kb-link-15">939322 </a> Support boundary to configure the Windows Time service for high accuracy environments</span><br>
+&nbsp;</div>
+
+<div class="indent"><span><a href="/help/897615" id="kb-link-16">897615 </a> Support policy for Microsoft software running in non-Microsoft hardware virtualization software</span><br>
+&nbsp;</div>
+
+<div class="indent">&nbsp;</div>
+&nbsp;
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span><span class="bold btn-link">Third-party information disclaimer</span></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p>&nbsp;</p>
+
+<div class="kb-collapsible kb-collapsible-collapsed"><span><span>Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.</span></span></div>
+</div>
+</div>
+</div>
+</div>
+<div class='kb-securedata-section section'>w32time w32tm sntp</div><div class='kb-securedata-section section'><span class='text-base'>Author: bobdrake</span><span class='text-base'><br></span><span class='text-base'>Writer: v-thomr</span><span class='text-base'><br></span><span class='text-base'>Tech reviewer: jairoc; arrenc</span><span class='text-base'><br></span><span class='text-base'>Editor: v-crweb; v-jesits</span></div>

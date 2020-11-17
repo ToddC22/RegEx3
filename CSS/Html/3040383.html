@@ -1,0 +1,1027 @@
+﻿<header><h1>ASMS – How to Perform Subscription Ownership Transfers</h1></header><p><span lang="EN">Submit a </span><a data-content-id="" data-content-type="" href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder=" managed-link="" target="_blank">ModTrack</a><span lang="EN"> request to update this TSG.</span></p>
+
+<h3>Known Issues</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="93">
+			<p><strong>Date </strong></p>
+			</td>
+			<td width="226">
+			<p><strong>Issue </strong></p>
+			</td>
+			<td width="274">
+			<p><strong>Approved Workaround </strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="93">
+			<p>03/29/2019</p>
+			</td>
+			<td width="226">
+			<p>CMAT SOT Error Message:&nbsp;</p>
+
+			<p>&ldquo;The account id is commerce account, from legacy account to commerce account is not supported.&rdquo;</p>
+			</td>
+			<td width="274">
+			<p>Treat this error message as a bug and escalate to PayOps.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h3>Overview</h3>
+
+<p>This TSG provides guidance on how to execute a subscription ownership transfer (SOT).&nbsp;</p>
+
+<p><strong>Note</strong>: When a SOT is not applicable, a simple or forced migration may be required. Refer to the following TSGs for guidance: <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-US/help/2856526" managed-link="" target="_blank">Simple Migration </a> or <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-US/help/2892044" managed-link="" target="_blank">Forced Migration</a>.</p>
+
+<ul>
+</ul>
+
+<p><strong>Applies To: </strong>All customers.</p>
+
+<h3><a id="Policy" name="Policy"></a>Policy</h3>
+
+<p>Customers may contact support for assistance with transferring either the services or the billing of their subscription from one account to another. In these instances, inform the customer that these actions are self-serve and can be performed by following the steps outlined in the public facing document: <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/billing/billing-subscription-transfer" managed-link="" target="_blank">Transfer billing ownership of an Azure subscription to another account</a>.&nbsp;</p>
+
+<p><strong>Note</strong>: Billing-only SOTs performed by SEs for customers must be done in CST.</p>
+
+<p><span>If the customer has already attempted the self-serve option but experienced an issue, you can assist the customer by performing the SOT on their behalf. Before doing so, you should note the following:&nbsp;</span></p>
+
+<ol>
+	<li><strong>Ensure the customer&#39;s subscription is listed as one of the </strong><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/billing/billing-subscription-transfer#supported-subscription-types" managed-link="" target="_blank">subscription types supported for SOTs</a>.</li>
+	<li><strong>The following legacy subscriptions and scenarios are not eligible for transfer of ownership:</strong>
+	<ul>
+		<li>Free Trial subscriptions.</li>
+		<li>SOTs from Azure Commercial to Azure Government (Fairfax) and vice versa.</li>
+		<li>Cloud Solution Provider Partner (CSP) administrators are not allowed to transfer Reserved Instances (RIs) between partners. See the <em>Offer Specific Restrictions </em>section of <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-US/help/4054281" managed-link="" target="_blank">TSG 4054281</a> for more details.</li>
+		<li>Azure Pass subscriptions.
+		<ul style="list-style-type:circle">
+			<li>A migration may be considered as a workaround. Refer to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-US/help/2658611" managed-link="" target="_blank">TSG 2658611</a> for more details.</li>
+		</ul>
+		</li>
+		<li>Azure in Open (AIO) subscriptions.
+		<ul style="list-style-type:circle">
+			<li>It is not possible to transfer AIO subscriptions between accounts. However, if a customer wants to transfer an AIO subscription to an OrgID, you can refer them to the instructions on how to <a data-content-id="" data-content-type="" href="https://azure.microsoft.com/en-us/documentation/articles/billing-add-office-365-tenant-to-azure-subscription/" managed-link="" target="_blank">link their Office 365 tenant to their Azure subscription</a>.</li>
+			<li>If a customer requires further assistance with this process, engage the Cloud Identity Team.</li>
+			<li>Refer to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-US/help/2989663" managed-link="" target="_blank">TSG 2989663</a> for more details.</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li><strong>The following modern subscriptions and scenarios are not eligible for transfer of ownership:&nbsp;</strong>
+	<ul>
+		<li>Destination&nbsp;Account&rsquo;s Azure Access Pass is&nbsp;a Free Trial and the Cap State is Active.
+		<ul style="list-style-type:circle">
+			<li>Attempting to perform an SOT on such a subscription will yield the following message:&nbsp;<em>Error: Code StatusInvalid, Message: Cannot transfer subscription to rating asset with cap state Active.</em></li>
+			<li>Convert the Free Trial in the destination subscription&nbsp;to a paid offer. Then proceed with the SOT.</li>
+		</ul>
+		</li>
+		<li>Destination&nbsp;Account&rsquo;s Azure Access Pass is a&nbsp;Free Trial and is in an Inactive state due to the Cap State being expired.</li>
+		<li>Destination Account&rsquo;s Azure Access Pass is Paid but the Azure Access Pass is in an Inactive state due to Dunning/Overdue Invoices.</li>
+	</ul>
+	</li>
+	<li><strong>Orphaned legacy accounts, cannot be transferred to Modern.</strong>
+	<ul>
+		<li>To resolve this issue, transfer the legacy subscriptions to a non-orphaned legacy account and transfer that account into Modern.</li>
+	</ul>
+	</li>
+	<li>&nbsp;<strong><span>Some</span></strong> <strong><span>marketplace subscriptions can be transferred during a SOT</span>.</strong> See <a href="https://internal.support.services.microsoft.com/en-US/help/2778151" managed-link="" target="_blank">TSG 2778151</a>.&nbsp;</li>
+	<li><strong><span lang="EN">Microsoft Partner Network (MPN) entitlements cannot be moved once used.</span></strong><span lang="EN"> However, customers who have -25p (only) can transfer via the self-serve option in the portal.</span>
+	<ul>
+		<li><span lang="EN"> </span><span lang="EN">MPN subscriptions (-25P) can be transferred from MSA accounts to OrgID accounts with the same email address. </span></li>
+	</ul>
+	</li>
+	<li><strong><span lang="EN">Customers must pay all Dunning, Delay Write-off, or Write-off charges before an SOT can be performed.</span></strong>
+	<ul>
+		<li><strong><span lang="EN"> </span></strong><span lang="EN">An SOT should not be performed if the subscription has any outstanding charges. Escalate to your TA for approved exceptions.</span></li>
+	</ul>
+	</li>
+	<li><span lang="EN"> </span><strong><span lang="EN">Enterprise Agreement (EA) subscriptions are exempt from the Payment Instrument (PI) policy.</span></strong>
+	<ul>
+		<li><span lang="EN">EA customers can use the EA portal or contact support to have an SOT performed.&nbsp;</span></li>
+		<li><span lang="EN">An Enrollment may be billed across multiple countries.</span></li>
+	</ul>
+	</li>
+	<li><strong>Subscriptions&nbsp;can&nbsp;be transferred to a different account in a different region (or country.)</strong>
+	<ul>
+		<li>In order to change regions or countries, your customer must create a new account in the region&nbsp;they wish to move their data and services to.</li>
+		<li>After the new account is created, your customer can perform an SOT via self-serve, to move their data and services to the desired region (new account).
+		<ul style="list-style-type:circle">
+			<li>If your customer is not able to perform a self-serve SOT, perform the SOT on their behalf.</li>
+		</ul>
+		</li>
+		<li><span lang="EN"><strong>Note:&nbsp;</strong>Azure Internal Registration Systems (AIRS) subscriptions are not limited and can be transferred between regions.</span></li>
+	</ul>
+	</li>
+	<li><strong><span lang="EN">Paid Technical Support Subscriptions are eligible to be moved via an SOT.</span></strong></li>
+	<li><strong><span lang="EN">CSP (-145P) can only be moved to another account containing -145P subscriptions</span></strong><span lang="EN">.</span>
+	<ul>
+		<li>Refer to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3078989/azuresupport-cspoffer-0145p" managed-link="" target="_blank">TSG 3078989</a> for guidance on how to perform an SOT for CSP partners.</li>
+	</ul>
+	</li>
+	<li><strong>Approval is required for customers who want to transfer a subscription to an account with sponsored subscriptions (or to a sponsored account).</strong>
+	<ul>
+		<li>Refer to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-US/help/3014508" managed-link="" target="_blank">TSG 3014508</a> for additional guidance.</li>
+	</ul>
+	</li>
+	<li><strong>After an SOT, Visual Studio Team Services (VSTS) accounts connected to Azure subscriptions may temporarily lose access when the connected Azure subscription is cancelled.</strong>
+	<ul>
+		<li><span lang="EN">If it has been over an hour since the SOT process was completed and the customer still does not have access to their VSTS account, refer to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2909152" managed-link="" target="_blank">TSG 2909152</a> for guidance.</span></li>
+	</ul>
+	</li>
+	<li><strong>Customers will lose access to RI benefits unless the RI purchases are also moved to the same account</strong>. <span lang="EN">In these instances, </span>assist the customer in moving the RI purchases between accounts by following the guidance outlined in <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4054281" managed-link="" target="_blank">TSG 4054281</a>.</li>
+	<li><strong>If a Support Plan or RI service needs to be cancelled and re-purchased post SOT, only the source account payment instrument will be eligable for the refund.&nbsp;&nbsp;</strong></li>
+	<li><strong><span lang="EN">SOT from a </span><span lang="EN">Microsoft Online Subscription Program (MOSP) account</span><span lang="EN"> to an EA account.</span></strong>
+	<ol start="1" style="list-style-type:lower-alpha">
+		<li><span lang="EN">Make sure the MOSP subscription does not have any pending charges. If there are pending charges, request the customer to settle the balance. </span></li>
+		<li><span lang="EN">Make a note of the subscription tenant ID from Jarvis. </span></li>
+		<li>
+		<p>Perform SOT using CST.&nbsp;Refer to the&nbsp;<a data-content-id="" data-content-type="" href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Finternal.support.services.microsoft.com%2Fen-us%2Fhelp%2F4487933%232&amp;data=02%7C01%7Cv-ishan%40microsoft.com%7C9b1b6f56f9a04c7e025908d81451f437%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637281689539829344&amp;sdata=PQFKbPNojgVkFDsI9JB9La%2FvXdLmmKF76Zo5R9LINMo%3D&amp;reserved=0" managed-link="" target="">Legacy subscriptions blade section of TSG 4487933</a> for additional guidance on transferring the Azure subscription.&nbsp;<span>In CST, there is no need to convert the subscription from Non-</span><span>EA to EA offer. Instead, do the following: </span></p>
+
+		<ol start="1" style="list-style-type:lower-roman">
+			<li>
+			<p><span>Select&nbsp;</span><em>Transfer Subscription.</em></p>
+			</li>
+			<li>
+			<p><span>Set <em>Select Destination Transfer Type</em>&nbsp;to &quot;EA&quot;.</span></p>
+			</li>
+			<li>
+			<p><span>Transfer the non-EA Azure subscription to the account in EA as an Enterprise Agreement/Enterprise DevTest offer.</span></p>
+			</li>
+		</ol>
+		</li>
+		<li><span lang="EN">Follow the normal steps to transfer the subscription to the destination EA account. Make sure the Target PI is selected as <em>Without PaymentInstrument. </em></span>
+		<ul style="list-style-type:disc">
+			<li><span lang="EN">Confirm in the source account if the subscription Status, Entitlement Status, and Fulfillment Status are Suspended. </span></li>
+			<li><span lang="EN">Confirm via CMAT if the subscription has been transferred to the destination account and is active. </span></li>
+			<li><span lang="EN">Once the subscription is transferred successfully, update the tenant ID of the destination account to the subscription on Jarvis. Refer to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2820621" managed-link="" target="_blank">TSG 2820621</a> for guidance on updating tenant IDs.</span></li>
+			<li><span lang="EN">Ask the customer to change the service admin of the subscription, then try to access it on the management portal. </span></li>
+			<li><strong><span lang="EN">Note:</span></strong><span lang="EN"> Co-admins do not get moved if there was a change of tenant. </span>However, <span lang="EN">RBAC permissions and Managed Identities&nbsp;are lost when transferring to a different tenant</span><span lang="EN">. For more details see the public facing page <a href="https://docs.microsoft.com/en-us/azure/role-based-access-control/transfer-subscription#understand-the-impact-of-transferring-a-subscription" managed-link="" target="_blank">here</a>.&nbsp;</span></li>
+			<li>Should you receive an error when performing this action engage the <strong><em>CEE - Enterprise (Azure Ops) team.&nbsp;</em></strong></li>
+		</ul>
+		</li>
+	</ol>
+	</li>
+	<li><strong>SOT from an EA account to MOSP account.</strong>
+	<ul>
+		<li>Confirm if the new subscription offer type requires a credit card. If so, ensure the destination account has a credit card on file before executing the SOT.</li>
+		<li>Convert the source subscription to subscription type: &quot;Visual Studio Professional Offer&quot; without a PI.</li>
+		<li>Follow the normal SOT process to move the subscription.</li>
+		<li>Once the transfer is complete, convert the subscription to the appropriate offer type (e.g. PAYG).</li>
+	</ul>
+	</li>
+	<li><strong>When both subscriptions are on MINT and AIRS is not involved, an SOT can be performed.</strong><br>
+	&nbsp;</li>
+	<li><strong><span lang="EN">SOTs when the source and destination accounts are on different platforms (OMS vs MINT) are not supported. </span></strong> MINT Accounts must be backfilled before an SOT can be executed. Follow the guidance in the <em><a bookmark-id="Backfilling_MINT" href="#Backfilling_MINT" managed-link="">Backfilling MINT Accoounts</a> </em>section below.
+	<ul>
+		<li><span lang="EN">The &quot;Backfill&quot; process must be used to align both accounts on the OMS platform.</span></li>
+	</ul>
+	</li>
+</ol>
+
+<p class="align-center"><span asset="4054499" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4054499]</span></p>
+
+<ol start="20">
+	<li><strong>Always engage ASE first when you are asked to engage Azure Commerical Experiences, Signup and Provisioning (ACE)</strong> (unless there is an emergency). Do not use the ASE template as a way to open ICM tickets to any other team. ASE is not the same as ICM.</li>
+	<li>
+	<p><span><span><strong>A circular SOT is an SOT from account A to B, and then back from B to A</strong>. When this is performed, the Subscription Tenant ID does not automatically change and causes access issues for customers. In these situations you should work with your TA, who will follow the guidance in <a href="https://internal.support.services.microsoft.com/en-US/help/3188107" managed-link="" target="_blank">TSG 3188107</a>&nbsp;to update the Tenant ID.&nbsp;</span></span></p>
+	</li>
+	<li>
+	<p><strong><span>Important</span></strong>: When assisting a customer, you may be required to provide them with a copy of details that contain Personal Identifiable Information (PII) (Ex: copy of invoice). In these scenarios, you must always be sure to delete these downloads from your computer&rsquo;s hard drive <span>as soon as you are done using them. This is to </span><span>avoid accidently exposing the customer&rsquo;s PII.</span></p>
+	</li>
+	<li>
+	<p><strong>Subscription transfer history lookup (TA/PTA Only)</strong>. Should you need to know if a customer&#39;s subscription has been transferred in the past, engage your TA/PTA who will review this information via the OMS Admin Console tool.</p>
+
+	<ul>
+		<li>
+		<p>If you are a TA/PTA see <a href="https://internal.support.services.microsoft.com/en-us/help/2651548" managed-link="" target="_blank">TSG&nbsp;2651548</a>&nbsp;for access and steps.</p>
+		</li>
+	</ul>
+	</li>
+</ol>
+
+<h3><a id="Customer Experience and Provisioning" name="Customer Experience and Provisioning"></a>Customer Experience and Provisioning</h3>
+
+<p>Some customers can transfer their services and billing via the Azure portal&rsquo;s self-serve option. A list of supported subscriptions can be found <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/billing/billing-subscription-transfer#supported-subscription-types" managed-link="" target="_blank">here</a>.</p>
+
+<p><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/billing/billing-mca-request-billing-ownership" managed-link="" target="_blank">Public facing guidance on how to transfer billing</a> is also available.</p>
+
+<p><strong>Note</strong>: In these scenarios, there is an option for the customer to select or de-select transferring outside of their organization. Have the customer de-select this option and the transfer will go through.</p>
+
+<h3><a id="Support Scenarios" name="Support Scenarios"></a>Support Scenarios</h3>
+
+<p>In instances where the customer is unable to complete a SOT via the&nbsp; self-serve option in the portal, or we need to execute a SOT as a workaround, follow the steps below:</p>
+
+<p><strong><span lang="EN">Step1: Determine if the customer&rsquo;s subscription is supported by SOT. </span></strong><span lang="EN">See list of supported subscriptions </span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/cost-management-billing/understand/subscription-transfer#supported-subscription-types" managed-link="" target="_blank">here</a><span lang="EN">.&nbsp;</span></p>
+
+<ul>
+	<li><span lang="EN">If so, proceed to Step 2. </span></li>
+	<li><span lang="EN">If not, explain to the customer that their request is currently not supported. If applicable, provide the customer with the option of a migration. See <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-US/help/2856526" managed-link="" target="_blank">TSG 2856526</a> for guidance on performing a migration.</span><br>
+	&nbsp;</li>
+</ul>
+
+<p><strong><span lang="EN">Step 2: Confirm the customer&rsquo;s intentions. Do they want to transfer only the billing, or both the billing and services?</span></strong></p>
+
+<p><strong><span lang="EN">Step 3: Establish the eligibility of the transferee and the transferor by gathering the details outlined below.</span></strong><span lang="EN"> For detailed steps to confirm the eligibility of the transferee and the transferor, see <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2646876" managed-link="" target="_blank">TSG 2646876</a>.</span></p>
+
+<p class="indent-1"><strong><span lang="EN">Existing Account Owner</span></strong></p>
+
+<ul>
+	<li class="indent-1"><strong>MSA:</strong> [xxxxx@www.com from CMAT and Jarvis]</li>
+	<li class="indent-1"><strong>Organization Name:</strong> [Company Name from CMAT]</li>
+	<li class="indent-1"><strong>Country:</strong> [Country Name from CMAT]</li>
+</ul>
+
+<p class="indent-1"><strong>New</strong><strong> Account Owner </strong></p>
+
+<ul>
+	<li class="indent-1"><strong>MSA:</strong> [xxxxx@www.com]</li>
+	<li class="indent-1"><strong>Name:</strong> [FirstName LastName]</li>
+	<li class="indent-1"><span lang="EN"></span><strong>Country:</strong> [Country Name]<span lang="EN"></span></li>
+</ul>
+
+<p><strong>If an AA cannot approve via email:</strong></p>
+
+<p>If an Account Admin (AA) does not have a mailbox or cannot approve the SOT through email, they can do the following:</p>
+
+<ol start="1" style="list-style-type:lower-alpha">
+	<li>Log into the Azure portal with the AA ID.</li>
+	<li>Add an online update (Webnote/log) to approve the SOT.</li>
+</ol>
+
+<p>This response can serve as the AA&rsquo;s approval to perform the SOT. To view the customer&rsquo;s online update,&nbsp;scroll to the <strong>Communication</strong> section in the Service Desk case.</p>
+
+<p><strong>If&nbsp;AA in CMAT is different from AA in Jarvis:</strong></p>
+
+<p>If the SE can obtain approval from both AA&#39;s, it is a standard SOT.</p>
+
+<p>If&nbsp;it is not a standard SOT:</p>
+
+<ol start="1" style="list-style-type:lower-alpha">
+	<li>Escalate the task to the TA/PTA for further review, along with the Force SOT details.</li>
+	<li>The TA/PTA must further review this request, and&nbsp;seek additional approval or information before we approve the SOT to avoid additional escalation.</li>
+</ol>
+
+<p><strong>If the AA of the source and destination accounts do not match:</strong></p>
+
+<p>&nbsp;Send the following <em>Transfer Acknowledge Notification</em> by filling out the template below.</p>
+
+<p><strong><span lang="EN">Note: </span></strong>If the customer is unable to provide proof, you must follow the <a bookmark-id="Forced_SOT" href="#Forced_SOT" managed-link=""><em>Forced SOT</em></a> process outlined below.</p>
+
+<ul>
+	<li>If they do match, proceed to Step 4.</li>
+</ul>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>To:</strong> &lt;New subscription Owner&gt;<br>
+			<strong>Cc:</strong> &lt;Previous subscription Owner&gt;<br>
+			<strong>Subject:</strong> Request for transfer of subscription ownership has been received<br>
+			<strong>Message body: </strong></p>
+
+			<p>Hello &lt;New Subscription Owner name&gt;:</p>
+
+			<p>On &lt;date&gt;, we received a request to transfer the subscription ownership for &lt;company name&gt; from:</p>
+
+			<p>&lt;Previous Subscription Owner name&gt; &lt;MSA&gt; To: &lt;New subscription Owner name&gt; &lt;MSA&gt;</p>
+
+			<p><strong>If you have not requested a transfer of subscription ownership, please <a data-content-id="" data-content-type="" href="https://azure.microsoft.com/en-us/support/options/" managed-link="" target="_blank">contact Azure Support </a>immediately. </strong></p>
+
+			<p>Sincerely,<br>
+			&lt;insert your signature block&gt;</p>
+
+			<p>If you have received this message in error, please contact us using one of the preceding methods. For more information, please see our <a data-content-id="" data-content-type="" href="https://azure.microsoft.com/en-us/support/legal/" managed-link="" target="_blank">Privacy Statement</a>.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><strong><span lang="EN">Step 4: Verify whether the customer&#39;s accounts are part of the <em>same tenant</em> or if they are on <em>different tenants</em>.</span></strong></p>
+
+<p>Obtain the tenant IDs for both the source <strong>and</strong> destination subscriptions in Jarvis (<strong>AzureRT &gt;</strong> <strong>Subscription Management &gt; Get subscription tenant ID</strong>).&nbsp;</p>
+
+<ul>
+	<li>If the tenant IDs match, it is a <strong><em>within tenant</em></strong> transfer.</li>
+	<li>If the tenant IDs do not match, it is a <strong><em>cross tenant</em></strong> transfer.</li>
+</ul>
+
+<p><span lang="EN">Transferring services and billing from one account to another when the accounts are on different tenants has serious effects that <strong>the customer must be aware of prior</strong> to the SOT. If you observe that your customer&rsquo;s accounts are on different tenants, note the following:</span></p>
+
+<ul style="list-style-type:disc">
+	<li>Share the <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/active-directory/" managed-link="" target="_blank">Active Directory Documentation</a> article with the customer to help them identify AAD dependencies.
+
+	<ul style="list-style-type:disc">
+		<li><strong>Note:</strong> If the customer is unable to find any AAD dependencies, you can try reviewing the customer&#39;s usage report. If there are still questions or concerns after reviewing the customer&#39;s usage report or hearing back from the customer, engage your TA/PTA/TL for further assistance.</li>
+	</ul>
+	</li>
+	<li>The following resources could be impacted by an SOT with an AAD tenant:</li>
+	<li class="indent-1"><strong>Azure AD Domain Services</strong> are unable to be transferred or migrated as this is a feature tied to a specific AAD tenant.</li>
+	<li class="indent-1"><strong>Azure Key Vaults</strong> could be impacted by a SOT if the tenant ID for these resources are not updated. See the <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/key-vault/key-vault-subscription-move-fix" managed-link="" target="_blank">Change a key vault tenant ID after a subscription move</a> page for more information.</li>
+	<li class="indent-1"><strong>SQL related users and databases</strong> could be impacted, especially if the customer uses an AAD related authentication. See the <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure" managed-link="" target="_blank">Configure and manage Azure Active Directory authentication with SQL</a> page for more information.</li>
+	<li class="indent-1"><strong>App Services</strong> configured with AAD authentication could be impacted.</li>
+	<li class="indent-1"><strong>Note: </strong>If your customer has specific service questions about the above list, they will need to contact technical support to help them understand how to manage the potential impact, after the ownership change or directory change.</li>
+</ul>
+
+<p><strong>Note:</strong>&nbsp;Circular SOTs occur when an SOT is performed from account A to B, and then back from B to A. When this is performed, the Subscription Tenant ID does not automatically change and causes access issues for customers. In these situations you should work with your TA, who will follow the guidance in <a href="https://internal.support.services.microsoft.com/en-US/help/3188107" managed-link="" target="_blank">TSG 3188107</a> to update the Tenant ID.&nbsp;</p>
+
+<h4><strong>Within Tenant Transfer</strong></h4>
+
+<p class="indent-1"><span lang="EN">If the source and destination accounts are both OrgIDs and are part of the same domain (e.g. joe@contoso.com and bob@contoso.com) then the SOT is considered to be within the same tenant.</span></p>
+
+<p class="indent-1"><strong>SOT within Tenant (Within Company Transfer) &ndash;</strong> If the checkbox <strong>is checked</strong> for &ldquo;Is Service Ownership Transfer&rdquo;.&nbsp;</p>
+
+<ul>
+	<li class="indent-1">RBAC Roles &ndash; Maintained, no destruction or change</li>
+	<li class="indent-1">Destination billing owner is added as service administrator</li>
+	<li class="indent-1">Subscription Directory &ndash; No change</li>
+	<li class="indent-1">Account Administrator &ndash; Becomes destination e-mail</li>
+	<li class="indent-1">Billing responsibility &ndash; Becomes destination e-mail</li>
+</ul>
+
+<p class="indent-1"><strong>SOT within Tenant (Within Company Transfer) &ndash;</strong> If the checkbox <strong>is not checked</strong> for &ldquo;Is Service Ownership Transfer&rdquo;.</p>
+
+<ul>
+	<li class="indent-1">RBAC Roles &ndash; Maintained, no destruction or change</li>
+	<li class="indent-1">Subscription Directory &ndash; No change</li>
+	<li class="indent-1">Account Administrator &ndash; Becomes destination e-mail</li>
+	<li class="indent-1">Billing responsibility &ndash; Becomes destination e-mail<br>
+	&nbsp;</li>
+</ul>
+
+<h4><strong><a id="Cross-TenantTransfers" name="Cross-TenantTransfers"></a>Cross-Tenant Transfers</strong></h4>
+
+<ul>
+	<li class="indent-1"><span lang="EN">If the source and destination accounts are both OrgID but the AAs have different email domains (e.g. joe@contoso.com and bob@fabrikam.com) then the SOT is considered to be cross-tenant.</span></li>
+	<li class="indent-1"><span lang="EN">If either the source account or destination accounts are MSA, or if both are MSA, the SOT will be considered a cross-tenant.</span></li>
+	<li class="indent-1">Any services or deployments that are dependent upon the specific AAD tenant will be interrupted during a cross-tenant SOT. In this case the customer will need to manually re-configure the AAD tenant. <strong>You must inform the customer of this and obtain customer approval before performing the SOT</strong>.</li>
+</ul>
+
+<p class="indent-1"><strong>Cross-Tenant SOT &ndash;</strong> If the checkbox <strong>is checked</strong> for &ldquo;Is Service Ownership Transfer.&rdquo;</p>
+
+<ul>
+	<li class="indent-1">RBAC Roles and Managed Identities&nbsp;&ndash; Removed from subscription (source no longer has any access to resources or subscription); destination e-mail becomes Subscription Owner</li>
+	<li class="indent-1">Subscription Directory &ndash; Changes to destination directory</li>
+	<li class="indent-1">Account Administrator &ndash; Becomes destination e-mail</li>
+	<li class="indent-1">Billing responsibility &ndash; Becomes destination e-mail</li>
+</ul>
+
+<p class="indent-1"><strong>Cross-Tenant SOT &ndash;</strong> If the checkbox <strong>is not checked </strong>for &ldquo;Is Service Ownership Transfer.&rdquo;</p>
+
+<ul>
+	<li class="indent-1">RBAC Roles &ndash; RBAC will remain in the source account</li>
+	<li class="indent-1">Subscription Directory &ndash; Remains in the source directory</li>
+	<li class="indent-1">Account Administrator &ndash; Becomes destination e-mail</li>
+	<li class="indent-1">Billing responsibility &ndash; Becomes destination e-mail</li>
+</ul>
+
+<p class="indent-1"><strong><span>IMPORTANT</span></strong><span>: Transferring services and billing from one account to another when the accounts are on different tenants has serious effects that the customer must be aware of prior to the SOT. <strong><span>If your customer&rsquo;s accounts are on different tenants, note the following</span></strong>:</span></p>
+
+<ul>
+	<li class="indent-1"><span>I<span>f you transfer only the billing of a subscription to a recipient in another Azure Active Directory (AAD) tenant, you can also choose to move the subscription to the recipient&rsquo;s tenant. In return, this will:</span>&nbsp;</span>
+
+	<ul style="list-style-type:circle">
+		<li class="indent-1"><span><span>Remove all existing role-based access control (RBAC) permissions and Managed Identities&nbsp;previously configured to manage Azure resources in the subscription</span>. </span></li>
+		<li class="indent-1"><span><span>Only allow the recipient to have permissions to manage the Azure resources</span>. </span></li>
+	</ul>
+	</li>
+	<li class="indent-1"><span><span>If you uncheck the box (indicating that you do not wish to transfer billing ownership) and do not move the subscription to the recipient&rsquo;s tenant,&nbsp; you should expect the following outcome:</span>&nbsp;</span>
+	<ul style="list-style-type:circle">
+		<li class="indent-1"><span><span>The existing RBAC permissions to manage Azure resources will be maintained</span>.</span></li>
+	</ul>
+	</li>
+</ul>
+
+<p><strong>Step 5: </strong><strong><span lang="EN">Before transferring an MPN, BizSpark/BizSpark Plus, or AIRS subscription, engage the appropriate team for approval as the destination account may need to be entitled first. </span></strong></p>
+
+<p><span lang="EN">If the customer does not have one of the following subscription types, proceed to the Step 6. </span></p>
+
+<ul>
+	<li><strong><span lang="EN"></span></strong><strong><span lang="EN">MPN: </span></strong>Confirm the customer&rsquo;s entitlement via the CSVT or MPN entitlement check tool. <span lang="EN">See</span><span lang="EN"> <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-US/help/2836909" managed-link="" target="_blank">TSG 2836909</a></span><span lang="EN"> </span><span lang="EN">for more details.</span><strong><span lang="EN"></span></strong></li>
+	<li><strong><span lang="EN"></span></strong><strong><span lang="EN">BizSpark: </span></strong><span lang="EN"></span><span lang="EN">See</span><span lang="EN"> <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-US/help/3070105" managed-link="" target="_blank">TSG 3070105</a><strong> </strong>for more details.&nbsp;</span></li>
+	<li><strong><span lang="EN">AIRS: </span></strong>Check if the destinantion is entitled to AIRS registration in the AIRS tool. If it is not, reqeust that the customer create a new AIRS registration with the destination account email address. Once the registration is approved, ASMS can perform an SOT.<strong><span lang="EN"></span></strong>&nbsp;See <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-US/help/2651524" managed-link="" target="_blank">TSG 2651524</a> for more details.&nbsp;
+	<ul>
+		<li>The only destination domains that an AIRS sub should be moved to are:
+		<ul>
+			<li>@microsoft.com</li>
+			<li>@gme.gbl</li>
+			<li>@prdtrs01.prod.outlook.com (aka. Torus migration)<br>
+			&nbsp;</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<p><strong><span lang="EN">Step 6: Once you have verified and collected all the information above, email the customer to confirm the following information:</span></strong></p>
+
+<ol>
+	<li><span lang="EN">Source Account ID: </span></li>
+	<li><span lang="EN">Source Subscription ID:</span></li>
+	<li><span lang="EN">Subscription Type: </span></li>
+	<li><span lang="EN">Destination Account ID:</span></li>
+	<li><span lang="EN">Advise the customer about the following transfer outcomes: </span>
+	<ul style="list-style-type:disc">
+		<li><span lang="EN">All data is transferred successfully. There is no loss of data during this process. </span></li>
+		<li><span lang="EN">If the subscription is transferred with an existing unpaid balance from the current billing cycle, the pending balance will NOT be transferred to the new PI. </span></li>
+		<li><span lang="EN">RBAC permissions and <span lang="EN">managed identities&nbsp;</span>are lost when transferring to a different tenant. </span>
+		<ul>
+			<li>Additional details can be found on the public facing page:&nbsp;<a href="https://docs.microsoft.com/en-us/azure/role-based-access-control/transfer-subscription#understand-the-impact-of-transferring-a-subscription" managed-link="" target="_blank">Transfer an Azure subscription to a different Azure AD directory (Preview)</a></li>
+		</ul>
+		</li>
+		<li><span lang="EN">VSTS accounts connected to Azure subscriptions may </span><span lang="EN">temporarily lose access when the connected Azure subscription is cancelled. </span>
+		<ul>
+			<li><span lang="EN">See the <a bookmark-id="Policy" href="#Policy" managed-link=""><em>Policy </em></a></span><span lang="EN">section above for guidance on how to resolve this issue. </span></li>
+		</ul>
+		</li>
+		<li><span lang="EN">All billing history will be lost for MINT-to-MINT SOTs. Customers must back up their billing data before the transfer. </span></li>
+		<li>The tenant remains the same for the destination subscription after it has been transferred to an account with the same tenant.</li>
+		<li>If the source and destination accounts are OMS, the 16-character Subscription ID and OrderID are changed once the transfer is completed. The 36-character Subscription GUID <strong>will not</strong> change.</li>
+		<li>If the source and destination accounts are MINT, the 16-character Subscription ID, OrderID, and the 36-character Subscription GUID <strong>will</strong> change.<br>
+		&nbsp;</li>
+	</ul>
+	</li>
+</ol>
+
+<p><strong>Step 7: Once the customer has confirmed the email above, proceed by executing the SOT based on the customer&rsquo;s decision from Step 2. </strong></p>
+
+<p><span lang="EN">All the above steps must be considered each time, as each customer scenario differs.</span></p>
+
+<p><strong>Note</strong>: If you have a large list of internal subscriptions that need to be moved, you can engage PayOps for a batch job. However, before engaging PayOps the AA must provide permission and the TA must verify the details in Jarvis and approve. Proof of approval must be provided in the PayOps ticket.</p>
+
+<p><strong>SOT Process for Billing ONLY (CST)</strong></p>
+
+<p class="indent-1"><span lang="EN">See the <a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/:w:/t/betaazureSM/EXvyphZC7c5HoJDtOkdW-GsBHWnHfUmFn4iHMweaJbVfhw?rtime=4AmHixoI10g" managed-link="" target="_blank">SOT Using CST document</a> for guidance and steps to execute the SOT in CST.</span></p>
+
+<p class="indent-1"><strong><span lang="EN">IMPORTANT</span></strong><span lang="EN">: The service</span> ownership transfer option is selected by default. In the event the customer wants to transfer <strong><em>only their billing</em></strong>, you need to unselect the check box to continue.</p>
+
+<p><strong><span>Billing Only SOT and Legacy Background</span></strong></p>
+
+<p class="indent-1"><span>In Azure, there have always been separate &lsquo;containers&rsquo; for <strong>Resources</strong> (Service Administration) and for <strong>Billing</strong> (Billing Administration). Until July 29, 2019, these containers have been linked in all operations. Support engineers operate on the Billing container in CMAT, which affects the Resource container. </span></p>
+
+<p class="indent-1"><span><span>This new &ldquo;Service Administration Transfer&rdquo; feature checkbox, in both CST and in the Self-Serve experience, for SOT unlinks the Resource and Billing containers from each other.</span></span></p>
+
+<p class="indent-1"><span>That means an SOT <strong>without the Resource</strong> container transfers <strong>only the Billing</strong> container to the destination tenant. The Resource container remains in the original tenant. The RBAC controls in the destination tenant now apply to the Billing container, while the RBAC controls in the original tenant now <strong>only</strong> apply to the Resource container.</span></p>
+
+<p><strong>SOT Process for Billing and Services (CST and CMAT)</strong></p>
+
+<p class="indent-1">See the <a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/:w:/t/betaazureSM/EXvyphZC7c5HoJDtOkdW-GsBHWnHfUmFn4iHMweaJbVfhw?rtime=4AmHixoI10g" managed-link="" target="_blank">SOT Using CST document</a> for guidance and steps to execute the SOT in CST.</p>
+
+<ul>
+	<li class="indent-1"><strong>Note: </strong>Transferring&nbsp;<em>Legacy </em>offer types from one Modern Account&nbsp;to another Modern Account, must be performed via CMAT. Refer to the <a href="https://internal.support.services.microsoft.com/en-us/help/4487933#2" managed-link="" target="_blank">Legacy Subscription Blade</a> section of <a href="https://internal.support.services.microsoft.com/en-US/help/4487933" managed-link="" target="_blank">TSG 4487933</a>.&nbsp;
+
+	<ul>
+		<li class="indent-1">If you attempt to perform this action via CMAT, you will recieve the following error:&nbsp;<br>
+		<em>&quot;Get Product Subscription Eligibility Failed. LegacyToLegacyIsNotSupported - Conflict: account e0e6f147-a7c1-426d-a9a1-4ed4e6717366 is linked to a modern account, but its type as the transfer destination is WD instead.&quot;.&nbsp;</em></li>
+	</ul>
+	</li>
+</ul>
+
+<p class="indent-1">Follow the steps outlined below to execute the SOT via CMAT:&nbsp;</p>
+
+<ol>
+	<li class="indent-1"><span lang="EN">In CMAT, look up the source account and navigate to the <strong>Commerce Subscriptions</strong> tab. </span></li>
+	<li class="indent-1"><span lang="EN">Select the subscription the customer has requested to have transferred.</span></li>
+	<li class="indent-1"><span lang="EN">Click <strong>Transfer Subscription Ownership.</strong></span></li>
+	<li class="indent-1"><span lang="EN">Enter the <strong>Destination Account ID</strong>.</span></li>
+	<li class="indent-1"><span lang="EN">Select the destination account&rsquo;s PI that will be used to pay for this subscription&rsquo;s charges. </span></li>
+	<li class="indent-1"><strong>Note</strong>: For <span lang="EN">EA subscriptions you will see an option to select <em>Without PaymentInstrument</em>.</span></li>
+</ol>
+
+<ul class="indent-1">
+	<li class="indent-2"><span lang="EN">Add any necessary comments; click the <strong>blue arrow</strong> to continue. </span></li>
+	<li class="indent-2"><span lang="EN">Confirm the subscription transfer by adding the SR#; click the <strong>blue check mark</strong>.</span></li>
+</ul>
+
+<ol start="7">
+	<li class="indent-1"><span lang="EN">A sync may be required to make co-admins visible in Ibiza.</span></li>
+</ol>
+
+<ul>
+	<li class="indent-2"><span lang="EN">Subscription admins and co-admins get changed to the Destination Account Owner, depending upon tenant. If you transfer the subscription to another tenant, the new AA will also become the new SA. Inform the customer of this change, so they can determine if they would like to appoint the role to someone else.</span></li>
+	<li class="indent-2"><span lang="EN">&nbsp;All co-admins, managed identities,&nbsp;and RBAC permissions are lost when transferred to a different tenant. </span></li>
+	<li class="indent-2"><span lang="EN">For internal customers only, your TA/PTA/TL can be engaged to add a co-admin only if the customer pushes back. We should not offer this to internal customers and we will not perform this action for external customers. </span></li>
+	<li class="indent-2">If a circular SOT needs to occur, where account A is&nbsp;transferred to B&nbsp;and then back from B to A,&nbsp;&nbsp;note that the Subscription Tenant ID will not automatically change. As a result, this will cause&nbsp;access issues for customers. In these situations you should work with your TA, who will follow the guidance in <a href="https://internal.support.services.microsoft.com/en-US/help/3188107" managed-link="" target="_blank">TSG 3188107</a> to update the Tenant ID.</li>
+	<li class="indent-2"><span lang="EN">Setting expectations with the customer about the design will help them understand the security and privacy reasons behind it. ASMS does not want the risk of adding co-admins manually.</span><br>
+	<span lang="EN"></span></li>
+	<li class="indent-2"><span lang="EN">The transfer wizard should appear as depicted below: </span></li>
+</ul>
+
+<p class="align-center indent-3"><span asset="4047200" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4047200]</span></p>
+
+<ol start="8">
+	<li class="indent-1">Confirm with the customer that the transfer was successful.</li>
+</ol>
+
+<ul>
+	<li class="indent-2">If the transfer fails in CMAT with the error message&nbsp;&quot;<em>4011- Line1 required&quot; </em>(or similar),<em> </em>this usually means that the&nbsp;customer&#39;s profile in the Destination Account or the &quot;Ship to&quot; Order Address is missing mandatory details. In these instances, do the following:
+
+	<ol start="1" style="list-style-type:lower-alpha">
+		<li class="indent-2">Ask the customer to complete the mandatory fields (Under Order, Source and Destination Accounts).</li>
+		<li class="indent-2">Once updated, attempt the transfer again.&nbsp;</li>
+	</ol>
+	</li>
+	<li class="indent-2">If you receive other errors during the SOT&nbsp;or Tenant ID swap, escalate to your TA for further assistance.</li>
+</ul>
+
+<ol start="9">
+	<li class="indent-1">Confirm in Jarvis or CMAT that the subscription has reached the valid recipient by validating the Email ID in the account admin tab.</li>
+</ol>
+
+<h3>Special Support Scenarios</h3>
+
+<p><strong><a id="Forced_SOT" name="Forced_SOT"></a>Forced Subscription Ownership Transfers (Forced SOT)</strong></p>
+
+<p><span lang="EN"></span></p>
+
+<p><span><span lang="EN">There are certain scenarios where a customer may contact support asking for a SOT, <span>data transfer</span></span><span lang="EN">, or cancellation without permission from the current account owner. A few examples include (but are not limited to):</span></span></p>
+
+<ul>
+	<li>Company A has taken over Company B.&nbsp;</li>
+	<li><span><span><span lang="EN">The current account owner&rsquo;s employment was terminated,&nbsp;<strong>or </strong>they have left the company. </span></span></span></li>
+	<li><span><span><span lang="EN">The current account owner is not cooperative,&nbsp;<strong>or</strong> the requestor does not want the account owner to use the Azure account for malicious intent.</span></span></span></li>
+	<li><span><span><span lang="EN">The account owner is deceased.</span><span><span> </span></span><span><span> </span></span></span></span></li>
+</ul>
+
+<p class="indent-1"><span><span><span> </span></span></span></p>
+
+<p><span><span>All Forced SOTs must go through a two-step approval process before the SOT can be performed. Before proceeding with a Forced SOT, note the following:&nbsp; </span></span><span lang="EN"> </span></p>
+
+<ol>
+	<li><span><strong><span>All SEs (FTEs and </span>Delivery Partners<span>) must obtain pre-approval from their TA/PTA before a Forced SOT can be performed.&nbsp;&nbsp; </span></strong></span>
+
+	<ul style="list-style-type:disc">
+		<li><span><span>Before approaching a TA/PTA for a pre-approval decision, </span><span>confirm that the requestor has been properly validated and all the below <a bookmark-id="Forced SOT Requirements" href="#Forced SOT Requirements" managed-link="">Forced SOT Requirements</a>&nbsp;have been met.</span></span></li>
+		<li><span><span>Only after a TA/PTA has reviewed the request, provided pre-approval, and engaged a M1 for final approval, should the SOT be performed. </span></span></li>
+	</ul>
+	</li>
+	<li><span><strong><span>The TA/PTA will review the request and work with the SE to obtain any additional details needed to make a decision. Then, the TA will contact a manager (M1) for final approval.</span></strong> </span>
+	<ul style="list-style-type:disc">
+		<li><span><span>The TA/PTA must confirm that the requestor has been properly validated and all <a bookmark-id="Forced SOT Requirements" href="#Forced SOT Requirements" managed-link="">Forced SOT Requirements</a>&nbsp;have been met before making a decision to pre-approve the forced SOT. </span></span></li>
+		<li><span><span>Once the TA/PTA has made a pre-approval decision, the TA/PTA must engage a M1 to authorize the decision as the final approver. </span></span></li>
+	</ul>
+	</li>
+	<li><span><strong><span>The M1 will review the TA/PTA&rsquo;s decision and determine if the Forced SOT should be executed. </span></strong></span>
+	<ul style="list-style-type:disc">
+		<li><span><span>If the M1 requires further input, they will use the</span><span> </span><span><a bookmark-id="M2 Review Template" href="#M2 Review Template" managed-link="">M2 Review Template</a></span><span> to engage the M2.</span></span></li>
+	</ul>
+	</li>
+	<li><span><strong><span>The M2 will review the M1 request and determine if CELA needs to be consulted before the Forced SOT can take place. &nbsp;</span></strong></span>
+	<ul style="list-style-type:disc">
+		<li><span><span>Only the M2 should engage CELA.</span><span lang="EN"></span></span></li>
+	</ul>
+	</li>
+</ol>
+
+<p><strong><span lang="EN"> </span></strong></p>
+
+<h4><span><span><a id="Forced SOT Requirements" name="Forced SOT Requirements"></a>Forced SOT Requirements</span></span></h4>
+
+<p><span><span lang="EN">Verify the following requirements are checked before approaching a TA/PTA for a forced SOT approval.</span><span lang="EN"></span></span></p>
+
+<ol>
+	<li><strong><span><span><span lang="EN">The email address for the current account owner is verified as invalid. </span></span></span></strong></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span lang="EN">Email the current account owner&rsquo;s email address to confirm that it is invalid. After you send the email, you should receive a bounce back notification. </span></span></span></span></li>
+</ul>
+
+<ol start="2">
+	<li><strong><span><span><span lang="EN">The domain on the current account (source) matches the domain of the new account (destination). </span></span></span></strong>
+
+	<ul style="list-style-type:disc">
+		<li><span><span><span>If the current account owner&rsquo;s email is a personal email address or MSA<span lang="EN"> (hotmail.com, Live.com, google.com, etc.), then a SOT should not be performed under any circumstance without the confirmation of the current owner.</span></span></span></span>
+
+		<ul style="list-style-type:circle">
+			<li><span><span><span><span lang="EN">Even if someone claims they are an employee of the account owner, a SOT should not be performed without the confirmation of the current owner. </span></span></span></span></li>
+		</ul>
+		</li>
+		<li><span><span><span>If<strong> </strong>the account owner&rsquo;s company domain does not match the requestor&#39;s (or new account owner&#39;s), then the requestor must provide a valid reason for not being able to contact the account owner to initiate a SOT. Valid reasons include:</span></span></span>
+		<ul style="list-style-type:circle">
+			<li><span><span><span lang="EN">The account owner&rsquo;s employment was terminated. </span></span></span></li>
+			<li><span><span><span lang="EN">The account owner is not cooperative <strong>or</strong> the requestor does not want the account owner to use the Azure account for malicious intent.</span></span></span></li>
+			<li><span><span><span lang="EN">The account owner is deceased.</span><span><span> </span></span><span><span> </span></span></span></span></li>
+		</ul>
+		</li>
+		<li><span><span><span><span><span lang="EN">If the account is an AIRS (</span></span>@microsoft.com, @gbl, @ame<span lang="EN">) subscription, approval from the former employee&rsquo;s manager or from the next person in the management chain is required. &nbsp;&nbsp;</span><span> </span><span> </span></span></span></span></li>
+	</ul>
+	</li>
+	<li><strong><span><span><span lang="EN">The email of the current account owner is provided by the person/company requesting the transfer/cancellation. </span><span><span> </span></span><span><span> </span></span></span></span></strong>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span>Some companies use </span><a href="https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-configure"><span>Privileged Identity Management</span></a><span>, in which a <span>Global Admin (GA) </span></span><span> </span><span> </span><span>will only be in that role for a short period of time. In this case, you should obtain a screenshot from the GA to confirm that they were a GA and use our tools to review any past GAs. </span></span></span></span></li>
+		<li><span><span><span><span>Ideally, the GA should remove the existing user from their tenant and provide us with details of who the new user should be.</span></span></span></span></li>
+	</ul>
+	</li>
+	<li><strong><span><span><span lang="EN">The Company Name on the account is same as that of the requestor. </span></span></span></strong></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span lang="EN">If the account is associated with an EA enrollment, legal ownership of that account is held by the company enrolled as an EA. In that case, ASMS may perform the ownership transfer if the person that signed the EA contacts us and can be verified. </span></span></span></li>
+	<li class="indent-1"><span><span><span lang="EN">If the account is associated with a BizSpark or MS4SU subscription, the Startup Company associated with the BizSpark subscription owns the account. If the account owner leaves the company for any reason, their name should be removed from the BizSpark entitlement and therefore the account ownership may be transferred. See </span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-US/help/3070105" managed-link="" target="_blank">TSG 3070105</a></span><span lang="EN"> for guidance on how to associate the benefit to a new account post SOT. &nbsp;</span></span></span></li>
+</ul>
+
+<ol start="5">
+	<li><strong><span><span><span>The requestor</span><span> can provide the details mentioned in <em>section D</em> of the <a bookmark-id="M2 Review Template" href="#M2 Review Template" managed-link="">M2 Review Template</a>.</span></span></span></strong>
+
+	<ul style="list-style-type:disc">
+		<li><span><span><span>Once provided, confirm that these details match what is provided in our tooling. &nbsp;</span></span></span></li>
+		<li><span><span><span lang="EN">If the credit card associated with the account is <strong>not</strong> the company&rsquo;s corporate credit card and is<strong> </strong>the personal credit card of the current account owner, ASMS should <strong>not</strong> transfer ownership without approval from the current account owner.</span></span></span><span><strong><span lang="EN"></span></strong></span></li>
+	</ul>
+	</li>
+</ol>
+
+<p><span><strong><span lang="EN">Note:</span></strong><span lang="EN"> You can also leverage </span><span><a href="https://internal.support.services.microsoft.com/en-us/help/2646876" target="_blank"><span lang="EN">TSG 2646876</span></a></span><span lang="EN"> to help validate the requestor&rsquo;s eligibility. </span></span></p>
+
+<h4><span><span><a id="M2 Review Template" name="M2 Review Template"></a>M2 Review Template</span><strong> </strong></span></h4>
+
+<p><span><span lang="EN">If further assistance is needed, M1s should make sure the following details are provided before engaging the M2. </span></span></p>
+
+<p><span><strong><span lang="EN">Section A: Problem Statement</span></strong><span lang="EN"> (</span><em><span lang="EN">All fields are required)</span></em></span></p>
+
+<ul>
+	<li><span><span><span lang="EN"></span><span lang="EN">Manager&rsquo;s Name:</span></span></span></li>
+	<li><span><span><span lang="EN"></span><span lang="EN">Description of the request being made <em>(including details of actions already taken and any further items)</em>:</span><span lang="EN"></span></span></span></li>
+	<li><span><span><span lang="EN"></span><span lang="EN">Recommendation (<em>including reason for recommendation)</em>:</span></span></span></li>
+	<li><span><span><span lang="EN"></span><span lang="EN">List of proof of ownership:</span></span></span></li>
+	<li><span><span><span lang="EN">Any additional details that may be helpful and have not already been captured <em>(including legal documents provided by the requestor)</em>:</span></span></span></li>
+</ul>
+
+<p><span><strong><span lang="EN">Section B: Requestor and New Account Owner information</span></strong></span></p>
+
+<ul>
+	<li><span><span><span lang="EN"></span><span lang="EN">Requestor Name:</span></span></span></li>
+	<li><span><span><span lang="EN"></span><span lang="EN">Requestor Email:</span></span></span></li>
+	<li><span><span><span lang="EN"></span><span lang="EN">Requestor Title:</span></span></span></li>
+	<li><span><span><span lang="EN"></span><span lang="EN">Requestor Company Name:</span></span></span></li>
+	<li><span><span><span lang="EN"></span><span lang="EN">New Account Owner Name:</span></span></span></li>
+	<li><span><span><span lang="EN"></span><span lang="EN">New Account Owner Email:</span></span></span></li>
+</ul>
+
+<p><span><strong><span lang="EN">Section C: Account detail snapshot</span></strong><em><span lang="EN"> (All fields are required) </span></em></span></p>
+
+<ul>
+	<li><span><span><span>Current Account Owner Name:</span></span></span></li>
+	<li><span><span><span lang="EN"></span><span lang="EN">Current Account Owner Email:</span></span></span></li>
+	<li><span><span><span>Current Subscription GUID:</span></span></span></li>
+	<li><span><span><span lang="EN"></span><span lang="EN">CC Last Four:</span></span></span></li>
+	<li><span><span><span lang="EN"></span><span lang="EN">Billing Address:</span></span></span></li>
+	<li><span><span><span lang="EN"></span><span lang="EN">Subscription Address:</span></span></span></li>
+	<li><span><span><span lang="EN">Company Name on subscription:</span></span></span></li>
+</ul>
+
+<p><span><strong><em><span lang="EN">Section D: Requestor should verify the following information</span></em></strong><em><span lang="EN"> (type &quot;verified&quot; or &quot;unable to verify&quot; accordingly)</span></em></span></p>
+
+<ul>
+	<li><span><span><span lang="EN"></span><span lang="EN">Current Account Owner name:</span></span></span></li>
+	<li><span><span><span lang="EN"></span><span lang="EN">Current Account Owner email:</span></span></span></li>
+	<li><span><span><span lang="EN"></span><span lang="EN">CC Last Four:</span></span></span></li>
+	<li><span><span><span lang="EN"></span><span lang="EN">Billing Address:</span></span></span></li>
+	<li><span><span><span lang="EN"></span><span lang="EN">Subscription Address:</span></span></span></li>
+	<li><span><span><span lang="EN">Company Name on subscription:</span></span></span><span lang="EN"></span><br>
+	&nbsp;</li>
+</ul>
+
+<h4><a id="Backfilling_MINT" name="Backfilling_MINT"></a>Backfilling MINT Accounts to OMS</h4>
+
+<p>MINT accounts are not supported as part of the SOT process. To perform an SOT in these scenarios, the account must be converted to an OMS account.</p>
+
+<p>The following scenarios may occur that require an account to be backfilled:&nbsp;</p>
+
+<ul>
+	<li><span lang="EN">For external customers: </span>
+
+	<ul style="list-style-type:circle">
+		<li><span lang="EN">A subscription belongs to an existing legacy MINT account and an OMS account has been created that prevents the user from seeing their old subscription. </span></li>
+		<li><span lang="EN">A subscription belongs to an existing legacy MINT account, but the customer wants the subscription moved to a different account which can only be created in OMS.</span></li>
+	</ul>
+	</li>
+	<li><span lang="EN">Internal customers</span>
+	<ul style="list-style-type:circle">
+		<li><span lang="EN"> AIRS subscription needs to be moved to a different account for security or other reasons, and a data migration is not a feasible option. </span></li>
+	</ul>
+	</li>
+</ul>
+
+<p><strong><span lang="EN">When a backfill is required you should note the following: </span></strong></p>
+
+<ul>
+	<li><span lang="EN">Non-Azure subscriptions on the MINT account (e.g. OMEX, XBOX, Windows Phone, Azure Store subscription) must be cancelled and deprovisioned before a backfill can be completed. Backfill will not be done for accounts that have active non-Azure subscriptions. </span></li>
+	<li><span lang="EN">Subscriptions must be active to be backfilled. Disabled subscriptions must be reactivated or cancelled and deprovisioned. </span></li>
+	<li><span lang="EN">The Azure profile must be complete. </span></li>
+	<li><span lang="EN">You must obtain an email from the customer which confirms that the subscription can be reactivated or deprovisioned as well as confirmation they understand the implications of deprovision (i.e. customer must backup data as it is not recoverable).</span></li>
+	<li><span lang="EN">If the MINT account has two or more subscriptions, the TenantID of all subscriptions must be the same. If they are not the same, you must first update them so they are the same before the backfill will be possible. For information on updating Tenants refer to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2820621" managed-link="" target="_blank">TSG 2820621</a>. </span></li>
+</ul>
+
+<ul>
+	<li><span lang="EN">The backfill will change the account anniversary date to the date in which the conversion took place. Be sure to inform the customer of the billing date change, as the account anniversary date is based on when the MINT account was created even after it&rsquo;s backfilled. </span></li>
+</ul>
+
+<p><strong><span lang="EN">How to submit a Backfill request</span></strong><span lang="EN">: </span></p>
+
+<ol>
+	<li><span lang="EN"></span><strong><span lang="EN">Open a TFS ticket with PAYOPS team</span> <span lang="EN">using the template provided below. </span></strong>
+
+	<ul style="list-style-type:disc">
+		<li><span lang="EN"></span><span lang="EN">They will review the request and then escalate it to the OMS team to backfill the account.</span></li>
+		<li><span lang="EN"></span>Each backfill TFS submission should include one and only one Azure MINT account ID and PUID. Do not submit multiple MINT accounts in one Backfill TFS. <span lang="EN"></span></li>
+		<li><span lang="EN"></span>Use the following exact format with no spaces before or after the commas, the PUID Type with the words PUID or ORGPUID only, and the PUID is in decimal format.<span lang="EN"></span></li>
+	</ul>
+	</li>
+</ol>
+
+<p class="indent-2"><span lang="EN"><br>
+<strong>Examples</strong></span></p>
+
+<p class="indent-2"><strong>OrgID:</strong> aztest@dongfunk.ccsctp.net,3AxDMxAAAAAAAAAA, ORGPUID,1153906660787000125</p>
+
+<p class="indent-2"><strong>LiveID:</strong> janesmith@outlook.com,3AxDMxAAAAAAAAAA, PUID,0985147751840874<strong> </strong></p>
+
+<p>&nbsp;</p>
+
+<ol start="2">
+	<li><strong><span lang="EN">Copy and paste the entire table below into the History section field of the TFS. </span></strong></li>
+</ol>
+
+<p class="indent-1"><span lang="EN"></span><span lang="EN">All line items below are mandatory for the TFS and must also be included in your case notes.</span><br>
+&nbsp;</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p>Reason for Backfill (Description)</p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>MINT Account ID</p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>The Account Admin email</p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>The Tenant ID of the Account Admin email (use <a href="https://internal.support.services.microsoft.com/en-us/help/2820621" target="_blank">TSG 2820621</a> as above to get it)</p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>The account Country</p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>The Subscription ID&rsquo;s, the Offer Description for each subscription, and the TenantID for each subscription (all subs must have the same TenantID, and it may be different than the AA tenantID so be sure to verify all of them), in the following format:</p>
+
+			<p>SubscriptionID= xxxxxxxxxxxxxx; Offer Description= xxxxxx xxxx-00xxP ; TenantID= xxxxxxx-xxxxxxx-xxxxxx-xxxxx</p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>AAemail, AccountID,PUID_type,PUID</p>
+
+			<p>Examples:</p>
+
+			<p><strong>OrgID example: </strong>aztest@dongfunk.ccsctp.net,3AxDMxAAAAAAAAAA, ORGPUID,1153906660787000125</p>
+
+			<p><strong>LiveID example: </strong>janesmith@outlook.com<strong>,</strong><strong>3</strong><strong>AxDMxAAAAAAAAAA, PUID</strong><strong>,0985147751840874</strong></p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Additional information:</p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>List the Delegate relationships (delegate admins) for each MINT Account(s):</p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Valid PI? (Required, or None for EA subs):</p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Valid VATID/Tax Exemption:</p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>email</p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>MINTAccountId</p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>puidType</p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Puid (CMAT PUID)(Decimal Format)</p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><strong><span lang="EN">Note:</span></strong><span lang="EN"> There is a maximize button (In the red square below) that when you click it makes the template full screen size and easier to fill out.</span></p>
+
+<p class="align-center"><span asset="4047198" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4047198]</span></p>
+
+<p class="align-center"><span lang="EN">(Detailed <a href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/Backfill%20Template.xlsx" target="_blank"> Template</a> for reference only)</span></p>
+
+<ol start="3">
+	<li><span lang="EN"></span><strong><span lang="EN">Once the account has been backfilled, send the customer a confirmation email and alert them that you will now begin working to transfer the subscription(s).</span></strong></li>
+	<li><span lang="EN"></span><strong><span lang="EN">Follow the normal SOT process called out in the <em>Support Scenarios section</em> above. </span></strong><br>
+	&nbsp;</li>
+</ol>
+
+<h3>Online References</h3>
+
+<p><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4487922" managed-link="" target="_blank">CSS CST User Guide</a></p>
+
+<h3>Engagement and Escalation Path</h3>
+
+<ul>
+	<li><span lang="EN">If you have questions about the SOT process engage your TA or PTA. </span></li>
+	<li><span lang="EN"></span><span lang="EN">You can engage the </span><a data-content-id="" data-content-type="" href="https://portal.microsofticm.com/imp/v3/incidents/create?tmpl=z1n392" managed-link="" target="_blank">ACE Subscription Lifecycle Tier 1</a><span lang="EN"> team to assist in scenarios where the customer is stuck or received and error while completing the SOT via self-serve.<br>
+	<br>
+	<strong>Note:</strong>&nbsp;ACE&nbsp;should only be contacted through the ASE escalation path. ASE will engage&nbsp;ACE&nbsp;and get back to you with an appropriate response. For more information, see&nbsp;<a data-bi-name="content-anchor-link" href="https://internal.support.services.microsoft.com/en-us/help/3093263" managed-link="" tabindex="0" target="_blank">TSG 3093263</a>. </span><span lang="EN"></span></li>
+	<li>Service Administrator Not Updated After OMS Transfer to Modern.&nbsp;<br>
+	<br>
+	<span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>When an OMS&nbsp;subscription&nbsp;is transferred to Modern, the Service Administrator (SA) remains on the subscription and continues to have access to the subscription. C</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>ustomers do not have the&nbsp;option to change the SA (the option is greyed out),&nbsp;nor can support perform the operation&nbsp;for external subscriptions.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span><span><span></span></span></span></span></span></span><span><span><span><span><span><span><span></span></span></span></span></span></span></span><br>
+	<br>
+	<span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>In these&nbsp;cases, engage&nbsp;ASE by following the guidance in <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3093263" managed-link="" target="">TSG 3093263</a>. ASE will <strong>not </strong>remove the SA, but will instead update the SA to the Account Owner&#39;s email ID.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+	<ul style="list-style-type:circle">
+		<li>When engaging ASE, mention the reason for the SA update&nbsp;(for example:&nbsp;SA left the company, security/compliance concern).</li>
+	</ul>
+	</li>
+</ul>
+<ol style="list-style-type:decimal" type="1">
+</ol>
+
+<h3><span lang="EN">&nbsp;TSG Change Log</span></h3>
+
+<ol style="list-style-type:decimal" type="1">
+</ol>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong><span>Date </span></strong></p>
+			</td>
+			<td>
+			<p><strong><span>Updated By</span></strong></p>
+			</td>
+			<td>
+			<p><strong><span>Content Updated</span></strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>02/13/2020</td>
+			<td>v-ishan</td>
+			<td>Updated ICM link as per ModTrack 2673.</td>
+		</tr>
+		<tr>
+			<td>05/28/2020</td>
+			<td>v-ishan</td>
+			<td>Removed Known Issues section about Billing transfers and added information to Policy section as per ModTrack 2822.</td>
+		</tr>
+		<tr>
+			<td>06/08/2020</td>
+			<td>v-ishan</td>
+			<td>Updated information on AIRS registrations as per ModTrack 2870.</td>
+		</tr>
+		<tr>
+			<td>06/12/2020</td>
+			<td>v-ishan</td>
+			<td>Updated steps for performing an SOT from a MOSP account as per ModTrack 2881.</td>
+		</tr>
+		<tr>
+			<td>06/19/2020</td>
+			<td>v-viizza</td>
+			<td>Updated the title of this TSG per ModTrack&nbsp;2957.</td>
+		</tr>
+		<tr>
+			<td>06/23/2020</td>
+			<td>mievan</td>
+			<td>Added details in Policy about modern&nbsp;subscriptions and scenarios are not eligible for transfer of ownership.&nbsp;<strong>&nbsp;</strong></td>
+		</tr>
+		<tr>
+			<td>06/24/2020</td>
+			<td>mievan</td>
+			<td>Added policy that&nbsp;<em>Orphaned Legacy accounts, cannot be transferred to Modern.&nbsp;</em></td>
+		</tr>
+		<tr>
+			<td>07/16/2020</td>
+			<td>mievan</td>
+			<td>Updated Forced SOT Process to require all SEs (FTE&#39;s and Delivery Partners) to obtain approval before Forced SOT is executed.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>09/08/2020</td>
+			<td>mievan</td>
+			<td>Added Circular SOT guidance to TSG.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>09/23/2020</td>
+			<td>v-ishan</td>
+			<td>Added guidance under Policy Step 3 on handling SOTs if there is a Free Trial in the destination as per ModTrack 3129.</td>
+		</tr>
+		<tr>
+			<td>10/05/2020</td>
+			<td>v-ishan</td>
+			<td>Added section under Engagement and Escalation Path on handling Service Administrators for OMS to Modern transfers.</td>
+		</tr>
+		<tr>
+			<td>10/13/2020</td>
+			<td>mievan</td>
+			<td>
+			<p>Added <em><span>Policy </span></em>guidance on handling customer PII.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>10/27/2020</td>
+			<td>v-kproctor</td>
+			<td>Updated Step 3.</td>
+		</tr>
+		<tr>
+			<td>11/6/2020</td>
+			<td>mievan</td>
+			<td>Added guidance on how to troubleshoot SOT error messages received in CMAT.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>11/6/2020</td>
+			<td>v-penjo</td>
+			<td>ModTrack #3262: Removed &quot;Reserved Instances&quot; from &#39;<strong>not eligible for transfer of ownership&#39;</strong> list.</td>
+		</tr>
+		<tr>
+			<td>11/13/2020</td>
+			<td>v-penjo</td>
+			<td>ModTrack #3297: Updated supported subscriptions link in Support Scenarios &gt; Step 1.</td>
+		</tr>
+	</tbody>
+</table>

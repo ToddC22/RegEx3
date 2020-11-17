@@ -1,0 +1,1332 @@
+﻿<header><h1>Procedure: Currency stored value (CSV)</h1></header><div class="kb-summary-section section">
+<p><span asset="4049349" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4049349]</span></p>
+
+<p>&nbsp;</p>
+
+<p><span asset="4557567" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4557567]</span></p>
+
+<h3>Who should use&nbsp;this article?</h3>
+
+<ul>
+	<li><span>Accounts &amp; Billing </span></li>
+	<li><span>Office</span></li>
+	<li><span>Sales </span></li>
+	<li><span>Surface </span></li>
+	<li><span>Windows </span></li>
+	<li><span>Xbox </span></li>
+</ul>
+
+<h3>What is this article about?</h3>
+
+<p><span>This article describes currency stored value (CSV) issues, troubleshooting, and guidance for exception scenarios.</span></p>
+
+<h3 class="sbody-h3"><a id="top" name="top"></a>Table of contents</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<h4>1. Overview</h4>
+			</td>
+			<td>
+			<p><span>1.1<a bookmark-id="1.1" href="1.1#1.1" managed-link=""> Microsoft accounts and currency stored value</a></span></p>
+
+			<p><span>1.2<a bookmark-id="1.2" href="#1.2#1.2" managed-link=""> Microsoft Gift Cards</a></span></p>
+
+			<p><span>1.3<a bookmark-id="1.3" data-content-id="" data-content-type="" href="1.3#1.3#1.3" managed-link="" target=""> Ways to use CSV </a></span></p>
+
+			<p>1.4 <a bookmark-id="1.4" href="#1.4" managed-link="">How to use CSV in Microsoft Store</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>2. <a bookmark-id="2" href="#2" managed-link="">Guideline</a></h4>
+			</td>
+			<td>
+			<p><span>2.1<a bookmark-id="2.1" href="2.1#2.1" managed-link=""> Refund requests for CSV</a></span></p>
+
+			<p><span>2.2<a bookmark-id="2.2" href="2.2#2.2" managed-link=""> Region migration and CSV</a></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>3. Procedure</h4>
+			</td>
+			<td>
+			<p><span>3.1<a bookmark-id="3.1" href="3.1#3.1" managed-link=""> Refunding purchases with split CSV payments</a></span></p>
+
+			<p><span>3.2<a bookmark-id="3.2" href="3.2#3.2" managed-link=""> How to add CSV credit to an account</a></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>4. Troubleshooting CSV issues</h4>
+			</td>
+			<td>
+			<p><span>4.1<a bookmark-id="4.1" href="4.1#4.1" managed-link="" target="_blank"> The customer cannot make a purchase using CSV</a></span></p>
+
+			<p><span>4.2<a bookmark-id="4.2" href="4.2#4.2" managed-link=""> Split profiles</a></span></p>
+
+			<p><span>4.3<a bookmark-id="4.3" href="4.3#4.3" managed-link=""> Additional guidance by exception scenario</a></span></p>
+
+			<p><span>4.4<a bookmark-id="4.4" href="4.4#4.4" managed-link=""> Countries that are unable to add CSV to their account</a></span></p>
+
+			<p><span>4.5</span><a bookmark-id="4.5" href="4.5#4.5" managed-link=""><span> The customer is unable to redeem CSV due to error &quot;CsvDepositLimitExceed&quot;</span></a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>5. <a bookmark-id="5" href="#5" managed-link="" target="">CSV limits</a></h4>
+			</td>
+			<td>
+			<p>5.1 <a bookmark-id="5.1" href="#5.1" managed-link="" target="">CSV daily limit</a></p>
+
+			<p>5.2 <a bookmark-id="5.2" href="#5.2" managed-link="" target="">CSV lot limitation</a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<h3>1. Overview</h3>
+
+<p><span>For scenarios utilizing CSV in the Make It Right (MIR) scope, see </span><span>KB <a href="https://internal.support.services.microsoft.com/help/4465058" target="_blank"><span>4465058 Procedure: Microsoft Store Make It Right</span></a>.</span></p>
+
+<h4><a id="1.1" name="1.1"></a>1.1 Microsoft accounts and currency stored value</h4>
+
+<p>Currency stored value (CSV) is a digital form of payment associated to a unique billing account. Multiple billing accounts may be associated to a single Microsoft account&nbsp;based on region and type (consumer or commercial).&nbsp;Customers may refer to CSV as &ldquo;gift card&rdquo;.</p>
+
+<p>Customers can review and manage the billing profiles associated with their Microsoft account&nbsp;at <a data-content-id="" data-content-type="" href="https://account.microsoft.com/profile" target="_blank">https://account.microsoft.com/profile</a> under <strong>Payment options,&nbsp;</strong>in the&nbsp;<strong>Payment &amp; billing </strong>menu.</p>
+
+<p>Billing accounts cannot be merged, migrated to other regions, or change type, and once&nbsp;applied, CSV balances cannot be transferred to another region.</p>
+
+<p>Customers can use CSV to purchase any content on Microsoft Store, including Xbox subscriptions, the only exceptions are Microsoft 365 subscriptions and backward compatible Xbox 360 titles.</p>
+
+<p><span>See <a bookmark-id="4" href="#4" managed-link="" target="">section 4</a>&nbsp;for a list of countries that can&#39;t use CSV.</span></p>
+
+<p>
+
+<p><span><span><strong><span><span><span>Promotional CSV</span></span></span></strong><span><span><span> credited to the customer&rsquo;s account may have an expiration date. In this case, Microsoft sends an email notification to the customer before the CSV expires. Limited time promotional CSV must be used before standard CSV. If a customer&rsquo;s CSV has expired from their account funds, you may provide a CSV credit for replacement of the exact same amount as the expired funds. See KB </span></span></span><span><a href="https://internal.support.services.microsoft.com/help/4465058" target="_blank"><span><span><span>4465058 Procedure: Microsoft Store Make It Right</span></span></span></a></span><span><span><span> for the correct CSV SKU<em> </em>and<em> </em>reason to be used in these situations.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Note:</span></span></span></strong><span><span><span> This is a one-time exception per Microsoft account, once issued, the customer needs to spend the provided funds within the next year.</span></span></span></span></span></p>
+
+<p>
+
+<p><span class="info-text"></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="1.2" name="1.2"></a>1.2 Microsoft Gift Cards</h4>
+
+<p><span>Customers can purchase Microsoft Gift Cards and redeem on a Microsoft account to use as CSV. There are physical cards and digital cards. For more information about digital gift cards, see&nbsp;KB <span><a href="https://internal.support.services.microsoft.com/help/4053797" target="_blank">4053797 Informational: Digital Gifting Overview (eGifts, gift cards)</a>.</span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span><span asset="4472876" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4472876]</span></span></p>
+
+<p><span><span><span><strong><span><span></span></span>Note</strong>: Microsoft Retail Store gift cards are different than the above point of sale activated (POSA) gift cards. Due to Microsoft Store closures, Retail Store gift cards cannot be redeemed and must be refunded. For instructions for how to provide a customer a refund for a Retail Store gift card, see KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4574546" managed-link="" target="_blank">4574546 Procedure: Microsoft Store B&amp;M gift card refunds</a>. &nbsp;</span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="1.3" name="1.3"></a>1.3 Ways to use CSV</h4>
+
+<p>The customer&rsquo;s purchase channel determines if CSV can be used with the purchase.</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td><strong>Product to purchase</strong></td>
+			<td>
+			<p><strong>&nbsp;Xbox 360&nbsp;Platform</strong></p>
+			</td>
+			<td><strong>Xbox One and Xbox Series X|S Platform</strong></td>
+			<td><strong>Windows 10 and 8.1 Platform</strong></td>
+			<td><strong>Microsoft Store Online Platform</strong></td>
+			<td><strong>Retail Microsoft Stores**</strong></td>
+		</tr>
+		<tr>
+			<td>Physical goods</td>
+			<td>NO</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>NO</td>
+		</tr>
+		<tr>
+			<td>Games</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>NO</td>
+		</tr>
+		<tr>
+			<td>Apps</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>NO</td>
+		</tr>
+		<tr>
+			<td>Books</td>
+			<td>Not available</td>
+			<td>Not available</td>
+			<td>Not available</td>
+			<td>Not available</td>
+			<td>Not available</td>
+		</tr>
+		<tr>
+			<td>In app purchases*</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>Not available</td>
+			<td>NO</td>
+		</tr>
+		<tr>
+			<td>Movies (rent or buy)</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>NO</td>
+		</tr>
+		<tr>
+			<td>TV shows (buy only)</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>NO</td>
+		</tr>
+		<tr>
+			<td>Music tracks and albums</td>
+			<td>NO</td>
+			<td>NO</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>NO</td>
+		</tr>
+		<tr>
+			<td>Xbox Gold Live Subscription</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>NO</td>
+		</tr>
+		<tr>
+			<td>Xbox Game Pass Subscription</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>NO</td>
+		</tr>
+		<tr>
+			<td>Game Pass Ultimate</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>YES</td>
+			<td>NO</td>
+		</tr>
+		<tr>
+			<td>Microsoft 365 subscription</td>
+			<td>NO</td>
+			<td>NO</td>
+			<td>NO</td>
+			<td>NO</td>
+			<td>NO</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span><span><span><span>*Some in app purchases may require a credit card.</span></span></span></span></span></p>
+
+<p><strong>Note:</strong> If the customer wants to use their CSV for purchases at a physical store, they need to use the CSV for that purchase with an advocate first, then pick up the product at a physical store using the Buy Online Pick Up In Store (BOPIS) feature for customers who are located near a physical store.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="1.4" name="1.4"></a>1.4 How to use CSV in Microsoft Store Online</h4>
+
+<ol>
+	<li>When you first go through the checkout process, even if you have a CSV balance, CSV&nbsp;is not the primary payment option. The customer must select <strong>Edit</strong> on <strong>Step 2: Payment&nbsp;Review and place order</strong> section of the page.&nbsp;<br>
+	<span asset="4517093" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4517093]</span></li>
+</ol>
+
+<ol start="2">
+	<li>After the customer selects&nbsp;<strong>edit</strong>, they can select <strong>CSV </strong>as their payment.<br>
+	<span asset="4517094" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4517094]</span><br>
+	<span asset="4517095" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4517095]</span></li>
+</ol>
+
+<ol start="3">
+	<li>Unlike other purchase flows, the online store purchase flow does not allow the customer to redeem CSV during the purchase flow. They must redeem their CSV through <a data-content-id="" data-content-type="" href="https://www.microsoft.com/redeem" managed-link="" target="_blank">https://www.microsoft.com/redeem</a> first.</li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="2" name="2"></a>2. Guideline</h3>
+
+<p><span><span><span><span><span>For additional scenarios utilizing CSV in the Make It Right (MIR) scope, see KB </span></span></span><span><span><a href="https://internal.support.services.microsoft.com/help/4465058" target="_blank"><span><span><span><span>4465058 Procedure: Microsoft Store Make It Right</span></span></span></span></a></span></span><span><span><span>. </span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="2.1" name="2.1"></a>2.1 Refund requests for CSV</h4>
+
+<p><span><span><span><span><span>For refund guidelines on content purchased with CSV, see KB </span></span></span><span><span><a href="https://internal.support.services.microsoft.com/help/3083551" target="_blank"><span><span><span><span>3083551 Guideline: Microsoft Store: Return and refund</span></span></span></span></a></span></span><span><span><span>.<br>
+<br>
+If a customer is in one of the regions in the table below and requests a refund for the CSV balance on their account, they may be eligible for a refund.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Engage the Accounts &amp; Billing (A&amp;B) ERA (for Japan, Korea and China, engage ACA) or Xbox ranger if the refund option is not available in the Microsoft Support Tool (MST).<br>
+<br>
+The following countries and US states require refunds:</span></span></span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><strong><span><span>State or country</span></span></strong></span></p>
+			</td>
+			<td width="71%">
+			<p><span><strong><span><span>Comments</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><strong><span><span><span>California</span></span></span></strong></span></span></p>
+			</td>
+			<td width="71%">
+			<p><span><span><span>Less than $10</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><strong><span><span><span>Colorado</span></span></span></strong></span></span></p>
+			</td>
+			<td width="71%">
+			<p><span><span><span>$5 or less</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><strong><span><span><span>Maine</span></span></span></strong></span></span></p>
+			</td>
+			<td width="71%">
+			<p><span><span><span>Less than $5</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><strong><span><span><span>Massachusetts</span></span></span></strong></span></span></p>
+			</td>
+			<td width="71%">
+			<p><span><span><span>$5 or less</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><strong><span><span><span>Montana</span></span></span></strong></span></span></p>
+			</td>
+			<td width="71%">
+			<p><span><span><span>Less than $5</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><strong><span><span><span>Rhode Island</span></span></span></strong></span></span></p>
+			</td>
+			<td width="71%">
+			<p><span><span><span>Less than $1</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><strong><span><span><span>Vermont</span></span></span></strong></span></span></p>
+			</td>
+			<td width="71%">
+			<p><span><span><span>Less than $1</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><strong><span><span><span>Washington</span></span></span></strong></span></span></p>
+			</td>
+			<td width="71%">
+			<p><span><span><span>Less than $5</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><strong><span><span><span>Canada</span></span></span></strong></span></span></p>
+			</td>
+			<td width="71%">
+			<p><span><span><span>Less than $5</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><strong><span><span><span>Chile</span></span></span></strong></span></span></p>
+			</td>
+			<td width="71%">
+			<p><span><span><span>Stored value must be refunded in cash or deposited in a local bank account. No threshold limit applies.</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><a bookmark-id="top" href="#top" managed-link="">Return to top</a> </span></p>
+
+<h4><span><a name="2.2"></a><span>2.2 Region migration and CSV</span></span></h4>
+
+<p>CSV is non-transferable between regions on an account, all CSV currency remains in the region it was first&nbsp;redeemed. After a region migration, the customer may not be able to see their previous CSV balance. All customers are advised of this limitation in&nbsp;<a href="https://support.xbox.com/my-account/microsoft-account/update-microsoft-account-country-region" target="_blank">How to update your Microsoft account if you&#39;re moving to a new country or region</a>.<br>
+<br>
+Xbox One customers can change the region as needed on the console as a work around but may still be subject to geo fencing.<br>
+<br>
+If the customer wants to use their CSV currency, they need to change their region back to the region where the CSV was redeemed.</p>
+
+<p><span><a bookmark-id="top" href="#top" managed-link="">Return to top</a></span></p>
+
+<h3><span><a name="3.1"></a><span>3. Procedure</span></span></h3>
+
+<h4>3.1 Refunding purchases with split CSV payments</h4>
+
+<p><span><span><span><span><span>Customers can complete purchases using their full CSV balance, paying any remaining balance with another payment instrument.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>To refund the purchase amount to the correct payment instruments, follow the process KB </span></span></span><span><span><a href="https://internal.support.services.microsoft.com/help/4053527" target="_blank"><span><span><span><span>4053527 TUG: MST: Purchase on behalf of (POBO)</span></span></span></span></a></span></span><span><span><span>, refund the CSV transaction first.</span></span></span></span></span><span><span> </span><span> </span></span></p>
+
+<p><span> </span><span><a bookmark-id="top" href="#top" managed-link="">Return to top</a></span></p>
+
+<h4><span><a name="3.2"></a><span>3.2 How to add CSV credit to an account</span></span></h4>
+
+<ol>
+	<li><span><span><span><span><span><span>Select the appropriate billing account based on country of customer.</span></span></span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4472877" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4472877]</span></p>
+
+<ol start="2">
+	<li><span><span><span><span><span><span>Enter the amount of the CSV credit in local currency.</span></span></span></span></span></span></li>
+</ol>
+
+<p class="indent-1"><span asset="4591512" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4591512]</span></p>
+
+<ol start="3">
+	<li><span><span><span><span><span><span>Select a CSV SKU based on the purpose (Please note: internal reporting is reviewed to ensure accuracy of usage based on this choice).</span></span></span></span></span></span></li>
+</ol>
+
+<p class="indent-1">&nbsp;<span asset="4591515" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4591515]</span></p>
+
+<ol start="4">
+	<li><span><span><span><span><span><span>Choose the appropriate reason for adding the credit to the account. The below picture is an example for the CSS Microsoft Store make-it-right choice. The reasons will change based on the CSV SKU chosen. <strong>Note</strong>: Internal reporting is reviewed to ensure accuracy of usage based on this choice.</span></span></span></span></span></span></li>
+</ol>
+
+<p class="indent-1">&nbsp;<span asset="4591517" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4591517]</span></p>
+
+<ol start="5">
+	<li><span><span><span><span><span><span>In the <strong>Comments </strong>field, provide a brief description detailing the reason for the credit, including the service request number associated with the credit.</span></span></span></span></span></span></li>
+</ol>
+
+<p><span><span><strong><span><span><span>Currencies we support in CSV</span></span></span></strong></span></span></p>
+
+<div>&nbsp;</div>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><strong><span><span>Currency</span></span></strong></span></p>
+			</td>
+			<td width="384">
+			<p><span><strong><span><span>Country</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>AUD</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Australia</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>BRL</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Brazil</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>CAD</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Canada</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>CHF</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Switzerland</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>CLP</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Chile</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>COP</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Colombia</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>CZK</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Czech Republic</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>DKK</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Denmark</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>EUR</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span lang="PT-BR"><span>Andorra</span></span></span></p>
+
+			<p><span><span lang="PT-BR"><span>Austria</span></span></span></p>
+
+			<p><span><span lang="PT-BR"><span>Belgium</span></span></span></p>
+
+			<p><span><span lang="PT-BR"><span>Cyprus</span></span></span></p>
+
+			<p><span><span lang="PT-BR"><span>Estonia</span></span></span></p>
+
+			<p><span><span lang="PT-BR"><span>Finland</span></span></span></p>
+
+			<p><span><span><span>Germany</span></span></span></p>
+
+			<p><span><span><span>Greece</span></span></span></p>
+
+			<p><span><span><span>Ireland</span></span></span></p>
+
+			<p><span><span><span>Italy</span></span></span></p>
+
+			<p><span><span><span>Latvia</span></span></span></p>
+
+			<p><span><span><span>Lithuania</span></span></span></p>
+
+			<p><span><span lang="PT-BR"><span>Luxembourg</span></span></span></p>
+
+			<p><span><span lang="PT-BR"><span>Malta</span></span></span></p>
+
+			<p><span><span lang="PT-BR"><span>Monaco</span></span></span></p>
+
+			<p><span><span lang="PT-BR"><span>Montenegro</span></span></span></p>
+
+			<p><span><span lang="PT-BR"><span>Netherlands</span></span></span></p>
+
+			<p><span><span lang="PT-BR"><span>Portugal</span></span></span></p>
+
+			<p><span><span><span>San Marino</span></span></span></p>
+
+			<p><span><span><span>Slovakia</span></span></span></p>
+
+			<p><span><span><span>Slovenia</span></span></span></p>
+
+			<p><span><span><span>Spain</span></span></span></p>
+
+			<p><span><span><span>Vatican City</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>GBP</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>United Kingdom</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>HKD</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Hong Kong</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>HUF</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Hungary</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>IDR</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Indonesia</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>ILS</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Israel</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>INR</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>India</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>JPY</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Japan</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>KRW</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Korea</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>MXN</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Mexico</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>NOK</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Norway</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>NZD</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>New Zealand</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>PLN</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Poland</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>SAR</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Saudi Arabia</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>SEK</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Sweden</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>SGD</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Singapore</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>TRY</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Turkey</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>TWD</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>Taiwan</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>USD</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>United States</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="310">
+			<p><span><span><span><span><span>ZAR</span></span></span></span></span></p>
+			</td>
+			<td width="384">
+			<p><span><span><span>South Africa</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><a bookmark-id="top" href="#top" managed-link="">Return to top</a></span></p>
+
+<h3><a id="4" name="4"></a><span>4. Troubleshooting CSV issues</span></h3>
+
+<h4><a id="4.1" name="4.1"></a>4.1 The customer cannot make a purchase using CSV</h4>
+
+<ol>
+	<li><span>Check the <strong>Alerts</strong> or <strong>Orders </strong>sections of MST for declined purchases on the account. If a purchase is declined due to risk, follow normal risk rejection process in KB <span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2896711" managed-link="" target="_blank">2896711 Procedure: How to handle risk rejections and engagement with Risk Ops</a></span>.</span></li>
+	<li><span>If a purchase is declined for other reasons, review the error message for mitigation and check to see if the customer has enough CSV to complete the purchase, including any tax that may be applied to the final purchase price. </span></li>
+	<li><span>The customer may be able to complete the purchase with a split CSV payment using a secondary&nbsp;payment instrument for the remaining balance.</span></li>
+	<li><span>If the customer has a CSV balance on one of their billing profiles and cannot see the balance on their device, ask the customer to verify the device the region is set to is the same region that shows in MST.</span></li>
+	<li><span>If the customer is still unable to see the balance on the device, engage A&amp;B ERA team (for Japan, Korea, and China, engage ACA) or Xbox Ranger to engage PayOps.</span></li>
+</ol>
+
+<p><span><a bookmark-id="top" href="#top" managed-link="">Return to top</a></span></p>
+
+<h4><a id="4.2" name="4.2"></a>4.2 Split profiles</h4>
+
+<ol>
+	<li><span>A customer may claim state&nbsp;cannot see their full CSV balance, usually after redeeming a CSV prepaid code (PPC). </span></li>
+	<li><span>Assist the customer in reviewing their recent account history, which should include the PPC in question.</span></li>
+	<li><span>Using the token tool, confirm the PPC was redeemed to the profile the customer verified and the region matched that of the customer&rsquo;s billing profile, as some PPC&rsquo;s are geo fenced (only redeemable in certain countries). </span></li>
+	<li><span>Review the customer&rsquo;s billing accounts to rule out a split profile, which is defined as: </span>
+	<ul style="list-style-type:circle">
+		<li><span>Multiple billing accounts of the same in the same country</span></li>
+		<li><span>CSV balance on more than one account of the same type in the same country.</span></li>
+	</ul>
+	</li>
+</ol>
+
+<p>If you find that the customer has CSV on a split profile, engage A&amp;B ERA team (for Japan, Korea, and China, engage ACA) or Xbox ranger for PayOps engagement.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="4.3" name="4.3"></a>4.3 Additional guidance by exception scenario</h4>
+
+<p>For additional scenarios utilizing CSV in the Make It Right (MIR) scope, see KB <a href="https://internal.support.services.microsoft.com/help/4465058" target="_blank"><span>4465058 Procedure: Microsoft Store Make It Right</span></a><span>.</span></p>
+
+<p><span><a bookmark-id="top" href="#top" managed-link="">Return to top</a></span></p>
+
+<h4><a id="4.4" name="4.4"></a>4.4 Countries that are unable to add CSV to their account</h4>
+
+<ul>
+	<li><span>Afghanistan</span></li>
+	<li><span>Algeria</span></li>
+	<li><span>Andorra</span></li>
+	<li><span>Angola</span></li>
+	<li>Argentina</li>
+	<li><span>Azerbaijan</span></li>
+	<li><span>Bahamas, The</span></li>
+	<li><span>Barbados</span></li>
+	<li><span>Belarus</span></li>
+	<li><span>Bermuda</span></li>
+	<li><span>Bolivia</span></li>
+	<li><span>Bosnia and Herzegovina</span></li>
+	<li><span>Bulgaria</span></li>
+	<li><span>Cameroon</span></li>
+	<li><span>China</span></li>
+	<li><span>Congo (DRC)</span></li>
+	<li><span>Costa Rica</span></li>
+	<li><span>Croatia</span></li>
+	<li><span>Cyprus</span></li>
+	<li><span>Djibouti</span></li>
+	<li><span>Dominican Republic</span></li>
+	<li><span>Ecuador</span></li>
+	<li><span>Egypt</span></li>
+	<li><span>El Salvador</span></li>
+	<li><span>Estonia</span></li>
+	<li><span>French Guiana</span></li>
+	<li><span>French Polynesia</span></li>
+	<li><span>Georgia</span></li>
+	<li><span>Ghana</span></li>
+	<li><span>Gibraltar</span></li>
+	<li><span>Guadeloupe</span></li>
+	<li><span>Guinea</span></li>
+	<li><span>Guinea-Bissau</span></li>
+	<li><span>Guyana</span></li>
+	<li><span>Haiti</span></li>
+	<li><span>Honduras</span></li>
+	<li><span>Iceland</span></li>
+	<li><span>Indonesia</span></li>
+	<li><span>Jamaica</span></li>
+	<li><span>Kazakhstan</span></li>
+	<li><span>Kenya</span></li>
+	<li><span>Kyrgyzstan</span></li>
+	<li><span>Lithuania</span></li>
+	<li><span>Luxembourg</span></li>
+	<li><span>Malaysia</span></li>
+	<li><span>Malta</span></li>
+	<li><span>Martinique</span></li>
+	<li><span>Mauritius</span></li>
+	<li><span>Moldova</span></li>
+	<li><span>Monaco</span></li>
+	<li><span>Morocco</span></li>
+	<li><span>Mozambique</span></li>
+	<li><span>Namibia</span></li>
+	<li><span>New Caledonia</span></li>
+	<li><span>Nigeria</span></li>
+	<li><span>Pakistan</span></li>
+	<li><span>Panama</span></li>
+	<li><span>Paraguay</span></li>
+	<li><span>Peru</span></li>
+	<li><span>Philippines</span></li>
+	<li><span>Reunion</span></li>
+	<li><span>Romania</span></li>
+	<li><span>Saint Lucia</span></li>
+	<li><span>Senegal</span></li>
+	<li><span>Serbia</span></li>
+	<li><span>Seychelles</span></li>
+	<li><span>Slovenia</span></li>
+	<li><span>Somalia</span></li>
+	<li><span>Swaziland</span></li>
+	<li><span>Tajikistan</span></li>
+	<li><span>Tanzania</span></li>
+	<li><span>Thailand</span></li>
+	<li><span>Togo</span></li>
+	<li><span>Trinidad and Tobago</span></li>
+	<li><span>US&nbsp;Virgin Islands</span></li>
+	<li><span>Uganda</span></li>
+	<li><span>Ukraine</span></li>
+	<li><span>Uruguay</span></li>
+	<li><span>Venezuela</span></li>
+	<li><span>Vietnam</span></li>
+</ul>
+
+<p><span><a bookmark-id="top" href="#top" managed-link="">Return to top</a></span></p>
+
+<p><span> </span></p>
+
+<h4><a id="4.5" name="4.5"></a>4.5 The customer is unable to redeem CSV due to error &ldquo;CsvDepositLimitExceed&rdquo;</h4>
+
+<p><span></span><span><span><span><span><span>Customers in France can only redeem up to &euro;250 per month or use CSV for purchases up to &euro;250 to comply with recent changes in the Payment Services Directive PSD2 laws in France. The customer needs to wait until the next month to continue redeeming tokens when encountering this error.</span></span></span></span></span></p>
+
+<p><span><span><span><span>Customers see this error when they have reached this limit:</span></span></span></span></p>
+
+<p><span asset="4294591" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4294591]</span></p>
+
+<p>English translation:</p>
+
+<p>Enjoy life. Spend some money.</p>
+
+<p>You have reached your Microsoft account limit.</p>
+
+<p>Error code: CsvDepositLimitExceed</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="5" name="5"></a>5. CSV limits</h3>
+
+<p>There are two&nbsp;CSV limits.</p>
+
+<p>Both limits are customer impacting; one limits customer redemptions and the other limits the spend of the Microsoft account balance.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><a id="5.1" name="5.1"></a>5.1&nbsp;CSV daily limit</span></h4>
+
+<p>The CSV daily limit restricts the amount of CSV a&nbsp;customer can redeem into their Microsoft account. This limit is set by CELA to align with policies and regulations. Daily limit calculations are daily (except for France which is monthly) and are calculated by adding the beginning balance (BB) of the day and the redemptions made that same day.</p>
+
+<p>The total of the beginning balance and redemptions are not permitted to exceed the predetermined daily limit (by country). Once the limit is reached, the customer will no longer be able to redeem CSV that day into their Microsoft account. Spending CSV&nbsp;does not impact the limit. The limit is only impacted by the beginning balance and redemptions occurring that day.</p>
+
+<p><strong>Example:</strong><br>
+Predetermined daily limit for the USA is $1,000</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="41">
+			<p>&nbsp;</p>
+			</td>
+			<td width="73">
+			<p><strong>Beginning balance (BB)</strong></p>
+			</td>
+			<td width="64">
+			<p><strong>Redeem (+)</strong></p>
+			</td>
+			<td width="64">
+			<p><strong>Spend (-)</strong></p>
+			</td>
+			<td width="22">
+			<p align="center"><strong>=</strong></p>
+			</td>
+			<td width="54">
+			<p><strong>Ending balance (EB)</strong></p>
+			</td>
+			<td width="306">
+			<p><strong>Notes</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="41">
+			<p>May 1<sup>st</sup></p>
+			</td>
+			<td width="73">
+			<p>$1,000</p>
+			</td>
+			<td width="64">
+			<p>&nbsp;</p>
+			</td>
+			<td width="64">
+			<p>$(300)</p>
+			</td>
+			<td width="22">
+			<p align="center">=</p>
+			</td>
+			<td width="54">
+			<p>$700</p>
+			</td>
+			<td width="306">
+			<p>BB is $1K.</p>
+
+			<ul>
+				<li>The customer cannot redeem anything on May 1<sup>st</sup> since BB + Redemptions that day is already $1K.</li>
+				<li>The customer can spend as much as they want.</li>
+				<li><strong>Note:</strong> Even if they spend all of it, they cannot redeem more until the next day.</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td width="41">
+			<p>May 2<sup>nd</sup></p>
+			</td>
+			<td width="73">
+			<p>$700</p>
+			</td>
+			<td width="64">
+			<p>$300</p>
+			</td>
+			<td width="64">
+			<p>&nbsp;</p>
+			</td>
+			<td width="22">
+			<p align="center">=</p>
+			</td>
+			<td width="54">
+			<p>$1,000</p>
+			</td>
+			<td width="306">
+			<p>BB is $700.</p>
+
+			<ul>
+				<li>The customer can redeem up to $300 today.</li>
+				<li>The customer can spend as much as they want.</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td width="41">
+			<p>May 3<sup>rd</sup></p>
+			</td>
+			<td width="73">
+			<p>$1,000</p>
+			</td>
+			<td width="64">
+			<p>&nbsp;</p>
+			</td>
+			<td width="64">
+			<p>$(900)</p>
+			</td>
+			<td width="22">
+			<p align="center">=</p>
+			</td>
+			<td width="54">
+			<p>$100</p>
+			</td>
+			<td width="306">
+			<p>BB is $1K.</p>
+
+			<ul>
+				<li>The customer cannot redeem anything on May 3<sup>rd</sup> since BB + Redemptions that day is already $1K.</li>
+				<li>The customer can spend as much as they want.</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td width="41">
+			<p>May 4<sup>th</sup></p>
+			</td>
+			<td width="73">
+			<p>$100</p>
+			</td>
+			<td width="64">
+			<p>$900</p>
+			</td>
+			<td width="64">
+			<p>$(1,000)</p>
+			</td>
+			<td width="22">
+			<p align="center">=</p>
+			</td>
+			<td width="54">
+			<p>$0</p>
+			</td>
+			<td width="306">
+			<p>BB is $100.</p>
+
+			<ul>
+				<li>The customer can redeem up to $900 today.</li>
+				<li>The customer can spend as much as they want.</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td width="41">
+			<p>May 5<sup>th</sup></p>
+			</td>
+			<td width="73">
+			<p>&nbsp;</p>
+			</td>
+			<td width="64">
+			<p>$1,000</p>
+			</td>
+			<td width="64">
+			<p>&nbsp;</p>
+			</td>
+			<td width="22">
+			<p align="center">=</p>
+			</td>
+			<td width="54">
+			<p>$1,000</p>
+			</td>
+			<td width="306">
+			<p>BB is $0.</p>
+
+			<ul>
+				<li>The customer can redeem up to $1K today.</li>
+				<li>The customer can spend as much as they want.</li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><strong>CSV daily limits by country</strong></p>
+
+<p><a data-content-id="" data-content-type="" href="https://microsofteur.sharepoint.com/:x:/t/AdvocateCommunicationsCenter/commboard/EeNweX8EkBlPlgJxo4C4TpwBLfuHin8Ebp_cksY0ZDZ9OA?e=f6kip7" managed-link="" target="_blank">CSV Daily Limit FY20.xlsx</a></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><a id="5.2" name="5.2"></a>5.2 CSV lot limitation</span></h4>
+
+<p><strong>What is a lot?</strong></p>
+
+<p>A lot is created when a customer redeems a CSV token; <strong>each redemption creates one&nbsp;new lot</strong>. The currency denomination and brand of the CSV are irrelevant. It does not matter how much the token was worth, any redemption of any amount creates one&nbsp;lot.</p>
+
+<p><strong>What is this limitation?</strong></p>
+
+<p>This limitation impacts customers trying to complete an order that requires 18 lots or more:</p>
+
+<ul>
+	<li><span>If an order amount requires 18 lots or more (in total), the possibility of the transaction timing out increases as the lot count increases. </span></li>
+	<li><span>If an order amount requires 85 lots or more (in total), the transaction will <strong>not </strong>process. </span></li>
+</ul>
+
+<p><strong>Why is there a limitation? </strong></p>
+
+<p>The limitation of 85 lots or more is by design <span>due to the risk of financial misstatement</span>. The limitation of 18 lots or more is because each lot is treated as an individual transaction which requires more time and may result in the process timing out and the redemption failing.</p>
+
+<p><span><strong>What is the customer impact?</strong></span></p>
+
+<p><span><span><span><span><span><span>If the customer is trying to complete a purchase which requires an aggregate of over 18 lots (and times out) or has over 85 Lots (and the transaction is not processed), the impact to the customer is the same, the customer cannot spend the CSV balance in their Microsoft account.</span></span></span></span></span> </span><span> </span></p>
+
+<p><strong>How can Microsoft support help?</strong></p>
+
+<p><span><span><span><span><span>You can help troubleshoot with the customer by breaking down the order into multiple orders and/or purchasing a lower priced item to decrease the lot count needed in order to complete the order. If the order cannot be broken apart (since the customer is only trying to purchase a high value item like a Surface), there is no automated solution at this time and the short term manual solution is not scalable so each individual case must be reviewed.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Keep in mind, in addition to the lots limitation, there is also a CSV daily limit. The CSV daily Limit (Microsoft account balance) for most countries is around 1K USD/EUR equivalent.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>How the daily limit impacts the lot limitation issue: A customer has $900 in their Microsoft account from 18 individual $50 CSVs. The customer tries to buy a Surface for $900 and the transaction times out. The customer calls Microsoft support. We cannot break down the order or purchase a lower priced item. We cannot provide additional funds since the Microsoft account balance is already $900, $100 under the daily limit.</span></span></span></span></span></p>
+
+<p><span> </span></p>
+
+<div>
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<p class="alert-title"><strong>Note:</strong></p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><span><span><span><span><span><span>Information regarding the lot limitation is <strong>not</strong> to be provided to the customer at any point for any reason. CSS is to let the customer know that they will be creating a ticket to the appropriate teams for additional research and will get back to them shortly.</span></span></span></span></span> </span><span> </span></p>
+</div>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>
+</div>
+
+<ol>
+	<li>Verify the customer and review their account and order(s) as applicable.</li>
+	<li>Troubleshoot with the customer. If the order has multiple items, try breaking it into multiple orders, or purchasing&nbsp;a lower priced item to decrease the lot count.</li>
+	<li>If the issue remains, create a PayOps service request containing:
+	<ul style="list-style-type:disc">
+		<li><span>The customer&#39;s information (Name, PUID, and Account ID).</span></li>
+		<li><span>The customer&#39;a issue explained in detail.</span></li>
+		<li><span>Purchase information (What are they trying to buy, the price of the item, what store are they trying to purchase from, country, currency).</span></li>
+		<li><span>The customer&#39;s Microsoft account balance (CSV balances broken out by Paid and Promotional).</span></li>
+		<li><span>Where did the customer purchase the CSV tokens.</span></li>
+		<li><span>Screen shots:</span>
+		<ul style="list-style-type:circle">
+			<li><span>The error the customer is seeing.</span></li>
+			<li><span>Actions CSS took to confirm this was not fraudulent. </span></li>
+			<li><span>Actions CSS took to troubleshoot with the customer (if applicable).</span></li>
+			<li><span>Customer&rsquo;s balance in MST. </span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span>An estimate of how many lots the customers balance consists of (remember each redemption = one&nbsp;lot).</span></li>
+</ul>
+
+<ol start="4">
+	<li><span> Email AskCSV@ with the subject <em>CSS - lot limitation impacting customer</em> with the SR number. </span></li>
+	<li><span>The CSV team engages with Fraud, Risk, CELA, Payments Engineering and PayOps&nbsp;<span>to perform the necessary checks and initiate the manual solution if it is determined we should do so<span>. </span></span></span></li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<p><strong><u><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:78pt;
+ height:50.25pt' o:ole="">
+ <v:imagedata src="file:///C:/Users/ASSOCI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image001.emz"
+  o:title=""/>
+</v:shape><![endif]--><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Excel.Sheet.12" ShapeID="_x0000_i1025"
+  DrawAspect="Icon" ObjectID="_1635236228">
+ </o:OLEObject>
+</xml><![endif]--></u></strong></p>
+<div class="kb-securedata-section section">
+<p><strong><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span>July 2018</strong></p>
+</div>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"><span class="bold btn-link link-expand-text">Change history</span></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>Item</strong></p>
+			</td>
+			<td>
+			<p><strong>Title</strong></p>
+			</td>
+			<td>
+			<p><strong>Date</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td><br>
+			CONTENT TRACKING 160537</td>
+			<td>Sales: Update Make It Right KB 3044887for Holiday</td>
+			<td>10/28/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/157018" managed-link="">CONTENT TRACKING 157018</a></td>
+			<td>Billing: Update section 3.2 for Argentina on &nbsp;KB 3044887 CSV Procedure: Currency stored value (CSV)</td>
+			<td>7/15/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/156710">CONTENT TRACKING 156710</a></td>
+			<td>Multiple LOBs: Update KB ID 3044887 3.2 and 4.4 CSV no longer used in Argentina</td>
+			<td>7/13/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/155514">CONTENT TRACKING 155514</a></td>
+			<td>Surface: Update KB 3044887 to fix the table Currencies we support in CSV for readability</td>
+			<td>6/9/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/154665">CONTENT TRACKING 154665</a></td>
+			<td>A&amp;B: From SU#3444 : Update an Advocate blog site link in KB 3044887</td>
+			<td>5/14/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/153727">CONTENT TRACKING 153727</a></td>
+			<td>Proj: Office: Alta project for rebranding within Office</td>
+			<td>4/21/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/150192" managed-link="">CONTENT TRACKING 150192</a></td>
+			<td>Xbox: KB 3044887 update to section 1.1 to add link to Make good for reason codes</td>
+			<td>12/17/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/149177">CONTENT TRACKING 149177</a></td>
+			<td>Billing: Update KB 3044887 format and layout</td>
+			<td>11/14/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/149099">CONTENT TRACKING 149099</a></td>
+			<td>Billing: Add CSV Limits section to KB 3044887 Procedure: Currency stored value (CSV)</td>
+			<td>11/14/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/148482">CONTENT TRACKING 148482</a></td>
+			<td>KB 3044887: Small update to CSV table</td>
+			<td>10/28/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/146420">CONTENT TRACKING 146420</a></td>
+			<td>A&amp;B: KB 3044887 - Add section 1.4 regarding CSV</td>
+			<td>8/13/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/145501">CONTENT TRACKING 145501</a></td>
+			<td>A&amp;B: KB 3044887- Update ebook purchase capability with CSV&nbsp;</td>
+			<td>7/11/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/144397">CONTENT TRACKING 144397</a></td>
+			<td>A&amp;B: Update KB 3044887 for MIR reference</td>
+			<td>6/6/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/143344">CONTENT TRACKING 143344</a></td>
+			<td>Sales: Archive KB 3010708 , consolidated to &nbsp;KB 3083551</td>
+			<td>05/08/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/142765">CONTENT TRACKING 142765</a></td>
+			<td>AB: Update Policy statement on KB 3044887 Policy: Currency stored value (CSV)</td>
+			<td>4/22/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/140478" role="heading">Content Tracking 140478</a></td>
+			<td>KB 3044887: Microsoft 365 not in-scope for CSV usage</td>
+			<td>2/21/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/138259" role="heading">Content Tracking 138259</a></td>
+			<td>Billing: Update KB 3044887 Policy: Currency stored value (CSV) for Russia change</td>
+			<td>1/11/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/137343" role="heading">Content Tracking 137343</a></td>
+			<td>Billing: Update KB 3044887 Policy: Currency stored value (CSV) for subscription</td>
+			<td>11/19/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/136958" role="heading">Content Tracking 136958</a></td>
+			<td>Billing: Update 3044887 Policy: Currency stored value (CSV)</td>
+			<td>11/12/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/135500" role="heading">Content Tracking 135500</a></td>
+			<td>KB 3044887: Update for CSV physical goods purchase</td>
+			<td>10/19/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/134491" role="heading">Content Tracking 134491</a></td>
+			<td>A&amp;B: Update KB 3044887 for CSV guidance</td>
+			<td>7/11/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-live="assertive" data-bi-name="content-anchor-link" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/131682" managed-link="" tabindex="0" target="_blank">Content Tracking&nbsp;131682&nbsp;</a></td>
+			<td>A&amp;B: Update KB 3044887</td>
+			<td>7/11/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/129557" role="heading">Content Tracking 129557</a></td>
+			<td>XBOX: KB 3044887 CSV update for France</td>
+			<td>5/15/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/125143" role="heading">Content Tracking 125143</a></td>
+			<td>PPC: Update to 3044887 for token Replacements</td>
+			<td>2/13/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/123247" role="heading">Content Tracking 123247</a></td>
+			<td>KB 3044887: Update for fulfillment and MIR scenarios&nbsp;</td>
+			<td>1/11/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/121967" role="heading">Content Tracking 121967</a></td>
+			<td>KB 3044887: Update for countries that can&#39;t use CSV</td>
+			<td>12/5/2017</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/118698" role="heading">Content Tracking 118698</a></td>
+			<td>Update KB 3044887 to add a description on CSV as a payment method</td>
+			<td>10/10/2017</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>

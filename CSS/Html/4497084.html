@@ -1,0 +1,1033 @@
+﻿<header><h1>AES: Back Office support advocates: Uploads</h1></header><p><span asset="4509089" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4509089]</span></p>
+
+<h3><span><span><span><span><span>Who should use this article?</span></span></span></span></span></h3>
+
+<ul>
+	<li><span><span><span><span><span><span>Back Office Support (BOS) advocates supporting the Advertiser Enablement Services (AES) program.</span></span></span></span></span></span></li>
+</ul>
+
+<h3><span><span><span><span><span>What is this article about?</span></span></span></span></span></h3>
+
+<p><span><span><span><span><span>For BOS advocates, this article covers how to process Uploads (Bulk Campaign Management) requests. The Back Office Support (BOS) team executes these requests as part of Advertiser Enablement Services (AES) program, using the Editor tool or Microsoft Advertising UI to make bulk changes or assignments to an advertiser&rsquo;s Bing Ads account quickly and easily.</span></span></span></span></span></p>
+
+<h3><a id="top" name="top"></a>&nbsp;Table of contents</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<h4>1. <a bookmark-id="1" href="#1" managed-link="">Tools required</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>2.&nbsp;<a bookmark-id="2" href="#2" managed-link="">Definitions</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>3.&nbsp;<a bookmark-id="3" href="#3" managed-link="">Best practices and policies</a></h4>
+			</td>
+			<td>
+			<p class="MsoToc2"><span>3.1 <a bookmark-id="3.1" href="#3.1" managed-link="">Uploads status</a></span></p>
+
+			<p class="MsoToc2"><span>3.2 <a bookmark-id="3.2" href="#3.2" managed-link="">Clarification</a></span></p>
+
+			<p class="MsoToc2"><span>3.3 <a bookmark-id="3.3" href="#3.3" managed-link="">Uploads trials</a></span></p>
+
+			<p class="MsoToc2"><span>3.4 <a bookmark-id="3.4" href="#3.4" managed-link="">Backups</a></span></p>
+
+			<p class="MsoToc2"><span>3.5 <a bookmark-id="3.5" href="#3.5" managed-link="">Import files</a></span></p>
+
+			<p class="MsoToc2"><span>3.6 <a bookmark-id="3.6" href="#3.6" managed-link="">Campaign Management Data Objects</a></span></p>
+
+			<p><span><span><span>3.7</span></span></span>&nbsp;<a bookmark-id="3.7" href="#3.7" managed-link=""><span><span><span>Editor</span></span></span></a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>4. <a bookmark-id="4" href="#4" managed-link="" target="">ASD coding</a></h4>
+			</td>
+			<td>
+			<p>4.1&nbsp;<a bookmark-id="4.1" href="#4.2" managed-link="" target="">Service level ticket coding guidelines</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>5.&nbsp;<a bookmark-id="5" href="#5" managed-link="">Uploads process - Import from a file</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>6.&nbsp;<a bookmark-id="6" href="#6" managed-link="">Uploads process &ndash; Make multiple changes</a></h4>
+			</td>
+			<td>
+			<p class="MsoToc2"><span>6.1 <a bookmark-id="6.1" href="#6.1" managed-link="">Adding or updating data via the Make Multiple Changes Wizard</a></span></p>
+
+			<p class="MsoToc2"><span>6.2 <a bookmark-id="6.2" href="#6.2" managed-link="">Deleting data via the Make Multiple Changes Wizard</a></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>7.&nbsp;Check imported items, resolve errors, and upload changes</h4>
+			</td>
+			<td>
+			<p class="MsoToc2"><span>7.1 <a bookmark-id="7.1" href="#7.1" managed-link="">Checking the imported items</a></span></p>
+
+			<p class="MsoToc2"><span>7.2 <a bookmark-id="7.2" href="#7.2" managed-link="">Resolving errors</a></span></p>
+
+			<p class="MsoToc2"><span>7.3 <a bookmark-id="7.3" href="#7.3" managed-link="">Uploading changes</a></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4 class="MsoToc1">8. <a bookmark-id="8" href="#8" managed-link="">Uploads process &ndash; scenario-based</a></h4>
+			</td>
+			<td>
+			<p class="MsoToc2"><span>8.1 <a bookmark-id="8.1" href="#8.1" managed-link="" target="">Uploading new entities:&nbsp;Editor sub-documents</a></span></p>
+
+			<p class="MsoToc2"><span>8.2 <a bookmark-id="8.2" href="#8.2" managed-link="" target="">Uploading new entities: Microsoft Advertising UI sub-documents</a></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>9.&nbsp;<a bookmark-id="9" href="#9" managed-link="">Google Ads import</a></h4>
+			</td>
+			<td>
+			<p class="MsoToc2"><span>9.1 <a bookmark-id="9.1" href="#9.1" managed-link="">Requirements and best practices for Google import</a></span></p>
+
+			<p class="MsoToc2"><span>9.2 <a bookmark-id="9.2" href="#9.2" managed-link="">Imported data from a Google Ads import file</a></span></p>
+
+			<p class="MsoToc2"><span>9.3 <a bookmark-id="9.3" href="#9.3" managed-link="">Google Ads import file headers</a></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>10.&nbsp;Determining net-new data</h4>
+			</td>
+			<td>
+			<p class="MsoToc2"><span>10.1 <a bookmark-id="10.1" href="#10.1" managed-link="">De-duping data in the Import file</a></span></p>
+
+			<p class="MsoToc2"><span>10.2 <a bookmark-id="10.2" href="#10.2" managed-link="" target="">Determining net-new data in Editor</a></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>11.&nbsp;<a bookmark-id="11" href="#11" managed-link="">Troubleshooting errors</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>12. <a bookmark-id="12" href="#12" managed-link="">FAQ</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>13.&nbsp;<a bookmark-id="13" href="#13" managed-link="">Useful resources</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+<h3><a id="1" name="1"></a>1. Tools required</h3>
+
+<ul>
+	<li>Editor&nbsp;</li>
+	<li>Microsoft Advertising UI</li>
+	<li>Microsoft Excel</li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="2" name="2"></a>2. Definitions</h3>
+
+<ul>
+	<li><strong>Import</strong> - Loading the csv Excel file of ads into the tool.</li>
+	<li><strong>Upload</strong> - Loading the csv Excel file to a live server. The ads will go live once the campaign is in a live status and not paused. Uploads to active status should be explicitly listed in the request, otherwise uploads (ad groups and keywords) should always be paused. &nbsp;</li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="3" name="3"></a>3. Best practices and policies</h3>
+
+<p>The following section provides best practices and reminders for BOS advocates when processing an Uploads request.</p>
+
+<h4><a id="3.1" name="3.1"></a>3.1 Uploads status</h4>
+
+<ul>
+	<li>When uploading new entities that have their own statuses (for example, campaigns and ad groups), always pause the new entities unless otherwise stated by the requestor. This is to give the requestor/advertiser the opportunity to review the changes prior to activation.</li>
+	<li>Ad Extensions and Targeting Settings will follow their parent status thus, there is no need to clarify the preferred status before posting unless otherwise stated by the requestor.</li>
+</ul>
+
+<p><strong>Note:</strong> If the requestor remains unresponsive even after following the Total Case Ownership (<span>TCO) </span><span><span> </span></span><span><span> </span></span><span><span> </span></span>process, retain the current status of the affected campaigns/ad groups and send your final email including a notification that the status of the parent campaigns/ad groups remain unchanged.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="3.2" name="3.2"></a><span>3.2 Clarification</span><span><span> </span></span><span><span> </span></span></h4>
+
+<ul>
+	<li>Clarify to the requestor if the required information in the import file has not been provided.</li>
+	<li>Clarify if the requestor&rsquo;s confirmation is required before making changes, such as ad group bid being set to default due to missing bid amount. It would be best to recommend the minimum search bid for quick resolution.</li>
+	<li>Do not clarify for issues/errors that can be resolved without the requestor&rsquo;s assistance or confirmation (for example, duplicate items).</li>
+	<li>If there are missing required details that require clarification to the requestor (for example, the import will not push through without these details (for example, campaign budget), the best practice is to ask for any other missing details as well. This is to enable us to set the correct settings during the initial upload, and minimize back and forth communication with the requestor, extending the final turnaround time. For example, if the uploads request requires updates to the budget, budget type and daily budget options for a campaign, and the budget information was not provided, the advocate should verify with the requestor what the preferred budget option types are. Otherwise default settings will be set.</li>
+	<li>If pushing back is necessary, send an email to the requestor on how to resolve the error, if in scope. For a list of in-scope items, refer to the <span><strong>Communicating with AES</strong> </span><span><span> </span></span>section of see KB <a href="https://internal.support.services.microsoft.com/help/2023008" target="_blank">2023008 AES: Process: Microsoft Advertising: AES Requests</a>.&nbsp;</li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="3.3" name="3.3"></a>3.3 Uploads trials</h4>
+
+<p>To check the possible outcome of an Uploads request, you should replicate the advertiser&rsquo;s account using a test account and do a test run of the uploads. This will enable you to anticipate possible issues and/or errors before making changes to the advertiser&rsquo;s actual account. Doing trials in a test account also allows you to investigate an issue and find resolutions without modifying an advertiser&rsquo;s live account.</p>
+
+<p><strong>Uploads test run steps:</strong></p>
+
+<ol>
+	<li>Download the advertiser&rsquo;s account in Editor.</li>
+	<li>Export the whole account.</li>
+	<li>Access your <strong>test account</strong> in Editor.
+	<ul style="list-style-type:disc">
+		<li>Delete all the contents of your test account if it has existing data. The objective is to replicate the advertiser&rsquo;s account as accurately as possible, so there should be no other data in the test account.</li>
+	</ul>
+	</li>
+	<li>Import the downloaded advertiser&rsquo;s account data into your test account.
+	<ul style="list-style-type:disc">
+		<li>If you encounter issues, errors, or skipped items but these items are not involved in the request or will not affect the entity types the requestor asked you to upload, you may skip resolving the issues.</li>
+		<li>Ensure everything that will affect the entities in the request gets uploaded into the test account successfully to ensure accurate results.</li>
+	</ul>
+	</li>
+	<li>Proceed with processing the uploads request using your test account.</li>
+	<li>Assess the results.</li>
+</ol>
+
+<ul>
+	<li class="indent-2">Check all requested changes will be posted successfully.</li>
+	<li class="indent-2">Identify the cause of skipped items, errors, and warnings (if applicable).</li>
+	<li class="indent-2">Resolve all issues that do not require additional information from the requestor.</li>
+	<li class="indent-2">Take note of all issues encountered and if additional information is needed from the requestor.</li>
+</ul>
+
+<ol start="7">
+	<li>If there are errors or issues, process the uploads request using the advertiser&rsquo;s account. This is to check to see if you will receive the same issues/errors when the changes are applied to the advertiser&rsquo;s account, as there are some factors that may alter the outcome of an upload, such as entity IDs.</li>
+</ol>
+
+<ul>
+	<li class="indent-2"><strong>Do not post changes </strong>if the resolution to the issues/errors requires confirmation or additional information from the requestor.</li>
+</ul>
+
+<ol start="8">
+	<li>Resolve all errors that do not require the requestor&rsquo;s assistance.</li>
+	<li>If there are no errors or any issues, proceed with completing the uploads request following all uploads process guidelines.</li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="3.4" name="3.4"></a>3.4 Backups</h4>
+
+<p>Make sure to always export the whole account to generate a backup file. This may be used if the requestor/advertiser wishes to restore the account to its previous state. This also serves as a reference when comparing the original structure and contents of the account with the imported/changed items.</p>
+
+<p>The best practice is to save a final export of the account that contains your completed work. While a change history report may be pulled up to verify the changes made, an export of the account provides more details.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="3.5" name="3.5"></a>3.5 Import files</h4>
+
+<p>Make sure that the import file contains only one sheet to prevent Editor from mixing up data if there is more than one sheet in the import file. If the import file has more than one sheet, move the other sheets to a different book first. Save a copy of the original file as a backup.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="3.6" name="3.6"></a>3.6 Campaign Management Data Objects</h4>
+
+<p><span><span><span><span><span>To view a list and description of entity elements, you may refer to the Microsoft Developer Network <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/campaign-management-service/apifaultdetail?view=bingads-13" managed-link="" target="_blank">APIs and reference</a> </span></span></span><span><span><span>section</span></span></span><span><span><span>, then navigate to the specific entity type you would like to view.</span></span></span></span></span></p>
+
+<p><span asset="4516509" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4516509]</span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="3.7" name="3.7"></a>3.7 Editor</h4>
+
+<p>Make sure to download the latest version of Editor. This will prevent any unnecessary mismatch with account settings.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><span><a id="4" name="4"></a>4. </span>ASD coding</h3>
+
+<p><strong>Upload using the Editor tool:</strong></p>
+
+<p class="indent-1 paragraph"><span><strong><span><span><span>Ticket </span></span></span></strong></span><strong>status</strong>&nbsp;(choose the one that best fits your case): Completed, pending, or cancelled.</p>
+
+<p class="indent-1"><span><span><span><strong><span><span><span>Note:</span></span></span></strong><span><span><span> For completed tickets, select the corresponding SLA line item. This is based on the total line items worked on per ticket (account).</span></span></span></span></span></span></p>
+
+<p class="indent-1 paragraph"><span><strong><span><span>Customer issue:</span></span></strong> <span><span>Bulk Campaign Management Request</span></span></span></p>
+
+<p class="indent-1"><strong>Topic</strong>: Bing Ads Editor Bulk Import<strong> </strong></p>
+
+<p class="indent-1"><strong>Scenario</strong>: Excel Upload Request</p>
+
+<p class="indent-1"><strong>Problem</strong>: Excel Upload Request</p>
+
+<p class="indent-1"><strong>Solution delivered&nbsp;</strong><span>(choose the one that best fits your case):</span> Excel Upload Request Completed*, Excel Upload Request Cancelled, Solution in Progress.</p>
+
+<p><strong>Upload using Google Ads file:</strong></p>
+
+<p class="indent-1 paragraph"><span><strong><span><span><span>Ticket&nbsp;</span></span></span>status</strong>&nbsp;(choose the one that best fits your case): Completed, pending, or cancelled.</span></p>
+
+<p class="indent-1 paragraph"><span><strong><span><span>Customer issue:</span></span></strong> <span><span>Bulk Campaign Management Request</span></span></span></p>
+
+<p class="indent-1"><strong>Topic</strong>: Bing Ads Editor Bulk Import<strong> </strong></p>
+
+<p class="indent-1"><strong>Scenario</strong>: Google Import</p>
+
+<p class="indent-1"><strong>Problem</strong>: Google Import</p>
+
+<p class="indent-1"><strong>Solution delivered&nbsp;</strong><span>(choose the one that best fits your case):</span> Google Import Completed, Google Import Request Cancelled, Solution in Progress.</p>
+
+<p><strong>Upload Using Microsoft Advertising UI tool:</strong></p>
+
+<p class="indent-1 paragraph"><span><strong><span><span><span>Ticket&nbsp;</span></span></span>status</strong>&nbsp;(choose the one that best fits your case): Completed, pending, or cancelled.</span></p>
+
+<p class="indent-1 paragraph"><span><strong><span><span>Customer </span></span>issue<span><span>:</span></span></strong> <span><span>Bulk Campaign Management Request</span></span></span></p>
+
+<p class="indent-1"><strong>Topic</strong>: Bing Ads UI Bulk Changes</p>
+
+<p class="indent-1"><strong>Scenario</strong>: Bulk Change Request</p>
+
+<p class="indent-1"><strong>Problem</strong>: Bulk Change Request</p>
+
+<p class="indent-1"><strong>Solution delivered&nbsp;</strong><span>(choose the one that best fits your case):</span> Bulk Change Request Completed, Bulk Change Request Cancelled, Solution in Progress.</p>
+
+<p><strong>Notes:</strong></p>
+
+<ul>
+	<li>For Bing Shopping Upload guidance, see KB <a href="https://internal.support.services.microsoft.com/help/3187724" target="_blank">3187724 AES: Process: Microsoft Advertising: Shopping Uploads</a>.</li>
+	<li>For Uploads requests that will require you use Microsoft Advertising UI and Editor to complete, you must select only one&nbsp;of the two Upload ASD coding and use the same coding with multiple accounts, from parent ticket to child tickets.</li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><a id="4.1" name="4.1"></a>4.1&nbsp;Service level ticket coding guidelines</span></h4>
+
+<p><span><span><span><span><span>Code the parent ticket as per the number of items worked in the XID of the parent ticket. Service level will also correspond to the items worked in each individual ticket, for example. If you work 300 items (100k per account) across one parent and two child tickets, then the SLA would be applicable to the 100k items per ticket.</span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="5" name="5"></a>5. Uploads Process - Import from a file</h3>
+
+<p>The <strong>Import from a File</strong> function allows you to import an Excel sheet into&nbsp;Editor to upload new campaigns and other items to a Microsoft Advertising account. This is also used to bulk-edit existing items and/or settings.</p>
+
+<p><strong>Note:</strong> If you have the bulk sheet open on your desktop, close it. You cannot import a spreadsheet that is already open.</p>
+
+<p class="indent-1">1. Before importing the file, you must first Gather Requirements. To do this, see KB<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4493123" managed-link="" target="_blank"> </a><a href="https://internal.support.services.microsoft.com/help/4493123" target="_blank">&nbsp;4493123 AES: Process: Microsoft Advertising: Gathering Requirements for a change request and submit for Requestor Review</a>.</p>
+
+<p class="indent-1">2. In the Primary Navigation ribbon, select <strong>Import</strong> &gt; <strong>Import from a file. </strong></p>
+
+<ul>
+	<li class="indent-2"><strong>Note:</strong> Make sure that the import file contains only one&nbsp;sheet, which will prevent Editor from mixing up data if there are multiple sheets in the import file. If the import file has more than one sheet, move the other sheets to a different book/file first. Save a copy of the original file as a backup.</li>
+</ul>
+
+<p class="indent-1">3. Browse to the location of the import/upload file, then select <strong>Next</strong>.</p>
+
+<p class="indent-1">4. Check if each column of your data has been <strong>mapped appropriately</strong>. Select the correct data field in the drop-down menu for columns that haven&rsquo;t been mapped properly.</p>
+
+<ol>
+	<li class="indent-1">Some columns with no corresponding heading, such as <strong>ParentStatus</strong>, will be tagged as <strong>Not Importing</strong> by default.</li>
+	<li class="indent-1">Scroll to the right to check the rest of the columns.</li>
+	<li class="indent-1">Select <strong>Next </strong>once everything has been properly set.</li>
+</ol>
+
+<p class="indent-2"><strong>Notes:</strong></p>
+
+<ul>
+	<li class="indent-2">If you don&rsquo;t want to import a column, you can choose <strong>Not Importing</strong> from the column heading drop-down menu.</li>
+	<li class="indent-2">If the file uses Microsoft Advertising Headers, specific headers do not need to be called out specifically.&nbsp;If the file is from Google Ads, due to the discrepancies between Google and Microsoft Advertising column headings, the headers that do not have an exact match with Microsoft Advertising Headers will be recognized as&nbsp;<strong>Not Importing</strong>&nbsp;(for example, Criterion Type, Headline, and Networks).</li>
+</ul>
+
+<p class="indent-1">5. Select the&nbsp;import options. You may modify the default settings or select the default values for new account data by selecting the link&nbsp;<strong>Change your default settings.</strong></p>
+
+<ol>
+	<li class="indent-1">In the <strong>Defaults </strong>tab, choose all the correct settings. Select <strong>OK</strong>.</li>
+	<li class="indent-1">After choosing the appropriate settings, select <strong>Next.</strong></li>
+</ol>
+
+<p class="indent-1"><span asset="4497096" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4497096]</span></p>
+
+<p class="indent-1"><strong>Note:</strong> Make sure to set the correct Time zone and Language. While time zone can be edited at the account level, it cannot be edited at the campaign level unless deleting it then, re-upload.</p>
+
+<p class="indent-1">6. Check imported items, resolve any errors (if necessary), and upload your changes.</p>
+
+<ul>
+	<li class="indent-2">For how to do these processes, see <a bookmark-id="7" href="#7" managed-link="">section 7</a>.</li>
+</ul>
+
+<p class="indent-1">7. Submit the output file to the requestor to do a requestor review.&nbsp;To do this, see KB<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4493123" managed-link="" target="_blank"> </a><a href="https://internal.support.services.microsoft.com/help/4493123" target="_blank">&nbsp;4493123 AES: Process: Microsoft Advertising: Gathering Requirements for a change request and submit for Requestor Review</a>.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="6" name="6"></a>6. Uploads process &ndash; Make multiple changes</h3>
+
+<p>In Editor, the <strong>Make</strong> <strong>multiple changes</strong> wizard <span>is</span><span><span> </span></span><span><span> </span></span><span><span> </span></span> an easy way to make multiple changes, if the changes are all at one level of the hierarchy (same entity type). For example, if an advertiser sends you a bulk sheet with only keyword changes, the Make multiple changes wizard would be an efficient way to handle the task.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="6.1" name="6.1"></a>6.1 Adding or updating data via the Make Multiple Changes Wizard</h4>
+
+<p>The following instructions describe how to add or update multiple items of the same entity type using the Make Multiple Changes functionality.</p>
+
+<ol>
+	<li>Before adding or updating data, you must first Gather Requirements. To do this, see KB<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4493123" managed-link="" target="_blank"> </a><a href="https://internal.support.services.microsoft.com/help/4493123" target="_blank">&nbsp;4493123 AES: Process: Microsoft Advertising: Gathering Requirements for a change request and submit for Requestor Review</a>.</li>
+	<li>Navigate to the desired entity tab in the browser pane.</li>
+	<li>Select <strong>Make multiple changes </strong>in the Action bar.</li>
+</ol>
+
+<p class="indent-1"><span asset="4497097" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4497097]</span></p>
+
+<ol start="4">
+	<li>Select <strong>Add/update multiple &lt;entity type&gt;</strong>.</li>
+	<li>In the <strong>Make multiple changes wizard</strong>, check the column headings for the specific entity type selected. &nbsp;</li>
+</ol>
+
+<p class="indent-1"><span asset="4497098" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4497098]</span></p>
+
+<ul>
+	<li class="indent-2">For a&nbsp;<span><span><span><span>list of required data for each entity type, see <a href="https://microsoft.sharepoint.com/teams/StandardSupport/l1resources/default.aspx" target="_blank"><span>Required Columns and Details</span></a>.</span></span></span></span></li>
+	<li class="indent-2">Make sure to maximize the <strong>Make multiple changes</strong><span> window to view all column headings, as some headings to the right may not be visible when the window is in its default size.</span></li>
+</ul>
+
+<p class="indent-1">6. Access the Excel file<strong> </strong>containing your data and check if all required columns are complete and all data is correct.</p>
+
+<p class="indent-1">7. Press <strong>CTRL + A</strong> to highlight all data.</p>
+
+<p class="indent-1">8. Press <strong>CTRL + C</strong> to copy all data.</p>
+
+<p class="indent-1">9. Go to the blank field in the <strong>Make multiple changes wizard</strong> in Editor&nbsp;and paste all data by pressing <strong>CTRL + V</strong>.</p>
+
+<ul>
+	<li class="indent-2">If your data doesn&rsquo;t have column headings, you may insert column headings directly into the Make multiple changes wizard by clicking <strong>Insert headings </strong>before you paste the data from the Excel file.</li>
+	<li class="indent-2">When you use the Insert headings function, make sure the columns of data you&rsquo;re pasting match the column headings inserted.</li>
+</ul>
+
+<p class="indent-1">10. Select <strong>Next</strong>. You will be presented with a summary of the imported changes.</p>
+
+<p class="indent-1">11. Check imported items, resolve any errors (if necessary), and upload your changes.</p>
+
+<ul>
+	<li class="indent-2"><span><span><span>For how to do these processes, see <a bookmark-id="7" href="#7" managed-link=""><span>section 7</span></a></span></span></span>.</li>
+</ul>
+
+<p class="indent-1">12. Submit the output file to the requestor to do a requestor review. To do this, see KB<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4493123" managed-link="" target="_blank"> </a><a href="https://internal.support.services.microsoft.com/help/4493123" target="_blank">&nbsp;4493123 AES: Process: Microsoft Advertising: Gathering Requirements for a change request and submit for Requestor Review</a>.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="6.2" name="6.2"></a>6.2 Deleting data via the Make Multiple Changes Wizard</h4>
+
+<p>The following instructions demonstrate how to delete multiple items of the same entity type using the Make Multiple Changes functionality.</p>
+
+<ol>
+	<li>Before deleting data, you must first Gather Requirements. To do this, see KB<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4493123" managed-link="" target="_blank"> </a><a href="https://internal.support.services.microsoft.com/help/4493123" target="_blank">&nbsp;4493123 AES: Process: Microsoft Advertising: Gathering Requirements for a change request and submit for Requestor Review</a>.</li>
+	<li>Navigate to the desired entity tab in the browser pane.</li>
+	<li>Select <strong>Make multiple changes </strong>in the Action bar.</li>
+</ol>
+
+<p class="indent-1"><span asset="4497100" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4497100]</span></p>
+
+<ol start="4">
+	<li>Select <strong>Delete &lt;entity type&gt;</strong>.</li>
+	<li>In the Make multiple changes wizard, check the column headings needed to delete the specific entity type selected. Columns with an asterisk (*) indicate that the column is required.
+	<ul>
+		<li><strong>Note:</strong> Make sure to maximize the Make multiple changes window to view all column headings as some headers to the right may not be visible when the window is in its default size.</li>
+	</ul>
+	</li>
+	<li>Access the Excel file<strong> </strong>containing your data and check if all required columns are complete.</li>
+	<li>Press <strong>CTRL + A</strong> to highlight all data.</li>
+	<li>Press <strong>CTRL + C</strong> to copy all data.</li>
+	<li>Go to the blank field in the <strong>Make multiple changes wizard</strong> in Editor and paste all data by pressing <strong>CTRL + V</strong>.
+	<ul>
+		<li>If your data doesn&rsquo;t have column headings, you may insert column headings directly into the Make multiple changes wizard by clicking <strong>Insert headings </strong>before you paste the data from the Excel file.</li>
+		<li>When you use the Insert headings function, make sure the columns of data you&rsquo;re pasting match the column headings inserted.</li>
+	</ul>
+	</li>
+	<li>Select <strong>Next</strong>. You will be presented with a summary of the changes.&nbsp;&nbsp;<span asset="4497102" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4497102]</span></li>
+	<li><strong>Review</strong> the summary of the items you deleted.</li>
+	<li>Select the <strong>Skipped </strong>link to download and save the details of the items the system skipped during the process (if there are any).</li>
+</ol>
+
+<p class="indent-1"><span asset="4516512" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4516512]</span></p>
+
+<p class="indent-2"><strong>Note:</strong> Don&rsquo;t forget to download and save the details of the skipped items as the Skipped file needs to be sent to the requestor for review. Once you close the import summary window, you won&rsquo;t be able to retrieve the Skipped file unless you redo the whole import process.</p>
+
+<p class="indent-1">13. Select <strong>Close </strong>after saving the Skipped file.</p>
+
+<p class="indent-1">14. Check imported items, resolve any errors (if necessary), and upload your changes.</p>
+
+<ul>
+	<li class="indent-2">For how to do these processes, see the<strong> Check imported items, resolve errors, and upload changes </strong>section of this KB.</li>
+</ul>
+
+<p class="indent-1">15. Submit the output file to the requestor to do a requestor review. To do this, see KB<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4493123" managed-link="" target="_blank"> </a><a href="https://internal.support.services.microsoft.com/help/4493123" target="_blank">&nbsp;4493123 AES: Process: Microsoft Advertising: Gathering Requirements for a change request and submit for Requestor Review</a>.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="7" name="7"></a>7. Check imported items, resolve errors, and upload changes</h3>
+
+<h4><span><a id="7.1" name="7.1"></a>7.1 Checking </span><span><span> </span></span><span><span> </span></span>the imported items</h4>
+
+<ol>
+	<li><strong>Review</strong> the summary of the imported changes.</li>
+	<li>Select the <strong>Skipped </strong>link at the bottom of the page to download and save the details of the items the system skipped during the import process (if there are any).</li>
+	<li>Select <strong>Close </strong>after saving the Skipped file.
+	<ul>
+		<li><strong>Note:</strong> Don&rsquo;t forget to download and save the details of the skipped items as the Skipped file needs to be sent to the requestor for review. Once you close the import summary window, you will not be able to retrieve the Skipped file unless you redo the whole import process.</li>
+	</ul>
+	</li>
+	<li>Select <strong>Review import </strong>to view all imported items. Another option is to choose <strong>Last import </strong>from the <strong>View </strong>drop-down menu on the upper right-hand portion of Editor.</li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="7.2" name="7.2"></a>7.2 Resolving errors</h4>
+
+<ol>
+	<li>Check to see if the import contains errors/warnings.
+	<ul>
+		<li>Errors are denoted by the error icon (red circle with vertical line):&nbsp;<span asset="4497105" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4497105]</span></li>
+		<li>Warnings are identified by the warning icon (yellow triangle with exclamation point): &nbsp;<span asset="4497107" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4497107]</span></li>
+		<li>You will know if your import contains errors or warnings when you see the corresponding icon in the manager pane. These icons will appear for all affected levels of the hierarchy.</li>
+		<li>An error indicator on the ad group level means there could be an error at the ad group level, keyword, or ad level.</li>
+	</ul>
+	</li>
+	<li>Troubleshoot any initial errors. You may use to the following file as a reference for known errors and their corresponding resolutions:&nbsp;<a href="https://microsoft.sharepoint.com/teams/StandardSupport/l1resources/default.aspx" target="_blank">Known Errors and Resolutions</a>.
+	<ul>
+		<li><span><span><span>For more information, see <a bookmark-id="11" href="#11" managed-link=""><span>section 11</span></a></span></span></span>.</li>
+	</ul>
+	</li>
+	<li>If there are no errors or skipped items, proceed with verifying that all items in the bulk uploads file have been imported into Editor.
+	<ul>
+		<li>Filter the import file by entity type and count the number of items per entity type.</li>
+		<li>Countercheck if the number of items in the import file tally with the number of imported items.</li>
+	</ul>
+	</li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="7.3" name="7.3"></a>7.3 Uploading changes</h4>
+
+<ol>
+	<li>Once the initial troubleshooting steps have been completed, or if there are no skipped items or errors, select the <strong>Post Selected Campaigns</strong> button.</li>
+	<li>Editor will display a window detailing the summary of changes per entity type. This also counts the number of items that will be successfully posted and won&rsquo;t be posted due to further issues.</li>
+	<li>You will&nbsp;have the option to post changes either to <strong>All Campaigns</strong> or <strong>Selected Campaigns</strong>. Select&nbsp;<strong>All campaigns&nbsp;</strong>in the Summary of changes window to post all changes you made.</li>
+	<li>Select <strong>Post</strong>.</li>
+	<li>Check the Microsoft Advertising UI if the changes are reflecting in the customer&rsquo;s account.</li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="8" name="8"></a>8. Uploads process &ndash; scenario-based</h3>
+
+<p>The following documents are processes for different Uploads request scenarios, including some of the known workarounds for changing settings, such as time zone and language settings.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="8.1" name="8.1"></a>8.1 Uploading new entities:&nbsp;Editor&nbsp;sub-<span>documents</span><span><span><span> </span></span></span><span><span><span> </span></span></span><span><span><span> </span></span></span></h4>
+
+<p><strong>Campaign level:</strong></p>
+
+<ul>
+	<li><span><span><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B9C71431E-4DBF-4899-8ACF-ADAC7218B0AE%7D&amp;file=Audience%20Ads%20Bid%20Adjustment.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span>Audience Ads Bid Adjustments</span></a></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B75A813CE-2CF2-460E-BE53-0C580F1F202F%7D&amp;file=Changing%20Campaign%20Time%20Zone.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span>Changing Campaign Time Zone</span></a></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B4AF7C80B-211D-4F38-887B-4306DCFF152D%7D&amp;file=Campaign%20Budget.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span>Campaign Budget</span></a></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7BF98F8204-0903-4943-B9B8-C3F2829478CD%7D&amp;file=Campaign%20Daily%20Budget%20Option.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span>Campaign Daily Budget Option</span></a></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B78454DE4-3EEA-4582-83A7-C9F3538C0DA3%7D&amp;file=Campaign%20Name%20Change.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span>Campaign Name Change</span></a></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B90D421D1-1E68-46E0-8107-D1BA705FFAEA%7D&amp;file=Uploading%20Campaigns.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span>Uploading Campaigns</span></a></span></span></span></span></span></span></li>
+</ul>
+
+<p><strong>Ad group level:</strong></p>
+
+<ul>
+	<li><span><span><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B8939EDF1-D8BD-4E93-92A8-93E16BC27552%7D&amp;file=Language%20Change.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span>Language Change</span></a></span></span></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B0C0EF488-663F-44FB-BF09-CC114934D9E7%7D&amp;file=Network%20Distribution%20Settings.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Network Distribution Settings</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://sharepoint.partners.extranet.microsoft.com/sites/GCS/commboard/MAST/Documents/Files%20for%20Service%20Desk%20Knowledge/Back%20Office%20Support%20(BOS)%20Files/Ad%20Group%20Name%20Change.docx" target="_blank"><span><span><span>Ad Group Name Change</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7BDF13C34D-D536-44B7-90D4-1E2B5AD75169%7D&amp;file=Ad%20Group%20End%20Date%20Change.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Ad Group End Date Change</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B4656C968-7C38-4BF1-932B-CEDA2CBF75FE%7D&amp;file=Uploading%20Ad%20Groups.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Uploading Ad Groups</span></span></span></a></span></span></span></span></li>
+</ul>
+
+<p><strong>Keywords and targeting: </strong></p>
+
+<ul>
+	<li><span><span><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7BB64E867A-C046-4F79-BF79-B80BAC92D8AB%7D&amp;file=Ad%20Schedules.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span>Ad Schedules</span></a></span></span></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B6E03DD07-BE56-49D6-B89B-961992863C73%7D&amp;file=Location%20Targeting.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Location Targeting</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B958172A2-88E6-41ED-A9D2-5F341B126969%7D&amp;file=Uploading%20Keywords.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Uploading Keywords</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B2ED3E219-99F4-4A66-84C7-0FA60D7A9B90%7D&amp;file=Demographic%20Targeting.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Demographic Targeting</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B19752ED3-B002-43B2-862C-B0C4D5DB5774%7D&amp;file=Dynamic%20Ad%20Targets%20and%20Negative%20Dynamic%20Ad%20Targets.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Dynamic Ad Targets &amp; Negative Dynamic Ad Targets</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7BB90A26DE-2B06-4D90-8C40-9BA76D6CF565%7D&amp;file=Negative%20Keywords%20and%20List%20(Creation%20%26%20Association).docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Negative Keywords and List (Creation &amp; Association)</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7BB5819892-DA83-4D71-A734-F3461D30682F%7D&amp;file=Product%20Filters%20%26%20Product%20Groups.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Product Filters &amp; Product Groups</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B638FF515-4DD3-42E9-ACDB-D2153EF2D145%7D&amp;file=Audience%20Association%20%26%20Exclusion%20(Remarketing%20and%20In-market).docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Audience Association &amp; Exclusion (Remarketing and In-market)</span></span></span></a></span></span></span></span></li>
+</ul>
+
+<p><strong>Ads and extensions:</strong></p>
+
+<ul>
+	<li><span><span><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7BB16A1011-1641-45E8-949B-5BAB2FDE5501%7D&amp;file=Ads%20(EXTA%2C%20DSA%2C%20Product%20Ads).docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span>Ads (EXTA, DSA, Product Ads)</span></a></span></span></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B498C179E-5BED-4B0D-9A58-72450678A650%7D&amp;file=Ad%20Extensions%20Settings%20%26%20Schedules.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Ad Extensions Settings &amp; Schedules</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7BD2FE9AD2-529F-4E37-B3B1-52256203EBF1%7D&amp;file=App%20Extensions.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>App Extensions</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B04FDB005-A579-4344-AD29-423B692AFB7A%7D&amp;file=Sitelink%20Extensions.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Sitelink Extensions</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B792A60CA-94BA-4E62-A343-575CBEE1D0FD%7D&amp;file=Structured%20Snippet%20Extensions.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Structured Snippet Extensions</span></span></span></a></span></span></span></span></li>
+</ul>
+
+<p><strong>Shared library:</strong></p>
+
+<ul>
+	<li><span><span><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B42D17E71-DE24-4C7B-ABF2-28C52ACB0D8E%7D&amp;file=Labels%20(Enabling%20%26%20Deleting).docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span>Labels (Enabling &amp; Deleting)</span></a></span></span></span></span></span></span></li>
+	<li><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B57F9BBB0-7770-4D4C-BA1B-60E8C9AEE35F%7D&amp;file=Enabling%20%26%20Removing%20Entities%20via%20Shared%20Library.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span><span>Enabling &amp; Removing Entities via Shared Library</span></span></span></span></a></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="8.2" name="8.2"></a>8.2 Uploading new entities: Microsoft Advertising UI sub-documents</h4>
+
+<ul>
+	<li><span><span><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B5A1430B7-E391-45A3-9FBC-A25C76EBB0CF%7D&amp;file=IP%20Exclusions.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span>IP Exclusions</span></a></span></span></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B728E161C-2EB7-4A2F-9A6E-BA4428F26476%7D&amp;file=Account%20Tracking%20Template%20(Add%20and%20Delete).docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Account Tracking Template</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B28E81635-7565-4FB2-B71A-79762D4745F5%7D&amp;file=Website%20Exclusions%20(Ui%20and%20Editor).docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Website Exclusions</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7BFE2CDEE0-2FA4-44CF-A1C8-80D2362F1EAD%7D&amp;file=Audience%20Association%20%26%20Exclusion%20(Remarketing%20and%20In-market%20UI).docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Audience Association &amp; Exclusion (Remarketing and In-market UI)</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B291803CD-EC17-4E32-B6AC-0DFE1EBA002E%7D&amp;file=Use%20Campaign%20or%20Ad%20Group%20Settings%20(vv).docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Use Campaign or Ad Group Settings (vv)</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B827DCB87-128C-4552-BC07-C9EA829AFFA8%7D&amp;file=Campaign%20Shared%20Budget.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Campaign Shared Budget</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B4EFA2547-8B0F-4E38-BA9B-E36F2D7D295E%7D&amp;file=Enabling%20Countdown%20Feature%20for%20Expanded%20Text%20Ads.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Enabling Countdown Feature for Expanded Text Ads</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7BB4FEFE25-3484-4B39-B07A-B782BE92FEEB%7D&amp;file=Adding%20Ad%20Extensions%20via%20Import%20File.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Adding Ad Extensions via Import File</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7B27A4B542-C983-4B3A-B6B5-3F1FA0D3215F%7D&amp;file=Price%20Extensions.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Price Extensions</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7BE3A651A6-A0BA-4038-8C1C-79EDCD69F99A%7D&amp;file=App%20Install%20Ads.docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>App Install Ads</span></span></span></a></span></span></span></span></li>
+	<li><span><span><span><span><a href="https://microsoft.sharepoint.com/:w:/r/teams/StandardSupport/l1resources/_layouts/15/Doc.aspx?sourcedoc=%7BB1A3EE48-E64C-453D-A75B-45998E9DCAA7%7D&amp;file=Negative%20Shared%20List%20(via%20UI).docx&amp;action=default&amp;mobileredirect=true" target="_blank"><span><span><span>Negative Shared List (via UI)</span></span></span></a></span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="9" name="9"></a>9. Google Ads import</h3>
+
+<p>If the advertiser is already using Google Ads, their ad campaigns may be imported directly into Microsoft Advertising using an import file. Not all information will be imported, but that doesn&#39;t mean that it&#39;s not supported in Microsoft Advertising.</p>
+
+<p>A Microsoft Office Excel Worksheet (.xls, .xlsx) file, Comma-delimited (.csv) file, or Extensible Markup Language (.xml) file may be used to import data into Microsoft Advertising s. Available imports from Google Ads to Microsoft Advertising include the following but not limited to:</p>
+
+<ul>
+	<li>Campaigns (Search, Dynamic &amp; Shopping)</li>
+	<li>Ad Groups</li>
+	<li>Keywords</li>
+	<li>Negative keywords. <span><strong>Note</strong>: Broad Negative keywords will be uploaded as &lsquo;Phrase&rsquo;. Microsoft Advertising automatically convert it from Broad to Phrase match type.</span><span><span> </span></span></li>
+	<li>Expanded Text Ads</li>
+	<li>Ad Extensions except Image Extensions</li>
+	<li>Location targets such as:
+	<ul style="list-style-type:circle">
+		<li>Country/Region</li>
+		<li>State/Province</li>
+		<li>City</li>
+	</ul>
+	</li>
+</ul>
+
+<p><span><span><span><span><span>For the total number of items that can be imported from Google Ads, see Microsoft Advertising help article: <a href="https://help.ads.microsoft.com/apex/index/3/en/50851/" target="_blank"><span>What gets imported</span></a></span></span></span><span><span><span>.</span></span></span></span></span></p>
+
+<p><strong>Note:</strong> Some data is not included, such as radius targeting or zip code targeting information. Be aware that you may not see a warning about the data that is not imported. After the import, be sure to review the campaigns and ensure that targeting, bids, and all other data is configured as you expect and add the missing information back to the campaigns within Microsoft Advertising.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="9.1" name="9.1"></a>9.1 Requirements and best practices for Google import</h4>
+
+<ul>
+	<li>The import file must be an Excel or CSV (comma-separated values) file.</li>
+	<li>Each campaign or ad group is limited to 10,000 of combined location and negative location.&nbsp;For example, you can set a maximum of 10,000 city location criteria or 1,000 state location criteria and 9,000 city location criteria.</li>
+	<li>Always use the <strong>Import from Google</strong>&nbsp;<strong>Ads</strong> option when importing Google Ads files.</li>
+	<li>Map any invalid locations using the latest <a data-content-id="" data-content-type="" href="https://developers.azure.bingads.microsoft.com/Account" managed-link="" target="_blank">Microsoft Advertising Geographical Location Codes</a>. This will reduce the number of invalid locations after the import. Make sure to have the requestor&rsquo;s approval before posting them.</li>
+	<li><span>The data you import must not exceed the system limits. See the below link for full details. &nbsp;</span><span><span> </span></span>
+	<ul style="list-style-type:circle">
+		<li><strong>Note</strong>:&nbsp;<span><span><span><span>This is also the same with Microsoft Advertising Import. Refer to <a href="https://docs.microsoft.com/advertising/guides/entity-hierarchy-limits?view=bingads-13&amp;viewFallbackFrom=bingads-11" target="_blank"><span>Microsoft Advertising Hierarchy and Limits</span></a> </span></span></span></span><span><span><span> </span></span></span><span><span><span><span>for the complete list.</span></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<p><span></span><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="9.2" name="9.2"></a>9.2 Imported data from a Google Ads import file</h4>
+
+<p><span><span><span><span><span>When importing campaigns, there are a lot of different pieces of information that get imported. At a high-level, we know that campaigns, ad groups, and keywords are some of the items that get imported. For a more detailed list of imported data at the entity and attribute levels, refer to <a href="https://help.ads.microsoft.com/#apex/3/en/50851/0" target="_blank"><span>What gets imported from Ads?</span></a></span></span></span><span><span> </span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="9.3" name="9.3"></a>9.3 Google Ads import file headers</h4>
+
+<p><span><span><span><span><span>Google import files contain column headings that do not match with that of Microsoft Advertisings&rsquo;. See the <a href="https://microsoft.sharepoint.com/teams/StandardSupport/l1resources/default.aspx" target="_blank"><span>Google Import Template</span></a></span></span></span><span><span> </span></span><span><span><span> for an example of a Google import template.</span></span></span></span></span></p>
+
+<p>Due to the discrepancies between Google Ads and Microsoft Advertising column headings, some Google column headings are not recognized by Editor. Refer to the following table for a list of common Google Ads headers which do not match and their best fit in Editor. Choose these column headings in situations where the tool is not auto-mapping correctly.</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="265">
+			<p><span><strong>Bing Header</strong></span></p>
+			</td>
+			<td width="311">
+			<p><span><strong>Google Header</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="265">
+			<p><span>Budget / Budget Type</span></p>
+			</td>
+			<td width="311">
+			<p><span>Campaign Daily Budget</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="265">
+			<p><span>Network Distribution</span></p>
+			</td>
+			<td width="311">
+			<p><span>Networks</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="265">
+			<p><span>Title 1</span></p>
+			</td>
+			<td width="311">
+			<p><span>Headline 1</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="265">
+			<p><span>Title 2</span></p>
+			</td>
+			<td width="311">
+			<p><span>Headline 2</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="265">
+			<p><span>Title 3</span></p>
+			</td>
+			<td width="311">
+			<p><span>Headline 3</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="265">
+			<p><span>Text Ad and/or Sitelink description</span></p>
+			</td>
+			<td width="311">
+			<p><span>Description Line 1 &amp; Description Line 2</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="265">
+			<p><span>Match Type</span></p>
+			</td>
+			<td width="311">
+			<p><span>Criterion Type</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="265">
+			<p><span>Ad Extensions</span></p>
+			</td>
+			<td width="311">
+			<p><span>Feed Name</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="265">
+			<p><span>Sitelink Link Text</span></p>
+			</td>
+			<td width="311">
+			<p><span>Link Text</span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><strong>Notes:</strong></p>
+
+<ul>
+	<li>In Google Ads file, there is an instance wherein the description header for ETA is just one, combining Description 1 &amp; Description 2. With this, make sure to re-check mapping of the Google Ads file before importing.</li>
+</ul>
+
+<ul>
+	<li><span>Google Ads files do not contain Time Zone columns. Languages may be set to <strong>All</strong> OR <strong>multiple languages</strong> in a Google Ads file. Make sure to ask the requestor of the preferred Language and Time Zone before uploading the Google Ads file. Note: Time zone cannot be changed once posted. Ensure&nbsp;that this is set properly.</span><span><span> </span></span></li>
+	<li>Most of the location targeting from the Google Ads file will not be recognized in Editor, this needs to be resolved before proceeding with the uploads. (Any location which is not in the database will be sent to the requestor for review).</li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="10" name="10"></a>10. Determining net-new data</h3>
+
+<h4><a id="10.1" name="10.1"></a>10.1 De-duping data in the Import file</h4>
+
+<p>If the advertiser already has existing data in the account and requests to upload only new data from a large import file, follow the steps below to de-dupe the import file against existing data in the account:</p>
+
+<ol>
+	<li>Export the whole account from Editor.</li>
+	<li>Open the import file that the requestor provided.</li>
+	<li>In the import file, add a column to the right of the last column, and perform a <span><strong>VLOOKUP</strong> </span><span><span> </span></span><span><span> </span></span><span><span> </span></span>comparing the campaign names in the import file with the campaign names in the exported file. See KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4040847" managed-link="" target="_blank">4040847 Tool User Guide: Microsoft Advertising: Excel Features and Functions</a> on how to perform VLOOKUP.
+	<ul>
+		<li>All entities that return as <strong>#N/A</strong> are considered as net-new and will be uploaded into the account.</li>
+		<li>All those that return a distinct value based off the VLOOKUP process are considered as existing campaigns.</li>
+	</ul>
+	</li>
+	<li>Determine which entities under the existing campaigns are already in the account and which entities are net-new:
+	<ul>
+		<li>Start with one entity type under the existing campaigns. <span>Concatenate </span><span><span> </span></span><span><span> </span></span><span><span> </span></span><span><span> </span></span>all applicable fields for that entity type both in the import file and in the exported file.</li>
+		<li>In the import file, perform a VLOOKUP comparing the concatenated column values in the import file with the exported file, to find out which of these entities are net new. See below for steps.</li>
+	</ul>
+	</li>
+	<li>Repeat these steps for each entity type under the existing campaigns.</li>
+	<li>Once done for all types of entities, send the file to the requestor for review.</li>
+</ol>
+
+<p><strong>VLOOKUP - Comparing columns in Excel example: &nbsp;</strong></p>
+
+<p>In this example, we will determine that Campaign #1 is already existing in the account based on the VLOOKUP we performed in the import file, which will look like this:</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td colspan="2" nowrap="nowrap" width="192">
+			<p><span>Import File</span></p>
+			</td>
+			<td nowrap="nowrap" width="30">&nbsp;</td>
+			<td colspan="2" nowrap="nowrap" width="198">
+			<p><span>Exported File</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="96">
+			<p><span>Campaign</span></p>
+			</td>
+			<td nowrap="nowrap" width="96">
+			<p><span>Ad Group</span></p>
+			</td>
+			<td nowrap="nowrap" width="30">&nbsp;</td>
+			<td nowrap="nowrap" width="103">
+			<p><span>Campaign</span></p>
+			</td>
+			<td nowrap="nowrap" width="95">
+			<p><span>Ad Group</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="96">
+			<p><span>Campaign #1</span></p>
+			</td>
+			<td nowrap="nowrap" width="96">
+			<p><span>Ad Group #1</span></p>
+			</td>
+			<td nowrap="nowrap" width="30">&nbsp;</td>
+			<td nowrap="nowrap" width="103">
+			<p><span>Campaign #1</span></p>
+			</td>
+			<td nowrap="nowrap" width="95">
+			<p><span>Ad Group #1</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" width="96">
+			<p><span>Campaign #1</span></p>
+			</td>
+			<td nowrap="nowrap" width="96">
+			<p><span>Ad Group #2</span></p>
+			</td>
+			<td nowrap="nowrap" width="30">&nbsp;</td>
+			<td nowrap="nowrap" width="103">&nbsp;</td>
+			<td nowrap="nowrap" width="95">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<ol>
+	<li>To find out which of the ad groups are already existing, we will concatenate the <strong>Campaign</strong> and <strong>Ad Group columns</strong> for both <strong>Import</strong> and <strong>Exported</strong> <strong>files</strong>.</li>
+</ol>
+
+<ul>
+	<li class="indent-2">Imported file example:</li>
+</ul>
+
+<p class="indent-1"><span asset="4497110" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4497110]</span></p>
+
+<ul>
+	<li class="indent-2">Exported file example:</li>
+</ul>
+
+<p class="indent-1"><span asset="4497111" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4497111]</span></p>
+
+<ol start="2">
+	<li>Perform a VLOOKUP to compare the concatenated cells in the Import file with the concatenated cells in the exported file. All cells that will return as <strong>#N/A</strong> will be considered net-new entities.</li>
+</ol>
+
+<p class="indent-1"><span asset="4497112" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4497112]</span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="10.2" name="10.2"></a>10.2 Determining net-new data in Editor</h4>
+
+<p>If the advertiser already has existing data in the account and requests to upload only new data from a large import file, follow the steps below to determine new data using&nbsp;Editor:</p>
+
+<ol>
+	<li>Open the import file that the requestor provided and save it.</li>
+	<li>Pull up the account in Editor.</li>
+	<li>Select <strong>Import from a file</strong> and browse for the import file.
+	<ul>
+		<li><strong>Note: </strong>Lookup value has a maximum character limit of 255. Make sure to check any <strong>#VALUE</strong> error, aside from #<strong>NA</strong> value.</li>
+	</ul>
+	</li>
+	<li>Go through the <strong>Import</strong> <strong>Wizard</strong> window and look out for the data that will be returned on the New and Skipped columns.</li>
+	<li>Export all entities tagged as new by Editor to an Excel file.</li>
+	<li>Determine what caused the skipped items if those are net-new entities.</li>
+	<li>Send all net-new entities to the requestor for review.</li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="11" name="11"></a>11. Troubleshooting errors</h3>
+
+<ol>
+	<li><strong>Navigate</strong> through the tabs in the browser pane with error/warning icons (from keywords through to campaigns). The error/warning icons will indicate which of the tabs need to be worked on.&nbsp;&nbsp;<span asset="4497115" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4497115]</span></li>
+</ol>
+
+<p class="indent-2"><strong>Note: </strong>For large accounts with many line items, you may use the Advanced Search feature below the Primary Navigation ribbon to quickly search for an error notification specific to a selected entity type and filter for all items with that error notification. Use <strong>Advanced Search </strong>for filtering specific error notifications:</p>
+
+<ul>
+	<li class="indent-2">Under <strong>Add search criterion</strong>, choose the level of hierarchy or entity type you wish to search in (for example, campaigns, ads, keywords, ad groups) in the drop-down menu.</li>
+	<li class="indent-2">In the next drop-down menu, select <strong>Notification Message</strong>.</li>
+	<li class="indent-2">In the next drop-down menu, choose the specific error alert you wish to filter.</li>
+</ul>
+
+<ol start="2">
+	<li><strong>Review</strong> the errors present in Editor and <strong>resolve</strong> the errors that can be solved without the need for clarification to the requestor (for example, duplicate items).</li>
+	<li>If there are errors that require the requestor&rsquo;s assistance, <strong>before posting changes</strong>, do either of the following:
+	<ul>
+		<li>Ask via IM how to resolve the error, if in scope. For a list of in-scope items, see the <strong>Communicating with AES</strong> section of the KB <a href="https://internal.support.services.microsoft.com/help/2023008" target="_blank">2023008 AES: Process: Microsoft Advertising: AES Requests</a>.</li>
+		<li>Send an email to the requestor for errors that are not in-scope to resolve via IM.</li>
+	</ul>
+	</li>
+	<li>Examples of errors that require assistance from the requestor include:
+	<ul>
+		<li>Campaign budge</li>
+		<li>Missing entity details, such URLs</li>
+	</ul>
+	</li>
+	<li>Refer to the following file for a list of known errors and their corresponding resolutions: <a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/StandardSupport/l1resources/default.aspx" managed-link="" target="_blank">Known Errors and Resolution</a>.
+	<ul>
+		<li><strong>Note:</strong> Clarify to the requestor <em>only</em> if the necessary information is not in the import file, instructions, and details they provided.</li>
+	</ul>
+	</li>
+	<li>When the requestor responds with the needed information, proceed with resolving errors using the details they provided.</li>
+	<li>Post changes.</li>
+	<li>If there are still errors after the changes have been posted, copy all remaining errors that cannot be resolved from our end (for example, Editorial errors). Errors may be downloaded into Excel per entity type.</li>
+</ol>
+
+<p class="indent-3">1. Highlight the <strong>account name</strong> in the browser pane.</p>
+
+<p class="indent-3">2. Choose <strong>Errors </strong>from the <strong>View </strong>drop-down menu on the upper right-hand portion of Editor.</p>
+
+<p class="indent-2"><span asset="4497116" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4497116]</span></p>
+
+<p class="indent-3">3. In the browser pane, <strong>select</strong> the entity tab with errors.</p>
+
+<p class="indent-3">4. In the manager pane, press <strong>Ctrl + A</strong> to highlight all items.</p>
+
+<p class="indent-3">5. Select <strong>Export to CSV file.</strong></p>
+
+<p class="indent-3">6. <strong>Save</strong> the downloaded Excel file.</p>
+
+<p class="indent-3">7. <strong>Repeat</strong> steps c-f for all entity tabs showing errors.</p>
+
+<p>9. Copy and paste all errors into the <strong>Error Report </strong>tab of the Output File and send to the requestor.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="12" name="12"></a>12. FAQ</h3>
+
+<p><strong>Q: Why are Sitelink Extensions being skipped, when the skipped file is downloaded, there are no details of the skipped sitelinks?</strong></p>
+
+<p><strong>A:</strong> When the same unassociated Sitelink, Location, and Call Extensions are imported again, the download summary page will display these items as Skipped because they are already downloaded in the&nbsp;Editor&#39;s local database. However, when the skipped files from the Import Completed summary page are downloaded, these items will not be shown. See&nbsp;<a data-content-id="" data-content-type="" href="https://help.ads.microsoft.com/#apex/5/en/14022/0/" managed-link="" target="_blank">here</a> for more information about importing unassociated Sitelink, Location, and Call Extensions.</p>
+
+<p><strong>Q: What if the whole account cannot be exported to CSV file? </strong></p>
+
+<p><strong>A: </strong>Split the download by campaigns or ad groups depending on the size of the campaigns in the account.</p>
+
+<p><strong>Q</strong>: <strong>A requestor would like assistance in re-uploading standard text ads due to various reasons including error in language selected for campaign/ad group.</strong></p>
+
+<p><strong>A: </strong>Inform the requestor that a re-upload of the existing ad copy will not be possible due to the mandatory cutoff date and migration of all newly created ads to the expanded text ads format. <span>What we can offer is an assistance in creating new expanded text ads based on the existing standard text ads content.</span><span><span> </span></span><span><span> </span></span><span><span> </span></span> By doing this, make sure to ask them the details for the creation of Expanded Text Ads (such as Capitalization Preference, Path 1 and 2). Then, advocates should refer to KB&nbsp;<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/3180960" managed-link="" target="_blank">3180960 AES: Policy: Microsoft Advertising: Ticket handling</a> and KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4043521" target="_blank">4043521 AES: Process: Microsoft Advertising: Ad Copy Creation</a> for guidelines.</p>
+
+<p><strong>Note</strong>: Advocates should check our supported languages first before offering this option. See Markets, Languages and Hours of Operations under KB <a href="https://internal.support.services.microsoft.com/help/2023008" target="_blank">2023008 AES: Process: Microsoft Advertising: AES Requests</a> for reference.</p>
+
+<p><strong>Q: Where can I download the latest area location targeting list?</strong></p>
+
+<p><strong>A: </strong>Go to<strong> </strong><a data-content-id="" data-content-type="" href="https://developers.azure.bingads.microsoft.com/Account" managed-link="" target="_blank">Microsoft Advertising Geographical Location Codes</a> and download the correct localized list.</p>
+
+<p><strong>Note</strong>: The location codes provided here are for your organization&#39;s direct use of the Microsoft Advertising platform. These may not be shared to any individual outside your organization or another organization besides yours.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="13" name="13"></a>13. Useful <span>resources</span><span><span><span> </span></span></span><span><span><span> </span></span></span><span><span><span> </span></span></span></h3>
+
+<ul>
+	<li><span><span><span><a href="https://help.ads.microsoft.com/#apex/5/en/56878/0" target="_blank">Microsoft Advertising External Help Page - Import Campaigns</a></span></span></span></li>
+	<li><span><span><span><span><span> </span></span><a href="https://help.ads.microsoft.com/#apex/22/en/14003/3" target="_blank"><span><span><span>About language options in Editor</span></span></span></a></span></span></span></li>
+	<li><span><span><span><a href="https://help.ads.microsoft.com/#apex/3/en/51050/0" target="_blank"><span><span><span>Microsoft Advertising External Help Page &ndash; Importing your campaigns: Requirements</span></span></span></a></span></span></span></li>
+	<li><span><span><span><a href="https://help.ads.microsoft.com/#apex/3/en/51050/0" target="_blank"><span><span><span>What Gets Imported</span></span></span></a></span></span></span></li>
+	<li><span><span><span><a href="https://docs.microsoft.com/advertising/guides/entity-hierarchy-limits?view=bingads-13&amp;viewFallbackFrom=bingads-11" target="_blank"><span><span><span>Microsoft Advertising Hierarchy and Limits</span></span></span></a></span></span></span></li>
+	<li><span><span><span><a href="https://help.ads.microsoft.com/#apex/3/en/52001/3" target="_blank"><span><span><span>How should I organize my accounts and campaigns?</span></span></span></a></span></span></span></li>
+	<li><span><span><span><a href="https://help.ads.microsoft.com/#apex/3/en/51050/0" target="_blank"><span><span><span>Import campaigns directly from Ads</span></span></span></a></span></span></span></li>
+	<li><span><span><span><a href="https://docs.microsoft.com/advertising/guides/operation-error-codes?view=bingads-13&amp;viewFallbackFrom=bingads-12" target="_blank"><span><span><span>Operation Error Codes</span></span></span></a></span></span></span></li>
+	<li><span><span><span><a href="https://docs.microsoft.com/advertising/guides/editorial-failure-reason-codes?view=bingads-13&amp;viewFallbackFrom=bingads-12" target="_blank"><span><span><span>Editorial Reason Codes</span></span></span></a></span></span></span></li>
+	<li><span><span><span><a href="https://help.ads.microsoft.com/#apex/3/en/56698/1" target="_blank"><span><span><span>Upload an edited spreadsheet</span></span></span></a></span></span></span></li>
+	<li><span><span><span><a href="https://microsoft.sharepoint.com/teams/StandardSupport/l1resources/default.aspx" target="_blank"><span><span><span>Standard Output File Template</span></span></span></a><span><span> </span></span></span></span></span></li>
+</ul>
+
+<div>
+<div><a bookmark-id="top" href="#top" managed-link="">Return to top</a></div>
+</div>
+<p><strong><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span>March 2019</strong></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Change history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td><strong>Item</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong>Date</strong></td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/153914" managed-link="">CONTENT TRACKING 153914</a></td>
+			<td>MAST: AES: Project: BOS KB 4497084 Full Review and TOC alignment&nbsp;</td>
+			<td>6/8/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/147307">CONTENT TRACKING 147307</a></td>
+			<td>MAST: Bing Ads Back Office: SLA for AES Request Process&nbsp;</td>
+			<td>9/16/2016</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/146281">CONTENT TRACKING 146281</a></td>
+			<td>KB 4497084: Update terminology for Microsoft Advertising and all linked documents</td>
+			<td>8/8/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/139947" role="heading">Content Tracking 139947</a></td>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/139947" role="heading">:</a>Advertiser: Re-write for Article ID: 4039244 - Uploads, turn into side-nav</td>
+			<td>03/27/2019</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>

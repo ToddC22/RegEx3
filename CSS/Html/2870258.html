@@ -1,0 +1,268 @@
+﻿<header><h1>ASMS – EA Portal Authentication and Access Issues</h1></header><div class="kb-generic-section section">
+<p><span lang="EN">Submit a </span><a href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder="><span lang="EN"><span><span>ModTrack</span></span></span></a><span lang="EN"> request to update this TSG.</span></p>
+
+<h3>Known Issues</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="93">
+			<p><span><strong>Date </strong></span></p>
+			</td>
+			<td width="226">
+			<p><span><strong>Issue </strong></span></p>
+			</td>
+			<td width="274">
+			<p><span><strong>Approved Workaround </strong></span></p>
+			</td>
+			<td width="121">
+			<p><span><strong>Date Resolved </strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="93">
+			<p>&nbsp;</p>
+			</td>
+			<td width="226">
+			<p>&nbsp;</p>
+			</td>
+			<td width="274">
+			<p>&nbsp;</p>
+			</td>
+			<td width="121">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>Overview</h3>
+
+<p><span>This TSG provides guidance on how to troubleshoot Enterprise Agreement (EA) Portal <span><span>(</span></span></span><a data-content-id="" data-content-type="" href="https://ea.azure.com/" managed-link="" target="_blank">https://ea.azure.com</a><span><span><span>) </span></span></span><span>login issues<span><span>. </span></span></span></p>
+
+<p><strong>Note:</strong> This TSG applies to SEs and TAs who are monitoring the following queues:</p>
+
+<ul>
+	<li><strong>MSaaS ASMS EAL MCA </strong>(Global English and non-APJ LL; includes USG)</li>
+	<li><strong>MSaaS ASMS EAL MCA - APJ Local Language </strong>(Mandarin, Korean, Japanese)</li>
+</ul>
+
+<h3>Policy</h3>
+
+<ul>
+	<li><span>Always validate a customer before providing them access to the EA Portal.</span></li>
+	<li><span>Before adding an account or user to the EA account, ensure the </span><span>EA Admin has provided approval. </span></li>
+</ul>
+
+<h3>Customer Experience and Provisioning</h3>
+
+<p><span>For a successful login to occur, the customer must be using a valid email address and authentication type that aligns with the setup of their EA Enrollment.&nbsp;</span></p>
+
+<p><span>There are three different authentication types that a customer can be configured for:</span></p>
+
+<ul>
+	<li><span>Microsoft Account ID (Personal Microsoft Account, MSA)</span>
+
+	<ul style="list-style-type:circle">
+		<li><span>If the authentication type is Personal, only MSA&#39;s can be associated with the enrollment.</span></li>
+	</ul>
+	</li>
+	<li><span>Organizational ID (Work or school account, Org) </span>
+	<ul style="list-style-type:circle">
+		<li><span>If the authentication type is Work or School Account, only an Organizational Account can be associated with the enrollment.</span></li>
+	</ul>
+	</li>
+	<li><span>Mixed Account (Both MSA and Org IDs)</span>
+	<ul style="list-style-type:circle">
+		<li><span>If the authentication type is Mixed, then both MSA&#39;s and Org ID&#39;s can be associated with the enrollment.</span></li>
+	</ul>
+	</li>
+</ul>
+
+<p><strong>Note:</strong> Additional public facing guidance on how to navigate the EA portal can be found <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/billing/billing-ea-portal-administration" managed-link="" target="_blank">here</a>.</p>
+
+<h3>Support Scenarios</h3>
+
+<p><span><span><span>When an EA customer contacts support regarding portal login issues, attempt the following troubleshooting steps to better determine the issue.</span></span></span></p>
+
+<p><span><span><span>First, suggest to the customer to try the following: </span></span></span></p>
+
+<ul>
+	<li><span><span><span>Doublecheck the input to ensure the email was entered correctly (i.e. spelling, numbers, extra spaces, incorrect extension, etc.).</span></span></span></li>
+	<li><span><span><span>Clear the Browser History (Cache, Cookies, Temp Files, etc.), but make sure the &ldquo;preserve favorites&rdquo; box is un-checked. Then close all browsing sessions, and start a new browsing session to re-attempt sign-in. </span></span></span></li>
+	<li><span><span><span>Try an InPrivate browsing session.</span></span></span></li>
+	<li><span><span><span>Attempt to sign in using a different browser (Internet Explorer (IE), Firefox, Chrome).</span></span></span></li>
+	<li><span><span><span>Confirm if the account was removed and re-added to the Azure Active Directory (AAD) tenant. </span></span></span><span><span><span>If so, see the <a bookmark-id="Confirm if the customer is set up in AAD" data-content-id="" data-content-type="" href="Confirm if the customer is set up in AAD#Confirm if the customer is set up in AAD" managed-link="" target="_blank">Account PUID change</a> guidance below.</span></span></span></li>
+</ul>
+
+<p><span><span>If the customer has already attempted the above or none of the above worked, proceed with the following: </span></span></p>
+
+<ol>
+	<li><strong><span><span><span>Confirm the EA Enrollment the customer is trying to access. </span></span></span></strong>
+
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span>If not provided in the case, ask the customer to provide you with the EA Enrollment number.</span></span></span></span></li>
+		<li>
+		<p>In some cases, customers may not know their Enrollment number or have not provided it in the case. Use the below guidance to find the customer&#39;s Enrollment number without having to ask them for it.</p>
+
+		<ul style="list-style-type:circle">
+			<li>
+			<p>Use the company name or domain&nbsp;noted in CMAT, CST,&nbsp;or in the customer&rsquo;s signature to search for the enrollment in the <a href="https://ea.azure.com/">EA Portal</a>.<br>
+			<br>
+			<strong>Note</strong>:&nbsp;If the company name contains multiple words, try searching in the EA Portal using individual words. </p>
+			</li>
+			<li>
+			<p>The&nbsp;Customer Portal tool will also provide you with the&nbsp;Enrollment number when searching by the&nbsp;subscription GUID. Use the following link to access the tool: <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcaicustomers.microsoftonline.com%2F&amp;data=02%7C01%7Cv-ajbur%40microsoft.com%7Ca27f2f2fc6634817a85208d6a28a7238%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636875112831307707&amp;sdata=KhhsXMurBjT6Pn6AX7ymnhAkC7KPeLDbfbxZc23omUU%3D&amp;reserved=0">https://caicustomers.microsoftonline.com/</a>.</p>
+			</li>
+			<li>
+			<p>You can also leverage Azure Support Center (ASC) to find the Enrollment,&nbsp;by launching ASC from Service Desk (SD) while the case is open. If the customer has an Enrollment number, it will be displayed on the ASC screen as depicted below:<br>
+			<span asset="4467049" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4467049]</span></p>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ol>
+
+<p class="indent-2"><span><span><span><span><strong>Note:</strong> If you are unsuccessful in finding the Enrollment Number after attempting the above steps, you may request the information from the customer.</span></span></span></span></p>
+
+<ol start="2">
+	<li><strong><span><span><span>Validate the customer. </span></span></span></strong>
+
+	<ol style="list-style-type:lower-alpha">
+		<li><span><span><span>Follow</span></span></span><span> </span><span><span>the steps below to c</span></span><span><span><span>onfirm that the customer is a valid user on the </span></span></span><span><span>e</span></span><span><span><span>nrollment. If not, the Enterprise Administrator will need to add them or authorize support to add them in the desired user role.</span></span></span>
+
+		<ul style="list-style-type:disc">
+			<li><span><span><span>Navigate to the </span></span></span><a href="https://ea.azure.com/"><span>EA Portal</span></a><span> &gt; Select <strong>Tools </strong>&gt; Select <strong>Validate User&nbsp;</strong></span><span>&gt; Enter the email/PUID the customer is trying to login with.</span><br>
+			&nbsp;</li>
+		</ul>
+		</li>
+		<li><span>Verify the authentication type. </span>
+		<ul style="list-style-type:disc">
+			<li><span><span><strong>Microsoft Account</strong> &ndash; Verify if the Microsoft Account exists by having the customer try to login at&nbsp;</span></span><a href="http://account.live.com/"><span><span>account.live.com</span></span></a><span><span>. </span></span>
+			<ul style="list-style-type:circle">
+				<li><span><span>If the customer is using a Microsoft account authentication, but did not get redirected to the Microsoft account login page, a workaround is to have them login directly using <a href="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=urn%3afederation%3aMicrosoftOnline&amp;wctx=estsredirect%3d2%26estsrequest%3drQIIAbOSyygpKSi20tdPTdRLrCotStVLzs_Vyy9Kz0wBsaJYyhNTC4qEuARcbvjIROSsdp9gYWt_alZtzCxGTrj6VYwy2IzR1y_OTM_LzLvAyPiCkbGLicXQwNh4ExOzr5PnCaaOc3K3mAT9i9I9U8KL3VJTUosSSzLz8x4x8YYWpxb55-VUhuRnp-ZNYubLyU_PzIsvLkqLT8vJLwcKAI0uSEwuiS_JTM5OLdnFrJKcYpxsZJhqoWtpkJiia2JsbKBrYWBhqJtobppikZhsZmSamHyBReAHC-MuTjN8LrUvzyiyhYuqFaWWlBbllRbl2OoDAA2&amp;id=&amp;cbcxt=waep&amp;lc=1033" managed-link="" target="_blank">https://login.live.com</a>.</span></span></li>
+				<li><span><span>Customers may receive an &ldquo;Invalid User&rdquo; error when using a Microsoft account login. This may be because the customer has multiple Microsoft accounts and the one that they are trying to login with, is not the primary alias.<br>
+				<br>
+				<strong>Note:</strong> The EA Portal only accepts primary aliases.<br>
+				<br>
+				To resolve this issue, have the customer follow the <em>Check Primary Alias</em> instructions below (This is not a common issue, as not many users will set up multiple aliases). </span></span>
+				<ol style="list-style-type:upper-roman">
+					<li><span><span>Sign into </span></span><a href="http://account.live.com/"><span><span>account.live.com</span></span></a><span><span>. </span></span></li>
+					<li><span><span>Navigate to <strong>Your Info</strong> &gt; Select <strong>Manage your sign-in email or phone number. </strong></span></span></li>
+					<li><span><span>Follow the prompt to verify the alternate email address and obtain a code to access sensitive information.</span></span></li>
+					<li><span><span>Enter the security code and select <strong>Set it up later.</strong></span></span></li>
+					<li><span><span>You will then land on the <em>Manage your account aliases</em> page, where you will see all the account aliases that you have.<br>
+					<br>
+					Doublecheck if&nbsp; the <em>Primary alias</em> is the one that you are using to log into the Azure EA Portal with. </span></span>
+					<ul style="list-style-type:disc">
+						<li><span><span>If it is not, you can either make it your primary alias, or use the account that is currently set as primary alias for EA portal instead.</span></span></li>
+					</ul>
+					</li>
+				</ol>
+				</li>
+				<li><span><span>If the customer wants to use a Microsoft authentication type but does not have a valid Microsoft account, direct them to create a new Microsoft account at </span><a data-content-id="" data-content-type="" href="https://account.microsoft.com/" managed-link="" target="_blank">signup.live.com</a><span>. Once they have created the Microsoft account, and provided the EA Admin&rsquo;s approval to be added to the EA, <span>proceed with adding them</span></span><span>. </span></span><span><span><span>See </span></span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-US/help/4537343" managed-link="" target="_blank">Add a new Account</a><span> or <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2661348" managed-link="" target="_blank">Add or Remove EA Admin</a> TSGs.</span></span></li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+	</ol>
+	</li>
+</ol>
+
+<ul>
+	<li class="indent-2"><span><span><strong>Organizational Account</strong> &ndash; Verify that the customer has set up their Microsoft Azure Active Directory (AAD) account by having the user try to login at </span></span><u><span><span><a data-content-id="" data-content-type="" href="https://portal.microsoftonline.com/" managed-link="" target="_blank">https://portal.microsoftonline.com</a>.</span></span></u>
+
+	<ul style="list-style-type:circle">
+		<li><span><span>If the customer would like to use a Work or School account authentication type, they will need to have O365 or AAD, and be federated to the Cloud.</span></span>
+
+		<ol style="list-style-type:upper-roman">
+			<li><span><span>If the customer provides a Work or School account and insist that it is valid, but you confirm that it is not, have the customer check if the email address provided is a UserPrincipleName (UPN).<br>
+			<br>
+			<strong>Note:</strong> The EA Portal only uses UPNs and for some companies the UPN may be different from the email address. See more details <a href="https://docs.microsoft.com/en-us/azure/active-directory/hybrid/plan-connect-userprincipalname">here</a>.</span></span></li>
+			<li><span><span>If determined that the customer does not have a Work or School account, suggest for them to use a Microsoft authentication type instead (See section above). </span></span></li>
+			<li><span><span>If the customer has a valid Work or School account and it is set up as such in the EA portal, but they are attempting to use a Microsoft account to authenticate, advise them to do the following : </span></span>
+			<ol>
+				<li>C<span><span>ear the cache and close the browser.</span></span></li>
+				<li>Open <span><span>an InPrivate browser and attempt the login again. This time as a Work or School account authentication type. </span></span>
+				<ul style="list-style-type:disc">
+					<li><span><span>Sometimes, IE does not clear cache properly and you may advise the customer to try with Chrome or Firefox, if it does not work in IE.</span></span><br>
+					&nbsp;</li>
+				</ul>
+				</li>
+			</ol>
+			</li>
+		</ol>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<ol start="3">
+	<li><span><span><span><strong><strong><span><a id="Confirm if the customer is set up in AAD" name="Confirm if the customer is set up in AAD"></a>Confirm if the customer is set up in AAD.</span></strong></strong></span></span></span>
+
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>If a customer was previously set up in AAD, deleted, and then set up again, it is possible that duplicate records exists for the user, thus resulting in login error. <span><span>For troubleshooting steps on <span>PUID Mismatch and </span>Account PUID Change scenarios</span></span><span><span>, reference the <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-US/help/4537343" managed-link="" target="_blank">Add a new Account</a> TSG.&nbsp;</span></span></span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>If the customer has issues with their AAD set up, please direct them to the following public facing guidance <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/active-directory/?WT.mc_id=AzPortal_AAD_Overview_CmdBar_DocLink" managed-link="" target="_blank">AAD Overview</a> and <a data-content-id="" data-content-type="" href="https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview" managed-link="" target="_blank">AAD Portal</a>. </span></span></span></span></span></span></li>
+		<li>You can also leverage the Azure Active Directory TSG <a href="https://internal.support.services.microsoft.com/en-US/help/2832928" managed-link="" target="_blank">2832928</a>.&nbsp;<br>
+		&nbsp;</li>
+	</ul>
+	</li>
+	<li><span><strong><span>Collect Network Traces.</span></strong></span>
+	<p><span>If the customer is still experiencing sign-in issues after attempting all of the above troubleshooting steps do the following:&nbsp;</span></p>
+
+	<ol start="1" style="list-style-type:lower-alpha">
+		<li>
+		<p><span><span>Request a Network, HAR, or Fiddler trace. See </span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-US/help/2663762" managed-link="" target="_blank">TSG 2663762</a><span> for customer facing steps on how to collect a trace. </span></span></p>
+		</li>
+		<li>
+		<p><span>Engage the EAO team via a task.&nbsp;In return, they will engage Engineering.&nbsp;</span></p>
+		</li>
+	</ol>
+	</li>
+</ol>
+
+<h3>Engagement and Escalation Path</h3>
+
+<p>Follow the guidance in&nbsp;<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4563342" managed-link="" rel="noreferrer noopener" tabindex="-1" target="_blank" title="https://internal.support.services.microsoft.com/en-us/help/2872061">TSG 4563342</a>&nbsp;for any questions you may have about the above processes.</p>
+
+<h3>TSG Change Log&nbsp;</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="132">
+			<p><span><strong>Date </strong></span></p>
+			</td>
+			<td width="126">
+			<p><span><strong>Updated By </strong></span></p>
+			</td>
+			<td width="364">
+			<p><span><strong>Content Updated </strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p>03/19/2020</p>
+			</td>
+			<td width="126">
+			<p><span><span>mievan</span></span></p>
+			</td>
+			<td width="364">
+			<p><span><span><span>Comprehensive Rewrite: Updated TSG content and formatting as part of the TSG Refresh and EAO Scope Transition Project.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">06/08/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">
+			<p>Replaced bullet &ldquo;b&rdquo; under the <em>Collect Network Traces</em> Support Scenario per the Proposed Changes field in the ModTrack 2951.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+<p>&nbsp;</p>
+</div>
+</div>

@@ -1,0 +1,914 @@
+﻿<header><h1>Process: Microsoft Advertising: Escalating to Partners using UCMT, COSMIC, and CAP</h1></header><p><span asset="4509089" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4509089]</span></p>
+
+<h3><span><span><span><span>Who should use this article?</span></span></span></span></h3>
+
+<ul>
+	<li><span><span><span><span>Microsoft Advertising</span></span></span></span></li>
+</ul>
+
+<h3><span><span><span><span>What is this article about?</span></span></span></span></h3>
+
+<p><span><span><span><span>This article covers how to escalate to partners using different tools including UCMT, COSMIC, and CAP.</span></span></span></span></p>
+
+<h3><a id="top"></a><a id="top" name="top"></a>Table of contents</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<h4>1.&nbsp;<a bookmark-id="1" href="#1" managed-link="" target="">UCMT Destinations: Global Support, Editorial, GFS, Fraud</a></h4>
+			</td>
+			<td>
+			<p>1.1&nbsp;<a bookmark-id="1.1" href="#1.1" managed-link="">Submit a customer escalation to Global Support from ASD</a></p>
+
+			<p>1.2 <a bookmark-id="1.2" href="#1.2" managed-link="">Field mapping</a></p>
+
+			<p>1.3&nbsp;<a bookmark-id="1.3" href="#1.3" managed-link="">Attaching files to UCMT Tickets</a></p>
+
+			<p>1.4&nbsp;<a bookmark-id="1.4" href="#1.4" managed-link="">Send an update to UCMT</a></p>
+
+			<p>1.5 <a bookmark-id="1.5" href="#1.5" managed-link="">QViews</a></p>
+
+			<p>1.6&nbsp;<a bookmark-id="1.6" href="#1.6" managed-link="">Resolving and escalating integration issues</a></p>
+
+			<p>1.7&nbsp;<a bookmark-id="1.7" href="#1.7" managed-link="">Escalating to Global Support for non-customer issues</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>2.&nbsp;<a bookmark-id="2" href="#2" managed-link="">Escalating To CAP: BOS</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>3.&nbsp;<a bookmark-id="3" href="#3" managed-link="">Escalating to COSMIC: SANOps (aka AdOps)</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>4.&nbsp;<a bookmark-id="4" href="#4" managed-link="">How to send emails to ASD tickets</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>5.&nbsp;<a bookmark-id="5" href="#5" managed-link="">Resources</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+<h3><span><span><span><span><span><span><span><span><span><a id="1" name="1"></a>1. UCMT&nbsp;destinations: Global Support, Editorial, GFS, Fraud</span></span></span></span></span></span></span></span></span></h3>
+
+<p><span><strong><span><span><span>Note: </span></span></span></strong><span><span><span><span>Global Financial Services (GFS), also known as Worldwide Online Credit Services (WOCS).</span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span><span> </span></span></span></span></span></span></span><span><span><span><span>UCMT is the ticketing tool used by most of escalation teams. The ASD-UCMT integration allows ASD to generate Tier 2 tickets in UCMT. Issue information is automatically sent to the UCMT ticket and the ASD ticket is automatically updated with UCMT ticket details.</span></span></span></span></p>
+
+<p><span><span><span><span>ASD and UCMT are connected by an API that links one ASD ticket to one UCMT ticket. Child tickets should be used to escalate from ASD to UCMT.</span></span></span></span></p>
+
+<p><span><span><span><span>The UCMT ticket owner should be notified if the investigation is cancelled prior to resolution (for example, the customer has abandoned the interaction and a Tier 2 investigation is no longer required</span></span></span></span><span><span><span><span>).&nbsp;</span></span></span></span><span><span><span><span>UCMT can be accessed at <a data-content-id="" data-content-type="" href="https://ucm.bingads.microsoft.com/Ticketing/#/BookOfTickets" managed-link="" target="_blank">https://ucm.bingads.microsoft.com/Ticketing/#/BookOfTickets</a>.</span></span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td><strong><a id="UCMT Destinations"></a>ASD Tier 2 Receiving Team</strong></td>
+			<td>
+			<p><strong>ASD Tier 2 Sub-Team</strong></p>
+			</td>
+			<td><strong>UCMT Destination Team Name &amp; ID</strong></td>
+			<td>
+			<p><strong>Email Destination (populated into ASD&gt; UCMT Ticket Details&gt;UCMT Team)</strong></p>
+			</td>
+			<td>
+			<p><strong>Example Issue Types (see <a href="https://sharepoint.partners.extranet.microsoft.com/sites/StandardSupport/l1resources/Lists/Escalation%20Guide/AllItems.aspx" managed-link="" target="_blank">Escalation Guide</a> for details)</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>Ad Platform &amp; Tools</td>
+			<td>Ad Delivery Technical Support</td>
+			<td>18</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:adsupport@microsoft.com" managed-link="" target="_blank">adsupport@microsoft.com</a></td>
+			<td>AdInquiry, Mobile ad delivery</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>API Technical Support</td>
+			<td>67</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:adsupport@microsoft.com" managed-link="" target="_blank">adsupport@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Billing &amp; Commerce Platform Technical Issues</td>
+			<td>70</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:adsupport@microsoft.com" managed-link="" target="_blank">adsupport@microsoft.com</a></td>
+			<td>Accounts and billing technical issues</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Editor Technical Support</td>
+			<td>69</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:adsupport@microsoft.com" managed-link="" target="_blank">adsupport@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Bing Merchant Center</td>
+			<td>88</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:nqs@microsoft.com" managed-link="" target="_blank">nqs@microsoft.com</a></td>
+			<td>For Store reviews and updating/overturning product editorial status</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Bing Places</td>
+			<td>79</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:ucmbtool@microsoft.com" managed-link="" target="_blank">bpsupport@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Bing Shopping Technical Support</td>
+			<td>74</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:adsupport@microsoft.com" managed-link="" target="_blank">adsupport@microsoft.com</a></td>
+			<td>Merchant Center Technical Support (FTP, catalog mgmt, etc.)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Bing Webmaster Technical Support</td>
+			<td>78</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:ucmbwts@microsoft.com" managed-link="" target="_blank">bwtsupport@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Campaign Set Up Technical Support</td>
+			<td>71</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:adsupport@microsoft.com" managed-link="" target="_blank">adsupport@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Reporting Technical Support</td>
+			<td>14</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:adsupport@microsoft.com" managed-link="" target="_blank">adsupport@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>UET/Conversion Tracking Technical Support</td>
+			<td>68</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:adsupport@microsoft.com" managed-link="" target="_blank">adsupport@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>NQS</td>
+			<td>Appeals</td>
+			<td>88</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:custappeal@microsoft.com" managed-link="" target="_blank">custappeal@microsoft.com</a></td>
+			<td>QBR Appeals, Merchant Center Store Appeals, Bypass</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Complaints</td>
+			<td>26</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:takeitdown@microsoft.com" managed-link="" target="_blank">takeitdown@microsoft.com</a></td>
+			<td>QBR Review</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Matching</td>
+			<td>306</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:nqs@microsoft.com" managed-link="" target="_blank">nqs@microsoft.com</a></td>
+			<td>Smart matching inquiries/break requests</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Policy Question</td>
+			<td>305</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:nqs@microsoft.com" managed-link="" target="_blank">nqs@microsoft.com</a></td>
+			<td>Policy clarification requests, clarify policy/report an account for compliance/takedown</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Enablement</td>
+			<td>308</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:nqs@microsoft.com" managed-link="" target="_blank">nqs@microsoft.com</a></td>
+			<td>Request to review advertisers to enable them for gambling and adult programs, guns</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Malware/Bundling/Downloads</td>
+			<td>310</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:nqs@microsoft.com" managed-link="" target="_blank">nqs@microsoft.com</a></td>
+			<td>Request to review an account to see if ads link to content containing malware, unapproved bundling of software or malicious downloads</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Phishing/Techscam</td>
+			<td>6</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:nqs@microsoft.com" managed-link="" target="_blank">nqs@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Click/Supply TQ Investigation</td>
+			<td>307</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:nqs@microsoft.com" managed-link="" target="_blank">nqs@microsoft.com</a></td>
+			<td>Publisher quality complaints, invalid clicks/lead complaints</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>FraudAds&nbsp;</span></span></span></span></p>
+			</td>
+			<td><span>FraudAds</span></td>
+			<td><span>Global, 300</span></td>
+			<td><span><span><span><span><span><a data-content-id="" data-content-type="" href="mailto:ucmbzsup@microsoft.com" managed-link="" target="_blank">ucmbzsup@microsoft.com</a></span></span></span></span></span></td>
+			<td><span>Fraud appeals, requests for review</span></td>
+		</tr>
+		<tr>
+			<td>
+			<p>GFS (also known as WOCS)</p>
+			</td>
+			<td>
+			<p>GFS (also known as WOCS)</p>
+			</td>
+			<td>Advertising, 159</td>
+			<td>
+			<p><a href="mailto:msncred1@microsoft.com" managed-link=""><span><span><span><span>msncred1@microsoft.com</span></span></span></span></a></p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>
+			<p>Credit line establishment, modification, and inquiries, monthly invoice account current but on hold</p>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>GFS (also known as WOCS) Accounts receivable</td>
+			<td>WOCS Cash Apps, 153</td>
+			<td>
+			<p><a data-content-id="" data-content-type="" href="mailto:mdasar@microsoft.com" managed-link="" target="_blank">mdasar@microsoft.com</a></p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>Offline payment status, payment application and offline refund requests</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>US/CA Collections</td>
+			<td>152</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:adbill@microsoft.com" managed-link="" target="_blank">adbill@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>UK/IE Collections</td>
+			<td>146</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:ukiemsn@microsoft.com" managed-link="" target="_blank">ukiemsn@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>FR Collections</td>
+			<td>144</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:franmsn@microsoft.com" managed-link="" target="_blank">franmsn@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>DE/AT/CH Collections</td>
+			<td>150</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:gsamsn@microsoft.com" managed-link="" target="_blank">gsamsn@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>IT/ES Collections</td>
+			<td>148</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:itspamsn@microsoft.com" managed-link="" target="_blank">itspamsn@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>BE/NL Collections</td>
+			<td>149</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:benemsn@microsoft.com" managed-link="" target="_blank">benemsn@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Nordic Collections</td>
+			<td>145</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:nordmsn@microsoft.com" managed-link="" target="_blank">nordmsn@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>LATAM Collections</td>
+			<td>151</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:collatam@microsoft.com" managed-link="" target="_blank">collatam@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>MEA/ZA Collections</td>
+			<td>147</td>
+			<td><a data-content-id="" data-content-type="" href="http://getsupport.microsoft.com/" managed-link="" target="_blank">menamsn@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>JP Collections</td>
+			<td>142</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:advjpm@microsoft.com" managed-link="" target="_blank">advjpm@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Asia/IN Credit Approval and Collections</td>
+			<td>143</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:advapac@microsoft.com" managed-link="" target="_blank">advapac@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Turkey Collections</td>
+			<td>255</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:turkmsn@microsoft.com" managed-link="" target="_blank">turkmsn@microsoft.com</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>GFS (also known as WOCS) - Dispute/Post Collections</td>
+			<td>249</td>
+			<td><a data-content-id="" data-content-type="" href="mailto:onladvpc@microsoft.com" managed-link="" target="_blank">onladvpc@microsoft.com</a></td>
+			<td>Suspend collection efforts while the dispute is investigated</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="1.1" name="1.1"></a>1.1&nbsp;Submit a customer escalation to Global Support from ASD</h3>
+
+<p>To escalate to UCMT from ASD, authorized agents must complete each of the following steps. Consult with your SME/TL if you are uncertain whether you should be submitting escalations to a UCMT partner team.<br>
+<br>
+<strong>Frontline L1 Note: </strong>Child tickets should be used to generate UCMT tickets. This keeps customer communications separate from Tier 2 communications and the child subject line can be updated to include the UCMT ticket ID to minimize errors. The &ldquo;To:&rdquo; line of all outbound emails will still need to be overridden with the Tier 2 destination email alias.</p>
+
+<p><strong>BOS Agent Note:</strong> Escalations should be raised from the ticket-level you are already working from, depending on the requestor (for example, An AM request would be escalated from within the Parent SR, whilst a CSS L1 request would be escalated from within the Child SR). Do not create additional child tickets.</p>
+
+<ol>
+	<li>Complete all required incident form details. <strong>Note</strong>: When choosing ASD Issue Coding, use the appropriate Technical Issue coding, depending on the nature of your issue. Once an investigation is complete, you should re-code your ticket to reflect what the problem was, unless a product Bug or Known Functionality issue was identified. Remember never to close a ticket under &lsquo;Solution in Progress&rsquo;<span lang="EN-GB"><span><span><span>. </span></span></span></span></li>
+	<li><span><span><span><span>Create a child ticket to submit the escalation</span></span></span></span></li>
+	<li>Select<strong> issue-specific details required </strong>= YES and complete all required fields in the section. (Required fields are indicated by the exclamation mark.) The fields will vary depending on the nature of your escalation, and the screenshots below are for demonstration purposes only.<br>
+	<span asset="4013192" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4013192]</span></li>
+	<li>Select <strong>Tier 2 escalation required </strong>=Yes and complete all required fields in the section. The details entered in this section will determine the UCMT queue in which the ticket is handled. Be sure to select the <strong>Tier 2 Receiving Team</strong> and <strong>Tier 2 Sub-Team </strong>according to the destination listed in the <a href="https://sharepoint.partners.extranet.microsoft.com/sites/StandardSupport/l1resources/Lists/Escalation%20Guide/AllItems.aspx" target="_blank">Escalation Guide</a> or process-specific article.<br>
+	<span asset="4013225" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4013225]</span></li>
+	<li>Apply the <strong>SMB Escalations to Tier 2 UCMT &gt; UCMT Escalations transfer</strong> (available from global L2, BP, and BOS queues).<br>
+	<span asset="4013223" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4013223]</span></li>
+	<li><strong>Complete</strong> the ticket. The ticket ownership and origination queue will be retained in ASD.</li>
+	<li>
+	<p>The&nbsp;<strong>UCMT ticket details&nbsp;</strong>section of the incident form will be auto-populated and updated by UCMT within minutes of the initial escalation and whenever the UCMT ticket is saved.<br>
+	<span asset="4013226" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4013226]</span></p>
+	</li>
+	<li><strong>Update the subject line </strong>of the ticket to include the UCMT Ticket ID (this ensures the UCM ID is included in all replies to UCMT, even though you will still need to update the <strong>To:</strong> line with each outbound email.)<br>
+	<span asset="4010979" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4010979]</span></li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="1.2" name="1.2"></a>1.2 Field mapping</h3>
+
+<p><strong>The following fields are mapped from ASD to UCMT:</strong></p>
+
+<div>
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>ASD Incident Form Section</strong></p>
+			</td>
+			<td>
+			<p><strong>ASD Field </strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Ticket Metadata</p>
+
+			<p>Greet Customer &amp; Collect Info</p>
+
+			<p>Reason for contact</p>
+
+			<p>Case disposition and coding</p>
+
+			<p>Issue - specific details</p>
+
+			<p>UCMT Escalation</p>
+			</td>
+			<td>
+			<p>SRXID, T1 email</p>
+
+			<p>Account Number</p>
+
+			<p>All fields</p>
+
+			<p>Subject, Status</p>
+
+			<p>All fields</p>
+
+			<p>All fields</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p>&nbsp;</p>
+
+<p><strong>The following values are mapped from UCMT to ASD and update each time the UCMT ticket is saved:</strong></p>
+
+<ul>
+	<li><span><span><span><span>UCMT Ticket ID</span></span></span></span></li>
+	<li><span><span><span><span>UCMT State</span></span></span></span></li>
+	<li><span><span><span><span>UCMT Status</span></span></span></span></li>
+	<li><span><span><span><span>UCMT Team</span></span></span></span></li>
+	<li><span><span><span><span>UCMT Logged Bug ID</span></span></span></span></li>
+	<li><span><span><span><span>UCMT Ticket Created date</span></span></span></span></li>
+	<li><span><span><span><span>UCMT Ticket Closed date</span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="1.3" name="1.3"></a>1.3&nbsp;Attaching files to UCMT tickets</h4>
+
+<p><span asset="4581430" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4581430]</span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="1.4" name="1.4"></a>1.4&nbsp;Send an update to UCMT</h4>
+
+<p><span><span><span><span>As a best practice, UCMT tickets should be created from an ASD child ticket to separate Tier 2 communications from customer communications. This will also allow you to update the child ticket subject line with the UCMT ID to prevent duplicate UCMT tickets being created from follow up emails.</span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span>Ensure the child ticket subject is updated to include the UCMT ticket ID.</span></span></span></span></li>
+	<li><span><span><span><span>Use ASD Email follow up on UCMT tickets. </span></span></span></span></li>
+	<li><span><span><span><span>Override the customer email with the appropriate destination alias, which can be found in the <strong>ucmt ticket details &gt; UCMT Team</strong> field.</span></span></span></span></li>
+	<li><span><span><span><span>Include appropriate update info in the body of the email.</span></span></span></span></li>
+	<li><span><span><span><span>Reply to the email from UCMT to follow up and/or provide necessary information. You will need to override the email destination with each response.</span></span></span></span></li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="1.5" name="1.5"></a>1.5&nbsp;QViews</h3>
+
+<p>QViews have been created and updated to monitor UCMT ticket progress. Work with your TA to modify or customize QViews as needed.</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><strong><span><span><span>Calculated column</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><strong><span><span><span>Icon </span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><strong><span><span><span>Logic</span></span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>UCMT response SLA</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Green</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>UCMT Status is not closed and the ticket is less than 2880 minutes old (48 hours).</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span> </span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Yellow</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>UCMT Status is not closed and the ticket is between 2879 and 4320 minutes old (48-72 hours).</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span> </span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Red</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>UCMT Status is not closed and the ticket is greater than 4319 minutes old (72+ hours).</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>UCMT Update</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Pencil</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Appears when the ticket was last touched by the UCM Service account.</span></span></span></span></p>
+
+			<p><span><strong><span><span><span>Note</span></span></span></strong><span><span><span>: This icon will not function until the UCMT responses are written to CAP using the UCMT service account. Responses are currently written by &ldquo;vikramt&rdquo;- resolution for this is TBD.</span></span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="1.6" name="1.6"></a>1.6&nbsp;Resolving and escalating integration issues</h4>
+
+<p><span><span><span><span>Integration issues should be reported directly to the most appropriate support team.</span></span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><strong><span><span><span>Symptom</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><strong><span><span><span>Issue</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><strong><span><span><span>Resolution</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><strong><span><span><span>Escalation guidance</span></span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>ASD tickets are &#39;stuck&#39; in the UCMT Escalations queue.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>After a downtime, the UCMT does not pick up any backlogged tickets when the service resumes.</span></span></span></span></p>
+
+			<p><span><span><span><span>OR</span></span></span></span></p>
+
+			<p><span><span><span><span>There is no originating queue to return the ASD ticket to because the ticket was somehow created within the UCMT Escalations queue. The integration now has logic to return a ticket to the originating queue without creating escalation if <strong>Tier 2 UCMT Escalation Required? = No</strong></span></span></span></span></p>
+
+			<p><span> </span></p>
+
+			<p><span> </span></p>
+
+			<p><span> </span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>If newer tickets are escalating successfully but older tickets appear to be stuck in the escalations queue, the UCMT service may have temporarily gone down. Use the pull transfer to reclaim ownership of the ticket in your default queue and attempt to re-transfer. No further action is necessary if the ticket escalates successfully.</span></span></span></span></p>
+
+			<p><span><span><span><span>If the UCMT ticket doesn&#39;t generate because there is no originating queue on the ASD ticket, recreate the ticket in an appropriate working queue and reach out to your TA for assistance with closing the ticket.</span></span></span></span></p>
+
+			<p><span><span><span><span>If the UCMT ticket doesn&#39;t generate because <strong>Tier 2 UCMT Escalation Required? = No</strong>, update this field to <strong>YES,</strong> ensure the issue-specific details are complete, and re-escalate.</span></span></span></span></p>
+
+			<p><span><span><span><span>If none of the above resolve the issue, escalate the concern.</span></span></span></span></p>
+
+			<p><span> </span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Use your v- to email </span></span></span><a href="mailto:ucmsupport@microsoft.com" target="_blank"><span><span><span>ucmsupport@microsoft.com</span></span></span></a><span><span><span> and CC your TA.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>ASD Fields are not relayed to UCMT as expected.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>The UCMT dev team may have updated their logic for which information they want to pull from ASD/CAP.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Tier 2 dictates the information they wish to pull from ASD/CAP. They will need to submit a change request/bug to investigate the current state and request changes.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>TSEs should be directed to submit change requests to </span></span></span><a href="mailto:ucmsupport@microsoft.com" target="_blank"><span><span><span>ucmsupport@microsoft.com</span></span></span></a><u><span><span><span>,</span></span></span></u><span><span><span> if they believe they have encountered a bug.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>UCMT ticket details are not showing ASD as expected.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>The UCMT dev team may have updated something that had an unexpected impact on the code used to push information from UCMT back to CAP.</span></span></span></span></p>
+
+			<p><span><strong><span><span><span>OR</span></span></span></strong></span></p>
+
+			<p><span><span><span><span>UCMT ticket details or Tier 2 responses are populating into CAP but not ASD.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Access CAP to confirm whether the information made it to CAP and if the issue is between UCMT &amp; CAP or between CAP &amp; ASD.</span></span></span></span></p>
+
+			<p><span><span><span><span>Verify with your TA/MAST tools team that the information <em>should</em> be relayed from UCMT to CAP.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Issues with data population between UCMT and CAP should be directed to </span></span></span><a href="mailto:ucmsupport@microsoft.com" target="_blank"><span><span><span>ucmsupport@microsoft.com</span></span></span></a><span><span><span> and cc your TA.</span></span></span></span></p>
+
+			<p><span><span><span><span>For issues with data population between CAP and ASD, submit a new ticket for </span></span></span><a href="https://missionemp.cloudapp.net/user-profile/" target="_blank"><span><span><span>ASD mission support</span></span></span></a><span><span><span>.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>The escalation did not route to the correct team.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><em><span><span><span>Some</span></span></span></em><span><span><span> UCMT teams have auto-routing logic implemented. Other teams have manual triagers. The issue could be a manual process <em>or </em>the auto-routing logic is not functioning as expected.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Review the UCMT Destinations above to confirm which team the ticket should have been directed to.</span></span></span></span></p>
+
+			<p><span> </span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Change requests from Tier 1 should be directed to the continuous improvement forum.</span></span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="1.7" name="1.7"></a>1.7&nbsp;Escalating to Global Support for non-customer issues</h4>
+
+<p>If there is a need to escalate to Global Support for an issue that is not a blocker to ticket resolution (for example,&nbsp;request for assistance with an internal issue such as UCM-A or UI page navigation concerns), an escalation may be submitted directly to Global Support via email to <a data-content-id="" data-content-type="" href="mailto:adsupport@microsoft.com" managed-link="" target="_blank">adsupport@microsoft.com</a>. Be sure to include the <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4465421#general" managed-link="" target="_blank">Global Support General Escalation</a> template.</p>
+
+<p><strong>Note</strong>: When responding to UCMT Tickets via email, you must ensure the UCMT ID is in the subject line within brackets (for example,&nbsp;&quot;[UCM1234567890123]&quot;).</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="2" name="2"></a>2.&nbsp;<span><span><span><span><span>Escalating to CAP: BOS</span></span></span></span></span><span><span><span> </span></span></span></h3>
+
+<p><span><span><span><span>To engage BOS for assistance, create a child ticket in ASD, complete the necessary issue specific details, and transfer the ticket to the appropriate BOS queue.</span></span></span></span></p>
+
+<p><span><strong><span><span><span>Sending attachments to BOS</span></span></span></strong></span></p>
+
+<p><span><span><span><span>You may simply create a child ticket and corresponding DTM workspace to host documents pertinent to the work request. Once the child ticket is transferred to BOS, the ticket owner will become owner of the DTM workspace as well. Just be sure to note in your ticket notes that the documents are in the DTM workspace</span></span></span></span>.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="3" name="3"></a>3.&nbsp;<span><span><span><span>Escalating to COSMIC: SANOps (aka AdOps)</span></span></span></span></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="250">
+			<p align="center"><span><span><span><span>SANOps <strong>does</strong></span></span></span></span></p>
+			</td>
+			<td width="250">
+			<p align="center"><span><span><span><span>SANOps <strong>does not</strong></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="250">
+			<ul>
+				<li><span><span><span><span>Credits &amp; Adjustments &gt; $10K</span></span></span></span></li>
+				<li><span><span><span><span>Invoice Related Requests: Splits, Pro-forma</span></span></span></span></li>
+				<li><span><span><span><span>Payout Management: Offline refunds, incentives </span></span></span></span></li>
+				<li><span><span><span><span>Order Management: MIO&#39;s, Countersignatures, Taxation</span></span></span></span></li>
+				<li><span><span><span><span>Contract Management: Supplier/Liability forms, Master Agreements</span></span></span></span></li>
+			</ul>
+			</td>
+			<td width="250">
+			<ul>
+				<li><span><span><span><span>Complete MPC set up </span></span></span></span></li>
+				<li><span><span><span><span>Handle customer pre-payments </span></span></span></span></li>
+				<li><span><span><span><span>Manage collections efforts</span></span></span></span></li>
+				<li><span><span><span><span>Change Bill To/Sold To </span></span></span></span></li>
+				<li><span><span><span><span>Manage campaign performance</span></span></span></span></li>
+				<li><span><span><span><span>Perform Fraud investigations</span></span></span></span></li>
+				<li><span><span><span><span>Use UCMT</span></span></span></span></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><span><strong><span><span><span>Data Protection Note: </span></span></span></strong><span><span><span>Combinations of the data points below are approved as an exception by Microsoft Information Protection Group (IPG) to relay in the <em>body</em> of email escalations sent to <span><span><span><span>SANOps:</span></span></span></span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span>SRX</span></span></span></span></li>
+	<li><span><span><span><span>Issue description</span></span></span></span></li>
+	<li><span><span><span><span>XID </span></span></span></span></li>
+	<li><span><span><span><span>CID </span></span></span></span></li>
+	<li><span><span><span><span>Currency</span></span></span></span></li>
+	<li><span><span><span><span>Amount</span></span></span></span></li>
+	<li><span><span><span><span>Billing Document IDs</span></span></span></span></li>
+	<li><span><span><span><span>Legal Customer/Payee name </span></span></span></span></li>
+	<li><span><span><span><span>Customer/Payee Email Address</span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span>If any additional PII/HBI data points must be included in the escalation to <span><span><span><span><span><span><span><span>SANOps</span></span></span></span></span></span></span></span>, copy and paste the escalation template into a word document, encrypt, and attach it to the email escalation.</span></span></span></span></p>
+
+<p><strong><span><span><span><span>Escalate to </span></span></span><span><span><span><span><span><span><span><span>SANOps</span></span></span></span></span></span></span></span></span></strong></p>
+
+<ol>
+	<li><span><span><span><span>To engage <span><span><span><span><span><span><span><span>SANOps&nbsp;</span></span></span></span></span></span></span></span>for assistance with issue resolution, create a child ticket in ASD to keep escalation communications separate from customer communications. All issue-specific details for the issue type must be complete before sending. To escalate to <span><span><span><span><span><span><span><span>SANOps&nbsp;</span></span></span></span></span></span></span></span>follow these steps:</span></span></span></span></li>
+	<li><span><span><span><span>Ensure all necessary attachments are properly encrypted per the guidance in KB&nbsp;</span></span></span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/3174641" managed-link="" target="_blank">3174641 Process: Microsoft Advertising: Handling Personal Data team guidance</a><span><span><span>. </span></span></span></span></li>
+	<li><span><span><span><span>Override the customer email with the most appropriate regional <span><span><span><span><span><span><span><span>SANOps&nbsp;</span></span></span></span></span></span></span></span>alias from the chart below, depending on customer billing location. <strong>Note</strong>: you will be required to complete this step for all subsequent emails sent to COSMIC, even when replying to an inbound mail </span></span></span></span></li>
+	<li><span><span><span><span>Once the <span><span><span><span><span><span><span><span>SANOps&nbsp;</span></span></span></span></span></span></span></span>ticket is created in COSMIC, be sure to update your ASD child ticket subject line with the COSMIC &quot;5-&quot; ticket ID -- this will ensure that all future communications are correctly appended to the COSMIC ticket. </span></span></span></span></li>
+</ol>
+
+<div><span> </span></div>
+
+<p><span> </span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><strong><span><span><span>Region</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><strong><span><span><span>Alias</span></span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>APAC &amp; Americas except Brazil</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>aocadv@microsoft.com</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>EMEA</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>eocadv@microsoft.com</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>BR</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>bradv@microsoft.com</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>IN</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>inadv@microsoft.com</span></span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><strong> </strong></span></p>
+
+<p><span><strong><span><span><span>What to expect</span></span></span></strong></span></p>
+
+<p><span><span><span><span>A manual triage process is required before CSS will receive the initial response from <span><span><span><span><span><span><span><span>SANOps</span></span></span></span></span></span></span></span>. This means initial response time can vary with each submission. Typical responses are within the hour during the working hours (9AM-6PM) for the region the request is submitted. If you are sending a request outside of these regional hours, it&#39;s unlikely you will see a response until the next business day begins. </span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>SLA&#39;s </span></span></span></strong><span><span><span><br>
+There are two primary request types, each with its own SLA. Keep in mind that SLA&#39;s do NOT include the total time required to complete a request. They should be used as general guidance for when to anticipate a follow up from <span><span><span><span><span><span><span><span>SANOps</span></span></span></span></span></span></span></span>. The exception to this is the offline refund process, which has varied SLA&#39;s depending on the stage of the request. </span></span></span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="250">
+			<p><span><strong><span><span><span>Transactions:</span></span></span></strong><span><span><span> 48-hour SLA </span></span></span></span></p>
+			</td>
+			<td width="250">
+			<p><span><strong><span><span><span>Inquiries:</span></span></span></strong><span><span><span> 24-hour SLA</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<ul>
+				<li><span><span><span><span>Adjustments (includes C&amp;R)</span></span></span></span></li>
+				<li><span><span><span><span>Agreement review &amp; signature</span></span></span></span></li>
+				<li><span><span><span><span>Proforma/Invoice revisions (splits/consolidations) </span></span></span></span></li>
+				<li><span><span><span><span>Offline Refunds&amp; Payouts</span></span></span></span></li>
+				<li><span><span><span><span>MIO signature &amp; order entry</span></span></span></span></li>
+			</ul>
+			</td>
+			<td>
+			<ul>
+				<li><span><span><span><span>Where is my...?</span></span></span></span></li>
+				<li><span><span><span><span>Can you...?</span></span></span></span></li>
+				<li><span><span><span><span>What is needed...? </span></span></span></span></li>
+				<li><span><span><span><span>How do I...?</span></span></span></span></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span><span><span><br>
+<strong>Note: </strong>Once you get the autoresponder, always add the Cosmic ID to the subject line. This will ensure each response gets attached to your case</span></span></span></span>.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="4" name="4"></a>4.&nbsp;<span><span><span><span>How to send emails to ASD tickets</span></span></span></span></h3>
+
+<p><span><span><span><span>To properly attach an email communication to a specific ASD ticket, two things must be true:</span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span>The email recipient must be an ASD/CAP queue (&lt;queue&gt;@css.one.microsoft.com).</span></span></span></span></li>
+	<li><span><span><span><span>The full ticket number, including prefix and suffix, must be in the subject line (&quot;SRX1234565789ID&quot;).</span></span></span></span></li>
+</ol>
+
+<p><span><span><span><span>Most CSS and internal processes ensure these 2 points are true for ongoing conversations related to escalations. However, in rare cases, the CSS queue email may be looped off an internal email conversation. Internal teams who must respond to an <em>open</em> CSS ticket, but only have the ticket ID, may use ASDupdate@microsoft.com to send or request updates to a specific CSS ticket. If the ticket status is unknown, reach out to themets@microsoft.com to request assistance with updating the team or ticket.</span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="5" name="5"></a>5. Resources</h3>
+
+<p><span><strong><span><span><span>UCMT</span></span></span></strong></span></p>
+
+<p><span>KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/3171493" managed-link="" target="_blank">3171493 Process: Microsoft Advertising &amp; Bing Places: Reactive Support Ticket Handling Policy</a></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+<p><strong><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span>April 2019</strong></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Change history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>Item</strong></p>
+			</td>
+			<td>
+			<p><strong>Title</strong></p>
+			</td>
+			<td>
+			<p><strong>Date</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/158727">CONTENT TRACKING 158727</a></td>
+			<td>MAST: Update file handling guidelines for escalating sensitive information</td>
+			<td>9/9/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/154547" managed-link="">CONTENT TRACKING 154547</a></td>
+			<td>MAST: Project: KB 3170756 Update WOCS to GFS across multiple A&amp;B articles</td>
+			<td>6/3/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/148833">CONTENT TRACKING 148833</a></td>
+			<td>MAST: From SUE1882: Request to Update KB 3170756</td>
+			<td>11/1/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/148425">CONTENT TRACKING 148425*</a></td>
+			<td>MAST: Bing Ads: Note request for the bottom of section 1.7</td>
+			<td>10/22/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/148351">CONTENT TRACKING 148351</a></td>
+			<td>MAST: Update 3170756 escalation process to GS via email</td>
+			<td>10/17/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/148330">CONTENT TRACKING 148330</a></td>
+			<td>Bing Ads: From SUE1255: MAST: Updating Request for KB 3170756</td>
+			<td>10/17/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/147172">CONTENT TRACKING 147172</a></td>
+			<td>Microsoft Advertising: Escalating to Partners SDK 3170756 - Sept 5.2019</td>
+			<td>9/9/2019</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/145005">Content Tracking 145005</a></p>
+			</td>
+			<td>MAST: Add Speak Up asset to listed KBs</td>
+			<td>6/17/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/142229">CONTENT TRACKING 142229</a></td>
+			<td>Microsoft Advertising : MAST - Complete reformat/review KB 3170756</td>
+			<td>4/16/2019</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>

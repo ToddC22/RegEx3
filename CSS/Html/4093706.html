@@ -1,0 +1,263 @@
+﻿<header><h1>Workflow: Net: WIP: Troubleshooting Windows Information Protection technology</h1></header><p><span asset="4570728" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4570728]</span></p>
+
+<p><strong>The below content is not further maintained. For up to date information on Windows Information Protection please go to:&nbsp;<u><a data-content-id="" data-content-type="" href="https://supportability.visualstudio.com/WindowsNetworking/_wiki/wikis/WindowsNetworking/327237" managed-link="" target="_blank">https://supportability.visualstudio.com/WindowsNetworking/_wiki/wikis/WindowsNetworking/327237</a></u></strong></p>
+<div><p style="margin-left:.375in;margin-top:12pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:16.0pt;color:#2E74B5;" lang="en-US">WIP – Windows
+Information Protection Workflow</p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:13.0pt;color:#2E74B5;" lang="en-US">Overview</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">This workflow introduces Windows Information
+Protection (WIP) and describes common issues as well as troubleshooting
+approaches. WIP was formerly known as EDP – Enterprise Data Protection.</p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:13.0pt;color:#2E74B5;" lang="en-US">Scenarios:</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">Windows Information Protection (WIP) support
+topics are separated into different technology areas, however most cases are
+routed to the Networking pod. This requires that networking support engineers
+have are familiar with the variations and complexity of setups.</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">The following list of support topics is not
+intended to promote moving the case but rather show which team to collaborate
+with if there are specific issues with the way Explorer displays files, for
+example, or encryption is not working:</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;" lang="en-US">Windows V3\Windows Information Protection (WIP)\WIP display
+in File Explorer</p><p style="margin:0in;margin-left:1.125in;font-family:&quot;Courier New&quot;;font-size:8.0pt;" lang="en-US">WDG UEX pod </p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;" lang="en-US">Windows Information Protection (WIP)\Policy configuration </p><p style="margin:0in;margin-left:1.125in;font-family:&quot;Courier New&quot;;font-size:8.0pt;" lang="en-US">Intune
+pod&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;" lang="en-US">Windows V3\Windows Information Protection (WIP)\Network
+configuration</p><p style="margin:0in;margin-left:1.125in;font-family:&quot;Courier New&quot;;font-size:8.0pt;" lang="en-US">WDG NET pod</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;" lang="en-US">Windows V3\Windows Information Protection (WIP)\Encryption
+and certificates</p><p style="margin:0in;margin-left:1.125in;font-family:&quot;Courier New&quot;;font-size:8.0pt;" lang="en-US">WDG DS pod</p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:13.0pt;color:#2E74B5;" lang="en-US">Background Reading</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">Reference material for Windows Information
+Protection:</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">18 minutes inShort:&nbsp;<a href="https://msit.microsoftstream.com/video/dcdfa3ff-0400-aa75-a396-f1ea69104620">https://msit.microsoftstream.com/video/dcdfa3ff-0400-aa75-a396-f1ea69104620</a>&nbsp;- overview of what WIP looks like, what it does.</p><div style="margin-left:0.375in;margin-top:0px;margin-bottom:10.6667px;" lang="en-US">Leaning path for WIP:&nbsp;<a href="https://supportability.visualstudio.com/WindowsNetworking/_wiki/wikis/WindowsNetworking/327238">https://supportability.visualstudio.com/WindowsNetworking/_wiki/wikis/WindowsNetworking/327238</a></div><div><table style="border-collapse:collapse;border-style:solid;border-color:#A3A3A3;border-width:1pt;margin-left:.3333in;" title="">
+ <tbody><tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;vertical-align:top;width:4.0444in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;" lang="en-US">Title
+  with link</p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;vertical-align:top;width:2.534in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;" lang="en-US">Description</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;background-color:#F2F2F2;vertical-align:top;width:4.0638in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;color:#DADADA;" lang="en-US"><span style="font-weight:bold;">Introducing Windows Information
+  Protection</span></p>
+  <p style="margin:0in;"><a href="https://blogs.technet.microsoft.com/windowsitpro/2016/06/29/introducing-windows-information-protection/"><span style="font-weight:bold;" lang="en-US">https://blogs.technet.microsoft.com/windowsitpro/2016/06/29/introducing-windows-information-protection/</span></a></p>
+  <p style="margin:0in;" lang="en-US"><span style="font-weight:bold;">&nbsp;</span></p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;background-color:#F2F2F2;vertical-align:top;width:2.5145in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;color:#DADADA;" lang="en-US">Overview of what WIP is all about (decision maker)</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;vertical-align:top;width:4.0444in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;" lang="de"><a href="https://myignite.microsoft.com/sessions/53660"><span style="font-weight:bold;font-size:12.0pt;">https://myignite.microsoft.com/sessions/53660</span></a></p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;vertical-align:top;width:2.534in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;" lang="en-US">Video
+  with overview of WIP. Intune configuration demo at 00:30:15 explaining
+  different settings</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;background-color:#F2F2F2;vertical-align:top;width:4.0444in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;"><a href="http://aka.ms/wipdevsetup"><span style="font-weight:bold;" lang="en-US">http://aka.ms/wipdevsetup</span></a></p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;background-color:#F2F2F2;vertical-align:top;width:2.534in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;color:#DADADA;" lang="en-US">Win10 <span style="font-weight:bold;">App</span> that lets you test
+  WIP on your existing Win10 machine</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;vertical-align:top;width:4.0444in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;" lang="en-US">Protect
+  your enterprise data using Windows Information Protection (WIP)</p>
+  <p style="margin:0in;"><a href="https://docs.microsoft.com/en-gb/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip"><span style="font-weight:bold;" lang="en-US">https://docs.microsoft.com/en-gb/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip</span></a></p>
+  <p style="margin:0in;" lang="en-US"><span style="font-weight:bold;">&nbsp;</span></p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;vertical-align:top;width:2.534in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;" lang="en-US">How WIP
+  works, requirements etc. More details then above</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;background-color:#F2F2F2;vertical-align:top;width:4.0444in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;color:#DADADA;" lang="en-US">Limitations while using Windows Information Protection (WIP)</p>
+  <p style="margin:0in;"><a href="https://docs.microsoft.com/en-gb/windows/security/information-protection/windows-information-protection/limitations-with-wip"><span style="font-weight:bold;" lang="en-US">https://docs.microsoft.com/en-gb/windows/security/information-protection/windows-information-protection/limitations-with-wip</span></a></p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;background-color:#F2F2F2;vertical-align:top;width:2.5465in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;color:#DADADA;" lang="en-US">Incompatibilities and other limitations (Offline Files, Direct
+  Access) </p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;vertical-align:top;width:4.0444in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;" lang="en-US">Create
+  a Windows Information Protection (WIP) policy <span style="font-weight:bold;">with
+  MDM</span> using the Azure portal for Microsoft Intune</p>
+  <p style="margin:0in;"><a href="https://docs.microsoft.com/en-gb/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure"><span style="font-weight:bold;" lang="en-US">https://docs.microsoft.com/en-gb/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure</span></a></p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;vertical-align:top;width:2.534in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;" lang="en-US">WIP
+  config for Intune in Azure (1607 and later)</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;background-color:#F2F2F2;vertical-align:top;width:4.0444in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;color:#DADADA;" lang="en-US">Create a Windows Information Protection (WIP) policy <span style="font-weight:bold;">with MAM</span> using the Azure portal for Microsoft
+  Intune</p>
+  <p style="margin:0in;"><a href="https://docs.microsoft.com/en-gb/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure"><span style="font-weight:bold;" lang="en-US">https://docs.microsoft.com/en-gb/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure</span></a></p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;background-color:#F2F2F2;vertical-align:top;width:2.534in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;color:#DADADA;" lang="en-US">WIP config for Intune in Azure (1703 and later)</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;vertical-align:top;width:4.0444in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;" lang="en-US">Create
+  a Windows Information Protection (WIP) policy using the <span style="font-weight:bold;">classic console for Microsoft Intune</span></p>
+  <p style="margin:0in;"><a href="https://docs.microsoft.com/en-gb/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune"><span style="font-weight:bold;" lang="en-US">https://docs.microsoft.com/en-gb/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune</span></a></p>
+  <p style="margin:0in;" lang="en-US"><span style="font-weight:bold;">&nbsp;</span></p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;vertical-align:top;width:2.6034in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;" lang="en-US">WIP
+  config in for classic console of Intune (MDM classic console, 1607 and later)</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;background-color:#F2F2F2;vertical-align:top;width:4.0638in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;color:#DADADA;" lang="en-US">General guidance and best practices for Windows Information
+  Protection (WIP)</p>
+  <p style="margin:0in;"><a href="https://docs.microsoft.com/en-gb/windows/security/information-protection/windows-information-protection/guidance-and-best-practices-wip"><span style="font-weight:bold;" lang="en-US">https://docs.microsoft.com/en-gb/windows/security/information-protection/windows-information-protection/guidance-and-best-practices-wip</span></a></p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;background-color:#F2F2F2;vertical-align:top;width:2.584in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;color:#DADADA;" lang="en-US">Enlightened/ unenlightened apps, using OWA with WIP</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;vertical-align:top;width:4.0444in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;" lang="en-US">Manage
+  Windows Information Protection on work and personal files</p>
+  <p style="margin:0in;"><a href="https://support.microsoft.com/en-us/help/4012985/windows-10-manage-windows-information-protection-work-personal-files"><span style="font-weight:bold;" lang="en-US">https://support.microsoft.com/en-us/help/4012985/windows-10-manage-windows-information-protection-work-personal-files</span></a></p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;vertical-align:top;width:2.5861in;padding:4pt 4pt 4pt 4pt;">
+  <p style="margin:0in;" lang="en-US">A USER
+  view of work and personal files and how to manage them</p>
+  </td>
+ </tr></tbody></table>
+<h4 dir="ltr"><span><br>
+&lrm;Introduction to Windows Information Protection</span></h4>
+
+<span asset="4575465" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4575465]</span><p></div><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;color:#979797;" lang="en-US"><span>&nbsp;</span></p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:13.0pt;color:#2E74B5;" lang="en-US">How to set up a demo/ test
+environment</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;color:black;">If you would like to setup your own demo/ test
+environment please follow the instructions in this KB:&nbsp;</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;"><a href="https://internal.support.services.microsoft.com/en-us/help/4498098"><span lang="en-GB">https://internal.support.services.microsoft.com/en-us/help/4498098</span></a></p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:13.0pt;color:#2E74B5;" lang="en-US">Known Issues</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">You should make sure the customer is working on
+Windows 1703 (RS3) where many fixes were implemented, and desired features are
+added.</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">See following info in compatibility issues and
+other limitation (note DA and CSC):</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;"><a href="https://docs.microsoft.com/en-gb/windows/security/information-protection/windows-information-protection/limitations-with-wip"><span lang="en-US">https://docs.microsoft.com/en-gb/windows/security/information-protection/windows-information-protection/limitations-with-wip
+</span></a></p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:12.0pt;color:#1F4D78;" lang="en-US">WIP is NOT protecting against
+malicious users</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">One must remember the goal of WIP – to prevent the
+accidental sharing of enterprise information with private applications. It is
+trying to keep honest users honest. In a world where users work on private
+devices with their enterprise data and the other way around WIP is trying to
+prevent that the user accidentally copy from for example the cooperate Excel
+table to the private Hotmail email account.</p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:12.0pt;color:#1F4D78;" lang="en-US">Application connection to an IP
+rather than a name (Chrome/ Firefox not working)</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">There are apps that are special, and customers
+always run into issues with them. Any application that uses HTTPS and does not
+use our stack to connect to the server looks to WIP as if it uses the IP
+address only rather than the FQDN. As a result, the access to the IP address
+resource might be blocked. Examples are: Firefox, Chrome, WhatsApp desktop app.</p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:12.0pt;color:#1F4D78;" lang="en-US">OneNote notebooks can't be created/
+viewed from UNC paths/ DFSN paths</p><p style="margin:0in;margin-left:.375in;" lang="en-US">OneNote PG: </p><p style="margin:0in;margin-left:.375in;" lang="en-US">We support opening of existing notebooks on network shares that are
+marked as WIP, but we don’t support creating new notebooks.<span>&nbsp; </span>Local/UNC notebooks go through our legacy
+storage code that none of our modern clients support, and it introduces both
+technical and usability complications with WIP, so we don’t support it.<span>&nbsp; </span>For migration + backwards compatibility, we
+allow opening of existing UNC notebooks, but they will behave as personal
+notebooks.<span>&nbsp; </span>But not new, as this would
+further proliferate the confusion.<span>&nbsp; </span>The
+supported WIP scenario is to create/move work notebooks on SharePoint/ODFB
+which is fully managed.</p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:12.0pt;color:#1F4D78;" lang="en-US">Document can’t be changed from
+Enterprise to Personal</p><p style="margin:0in;margin-left:.375in;color:black;" lang="en-US">Policy can be set to “Hide Overrides” which will remove
+the personal option for work files in Explorer (RS2+) and Save As (RS3+).&nbsp;
+However, a determined user could find ways around this – we don’t try to
+protect against malicious authorized users (see above).</p><p style="margin:0in;margin-left:.375in;" lang="de">&nbsp;</p><p style="margin:0in;margin-left:.375in;color:black;" lang="en-US">“Hide Overrides&quot;</p><p style="margin:0in;margin-left:.375in;color:black;" lang="en-US">WIP looks for inappropriate data sharing practices and
+stops the user from completing the action. This can include sharing info across
+non-corporate-protected apps and sharing corporate data between other people
+and devices outside of your organization. “</p><p style="margin:0in;margin-left:.375in;"><span style="color:black;" lang="en-US">See: </span><a href="https://docs.microsoft.com/en-us/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip"><span lang="en-GB">https://docs.microsoft.com/en-us/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip</span></a></p><p style="margin:0in;margin-left:.375in;">&nbsp;</p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:12.0pt;color:#1F4D78;">DFS path can’t be accessed</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;">There are cases where customer notices that DFSN paths can’t
+be accessed/ are not seen as enterprise. Accessing the fileserver directly
+works. For the enterprise context to be identified by WIP the accessed path (<a href="file://contoso.com/dfsRoot/share">\\contoso.com\dfsRoot\share</a>) has to
+match with the enterprise namespace defined in the WIP policy (contoso.com) and
+the enterprise IP address range defined. </p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;">In this case the domain name contoso.com is resolved to a
+list of IP addresses by DNS, which are the DCs of the domain. All these IP
+addresses must be specified in the enterprise IP address range in the WIP
+policy. </p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:12.0pt;color:#1F4D78;">Some file extensions are not encrypted</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;">You will find that some file extensions are not encrypted.
+This is expected, and the list of extensions is hardcoded. However, there is a
+setting in the policy that can be adjusted:</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;"><a href="https://docs.microsoft.com/en-us/intune/windows-information-protection-policy-create#add-encrypted-file-extensions"><span lang="en-GB">https://docs.microsoft.com/en-us/intune/windows-information-protection-policy-create#add-encrypted-file-extensions</span></a></p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;">In the EnterpriseDataProtection CSP you can set:</p><p style="margin-left:.75in;margin-top:12pt;margin-bottom:0pt;">Settings/SMBAutoEncryptedFileExtensions</p><p style="margin-left:.75in;margin-top:12pt;margin-bottom:0pt;">Added in Windows 10, version 1703. Specifies a list of file
+extensions, so that files with these extensions are encrypted when copying from
+an SMB share within the corporate boundary as defined in the Policy CSP nodes
+for <a href="https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-configuration-service-provider#networkisolation-enterpriseiprange">NetworkIsolation/EnterpriseIPRange</a>
+and <a href="https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-configuration-service-provider#networkisolation-enterprisenetworkdomainnames">NetworkIsolation/EnterpriseNetworkDomainNames</a>.
+Use semicolon (;) delimiter in the list. </p><p style="margin-left:.75in;margin-top:12pt;margin-bottom:0pt;">When this policy is not specified, the existing
+auto-encryption behavior is applied. When this policy is configured, only files
+with the extensions in the list will be encrypted. </p><p style="margin-left:.75in;margin-top:12pt;margin-bottom:0pt;">Supported operations are Add, Get, Replace and Delete. Value
+type is string.</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;"><a href="https://docs.microsoft.com/en-us/windows/client-management/mdm/enterprisedataprotection-csp"><span lang="en-GB">https://docs.microsoft.com/en-us/windows/client-management/mdm/enterprisedataprotection-csp</span></a></p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:12.0pt;color:#1F4D78;">IE favourite bar does not work with encrypted
+(work) URL files</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;">This is a known issue. You have to go to Edge to make this
+work.</p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:12.0pt;color:#1F4D78;">Enterprise network domain names are NOT
+optional</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;">It was previously documented that the setting in the policy
+for enterprise network domain names (or enterprise names) is optional. </p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;">This is <span style="font-style:italic;">wrong</span>. This
+name along with the IP address ranges is needed for the firewall to identify
+the target address. If not specified, the firewall will prevent access to the
+home network routers http management site (for example on 192.168.1.1). </p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:13.0pt;color:#2E74B5;" lang="en-US">Scoping</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">General questions have to be asked: what is the
+impact, what are the OS versions, how does WIP get deployed, since when does
+the issue happen, how many machines are impacted.</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">Collect screenshot of the settings and let the
+customer show you the problem.</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">What exactly is the issue?</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">Are the WIP policies reaching the client?</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">Collaboration might be needed if:</p><ul style="margin-left:.375in;unicode-bidi:embed;margin-top:0in;margin-bottom:0in;">
+ <li style="margin-top:0;margin-bottom:0;vertical-align:middle;" lang="en-US"><span>There might be questions
+     around encryption that are better answered/ collaborated with the AD team.
+     </span></li>
+ <li style="margin-top:0;margin-bottom:0;vertical-align:middle;" lang="en-US"><span>When it comes to deployment
+     of devices and the SCOM or Azure management of them the case might be
+     better with the manageability team. </span></li>
+ <li style="margin-top:0;margin-bottom:0;vertical-align:middle;margin-top:0pt;margin-bottom:8pt;" lang="en-US"><span>Apps not being enterprise allowed the User Experience team.</span></li></ul><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:13.0pt;color:#2E74B5;" lang="en-US">Data Collection</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">The easiest way to collect WIP troubleshooting
+data and the corresponding SDP is to use TSS (<a href="https://github.com/CSS-Windows/WindowsDiag/tree/master/ALL/TSS">https://github.com/CSS-Windows/WindowsDiag/tree/master/ALL/TSS</a>).</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">The command to collect TSS data is:</p><p style="margin-left:.75in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">TSS WIP</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">Alternatively the original script can be used
+(this information is only provided for historical reasons and will be removed):
+</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">Troubleshooting of most issues involves data
+collected with a script provided by the developers. Detailed instructions
+including for mobile phones can be found here: <a href="http://aka.ms/wipdiag">http://aka.ms/wipdiag
+</a></p><p style="margin:0in;margin-left:.375in;" lang="en-US">The start/ stop script is provided on a public OneDrive share: <a href="https://1drv.ms/u/s%21AiVTfHg7o1P8nfVwbcBaYpuTVsrprw">https://1drv.ms/u/s!AiVTfHg7o1P8nfVwbcBaYpuTVsrprw</a></p><p style="margin:0in;margin-left:.375in;" lang="en-US">&nbsp;</p><p style="margin:0in;margin-left:.375in;" lang="en-US">MinEdpEtl.zip contains the files needed below.</p><p style="margin:0in;margin-left:.375in;" lang="en-US"><span>&nbsp;</span><span style="font-style:italic;">Template:</span></p><p style="margin:0in;margin-left:.75in;" lang="en-US">After downloading and extracting the scripts please collect the
+data: </p><p style="margin:0in;margin-left:1.125in;"><span>1.</span><span style="font-family:&quot;Times New Roman&quot;;font-size:7.0pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>Open an Administrator Command
+prompt<span>&nbsp; </span></span></p><p style="margin:0in;margin-left:1.125in;"><span>2.</span><span style="font-family:&quot;Times New Roman&quot;;font-size:7.0pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>Run StartLogging_Desktop.cmd<span>&nbsp; </span></span></p><p style="margin:0in;margin-left:1.125in;"><span>3.</span><span style="font-family:&quot;Times New Roman&quot;;font-size:7.0pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>wait until instructed to press any
+key and then reproduce your issue<span>&nbsp; </span></span></p><p style="margin:0in;margin-left:1.125in;">*REPRODUCE
+the issue</p><p style="margin:0in;margin-left:1.125in;"><span>4.</span><span style="font-family:&quot;Times New Roman&quot;;font-size:7.0pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>Run StopLogging_Desktop.cmd<span>&nbsp; </span></span></p><p style="margin:0in;margin-left:1.125in;"><span>5.</span><span style="font-family:&quot;Times New Roman&quot;;font-size:7.0pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>The gathered logs will be located
+in C:\EdpDiagnostics.<span>&nbsp; </span>Please ZIP and
+upload them to the workspace</span></p><p style="margin:0in;margin-left:.75in;"><span style="font-weight:bold;">Note:</span> If you don’t run from an admin/elevated
+command prompt, we won’t get all the details needed. </p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">&nbsp;</p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:13.0pt;color:#2E74B5;" lang="en-US">Troubleshooting</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">A good discussion group to ask your questions
+around WIP is Windows Information Protection Discussion <a href="mailto:wipchat@microsoft.com">wipchat@microsoft.com</a>. </p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:12.0pt;color:#1F4D78;" lang="en-US">Policy Applied</p><p style="margin:0in;margin-left:.375in;">Registry
+of policy applied on the client, this can be found under </p><p style="margin:0in;margin-left:.375in;">&nbsp;</p><p style="margin:0in;margin-left:.75in;">HKLM\software\microsoft\policymanager\current\device</p><p style="margin:0in;margin-left:.375in;">&nbsp;</p><p style="margin:0in;margin-left:.375in;">Can
+also be found in the diagnostic data: EdpDiagnostics\EFS\Start\EdpRegKeys.txt</p><p style="margin:0in;margin-left:.375in;">&nbsp;</p><p style="margin:0in;margin-left:.375in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\DataProtection</span></p><p style="margin:0in;margin-left:.375in;" lang="en-US"><span style="font-weight:bold;">Enterprise Protected Domain Names</span>
+are used to evaluate identities (e.g. is this email address managed, is this
+sign-in account managed, etc.).&nbsp; In the UI, I think this is listed as
+corporate identity.</p><p style="margin:0in;margin-left:.375in;" lang="en-US">Not so interesting for networking</p><p style="margin:0in;margin-left:.375in;font-size:8.0pt;color:black;">&nbsp;</p><p style="margin:0in;margin-left:.375in;font-size:8.0pt;color:black;">&nbsp;</p><p style="margin:0in;margin-left:.375in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\NetworkIsolation</span></p><p style="margin:0in;margin-left:.375in;" lang="en-US"><span style="font-weight:bold;">Enterprise Network Domain Names</span>
+are used by the firewall to evaluate whether network endpoints fall within the
+enterprise boundary.</p><p style="margin:0in;margin-left:.375in;">&nbsp;</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\Providers\93F2F235-F8D1-463C-9EAA-308188F5FBA7\default\Device\NetworkIsolation]</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">&quot;<span style="background:yellow;">EnterpriseNetworkDomainNames</span>&quot;=&quot;Domnl.local,Contosocnl.local,Contosonet.org,Contoso.org,Contosonlsec.local&quot;</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">&quot;EnterpriseNetworkContosoainNames_LastWrite&quot;=dword:00000001</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">&quot;<span style="background:yellow;">EnterpriseCloudResources</span>&quot;=&quot;Contosobv.sharepoint.com|Contosobv-my.sharepoint.com|Contosobv-files.sharepoint.com|Contosobv-public.sharepoint.com|Contosobv.onmicrosoft.com|Contoso.service-now.com|pmd.Contosonet.org|teamContoso-acc.Contosonet.org|uat-extranet.Contosonet.org|Contosoacc.crm4.dynamics.com|www.Contosoacademy.com|mysite.Contosonet.org|/*appcompat*/&quot;</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">&quot;EnterpriseCloudResources_LastWrite&quot;=dword:00000001</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">&quot;<span style="background:yellow;">EnterpriseProxyServers</span>&quot;=&quot;wpad.Contosonl.local;wp.Contosonet.org:80;ccaintra.Contosonl.local:8080”</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">&quot;EnterpriseProxyServers_LastWrite&quot;=dword:00000001</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">&quot;EnterpriseInternalProxyServers&quot;=&quot;&quot;</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">&quot;EnterpriseInternalProxyServers_LastWrite&quot;=dword:00000001</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">&quot;<span style="background:yellow;">EnterpriseIPRange</span>&quot;=&quot;10.0.0.1-10.0.255.255,
+192.168.0.0-192.186.0.255&quot;</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">&quot;EnterpriseIPRange_LastWrite&quot;=dword:00000001</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">&quot;NeutralResources&quot;=&quot;adfs.Contosonet.org,auth.grip-on-it.com,login.microsoftonline.com,login.windows.net&quot;</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">&quot;NeutralResources_LastWrite&quot;=dword:00000001</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">&quot;EnterpriseProxyServersAreAuthoritative&quot;=dword:00000001</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">&quot;EnterpriseProxyServersAreAuthoritative_LastWrite&quot;=dword:00000001</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">&quot;EnterpriseIPRangesAreAuthoritative&quot;=dword:00000001</p><p style="margin:0in;margin-left:.75in;font-family:&quot;Courier New&quot;;font-size:8.0pt;">&quot;EnterpriseIPRangesAreAuthoritative_LastWrite&quot;=dword:00000001</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">&nbsp;</p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:12.0pt;color:#1F4D78;" lang="en-US">IP configuration of the client and
+the server to be accessed (and proxy server in case of HTTP)</p><p style="margin:0in;margin-left:.375in;"><span style="font-style:italic;">EdpDiagnostics\HTTP\netsh\CabFolder\config\envinfo.txt</span></p><p style="margin:0in;margin-left:.375in;">&nbsp;</p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>457 Windows IP Configuration</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>458 </span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>459<span>&nbsp;&nbsp;&nbsp;
+</span>Host Name . . . . . . . . . . . . : DESKTOP-M30FUG5</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;"><span style="color:#D0D0D0;background:white;"><span>&nbsp;</span>460<span>&nbsp;&nbsp; </span></span><span style="color:black;background:yellow;"><span>&nbsp;</span>Primary Dns Suffix</span><span style="color:#D0D0D0;background:white;"><span>&nbsp;
+</span>. . . . . . . :msdl.contoso.Dom</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>461<span>&nbsp;&nbsp;&nbsp;
+</span>Node Type . . . . . . . . . . . . : Peer-Peer</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>462<span>&nbsp;&nbsp;&nbsp;
+</span>IP Routing Enabled. . . . . . . . : No</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>463<span>&nbsp;&nbsp;&nbsp;
+</span>WINS Proxy Enabled. . . . . . . . : No</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>464<span>&nbsp;&nbsp;&nbsp;
+</span>DNS Suffix Search List. . . . . . : msd.contoso.Dom</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>465<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>msd.contoso.Dom</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>466<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>world.contoso.Dom</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>486 Ethernet adapter Ethernet:</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>487 </span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;"><span style="color:#D0D0D0;background:white;"><span>&nbsp;</span>488<span>&nbsp;&nbsp;&nbsp; </span></span><span style="color:black;background:yellow;">Connection-specific
+DNS Suffix</span><span style="color:#D0D0D0;background:white;"><span>&nbsp; </span>. : contoso.Dom</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>489<span>&nbsp;&nbsp;&nbsp;
+</span>Description . . . . . . . . . . . : Realtek USB GbE Family Controller</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>490<span>&nbsp;&nbsp;&nbsp;
+</span>Physical Address. . . . . . . . . : ff-ff-ff-ff-99-99</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>491<span>&nbsp;&nbsp;&nbsp;
+</span>DHCP Enabled. . . . . . . . . . . : Yes</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>492<span>&nbsp;&nbsp;&nbsp;
+</span>Autoconfiguration Enabled . . . . : Yes</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>493<span>&nbsp;&nbsp;&nbsp;
+</span>Link-local IPv6 Address . . . . . :
+fe80::e49f:ca02:5fff:32ec%6(Preferred) </span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;"><span style="color:#D0D0D0;background:white;"><span>&nbsp;</span>494<span>&nbsp;&nbsp; </span></span><span style="color:black;background:yellow;"><span>&nbsp;</span>IPv4 Address</span><span style="color:#D0D0D0;background:white;">. . . . . . . . . . . : 192.168.1.22(Preferred) </span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;"><span>&nbsp;</span>495<span>&nbsp;&nbsp;&nbsp;
+</span>Subnet Mask . . . . . . . . . . . : 255.255.255.0</span></p><p style="margin:0in;margin-left:.375in;" lang="de">&nbsp;</p><p style="margin:0in;margin-left:.375in;">Note
+that both the server and the clients IP must match the EnterpriseIPRange.</p><p style="margin:0in;margin-left:.375in;">That
+is also true for the DNS suffix of the client and the DNS/FQDN of the server
+that is accessed that must match the EnterpriseNetworkDomainNames</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;">&nbsp;</p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:12.0pt;color:#1F4D78;" lang="en-US">DNS cache (ipconfig /displaydns)</p><p style="margin:0in;margin-left:.375in;"><span style="font-style:italic;">EdpDiagnostics\HTTP\netsh\CabFolder\config\dns.txt</span></p><p style="margin:0in;margin-left:.375in;">It
+is the DNS cache that is used to check for the connection between IP addresses
+and domain names.</p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;">&nbsp;</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;">30<span>&nbsp;&nbsp;&nbsp;&nbsp; </span>kmssrv003.eurl.msdl.world.dom</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;">31<span>&nbsp;&nbsp;&nbsp;&nbsp; </span>----------------------------------------</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;"><span style="color:#D0D0D0;background:white;">32<span>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Record Name . . . . . : srv003.</span><span style="color:black;background:yellow;">msdl.contoso.dom</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;">33<span>&nbsp;&nbsp;&nbsp;&nbsp; </span>Record Type . . . . . : 1</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;">34<span>&nbsp;&nbsp;&nbsp;&nbsp; </span>Time To Live<span>&nbsp; </span>. . . . : 934</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;">35<span>&nbsp;&nbsp;&nbsp;&nbsp; </span>Data Length . . . . . : 4</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;color:#D0D0D0;"><span style="background:white;">36<span>&nbsp;&nbsp;&nbsp;&nbsp; </span>Section . . . . . . . : Answer</span></p><p style="margin:0in;margin-left:.75in;font-size:8.0pt;"><span style="color:#D0D0D0;background:white;">37<span>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>A (Host) Record . . . : </span><span style="color:black;">192.168.3.44</span></p><p style="margin:0in;margin-left:.375in;">&nbsp;</p><p style="margin:0in;margin-left:.375in;">If
+a record has <span style="font-weight:bold;">multiple IP addresses it is the
+first one that is taken</span> for the evaluation, even if the second one is
+used for the network communication</p><p style="margin:0in;margin-left:.375in;">&nbsp;</p><p style="margin:0in;margin-left:.375in;">The
+case of AD integrated DFSN - make sure that all IP addresses listed for the
+domain name are in the Enterprise IP ranges, otherwise the DFSN path isn't
+recognised as Enterprise</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;">&nbsp;</p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:12.0pt;color:#1F4D78;">Verifying context of files</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;">Windows explorer can be used to verify the context the client
+believes the files is in. The “file ownership” can be added: </p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;">&nbsp;<span asset="4541453" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4541453]</span></p><p style="margin-left:.375in;margin-top:2pt;margin-bottom:0pt;font-family:&quot;Calibri Light&quot;;font-size:12.0pt;color:#1F4D78;" lang="en-US">Use task manager to see the context
+the application is running under</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">&nbsp;<span asset="4541454" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4541454]</span></p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">When saving the file the user can choose the
+context to save the file in, IF the “block override” option isn’t selected,
+which since RS3 prevents the saving of Work files as Personal:</p><div style="margin-left:0.375in;margin-top:0px;margin-bottom:10.6667px;" lang="en-US"><span asset="4541455" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4541455]</span><br></div><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">&nbsp;</p><p style="margin-left:.375in;margin-top:0pt;margin-bottom:8pt;" lang="en-US">Files can be identified as Work by their Icon and
+in enlightened apps as well, here Notepad as example:</p><div style="margin-left:0.375in;margin-top:0px;margin-bottom:10.6667px;" lang="en-US"><span asset="4541456" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4541456]</span><br></div></div><div><span style="box-sizing:border-box;font-size:10.5pt;font-family:&quot;Segoe UI&quot;, sans-serif;">Contributing engineer:&nbsp;rnitsch@microsoft.com; narach@microsoft.com; ricjam@microsoft.com<br style="box-sizing:border-box;">Feedback/ suggestions:<span>&nbsp;</span><font color="rgba(0, 0, 0, 0)"><span style="text-decoration-style:initial;text-decoration-color:initial;cursor:pointer;"><u><a href="mailto:networkflowdevs@microsoft.com; rnitsch@microsoft.com; narach@microsoft.com; ricjam@microsoft.com?subject=WIP-Workflow%20feedback">EMAIL</a></u></span></font><br style="box-sizing:border-box;">For more Windows Networking Workflows, go to:&nbsp;</span><span style="box-sizing:border-box;font-size:10.5pt;font-family:&quot;Segoe UI&quot;, sans-serif;"><a href="https://aka.ms/networkflows" style="box-sizing:border-box;text-decoration:underline;cursor:pointer;">https://aka.ms/networkflows</a></span></div>

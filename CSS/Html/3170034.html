@@ -1,0 +1,1731 @@
+﻿<header><h1>Process: Microsoft Advertising: Monthly Invoice Setup</h1></header><p><span asset="4509089" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4509089]</span></p>
+
+<h3><span><span><span><span><span>Who should use this article?</span></span></span></span></span></h3>
+
+<ul>
+	<li><span><span><span><span><span>Microsoft Advertising </span></span></span></span></span></li>
+</ul>
+
+<h3><span><span><span><span><span>What is this article about?</span></span></span></span></span></h3>
+
+<p><span><span><span><span><span>This article describes the requirements and steps for setting up monthly invoices. Monthly invoice billing is a post-pay payment method available only to qualified advertisers. Qualified advertisers are issued an SAP ID to be used as the payment method in the account and will need to complete insertion orders to enable ad delivery (see KB <a href="https://internal.support.services.microsoft.com/help/3175371" target="_blank">3175371 Process: Microsoft Advertising: Insertion Orders</a> for more information). </span></span></span></span></span></p>
+
+<h3><span><span><span><span><span><a id="top" name="top"></a>Table of contents</span></span></span></span></span></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span><span>1.</span></span></span><strong><span><span><span> </span></span></span></strong><a bookmark-id="1" href="#1" managed-link=""><span><span><span>Data security requirements</span></span></span></a></span></span></h4>
+			</td>
+			<td width="300">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span><span><span>2. </span><a bookmark-id="2" href="#2" managed-link=""><span><span><span>SAP/credit line setup process</span></span></span></a></span></span></h4>
+			</td>
+			<td width="804">
+			<p><span><span><span><span>2.1 </span></span></span><a bookmark-id="2.1" href="#2.1" managed-link=""><span><span><span>Eligibility and requirements</span></span></span><span><span><span> for </span></span></span>SAP/New Credit Line Setup, <span><span><span>Sold-To To Bill-To Conversion, and Add SAP to new CID (CSF submission is required but customer will not be put through credit checks again)</span></span></span></a></span></p>
+
+			<p><span><span><span><span><span>2.2 </span></span></span><a bookmark-id="2.2" href="#2.2" managed-link=""><span><span><span>Complete the internal Customer Setup Form (CSF)</span></span></span></a></span></span></p>
+
+			<p><span><span><span><span><span>2.3 </span></span></span><a bookmark-id="2.3" href="#2.3" managed-link=""><span><span><span>Ensure the CSF passes validation</span></span></span></a><br>
+			<br>
+			<span><span><span>2.4 <a bookmark-id="2.4" href="#2.4" managed-link="" target="">Submit the CSF to GFS (also known as WOCS)</a></span></span></span><a bookmark-id="2.4" href="#2.4" managed-link=""> </a></span></span></p>
+
+			<p>2.5&nbsp;<a bookmark-id="2.5" href="#2.5" managed-link=""><span><span><span><span><span>Upgrade the CID shell type to Premium</span></span></span></span></span></a></p>
+
+			<p><span><span><span><span><span>2.6 </span></span></span><a bookmark-id="2.6" href="#2.6" managed-link=""><span><span><span>Set the SAP payment method</span></span></span></a></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span>3. <a bookmark-id="3" href="#3" managed-link=""><span><span><span>Invoice account setup SLAs</span></span></span></a></span></h4>
+			</td>
+			<td width="804">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span>4.<strong> </strong><a bookmark-id="4" href="#4" managed-link=""><span><span><span>Monthly invoice prepayments in France</span></span></span></a></span></h4>
+			</td>
+			<td width="804">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span>5. <a bookmark-id="5" href="#5" managed-link=""><span><span><span>Financial statements</span></span></span> </a></span></h4>
+			</td>
+			<td width="804">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span>6. <span><span><span>Security deposits</span></span></span></span></h4>
+			</td>
+			<td width="804">
+			<p>6.1<span><span> <a bookmark-id="6.1" href="#6.2" managed-link="" target="">Deposits for non-standard credit limits (Standard security deposits) </a></span></span></p>
+
+			<p><span><span><span><span><span>6.2&nbsp;<a bookmark-id="6.2" href="#6.2" managed-link="">Deposits for sole proprietors</a></span></span></span></span></span></p>
+
+			<p><span><span><span>6.3 </span><a bookmark-id="6.3" href="#6.3" managed-link=""><span><span><span>Security deposit refunds</span></span></span></a></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span>7.<strong> </strong><a bookmark-id="7" href="#7" managed-link=""><span><span><span>SAP IDs</span></span></span></a></span></h4>
+			</td>
+			<td width="804">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span>8. <span><span><span>Billing cycle and invoices</span></span></span></span></h4>
+			</td>
+			<td width="804">
+			<p>8.1<span><span> <a bookmark-id="8.1" href="#8.1" managed-link=""><span><span><span>Invoice/Document rendering (including credit memos)</span></span></span></a></span></span></p>
+
+			<p><span><span><span><span><span>8.2&nbsp;<a bookmark-id="8.2" href="#8.2" managed-link="">Invoice delivery</a></span></span></span></span></span></p>
+
+			<p><span><span><span><span><span>8.3&nbsp;<a bookmark-id="8.3" href="#8.3" managed-link="">Invoice rendering issues</a></span></span></span></span></span></p>
+
+			<p><span><span><span><span><span>8.4&nbsp;<a bookmark-id="8.4" href="#8.4" managed-link="">Request a change on an invoice</a></span></span></span></span></span></p>
+
+			<p><span><span><span><span><span>8.5 <a bookmark-id="8.5" href="#8.5" managed-link="">How to re-render (SAP) invoices</a></span></span></span></span></span></p>
+
+			<p><span><span><span><span><span>8.6&nbsp;<a bookmark-id="8.6" href="#8.6" managed-link="">Requesting a revised (pro-forma) invoice</a></span></span></span></span></span></p>
+
+			<p><span><span><span><span><span>8.7&nbsp;<a bookmark-id="8.7" href="#8.7" managed-link="" target="">Request for duplicate invoices from non-bill-to party</a></span></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span><span>9.</span></span></span><strong><span><span><span> </span></span></span></strong><a bookmark-id="9" href="#9" managed-link=""><span><span><span>Credit limit enforcement</span></span></span></a></span></span></h4>
+			</td>
+			<td width="804">
+			<p>9.1<span> <a bookmark-id="9.1" href="#9.1" managed-link=""><span><span><span>Credit Hold</span></span></span></a></span></p>
+
+			<p><span><span><span><span>9.2&nbsp;<a bookmark-id="9.2" href="#9.2" managed-link="">Notifications to Advertisers and UCM Alerts</a></span></span></span></span></p>
+
+			<p><span><span><span><span>9.3&nbsp;<a bookmark-id="9.3" href="#9.3" managed-link="">Monthly invoice payment applied, account still on hold</a></span></span></span></span></p>
+
+			<p><span><span><span><span>9.4&nbsp;<a bookmark-id="9.4" href="#9.4" managed-link="">Requests to increase credit limit</a></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span><span>10.&nbsp;Other troubleshooting scenarios</span></span></span></span></span></h4>
+			</td>
+			<td width="804">
+			<p>10.1<span> <a bookmark-id="10.1" href="#10.1" managed-link=""><span><span><span>Requests from non-profits in a VAT market</span></span></span></a></span></p>
+
+			<p><span><span><span><span>10.2&nbsp;<a bookmark-id="10.2" href="#10.2" managed-link="">Developer as advertiser is unable to access their invoice</a></span></span></span></span></p>
+
+			<p><span><span><span><span>10.3&nbsp;<a bookmark-id="10.3" href="#10.3" managed-link="">Downgrade from Monthly Invoice billing to Credit card (threshold) billing</a></span></span></span></span></p>
+
+			<p><span><span><span><span>10.4&nbsp;<a bookmark-id="10.4" href="#10.4" managed-link="">Advertiser requests statements from Yahoo!</a></span></span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h3><span><span><span><span><span><span><a id="1" name="1"></a>1. Data security requirements</span></span></span></span><span><span> </span></span></span></span></h3>
+
+<div align="center"><span><span> </span></span></div>
+
+<p><span><span><span lang="EN-GB"><span><span>Data Transfer Management must be used to collect/send sensitive documentation to/from customers (for more information, see KB </span></span></span><span lang="PT"><a href="https://internal.support.services.microsoft.com/help/4056786" target="_blank"><span lang="EN-GB"><span><span>4056786 Microsoft Advertising: Data Transfer Management</span></span></span></a></span><span lang="EN-GB"><span><span>). Avoid gathering and relaying any personal data via email (even via </span></span></span><span lang="PT"><a href="mailto:capattach@microsoft.com" target="_blank"><span lang="EN-GB"><span><span>capattach@microsoft.com</span></span></span></a></span><span lang="EN-GB"><span><span>) and use a Data Transfer Management secure workspace whenever possible. If email must be used to relay sensitive customer information, be sure to lock all files with the XID as the password.</span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></p>
+
+<h3><span><span><span><span><span><a id="2" name="2"></a>2. SAP/credit line setup process</span></span></span></span></span></h3>
+
+<div align="center"><span><span> </span></span></div>
+
+<p><span><span><span><span><span><span><span><span><span>This process should be used for new SAP setup requests and changes to existing credit lines that require a secondary assessment of risk (for example, credit limit increase or sold-to conversion to bill-to). Other minor administrative changes like address or accounts payable contacts may go directly to </span></span></span><span><span><span><span>Global Financial Services (GFS), also known as Worldwide Online Credit Services (WOCS), </span></span></span></span><span><span><span>and do not require a Customer Setup Form.</span></span></span></span></span></span></span></span></span></p>
+
+<p><span><span><span><span>Before getting started, ensure the customer is properly fortified (or manually authenticated by establishing contact with the requestor via the email domain or phone number published on the advertiser&rsquo;s website).<strong> </strong>This will help to ensure the requestor is not using legitimate business information to establish a fraudulent credit line.</span></span></span></span></p>
+
+<p><span><strong><span><span><span>Important: </span></span></span></strong><span><span><span>If additional documentation is required for the customer to proceed with credit approval, use KB </span></span></span><a href="https://internal.support.services.microsoft.com/help/4056786" target="_blank"><span><span><span>4056786 Microsoft Advertising: Data Transfer Management</span></span></span></a><span><span><span> to securely acquire sensitive customer information, such as financial statements.</span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span>A self-serve feature in UI for Monthly Invoice application will be available for customers beginning February 2020. If the customer does not see this option, CSS must first confirm </span></span><span><span><span>eligibility and requirements</span></span></span><span><span> for SAP/New Credit Line Setup and either enable into pilot OR proceed with completing CSF on behalf of customer. See </span></span><a bookmark-id="2.1" href="#2.1" managed-link=""><span><span><span>section 2.1</span></span></span></a><span><span> for more details on eligibility requirements before proceeding with manual steps below.</span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span><span><span>Complete the CSF</span></span></span></span></span></strong><span><span><span> with the customer. See <a bookmark-id="2.2" href="#2.2" managed-link="">section 2.2</a> for more details.</span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>Ensure the CSF passes validation</span></span></span><span><span><span>.</span></span></span></strong><span><span><span> See <a bookmark-id="2.3" href="#2.3" managed-link="">section 2.3</a> for more details.</span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>Submit the </span></span></span>CSF form to </strong><strong>GFS (also known as WOCS)<strong>.&nbsp;</strong></strong>See&nbsp;<a href="https://internal.support.services.microsoft.com/en-us/help/3170034#2.4">section 2.4</a>&nbsp;for more details.<span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Once the credit line is approved, </span></span></span><strong><span><span><span><span><span>Upgrade the CID to premium</span></span></span></span></span></strong><span><span><span> shell type and create eIOs to prevent disruption to delivery. See <a bookmark-id="2.5" href="#2.5" managed-link="">section 2.5</a> for more details.</span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span><span><span>Set the SAP</span></span></span></span></span></strong><span><span><span> as the payment method. See <a bookmark-id="2.6" href="#2.6" managed-link="">section 2.6</a> for more details.</span></span></span><span><span> </span></span></span></span></span></li>
+</ol>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h4><a id="2.1" name="2.1"></a>2.1<span><span><span><span>&#8203;&#8203;&#8203;&#8203; Eligibility and requirements for&#8203; </span></span></span></span>SAP/New Credit Line Setup, <span><span><span><span>Sold-To to Bill-To Conversion, and Add SAP to new CID (CSF submission is required but customer will not be put through credit checks again)</span></span></span></span></h4>
+
+<p><span><span><span><span><span>A credit check must be passed before the account can be enabled for monthly invoice billing.<br>
+<br>
+Ensure the advertiser meets eligibility requirements (spend and&nbsp;registration requirements effective February 20th, 2018):</span></span></span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><strong><span><span>General requirements</span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><strong><span><span>Notes</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>Advertiser meets minimum Microsoft Advertising&nbsp;age and spend history requirements.</span></span></span></span></p>
+
+			<p><span><span><span><span>The company that requests invoice setup must have advertised as the Bill-to party on Microsoft <span><span><span><span>Advertising</span></span></span></span> for at least 12 months and must meet the minimum spend requirement in at least three&nbsp;of the 12 months.</span></span></span></span></p>
+
+			<p><span><span><span><span>For agencies, aggregate client spend can be used to determine minimum spend eligibility.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Exceptions to the 12 month spend history may be made if the customer meets the three months spend criteria and is willing to provide financial statements or<strong> </strong>a<strong> </strong><a bookmark-id="6.1" href="https://support.microsoft.com/api/preview#SecurityDeposits" managed-link="" target="">security deposit</a>.</span></span></span></p>
+
+			<p><span><span><span>Spend Minimums:</span></span></span></p>
+
+			<p><span><strong><span><span>US and Canada</span></span></strong><span><span>: $5000 USD/CAD per month.</span></span></span></p>
+
+			<p><span><strong><span><span>Other Mature Markets: </span></span></strong><span><span>$3000 USD Equivalent (Includes Australia, Western Europe: Belgium, France, Germany, Greece, Italy, Luxembourg, Portugal, Spain, and the United Kingdom).</span></span></span></p>
+
+			<p><span><strong><span><span>Emerging Markets: </span></span></strong><span><span>$2000 USD Equivalent (Includes BR, NL, the APAC Region, the LATAM region, the CEE region - Central and Eastern Europe, and the MEA region - Middle East and Africa).</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>The company is registered on the regional site for their place of business.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Conduct a general search on <a href="https://microsoft-my.sharepoint.com/:x:/p/v-anaba/EVnbebi2WGhPgvJaxNVJmKcBjNJmmWyeeldZ1mgWTQsMuw?e=gi1yVp" target="_blank"><span>regional validation sites</span></a></span></span></span><span><span><span> </span></span></span><span><span><span> to verify registration in the company&rsquo;s place of business. The company must be registered to proceed.</span></span></span></span></p>
+
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>The advertiser&rsquo;s URL is functional, informative, and adheres to editorial policies.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>The website meets the following requirements before requesting monthly invoice billing:</span></span></span></p>
+
+			<ul>
+				<li><span><span><span><span>Contains information about the business. For example:</span></span></span></span>
+
+				<ul style="list-style-type:disc">
+					<li><span><span><span><span>Nature of business</span></span></span></span></li>
+					<li><span><span><span><span>Name/Address of business</span></span></span></span></li>
+					<li><span><span><span><span>Available products/services</span></span></span></span></li>
+					<li><span><span><span><span>Registered Company information (Including reference to the legal trading name/address)</span></span></span></span></li>
+				</ul>
+				</li>
+				<li><span><span><span><span>All links must be functional and direct users to the correct and&nbsp;expected page. For example, not redirecting them to a different site or back to the homepage.</span></span></span></span></li>
+				<li><span><span><span><span>Includes a Privacy Policy</span></span></span></span></li>
+				<li><span><span><span><span>Includes Terms and&nbsp;conditions</span></span></span></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>Advertiser can be billed and pay in a supported currency.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span lang="EN-GB"><span><span>See </span></span></span><a href="https://help.ads.microsoft.com/#apex/3/en/50828/3" target="_blank"><span lang="EN-GB"><span><span><span>Choosing a payment method for Microsoft Advertising</span></span></span></span></a><span lang="EN-GB"><span><span> and </span></span></span><a href="https://help.ads.microsoft.com/#apex/3/en/52075/3-500" target="_blank"><span lang="EN-GB"><span><span><span>What you need to know about monthly invoice billing</span></span></span></span></a><span lang="PT"><span><span> </span></span></span><span lang="EN-GB"><span><span> for more information on how to pay for Microsoft Advertising.</span></span></span></p>
+
+			<div>
+			<div>&nbsp;</div>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>Advertiser can be billed on standard net terms.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>See <span><a bookmark-id="section 2.1.1" href="#section 2.1.1" managed-link="">section 2.1.1</a> </span></span></span><span> </span><span><span>for more on net terms.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>Advertiser agrees to standard credit limit and/or understands they will need to provide a deposit.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Minimum $1K&nbsp;USD or market-equivalent (value required will vary based on customers assessed risk level and expected spend). </span></span></span></p>
+
+			<p><span><span><span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS)</span></span></span> may provide tentative approval of the credit line pending receipt of a security deposit.</span></span></span></p>
+
+			<p>See additional requirements under Credit line in&nbsp;<a bookmark-id="2.2" href="https://internal.support.services.microsoft.com/en-us/help/3170034#2.2" managed-link="" target="">section 2.2</a>, and set expectations with the advertiser,<strong>&nbsp;</strong>if they request a non-standard credit limit, financial statements (see&nbsp;<a bookmark-id="5" href="https://internal.support.services.microsoft.com/en-us/help/3170034#5" managed-link="" target="">section 5</a>)<strong>&nbsp;</strong>or<strong>&nbsp;</strong>a<strong>&nbsp;</strong>security deposit may be required (see&nbsp;<a bookmark-id="6" href="https://internal.support.services.microsoft.com/en-us/help/3170034#6" managed-link="" target="">section 6</a>).</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>The company&rsquo;s website URL must match the legal company name.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>Business justification must be provided if different.</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span> </span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="150">
+			<p><span><strong><span><span>Microsoft </span></span>Advertising</strong><strong><span><span>&nbsp;requirements</span></span></strong></span></p>
+			</td>
+			<td width="250">
+			<p><span><span><span> <strong>Notes</strong></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="432">
+			<p><span><span><span><span>The account is not already set up for monthly invoicing.</span></span></span></span></p>
+			</td>
+			<td width="615">
+			<p><span><span><span>Check whether there is an SAP payment method available in the customer shell. Confirm with the advertiser whether they have any other logins that could already have invoicing established. Work with them to consolidate logins appropriately.</span></span></span></p>
+
+			<p><span><span><span>If the customer already has an SAP ID, it can be entered in more than one customer shell. Complete the setup process to request the SAP be added to a new CID (credit check not required).</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="432">
+			<p><span><span><span><span>Requestor can demonstrate association to the business.</span></span></span></span></p>
+			</td>
+			<td width="615">
+			<p><span><span><span>The requestor must be a fortified Super Admin on the account or otherwise accessible through contact information provided on the website (email domain or phone). <strong>Note</strong>: If the customer was fortified or manually authenticated in the ticket.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="432">
+			<p><span><span><span><span>The advertiser has an existing CID/XID that can be upgraded.</span></span></span></span></p>
+			</td>
+			<td width="615">
+			<p><span></span>At least one threshold account must be present in the account for GFS (also known as WOCS) to add SAP as a post-pay payment method in the shell. Create one without a payment method, if needed.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="432">
+			<p><span><span><span><span>There are no egregious issues on the Microsoft Advertising account.</span></span></span></span></p>
+			</td>
+			<td width="615">
+			<p><span><span><span>Advertiser is not on credit hold, flagged with fraud, and has no QBR penalties within the past year.<br>
+			<br>
+			Declined threshold payments due to transaction limits imposed by financial institutions or credits/rebill will be considered by SMEs on a case by case basis.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="432">
+			<p><span><span><span><span>The company&#39;s address in Microsoft Advertising matches the legal company address on the CSF <em>and</em> all official company documents (for example, financial statements).</span></span></span></span></p>
+			</td>
+			<td width="615">
+			<p><span><span><span>The legal address must be the same in the Microsoft Advertising shell as is on the CSF (if adding the SAP to another customer shell, the legal address must also be consistent with the existing SAP record).</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="432">
+			<p><span><span><span><span>The company&#39;s name in Microsoft Advertising is consistent with their legal company name.</span></span></span></span></p>
+			</td>
+			<td width="615">
+			<p><span><span><span>The customer&#39;s name in Microsoft Advertising must be consistent but does not have to match exactly since businesses may have more than one customer ID.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="432">
+			<p><span><span><span><span>As a best practice, Accounts Payable contacts should be a valid user on the account.</span></span></span></span></p>
+
+			<p><span><span><span><span>At least one threshold account must be present in the account for GFS (also known as WOCS) to add SAP as a post-pay payment method in the shell. Create one without a payment method, if needed.</span></span></span></span></p>
+			</td>
+			<td width="615">
+			<p><span><span><span>An AP user in the account ensures their contact information is valid and can be authenticated in any future interactions.</span></span></span></p>
+
+			<p><span><span><span>If a user for an AP contact cannot be established on the account, confirm the AP contact&#39;s association to the business with the requestor and ensure the requestor is aware that email authentication is required within the next five&nbsp;days.</span></span></span></p>
+
+			<p><span><span><span>If no AP contact is designated for the client accounts, the primary contact must be the super admin of the agency whose email matches the agency/bill-to company domain.</span></span></span></p>
+
+			<p><span><span><span>For Client/Sold-To setup, it is ideal to establish AP contacts as users on the client accounts for authentication purposes. </span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span> </span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="150">
+			<p><span><strong><span><span>APAC requirements</span></span></strong></span></p>
+			</td>
+			<td width="250">
+			<p><span><span><span> <strong>Notes</strong></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="432">
+			<p><span><span><span><span>Advertisers must provide two&nbsp;years of financial statements.</span></span></span></span></p>
+			</td>
+			<td width="615">
+			<p><span><span><span>All customers in APAC are <em>required</em> to submit financial statements to be issued a credit line.</span></span></span></p>
+
+			<p><span><strong>Note:</strong>&nbsp;Customers in any market may be required to submit financial statements if GFS (also known as WOCS) does not have enough information to confidently issue a credit line. Refer to<a href="https://internal.support.services.microsoft.com/#FinancialStatements">&nbsp;</a><a href="https://internal.support.services.microsoft.com/en-us/help/3170034#5">section 5</a>, Financial statements,<strong>&nbsp;</strong>or&nbsp;<a href="https://internal.support.services.microsoft.com/en-us/help/3170034#6">section 6</a>, Security deposit required, for more information.</span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span> </span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="150">
+			<p><span><strong><span><span>EU requirements</span></span></strong></span></p>
+			</td>
+			<td width="250">
+			<p><span><span><span> <strong>Notes</strong></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="432">
+			<p><span><span><span><span>Provide a VAT ID if appropriate for their Account Billing Location.</span></span></span></span></p>
+			</td>
+			<td width="615">
+			<p><span><span><span>Check the advertiser&rsquo;s VAT registration status on <a href="http://ec.europa.eu/taxation_customs/vies/" target="_blank"><span>VIES</span></a>.</span></span></span></p>
+
+			<p><span><span><span><span><span><span>If invalid or no results are found, request a certificate of registration from the advertiser or otherwise validate their registration on <a href="https://microsoft.sharepoint.com/teams/StandardSupport/l1resources/_layouts/15/listform.aspx?PageType=4&amp;ListId=%7B0FB71EC2%2D5D3B%2D4FE6%2DA55F%2D0FDDB00B70DA%7D&amp;ID=70&amp;ContentTypeID=0x01003A7ACA54E620A247B7852011359A733D" target="_blank"><span>regional validation sites</span></a></span></span></span><span><span><span> </span></span></span><span><span><span>. Be sure to collect exemption certificates as appropriate.</span></span></span></span></span></span></p>
+
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span> </span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="150">
+			<p><span><strong><span><span>US and FR requirements</span></span></strong></span></p>
+			</td>
+			<td width="250">
+			<p><span><strong><span><span> Notes</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="432">
+			<p><span><span><span><span>Accounts Payable contacts for Sold-To setup are required and should be valid users on the account. Otherwise, the AP contact must also be able to complete email authentication triggered by GFS (also known as WOCS) through a tool called OneVet.</span></span></span></span></p>
+			</td>
+			<td width="615">
+			<p><span><span><span>AP contacts for Sold-To setup <em>are only </em>required for customers located in the US or FR for compliance with sequential liability regulations.</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span> </span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="150">
+			<p><span><strong><span><span>Sole Proprietor requirements</span></span></strong></span></p>
+			</td>
+			<td width="250">
+			<p><span><span><span> <strong>Notes</strong></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="432">
+			<p><span><span><span><span>Sole Proprietors understand they will need to submit a Security Deposit equal the amount of their desired credit line.</span></span></span></span></p>
+			</td>
+			<td width="615">
+			<p><span><span><span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS)</span></span></span> may provide tentative approval of the credit line pending receipt of a security deposit.</span></span></span></p>
+
+			<p><span><span><span>See additional requirements under Sole Proprietor Credit Limits in <span><a bookmark-id="2.2" href="#2.2" managed-link="">section 2.2</a><strong> </strong></span></span></span><span> </span><span><span>and <a bookmark-id="5" href="#5" managed-link=""><span>section 5</span></a></span></span><span><span>, Financial Statements, or <span><a bookmark-id="6" href="#6" managed-link="">section 6</a>,</span></span></span><span> </span><span><span> Security Deposit, for submission details.</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span> </span></span></p>
+
+<p><span><span><strong><span><span><span><br>
+Supported currencies for Invoice Billing:</span></span></span></strong><br>
+<span><span><span>Monthly invoicing is not supported for all currencies, and the currencies that are accepted differ depending on the billing center the advertiser is aligned to. See&nbsp;<a href="https://help.ads.microsoft.com/#apex/3/en/50828/3" target="_blank">Choosing a payment method for Microsoft Advertising</a>&nbsp;to ensure the customer can be billed on monthly invoice in their preferred currency.<br>
+<br>
+<strong>If advertiser&rsquo;s currency isn&rsquo;t supported:</strong><br>
+Share the messaging&nbsp;below and assist with setup of prepay or threshold billing.<br>
+<br>
+&ldquo;<em>We don&#39;t currently support monthly invoicing for your desired currency. I can help you set up a threshold or prepay account to get you started or we can explore other currencies in which monthly invoicing is possible.&rdquo;</em><br>
+<br>
+<strong>﻿Supported payment types for Invoice Billing:</strong></span></span></span></span></span></p>
+
+<p><span><span><span><span>Payment options for invoice customers vary by market. The invoices generated at the close of each billing cycle will specify market-specific payment remittance options and instructions and should align with the banking destinations listed for each billing country/currency combination in </span></span></span><a href="https://help.ads.microsoft.com/#apex/3/en/50828/3" target="_blank"><span><span><span>Choosing a payment method for Microsoft Advertising</span></span></span></a><span><span><span>.</span></span></span></span></p>
+
+<p><span><strong><span><span><span>Note</span></span></span></strong><span><span><span>: Paying invoices via check has largely been deprecated. If a customer has an extended circumstance requiring this payment method this may or may not be an option and can be submitted through the advertiser&rsquo;s respective collections team.</span></span></span></span><span><span><span><span><span><br>
+<br>
+<strong><a id="section 2.1.1" name="section 2.1.1"></a>2.1.1 Net terms </strong><br>
+Standard net terms for the US and Canada are Net 30 days for direct advertisers and Net 60 days for agencies. Standard net terms for other countries vary (see table below).<br>
+<br>
+As of 2015, all unmanaged advertisers must have standard net terms. If the advertiser sends you a modified version of the IO where any information has been changed, let the customer know we only accept standard net terms and cannot change the language of the terms and conditions of the IO.</span></span></span></span></span><br>
+The form is sent to GFS (also known as WOCS) for review and approval by the Senior Credit Manager or Director of Credit and Collections.</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="58%">
+			<p><span><strong><span><span>Bill-to country</span></span></strong></span></p>
+			</td>
+			<td width="25%">
+			<p><span><strong><span><span>Agency</span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><strong><span><span>Advertiser</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="58%">
+			<p><span><span><span><span>UK (and&nbsp;Ireland), Germany, Switzerland, Austria, Belgium, Netherlands, Sweden, Norway, Denmark, Finland, South Africa, Israel</span></span></span></span></p>
+			</td>
+			<td width="25%">
+			<p><span><span><span>60</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>30</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="58%">
+			<p><span><span><span><span>Italy</span></span></span></span></p>
+			</td>
+			<td width="25%">
+			<p><span><span><span>90</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>90</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="58%">
+			<p><span><span><span><span>Spain, India</span></span></span></span></p>
+			</td>
+			<td width="25%">
+			<p><span><span><span>90</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>60</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="58%">
+			<p><span><span><span><span>Brazil</span></span></span></span></p>
+			</td>
+			<td width="25%">
+			<p><span><span><span>40</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>40</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="58%">
+			<p><span><span><span><span>France, LATAM other than Brazil (Columbia, Argentina, Mexico)</span></span></span></span></p>
+			</td>
+			<td width="25%">
+			<p><span><span><span>60</span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span>60</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span><strong><span><span><span>Note: </span></span></span></strong><span><span><span>Net terms for<strong> Sales Houses </strong>in all markets do not exceed 30 days beyond approved agency terms.</span></span></span></span></span></p>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h4><span><span><span><span><span><a id="2.2" name="2.2"></a>2.2 Complete the internal Customer Setup Form (CSF)</span></span></span></span></span></h4>
+
+<p><span><strong><span><span><span>Note</span></span></span></strong><span><span><span>: As of February, eligible customers may be opted in to UI invoice onboarding to self-serve this application process directly with MSNCRED in the UI. Directions below remain only if there is a desire to manually submit a request.</span></span></span></span></p>
+
+<p><span><span><span><span><span>If possible, complete the internal <a href="https://microsoft-my.sharepoint.com/:x:/p/v-anaba/ERSr7XuMjs9Iko-qvKR_JNkBZ5Kxir2wiW5bJALXnIbJ-Q?e=OZQwlV" target="_blank"><span lang="EN-GB">Customer Setup Form (CSF) v. 2.16</span> </a></span></span></span><span><span> </span></span><span><span><span>while speaking with the advertiser.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>If necessary, pre-populate the <a href="https://microsoft-my.sharepoint.com/:x:/p/v-anaba/ERSr7XuMjs9Iko-qvKR_JNkBZ5Kxir2wiW5bJALXnIbJ-Q?e=OZQwlV" target="_blank"><span lang="EN-GB">customer-facing Invoice Billing Setup document</span></a></span></span></span><span><span> </span></span><span><span><span> and request the customer complete the form and host it in the DTM link for the support ticket.</span></span></span></span></span></p>
+
+<div>
+<div><span><span><span><span><span>After you receive the completed Customer Facing CSF from the customer, use the information to fill out the internal CSF. Instructions for how to fill out the CSF are below.<br>
+<br>
+The CSF is divided into five parts. Guidance for filling out each part is below:</span></span></span></span></span></div>
+</div>
+
+<ol>
+	<li><span><span><span><span><span><span><strong>Customer set-up</strong></span></span></span></span></span></span>
+
+	<ul style="list-style-type:disc">
+		<li><span><span><span><strong><span><span><span>Date Requested - </span></span></span></strong><span><span><span>E</span></span></span><span><span><span>nter today&#39;s date</span></span></span></span></span></span></li>
+		<li><span><span><span><strong><span><span><span>Request Type - </span></span></span></strong><span><span><span>Specify if this is a new credit line request or existing credit line increase</span></span></span></span></span></span></li>
+		<li><span><span><span><strong><span><span><span>Microsoft </span></span></span>Advertising<span><span><span><strong> </strong>Customer ID - </span></span></span></strong><span><span><span>Enter the CID in which the SAP must be entered</span></span></span></span></span></span></li>
+		<li><span><span><span><strong><span><span><span>Business Segment - </span></span></span></strong><span><span><span>Enter the customer&rsquo;s segment (&ldquo;Scale&rdquo;)</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><strong><span><span><span>Legal identity</span></span></span></strong></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><strong><span><span><span>Region - </span></span></span></strong><span><span><span>E</span></span></span><span><span><span>nter the region of the legal address (APAC/EMEA/LATAM/NA)</span></span></span></span></span></span></li>
+		<li><span><span><span><strong><span><span><span>Legal Structure -&nbsp;</span></span></span></strong>(Partnership, Corporation, Limited Liability, or Sole Proprietor. See descriptions below)</span></span></span>
+		<ul style="list-style-type:disc">
+			<li><span><span><span><strong><span><span><span>Partnership -</span></span></span></strong><span><span><span> Typically&nbsp;found in professional services such as accountants, lawyers, doctors, or dentists where the partners can share expertise and skills. Partnerships compromise two or more people and any profits, debts, and decisions related to the business are shared.</span></span></span></span></span></span></li>
+			<li><span><span><span><strong><span><span><span>Corporation -</span></span></span></strong><span><span><span> Owned by shareholders who each put an amount of money into a central pool. This pool of capital is then added to by borrowing from other forms of finance. Directors run the business on behalf of shareholders, and they all receive a portion/share of the profit.</span></span></span></span></span></span></li>
+			<li><span><span><span><strong><span><span><span>Limited Liability</span></span></span></strong><span><span><span> <strong>-</strong> Intended to benefit professional partnerships such as lawyers or doctors. Offer the business a form of protection for company shareholders and limited partnerships. For these individuals, the maximum sum they can lose from a business is the sum of money they invested in the company.</span></span></span></span></span></span></li>
+			<li><span><span><span><strong><span><span><span>Sole Proprietor -</span></span></span></strong><span><span><span> Simplest and most common type of small business. The sole proprietor is responsible for everything the business does. The owner has no separation of his/her own assets and liabilities which means he/she is personally responsible for any debts that the business has.</span></span></span></span></span></span></li>
+		</ul>
+		</li>
+		<li><span><span><span><strong><span><span><span>SAP </span></span></span>type</strong>&nbsp;<strong>&ndash;</strong>&nbsp;Most requests will be for Bill-To SAP types. Historically, both a Bill-To and Sold-To SAP were required for Agencies (used to establish an SAP ID for an agency client when the agency is the Bill-To), but the notion of a Sold-To is being deprecated (March 2020 timeline) in favor of using ABL for Sold-To details. Until that time, Advertiser/Clients can upgrade Sold-To SAPs to Bill-To at any time (CSF submission to GFS (also known as WOCS) is required).</span></span></span></li>
+		<li><span><span><span><strong><span><span><span>Company Full Legal Name</span></span></span></strong></span></span></span></li>
+		<li><span><span><span><strong><span><span><span>Microsoft </span></span></span>Advertising<span><span><span> Customer Name</span></span></span></strong></span></span></span></li>
+		<li><span><span><span><strong><span><span><span>Company URL</span></span></span></strong></span></span></span></li>
+		<li><span><span><span><strong><span><span><span>Legal Address</span></span></span></strong></span></span></span></li>
+		<li><span><span><span><strong><span><span><span>Mailing Address</span></span></span></strong></span></span></span></li>
+		<li><span><span><span><strong><span><span><span>Accounts Payable Contacts (1 or 2)&nbsp;</span></span></span></strong></span></span></span><span><span><span><span lang="EN-GB"></span><strong><span lang="EN-GB"><span><span>-</span></span></span></strong><span lang="EN-GB"><span><span> Accounts payable contacts are responsible for authorizing payment to Microsoft. Specify the Accounts Payable (AP) contact(s). The AP email address(es) or domain should match with the customer&rsquo;s company name/website. If it does not, please ask the customer to explain the reason for this difference in domain name and provide a justification for the difference within the notes of the CSF/submission.</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+</ol>
+
+<p><span><span><span><span><span>If the AP contact domain does not match the company name, the AP contact must be manually authenticated either by:</span></span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span>Add the AP user as a contact on the account (preferred for long-term authentication),</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Being looped into the email conversation with the fully authenticated requestor and Microsoft Advertising Support specialist, or,</span></span></span></span></span></li>
+	<li><span><span><span><span><span>The Support Specialist must be able to call the Contact Us phone number on the website and successfully be connected to the designated AP contact.<br>
+	Specify in the notes of the CSF what method was used to authenticate the AP contact. <strong>Note</strong>: Only valid Microsoft Advertising users are eligible for OneVet bypass.</span></span></span></span></span></li>
+</ol>
+
+<p><span><span><span><strong><span><span><span>Tax information</span></span></span></strong></span></span></span></p>
+
+<ul style="list-style-type:disc">
+	<li><span><span><span><strong><span><span><span>VAT&nbsp;</span></span></span><span lang="EN-GB"><span><span><span>(Value-Added Tax) Registration Status -</span></span></span></span></strong><span lang="EN-GB"><span><span><span> There are certain EMEA countries (listed in </span></span></span></span><a data-content-id="" data-content-type="" href="https://help.ads.microsoft.com/#apex/3/en/50874/3" managed-link="" target="_blank">Why we need your business location (and maybe VAT information)</a><span lang="PT"><span><span> </span></span></span><span lang="EN-GB"><span><span><span>) that are subject to VAT. If the customer is not located in one of these countries, select &lsquo;Not VAT Registered&rsquo;.</span></span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>VAT registration number -</span></span></span></strong><span><span><span> If the customer resides in a VAT country, a<strong> </strong>valid VAT registration number is required OR they can provide a certification of incorporation as a non-profit or financial institution.</span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>VAT exempt -</span></span></span></strong><span><span><span> Specify whether the customer is exempt from VAT tax. If the customer is VAT exempt, a VAT Exception Certificate must be provided.<br>
+	<br>
+	<strong>Note:</strong>&nbsp;Failure to provide a valid VAT ID or Exception Certificate for customers located in a VAT market will result in the customer being charged value added tax (VAT).<br>
+	<br>
+	Customers who enter a business location in one of the following regions/territories will automatically be excluded from VAT even if the VAT field is displayed. Several examples include:</span></span></span></span></span></span></li>
+</ul>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="119">
+			<p><span><strong><span><span>Country</span></span></strong></span></p>
+			</td>
+			<td width="504">
+			<p><span><strong><span><span>Regions</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="119">
+			<p><span><span><span><span>Denmark</span></span></span></span></p>
+			</td>
+			<td width="504">
+			<p><span><span><span>Faroe Islands, Greenland</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="119">
+			<p><span><span><span><span>Finland</span></span></span></span></p>
+			</td>
+			<td width="504">
+			<p><span><span lang="FI"><span>Ahvenanmaa, Aaland or </span></span><span lang="EN"><span>&Aring;land</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="119">
+			<p><span><span><span><span>France</span></span></span></span></p>
+			</td>
+			<td width="504">
+			<p><span><span><span>Martinique, French Guiana, Guadeloupe, Reunion and St. Pierre and Miquelton</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="119">
+			<p><span><span><span><span>Germany</span></span></span></span></p>
+			</td>
+			<td width="504">
+			<p><span><span><span>Busingen, Isle of Heligoaland, not including Jungholz and Mittleberg</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="119">
+			<p><span><span><span><span>Greece</span></span></span></span></p>
+			</td>
+			<td width="504">
+			<p><span><span><span>Mount Athos (Agion Poros)</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="119">
+			<p><span><span><span><span>Italy</span></span></span></span></p>
+			</td>
+			<td width="504">
+			<p><span><span><span>Livigno, Campione d&rsquo;Italia, Italian waters of Lake Lugano</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="119">
+			<p><span><span><span><span>Spain</span></span></span></span></p>
+			</td>
+			<td width="504">
+			<p><span><span><span>Canary Islands, Caute and Melilla</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="119">
+			<p><span><span><span><span>UK</span></span></span></span></p>
+			</td>
+			<td width="504">
+			<p><span><span><span>Channel Islands (Includes Jersey &amp; Guernsey), and Gibraltar</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<ul style="list-style-type:disc">
+	<li><span><span><span><strong><span><span><span>VAT Certificate attached</span></span></span></strong><span><span><span> <strong>-</strong> If a customer is exempt from VAT tax, a certificate must be provided and added to the GFS (also known as WOCS) ticket after the request is submitted to UCMT.</span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>Other country tax number&nbsp;-</span></span></span></strong><span><span><span> If the customer resides in a country where a non-VAT Tax ID is required, they must self-identify by entering their Tax ID number.<br>
+	<br>
+	Non-EMEA countries can also provide tax information in Section C. Examples are: GST for Australia, New Zealand and Singapore, PAN for India. However, customers in Brazil are required to provide their active CNPJ# which is being validated via the cadastro website.</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><strong><span><span><span>Credit line</span></span></span></strong></span></span></span></p>
+
+<ul style="list-style-type:disc">
+	<li><span><span><span><strong><span><span><span>Monthly spend/credit limit requested (not required for </span></span></span>Sold-To<span><span><span>)</span></span></span></strong><span><span><span><br>
+	Supply the required credit limit if the account is a Bill-To. Each market&#39;s credit limit threshold can be viewed in the linked Credit Limit Table.<br>
+	<br>
+	As a best practice, encourage the customer to establish a credit line three times&nbsp;their expected monthly spend.</span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>Credit limits and requirements</span></span></span></strong></span></span></span></li>
+</ul>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="309">
+			<p><span><strong><span lang="EN-GB"><span>Requested credit limit amount</span></span></strong></span></p>
+			</td>
+			<td width="270">
+			<p><span><strong><span lang="EN-GB"><span>Requirements</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="309">
+			<p><span><span><span><span>Requested credit limit is<strong> less than or equal to the (default) Standard Business credit limit:</strong></span></span></span></span></p>
+
+			<p><span><strong><span><span><span>Minimum credit limit: 1K&nbsp;USD or market-specific equivalent</span></span></span></strong></span></p>
+
+			<p><span><span lang="EN-GB"><span><span>Mature Markets default Standard Business Credit Limit- $60,000 (Includes AU, FR, DE, JP, KP, KR, NZ, NL, SG, UK, WE Region)</span></span></span></span></p>
+
+			<p><span><span lang="EN-GB"><span><span>Emerging Markets Standard Business Credit Limit- $30,000 (Includes BR, NL, APAC Region, CEE Region, LATAM Region, MEA Region)</span></span></span></span></p>
+			</td>
+			<td width="270">
+			<p><span><span lang="EN-GB"></span>These are default credit limits. No additional information is required unless requested by <span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS)</span></span></span>. See<a href="https://internal.support.services.microsoft.com/en-us/help/3170034#2"> </a><a href="https://internal.support.services.microsoft.com/en-us/help/3170034#2"><span>section 2</span></a> for more detail.</span></p>
+
+			<p><span><strong><span lang="EN-GB"><span>Note</span></span></strong><span lang="EN-GB"><span>: APAC advertisers are required to submit Financial Statements or Security Deposit.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="309">
+			<p><span><span lang="EN-GB"><span><span>Requested credit limit is<strong> greater than the standard business credit limit but less than $100,000</strong></span></span></span></span></p>
+			</td>
+			<td width="270">
+			<p><span><span><span><span><span>Financial statements</span></span></span></span><span><span> or s</span></span><span><span><span><span>ecurity deposit are required</span></span></span></span><span><span>. See <span><a bookmark-id="5" href="#5" managed-link="">section 5</a> and <a bookmark-id="6" href="#6" managed-link="">section 6</a>.</span></span></span><span> </span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="309">
+			<p><span><span lang="EN-GB"><span><span>Requested credit limit is<strong> more than $100K</strong></span></span></span></span></p>
+			</td>
+			<td width="270">
+			<p><span><span lang="EN-GB"></span>Advertiser<strong> </strong>must provide a <strong>Standby letter of credit</strong> from their bank or parental guarantee (for subsidiaries). Note that for parental guarantees, <span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS)</span></span></span> will need to confirm that the parental organization is credit-worthy via internal risk checks before the invoice setup can be complete.</span></p>
+
+			<p><span><span><span>A standby letter or credit is defined as an &quot;<em>irrevocable letter of credit with their bank in Microsoft Corporation&#39;s name.&quot;</em> This must be three times&nbsp;more than the requested credit limit.</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<ul>
+	<li><span><span><span><strong><span lang="EN-GB"><span><span>Sole Proprietor credit limits</span></span></span></strong></span></span></span></li>
+</ul>
+
+<p><span><span><span><span lang="EN-GB"><span><span>A Sole Proprietor is a business that is owned and run by one person in which there is no legal distinction between the person and the business. Businesses that fall under this category have more requirements to qualify for invoice billing. </span></span></span><span lang="EN-GB"><span><span><span>Sole Proprietors can self-identify or you can determine look up their business on the market-specific government website listed<span> </span></span></span></span></span><a href="https://microsoft-my.sharepoint.com/:x:/p/v-anaba/EVnbebi2WGhPgvJaxNVJmKcBjNJmmWyeeldZ1mgWTQsMuw?e=9Fj6eN" target="_blank"><span><span><span><span>here</span></span></span></span></a><span><span><span> </span></span></span><span lang="EN-GB"><span><span><span>. If their business is not listed and they do not have a tax ID, they are a sole proprietor.</span></span></span></span></span></span></span><span><span><span><span lang="EN-GB"></span><span><span><span><br>
+As a best practice, always suggest credit cards as a payment method for Sole Proprietors. If they insist on invoice billing, they will be required to pay a deposit matching the amount that they are requesting for a credit line. The minimum is $1K USD. For the entire time they are advertising with Microsoft Advertising, Microsoft will retain this deposit. </span></span></span></span></span></span></p>
+
+<p class="indent-1"><span><span><span><strong>Messaging</strong><br>
+<br>
+<em><span lang="EN-GB"><span><span>&quot;Thank you for your interest in new monthly invoice setup. Microsoft policy requires a security deposit matching the amount of your requested credit limit. The minimum is $1000 and your credit line will be fixed based on the amount of your deposit. You may increase your credit limit at any time by increasing your deposit at any time. The deposit will be retained by Microsoft for as long as you are advertising with </span></span></span><span lang="EN-GB"><span><span>Microsoft </span></span></span>Advertising<span lang="EN-GB"></span><span lang="EN-GB"><span><span>.<br>
+<br>
+If at some point you choose to register your business under a different business structure, let us know and we&rsquo;ll reprocess your request and we may be able to return your deposit to you.&quot;</span></span></span></em></span></span></span></p>
+
+<p><span><span><span lang="EN-GB"><span><span><span><strong><span lang="EN-GB"><span><span>Note:</span></span></span></strong><span lang="EN-GB"><span><span> If the customer becomes a registered business at some point, they will be able to apply for a standard credit line without a deposit. This will be subject to a separate risk evaluation (for example, new CSF submission to </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS)</span></span></span><span lang="EN-GB"><span><span>).</span></span></span></span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span>For deposit submission guidelines, see </span></span></span><span><span><a bookmark-id="5" href="#5" managed-link="">section 5</a> and <a bookmark-id="6" href="#6" managed-link="">section 6</a></span></span><span><span> </span></span><span> for more</span><strong> </strong><span><span><span>information.</span></span></span></span></span></p>
+
+<p><span><span><span><strong><span><span><span>Final information</span></span></span></strong></span></span></span></p>
+
+<ul>
+	<li><span><span><span><strong><span><span><span>Requestor alias &ndash; </span></span></span></strong><span><span><span>E</span></span></span><span><span><span>nter<strong> </strong><strong>Microsoft Advertising Support</strong>, or, if email is required, </span></span></span><span><span><span><a data-content-id="" data-content-type="" href="mailto:bingadssupport@microsoft.com" managed-link="" target="_blank">bingadssupport@microsoft.com</a></span></span></span><span><span><span>.</span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>AM/AE that should be cc&rsquo;d&hellip;- </span></span></span></strong><span><span><span><strong>N/A, unmanaged</strong>, or, if email is required, </span></span></span><span><span><span><a data-content-id="" data-content-type="" href="mailto:bingadssupport@microsoft.com" managed-link="" target="_blank">bingadssupport@microsoft.com</a></span></span></span><span><span><span>.</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h4><span><span><span><span><span><a id="2.3" name="2.3"></a>2.3 Ensure the CSF passes validation</span></span></span></span></span></h4>
+
+<p><span><span><span><span><span>Once the form is complete, go to menu in the file and look for the <strong>CSF Requests</strong> button. Then select <strong>send and validate</strong>.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span asset="4058300" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4058300]</span></span></span></span></span></span><span><span><span><span><span><br>
+<br>
+If there is a <strong>FAIL</strong>&nbsp;message in any of the fields listed, go back and correct the noted information.</span></span></span></span></span></p>
+
+<p><span asset="4058302" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4058302]</span></p>
+
+<p><span><span><span><span><span>If all rows have a PASS status, save the form to your local machine using the naming convention &#39;New Invoice Setup Customer _______&#39;.</span></span></span></span></span></p>
+
+<p class="ng-scope"><span><span><span><span>If failures/errors are encountered that have been externally validated (for example, VAT ID is in VIES but not recognized by the macro in the workbook), proceed with submission to </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS)</span></span></span><span><span><span>, regardless of the error &ndash; be sure to include a note about the external validation in the submission to </span></span></span><span><span><span><span>GFS.</span></span></span></span></span></p>
+
+<p class="ng-scope"><span><strong><span><span><span>Do not</span></span></span></strong><span><span><span> email the form. Escalate the form per</span></span></span><span><a href="https://internal.support.services.microsoft.com/en-us/help/3170034#2.4"><span><span><span> section 2.4</span></span></span></a></span><span><span><span>.</span></span></span></span></p>
+
+<p><span><span><span></span></span></span></p>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h4><span><span><span><span><span><a id="2.4" name="2.4"></a>2.4 Submit the CSF form to GFS (also known as WOCS)</span></span></span></span></span></h4>
+
+<p><span><span><span></span></span></span><span><span><span><span>You may choose to leverage BOS/AES to complete the fraud review and submission to </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS)</span></span></span><span><span><span>.</span></span></span></span></p>
+
+<p><span><span></span></span><span><span><strong><span><span><span>2.4.1 For new credit line requests, submit the completed CSF to Fraud for review </span></span></span></strong><span><span><span><strong>(CSF MUST NOT be emailed)</strong><br>
+<br>
+For new credit line requests, the completed CSF must first be submitted to Fraud for risk review. </span></span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span><span>The Subject of the ticket sent to FraudAds must specify <strong>new invoice setup risk review</strong>. Complete issue-specific details for Issue Category: <strong>Fraud Escalations</strong>; Issue Type: <strong>Risk Review for Monthly Invoice Setup</strong>. </span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Relay the CSF to the fraud team in one of the following ways:</span></span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>Password protect the CSF and attach it to the child ticket (either via CAP or capattach email). </span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Create a DTM workspace for the child ticket and load the CSF. Ensure the DTM workspace link is in the ticket and refer the Fraud team to access the SFC in the workspace.</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span>Only when </span></span></span>the request is cleared by Fraud should the CSF be submitted to GFS (also known as WOCS) for a credit check. If the customer fails the Fraud risk review, leverage fraud status closure messaging to communicate the outcome to the customer as needed, see KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/3169386" target="_blank">3169386 Process: Microsoft Advertising: Fraud Status</a>.<span><span><span> </span></span></span></span></span></span></li>
+</ol>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<p><span><span><strong><span><span><span>2.4.2 </span></span></span>Submit the Completed CSF to </strong><strong>GFS (also known as WOCS)<span></span></strong></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span><span>Submit a ticket to </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>via the UCMT escalation process.<em><strong> </strong></em>Issue Category: <strong><span>Billing &amp; Payments Escalations</span></strong>; Issue Type: <strong><span>SAP/Credit Line</span></strong> <strong><span>Request</span></strong><em><span>.</span></em></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Access the UCMT ticket and attach the following, as appropriate:</span></span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>Completed CSF.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>VAT certificate.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Financial documents for customers in APAC.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Any other documentation required by </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>to approve the credit line.</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>will provide confirmation that the request was received and will proceed with Accounts Payable contact verification through the OneVet tool.<br>
+	<br>
+	<strong><span>OneVet Authentication: </span></strong>AP contact should expect to receive the verification email within 24 hours of escalating to </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS), who</span></span></span><span><span><span> will confirm when the email is sent. The verification email will arrive from the </span></span></span><span><a href="mailto:MSNCred@microsoft.com" target="_blank"><span><span><span>MSNCred@microsoft.com</span></span></span></a></span><span><span><span> alias and will trigger in the language selected for the invoice setup in the CSF. The verification link in the email is valid for five days. </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>may close their ticket if the AP contact does not authenticate within 24 hours of receiving the email. Reopen the UCMT ticket with </span></span></span><span><span><span><span>GFS</span></span></span></span> <span><span><span>as necessary. Any concerns regarding the delivery of the OneVet authentication email or completing the authentication steps should be directed to </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>in the existing UCMT ticket. OneVet is used globally for all unmanaged advertisers.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Once the AP contact is verified, the SLA for </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>to complete the review and establish the SAP with credit line is six business days.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>may request additional information or a deposit from the customer.</span></span></span></span></span></span>
+	<ol>
+		<li><span><span><span><span><span>If financial statements are requested, use Data Transfer Management to acquire the documents from the customer (see KB </span></span></span><span><a href="https://internal.support.services.microsoft.com/help/4056786" target="_blank"><span><span><span>4056786 Microsoft Advertising: Data Transfer Management</span></span></span></a></span><span><span><span>). Once received, attach them directly to the </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS)</span></span></span><span><span><span> ticket and send an email update to the ticket to inform the owner the documents were added.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>If a deposit is required, send the customer the Security Deposit Agreement (updated with the correct Microsoft bank information). See </span></span></span><span><a href="https://internal.support.services.microsoft.com/en-us/help/3170034#6"><span><span><span>section 6</span></span></span></a></span><span><span><span>, Security Deposit, below for templates and,</span></span></span></span></span>
+		<ul style="list-style-type:disc">
+			<li><span><span><span><span><span><span>Refer the customer to </span></span></span><span><a href="https://help.ads.microsoft.com/#apex/3/en/50828/3" target="_blank"><span><span><span>Choosing a payment method for Microsoft Advertising</span></span></span></a></span><span><span><span> for additional guidance on their deposit.</span></span></span></span></span></span></li>
+			<li><span><span><span><span><span><span>Request the customer confirm when the deposit was sent.</span></span></span></span></span></span></li>
+		</ul>
+		</li>
+		<li><span><span><span><span><span>Notify </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>when the customer confirms that the deposit was submitted and GFS will confirm when the credit line is approved, and the SAP is propagating. It takes 13 hours for the new SAP to become available for addition to the Microsoft Advertising wallet.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>If the customer does not pass the credit check, communicate the reasons or criteria that disqualified the advertiser and move forward to offer setup of credit card billing as needed.</span></span></span></span></span></li>
+	</ol>
+	</li>
+</ol>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h4><span><span><span><span><span><a id="2.5" name="2.5"></a>2.5 Upgrade the CID shell type to Premium</span></span></span></span></span></h4>
+
+<p><span><span><strong><span></span></strong></span></span><span><strong><span><span><span>Note</span></span></span></strong><span><span><span>: The customer shells should not be upgraded until after </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>approves the credit line.<br>
+<br>
+Once the credit line is approved by </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS)</span></span></span><span><span><span>, change the customer shell type to premium:</span></span></span></span></p>
+
+<p><span><span><span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span><span>Access and edit the customer&rsquo;s information in the UI.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Switch the service level to <strong>Premium</strong> and select <strong>save</strong>.<br>
+	<br>
+	To change the payment settings and view the <strong>Insertion Orders</strong> page, refresh your browser or re-locate the customer in the Microsoft Advertising Support UI.</span></span></span></span></span></span></li>
+</ol>
+
+<p><span><span><span><a data-content-id="" data-content-type="" href="https://help.ads.microsoft.com/#apex/3/en/52094/3" managed-link="" target="_blank">Help the advertiser create eIOs or manual IOs</a></span><span><span><span> to keep active accounts active on the existing payment method until the SAP is available to be set as the payment method.</span></span></span></span></span></p>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h4><span><span><span><span><span><a id="2.6" name="2.6"></a>2.6 Set the SAP payment method</span></span></span></span></span></h4>
+
+<p><span><span><span></span></span></span><span><span><span><span>Once </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>confirms the SAP is added to the account, set the new SAP as the payment method on the appropriate accounts and ensure all accounts have eIOs are submitted to prevent disruption to delivery.<br>
+<br>
+To switch a prepay account to monthly invoice, you must first switch the prepay account to threshold.</span></span></span></span></p>
+
+<p><span><span><span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>2.6.1 Switch the Payment Option from prepay to postpay</span></span></span></strong><span><span><span><br>
+Once the SAP ID is available for selection as the payment method, you can proceed with changing the payment option from prepay to postpay.</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>Advise the customer that a credit card will be required to temporarily switch the account to threshold billing to upgrade to monthly invoice billing. Work with the customer to add a credit card to their payment methods tab.<br>
+	<br>
+	<strong>Messaging:</strong><em><strong> </strong></em></span></span></span></span></span></span></li>
+</ul>
+
+<p class="indent-1"><span><span><span><span><span><span><em>&ldquo;At this time, it is not technically possible to upgrade directly from prepay to monthly invoice billing. While this functionality is being developed, I have a workaround that can be used to retain your performance history, but it does require you to temporarily add a credit card as the payment method on the account until I can finish the upgrade. We can temporarily pause your campaigns and immediately remove the card and complete your transition to monthly invoicing, so you won&rsquo;t accrue any charges.&rdquo;</em></span></span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>The prepay balance will be automatically refunded if the advertiser paid with a credit card or PayPal and switched from prepay to postpay threshold.<br>
+	<br>
+	<strong>Note:&nbsp;</strong>If the payment method is wire, check the&nbsp;Boleto or SEPA. The prepay balance will need to be refunded offline. SEPA refunds should not be processed unless they are eight weeks old. Otherwise, the customer will need to increase the negative balance with a new payment to continue using the account.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Switch the payment option from prepay to postpay threshold:</span></span></span></span></span></span></li>
+</ul>
+
+<ol>
+	<li><span><span><span><span><span><span>Access accounts and billing &ndash; Account details and edit the <strong>payment settings</strong>.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Change the payment option dropdown to <strong>switch to postpay</strong>.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Select the payment method (debit or credit) that will be temporarily associated with the account and select <strong>switch</strong>.</span></span></span></span></span></span></li>
+</ol>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<p><span><span><strong><span><span><span>2.6.2 Switch the payment option from Threshold to monthly invoice </span></span></span></strong><span><span><span><br>
+If a postpay advertiser is switching to invoice billing the system will attempt a swipe for the amount owed before switching the account to invoice billing. If the swipe is unsuccessful, the system will not allow the switch. The error message will let the user know the payment failed.</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>Access accounts and billing &ndash; Account details page and edit the payment settings.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Change the payment option dropdown to <strong>monthly invoice</strong>.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Change the payment method dropdown to the correct SAP and save.</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><strong><span><span><span>2.6.3 Help the advertiser set up an eIO/Manual IO</span></span></span></strong></span></span></p>
+
+<p><span><span><span><span><span>An insertion order is a signed document or electronic setting submitted on behalf of or by the advertiser that specifies how much the account can spend over a designated time frame. Microsoft Advertising will not allow spend beyond the IO budget or end date.</span></span></span>　</span></span></p>
+
+<p><span><span><strong><span><span><span>Electronic IO (eIO)</span></span></span></strong><span><span><span><br>
+Electronic IOs are the fastest method for creating an insertion order. Only Super Admin and API User roles can perform this action. The customer must be listed as the Bill-to party on the account. See&nbsp;<a href="https://help.ads.microsoft.com/#apex/3/en/52094/0" target="_blank">How do I create and edit an insertion order?</a>&nbsp;for customer-facing steps to create and manage insertion orders.<br>
+Customer eIOs, in general, will be auto-approved. A small subset of IOs may still require manual approval from an internal user and will continue to be subject to manual approval SLAs.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Manual IO</span></span></span></strong><span><span><span><br>
+If the advertiser is unable or unwilling to submit an eIO, frontline advocates&nbsp;may request BOS generate the manual Insertion Orders: submit the request through a child ticket to BOS if needed.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>BOS should draft and attach the manual IOs that can be delivered to the customer.</span></span></span></span></span><br>
+Advertisers should complete and scan the signed documents and return them via&nbsp;<a href="https://internal.support.services.microsoft.com/help/4056786/data-transfer-management/t_self" target="_blank">Data Transfer Management</a>&nbsp;in a non-editable format such as PDF. See KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4056786" target="_blank">4056786 Microsoft Advertising: Data Transfer Management</a>.<br>
+<br>
+<span><span><span><span><span>After receiving the completed IO from the advertiser, perform a quality check of the Insertion Order using the checklist below. Request the advertiser fix and resubmit any errors as needed.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Non-standard terms/IOs are <strong>not</strong> supported for unmanaged customers. If the customer sends you a modified version of the IO where any language has been changed, let the customer know that we only accept standard IOs.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>2.6.4 Manual IO quality checklist</span></span></span></strong></span></span></p>
+
+<p><span><span><strong><span><span><span>Confirm that:</span></span></span></strong></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>The file is in a non-editable format with all required information filled out (typed) and signed at the bottom.</span></span></span> <span><span><span>It is acceptable to convert a word document to PDF on the customer&#39;s behalf as needed. The scanned document should be clear and legible.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>The Bill-to details have not changed. </span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>That the budget meets minimum requirements ($1,000 USD per active month or market equivalent). </span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>The IO is not for more than two years.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>The advertiser and agency&#39;s legal name and address are present (no variants accepted) and match Microsoft Advertising. If they do not match, ask the customer to provide documentation of the relationship. Acceptable forms of documentation are:</span></span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>A certificate of Incorporation signed by the company&rsquo;s legal representative.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Any government-issued documents having the company&rsquo;s name and address (for example, tax certification).</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>The company registration form signed and issued by the government.<strong> Note: </strong>A note on company letterhead is no longer an acceptable form of proof.</span></span></span>　</span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span>The signed manual IO document contains a reference to the Online Terms and Conditions, otherwise, a signed copy of the Master Agreement is required.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>It is legible, and a dated customer signature of the Bill-to is present.</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span>If any of the above items are incorrect or missing, inform the advertiser of what needs to be changed and resend the original copy if needed.</span></span></span></span></span></p>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h3><span><span><span><span><span><a id="3" name="3"></a>3. Invoice account setup SLAs</span></span></span></span></span></h3>
+
+<ul>
+	<li><span><span><span><span></span></span></span></span><span><span><span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>Credit Approval/SAP added to account: 48 hours.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>eIO creation/approval: Real time creation, to be approved by the customer on their own timeline.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>BOS Manual IO creation (if requested): One business day.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>BOS Manual IO upload/entry in UI: Once signed docs are returned, BOS should have the IO uploaded/entered in the UI within one business day.</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span></span></span></span></span><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h3><span><span><span><span><span><a id="4" name="4"></a>4. Monthly invoice prepayments in France</span></span></span></span></span></h3>
+
+<div align="center"><span><span> </span></span></div>
+
+<p><span><span><span><span><span>A&nbsp;prepayment option is available for advertisers in France in some cases. If the advertiser doesn&rsquo;t have a corporate email address, they can provide two generic email addresses. Follow this process to set the advertiser up with the prepayment option:</span></span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span><span>Submit CSF to</span></span></span></span></span></span>&nbsp;<span><span><span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>with <strong>SAP ID Type</strong> as <strong><span>Pre-payment</span></strong>. This is selected when the request did not pass the unsecured credit criteria. Provide the following information:</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span> WW Online Credit Services Credit Services with SAP ID Type as <strong>Pre-payment</strong>. This is selected when the request did not pass the unsecured credit criteria. Provide the following information:</span></span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><span>Length of campaign (for example, one&nbsp;month or two&nbsp;months).</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Estimated budget for the campaign.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Mode of payment (for example,&nbsp;wire transfer).</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span>Credit Services will seek approval from the Credit Manager (CM) before proceeding with the prepayment process.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Once approved by the CM, Credit Services will provide the remittance information.</span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Relay the remittance information to the advertiser and inform Credit Services when of the amount and date payment was submitted. Credit Services will verify with Collections and Cash Apps team if the said amount has reached our bank.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span>Once the prepayment is confirmed received, Credit Services can proceed in setting up the SAP ID and will inform support that this will be placed on hold when the campaign has already ended.</span></span></span></span></span></li>
+</ol>
+
+<p><span><span><strong><span><span><span>Note</span></span></span></strong><span><span><span>: In cases where the pre-paid amount is not fully consumed by the campaign end date, advertisers can contact the customer service alias on their invoice to request a refund for the remaining amount or request an extension of the campaign end date.</span></span></span></span></span></p>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h3><span><span><span><span><span><a id="5" name="5"></a>5. Financial statements</span></span></span></span></span></h3>
+
+<div align="center"><span><span> </span></span></div>
+
+<p class="ng-scope"><span><span><span><span>Sometimes requests for invoice billing are not approved, or additional collateral is needed to complete their invoice billing request. Example scenarios:</span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>There is no credit bureau report (as confirmed by </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS)</span></span></span><span><span><span>).</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>The credit bureau recommends a credit limit lower than the requested credit limit due to the individual advertiser&rsquo;s history/financials.</span></span></span></span></span></span></li>
+</ul>
+
+<p class="ng-scope"><span><span><span><span>Advertisers have two options if their initial request for invoice billing is not approved.</span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span><span>The opt for credit card payment method instead and reapply for invoice billing in six months after establishing a billing history with Microsoft Advertising.</span></span></span></span></span></span></li>
+	<li><span><span><span><span>Use DTM to acquire ALL the financial statements/documents below from the customer and once received, attach them directly to the </span></span></span></span><span><span><span><span><span>GFS (</span></span></span></span></span><span><span><span><span>also known as WOCS) </span></span></span></span><span><span><span><span>ticket and send an email update to the ticket to inform the owner the documents were added.</span></span></span></span><span><span><span><span></span></span></span></span></li>
+</ol>
+
+<p><span><span><span><span><span><span><br>
+<strong>Financial statements include:</strong></span></span></span></span></span></span></p>
+
+<ul style="list-style-type:disc">
+	<li><span><span><span><span><span><span>The <strong>balance sheet</strong>, which summarizes what a firm owns and owes at a point in time.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>The <strong>income statement</strong>, which reports on how much a firm earned during the period of analysis</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>The <strong>statement of cash flows</strong>, which reports on the cash inflows and the outflows during the period of analysis.</span></span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><strong><span><span><span>Audit Report -</span></span></span></strong><span><span><span> required in all countries where audited financial statements are required by law.<br>
+		<br>
+		<strong>Note:</strong> The business name on the customer&rsquo;s financial statements must match the legal company name on the CSF.</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<p><span><span><span><span><span>&#8203;&#8203;&#8203;&#8203;If the advertiser is unable to provide financials for two&nbsp;complete fiscal years, a security deposit is required.</span></span></span></span></span></p>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h3><span><span><span><span><span><a id="6" name="6"></a>6. Security deposits</span></span></span></span></span></h3>
+
+<div align="center"><span><span> </span></span></div>
+
+<h4><a id="6.1" name="6.1"></a>6.1&nbsp;<span><span><span><span><span>Deposits for non-standard credit limits (Standard security deposits)</span></span></span> </span></span></h4>
+
+<p><span><span><span><span><span>Standard security deposits are calculated as three times&nbsp;the total requested credit limit and are held for up to six&nbsp;months, to be returned upon confirmation of a good payment history. Good payment history is defined as having all non-disputed invoices paid on/before the due date for a minimum of six&nbsp;months.</span></span></span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong><span><span><span>Standard deposit communication </span></span></span></strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><em><span><span><span>Thanks for your interest in establishing monthly invoice billing.<br>
+			Microsoft policy requires you to provide $________ to Microsoft Corporation as security deposit for your credit line request.</span></span></span></em></span></p>
+
+			<p><span><em><span lang="EN-GB"><span>You can submit your deposit per the guidance in </span></span></em><a href="https://help.ads.microsoft.com/#apex/3/en/50828/3" target="_blank"><em><span lang="EN-GB"><span><span>Choosing a payment method for Microsoft Advertising</span></span></span></em></a><em><span lang="EN-GB"><span> for your billing country (Switzerland) and currency (Swiss Franc).</span></span></em><span lang="EN-GB"></span></span></p>
+
+			<p><span><em><span><span><span>Be sure to specify in the notes of your payment &ldquo;security deposit for &lt;XID&gt;&rdquo;. This security deposit shall not be considered as advance payment nor settlement in case of default.</span></span></span></em></span></p>
+
+			<p><span><em><span><span><span>This deposit may be used to extend additional Credit Limit beyond the value of the security deposit paid. If/when Microsoft determines good payment behavior the security deposit may either be refunded or can be applied towards current or future billing amounts. </span></span></span></em></span></p>
+
+			<p><span><strong><em><span><span><span>Good payment behavior</span></span></span></em></strong><em><span><span><span> is defined as having:</span></span></span></em></span></p>
+
+			<ul>
+				<li><span><span><em><span><span><span>All non-disputed invoices paid on/before due date for a minimum period of six months immediately prior to the date of deposit return request.</span></span></span></em></span></span></li>
+				<li><span><span><em><span><span><span>Monthly spend for last 3 consecutive months prior to the refund should exceed 30 % of credit limit assigned<br>
+				<br>
+				OR</span></span></span></em></span></span></li>
+				<li><span><span><em><span><span><span>All non-disputed invoices paid on/before due date for a minimum period of 12 months</span></span></span></em></span></span></li>
+			</ul>
+
+			<p><span><em><span lang="EN-GB"><span>Please </span></span></em><a href="https://about.ads.microsoft.com/en-us/microsoft-advertising-support" target="_blank"><em><span lang="EN-GB"><span><span>Contact Us</span></span></span></em></a><span lang="PT"> </span><em><span lang="EN-GB"><span> if you have any questions, cease advertising, or otherwise become eligible for deposit refund. At the time of refund, the initial assigned credit limit may be revised based on the average monthly spend during the previous 12 months at the discretion of Microsoft.</span></span></em><span lang="EN-GB"></span></span></p>
+
+			<div>
+			<div>&nbsp;</div>
+			</div>
+
+			<p><span><em><span lang="EN-GB"><span>Let us know when you&rsquo;ve submitted your deposit and if you have any questions. </span></span></em><a href="https://about.ads.microsoft.com/en-us/microsoft-advertising-support" target="_blank"><em><span lang="EN-GB"><span><span>Contact Us</span></span></span></em></a><span lang="PT"> </span><em><span lang="PT"><span> at any time.</span></span></em><span lang="PT"></span></span></p>
+
+			<div>
+			<div>&nbsp;</div>
+			</div>
+
+			<p><span><em><span><span><span>Sincerely,</span></span></span></em></span></p>
+
+			<p><span><em><span><span><span>&lt;Signature&gt;</span></span></span></em></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span><span></span></span></span><span><span><span><span>Be sure to inform </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>when the customer confirms the deposit was sent. </span></span></span><span><span><span><span>GFS </span></span></span></span><span><span><span>will ensure the deposit is received before establishing the credit line in SAP.</span></span></span></span></p>
+
+<p><span><span></span></span><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h4><a id="6.2" name="6.2"></a>6.2 <span><span><span><span><span>Deposits for sole proprietors</span></span></span> </span></span></h4>
+
+<p><span><span><span><span><span><span><span><span><span><span>These must match the amount that they are requesting for a credit line. The minimum is $1,000 USD. For the entire time they are advertising with Microsoft Advertising, Microsoft will retain this deposit. </span></span></span></span></span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span>1. Send the customer either the Standard Security Deposit Messaging or the Sole Proprietor Deposit Messaging.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>2. Request the customer confirm when the deposit was sent.</span></span></span></span></span></p>
+
+<p class="indent-1"><span><span><strong><span><span><span>Note</span></span></span></strong><span><span><span>: If the customer is a sole proprietor, the <strong>sole proprietor </strong>deposit messaging (below) must be sent via email to the customer for documentation purposes.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>3. Update <span><span><span><span>the </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>UCMT ticket when the customer confirms deposit is submitted and GFS will confirm when the credit line is approved, and the SAP is propagating.</span></span></span></span></span></span></span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong><span><span><span>Sole proprietor deposit communication</span></span></span></strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><em><span><span><span>Thanks for your interest in establishing monthly invoice billing.</span></span></span></em></span></p>
+
+			<p><span><em><span><span><span>Microsoft policy requires you to provide a <strong>Security Deposit</strong> amounting to $________ which is equivalent to your approved Credit Line.</span></span></span></em></span></p>
+
+			<p><span><em><span lang="EN-GB"><span>You can submit your deposit per the guidance in </span></span></em><a href="https://help.ads.microsoft.com/#apex/3/en/50828/3" target="_blank"><em><span lang="EN-GB"><span><span>Choosing a payment method for Microsoft Advertising</span></span></span></em></a><em><span lang="EN-GB"><span> for your billing country (Switzerland) and currency (Swiss Franc).</span></span></em><span lang="EN-GB"></span></span></p>
+
+			<p><span><em><span><span><span>Be sure to specify in the notes of your payment &ldquo;security deposit for &lt;XID&gt;&rdquo;. This security deposit shall not be considered as advance payment nor settlement in case of default.</span></span></span></em></span></p>
+
+			<p><span><em><span><span><span>This deposit may not be used to extend additional Credit Limit beyond the value of the security deposit paid, nor be applied against your amount due.</span></span></span></em></span></p>
+
+			<p><span><em><span><span><span>This deposit will be refunded if/when you cease advertising with Microsoft and the balance owing is zero.</span></span></span></em></span></p>
+
+			<p><span><em><span lang="EN-GB"><span>Please </span></span></em><a href="https://about.ads.microsoft.com/en-us/microsoft-advertising-support" target="_blank"><em><span lang="EN-GB"><span><span>Contact Us</span></span></span></em></a><span lang="PT"> </span><em><span lang="EN-GB"><span> if you have any questions or if you cease advertising and would like your deposit refunded.</span></span></em><span lang="EN-GB"></span></span></p>
+
+			<div>
+			<div>&nbsp;</div>
+			</div>
+
+			<p><span><em><span><span><span>Sincerely,</span></span></span></em></span></p>
+
+			<p><span><em><span><span><span>&lt;Signature&gt;</span></span></span></em></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span><span><span><span>4. Be sure to inform GFS (also known as WOCS) when the customer confirms the deposit was sent. GFS will ensure the deposit is received before establishing the credit line in SAP.</span></span></span></span></span></p>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h4><span><span><span><span><span><a id="6.3" name="6.3"></a>6.3 Security deposit refunds</span></span></span></span></span></h4>
+
+<p><span><span><span><span><span>Customers are eligible for security deposit refunds in the following circumstances:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>Advertiser wishes to stop advertising.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Sole proprietor chooses to incorporate their business.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Advertiser business is incorporated and demonstrates good payment behavior defined as having:</span></span></span></span></span></span>
+	<ul style="list-style-type:circle">
+		<li><span><span><span><span><span><span>All non-disputed invoices paid on/before due date for a minimum period of six months immediately prior to the date of deposit return request.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Monthly spend for last three consecutive months prior to the refund should exceed 30% of credit limit assigned.</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<p><span><span><span></span></span></span><span><span><span><span>Reach out to <strong><span><a href="mailto:WOCSSEC@microsoft.com" target="_blank"><span>GFS (also known as WOCS)</span></a></span></strong> to request the return of the customer&rsquo;s security deposit with the following information:</span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>What has changed that the customer requests the deposit to be returned?</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>CID</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>SAP</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Amount expected by customer</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span><span><span></span></span></span></span></span></span></span><span><span><span><span>Once complete, confirm with </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>that the customer&rsquo;s credit line will be set to $0 to prevent future advertising.</span></span></span></span></p>
+
+<p><span><span></span></span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></p>
+
+<h3><span><span><span><span><span><a id="7" name="7"></a>7. SAP IDs</span></span></span></span></span></h3>
+
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span>SAP is a billing application used to keep track of amounts owed and paid by monthly invoice advertisers. SAP IDs are created for unique Company Name + Address combinations. All address updates must be conveyed to </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>so that they can make the proper changes in SAP.</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>SAP IDs will not be issued without being qualified and providing customer information. </span></span></span></span></span></span>
+
+	<ul style="list-style-type:circle">
+		<li><span><span><span><span><span>Customers can self-serve in UI, if the option is available to them OR</span></span></span></span></span></li>
+		<li><span><span><span><span><span>CSS can qualify customer and submit a CSF to MSNCRED (on behalf of the customer)</span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span>An&nbsp;SAP ID may be classified as either Bill-To (with an associated credit line) or Sold-To (no credit line). </span></span></span></span></span></span></li>
+</ul>
+
+<p class="indent-1"><span><strong><span><span><span>Note</span></span></span></strong><span><span><span>: With the planned deprecation of Sold-To customer ID&rsquo;s by March 2020, only a Bill-To will be required. All Sold-To information will be pulled from ABL details in the near future). </span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span>It is possible that the same SAP ID is used for search and some display advertisers, and therefore may already exist for customers that are new to search.</span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>SAP IDs are created and may be entered an existing customer shell.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>One Bill-To SAP ID may be used in more than one CID, and</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>One CID may contain multiple Bill-To SAP IDs if there is any agency association.</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><strong><span><span><span>Bill-To: </span></span></span></strong><span><span><span>Specifies who pays the bill. An advertiser who has a Bill-To (no hold) SAP has been approved for a credit line with Microsoft Advertising.</span></span></span></span></span></p>
+
+<p><span><strong><span><span><span>ABL (formerly Sold-To): </span></span></span></strong><span><span><span>Specifies who services are provided for. An advertiser with a Sold-To SAP cannot be the Bill-To on the invoice because he/she does not have credit approval. Sold-to setup is typically used for clients of agencies where the agency is the Bill-To. </span></span></span></span></p>
+
+<p>Beginning February 2020, the requirement for SAP Sold-To will&nbsp;refer to ABL details. &nbsp;</p>
+
+<p>Application for an SAP ID&rsquo;s going forward are based on Bill-To information only.</p>
+
+<p><span><span><strong><span><span><span>Subsidiary SAPs: </span></span></span></strong><span><span><span>SAP IDs are created for unique Company Name + Address combinations; therefore, subsidiaries may have their own SAP ID even if the Bill-To address is the same as the parent. Subsidiary SAP IDs can be established if there is some public identifier that the subsidiary legally exists.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Agency SAPs:</span></span></span></strong><span><span><span> If an agency would like to create an additional account under their shell for themselves and already has an existing No Hold SAP ID, the agency&#39;s existing No Hold SAP ID may be used as the Sold-To if the SAP address matches the account.</span></span></span></span></span></p>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h3><span><span><span><span><span>8. Billing cycle and invoices</span></span></span></span></span></h3>
+
+<div align="center"><span><span> </span></span></div>
+
+<h4><span><span><span><span><span><a id="8.1" name="8.1"></a>8.1 Invoice/Document rendering (including credit memos)</span></span></span></span></span></h4>
+
+<p><span><span><span><span><span>Monthly invoices are generated and available as PDFs in the UI by the second</span></span></span><span><span><span>&nbsp;of each month and are sent via postal mail afterward (for those accounts not enrolled in paperless invoicing). The billing and due dates (as specified by term agreement) are specified on the invoice.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Invoices detail charges, tax, and payment remittance instructions for the bill-to advertiser. Invoices are calculated by adding up the billing activity for all ad groups during the invoice period for Microsoft Advertising. We do not have flexibility for off-cycle invoice and credit-note printing.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span><span><span><span>If you or advertisers have questions about invoices or payments that have been made, refer the customer to the regional customer service alias on their invoices or escalate the ticket via their regional </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>Collections team in UCMT.</span></span></span></span></span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Credit memos: </span></span></span></strong><span><span><span>A credit memo is a document generated at the end of a billing cycle because of an activity adjustment on a monthly invoice account. The Monthly invoice for the period will still reflect the full amount of spend generated and the advertiser will need to specify in their payment remittance, how they would like the credit memo (with document ID) to be used against unpaid invoices.</span></span></span></span></span></p>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h4><span><span><span><span><span><a id="8.2" name="8.2"></a>8.2 Invoice delivery</span></span></span></span></span></h4>
+
+<p><span><span><strong>Electronic invoices:&nbsp;</strong>The Accounts Payable contacts on the SAP (as specified at setup) will receive emailed invoices. To receive email alerts of PDF invoice availability in the UI, Super Admin users can&nbsp;<a href="https://help.ads.microsoft.com/#apex/3/en/50821/3" target="_blank">Get billing alerts</a> when your billing documents are ready for download.</span></span></p>
+
+<p><span><span><strong><span><span><span>Printed invoices:</span></span></span></strong><span><span><span> Some advertisers receive printed statements in the mail each month. If an advertiser would like another print copy, send the request to your regional AdOps team. Otherwise, direct advertisers to the PDFs available in the account.</span></span></span></span></span></p>
+
+<p><span><span><span lang="EN-GB"><span><span>In cases where accounts payable department has a different address than the customer&rsquo;s SAP business address, a Super Admin can follow the guidelines in </span></span></span><span><span lang="PT"><a href="https://help.ads.microsoft.com/#apex/3/en/56793/0" target="_blank"><span><span lang="EN-GB"><span><span>Managing your addresses</span></span></span></span></a></span></span><span lang="EN-GB"><span><span> to change where their printed invoices are delivered. Changes will take effect in the next billing cycle.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Copies:</span></span></span></strong><span><span><span> If the advertiser has requested you provide copies of more than 10 invoices, they should contact the customer service alias available on the PDF invoices.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Consolidated Billing:&nbsp;</span></span></span></strong></span></span><span><span><span lang="EN-GB"><span><span>Through Billing settings, customers also have the option for &#39;consolidated billing&#39;. Consolidated billing allows customer to combine monthly invoices into a single statement for simplified accounting. See </span></span></span><a href="https://help.ads.microsoft.com/#apex/3/en/50820/0" target="_blank"><span lang="EN-GB"><span><span>Combine similar bills into a single invoice (consolidated billing)</span></span></span></a><span lang="EN-GB"><span><span>.</span></span></span></span></span></p>
+
+<div>
+<div><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></div>
+
+<div>&nbsp;</div>
+</div>
+
+<h4><span><span><span><span><span><a id="8.3" name="8.3"></a>8.3 Invoice rendering issues</span></span></span></span></span></h4>
+
+<p><span><span><strong><span><span><span>Duplicate/Split invoices: </span></span></span></strong><span><span><span>Some changes where rebills are not required (for example, agency linking, or change in SAP ID) may result in multiple invoices for a single month. If recent account setup changes do not explain why a customer received multiple invoices for a single month, escalate to regional AdOps teams for assistance.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Rendering concerns:</span></span></span></strong><span><span><span> If there appears to be a technical issue with the document rendering (for example, fields are blank when they shouldn&#39;t be or the template seems misaligned), complete the details for issue-specific category= Global Support and issue Type = Tool Technical Issue and escalate to Global Support.</span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></p>
+
+<h4><span><span><span><span><span><a id="8.4" name="8.4"></a>8.4 Request a change on an invoice</span></span></span></span></span></h4>
+
+<p><span><span><span><span><span>Monthly invoice customers may require invoice updates prior payment. </span></span></span></span></span></p>
+
+<p><span><span><span></span></span></span></p>
+
+<p class="ng-scope"><span><span><span><span>While some updates can be made directly in the Microsoft Advertising UI and quickly re-rendered by CSS (see re-rendering below), certain change requests must first be entered in SAP before invoices can be updated (including credit/rebills). To update the information stored in SAP, which then populates back into the UI, you must submit a request to </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>with confirmation of the update from the fortified customer. </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>may require additional information depending on the type of change requested but, in most cases, email confirmation from an authenticated customer is sufficient to submit the change request to GFS. Refer to the</span></span></span><span><a href="https://microsoft.sharepoint.com/teams/StandardSupport/l1resources/_layouts/15/listform.aspx?PageType=4&amp;ListId=%7B0FB71EC2%2D5D3B%2D4FE6%2DA55F%2D0FDDB00B70DA%7D&amp;ID=4&amp;ContentTypeID=0x01003A7ACA54E620A247B7852011359A733D" target="_blank"><span><span><span> Escalation Guide</span></span></span></a></span><span><span><span> for Sub-Team details.</span></span></span></span></p>
+
+<p><span> </span></p>
+
+<p class="ng-scope"><span><span><span><span>See the chart below to understand what changes can be re-rendered in the UI for an invoice vs. what must be credited/rebilled (following a </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>change request).</span></span></span></span></p>
+
+<p><span><span><span></span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="227">
+			<p><span><strong><span><span>Item name</span></span></strong></span></p>
+			</td>
+			<td width="396">
+			<p><span><strong><span><span>Re-render or Credit/Rebill?</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="227">
+			<p><span><span><span><span>SAP ID number</span></span></span></span></p>
+			</td>
+			<td width="396">
+			<p><span><span><span>Credit/Rebill</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="227">
+			<p><span><span><span><span>Vat IDs/ Tax IDs</span></span></span></span></p>
+			</td>
+			<td width="396">
+			<p><span><span><span>Credit/Rebill</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="227">
+			<p><span><span><span><span>Anything effecting the amount on a document (for example, tax, and&nbsp;credits)</span></span></span></span></p>
+			</td>
+			<td width="396">
+			<p><span><span><span>Credit/Rebill</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="227">
+			<p><span><span><span><span>Address changes</span></span></span></span></p>
+			</td>
+			<td width="396">
+			<p><span><span><span>Re-render (SAP ID must remain the same)</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="227">
+			<p><span><span><span><span>Account name&nbsp;changes</span></span></span></span></p>
+			</td>
+			<td width="396">
+			<p><span><span><span>Re-render (The Account ID must remain the same)</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="227">
+			<p><span><span><span><span>Mailing Address</span></span></span></span></p>
+			</td>
+			<td width="396">
+			<p><span><span><span>Re-render (SAP ID must remain the same)</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="227">
+			<p><span><span><span><span>PO (purchase order) Numbers</span></span></span></span></p>
+			</td>
+			<td width="396">
+			<p><span><span><span>Re-render</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="227">
+			<p><span><span><span><span>Notes or Account Comments</span></span></span></span></p>
+			</td>
+			<td width="396">
+			<p><span><span><span>Re-render</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span><strong><span><span><span>Note</span></span></span></strong><span><span><span>: A change in legal billing address requires one of the following documents:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>A certificate of incorporation signed by a legal representative of the company.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Any government issued documents that show the company&rsquo;s name and address.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>A company registration form (signed by the company).</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h4><span><span><span><span><span><a id="8.5" name="8.5"></a>8.5 How to re-render (SAP) invoices</span></span></span></span></span></h4>
+
+<p><span><span><span><span>Before beginning this process, make sure the necessary changes are made in Microsoft Advertising (for example, add the PO number or comments).</span></span></span></span></p>
+
+<p><span><span><span><span>Re-render process can be used for:</span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span>Adding a PO number</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Changing the account name</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Adding account comments</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Changing the address (with no change to the SAP ID itself)</span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span><span><span>More significant changes (for example, billing to a different agency) will require a complete </span></span></span><span><a href="https://microsoft.sharepoint.com/teams/StandardSupport/l1resources/_layouts/15/listform.aspx?PageType=4&amp;ListId=%7B0FB71EC2%2D5D3B%2D4FE6%2DA55F%2D0FDDB00B70DA%7D&amp;ID=2&amp;ContentTypeID=0x01003A7ACA54E620A247B7852011359A733D" target="_blank"><span><span><span>Credit and Rebill-</span></span></span></a></span><span><span><span> the Re-rendering function should not be used.</span></span></span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Steps to re-render an invoice</span></span></span></strong></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span><span>Navigate to the <strong>Microsoft Advertising</strong><strong> Internal Support Dashboard</strong> which is the default page for internal login.</span></span></span></span></span></span></li>
+</ol>
+
+<p><span><span><strong><span><span><span>Note: </span></span></span></strong><span><span><span>If you are already logged in to Microsoft Advertising on another tab (such as <strong>Campaigns</strong> or <strong>Accounts &amp; Billing</strong>), you can select the gear/settings icon in the top right-hand corner of the screen where you see your alias/email and select <strong>Support</strong>.</span></span></span></span></span></p>
+
+<ol start="2">
+	<li><span><span><span><span><span><span>Copy the invoice number for the specific invoice to be re-rendered.</span></span></span></span></span></span></li>
+</ol>
+
+<p><span><span><strong><span><span><span>Note: </span></span></span></strong><span><span><span>Make sure to check the <strong>Payment Method</strong> so the address is correct.</span></span></span></span></span></p>
+
+<ol start="3">
+	<li><span><span><span><span><span><span>In the <strong>Tools </strong>section, select <strong>Documents Rendering. </strong></span></span></span></span></span></span></li>
+</ol>
+
+<p><span asset="4499492" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4499492]</span></p>
+
+<ol start="4">
+	<li><span><span><span><span><span><span>On the documents re-rendering screen:</span></span></span></span></span></span>
+
+	<ul>
+		<li><span><span><span><span><span><span>The default <strong>Billing system</strong> is AdCenter. Do not change this.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>In the <strong>Document number</strong> field, paste the invoice number to be re-rendered. This is a required field.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>In the <strong>Account number</strong>, enter in the XID from the invoice. This is a required field.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Select <strong>Retrieve</strong>. This will pull the invoice unchanged as it is currently.</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+</ol>
+
+<p><span asset="4499493" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4499493]</span></p>
+
+<p><span><span><span><span><span>5. Review the invoice to ensure that it is the correct one before proceeding. There is no &quot;undo&quot; option after re-rendering.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>6. Select<strong> Re-render</strong>. This will re-render the invoice with any updated information pulled in from Microsoft Advertising and the billing systems (SAP). The re-rendered invoice will open as a PDF file and should show the updated/corrected customer information. The document now replaces the previous instance of this invoice on the <strong>Billing</strong> tab.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>7. Provide the updated invoice to your customer. You can either:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>Send your customer the updated document via email.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Let them know the version on the Microsoft Advertising UI is updated and available for their use.</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span></span></span></span></span></span><span><span><span><span>If the customer requires a printed copy postal mailed to them, reach out to <a href="https://microsoft.sharepoint.com/teams/StandardSupport/l1resources/_layouts/15/listform.aspx?PageType=4&amp;ListId=%7B0FB71EC2%2D5D3B%2D4FE6%2DA55F%2D0FDDB00B70DA%7D&amp;ID=69&amp;ContentTypeID=0x01003A7ACA54E620A247B7852011359A733D" target="_blank"><span>GFS (also known as WOCS)</span></a>. If re-rendering does not work as expected, escalate to your regional SANOPS (aka AdOps) contact.</span></span></span></span></p>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h4><span><span><span><span><span><a id="8.6" name="8.6"></a>8.6 Requesting a revised (Pro-Forma) invoice</span></span></span></span></span></h4>
+
+<p><span><span><span><span><span><span><span><span><span>Occasionally a customer may require changes to their SAP Invoices that cannot be resolved via re-render or credit/rebill process. A pro-forma invoice is effectively a mock-up of an invoice created by SANOPS that will not be visible in the UI (even after creation). They are NOT available for Credit Notes or Statements and may be requested only for invoices (SAP) customers. They may also be requested when re-rendering does not resolve the invoice update as expected in table above.</span></span></span></span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span><span><span><span> </span></span></span></span></span></span></span></span></span>Legitimate reasons to request pro-forma include:</p>
+
+<ul>
+	<li><span><span><span><span><span><span>Custom invoice consolidation</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Custom invoice split (for example, two&nbsp;invoices in a month: 1</span></span></span><sup><span><span><span>st</span></span></span></sup><span><span><span>-15</span></span></span><sup><span><span><span>th</span></span></span></sup><span><span><span>, 16</span></span></span><sup><span><span><span>th</span></span></span></sup><span><span><span>-31</span></span></span><sup><span><span><span>st</span></span></span></sup><span><span><span>)</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span>Re-rendering the SAP invoice is not working as expected and blocks payment by customer</span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span>To request a pro-forma invoice, complete the details for Issue Category = <strong>AdOps Escalations</strong> and Issue Type = <strong>Revised/Pro-Forma</strong> Document request.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span><span><span><span>Send the original invoice along with the details of your steps taken and desired updates to the regional SANOps (aka AdOps) team.</span></span></span></span></span></span></span></span></span></p>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h4><span><span><span><span><span><a id="8.7" name="8.7"></a>8.7 Request for duplicate invoices from non-bill-to party</span></span></span></span></span></h4>
+
+<p><span><span><span lang="EN-GB"><span><span>Agency/client is requesting a parallel copy of the invoice received by their agency/client (example: An agency client contacts you to ask for the most recent invoice their agency received on their behalf.) The way this should be handled will depend on who the bill-to and sold-to parties are in the agency/client relationship. </span></span></span><span lang="PT"><span><span>See scenarios below for how to handle this request:</span></span></span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td><strong>Scenario</strong></td>
+			<td><strong>Resolution</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><strong><span lang="EN-GB"><span>A non-bill-to agency asks for a copy of the invoice for their advertiser. The advertiser is listed as &lsquo;Bill-To&rsquo;.</span></span></strong><span lang="EN-GB"></span></span></p>
+			</td>
+			<td>
+			<p><span><span lang="EN-GB"><span>Do not provide the invoice. In this scenario, the advertiser is the <strong>Microsoft Client</strong> and not the <strong>Agency</strong>.</span></span></span></p>
+			<span lang="EN-GB"><span><span>Agency must ask the advertiser to provide them with a copy of the invoice.</span></span></span></td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><strong><span lang="EN-GB"><span>A sold-to advertiser asks for a copy of the invoice, and their agency is listed as the &lsquo;Bill-To&rsquo;.</span></span></strong><span lang="EN-GB"></span></span></p>
+			</td>
+			<td>In this scenario, the advertiser is still entitled to ask for a copy of the invoice as a Microsoft client. You can provide the invoice for them.</td>
+		</tr>
+		<tr>
+			<td><strong>A bill-to agency/advertiser asks for a copy of the invoice.&nbsp;</strong></td>
+			<td>In this scenario they are already the bill-to and can retrieve this themselves as a PDF via the Billing tab.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h3><span><span><span><span><span><a id="9" name="9"></a>9. Credit limit enforcement</span></span></span></span></span></h3>
+
+<div align="center"><span><span> </span></span></div>
+
+<p><span><span><span lang="EN-GB"><span><span>For internal users, credit limit and percent utilization will appear in the payment methods tab under the SAP information.</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>Credit limit/Credit utilization/SAP billing information will be surfaced for internal users only in the Payment Methods tab. This information will be populated from SAP. SAP details populated into the Microsoft Advertising UI (Credit limit, billing address) will refresh within eight hours to more quickly accommodate increases in credit limits to resolve Credit Hold issues.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Visibility&nbsp;into customer credit limit utilization is <strong>not</strong> customer-facing, but customers <strong>will</strong> receive notifications as they approach their credit limit before they are placed on hold.&nbsp;<strong>Note</strong>: When speaking to the customer about credit limit,&nbsp;refer to as <strong>credit line</strong>.</span></span></span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></p>
+
+<h4><span><span><span><span><span><a id="9.1" name="9.1"></a>9.1 Credit hold</span></span></span></span></span></h4>
+
+<p><span><span><span lang="EN-GB"><span><span>As a customer&#39;s account(s) risks approaching their applied credit limit (limit is only visible to internal users) users will be notified via email and UI alerts that payment must be made immediately to avoid going on credit hold. The current unpaid balance and historic balance outstanding (as derived from SAP) will be totalled and compared against the customer&#39;s credit limit to determine whether the customer should be placed on credit hold.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Once the credit limit is fully utilized, the customer will either need to pay down their outstanding balance or request an increase in their credit limit.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>If the advertiser isn&#39;t sure how much is due or requires a payment plan, direct the advertiser to contact the alias on their invoice for further assistance. Depending on the length and severity of the delinquency, a payment plan may not be possible and/or the credit hold may be permanent.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Invoice advertisers will receive a notification that they&rsquo;re nearing their credit limit at approximately 14 days based on their current run rate. These email and UI notifications will continue as the limit is approached. </span></span></span></span></span></p>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h4><span><span><span><span><span><a id="9.2" name="9.2"></a>9.2 <span><span><span><span>Notifications to advertisers and <span>UCM</span></span></span></span></span><span><span><span> </span></span></span><span><span><span><span> alerts</span></span></span></span></span></span></span></span></span></h4>
+
+<div>
+<div>&nbsp;</div>
+</div>
+
+<h4><span></span></h4>
+
+<p><span><span><span><span><span>All credit lines will be reviewed at the time of customer notification to determine if a customer is eligible for a credit limit increase. Customers with consecutive months of successful payments made in full and on time are more likely to be eligible for these courtesy increases.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>If the customer continues to receive notification that they&#39;re nearing their credit limit, it means that it&#39;s unlikely they are eligible for an increase and must pay to avoid going dark. </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>An email will be generated to the customer and there will also be a critical alert surfaced in UCM when:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>Customer is going to hit credit limit in (approximately) 14 days or less.</span></span></span></span></span></span>
+
+	<ul style="list-style-type:circle">
+		<li><span><span><span><span><span><span>The 14-day estimate is based on the advertiser&rsquo;s current run rate. A run rate is calculated by the average daily spend over the past seven&nbsp;days.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Account Run Rate = Sum (total spend of&nbsp;</span></span></span></span></span></span><span><span><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>the last seven days) divided by seven.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span>Advertisers may go dark sooner.</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span>Customer has hit the credit limit.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Customer is put on hold due to reaching the credit limit.</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h4><span><span><span><span><span><a id="9.3" name="9.3"></a>9.3 Monthly invoice payment applied, account still on hold</span></span></span></span></span></h4>
+
+<p><span><span><span><span><span>If payment has been collected and the account is current, the credit hold should typically be lifted within two&nbsp;business days of receipt of payment. However, GFS (also known as WOCS) regularly assesses customers risk level and reserves the right to review and refine SAP invoicing eligibility at any time.<br>
+<br>
+If the credit hold has not been lifted after payment is received, gather and submit payment details (for example, payment amount, when and how it was sent, or how they want it applied) to the regional Collections team in UCMT to confirm that the payment has been received and if the hold has been lifted. If the hold has been lifted by the accounts receivable team but persists in the Microsoft Advertising UI, escalate to Global Support for further assistance.<br>
+<br>
+<strong>Messaging</strong>: </span></span></span></span></span></p>
+
+<p class="indent-1"><span><span><span><span><span>&ldquo;<em>Can you send me a copy of the check you sent or the transaction number from your online statement? I will check with our billing department to ensure the payment was received and that your account hold will be lifted.&rdquo;</em></span></span></span></span></span></p>
+
+<p class="ng-scope"><span><span><span><span>When a customer does not pay, it&#39;s possible their debt will be written off after a certain amount of time. These debts may show as &#39;paid&#39; in the UI, even though they were not paid by the advertiser, thus the credit hold will persist. If a credit hold persists unexpectedly and the customer desires to use the same (invoice) or new payment method, contact the appropriate </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS)</span></span></span><span><span><span> Risk team to request the following:</span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>Define the customers intentions (to pay an old/outstanding debt, to lift SAP hold, to lift CID hold to allow use of another payment option).</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Request itemized details of outstanding debt.</span></span></span></span></span></span></li>
+</ul>
+
+<p class="ng-scope"><span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>Risk teams should facilitate internal transfer of tickets to their appropriate teams (for example, Risk or Credit) when necessary. However, if you find there is not adequate traction around a hold being lifted, you can add the escalation alias: MSAHOLD@microsoft.com.</span></span></span></span></p>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h4><span><span><span><span><span><a id="9.4" name="9.4"></a>9.4 Requests to increase credit limit</span></span></span></span></span></h4>
+
+<p class="ng-scope"><span><span><span><span>If an advertiser says that they would like to increase their credit limit, they need to provide the following documentation to be considered:</span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>The last two fiscal years&rsquo; worth of audited financial statements. Audited financial records should be sent to </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>for review.</span></span></span></span></span></span></li>
+</ul>
+
+<p class="ng-scope"><span><span><span><span>If the advertiser does not have two years of audited financial statements, they may provide one of the following:</span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>A security deposit. The security deposit must be three times greater than the credit limit they are requesting and can be submitted via check or wire transfer.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>A standby letter of credit (SBLC)</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>A Parental Guarantee (for subsidiaries only)</span></span></span></span></span></span></li>
+</ul>
+
+<p class="ng-scope"><span><span lang="EN-GB"><span><span>Proceed with requesting the credit approval via CSF, and note in the Additional Notes box in section 3 that the advertiser is interested in providing a security deposit/SBLC/parental guarantee in lieu of financials for two completed fiscal years. </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span lang="EN-GB"><span><span>will provide additional information on how to proceed if this occurs.</span></span></span></span></p>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h3><span><span><span><span><span>10. Other troubleshooting scenarios</span></span></span></span></span></h3>
+
+<div align="center"><span><span> </span></span></div>
+
+<h4><span><span><span><span><span><a id="10.1" name="10.1"></a>10.1 Requests from non-profits in a VAT market</span></span></span></span></span></h4>
+
+<p><span><span><span><span><span>Non-profit advertisers who are located in one of the markets affected by VAT tax will need to provide a VAT exception certificate as part of the new invoice setup process in order to be exempt from paying tax.</span></span></span></span></span></p>
+
+<p><span><span><span></span></span></span><span><span><span><span>Submit the exemption form to </span></span></span><span><span><span><span>GFS (</span></span></span></span><span><span><span>also known as WOCS) </span></span></span><span><span><span>as part of the new invoice setup process.</span></span></span></span></p>
+
+<p><span><span><span></span></span></span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></p>
+
+<h4><span><span><span><span><span><a id="10.2" name="10.2"></a>10.2 Developer as advertiser is unable to access their invoice</span></span></span></span></span></h4>
+
+<p><span><span><span lang="EN-GB"><span><span>Some developers may choose to promote their app in other Windows applications. This is known as <strong>Developer as an Advertiser</strong>. Invoices for these advertisers are generated within Microsoft Advertising but developers do not have direct access to them. When a Developer as Advertiser customer (D3A) tries to download an invoice from the Microsoft Advertising user interface, the following error occurs: &quot;<em>An error occurred while processing your request</em>&quot;.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Downloading invoices for D3A customers is not supported in the Microsoft Advertising user interface. This means that PDF Microsoft Advertising invoices are not available for these advertisers to download with the current system design. If this happens, walk the customer through the following steps to resolve:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>Provide the customer with a screenshot of the billing statement summary in the user interface.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Have the customer run the Billing Statement report from the Reports tab in the user interface by following the below steps.</span></span></span></span></span></span></li>
+</ul>
+
+<ol>
+	<li><span><span><span><span><span><span>Log into the account.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Select on the Reports tab.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Under <strong>Standard reports </strong>and<strong> Billing and budget</strong>, select <strong>Billing statement</strong>.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Select the date range in the<strong> Date Range</strong> field.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Select <strong>Run </strong>to run the report.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Select <strong>Download </strong>to download the report to an Excel spreadsheet.</span></span></span></span></span></span><span><span><span><span lang="EN-GB"></span><span lang="EN-GB"></span></span></span></span></li>
+	<li><span><span><span><span lang="EN-GB"><span><span>If the customer is not satisfied with the resolution, escalate to Global Support for assistance.</span></span></span></span></span></span></li>
+</ol>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></span></span></span></p>
+
+<h4><span><span><span><span><span><a id="10.3" name="10.3"></a>10.3 Downgrade from Monthly Invoice Billing to Credit Card Billing ﻿</span></span></span></span></span></h4>
+
+<p><span><span><span><span><span>Accounts can be switched to threshold billing anytime by simply changing the payment method:</span></span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span>Ensure that all the XIDs under the shell do not use SAP as a payment method.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Switch the customer shell service level back to self-serve plus.</span></span></span></span></span></li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></p>
+
+<h4><span><span><span><span><span><a id="10.4" name="10.4"></a>10.4 Advertiser requests statements from Yahoo ﻿</span></span></span></span></span></h4>
+
+<p><span><span><span><span><span>If an advertiser is currently managed by Microsoft but requires invoices or statements from the time when they were managed by Yahoo!, refer the customer directly to Yahoo! for assistance. If the customer does not receive a response, escalate the concern to Global Support who will assist with establishing contact with Yahoo! &ndash; Be sure to inform Global Support of what actions have already been taken by the customer and previous contact attempts.</span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link=""><span><span><span><span><span><span>Return to top</span></span></span></span></span></span></a></p>
+<p><strong><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span>April 2019</strong></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Change history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td><strong>Item</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong>Date</strong></td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/154537">CONTENT TRACKING 154537</a></td>
+			<td>MAST: Project: KB 3170034 Update WOCS to GFS across multiple A&amp;B articles</td>
+			<td>6/3/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/151021">CONTENT TRACKING 151021</a></td>
+			<td>MAST: KB 3170034 - Update old extranet links to new SharePoint links</td>
+			<td>3/12/2020</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/151700">CONTENT TRACKING 151700</a></p>
+			</td>
+			<td>MAST: Micrsoft Advertising - Monthly Invoice Setup - KB 3170034 &nbsp;Feb.14.2020</td>
+			<td>2/18/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/151619" managed-link="">CONTENT TRACKING 151619</a></td>
+			<td>MAST: Microsoft Advertising - Monthly Invoice KB 3170034 - Feb 11.2020</td>
+			<td>2/12/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/151021">CONTENT TRACKING 151021*</a></td>
+			<td>MAST: KB 3170034 - Update old extranet links to new SharePoint links</td>
+			<td>1/29/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/150847">CONTENT TRACKING 150847</a></td>
+			<td>MAST: Advertising: From SU5251: customer-facing Invoice Billing Setup document dead hyperlink on SDK&nbsp;</td>
+			<td>1/21/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/149675">CONTENT TRACKING 149675</a></td>
+			<td>MAST: Fix broken links in KB 3170034</td>
+			<td>12/4/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/149342" managed-link="">CONTENT TRACKING 149342</a></td>
+			<td>MAST: From SU5100: CSF Template includes customer information</td>
+			<td>11/22/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/147270">CONTENT TRACKING 147270</a></td>
+			<td>MAST Microsoft Advertising: Monthly Invoice SetUp - &nbsp;3170034 SDK Update Sept 9.2019</td>
+			<td>9/12/2019</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/147292">Content Tracking 147292</a></p>
+			</td>
+			<td>Advertising: Monthly Invoice Setup 3170034 bemis link updates</td>
+			<td>9/11/2019</td>
+		</tr>
+		<tr>
+			<td><a class="caption" href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/146820">CONTENT TRACKING 146820</a></td>
+			<td>Microsoft Advertising: Monthly Invoice SetUp - KB Update Article 3170034</td>
+			<td>8/26/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/145003">CONTENT TRACKING 145003</a></td>
+			<td>MAST: Add Speak Up asset to listed KBs</td>
+			<td>6/18/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/142423">CONTENT TRACKING 142423</a></td>
+			<td>Bing Ads: MAST - Full review/Reformatting of KB 3170034</td>
+			<td>6/10/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/142194">CONTENT TRACKING 142194</a></td>
+			<td>Microsoft Advertising : MAST - KB 3170034 update escalation destinations&nbsp;</td>
+			<td>4/18/2019</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/142410">CONTENT TRACKING 142410</a></p>
+			</td>
+			<td>Microsoft Advertising: MAST - update rendering details for invoices KB 3170034</td>
+			<td>4/11/2019</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>

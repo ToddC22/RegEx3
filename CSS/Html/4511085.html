@@ -1,0 +1,1007 @@
+﻿<header><h1>ASMS – Port 25 Enablement</h1></header><p><span lang="EN"></span></p>
+
+<p>Submit a <a href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder=">ModTrack</a> request to update this TSG.</p>
+
+<h3><strong><a id="Overview" name="Overview"></a>Overview</strong></h3>
+
+<p>This TSG <span>describes how and when to enable port 25 for customers who request it.</span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span> Ports provide the interface computers need to communicate with a computer network. Port 25 is often used for unauthenticated email delivery. <span>Therefore, its use is generally blocked on Azure subscriptions.</span><span lang="EN"> </span><span lang="EN"> </span></p>
+
+<p><strong>Example:</strong> A customer has setup a mail server in Azure that sends traffic outbound on TCP port 25, and has found that they are unable to connect to any outbound SMTP resources from Azure on port 25.</p>
+
+<h3><strong><a id="Policy" name="Policy"></a>Policy</strong></h3>
+
+<p>Since November 2017, sending outbound email directly to external domains (such as Outlook.com) from Azure virtual machines (VMs) or network virtual appliances (NVAs) using port 25 is only available to specific offer types. (<span>See the </span><a href="#_Identify_the_Subscription"><span>Identify Offer Type</span></a> section for more details<span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span>.) Outbound SMTP connections that use TCP port 25 are blocked on all other Azure subscriptions.</p>
+
+<p><strong>Note:</strong> Port 25 restrictions do not affect subscriptions created before November 2017.</p>
+
+<p>Before enabling Port 25, HIT must be engaged to validate the subscription. Customers&#39;&nbsp;subscriptions must be on the list of types of subscriptions that can be enabled,&nbsp;<strong>and </strong>the subscriptions&nbsp;must be manually enabled&nbsp;via ASC. Only if the subscription is validated can&nbsp;the port be unblocked.<br>
+See sections&nbsp;<em><a bookmark-id="Customer Refuses SMTP Relay" href="#Customer Refuses SMTP Relay" managed-link="">Customer Refuses SMTP Relay</a><strong>&nbsp;</strong></em>and&nbsp;<em><a bookmark-id="Enable Port 25 for a Subscription with Azure Support Center (ASC)" href="#Enable Port 25 for a Subscription with Azure Support Center (ASC)" managed-link="">Enable Port 25 for a Subscription with Azure Support Center (ASC) </a>for more details.&nbsp;</em></p>
+
+<p><strong><a id="How to Request Access to Enable Port 25 for Subscriptions" name="How to Request Access to Enable Port 25 for Subscriptions"></a>How to Request <span>Access to Enable Port 25 for Subscriptions</span></strong><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"><span><span> </span></span></span><span lang="EN"><span><span> </span></span></span><span lang="EN"><span><span> </span></span></span><span lang="EN"><span><span> </span></span></span></p>
+
+<p>Membership to the <a href="https://myaccess/identityiq/home.jsf">MyAccess</a> group <strong><em>azfraudportunblock</em></strong> is required to remove the port 25 restrictions from a customer subscription.</p>
+
+<p><strong>Note:</strong> All ASMS SEs will be auto approved for the <a href="https://myaccess/identityiq/home.jsf">MyAccess</a> group: <strong><em>azfraudportunblock</em></strong>.</p>
+
+<p>If you do not have access you may submit an access request:</p>
+
+<ol>
+	<li>Navigate to <a href="https://myaccess/identityiq/home.jsf">MyAccess</a>.</li>
+	<li>Click <strong>Request Access</strong>.</li>
+	<li>Search for <strong><em>azfraudportunblock</em></strong>.</li>
+	<li>Select <strong>azfraudportunblock</strong>.</li>
+	<li>Click <strong>Next</strong>, then <strong>Submit</strong>.</li>
+	<li>Select the <strong>Permission</strong> field button and provide the following justification:</li>
+</ol>
+
+<blockquote>
+<p>I am a member of the CSS Azure Subscription Management Support team, which needs the ability to set an override subscription feature flag AllowTcpPort25Out which implements an anti-fraud measure to avoid platform abuse.</p>
+</blockquote>
+
+<ol>
+	<li>Click <strong>Next</strong>.</li>
+	<li>Review the <strong>Request Summary</strong>.</li>
+	<li>Click <strong>Submit Request</strong>.</li>
+</ol>
+
+<p>You will receive a notification email after the request has been submitted and another when it is approved.&nbsp;Approval may take up to 24 hours.</p>
+
+<h3><strong><a id="Support Scenarios" name="Support Scenarios"></a>Support Scenarios</strong></h3>
+
+<h4><strong><a id="Port 25 Case Overview" name="Port 25 Case Overview"></a>Port 25 Case Overview</strong></h4>
+
+<p>The following sections detail how ASMS receives port 25 cases, and how support engineers (SEs) should handle these scenarios.</p>
+
+<p><strong>Method 1 &ndash; Customer from Azure Portal</strong></p>
+
+<p>The customer submitted a support request using the Azure Portal and chose <strong>Virtual Network &gt; Connectivity &gt; Cannot send email (SMTP-Port 25)</strong>.</p>
+
+<ol>
+	<li>If the subscription qualifies for enablement, an automatic diagnostic runs a security check<span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span>.
+
+	<ol style="list-style-type:lower-alpha">
+		<li>If the security API check comes back as <strong>Validated:</strong>&nbsp;the customer is notified and directed to use the portal to <strong>stop</strong> and <strong>start</strong> all VMs and NVAs which handle outbound traffic, then test port 25.<br>
+		<strong>Note:</strong> <strong>Do not</strong> <strong>restart</strong> as this will not apply the port 25 enablement.</li>
+		<li>If the security API check comes back as <strong>Manual validation required:</strong> The customer is notified that their subscription qualifies, but they must open a support request for enablement (see <strong>step 3a</strong>).</li>
+		<li>If the security API comes back as <strong>Fraudulent:</strong> The customer does not receive a notification. An internal Azure Support Center (ASC) <strong>Insight</strong> directs the SE to close the case without contacting the customer. The subscription is disabled per fraud policy.</li>
+	</ol>
+	</li>
+	<li>If no <strong>Insight</strong> is shown, <a href="https://icm.ad.msft.net/imp/NewIncident.aspx?ttl=&amp;ds=&amp;kw=&amp;is=&amp;ic=&amp;os=21453&amp;tm=32628&amp;sev=3&amp;it=&amp;env=&amp;dc=&amp;ci=2&amp;ics=&amp;sti=&amp;spi=&amp;cn=&amp;sr=2" target="_blank">report an outage</a> in ASC feedback.</li>
+	<li>If the subscription does not qualify for enablement, the customer is notified and offered a workaround to change their offer type through this process:
+	<ol style="list-style-type:lower-alpha">
+		<li>Verify the customer wants port 25 opened.</li>
+		<li>Validate and update the support topic to <strong>Virtual Network &gt; Connectivity &gt; Cannot send email (SMTP-Port 25)</strong>.</li>
+		<li>Determine the customer&rsquo;s offer type and eligibility with a Jarvis Action query: <strong>Azure Resource Manager&gt; Subscription State Management&gt; Get subscription</strong>.</li>
+		<li><a bookmark-id="Identify the Offer Type" href="#Identify the Offer Type" managed-link=""><span>Identify the Offer Type</span> </a><span>and </span> follow the applicable guidance.</li>
+	</ol>
+	</li>
+</ol>
+
+<p><strong>Method 2 &ndash; Queue Transfer to ASMS</strong></p>
+
+<p>A support request is transferred from another team to the <strong>SMTP Port 25 queue</strong>. Check the <em>Overview</em> page in <em>ASC</em> for <strong>Insights</strong>. If no <em>Insights</em> for Port 25 are displayed, follow this workflow:</p>
+
+<ol>
+	<li>Select <strong>Resource Explorer</strong>.</li>
+	<li>Click <strong>Resource Providers</strong>.</li>
+	<li>Click the <strong>Virtual Networks</strong> drop-down menu.</li>
+	<li>Select the virtual network to investigate.</li>
+	<li>Select the resource to investigate.</li>
+	<li>Click the <strong>Insights</strong> tab.</li>
+	<li>Click <strong>Run Insights</strong>.<br>
+	<span asset="4526125" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4526125]</span></li>
+</ol>
+
+<p align="center"><span lang="EN"> </span><span lang="EN"> </span></p>
+
+<p align="center"><span lang="EN"></span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span></p>
+
+<h4><strong><a id="Results from Running ASC Port 25 Insights Manually" name="Results from Running ASC Port 25 Insights Manually"></a>Results from Running <span>ASC Port 25 Insights Manually</span></strong><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"><span><span> </span></span></span></h4>
+
+<p>Follow the below guidance based on what the <strong>Insights</strong> header displays for <strong>SMTP Outbound Traffic</strong>:</p>
+
+<ul>
+	<li><strong>Qualified and Automatically Enabled on TCP Port 25</strong> &ndash; The customer has been automatically enabled. They should use the portal to <strong>stop</strong> and <strong>start</strong> all VMs and NVAs which handle outbound traffic, then test port 25.</li>
+	<li><strong>Already Enabled on TCP Port 25</strong> &ndash; The subscription was already enabled. Customers should follow the instructions in the <em>Insights</em> to <strong>stop</strong> and <strong>start </strong>all VMs and NVAs from the portal, then test port 25.</li>
+	<li><strong>Denied on TCP Port 25</strong> &ndash; Fraudulent activity determined. <strong>Insights</strong> instructs to close the case without contacting the customer. The subscription is disabled per fraud policy.</li>
+	<li><strong>Qualified to be Enabled on TCP Port 25</strong> &ndash; The subscription qualifies for enablement, but the manual approval process must be followed.</li>
+</ul>
+
+<p><strong>Note:</strong> Customers should<strong> not</strong> restart as this will not apply the port 25 enablement.</p>
+
+<h4><a id="Test Traffic in Azure Support Center (ASC)" name="Test Traffic in Azure Support Center (ASC)"></a><strong>Test Traffic in Azure Support Center (ASC)</strong></h4>
+
+<p>Test Traffic can be used to verify if network traffic is blocked from port 25.</p>
+
+<ol>
+	<li><span> Find a <span>VM resource using <strong>Resource Explorer</strong> in Azure Support Center </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span>(ASC).</span></li>
+	<li><span> On the <strong>Diagnostic</strong> tab, select <strong>Test Traffic</strong>.</span></li>
+	<li><span> Use the defaults, but make these updates (see image below):</span>
+	<ol style="list-style-type:lower-alpha">
+		<li><span> <em>Destination IP</em> to <strong><em>8.8.8.8</em></strong> </span></li>
+		<li><span> <em>Destination Port</em> to <strong><em>25</em></strong></span></li>
+	</ol>
+	</li>
+	<li><span> Click <strong>Run</strong>.<br>
+	<span asset="4526126" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4526126]</span></span></li>
+</ol>
+
+<p align="center"><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span></p>
+
+<h4><a id="Identify the Offer Type" name="Identify the Offer Type"></a><strong><span>Identify the Offer Type</span></strong><span lang="EN"><span><span> </span></span></span></h4>
+
+<p>The offer number can be used to identify the customer&rsquo;s offer type. It can be found in the following areas for both Modern and Legacy customers:</p>
+
+<ul>
+	<li><span>Under the <strong>Offer Category</strong> parameter in ASC:<br>
+	<span asset="4526127" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4526127]</span></span>
+
+	<ul style="list-style-type:circle">
+		<li>Modern customers will have either <em>MS-AZR- 003P (PAYG)</em> or <em>MS-AZR- 145P (Partner Led)</em>&nbsp;displayed here.<span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span></li>
+	</ul>
+	</li>
+	<li>By performing the <span>Jarvis Actions Query&nbsp;<strong>Get Subscription</strong>.</span>
+	<ul style="list-style-type:circle">
+		<li>Jarvis Actions Query: <strong>Azure Resource Manager &gt; Subscription State Management &gt; Get subscription</strong></li>
+	</ul>
+	</li>
+</ul>
+
+<p><strong>Example </strong>(offer number in bold here for emphasis)</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="462">
+			<p><span><span lang="EN">&ldquo;offerCategory&rdquo;: &ldquo;Azure_Platform_All;Azure_Direct;Azure_Paid;Azure_Consumption;Azure_MS-AZR-<strong>0003P</strong>;Individual,&rdquo;</span></span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><strong><a id="Offer Type Matrix" name="Offer Type Matrix"></a>Offer Type Matrix</strong></p>
+
+<p>Use the table below to determine the default setting for port 25 based on the offer type. Click the offer name for more details about handling customer requests for port 25 enablement.&nbsp;</p>
+
+<p><strong>Note:</strong> Do not submit requests for fraud checks unless fraud checks are supported for the offer type.</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="49%">
+			<p><span><strong>Offer Name </strong></span><strong><span lang="EN"> </span></strong><strong><span lang="EN"> </span></strong><strong><span lang="EN"> </span></strong><strong><span lang="EN"> </span></strong><span lang="EN"> </span></p>
+			</td>
+			<td width="21%">
+			<p><strong>Offer Number </strong></p>
+			</td>
+			<td width="11%">
+			<p><strong>Port 25 Default State</strong></p>
+			</td>
+			<td width="17%">
+			<p><strong>Changeable? </strong></p>
+			</td>
+			<td width="17%"><strong>Fraud Checks Supported?</strong></td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="Pay-as-You-Go (PAYG), Microsoft Partner Network (MPN), Azure in Open (AIO)" href="#_Pay-as-You-Go_(PAYG)_/" managed-link="" target="">Action Pack (MPN)</a></p>
+			</td>
+			<td width="21%">
+			<p>25P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p><strong>Yes</strong></p>
+			</td>
+			<td width="17%"><strong>Yes</strong></td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="Cloud Solution Provider (CSP)" href="#_Cloud_Solution_Provider" managed-link="" target="">Azure in CSP</a></p>
+			</td>
+			<td width="21%">
+			<p>145P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p><strong>Yes</strong></p>
+			</td>
+			<td width="17%">No</td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="Cloud Solution Provider (CSP)" href="#_Cloud_Solution_Provider" managed-link="" target="">Azure in CSP</a></p>
+			</td>
+			<td width="21%">
+			<p>159P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p><strong>Yes</strong></p>
+			</td>
+			<td width="17%">No</td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="All Other Blocked Subscriptions" href="#_Pay-as-You-Go_(PAYG)_/" managed-link="" target="">Azure in Open Licensing</a></p>
+			</td>
+			<td width="21%">
+			<p>111P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p><strong>Yes</strong></p>
+			</td>
+			<td width="17%"><strong>Yes</strong></td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="All Other Blocked Subscriptions" href="#_All_Other_Blocked" managed-link="" target="">Azure Pass</a></p>
+			</td>
+			<td width="21%">
+			<p>120P to 130P, 243P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p>No</p>
+			</td>
+			<td width="17%"><strong>Yes</strong></td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="EA and MS Internal Customers" href="#_EA_and_MS" managed-link="" target="">Enterprise Agreement</a></p>
+			</td>
+			<td width="21%">
+			<p>17P</p>
+			</td>
+			<td width="11%">
+			<p><strong>Enabled</strong></p>
+			</td>
+			<td width="17%">
+			<p><strong>Yes</strong></p>
+			</td>
+			<td width="17%">No</td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="All Other Blocked Subscriptions" href="#_EA_and_MS" managed-link="" target="">Enterprise Dev/Test</a></p>
+			</td>
+			<td width="21%">
+			<p>148P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p><strong>Yes</strong></p>
+			</td>
+			<td width="17%">No</td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="All Other Blocked Subscriptions" href="#_All_Other_Blocked" managed-link="" target="">Free Trial</a></p>
+			</td>
+			<td width="21%">
+			<p>44P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p>No</p>
+			</td>
+			<td width="17%"><strong>Yes</strong></td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="All Other Blocked Subscriptions" href="#_All_Other_Blocked" managed-link="" target="">Microsoft Azure BizSparkPlus</a></p>
+			</td>
+			<td width="21%">
+			<p>36P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p>No</p>
+			</td>
+			<td width="17%"><strong>Yes</strong></td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="All Other Blocked Subscriptions" href="#_All_Other_Blocked" managed-link="" target="">Microsoft Azure for Students Starter</a></p>
+			</td>
+			<td width="21%">
+			<p>144P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p>No</p>
+			</td>
+			<td width="17%"><strong>Yes</strong></td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="All Other Blocked Subscriptions" href="#_All_Other_Blocked" managed-link="" target="">Microsoft Azure Sponsorship Offer</a></p>
+			</td>
+			<td width="21%">
+			<p>143P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p>No</p>
+			</td>
+			<td width="17%"><strong>Yes</strong></td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="All Other Blocked Subscriptions" href="#_EA_and_MS" managed-link="" target="">Microsoft Internal</a></p>
+			</td>
+			<td width="21%">
+			<p>15P</p>
+			</td>
+			<td width="11%">
+			<p><strong>Enabled</strong></p>
+			</td>
+			<td width="17%">
+			<p><strong>Yes</strong></p>
+			</td>
+			<td width="17%">No</td>
+		</tr>
+		<tr>
+			<td width="49%">Modern Azure Plan</td>
+			<td width="21%">0017G (on CST), but check the Offer Number on ASC or Jarvis by following the steps under <a bookmark-id="Identify the Offer Type" href="#Identify the Offer Type" managed-link=""><em>Identify the Offer Type</em></a>.</td>
+			<td width="11%">Disabled</td>
+			<td width="17%"><strong>Yes</strong></td>
+			<td width="17%">
+			<p><strong>Yes&nbsp;</strong>for Channel type Customer Led</p>
+
+			<p>No for all others</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="All Other Blocked Subscriptions" href="#_All_Other_Blocked" managed-link="" target="">MSDN Platforms subscribers</a></p>
+			</td>
+			<td width="21%">
+			<p>62P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p>No</p>
+			</td>
+			<td width="17%"><strong>Yes</strong></td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="Pay-as-You-Go (PAYG), Microsoft Partner Network (MPN), Azure in Open (AIO)" href="#_Pay-as-You-Go_(PAYG)_/" managed-link="" target="">Pay-As-You-Go</a></p>
+			</td>
+			<td width="21%">
+			<p>3P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p><strong>Yes</strong></p>
+			</td>
+			<td width="17%"><strong>Yes</strong></td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="Pay-as-You-Go (PAYG), Microsoft Partner Network (MPN), Azure in Open (AIO)" href="#_Pay-as-You-Go_(PAYG)_/" managed-link="" target="">Pay-As-You-Go Dev/Test</a></p>
+			</td>
+			<td width="21%">
+			<p>23P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p><strong>Yes</strong></p>
+			</td>
+			<td width="17%"><strong>Yes</strong></td>
+		</tr>
+		<tr>
+			<td width="49%"><a bookmark-id="US Government (Fairfax) Cloud" href="#US Government (Fairfax) Cloud" managed-link=""><span lang="EN">US Government (</span><span>Fairfax) Subscriptions</span></a></td>
+			<td width="21%">US GOV 3P<br>
+			US GOV 17P<br>
+			US GOV 36P<br>
+			US GOV 143P</td>
+			<td width="11%">Disabled</td>
+			<td width="17%"><strong>Yes</strong></td>
+			<td width="17%">No</td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="All Other Blocked Subscriptions" href="#_All_Other_Blocked" managed-link="" target="">Visual Studio Enterprise (BizSpark) subscribers</a></p>
+			</td>
+			<td width="21%">
+			<p>64P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p>No</p>
+			</td>
+			<td width="17%"><strong>Yes</strong></td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="Pay-as-You-Go (PAYG), Microsoft Partner Network (MPN), Azure in Open (AIO)" href="#_Pay-as-You-Go_(PAYG)_/" managed-link="" target="">Visual Studio Enterprise (MPN) subscribers</a></p>
+			</td>
+			<td width="21%">
+			<p>29P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p><strong>Yes</strong></p>
+			</td>
+			<td width="17%"><strong>Yes</strong></td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="All Other Blocked Subscriptions" href="#_All_Other_Blocked" managed-link="" target="">Visual Studio Enterprise subscribers</a></p>
+			</td>
+			<td width="21%">
+			<p>63P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p>No</p>
+			</td>
+			<td width="17%"><strong>Yes</strong></td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="All Other Blocked Subscriptions" href="#_All_Other_Blocked" managed-link="" target="">Visual Studio Professional subscribers</a></p>
+			</td>
+			<td width="21%">
+			<p>59P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p>No</p>
+			</td>
+			<td width="17%"><strong>Yes</strong></td>
+		</tr>
+		<tr>
+			<td width="49%">
+			<p><a bookmark-id="All Other Blocked Subscriptions" href="#_All_Other_Blocked" managed-link="" target="">Visual Studio Test Professional subscribers</a></p>
+			</td>
+			<td width="21%">
+			<p>60P</p>
+			</td>
+			<td width="11%">
+			<p>Disabled</p>
+			</td>
+			<td width="17%">
+			<p>No</p>
+			</td>
+			<td width="17%"><strong>Yes</strong></td>
+		</tr>
+	</tbody>
+</table>
+
+<h4><a id="Pay-as-You-Go (PAYG), Microsoft Partner Network (MPN), Azure in Open (AIO)" name="Pay-as-You-Go (PAYG), Microsoft Partner Network (MPN), Azure in Open (AIO)"></a><strong>Pay-as-You-Go (PAYG), Microsoft Partner Network (MPN), Azure in Open (AIO)</strong></h4>
+
+<p>For customers who request port 25 enablement and have PAYG, MPN, or AIO offer types, follow the below guidance.</p>
+
+<p><strong>Initial Response</strong></p>
+
+<p>Respond to the customer using their preferred communication method to let them know you understand their request.<br>
+Include the following information:</p>
+
+<ul>
+	<li>Port 25 is used to send email to external domains and is restricted due to the elastic nature of public cloud service IPs and the potential for abuse.</li>
+	<li>An <a href="https://docs.microsoft.com/azure/virtual-network/troubleshoot-outbound-smtp-connectivity">SMTP relay service</a>, such as <a href="https://sendgrid.com/">SendGrid</a>, is recommended as an alternative to port 25 enablement.</li>
+	<li>If there is a need that an SMTP relay cannot meet and requires port 25 enablement, it will take 3 to 4 business days for an assessment and response.</li>
+</ul>
+
+<p><strong>SendGrid SMTP Relay Configuration</strong></p>
+
+<p>Customers should contact SendGrid directly if they need assistance configuring it as their SMTP relay. Let your customer know there are additional costs associated with SendGrid.</p>
+
+<p><strong><a id="Customer Refuses SMTP Relay" name="Customer Refuses SMTP Relay"></a>Customer Refuses SMTP Relay</strong></p>
+
+<p>If the customer does not want to use an SMTP relay and still requests port 25 enablement, follow the steps below:<br>
+<br>
+<strong>Note: </strong>The steps below must be completed <strong>before&nbsp;</strong>Port 25 can be enabled. The customers&#39; subscription must be on the approved list of subscription types that can be enabled, <strong>and </strong>the subscription must be manually enabled via ASC (if that fails it must be validate by HIT).&nbsp;Only if the subscription is validated can&nbsp;the port be unblocked.&nbsp;</p>
+
+<ol>
+	<li><span> Submit the <a href="https://deephorizon.trafficmanager.net/#/PortUnblock" target="_blank">Port Unblock Request</a><u> </u>form.</span></li>
+	<li><span> The <span>Human Intelligence Team (HIT) </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span>will receive the request and initiate a fraud investigation. This may take up to 4 business days.</span></li>
+	<li><span> The HIT team will respond with a <em>Deny</em> or <em>Approval</em> in the <strong>Status</strong> column on the <a href="https://deephorizon.trafficmanager.net/#/PortUnblock" target="_blank">Port Unblock Request submission page</a>. </span>
+	<ul style="list-style-type:circle">
+		<li><strong>Deny</strong> &ndash; Fraud was determined, the subscription will be deactivated.
+		<ul style="list-style-type:square">
+			<li>All communication with the customer should be terminated.</li>
+			<li>Close the support request (SR) with root cause: <strong>Subscription Management &gt; Port 25 unblock request &gt; Disapproved</strong>.</li>
+			<li>If the customer wants to appeal, they can open a support case through the portal. A specially trained agent will handle the appeal process.</li>
+		</ul>
+		</li>
+		<li><strong>Approval </strong>&ndash;<strong> </strong>Enable port 25 following the <a bookmark-id="Enable Port 25 for a Subscription with Azure Support Center (ASC)" href="#_Enable_Port_25" managed-link="" target="">Enable Port 25</a><strong> </strong>section.</li>
+	</ul>
+	</li>
+</ol>
+
+<p><strong>Note:</strong> If you receive a <em>Forbidden</em> message on the Port Unblock site, verify that you are a member of <strong>azfraudportunblock</strong> <a href="https://myaccess/identityiq/home.jsf">MyAccess</a> group. Request access if you are not a member using the process outlined in the <a bookmark-id="How to Request Access to Enable Port 25 for Subscriptions" href="#How to Request Access to Enable Port 25 for Subscriptions" managed-link=""><span><em><span>How to Request Access to Enable Port 25 for Subscriptions</span></em></span></a><span lang="EN"> </span> section.<br>
+<br>
+If you are a member of the group and still cannot access the form, submit an <a data-content-id="" data-content-type="" href="https://aka.ms/azFraudPortUnblockICM" managed-link="" target="_blank">IcM request</a> and <a href="mailto:AzFraud@microsoft.com">email HIT</a><span> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span>a link to it.<a name="_Cloud_Solution_Provider"></a></p>
+
+<h4><strong><a id="Cloud Solution Provider (CSP)" name="Cloud Solution Provider (CSP)"></a>Cloud Solution Provider (CSP)</strong></h4>
+
+<p>For CSP customers who request port 25 enablement, follow the below guidance.</p>
+
+<p><strong>Initial Response</strong></p>
+
+<p>Respond to the customer using their preferred communication method to let them know you understand their request. Include the following information:</p>
+
+<ul>
+	<li>Port 25 is used to send email to external domains. It is restricted due to the elastic nature of public cloud service IPs and the potential for abuse.</li>
+	<li>An <a href="https://docs.microsoft.com/azure/virtual-network/troubleshoot-outbound-smtp-connectivity">SMTP relay service</a>, such as <a href="https://sendgrid.com/">SendGrid</a>, is recommended as an alternative to port 25 enablement.</li>
+	<li>If there is a technical need that an SMTP relay cannot meet and requires port 25 enablement, the request can be reviewed for an exception.</li>
+</ul>
+
+<p><strong>SendGrid SMTP Relay Configuration</strong></p>
+
+<p>Customers should contact SendGrid directly if they need assistance configuring it as their SMTP relay. Let your customer know there are additional costs associated with SendGrid.</p>
+
+<p><strong>CSP Customer Refuses SMTP Relay</strong></p>
+
+<ol>
+	<li>If the CSP customer does not want to use an SMTP relay and still requests port 25 enablement, send them an email which includes the following points:
+	<ul style="list-style-type:circle">
+		<li>The customer subscription may be approved for port 25 enablement.</li>
+		<li><strong>Warning</strong>: Cloud Solution Providers are frequently targeted by fraudulent activity and can result in losses for both the CSP and Microsoft.</li>
+		<li>If the customer continues with the request to unblock port 25 they should acknowledge the above stated risk and liability of fraud which was agreed to in the CSP contract.</li>
+		<li>CSPs with port 25 enabled should proactively verify their customers through industry standards, such as credit identity matching.</li>
+	</ul>
+	</li>
+	<li>If the CSP customer agrees to the above, they must reply to the email to acknowledge the risks of port 25 enablement and continue their request.</li>
+	<li>Ensure the email communication is added to the support case in Service Desk.</li>
+	<li>Follow the steps in the <a bookmark-id="Enable Port 25 for a Subscription with Azure Support Center (ASC)" href="#_Enable_Port_25" managed-link="" target="">Enable Port 25 for a Subscription</a>.</li>
+</ol>
+
+<h4><strong><a id="EA and MS Internal Customers" name="EA and MS Internal Customers"></a>EA and MS Internal Customers</strong></h4>
+
+<p>Enterprise Agreement (EA) and Microsoft internal (AIRS) customers are not blocked by default. Follow these steps for customers with these offer types:</p>
+
+<ol>
+	<li><span> Follow the steps in <a bookmark-id="Test Traffic in Azure Support Center (ASC)" href="#_Test_Traffic_in" managed-link="" target="">Test Traffic</a><span lang="EN"> </span> to verify if port 25 is disabled on the subscription.</span></li>
+	<li><span> If it is disabled, follow the steps in <a bookmark-id="Enable Port 25 for a Subscription with Azure Support Center (ASC)" href="#_Enable_Port_25" managed-link="" target="">Enable Port 25</a><span lang="EN"> </span> to enable it. </span></li>
+	<li><span> If this procedure fails, engage your technical advisor (TA), partner technical advisor (PTA), or team lead (TL) for assistance as appropriate.</span></li>
+</ol>
+
+<p><strong>Subscriptions Converted to EA</strong></p>
+
+<p>When the Jarvis Action <strong>Azure Resource Manager &gt; Subscription State Management &gt; Get subscription</strong> shows the subscription is EA but port 25 is still blocked, the subscription may have been converted to EA from another offer type. To verify, follow these steps:</p>
+
+<ol>
+	<li>Use Jarvis Action <strong>NRP &gt; NRP Subscription Operations &gt; Get NRP Subscription Details</strong> with the relevant region and subscription.</li>
+	<li>Find the value for key: <em>/subscriptions/&lt;subscription id&gt;/resourceGroups//providers/Microsoft.Network/subscriptions </em>(see image below).</li>
+	<li>Inspect the value <strong>properties</strong> and <strong>quotaId </strong>(see image below).</li>
+	<li>If <strong>quotaId</strong> is a blocked offer type, manually enable the subscription<span> per the </span><a bookmark-id="Enable Port 25 for a Subscription with Azure Support Center (ASC)" href="#Enable Port 25 for a Subscription with Azure Support Center (ASC)" managed-link=""><span>Enable Port 25</span></a><span lang="EN"> </span><strong> </strong>section.<br>
+	<span asset="4526129" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4526129]</span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span></li>
+</ol>
+
+<h4><a id="US Government (Fairfax) Cloud" name="US Government (Fairfax) Cloud"></a><strong>US Government (Fairfax) Cloud</strong></h4>
+
+<p>US Government Cloud customers should be enabled immediately without fraud check or further questions asked.<br>
+Follow the below steps to enable port 25 for these customers:</p>
+
+<ol>
+	<li>Verify the subscription as a US Government Cloud subscription.</li>
+	<li>Once verified, follow <span>the steps in the </span><a bookmark-id="Enable Port 25 for a Subscription with Azure Support Center (ASC)" href="#Enable Port 25" managed-link="" target="">Enable Port 25</a><strong> </strong>section<span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span>.</li>
+	<li>Ask your customer to use the portal to <strong>stop</strong> and <strong>start</strong> all VMs and NVAs which handle outbound traffic, then test port 25.<br>
+	<strong>Note:</strong> <strong>Do not</strong> <strong>restart</strong> as this will not apply the port 25 enablement.</li>
+</ol>
+
+<p><strong>Note: </strong>If you&nbsp;run into JIT failures when enabling Port25 for a Fairfax customer, submit an IcM to CloudNet&nbsp;Engineering Team:&nbsp;<a data-content-id="" data-content-type="" href="https://icm.ad.msft.net/imp/v3/incidents/create?tmpl=K2s42j" managed-link="" target="_blank">https://icm.ad.msft.net/imp/v3/incidents/create?tmpl=K2s42j</a>.&nbsp;&nbsp;&nbsp;</p>
+
+<h4><strong>Global Azure in China (Mooncake)</strong></h4>
+
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Fraud checks for Global Azure in China (Mooncake) customers can be requested by submitting a Service Desk Collaboration&nbsp;task to the following queue:</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span><span></span></span></span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><strong>Service Desk Site:</strong>&nbsp;Microsoft Management</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><strong>Service Desk Team:</strong>&nbsp;RiskOps Service Team</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>In the task, be sure to explain that a Global Azure in China (Mooncake) customer is requesting Port 25 unblock. Ask that the RiskOps Service team review the customer for fraud and verify whether the unblock can proceed. Also include the customer&#39;s subscription GUID in the task.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>This&nbsp;team has a 15-minute SLA. They will respond with one of the following:</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span><span></span></span></span></span></span></span></span></p>
+
+<ul>
+	<li>
+	<p>If fraud concerns&nbsp;<em>do not</em> arise during the team&#39;s review, they&nbsp;will complete the task and&nbsp;reply in the task notes that the unblock can proceed.</p>
+	</li>
+	<li>
+	<p>If fraud concerns <em>do&nbsp;</em>arise during the team&#39;s review, they will complete the task and reply in the task notes that the unblock should not proceed. They will then take ownership of the case.</p>
+	</li>
+</ul>
+
+<h4><a id="All Other Blocked Subscriptions" name="All Other Blocked Subscriptions"></a><strong>All Other Blocked Subscriptions</strong></h4>
+
+<p>As of November 15, 2017, customers who create MSDN, Azure Pass, Education, BizSpark, and Free Trial subscriptions have technical restrictions blocking email sent from VMs directly to email providers to prevent abuse. <strong>No requests to remove the restriction can be made as they will not be granted</strong>.</p>
+
+<p>See <a href="https://docs.microsoft.com/en-us/azure/virtual-network/troubleshoot-outbound-smtp-connectivity">Outbound SMPT Issues in Azure</a> for more information.</p>
+
+<p>Customers may convert their subscriptions to PAYG as a workaround to have port 25 enabled.</p>
+
+<p><strong>Note:</strong> Customers on Free Accounts who upgrade to PAYG must remove the <a href="https://docs.microsoft.com/en-us/azure/billing/billing-spending-limit" target="_blank">Azure spending limit</a><u> </u>for the PAYG subscription to be enabled in Jarvis.</p>
+
+<h4><strong><a id="Upgraded Account Showing as Free Trial" name="Upgraded Account Showing as Free Trial"></a>Upgraded Account Showing as Free Trial</strong></h4>
+
+<p>Follow these steps if the customer has upgraded their offer type, but Jarvis shows the offer type as: <strong>Azure_Platform_All;Azure_Direct;Azure_Consumption;Azure_Free_Trial;Azure_MS-AZR-0044P;Azure_Credit;Individual.</strong></p>
+
+<p>Subscription upgrades cannot be completed until any remaining credit has been used. There are two options to assist customers in this situation to enable port 25:</p>
+
+<p><strong>Option 1 &ndash; Wait</strong></p>
+
+<p>The customer may wait until they have used their credit and then submit another request for port 25 enablement.</p>
+
+<p><strong>Option 2 &ndash; Manual Upgrade</strong></p>
+
+<p><span>The customer can remove the spending limit and we can manually upgrade the customer&rsquo;s subscription.</span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span></p>
+
+<p><strong>Note:</strong> Customers who choose this option <strong>will lose any remaining credit</strong> on the subscription and must provide the following information in an email:</p>
+
+<ol>
+	<li><span> A screenshot of the subscription from the Azure Portal showing Pay-As-You-Go.</span></li>
+	<li><span> A screenshot showing the spending limit has been removed.</span></li>
+	<li><span> Written acknowledgement that all remaining credit will be lost.</span></li>
+</ol>
+
+<h4><strong><span><a id="Verify if Port 25 is Already Enabled in Jarvis" name="Verify if Port 25 is Already Enabled in Jarvis"></a>Verify if Port 25 is Already Enabled in Jarvis</span></strong></h4>
+
+<p>ASC may fail to enable port 25 on the subscription and generate an error message:</p>
+
+<blockquote>
+<p><span><em>Error: Cannot set subscription feature flag to enable port 25. Please contact Cloudnet/VNET team for support.</em></span><span lang="EN"> </span><span lang="EN"> </span></p>
+</blockquote>
+
+<p>Before you engage your TA, PTA, or TL to enable the feature in Jarvis, confirm whether port 25 is already enabled with this operation: <strong>Azure Resource Manager &gt; Feature Management &gt; Gets all features in subscription</strong>.&nbsp;If the output doesn&#39;t match the example below, please ask the customer to register the Microsoft Network resource provider. Once the customer confirms that it has been registered, please try the operation again via Azure Support Center.</p>
+
+<p><strong>Example Output:</strong></p>
+
+<blockquote>
+<p><span lang="EN">{ &quot;properties&quot;: { &quot;state&quot;: &quot;Registered&quot; }, &quot;id&quot;: &quot;/subscriptions/1234ab56-7890-1234-567c-89d0e1f23456/providers/Microsoft.Features/providers/Microsoft.Network/features/<strong>AllowTcpPort25Out</strong>&quot;, &quot;type&quot;: &quot;Microsoft.Features/providers/features&quot;, &quot;name&quot;: &quot;Microsoft.Network/AllowTcpPort25Out&quot; }</span><span lang="EN"> </span><span lang="EN"></span></p>
+</blockquote>
+
+<p>To check if the subscrion is registered for Microsoft.Network.RP use Jarvis and follow the path outlined below:&nbsp;<br>
+<strong>Azure Resource Manager &gt; Resource Provider Management &gt; Get resource providers for a subscription</strong><br>
+&nbsp;</p>
+
+<h4><span lang="EN"> </span><a id="Enable Port 25 for a Subscription with Azure Support Center (ASC)" name="Enable Port 25 for a Subscription with Azure Support Center (ASC)"></a><strong>Enable Port 25 for a Subscription with Azure Support Center (ASC)</strong></h4>
+
+<p><strong>Note</strong>:&nbsp;<span>CSP subscriptions are not in scope for fraud checks.</span><br>
+<br>
+Before enabling Port 25, HIT must be engaged to validate the subscription. Customers&#39;&nbsp;subscriptions must be on the list of types of subscriptions that can be enabled,&nbsp;<strong>and </strong>the subscriptions&nbsp;must be manually enabled&nbsp;via ASC. Only if the subscription is validated can&nbsp;the port be unblocked.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>Once the&nbsp;customer has been approved by the Human Intelligence Team (HIT), or an authorized exception per this TSG, follow these steps to enable Port 25 with <a href="https://aka.ms/azuresupportcenter" target="_blank">Azure Support Center</a>:</p>
+
+<ol>
+	<li><span> Click <strong>Resource Explorer</strong>.</span></li>
+	<li><span> Click the <strong>subscription GUID</strong>.</span></li>
+	<li><span> Click the <strong>Diagnostics</strong> tab.</span></li>
+	<li><span> Select <strong>Yes</strong> in the <em>Unblock Port 25</em> box.</span></li>
+	<li><span> Click <strong>Run</strong>.</span></li>
+	<li><span> Once the operation is complete, ask your customer to use the portal to <strong>stop</strong> and <strong>start</strong> all VMs and NVAs which handle outbound traffic, then test port 25.<br>
+	<strong>Note:</strong> &nbsp;Do not select<strong> restart</strong> as this will not apply the port enablement.<br>
+	<span asset="4526130" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4526130]</span></span></li>
+</ol>
+
+<p><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span></p>
+
+<p><strong>Customer Requests to Block Port 25 on their Subscription</strong></p>
+
+<p>In such cases, the customer can re-enable themselves via NSG. The original block is just a system NSG. If the customer wants to block the traffic again, they just need to apply an NSG to their network(s). For more details on this process, reference <a href="https://docs.microsoft.com/en-us/azure/virtual-network/troubleshoot-outbound-smtp-connectivity" managed-link="">this public-facing documentation</a>.<br>
+<br>
+<strong>Note</strong>: If the customer needs help getting the NSG configured, engage&nbsp;the Networking Technical Team.</p>
+
+<h4><strong>Manual Enablement &ndash; TA Only</strong></h4>
+
+<p>Follow these steps to manually enable port 25 if the process failed in ASC.</p>
+
+<p>Ensure the area path is <strong>Azure/Virtual Network/Connectivity/Cannot send email (SMTP/Port 25)</strong> to prevent a &ldquo;Site cannot be found&rdquo; error.</p>
+
+<p><strong>Note:</strong> These operations require proper letter case. Ensure that your operation reads as <strong><em>AllowTcpPort25Out</em></strong><em>.</em></p>
+
+<p><strong>Submit an IcM &ndash; TA Only</strong></p>
+
+<ol>
+	<li><span> Submit <a href="https://aka.ms/smtpjit">JIT IcM for ACIS Elevation</a> for both <span><strong>NRP</strong> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span>and <span><strong>RDFE</strong> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span>(if necessary). </span>
+
+	<ol style="list-style-type:lower-alpha">
+		<li><span> Wait 10-15 seconds, then refresh the <span>I</span>cM<span lang="EN"> </span><span lang="EN"> </span>. </span></li>
+		<li><span> Click <strong>Acknowledge</strong>.</span></li>
+	</ol>
+	</li>
+	<li><span> Azure Resource Manager (ARM) Deployments &ndash; Set the NRP feature flag on the subscription in <span>Jarvis. </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span></span>
+	<ol style="list-style-type:lower-alpha">
+		<li><span> <strong>Azure Resource Manager &gt; Feature Management &gt; Approve Feature</strong> <strong>Registration</strong></span></li>
+		<li><span> <strong>Resource Provider Namespace</strong>: <em>Microsoft.Network</em></span></li>
+		<li><span> <strong>The Feature Name</strong>: <em>AllowTcpPort25Out</em> </span></li>
+		<li><span> <strong>Subscription</strong>: &lt;<em>Subscription Id</em>&gt;</span></li>
+	</ol>
+	</li>
+	<li><span> &ldquo;<span>Get Access</span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span>&rdquo; for this operation. </span>
+	<ol style="list-style-type:lower-alpha">
+		<li><span> Select access level, auto approved: <strong>AFEC &gt; PlatformServiceOperator</strong>. </span></li>
+		<li><span> <strong>Work-item id</strong>: Enter the IcM number (from step 1 above).</span></li>
+	</ol>
+	</li>
+</ol>
+
+<p><strong>RDFE Port 25 Enablement Process &ndash; TA Only</strong></p>
+
+<p>Skip the <strong>RDFE Port 25 Enablement Process</strong> if your customer has no <span>classic</span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span> deployments.</p>
+
+<ol>
+	<li><span> Perform a Jarvis Query:</span>
+
+	<ol style="list-style-type:lower-alpha">
+		<li><span><strong>AzureRT &gt; Privilege Management &gt; Update Feature Status</strong></span></li>
+		<li><span> <strong>Subscription</strong>: &lt;<em>Subscription Id</em>&gt;</span></li>
+		<li><span> <strong>Feature Name</strong>: <em>AllowTcpPort25Out</em> </span></li>
+		<li><span> <strong>Status</strong>: Active</span></li>
+		<li><span> <strong>Approver</strong>: &lt;<em>CSS SE alias</em>&gt;,&lt;<em>TA approver alias</em>&gt;</span></li>
+		<li><span> <strong>Approver Link</strong>: &lt;<em>ICM Link</em>&gt;</span></li>
+	</ol>
+	</li>
+	<li><span> &ldquo;Get Access&rdquo; for this operation. </span>
+	<ol style="list-style-type:lower-alpha">
+		<li><span> Select access level, auto approved for ANP TAs: <strong>Subscription &gt; CustomerServiceOperator</strong>.</span></li>
+		<li><span> <strong>Work-item Id:</strong> Enter the IcM number (from step 1 in the &ldquo;Submit an IcM&rdquo; section).</span><br>
+		&nbsp;</li>
+	</ol>
+	</li>
+</ol>
+
+<p><strong>Unblock Existing Deployments &ndash; TA Only</strong></p>
+
+<p>After completing the above process, follow these steps to remove the port 25 restrictions from existing deployments:</p>
+
+<ol>
+	<li>Have your customer <strong>stop</strong> and <strong>deallocate </strong>public-facing resources (firewalls, email servers, etc.), and <strong>start</strong> all outbound VMs/NVAs to enable port 25 (<strong>do not select restart</strong> as this will not apply the port enablement).<br>
+	<strong>Note:</strong> Customers must use a static public IP to keep their public IP addresses.</li>
+	<li>Close the IcM.</li>
+	<li>Notify the customer that port 25 has been enabled for their subscription and confirm the resolution.<span lang="EN"> </span><span lang="EN"> </span><span lang="EN"> </span></li>
+	<li>Close the SR with root cause: <strong>Virtual Networks &gt; Virtual Networks &gt; Port 25 unblock request &gt; Approved</strong></li>
+</ol>
+
+<h4><strong><a id="Confirm Subscription Feature Flag" name="Confirm Subscription Feature Flag"></a>Confirm Subscription Feature Flag</strong></h4>
+
+<p><strong>For NRP</strong></p>
+
+<p>Check the feature registration here: <strong>Azure Resource Manager &gt; Feature Management &gt; Gets all features in subscription</strong>.</p>
+
+<p><strong>For RDFE</strong></p>
+
+<ul>
+	<li>Use a <a href="https://jarvis-west.dc.ad.msft.net/5ED7A54A?genevatraceguid=a70146c1-4c0b-4437-b9d1-de8c41a2c8dd" target="_blank">Jarvis Query</a> to search for <em>AllowTCPPort25Out</em> to check the subscription feature flag.
+
+	<ul style="list-style-type:circle">
+		<li>If the feature is blocked, you will see <strong><em>IsAuthorized:False</em></strong>.<br>
+		<span asset="4526131" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4526131]</span></li>
+	</ul>
+	</li>
+</ul>
+
+<p><span lang="EN"> </span></p>
+
+<h3><strong><a id="Operation Logs" name="Operation Logs"></a>Operation Logs</strong></h3>
+
+<p>Both <strong>NRP</strong> and <strong>RDFE</strong> operations create large log trails. Review these logs before filing an IcM for a feature flag not updated in <strong>NRP</strong> or <strong>RDFE</strong>.</p>
+
+<h4><strong>NRP Logs</strong></h4>
+
+<ul>
+	<li><span><span lang="EN"></span><strong>Namespace</strong>: <em>NRP</em></span></li>
+	<li><span><span lang="EN"></span><strong>Table</strong>: <em>FrontendOperation</em></span></li>
+	<li><span><span lang="EN"></span><strong>Recommended filters</strong>: </span>
+	<ul style="list-style-type:circle">
+		<li><span><span lang="EN"></span><em>OperationName</em> == <em>PutSubscriptionOperation</em></span></li>
+		<li><span><span lang="EN"></span><em>SubscriptionId</em></span></li>
+	</ul>
+	</li>
+</ul>
+
+<h4><strong>RDFE Logs</strong></h4>
+
+<ul>
+	<li><span><span lang="EN"></span><strong>Namespace</strong>: <em>RDFE</em></span></li>
+	<li><span><span lang="EN"></span><strong>Table</strong>: <em>UpdateFeatureStatusOperation</em></span></li>
+	<li><span><span lang="EN"></span><strong>Recommended filters</strong>: </span>
+	<ul style="list-style-type:circle">
+		<li><span><span lang="EN"></span><em>FeatureName</em> == <em>AllowTcpPort25Out</em></span></li>
+		<li><span><span lang="EN"></span>SubscriptionId</span></li>
+	</ul>
+	</li>
+</ul>
+
+<h3><strong><a id="Engagement and Escalation Path" name="Engagement and Escalation Path"></a>Engagement and Escalation Path</strong></h3>
+
+<ul>
+	<li><span><span lang="EN"></span>Networking and technical support scenarios after Port 25 enablement is confirmed:</span>
+
+	<ul style="list-style-type:circle">
+		<li><span><span lang="EN"></span>Scope issue to <strong>General networking connectivity &gt; Virtual Network &gt; Connectivity &gt; To/From Internet</strong> </span></li>
+	</ul>
+	</li>
+	<li><span><span lang="EN"></span>Exchange Server or Exchange Online related connectivity:</span>
+	<ul style="list-style-type:circle">
+		<li><span><span lang="EN"></span><a href="https://internal.support.services.microsoft.com/en-us/help/4457521" target="_blank">RAVE Transfer Process</a></span></li>
+		<li><span><span lang="EN"></span><a href="https://internal.support.services.microsoft.com/en-us/help/4346610" target="_blank">RAVE Collaboration Process</a></span></li>
+	</ul>
+	</li>
+</ul>
+
+<h3><strong><a id="Online References" name="Online References"></a>Online References</strong></h3>
+
+<ul>
+	<li><span><span lang="EN"></span><a href="https://docs.microsoft.com/en-us/azure/virtual-network/troubleshoot-outbound-smtp-connectivity">Troubleshoot outbound SMTP connectivity issues in Azure</a></span></li>
+	<li><a href="https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/register-azurermresourceprovider?view=azurermps-6.13.0" managed-link="" target="_blank">Register Azure RM Resource Provider</a></li>
+</ul>
+
+<h3><strong><a id="Coding and Closing " name="Coding and Closing "></a>Coding and Closing&nbsp;</strong></h3>
+
+<p>Be sure you are selecting the lowest level of the Root Cause when closing these cases.</p>
+
+<h3><strong><a id="TSG Change Log" name="TSG Change Log"></a>TSG Change Log</strong></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="132">
+			<p><strong>Date </strong></p>
+			</td>
+			<td width="126">
+			<p><strong>Updated By </strong></p>
+			</td>
+			<td width="364">
+			<p><strong>Content Updated </strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p>06/27/2019</p>
+			</td>
+			<td width="126">
+			<p>v-brgosn</p>
+			</td>
+			<td width="364">
+			<p>Created TSG.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p>07/11/2019</p>
+			</td>
+			<td width="126">
+			<p>v-brgosn</p>
+			</td>
+			<td width="364">
+			<p>Added details regarding MyAccess to AFEC Team - 16355.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p>07/31/2019</p>
+			</td>
+			<td width="126">
+			<p>v-brgosn</p>
+			</td>
+			<td width="364">
+			<p>Added Step 7 to Enable TCP Port 25 Outbound section.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p>08/06/2019</p>
+			</td>
+			<td width="126">
+			<p>v-brgosn</p>
+			</td>
+			<td width="364">
+			<p>Updated numerous links and details.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p>08/23/2019</p>
+			</td>
+			<td width="126">
+			<p>v-ruclar</p>
+			</td>
+			<td width="364">
+			<p>Updated &lsquo;Case Overview&rsquo; Steps 1 and 1e. MT-2320</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p><span lang="EN">10/10</span>/2019</p>
+			</td>
+			<td width="126">
+			<p>v-ruclar</p>
+			</td>
+			<td width="364">
+			<p>Content revised and reformatted.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">01/28/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">
+			<p>Added note under &quot;Enable Port 25 for a Subscription with Azure Support Center (ASC)&quot; as per ModTrack 2638.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">03/25/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added detail to Verify if Port 25 is Already Enabled in Jarvis section as per ModTrack 2751.</td>
+		</tr>
+		<tr>
+			<td width="132">4/23/2020</td>
+			<td width="126">mievan&nbsp;</td>
+			<td width="364">Updated&nbsp;<em>azfraudportunblock </em>ICM link.</td>
+		</tr>
+		<tr>
+			<td width="132">05/28/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added information on blocking Port 25 as per ModTrack 2842.</td>
+		</tr>
+		<tr>
+			<td width="132">07/01/2020</td>
+			<td width="126">mievan</td>
+			<td width="364">Added guidance to <em>US Gov </em>section of TSG on how to troubleshoot JIT failures, and guidnce on verifying Microsoft.Network.RP via Jarvis.&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">07/20/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Removed mention of&nbsp;Azure in Open from under the&nbsp;<em>All Other Blocked Subscriptions</em> heading per ModTrack 3033.</td>
+		</tr>
+		<tr>
+			<td width="132">08/04/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added section on Global Azure in China (Mooncake) as per ModTrack 3071.</td>
+		</tr>
+		<tr>
+			<td width="132">09/10/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Updated Identify the Offer Type section with instructions on finding the offer type of Modern customers and added table entry on Modern Azure Plan, and added Fraud Check column in Offer Type Matrix, all per ModTrack 3159.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>

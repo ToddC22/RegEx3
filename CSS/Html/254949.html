@@ -1,0 +1,59 @@
+﻿<header><h1>IPSec support for client-to-domain controller traffic and domain controller-to-domain controller traffic</h1></header><div class='kb-notice-section section'><div internal-content-body=""><div class="internal-content"><div class="bold internal-content-body-title spacer-12-bottom">Microsoft Internal Support Information</div><div class="row"><div class="col-xs-24 internal-content-body-content"><p>BUG #: <a href='http://bugcheck/bugs/ContentMaintenance/34967.asp' title='Link only available for Microsoft corporate network users' target='_blank'>34967 (Content Maintenance)</a></p></div></div></div></div></div><div class='kb-summary-section section'>This article describes the  supported configurations for  using  Internet Protocol security (IPSec) to encrypt network traffic from a client computer to a domain controller or from a domain controller to another domain controller. </div><div class="kb-moreinformation-section section"><span class="text-base">Important</span> The information in this section applies only to those products listed in the &quot;Applies to&quot; section.<br>
+<br>
+We support the use of IPSec to encrypt network traffic in end-to-end client-to-client, client-to-server, and server-to-server implementations when you use either Kerberos computer authentication or when you use certificate-based computer authentication. Currently, we do not support the use of IPSec to encrypt network traffic from a domain client or member server to a domain controller when you apply the IPSec policies by using Group Policy or when you use the Kerberos version 5 protocol authentication method.<br>
+<br>
+Additionally, we support using IPSec to encrypt both the following kinds of network traffic:
+<ul class="sbody-free_list">
+	<li>Domain controller-to-domain controller replication traffic</li>
+	<li>Global catalog-to-global catalog replication traffic</li>
+</ul>
+To encrypt this traffic by using IPSec, configure both the following:
+
+<ul class="sbody-free_list">
+	<li>Create an IPSec policy filter to encrypt all Unicast traffic by using the <strong class="uiterm">All IP Traffic</strong> option.</li>
+	<li>Configure this IPSec policy filter to encrypt this traffic between two IP addresses by using IPSec Transport mode. In this scenario, do not use IPSec Tunnel mode.</li>
+</ul>
+<span><span class="text-base">Important</span> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base: </span>
+
+<div class="indent"><span><a href="/en-us/help/322756" id="kb-link-1">322756 </a> How to back up and restore the registry in Windows</span></div>
+<br>
+<br>
+After you configure this IPSec policy, you may notice that when the computers are started, several packets may be sent over the network unencrypted. This issue occurs because some packets might be sent over the network before the IPSec driver has been initialized and before the IPSec policy has been processed. To resolve this issue, put the IPSec driver IPSec.sys into Block Mode during the computer startup process. When you do this, IPSec blocks outgoing network traffic from the computer until the PolicyAgent component starts and until the PolicyAgent component loads the IPSec policies. After the IPSec PolicyAgent component has started, and after the IPSec policies are loaded, the PolicyAgent changes the IPSec driver&#39;s operation mode to permit the passage of IPSec traffic. To put the IPSec driver into Block Mode, set the following registry value:
+<div class="indent"><strong class="sbody-strong">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\IPSec</strong><br>
+<br>
+Value name: OperationMode<br>
+Value type: REG_DWORD<br>
+Value data: 1</div>
+A value of 1 puts the IPSec driver into Block Mode. A value of 0 (zero) bypasses the IPSec driver&#39;s block mode.<br>
+<br>
+<span>For more information, click the following article number to view the article in the Microsoft Knowledge Base:</span><br>
+&nbsp;
+<div class="indent"><span><a href="/en-us/help/254728" id="kb-link-2">254728 </a> IPSec does not secure Kerberos traffic between domain controllers</span><br>
+&nbsp;</div>
+We support using IPSec to encrypt domain controller-to-domain controller traffic such as Server Message Block (SMB), Remote Procedure Call (RPC) replication, and other kinds of traffic. You can transport this traffic by using IPSec to let you easily pass these kinds of traffic through a firewall. In this scenario, you only have to permit IPSec traffic and Internet Key Exchange (IKE) traffic through your firewall. <span>For more information, click the following article number to view the article in the Microsoft Knowledge Base:</span><br>
+&nbsp;
+<div class="indent"><span><a href="/en-us/help/233256" id="kb-link-3">233256 </a> How to enable IPSec traffic through a firewall</span><br>
+&nbsp;</div>
+
+<p>We recommend that you require certificate-based authentication when you configure domain controller-to-domain controller IPSec policy rules.</p>
+
+<p>The rule must require certificate authentication if the security requirements do not allow Kerberos traffic through the firewall. By default, IKE certificate revocation checking is off, and may have to be enabled through the firewall. This depends on the PKI infrastructure that is being used.<br>
+<br>
+<br>
+Build the IPSec rule on the domain controllers by using the following specifications:</p>
+
+<ul class="sbody-free_list">
+	<li>The filter list specifies traffic going from the IP address on DC1 to the IP address on DC2 (mirrored), subnet masks 255.255.255.255, all protocols, and all ports. You may want to add a rule to the IPSec policy to exempt ICMP traffic from IPSec security negotiation if Ping is used to verify network connectivity to the remote system through the firewall. Otherwise, connectivity can be verified by a network sniff that shows IKE traffic (ISAKMP, UDP port 500) being sent and received from the DC to the other DC IP address.<br>
+	<br>
+	<br>
+	A network address translator (NAT) must not be used to change addresses or modify packets between the domain controllers that require IPSec protection between them.<br>
+	&nbsp;</li>
+	<li>Under <span class="text-base">Tunnel Setting</span>, click <strong class="uiterm">This rule does not specify an IPSec tunnel</strong> so that it uses Transport mode.</li>
+	<li>Select <span class="text-base">Use Certificate</span> for the authentication method. You can use Kerberos, see the following note.</li>
+	<li>Create a custom filter action by clearing the <span class="text-base">Accept Unsecured Communication</span> and <span class="text-base">Allow Unsecured Communication</span> check boxes and specifying the appropriate data encryption method by using the ESP format of IPSec. Network adaptors that perform IPSec per-packet encryption in hardware are needed in each domain controller so that IPSec encryption does not consume all the computer&#39;s CPU cycles.</li>
+</ul>
+<span class="text-base">Note</span> The initial release (build 2195) of Windows 2000 does not protect IKE, Kerberos, or RSVP traffic using IPSec transport filters. If Kerberos is used as the IPSec rule authentication method to protect domain controller-to-domain controller traffic instead of certificates, the firewall also must allow Kerberos traffic to go through. This must be a default setting. Windows 2000 Service Pack 1 provides IPSec with the capability of protecting Kerberos and RSVP traffic.<br>
+<div class="indent"><span><a href="/en-us/help/253169" id="kb-link-5">253169 </a> Traffic that can--and cannot--be secured by IPSec</span><br>
+&nbsp;</div>
+</div>
+<div class='kb-securedata-section section'>Content Maintenance Bug number: 34967</div><div class='kb-securedata-section section'>Author: romanoj (2000-02-21T16:11:00)<br><br>Edit Reviewer: davidg (2000-03-08T07:33:00)<br><br>Tech Reviewer: waynem (2000-03-08T07:09:00)<br></div>

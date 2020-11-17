@@ -1,0 +1,297 @@
+﻿<header><h1>ASMS – TA Only – JIT Edit Subscriptions</h1></header><div>
+<form action="/" id="form1" method="post">
+<p paraeid="{ccc924fe-3ba8-4d3d-a7b7-b7ca3c402d8a}{62}" paraid="1475424209">Submit a <a href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder=" rel="noreferrer" target="_blank">ModTrack</a> request to update this TSG. &nbsp;</p>
+</form>
+</div>
+
+<div>
+<form action="/" id="form1" method="post">
+<h3 aria-level="3" paraeid="{ccc924fe-3ba8-4d3d-a7b7-b7ca3c402d8a}{77}" paraid="885932212" role="heading"><strong>Known Issues&nbsp;</strong></h3>
+</form>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td><strong>Date</strong></td>
+			<td><strong>Issue</strong></td>
+			<td><strong>Approved Workaround</strong></td>
+			<td><strong>Date Resolved</strong></td>
+		</tr>
+		<tr>
+			<td>03/23/2018</td>
+			<td>If there is a PUID mismatch (orphaned account), the operation will fail. ASE-EEE is currently working on getting this fixed.</td>
+			<td>Engage ASE to get the subscription enabled and then disabled.</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<form action="/" id="form1" method="post">
+<h3 aria-level="3" paraeid="{ccc924fe-3ba8-4d3d-a7b7-b7ca3c402d8a}{250}" paraid="113253930" role="heading"><strong><a id="Overview" name="Overview"></a>Overview &nbsp;</strong></h3>
+
+<p paraeid="{ccc924fe-3ba8-4d3d-a7b7-b7ca3c402d8a}{254}" paraid="324134690">This TSG provides instructions for Technical Advisors (TAs) to enable or disable subscriptions using JIT commands.&nbsp;</p>
+</form>
+</div>
+
+<div>
+<h3 lang="EN-US"><strong><a id="Policy" name="Policy"></a>Policy &nbsp;</strong></h3>
+
+<form action="/" id="form1" method="post">
+<p paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{22}" paraid="616161340">This is to be used when performing a data migration where the source subscription cannot be re-enabled from commerce (by any means). The subscription must be disabled as soon as the migration is complete.&nbsp;</p>
+
+<p paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{36}" paraid="2039089931">This is the ONLY scenario where TAs would use this operation.&nbsp;<br>
+&nbsp;<br>
+The subscription enable and disable operations require <a href="https://internal.support.services.microsoft.com/en-us/help/3004901/azure-support---jit-access" rel="noreferrer" target="_blank">JIT access</a> (instructions and specific parameters for request appear in support steps).&nbsp;</p>
+</form>
+
+<h3 lang="EN-US"><span lang="EN-US"></span><strong><a id="SupportScenarios" name="SupportScenarios"></a>Support Scenarios &nbsp;</strong></h3>
+
+<form action="/" id="form1" method="post">
+<ol>
+	<li paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{58}" paraid="1730226858">Start a&nbsp; <a data-content-id="" data-content-type="" href="https://jitaccess.security.core.windows.net/" managed-link="" rel="noreferrer" target="_blank">JIT Access Request</a> using following parameters: &nbsp;&nbsp;
+
+	<ol start="1" style="list-style-type:lower-alpha">
+		<li paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{70}" paraid="1050899323">ResourceType: ACIS&nbsp;</li>
+		<li paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{75}" paraid="1490667265">Scope: Billing&nbsp;</li>
+		<li paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{80}" paraid="222975953">Access Level: PlaformServiceOperator<br>
+		<strong>Note</strong>: This is auto-approved for TAs.&nbsp;</li>
+	</ol>
+	</li>
+	<li paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{89}" paraid="545615389">Open <a href="https://jarvis-west.dc.ad.msft.net/?page=actions&amp;acisEndpoint=Public" rel="noreferrer" target="_blank">Jarvis</a>.&nbsp;</li>
+	<li paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{99}" paraid="865922384">Run the appropriate operation to enable or disable the subscription:&nbsp;</li>
+</ol>
+
+<p paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{110}" paraid="347689705"><strong><a id="Operation" name="Operation"></a>Operation</strong></p>
+
+<p paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{116}" paraid="615413397"><strong>Jarvis &gt;&nbsp;Billing &gt;&nbsp;Provisioning Management&nbsp;&gt;&nbsp;Azure - Enable Subscription in Azure</strong></p>
+
+<p paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{116}" paraid="615413397"><span asset="4564365" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4564365]</span></p>
+
+<p paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{127}" paraid="1390019868"><strong>Jarvis &gt; Billing&nbsp;&gt;&nbsp;Provisioning Management&nbsp;&gt;&nbsp;Azure - Disable Subscription in Azure</strong></p>
+
+<p paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{127}" paraid="1390019868"><span asset="4564367" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4564367]</span></p>
+
+<p paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{133}" paraid="285406040"><strong>Jarvis &gt; Billing &gt; Provisioning Management &gt; Provisioning - Resynchronize Subscription</strong></p>
+
+<p paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{133}" paraid="285406040"><strong><span asset="4564370" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4564370]</span></strong></p>
+</form>
+
+<p lang="EN-US"><strong><a id="ExpectedOutput" name="ExpectedOutput"></a>Expected Output&nbsp;</strong></p>
+</div>
+
+<form action="/" id="form1" method="post">
+<blockquote>
+<p paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{150}" paraid="1269933851">Successfully created work item to disable subscription &lt;<em>SubGUID</em>&gt;&nbsp;</p>
+</blockquote>
+
+<p paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{160}" paraid="1838515193">This does not immediately enable or disable the subscription. The operation creates a job which could take up to 10 minutes to change the subscription status.&nbsp;</p>
+</form>
+
+<form action="/" id="form1" method="post">
+<ul>
+	<li paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{210}" paraid="374659595">This operation is run on RDFE and the subscription status is cascaded to Azure Resource Manager (ARM).&nbsp;</li>
+	<li paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{210}" paraid="374659595">After running the operation, if you see the status change in RDFE but not in ARM, run a sync operation (Azure Resource Manager &gt; Subscription State Management &gt; Synchronize subscription from RDFE).&nbsp;</li>
+	<li paraeid="{ee78208d-a59e-40b3-8a1b-aafef49bb0aa}{210}" paraid="374659595">This operation will not work for ARM-only subscriptions, e.g., CSP (-145P) and Student/Imagine Offer (144P). Engage ASMS Systems Engineering (ASE) for assistance with these types of subscriptions.&nbsp;</li>
+	<li paraeid="{4bc889ae-a62c-48db-8550-c331cf7394f0}{40}" paraid="1997045997">Disabling a subscription this way will work only if it was also enabled using this operation. If the subscription was not enabled using the enable operation above, then a disable operation will create a job, but the subscription status will not change.&nbsp;</li>
+	<li paraeid="{4bc889ae-a62c-48db-8550-c331cf7394f0}{77}" paraid="474418277">This operation will fail if the field IsProtected: is set to TRUE. Engage ASE, who will work with RDFE to resolve. Again, a job will be created, but the subscription status will not change.&nbsp;<br>
+	&nbsp;</li>
+</ul>
+
+<p paraeid="{4bc889ae-a62c-48db-8550-c331cf7394f0}{77}" paraid="474418277"><strong><span><a id="CircularSOT" name="CircularSOT"></a>Update Subscription Tenant ID (Circular SOT Scenarios)</span></strong></p>
+
+<p>A<span> circular SOT is an SOT from account A to B, and then back from B to A.&nbsp; When this is performed, the Subscription Tenant ID does not <span>automatically </span>change and causes access issues for customers. This functions as designed. </span></p>
+
+<p>A<span>void performing a circular SOT, if possible. However, if it is unavoidable, there are two paths to <span>resolve customer access issues</span>:</span></p>
+
+<ul>
+	<li><strong>Internal </strong>AIRS customers -&nbsp; The&nbsp;<span>TA&nbsp;must update the tenant ID</span><span>. </span></li>
+	<li><strong>External </strong><span>customers - The TA can add a co-SA to the subscription and then the user can perform the directory change. </span></li>
+</ul>
+
+<p><strong><span>Note</span></strong><span>:</span><strong><span> </span></strong><span>Use CMAT to get the correct Tenant ID for the account from the <strong>Account</strong> tab &gt; <strong>AAD Tenant ID.</strong></span></p>
+
+<p><strong><span>External Subscriptions</span></strong></p>
+
+<ul>
+	<li>The Account Administrator (AA)/Global Admin of the tenant where the subscription resides must add the new AA as a guest account in the tenant. If the customer encounters difficulties with this, engage&nbsp;the Cloud Identity team for assistance.</li>
+	<li>Once the new AA is added as a guest account, they&nbsp;must&nbsp;access the Ibiza portal under the subscription&#39;s current service tenant and change the tenant from Azure Portal to the new desired tenant.
+	<ul style="list-style-type:circle">
+		<li>This can be done in the <em>Subscriptions </em>blade by navigating to&nbsp;<strong>Overview &gt; Change Directory</strong>.</li>
+	</ul>
+	</li>
+</ul>
+
+<p><strong><span>Internal AIRS Subscriptions</span></strong><span>&nbsp;</span><br>
+Before updating the Tenant ID for an AIRS subscriptions where the customer is moving from a&nbsp;<em>microsoft.onmicrosoft.com</em> tenant to another tenant, you must first&nbsp;check for Express Route services by doing the following:&nbsp;</p>
+
+<ol start="1">
+	<li>Validate if there&nbsp;is an Express Route virtual network present within the subscription.
+	<ul>
+		<li>
+		<p>The Express Route virtual network extends the on-premises CORPNET network into Azure.</p>
+		</li>
+		<li>
+		<p>The Express Route network has a specific naming convention <strong><span>&ldquo;NAME-TYPE-LOCATION-VNET-NUMBER&quot;</span></strong>.&nbsp;</p>
+		</li>
+		<li>
+		<p>There are a number of types of express routes&nbsp;(DB, InetApp, Lab and PvtApp) and the trailing number will be 1 to 5 numerical digits.&nbsp;For example <strong><span>&ldquo;Contoso-LAB-WUS2-VNET-1234&rdquo;</span></strong>.</p>
+		</li>
+	</ul>
+	</li>
+	<li>From the Azure Portal select the&nbsp;subscription needing the tenant move.&nbsp;</li>
+	<li>Select the <strong>Resource</strong> and sort the <strong>T<em><strong>ype</strong> </em></strong>backwards (Z-A).&nbsp; Check&nbsp;if there are Types like&nbsp;<em>Virtual network</em><strong> or </strong><em>ERNetwork&nbsp;</em>that matches the naming convention from above.</li>
+</ol>
+
+<p class="indent-1"><span asset="4570125" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4570125]</span></p>
+
+<p class="indent-1"><span asset="4570127" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4570127]</span></p>
+
+<ol start="4">
+	<li>
+	<p>If a vnet is present, the requestor has two choices as Express Route networks are not permitted outside the microsoft.onmicrosoft.com:</p>
+
+	<ul>
+		<li>Delete all resources behind the vnet, then delete the vnet, then move.</li>
+		<li>Do not move tenants and stay where they are.</li>
+	</ul>
+	</li>
+</ol>
+
+<p class="indent-1"><strong><span>Note: There are no exceptions for this policy as it is a security violation.</span> </strong>If additional assistacne is need, TAs (only)&nbsp;can email&nbsp;<a data-content-id="" data-content-type="" href="mailto:tmccdir@microsoft.com" managed-link="" target="_blank">Tom McCleery Directs</a>.&nbsp;</p>
+
+<ol start="5">
+	<li><span>Once you have checked all of the above steps, follow the below steps to update the Subscription Tenant ID via Jarvis (JIT only):</span>
+
+	<ol start="1" style="list-style-type:lower-alpha">
+		<li><strong>Jarvis &gt; Billing &gt; Provisioning Management &gt; Azure - Update Subscription Tenant&nbsp;Id- Internal Only&nbsp;</strong></li>
+		<li><span><strong>JIT</strong>: (Myaccess group permissions required - CAB ACIS Customer - 18162)</span></li>
+		<li><strong><span>Scope</span></strong><span> &gt; <strong>Billing</strong></span></li>
+		<li><strong><span>Access Level</span></strong><span> &gt; <strong>PlatformServiceOperator</strong></span></li>
+	</ol>
+	</li>
+</ol>
+
+<p class="indent-1"><span asset="4564373" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4564373]</span></p>
+
+<h4><span><span><span><span>Enabling Azure subscriptions that are disabled in RDFE and ARM due to Migration Status 3 but are active in CP</span></span></span></span></h4>
+
+<p><span><span><strong><span><span><span>Note:</span></span></span></strong><span><span><span> These subscriptions have a Migration Status of 3, which means that in CMAT, all three statuses should be active: Azure Subscription, Entitlement, and Fulfillment Status.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>In Jarvis, run the <em>Get subscription details</em> operation to check a subscription&#39;s state. If the output of this operation is<strong> &ldquo;</strong>SubscriptionStatus=Disabled,&rdquo; and &ldquo;MigrationStatus=3,&rdquo; this means that the subscription started a migration but failed. Follow the below process to enable the subscription.</span></span></span></span></span></p>
+
+<ol>
+	<li>
+	<p><span><span><span><span><span>Engage ASE to check for any dependencies on the flag. If they approve resetting the Migration Status to 0, continue to step 2.</span></span></span></span></span></p>
+	</li>
+	<li>
+	<p><span><span><span><span><span>Get JIT access by using </span></span></span><span><a href="https://jitaccess.security.core.windows.net/"><span><span>this tool</span></span></a></span><span><span><span> as a Superuser.</span></span></span></span></span></p>
+	</li>
+	<li>
+	<p><span><span><span><span><span>Navigate to </span></span></span><span><a href="https://jarvis-west.dc.ad.msft.net/7D26D2FC?genevatraceguid=c4bf3415-dc8b-4058-805f-27947cc4d333"><span><span>ACIS</span></span></a></span><span><span><span>.</span></span></span></span></span></p>
+	</li>
+	<li>
+	<p><span><span><span><span>Navigate to <strong>AzureRT &gt; Subscription Management &gt; Reset Subscription Migration Status (TSQ)</strong> and fill out the fields as follows:</span></span></span></span></p>
+
+	<ul style="list-style-type:disc">
+		<li>
+		<p><span><span><span><span>Subscription: Azure subscription ID</span></span></span></span></p>
+		</li>
+		<li>
+		<p><span><span><span><span>Approver: alias of the user who is performing the changes, and the reviewer alias</span></span></span></span></p>
+		</li>
+		<li>
+		<p><span><span><span><span>Approver Link: SR number</span></span></span></span></p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><span><span><span><span>Click <strong>Run</strong>. This will reset the migration status to 0.</span></span></span></span></p>
+	</li>
+	<li>
+	<p><span><span><span><span>Navigate to <strong>AzureRT &gt; Subscription Management &gt; Enable Subscription</strong> and fill out the fields as follows:</span></span></span></span></p>
+
+	<ul style="list-style-type:disc">
+		<li>
+		<p><span><span><span><span>Subscription: Azure subscription ID</span></span></span></span></p>
+		</li>
+		<li>
+		<p><span><span><span><span>Acc Admin Puid: existing Account admin PUID</span></span></span></span></p>
+		</li>
+		<li>
+		<p><span><span><span><span>Acc Admin Emailid: existing Account admin email address</span></span></span></span></p>
+		</li>
+		<li>
+		<p><span><span><span><span>Approver: alias of the user who is performing the changes, and the reviewer alias</span></span></span></span></p>
+		</li>
+		<li>
+		<p><span><span><span><span>Approver Link: SR number </span></span></span></span></p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><span><span><span><span>Click <strong>Run</strong>. This will enable the Azure subscription in AzureRT.</span></span></span></span></p>
+	</li>
+	<li>
+	<p><span><span><span>If the Azure subscription is still disabled in ARM, perform an RDFE to ARM sync.</span></span></span></p>
+	</li>
+</ol>
+
+<p><span><span><strong><span><span><span>Note:</span></span></span></strong><span><span><span> For additional guidance, see the </span></span></span><span><a href="https://dev.azure.com/msazure/AzureWiki/_wiki/wikis/AzureWiki.wiki/45632/Issue-Failed-to-enable-Subscription?anchor=mitigate-to-enable-subscription"><span><span>Azure Wiki</span></span></a></span><span><span><span>.</span></span></span></span></span></p>
+
+<h3><strong><a id="EngagementandEscalationPath" name="EngagementandEscalationPath"></a>Engagement and Escalation Path </strong>&nbsp;</h3>
+
+<p paraeid="{4bc889ae-a62c-48db-8550-c331cf7394f0}{132}" paraid="788899161">Follow the guidance in <a href="https://internal.support.services.microsoft.com/en-us/help/3093263" managed-link="" target="_blank">TSG 3093263</a> (ASE Engagement) for errors or in the cases noted above.&nbsp;</p>
+</form>
+
+<h3><strong><a id="TSGChangeLog" name="TSGChangeLog"></a>TSG Change Log</strong></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td><strong>Date</strong></td>
+			<td><strong>Updated By</strong></td>
+			<td><strong>Content Updated</strong></td>
+		</tr>
+		<tr>
+			<td>03/26/2018</td>
+			<td>v-matm</td>
+			<td>
+			<p>Comprehensive Rewrite: Updated TSG content and formatting as part of the TSG Refresh Project.&nbsp;<br>
+			Removed instructions for old processes.<br>
+			Added new Jarvis commands and escalation information. &nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>10/01/2019</td>
+			<td>v-ruclar</td>
+			<td>Updated Circular SOT process. MT 2425</td>
+		</tr>
+		<tr>
+			<td>03/27/2020</td>
+			<td>v-ishan</td>
+			<td>Updated process for External customers under Update Subscription Tenant ID as per ModTrack 2759.</td>
+		</tr>
+		<tr>
+			<td>5/27/2020</td>
+			<td>mievan</td>
+			<td>Updated operation screenshots to align to new UI.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>06/15/2020</td>
+			<td>v-ishan</td>
+			<td>Updated steps for updating subscription tenant ID for External Subscriptions as per ModTrack 2918.</td>
+		</tr>
+		<tr>
+			<td>06/26/2020</td>
+			<td>mievan</td>
+			<td>Added guidance on checking Express Route before moving an AIRS tenant.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>07/09/2020</td>
+			<td>v-ishan</td>
+			<td>Added Support Scenario on&nbsp;
+			<p>Enabling Azure subscriptions that are disabled in RDFE and ARM due to Migration Status 3 but are active in CP as per ModTrack 3013.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>

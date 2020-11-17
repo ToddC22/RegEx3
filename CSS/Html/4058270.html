@@ -1,0 +1,692 @@
+﻿<header><h1>Technical Guide: Surface: BitLocker</h1></header><p><span asset="4049349" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4049349]</span></p>
+
+<h3><strong>Who should use this article<span><span><span>?</span></span></span></strong></h3>
+
+<ul>
+	<li><span><span><span>Surface</span></span></span></li>
+</ul>
+
+<h3><strong><span><span><span>What is this article about? </span></span></span></strong></h3>
+
+<ul>
+	<li><span><span><span>This article will help you address common BitLocker issues that your customer may</span></span></span> <span><span><span>encounter.</span></span></span>&nbsp;<span><span><span>This Technical Guideline should be used any time you work with a customer to resolve their BitLocker issue.</span></span></span></li>
+</ul>
+
+<h3><strong><span><span><span><span><a id="top" name="top"></a>Table of contents</span></span></span></span></strong></h3>
+
+<p>Issues covered by this document include:</p>
+
+<ul>
+	<li><a bookmark-id="prompted" href="#prompted" managed-link=""><span><span><span>Prompted for BitLocker recovery key</span></span></span></a></li>
+	<li><a bookmark-id="recovery" href="#recovery" managed-link=""><span><span><span>Recovery key (where to find, how to use)</span></span></span></a></li>
+	<li><a bookmark-id="how" href="#how" managed-link=""><span><span><span>How to manage BitLocker</span></span></span></a></li>
+	<li><span><span><span><a bookmark-id="problems" href="#problems" managed-link="">Problems using BitLocker</a>&nbsp;<a id="prompted" name="prompted"></a></span></span></span></li>
+</ul>
+<h3>Confirming the issue</h3>
+
+<p>When the customer turns on the device, it continuously prompts for a recovery key. After entering the key, the device&nbsp;may not boot.</p>
+
+<p><span asset="4345725" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4345725]</span></p>
+
+<h4><span><span><span><span>Confirmation/paraphrase </span></span></span></span></h4>
+
+<p><em>&nbsp;&ldquo;Just to make sure I understand your issue, when you turn on your Surface you are always asked to enter a BitLocker Recovery Key.&rdquo;</em></p>
+
+<h3>How to code</h3>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true"><span><span><span><span>Windows OS &gt; Security / Privacy / Accounts &gt; BitLocker &gt; Prompted for BitLocker Recovery Key</span></span></span></span><span><span><span> </span></span></span></p>
+	</li>
+</ul>
+
+<h3>Resolution steps</h3>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Step</span></span></strong></span></p>
+			</td>
+			<td width="35%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>How</span></span></strong></span></p>
+			</td>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Why</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p><span>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.<span> </span></span></p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7"><span><span><span>Notes template:</span></span></span></p>
+
+			<ul>
+				<li class="CxSpLast">
+				<p><span><span>Check known issues &gt;&gt;</span></span></p>
+				</li>
+				<li>
+				<p><span>BMR is being used &gt;&gt;</span></p>
+				</li>
+				<li>
+				<p><span>System update was installed &gt;&gt;</span></p>
+				</li>
+			</ul>
+			</td>
+			<td width="32%">
+			<p><span>This ensures a consistent format for capturing and reviewing case information. Performing this standard procedure helps prevent instances where a step was neglected to be performed.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>2. Check known issues.</span></span></span></p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7"><span><span><span>From </span></span><span><span>KB </span></span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4072657/" target="_blank">4072657 Surface known issues Landing Page</a><span><span>, select</span></span><span><span> the customer&rsquo;s Surface model and check for the issue.</span></span></span></p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>Check known issues regularly.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>3. Is the customer attempting to reimage their device using a Surface recovery image (BMR) drive?</span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span>If yes, follow the steps in <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4023512/surface-creating-and-using-a-usb-recovery-drive" target="_blank">Creating and using a USB recovery drive</a>.</span></p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>If the customer is using a recovery drive, the BitLocker key is unnecessary to provide since the recovery image will erase the drive anyway.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p><span>4. Is the device being prompted for a BitLocker recovery key after installing updates to Surface UEFI or TPM firmware?</span></p>
+			</td>
+			<td width="35%">
+			<p><span>If yes, follow the steps in KB <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4057282/" target="_blank">4057282 Prompted for BitLocker recovery key after installing updates to Surface UEFI or TPM firmware on Surface device</a>.</span></p>
+			</td>
+			<td width="32%">
+			<p><span>If the device recently took a UEFI or TPM update, there is a small chance that a customer could see the following symptoms under the right conditions:</span></p>
+
+			<ul>
+				<li>
+				<p><span><span>At startup, you are prompted for your BitLocker recovery key, and you enter the correct recovery key, but Windows doesn&rsquo;t start up.</span></span></p>
+				</li>
+				<li>
+				<p><span><span>You boot directly into the Surface Unified Extensible Firmware Interface (UEFI) settings.</span></span></p>
+				</li>
+				<li>
+				<p><span>Your Surface device appears to be in an infinite reboot loop.</span></p>
+				</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><span><strong>Is the issue resolved?</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><strong><span><span>Yes, close the case</span></span></strong><span><span>: Once resolved, have the customer check for updates.</span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span>For SDT enabled sites, let the customer know about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" target="_blank">Surface Diagnostic Toolkit</a>.</span></p>
+
+			<p><span>For all other sites, <strong>check Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</span></p>
+
+			<p><span>KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4014334" target="_blank">4014334 Process: Using the Microsoft Surface Diagnostic Toolkit</a></span></p>
+			</td>
+			<td width="32%">
+			<p><span>Making sure Surface and Windows are up to date may help avoid this problem in the future.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p><span><strong>No, escalate the case</strong>: Work with a Tech Lead to make sure all necessary information is captured prior to escalation.</span></p>
+			</td>
+			<td width="35%">
+			<p>&nbsp;</p>
+			</td>
+			<td width="32%">
+			<p><span>A Tech Lead may be able to assist further.</span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a>&nbsp;<a id="recovery" name="recovery"></a></p>
+<h3>Confirming the issue</h3>
+
+<p>When the customer turns on the device, it is locked out and prompts for a recovery key. There are several reasons that might make a PC go into recovery mode. For example, your organization might have a password security policy that locks you out after a certain number of failed attempts to sign in. Or, perhaps your PC encountered a hardware malfunction, an unexpected configuration change, or another security event. Requiring a recovery key helps ensure that only an authorized person can unlock your PC and restore access to your encrypted<span><span><span><span> data.</span></span></span></span></p>
+
+<p><span asset="4345725" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4345725]</span></p>
+
+<h4><span><span><span><span>Confirmation/paraphrase </span></span></span></span></h4>
+
+<p>&nbsp;<em>&ldquo;Just to make sure I understand your issue, you are prompted to enter the BitLocker recovery key, but you don&rsquo;t know where to find it?&rdquo;</em></p>
+
+<h3>How to code</h3>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true"><span><span><span><span>Windows OS &gt; Security / Privacy / Accounts &gt; BitLocker &gt; Recovery Key (where to find, how to use)</span></span></span></span><span><span><span> </span></span></span></p>
+	</li>
+</ul>
+
+<h3>Resolution steps</h3>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="27%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Step</span></span></strong></span></p>
+			</td>
+			<td width="45%">
+			<p align="center" class="MsoHeading7"><span><strong><span>How</span></strong></span></p>
+			</td>
+			<td width="27%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Why</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p><span>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.<span> </span></span></p>
+			</td>
+			<td width="45%">
+			<p class="MsoHeading7"><span><span><span>Notes template:</span></span></span></p>
+
+			<ul>
+				<li class="CxSpMiddle">
+				<p><span><span>Check known issues &gt;&gt;</span></span></p>
+				</li>
+				<li class="CxSpMiddle">
+				<p><span><span>BitLocker recovery key site &gt;&gt;</span></span></p>
+				</li>
+				<li class="CxSpMiddle">
+				<p><span><span>Using MSA? &gt;&gt;</span></span></p>
+				</li>
+				<li class="CxSpMiddle">
+				<p><span><span>Using an offline account?&gt;</span></span></p>
+				</li>
+				<li class="CxSpMiddle">
+				<p><span><span>Using an organizational account? &gt;&gt;</span></span></p>
+				</li>
+				<li class="CxSpMiddle">
+				<p><span><span>Recover from a drive &gt;&gt;</span></span></p>
+				</li>
+			</ul>
+			</td>
+			<td width="27%">
+			<p><span>This ensures a consistent format for capturing and reviewing case information. Performing this standard procedure helps prevent instances where a step was neglected to be performed.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p><span><em>2</em>. Check known issues.</span></p>
+			</td>
+			<td width="45%">
+			<p><span>From KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4072657/" target="_blank">4072657 Surface known issues Landing Page</a>, select the customer&rsquo;s Surface model and check for the issue.</span></p>
+			</td>
+			<td width="27%">
+			<p class="MsoHeading7"><span><span><span>There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</span></span></span></p>
+
+			<p><span>Check known issues regularly.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p class="MsoHeading7"><span><span><span>3. Guide the customer to the BitLocker recovery key site.</span></span></span></p>
+			</td>
+			<td width="45%">
+			<p class="MsoHeading7"><span><span><span>On another device, have the customer sign in to the following site, </span></span><span><span><a data-content-id="" data-content-type="" href="https://account.microsoft.com/devices/recoverykey" target="_blank">https://account.microsoft.com/devices/recoverykey</a></span></span><span><span> to locate their recovery key. </span></span></span></p>
+
+			<p><span>Try searching the older site if the recovery key is not visible: <a data-content-id="" data-content-type="" href="https://onedrive.live.com/RecoveryKey" target="_blank">https://onedrive.live.com/RecoveryKey</a></span></p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="27%">
+			<p class="MsoHeading7"><span><span><span>If the customer completed OOBE by using a Microsoft account, the recovery key is automatically saved to that Microsoft account as part of the automatic enablement of BitLocker. </span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>If the recovery key is not found on the site, they may not be using the Microsoft account that first completed OOBE on the device. </span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>If there are multiple Microsoft accounts being used on the device, the customer will need to have the owner of the other accounts sign in to the site to see if the recovery key was saved to their account instead.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p><span>4. Is the customer locked out of their MSA?</span></p>
+			</td>
+			<td width="45%">
+			<p><span>Have the customer go to the <a data-content-id="" data-content-type="" href="http://go.microsoft.com/fwlink/?LinkId=238656" target="_blank">Reset your password</a> page to resolve problems with their Microsoft account.</span></p>
+			</td>
+			<td width="27%">
+			<p class="MsoHeading7"><span><span><span>The customer will need to unlock their MSA.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p><span>5. Did the customer complete OOBE using an offline account?</span></p>
+			</td>
+			<td width="45%">
+			<p><span>If the customer used an offline account&nbsp;and enabled BitLocker, they would have three&nbsp;options to save their recovery key:</span></p>
+
+			<ul>
+				<li>
+				<p><span><strong>Save to your Microsoft account</strong>.</span><br>
+				<br>
+				<span>The customer needs to Sign in with a Microsoft account. If they did this, by changing their account settings on the device, the key will be saved under the Microsoft account they used.</span></p>
+				</li>
+			</ul>
+
+			<ul>
+				<li>
+				<p><span><strong>Save to a file.&nbsp;</strong></span><br>
+				<br>
+				<span>The customer can save the recovery key to file that is not on the drive being encrypted. E.g. a USB flash drive. If they did this, they need to locate where they saved the file.</span></p>
+				</li>
+				<li>
+				<p><span><strong>Print the recovery key.</strong> The customer can print the key to sheet of paper. If they did this, they need to locate that printout.</span></p>
+				</li>
+			</ul>
+			</td>
+			<td width="27%">
+			<p class="MsoHeading7"><span><span><span>If the customer elected to use an offline account using OOBE, BitLocker is not automatically enabled. When the customer goes to enable it, they will be asked to save the recovery key. There are three options to select from, that will determine where the recovery key is stored.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p><span>6. Did the customer complete OOBE using an organizational account?</span></p>
+			</td>
+			<td width="45%">
+			<p><span>Redirect the customer to an IT administrator for the customer&#39;s organization.</span></p>
+			</td>
+			<td width="27%">
+			<p><span>If the customer selected <strong>Set up for an organization</strong> or the device was already connected to their company&rsquo;s domain, their recovery key may not be listed under their Microsoft account.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p><span>7. Recover from a drive.</span></p>
+			</td>
+			<td width="45%">
+			<p><span>The customer will need to <a data-content-id="" data-content-type="" href="https://support.microsoft.com/surfacerecoveryimage" target="_blank">download a recovery image for their Surface</a> and boot from it by using a USB drive. When prompted for the recovery key, they must select <strong>Skip this drive</strong>.</span></p>
+
+			<p><span>All information on the drive will be erased.</span></p>
+			</td>
+			<td width="27%">
+			<p><span>If the customer is unable to locate the BitLocker recovery key, there is no other mechanism to unlock the drive.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><span><strong>Is the issue resolved?</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p class="MsoHeading7"><span><strong><span><span>Yes, close the case</span></span></strong><span><span>: Once resolved, have the customer check for updates.</span></span></span></p>
+			</td>
+			<td width="45%">
+			<p><span>For SDT enabled sites, let the customer know about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" target="_blank">Surface Diagnostic Toolkit</a>.</span></p>
+
+			<p><span>For all other sites, <strong>check Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</span></p>
+
+			<p><span>KB <a href="https://internal.support.services.microsoft.com/help/4014334">4014334 Process: Using the Microsoft Surface Diagnostic Toolkit</a></span></p>
+			</td>
+			<td width="27%">
+			<p><span>Making sure Surface and Windows are up to date may help avoid this problem in the future.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p><span><strong>No, escalate the case</strong>: Work with a Tech Lead to make sure all necessary information is captured prior to escalation.</span></p>
+			</td>
+			<td width="45%">
+			<p>&nbsp;</p>
+			</td>
+			<td width="27%">
+			<p><span>A Tech Lead may be able to assist further.</span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a>&nbsp;<a id="how" name="how"></a></p>
+<h3>Confirming the issue</h3>
+
+<p>The customer wants to suspend protection, back up their recovery key, turn off or on BitLocker.</p>
+
+<h4><span><span><span><span>Confirmation/paraphrase </span></span></span></span></h4>
+
+<p><em>&nbsp;&ldquo;Just to make sure I understand your issue, you would like to&hellip;&rdquo;</em></p>
+
+<ul>
+	<li>
+	<p><em>&ldquo;...suspend BitLocker protection.&rdquo;</em></p>
+	</li>
+	<li>
+	<p><em>&nbsp;&ldquo;...backup the recovery key.&rdquo;</em></p>
+	</li>
+	<li>
+	<p><em>&ldquo;...turn off/on BitLocker protection.&quot;</em></p>
+	</li>
+</ul>
+
+<h3>How to code</h3>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true"><span><span><span><span>Windows OS &gt; Security / Privacy / Accounts &gt; BitLocker &gt; How to manage BitLocker</span></span></span></span><span><span><span> </span></span></span></p>
+	</li>
+</ul>
+
+<h3>Resolution steps</h3>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="27%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Step</span></span></strong></span></p>
+			</td>
+			<td width="45%">
+			<p align="center" class="MsoHeading7"><span><strong><span>How</span></strong></span></p>
+			</td>
+			<td width="27%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Why</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p><span>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.<span> </span></span></p>
+			</td>
+			<td width="45%">
+			<p class="MsoHeading7"><span><span><span>Notes template:</span></span></span></p>
+
+			<ul>
+				<li class="CxSpMiddle">
+				<p><span><span>Check known issues &gt;&gt;</span></span></p>
+				</li>
+				<li class="CxSpMiddle">
+				<p><span><span>Use BitLocker Control Panel &gt;&gt;</span></span></p>
+				</li>
+			</ul>
+			</td>
+			<td width="27%">
+			<p><span>This ensures a consistent format for capturing and reviewing case information. Performing this standard procedure helps prevent instances where a step was neglected to be performed.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p><span><em>2</em>. Check known issues.</span></p>
+			</td>
+			<td width="45%">
+			<p><span>From KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4072657/" target="_blank">4072657 Surface known issues landing page</a>, select the customer&rsquo;s Surface model and check for the issue.</span></p>
+			</td>
+			<td width="27%">
+			<p class="MsoHeading7"><span><span><span>There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</span></span></span></p>
+
+			<p class="MsoHeading7"><span>Check known issues regularly.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p class="MsoHeading7"><span><span><span>3. Open the <strong>BitLocker Drive Encryption</strong> Control Panel.</span></span></span></p>
+			</td>
+			<td width="45%">
+			<p><span>Search for &ldquo;Manage BitLocker&rdquo; in Cortana&nbsp;or Windows Settings.</span></p>
+
+			<p><span>From this app, you can: </span></p>
+
+			<ul>
+				<li>
+				<p><span><span><strong>Suspend protection</strong>. This will temporarily turn off BitLocker protection. If the customer does not manually enable it again, it will resume automatically the next time they restart the PC.</span></span></p>
+				</li>
+				<li>
+				<p><span><span><strong>Back up your recovery key</strong>. The customer can save the recovery key to their online account, save to a file, or print the recovery key. file that is not on the drive being encrypted. For example, a USB flash drive. If they did this, they need to locate where they saved the file.</span></span></p>
+				</li>
+				<li>
+				<p><span><span><strong>Turn off BitLocker</strong>. This will permanently disable BitLocker and decrypt the drive.</span></span></p>
+				</li>
+				<li>
+				<p><span><span><strong>Turn on BitLocker.</strong> This will enable BitLocker and encrypt the drive.</span></span></p>
+				</li>
+			</ul>
+			</td>
+			<td width="27%">
+			<p><span><span>Customers don&rsquo;t commonly need to modify any of these settings for Surface devices, but depending on how they went through OOBE, they may need to manually enable BitLocker.</span></span></p>
+
+			<p><span><span>You can run the admin PowerShell command <strong>manage-bde c: -protectors -get</strong> to view the recovery key for advanced troubleshooting purposes. For back up purposes, we recommend the customer use the available options in the BitLocker control panel</span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><span><strong>Is the issue resolved?</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p class="MsoHeading7"><span><strong><span><span>Yes, close the case</span></span></strong><span><span>: Once resolved, have the customer check for updates.</span></span></span></p>
+			</td>
+			<td width="45%">
+			<p><span>For SDT enabled sites, let the customer know about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" target="_blank">Surface Diagnostic Toolkit</a>.</span></p>
+
+			<p><span>For all other sites, <strong>check Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</span></p>
+
+			<p><span>KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4014334" target="_blank">4014334 Process: Using the Microsoft Surface Diagnostic Toolkit</a></span></p>
+			</td>
+			<td width="27%">
+			<p><span>Making sure Surface and Windows are up to date may help avoid this problem in the future.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p><span><strong>No, escalate the case</strong>: Work with a Tech Lead to make sure all necessary information is captured prior to escalation.</span></p>
+			</td>
+			<td width="45%">
+			<p>&nbsp;</p>
+			</td>
+			<td width="27%">
+			<p><span>A Tech Lead may be able to assist further.</span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a>&nbsp;<a id="problems" name="problems"></a></p>
+<h3>Confirming the issue</h3>
+
+<p>The customer is experiencing a problem trying to suspend, turn on, or turn off BitLocker.</p>
+
+<h4><span><span><span><span>Confirmation/paraphrase </span></span></span></span></h4>
+
+<p><em>&ldquo;Just to make sure I understand your issue, you are experiencing a problem trying to suspend BitLocker protection&rdquo; OR back up the recovery key, OR turn off/on BitLocker protection?&rdquo;</em></p>
+
+<h3>How to code</h3>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true"><span><span><span><span>Windows OS &gt; Security / Privacy / Accounts &gt; BitLocker &gt; Problems using BitLocker</span></span></span></span><span><span><span> </span></span></span></p>
+	</li>
+</ul>
+
+<h3>Resolution steps</h3>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="27%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Step</span></span></strong></span></p>
+			</td>
+			<td width="45%">
+			<p align="center" class="MsoHeading7"><span><strong><span>How</span></strong></span></p>
+			</td>
+			<td width="27%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Why</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p><span>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.<span> </span></span></p>
+			</td>
+			<td width="45%">
+			<p class="MsoHeading7"><span><span><span>Notes template:</span></span></span></p>
+
+			<ul>
+				<li class="CxSpMiddle">
+				<p><span><span>Check known issues &gt;&gt;</span></span></p>
+				</li>
+				<li class="CxSpMiddle">
+				<p><span>System update was installed &gt;&gt;</span></p>
+				</li>
+			</ul>
+			</td>
+			<td width="27%">
+			<p><span>This ensures a consistent format for capturing and reviewing case information. Performing this standard procedure helps prevent instances where a step was neglected to be performed.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p><span><em>2</em>. Check known issues.</span></p>
+			</td>
+			<td width="45%">
+			<p><span>From KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4072657/" target="_blank">4072657 Surface known issues Landing Page</a>, select the customer&rsquo;s Surface model and check for the issue.</span></p>
+			</td>
+			<td width="27%">
+			<p class="MsoHeading7"><span><span><span>There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</span></span></span></p>
+
+			<p class="MsoHeading7"><span>Check known issues regularly.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p class="MsoHeading7"><span><span><span>3. Is the device being prompted for BitLocker recovery key after installing updates to Surface UEFI or TPM firmware.</span></span></span></p>
+			</td>
+			<td width="45%">
+			<p><span>Go to the &ldquo;<a bookmark-id="prompted" href="#prompted" managed-link="">Prompted for BitLocker Recovery Key</a>&rdquo; section of&nbsp;this article.</span></p>
+			</td>
+			<td width="27%">
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><span><strong>Is the issue resolved?</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p class="MsoHeading7"><span><strong><span><span>Yes, close the case</span></span></strong><span><span>: Once resolved, have the customer check for updates.</span></span></span></p>
+			</td>
+			<td width="45%">
+			<p><span>For SDT enabled sites, let the customer know about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" target="_blank">Surface Diagnostic Toolkit</a>.</span></p>
+
+			<p><span>For all other sites, <strong>check Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</span></p>
+
+			<p><span>KB <a href="https://internal.support.services.microsoft.com/help/4014334">4014334 Process: Using the Microsoft Surface Diagnostic Toolkit</a></span></p>
+			</td>
+			<td width="27%">
+			<p><span>Making sure Surface and Windows are up to date may help avoid this problem in the future.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="27%">
+			<p><span><strong>No, escalate the case</strong>: Work with a Tech Lead to make sure all necessary information is captured prior to escalation.</span></p>
+			</td>
+			<td width="45%">
+			<p>&nbsp;</p>
+			</td>
+			<td width="27%">
+			<p><span>A Tech Lead may be able to assist further.</span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<div>
+<p>&nbsp;</p>
+</div>
+<p><strong><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span>&nbsp;December 2018</strong></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><strong><span><span><span>Item</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><strong><span><span><span>Title</span></span></span></strong></span></p>
+			</td>
+			<td width="58">
+			<p><span><strong><span><span><span>Date</span></span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/151723">Content Tracking 151723</a></p>
+			</td>
+			<td>Surface: Project: Update references to advocate</td>
+			<td width="58">03/17/2020</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/140039" role="heading">Content Tracking 140039</a></td>
+			<td>Project: Surface Consumer Content Request - bulk edit to tech guide instructions - &quot;Resolution steps&quot;</td>
+			<td width="58">2/14/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/138508" role="heading">Content Tracking 138508</a></td>
+			<td>PROJECT: Surface: SPM Only Consumer CPC Content Request - update Resolution steps text - 3203673</td>
+			<td width="58">12/31/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/131530" role="heading">Content Tracking 131530</a></td>
+			<td>Surface: Consumer CPC Content Tracking Request - Update Bitlocker TG for slimf ...&nbsp;</td>
+			<td width="58">7/16/2018</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><a href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems?id=123797&amp;fullScreen=false&amp;_a=edit" target="_self"><span><span><span>Content Tracking 123797</span></span></span></a></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Add Speak Up Express asset box for the articles in portals 423 and 421 </span></span></span></span></p>
+			</td>
+			<td width="58">
+			<p><span><span><span><span>1/16/2018</span></span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>

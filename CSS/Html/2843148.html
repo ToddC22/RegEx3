@@ -1,0 +1,675 @@
+﻿<header><h1>ASMS – How to Enable the Invoice Payment Option</h1></header><p>&nbsp;<span lang="EN">Submit a </span><span lang="EN"><a data-content-id="" data-content-type="" href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder=" target="_blank">ModTrack</a></span><span lang="EN"> request to update this TSG.</span></p>
+
+<h3><strong><a id="Overview" name="Overview"></a>Overview</strong></h3>
+
+<p>This TSG provides guidance on how to assist customers who are requesting to be moved from credit card (CC) to Invoice mode of payment.</p>
+
+<p><strong>Applies to:</strong> Business Accounts only.</p>
+
+<h3><strong><a id="Policy" name="Policy"></a>Policy</strong></h3>
+
+<ul>
+	<li>
+	<p>When a customer wants to be moved to Invoice as a mode of payment, a credit check must be completed by the <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2647567" managed-link="" target="_blank">Global Financial Services (GFS)</a>&nbsp;team.</p>
+	</li>
+	<li>
+	<p>Once a customer switches to Invoice payment, they cannot switch back to credit card payment.</p>
+	</li>
+	<li>
+	<p><span>Failure to engage GFS&nbsp;before enabling a customer for Invoice could result in billing/account issues later.&nbsp;</span></p>
+	</li>
+	<li>
+	<p>Only customers who have Business Accounts are eligible for Invoice mode of payment. However, not all companies/businesses will be approved.</p>
+
+	<ul style="list-style-type:circle">
+		<li>
+		<p>Individual customers without an associated Company/Business name cannot be switched to Invoice as a form of payment.</p>
+		</li>
+		<li>
+		<p>If there are any past due balances on the account, the user needs to settle them via wire payment before they can be approved for Invoice.</p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p>Customer&#39;s may receive a <em>switch PI to invoice pay failing&nbsp;error &quot;Credit Check Required&quot;</em>, when attempting to switch to invoice via the portal, despite being approved and whitelisted.&nbsp;</p>
+
+	<ul style="list-style-type:circle">
+		<li>
+		<p>This is due to the&nbsp;customer&#39;s usage increasing, after being approved for Invoice Pay. When this happens, the customer will need to be re-approved at a higher&nbsp;limit (higher than pending charges), <strong>or </strong>the pending charges must be cleared using CC&nbsp;method of payment first.</p>
+		</li>
+		<li>
+		<p>In CMAT you will see the error message:&nbsp;&quot;Invoice is not allowed for this order. Amount is above credit check threshold&quot;.&nbsp;</p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p>When a requested balance on the customer&#39;s account is higher than the threshold amount, an error will appear stating that the &quot;Invoice is not allowed for this order. Amount is above credit check threshold&quot;. There are two options to resolve this issue:&nbsp;</p>
+	</li>
+	<li>
+	<p>Customers on a Free Trial should not be moved to Invoice. This is a requirement from the Business Group (BG) to avoid fraud. In these scenarios, inform new customers not to activate a Free Trial after they&#39;ve already been whitelisted for Invoice Payment.</p>
+	</li>
+	<li>
+	<p>As a pre-requisite for moving to Invoice, Brazil and India customers must have their&nbsp;Tax ID&nbsp;registered in CMAT, because that is now part of the GFS process for these customers.</p>
+	</li>
+	<li>
+	<p>When performing an SOT to a new account admin from the same tenant (A@abc.com to B@abc.com) you don&rsquo;t need to get GFS approval, you can whitelist the new account for invoice. If the SoT is to a different tenant, all normal rules apply and permission must be attained.</p>
+
+	<ul style="list-style-type:circle">
+		<li>
+		<p>When whitelisting the new account admin in CMAT, be sure to note the original admins email so we have tracking of the whitelisting for GFS review later.</p>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<h3><strong>Support Scenarios</strong></h3>
+
+<p class="MsoNoSpacing">There are two scenarios in which a customer can be moved to Invoice mode of payment:</p>
+
+<p class="MsoNoSpacing"><strong>Scenario 1</strong>: They are an existing customer requesting&nbsp;to move to Invoice with a potential credit increase (Excludes Step 4a from below process).</p>
+
+<p><strong>Scenario 2</strong>:&nbsp; They are a new customer requesting to sign up for an Azure account using Invoice instead of credit card (Includes Step 6b from below process).</p>
+
+<p>Before whitelisting a customer for Invoice, it is important to verify that the account meets the proper requirements. First, consult the below table:</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td><strong>Criteria</strong></td>
+			<td><strong>Result</strong></td>
+		</tr>
+		<tr>
+			<td>Is customer a business entity?&nbsp;</td>
+			<td>If not, they are not eligible for Invoice PI.</td>
+		</tr>
+		<tr>
+			<td>Is the AA, Order ID and Commerce Account ID on template?</td>
+			<td>If not, note that GFS may send the task back, because&nbsp;they may be unsure as to whether they have identified the correct customer via CMAT.</td>
+		</tr>
+		<tr>
+			<td><span>Does the AA or Contact email ID match the company tenant in CMAT?</span></td>
+			<td>If not, GFS will require a confirmation email from a person under the company&nbsp;tenant to confirm that the subscription belongs to the company.</td>
+		</tr>
+		<tr>
+			<td>Do the company name and address match the legal document on the&nbsp;government website?</td>
+			<td>If not, have CX update the customer&#39;s Azure profile. Provide GFS with legal docs to show why these fields do not match or they will send the task back.</td>
+		</tr>
+		<tr>
+			<td>Did CX provide legal documents, such as a Company Registration and a Certificate of Incorporation, signed and issued by the government?</td>
+			<td>If not, GFS will likely send the task back and request these documents.</td>
+		</tr>
+		<tr>
+			<td>Does the&nbsp;customer have a working website?</td>
+			<td>If not, GFS will require HIT confirmation that CX does not have fraud activities. This also applies if CX is categorized as &quot;high risk&quot; on <a href="https://www.scamadviser.com/" managed-link="">https://www.scamadviser.com/</a>.</td>
+		</tr>
+		<tr>
+			<td>If CX is from Brazil or India, does CX have a Tax ID in CMAT?</td>
+			<td>GFS requires a Tax ID to approve Invoice PI for customers in those two countries.</td>
+		</tr>
+		<tr>
+			<td>If CX is from Europe, did CX provide a VAT ID?</td>
+			<td>GFS requires a VAT ID to approve Invoice PI for customers in Europe.</td>
+		</tr>
+		<tr>
+			<td>Does CX have outstanding payments or Writeoffs?</td>
+			<td>GFS will need the customer&#39;s payments to be current in order to proceed, including Marketplace and O365 items.</td>
+		</tr>
+		<tr>
+			<td>Is the CX company a brand new, recently established entity?</td>
+			<td>In such cases, GFS may require a 15K USD security deposit.</td>
+		</tr>
+		<tr>
+			<td>If CX company is an established company, does CX have at least 6 months of payment history with MS?</td>
+			<td>
+			<p>If not, GFS may require two&nbsp;years of audited, translated financial statements, which include&nbsp;the following information:</p>
+
+			<ul>
+				<li><span><span><span><span>Balance Sheet</span></span></span></span></li>
+				<li><span><span><span><span>Income Statement</span></span></span></span></li>
+				<li><span><span><span><span>Cash Flow</span></span></span></span></li>
+				<li><span><span><span><span>Auditor&rsquo;s Opinion</span></span></span></span></li>
+			</ul>
+
+			<p>The document form must be in PDF format.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><br>
+<span>With the above information in mind, follow the steps below to further determine if the customer is eligible for the Invoice mode of payment:</span></p>
+
+<p><strong>Step 1: </strong><strong>Inform the customer of the following</strong>.</p>
+
+<ul>
+	<li>
+	<p>It is <strong>not </strong>possible&nbsp;to return to credit card payment after changing to Invoice Payment.</p>
+	</li>
+	<li>
+	<p>Invoice Payment is available only for business accounts, not personal accounts.</p>
+	</li>
+	<li>
+	<p>All Billing information must be up to date before changing to Invoice Payment.</p>
+	</li>
+	<li>
+	<p>With Invoice Payment, Wire Transfers will be manually performed&nbsp;every month and bank fees might apply.&nbsp;</p>
+	</li>
+	<li>
+	<p>We will review the account to determine if it is eligible for Invoice Payment, but&nbsp;not all requests are approved.</p>
+	</li>
+</ul>
+
+<p class="ng-scope"><strong>Step 2: Verify that the address fields on the customer&rsquo;s Azure account are correct.</strong></p>
+
+<ul>
+	<li>
+	<p>The account must have a valid Address, City, State, Zip Code, and Country in CMAT.</p>
+
+	<ul style="list-style-type:circle">
+		<li>
+		<p>Under Customer Profile, the Company name will be highlighted in Blue. Select that link and make sure the user has filled out all the details of the company, not just the Customer Profile, they are different.&nbsp;</p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p>Company details are updated at the AAD profile details. One of the Global Admins of the tenant can update the profile by following these steps:</p>
+
+	<ol>
+		<li>
+		<p>Open the following link and login using Global Administrator credentials: <a href="https://admin.microsoft.com/Adminportal/#/companyprofile" managed-link="" target="_blank">https://admin.microsoft.com/Adminportal/#/companyprofile</a></p>
+		</li>
+		<li>
+		<p>Under <strong>Organization profile, </strong>click <strong>Edit</strong> and ensure all the fields are updated.&nbsp;</p>
+		</li>
+	</ol>
+	</li>
+</ul>
+
+<p><strong>Step 3: Gather the customer&rsquo;s company details.</strong></p>
+
+<ul>
+	<li>
+	<p>Ask the customer for the company website they are requesting the Invoice option for (if the information has not already been provided).</p>
+	</li>
+	<li>
+	<p>Find the business phone number listed on the website and include it in the engagement template to GFS. GFS will reach out to the company to confirm any additional information as needed.</p>
+	</li>
+	<li>
+	<p>If the customer&rsquo;s request came from a Hotmail, Gmail, or another generic email address, request their business email address, so you can email and receive a response from their business account. This is to confirm the legitimacy of the business.</p>
+	</li>
+</ul>
+
+<p class="indent-1"><strong>Note</strong>: If the customer made the request using a business email address, then this step is not required. A business email can be defined as an email containing the requestors name followed by the company name (Ex: <a data-content-id="" data-content-type="" href="mailto:johndoe@companyname.com" target="_blank">johndoe@companyname.com</a>).</p>
+
+<ul>
+	<li>
+	<p>Verify the VAT ID (The company name must be the same in the VAT registration and in the CMAT portal). See TSG <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2646862/azuresmsgeneraladmingeneralqahowtohowtoaddedittaxid" target="_blank">2646862</a><strong> </strong>for steps on how verify, add, or edit the VAT ID.</p>
+	</li>
+	<li>
+	<p>VAT ID is only required when applicable and is only for <strong>European Union (EU) customers</strong>. If the customer does not have a VAT ID listed in CMAT, omit this from the engagement template with GFS.</p>
+	</li>
+</ul>
+
+<p><strong>Note</strong>: If there are any circumstances where the requested information cannot be provided, ask the customer to submit legal documentation of the company or proof where we can validate the relationship between the information provided and the legality&nbsp;of the company. &nbsp;</p>
+
+<p>For all businesses except for individuals, we require the below documents:</p>
+
+<ul>
+	<li>
+	<p>A Certificate of Incorporation signed by the company&rsquo;s legal representatives&#8203;</p>
+	</li>
+	<li>
+	<p>Any Government issued documents having the company name and address. (i.e., Tax Certification) &#8203;&ndash; <em>Example: </em><em>Employer Identification Number (EIN) Letter Confirmation from Internal Revenue Service (IRS)</em></p>
+	</li>
+	<li>
+	<p>Company Registration form signed and issued by the government&#8203;</p>
+	</li>
+</ul>
+
+<p>For Government Agencies, below are example documents that can be submitted:</p>
+
+<ul style="list-style-type:disc" type="disc">
+	<li>
+	<p>Tax Exemption Certificate</p>
+	</li>
+	<li>
+	<p>VAT Return</p>
+	</li>
+	<li>
+	<p>Federal Record or Registration</p>
+	</li>
+	<li>
+	<p>Tax Identification Number (TIN) Record issued by Internal Revenue Department</p>
+	</li>
+	<li>
+	<p>Budget Report</p>
+	</li>
+	<li>
+	<p>Orders of the Court</p>
+	</li>
+</ul>
+
+<p><strong>Note</strong>: Do not proceed with the next step until the customer&rsquo;s company can be validated.</p>
+
+<p><strong>Step 4: </strong><strong>Is the customer caught in a billing loop and so cannot move to Invoice PI?</strong></p>
+
+<p>The GFS team will not approve a customer for Invoice PI if they have outstanding payments so you may receive a case from a customer who <em>wants</em> to move to Invoice PI but can only pay by wire pay or check or bank transfer. By the time their payment arrives and is applied to their Microsoft account, another bill has already been issued due to the timeframes involved.</p>
+
+<p>In order to prevent the customer from getting stuck in a cycle of trying to clear their outstanding payments, which prevents them from moving to Invoice&nbsp;PI, use the following process:</p>
+
+<ul class="indent-1">
+	<li>Once you have Proof of Payment from the customer, open the following two Collab tasks to GFS:</li>
+</ul>
+
+<ol>
+	<li class="indent-1">Cash Apps team &ndash; Open a task to them with proof of payment and indicating the customer intends to move to Invoice PI.</li>
+	<li class="indent-1">Credit Risk team &ndash; At the same time, open a task to validate if customer is eligible for Invoice PI and clearing stating that a task has been sent to Case Apps team for customer outstanding payment.</li>
+</ol>
+
+<p><strong>Note: </strong>This scenario only applies to customer wanting to move to Invoice PI and not for customers who just do a one-time payment with check or wire and wish to stay on credit card PI.</p>
+
+<p><strong>Step 5: Engage GFS to perform a credit check.</strong></p>
+
+<p>Send a Task to&nbsp;<strong>GCS Incoming - Credit Check</strong>&nbsp;queue so they can do a simple Credit Check. Include the following information:</p>
+
+<ol>
+	<li><strong>Task Title:</strong>&nbsp;Invoice Whitelisting | Company Name | Customer Name</li>
+	<li>Credit Check details:&nbsp;</li>
+</ol>
+
+<p class="indent-1"><u><strong>To be provided by the Customer</strong></u></p>
+
+<ol>
+	<li class="indent-1">Company Name:&nbsp;</li>
+	<li class="indent-1">Company Address:&nbsp;</li>
+	<li class="indent-1">Request Type (CC to Invoice PI, Cores/CL Increase):&nbsp;</li>
+	<li class="indent-1">For Quota Request - <em>Total Requested Cores (Old Quota plus Additional Quota)</em>:&nbsp;</li>
+	<li class="indent-1">Order ID/ Subscription GUID:&nbsp;</li>
+	<li class="indent-1">Account Admins Live ID:&nbsp;</li>
+	<li class="indent-1">Contact Email Address:&nbsp;</li>
+	<li class="indent-1">Business Justification:&nbsp;</li>
+</ol>
+
+<ul>
+	<li class="indent-2">Reason for why they prefer Invoice PI (For CC to Invoice PI request):</li>
+	<li class="indent-2">Reason for additional cores (For Cores/CL Increase request):</li>
+</ul>
+
+<p class="indent-1"><u><strong>To be provided by ASMS</strong></u></p>
+
+<ol class="indent-2">
+	<li class="indent-1">Account&rsquo;s backend system (CMAT or CST): This is to<em>&nbsp;identify what customer portal the team will use to match customer details provided.</em></li>
+	<li class="indent-1">If credit card customer, do they want to move to invoice?:<strong> </strong><em>GFS Risk team credit checks invoice customers requesting Quota Increases.</em></li>
+	<li class="indent-1">Commerce Account ID <em>(not required if both Order ID/Subs ID and Account Live ID are given):</em><strong><em> &nbsp;</em></strong><em>This is useful if there are multiple search results via live ID (i.e. only Live ID provided and no order/subs ID).&nbsp;</em></li>
+</ol>
+
+<p class="indent-1"><u><strong>Notes</strong></u></p>
+
+<ul>
+	<li class="indent-2">
+	<p>For <em>India country, GSTIN</em> is required in the customer&#39;s portal.</p>
+	</li>
+	<li class="indent-2">
+	<p>For <em>accounts that were previously approved</em> for credit check by GFS Risk Team, ASMS team can provide the below items as reference:</p>
+
+	<ul style="list-style-type:circle">
+		<li class="indent-2">
+		<p>Order ID/Live IDs of approved account.</p>
+		</li>
+		<li class="indent-2">
+		<p>Service Desk Case #.</p>
+		</li>
+	</ul>
+	</li>
+	<li class="indent-2">
+	<p>The customer must add their <em>billing contact</em> in the customer portal before their credit limit can be approved. Also,&nbsp;the contact details should be related to the customer&rsquo;s AP/Finance department.</p>
+	</li>
+	<li class="indent-2">
+	<p>For customers requesting a quota increase where the credit limit exceeds $15k, a simple Credit Check is required. Engage GFS by following the <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2834676" target="_blank">Quota Increase Guidelines</a> .</p>
+	</li>
+	<li class="indent-2">
+	<p>Does the customer&rsquo;s request require a higher credit limit than what is currently posted in CMAT? If so, include a request to increase the customer&rsquo;s credit limit in the GFS ticket.</p>
+	</li>
+	<li class="indent-2">
+	<p>If a customer tries to make a purchase above their existing credit threshold, their account status will show as <strong>Pending</strong> in CMAT until the customer contacts support and we work with GFS to get a credit limit increased. (Ex: Customer is approved for $15,000 a month, and attempts to make a $25,000 a month purchase, the subscription will be put in a pending status.)</p>
+	</li>
+</ul>
+
+<p><strong>Note: </strong>A customer may request a Non-Disclosure Agreement (NDA) when asked to provide financial statements, in these instances do the following:</p>
+
+<div>
+<div>
+<ol>
+	<li><span><span>Ask the customer to provide the following details (if not already provided).</span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span>Company Name:</span></li>
+	<li class="indent-1"><span>Complete Address details:</span></li>
+	<li class="indent-1"><span>Company/Individual Signatory Details:</span></li>
+	<li class="indent-1"><span>Name:</span></li>
+	<li class="indent-1"><span>Email Address:</span></li>
+	<li class="indent-1"><span>Business Title:</span></li>
+	<li class="indent-1"><span>AM Contact/Account Manager, MS Contact:</span></li>
+</ul>
+
+<ol start="2">
+	<li><span><span>Engage GFS (GCS Incoming - Credit Check) and inform them that the customer has requested an NDA.</span></span></li>
+</ol>
+
+<p><strong>Step 5a: (Scenario 1 Only) Update the credit limit via CMAT based on the response from GFS. </strong></p>
+</div>
+</div>
+
+<ol>
+	<li>
+	<p><strong>&nbsp;</strong>If the credit increase is approved, inform the customer and update the credit limit via CMAT.</p>
+
+	<ul>
+		<li>
+		<p>Review the home page to see the new credit threshold.</p>
+		</li>
+		<li>
+		<p>Check the <strong>check box</strong> to complete the prompt.</p>
+		</li>
+		<li>
+		<p>On next screen you&rsquo;ll be prompted to enter the <strong>Service Request</strong> number from <span asset="4497459" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4497459]</span>.</p>
+		</li>
+		<li>
+		<p>Click the <strong>Invoice credit threshold</strong> button on the Payment Instrument sections of CMAT.</p>
+		</li>
+	</ul>
+	</li>
+</ol>
+
+<ol start="2">
+	<li>
+	<p>If GFS approves the Invoice Payment option but denies the increased credit limit, inform the customer and proceed with whitelisting the customer&rsquo;s account. Be sure to inform the customer of the denial of the credit increase and suggest the following Security Deposit.</p>
+	</li>
+</ol>
+
+<p class="indent-1"><strong>Note</strong>: A Security Deposit is offered to customers if the requested credit line is above the auto approved threshold or if the financial analysis conducted did not meet the requested credit limit. This deposit may be refunded or applied towards any outstanding AR balance once good payment history is established. Good payment is defined as having both of the following:</p>
+
+<ul class="indent-6">
+	<li class="MsoNoSpacing indent-1">
+	<p>No past due invoices within six (6) months</p>
+	</li>
+</ul>
+
+<ul>
+	<li class="MsoNoSpacing indent-1">
+	<p>Less than 30% of the approved monthly credit limit spent for 3 consecutive months</p>
+	</li>
+</ul>
+
+<ol start="3">
+	<li>
+	<p>If GFS denies the Invoice Payment request, inform the customer and advise them that they will need to continue using CC mode of payment.</p>
+	</li>
+</ol>
+
+<div>
+<p><strong>Step 6: Add the Customer to Invoice Whitelist</strong>.<br>
+If GFS approves the Invoice Payment request, add the account to Invoice Whitelist by following the steps below:</p>
+</div>
+
+<ol>
+	<li>
+	<p>Log into CMAT (using the Azure option, not the O365 option).</p>
+	</li>
+	<li>
+	<p>In the top right corner of CMAT you will see a tab called <strong>Quick Access</strong>, click the drop-down and select <strong>Manage Invoice Pre-Approval List</strong>.</p>
+	</li>
+	<li>
+	<p>&nbsp;Allow-listing must be done for both CAID and org/live ID (MSA).</p>
+	</li>
+</ol>
+
+<p class="indent-1">For legacy accounts, use <em>CMAT:</em></p>
+
+<ol start="1" style="list-style-type:lower-alpha">
+	<li class="indent-1">
+	<p>Enter the Account.</p>
+	</li>
+	<li class="indent-1">
+	<p>Click <strong>Quick access</strong>.</p>
+	</li>
+	<li class="indent-1">
+	<p>Select <strong><em>M<em>a</em>nage invoice pre-approval</em></strong>&nbsp;&gt;&nbsp;Allow-list twice (for both CAID and org/live ID).</p>
+	</li>
+</ol>
+
+<p class="indent-1">For modern accounts, use <em>CST:</em></p>
+
+<ol start="1" style="list-style-type:lower-alpha">
+	<li class="indent-1">
+	<p>Enter the Account.</p>
+	</li>
+	<li class="indent-1">
+	<p>Click <strong>Miscellaneous.</strong></p>
+	</li>
+	<li class="indent-1">
+	<p>Click <strong>PI Update.</strong></p>
+	</li>
+</ol>
+
+<ol start="4">
+	<li>
+	<p>On the next screen, you will need to add the <strong>Service Request (SR) #</strong> of the case and then select the <strong>check mark</strong> to complete the process.</p>
+	</li>
+</ol>
+
+<p class="indent-1"><strong>Note</strong>: You should get a blue banner at the top of CMAT noting the success of the action. If you receive an error, it should give details as to why it failed.</p>
+
+<div>
+<div>&nbsp;<strong>S</strong><strong>tep 6a: Have the customer apply the Invoice Payment option to their account. </strong></div>
+</div>
+
+<ol>
+	<li>
+	<p>Request the customer to log into the Azure portal and set up the Invoice PI option, using the steps below.</p>
+
+	<ol style="list-style-type:lower-alpha">
+		<li class="ng-scope">
+		<p>Log into the Microsoft Azure Portal with your Account at <a href="https://portal.azure.com/" managed-link=""><span>https://portal.azure.com/</span></a>.</p>
+		</li>
+		<li class="ng-scope">
+		<p>Click <strong>Subscriptions </strong>and select the subscription you would like to update a payment method on.</p>
+		</li>
+		<li class="ng-scope">
+		<p>Under the <em>Billing Profile </em>menu, click <strong>Payment Methods</strong>.</p>
+		</li>
+		<li class="ng-scope">
+		<p>A banner will appear confirming the customer&#39;s eligibility to pay by check/wire transfer. Click on it.</p>
+		</li>
+		<li>
+		<p>Select <strong>Use Instead</strong> and then click <strong>Save</strong> to change to the invoice payment method.</p>
+		</li>
+	</ol>
+	</li>
+	<li>
+	<p>Once the Invoice Payment mode is applied, the customer will receive monthly email notifications letting them know their Invoice is ready to download in the Azure portal (<a href="https://portal.azure.com/" managed-link=""><span>https://portal.azure.com/</span></a>). The customer should then download the Invoice and make payment(s) as indicated on the Invoice.</p>
+	</li>
+</ol>
+
+<div>&nbsp;</div>
+
+<p class="indent-1"><strong>Note:</strong> If this still doesn&rsquo;t work, escalate to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2651579/azure-support-payops-engagement" target="_blank">PayOps</a> to use either CMAT or batch to help the customer receive the Invoice Payment option.<strong> </strong></p>
+
+<p><strong>Step 6b: <span>Check whether the customer has Requested charges in CMAT</span></strong></p>
+
+<p>When the customer switches a subscription to Invoice Pay and there is a charge in the Requested state, the charge moves from Credit Card to Invoice Pay immediately. However, the invoice that was generated for that charge before the switch does not include bank details for the wire transfer.</p>
+
+<p>If the customer has Requested charges, inform them that the latest invoice needs to be paid by bank transfer and manually provide them with the necessary bank details. These details can be found <a href="https://docs.microsoft.com/en-in/office365/admin/subscriptions-and-billing/pay-for-your-subscription?view=o365-worldwide">here</a>.</p>
+
+<p><strong>Step 6c: (Scenario 2 Only) Enable Invoice for a new customer during sign up (instead of credit card) </strong></p>
+
+<div>
+<div>
+<p>If the user doesn&#39;t have an account in OMS before you whitelist the ID, it won&#39;t be connected to anything. The result is that when the user logs in, they will not see the Invoice option when they try to make their subscription purchase. To avoid this issue, the customer must complete the following steps:</p>
+
+<ol>
+	<li>
+	<p>Log in to <a data-content-id="" data-content-type="" href="http://account.windowsazure.com/" target="_blank">http://account.azure.com</a>.</p>
+	</li>
+	<li>
+	<p>A message in the portal will appear stating &ldquo;Seems you have no subscriptions created yet&rdquo; or &ldquo;No subscription found&rdquo;.</p>
+	</li>
+	<li>
+	<p>Click on <strong>Add subscription. </strong></p>
+	</li>
+	<li>
+	<p>Complete the required fields and pass the Short Message Service (SMS) process.</p>
+	</li>
+	<li>
+	<p>Once the SMS is complete, exit out of the purchase process.</p>
+	</li>
+	<li>
+	<p>Log back in to your account and select the subscription offer you wish to purchase and proceed with purchase.</p>
+	</li>
+	<li>
+	<p>Invoice Pay should now be an available option under the list of payment methods.</p>
+	</li>
+</ol>
+
+<h4><strong>How to update the &ldquo;bill to&rdquo; address on an invoice:</strong></h4>
+
+<p class="MsoNoSpacing"><strong>Steps for the engineer:</strong></p>
+
+<ol>
+	<li>
+	<p>In CMAT, find the customer.</p>
+	</li>
+	<li>
+	<p>Click on <strong>Payment Instruction</strong>.</p>
+	</li>
+	<li>
+	<p>Click the drop down for <strong>Invoice Pay</strong>.</p>
+	</li>
+	<li>
+	<p>Click on <strong>Update Payment Instrument</strong>.</p>
+	</li>
+</ol>
+
+<h4><strong>How to update the &ldquo;sold to&rdquo; address on an Invoice:</strong></h4>
+
+<p class="ng-scope"><strong>Steps for the customer:</strong></p>
+
+<ol>
+	<li>
+	<p>Login to <a data-content-id="" data-content-type="" href="http://account.windowsazure.com/" target="_blank">http://account.azure.com</a>.</p>
+	</li>
+	<li>
+	<p>Click on <strong>Account</strong> tab.</p>
+	</li>
+	<li>
+	<p>Select <strong>Profile</strong>.</p>
+	</li>
+	<li>
+	<p>Click on <strong>Edit Profile</strong> and update the address.</p>
+	</li>
+</ol>
+
+<p class="ng-scope"><strong>Steps for the engineer:</strong></p>
+
+<ol>
+	<li>
+	<p>In CMAT, find the customer.</p>
+	</li>
+	<li>
+	<p>Click on <strong>Billing</strong> then select <strong>Order</strong>.</p>
+	</li>
+	<li>
+	<p>Click on <strong>Update Payment Instrument</strong>.</p>
+	</li>
+	<li>
+	<p>Make the proper adjustments needed.</p>
+	</li>
+</ol>
+</div>
+</div>
+
+<h3><strong>Engagement and Escalation Path</strong></h3>
+
+<p>For any issues encountered when whitelisting a customer, engage <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2651579/azure-support-payops-engagement" target="_blank">PayOps</a> for further guidance.</p>
+<h3><strong>TSG Change Log</strong></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="132">
+			<p><span><strong>Date </strong></span></p>
+			</td>
+			<td width="126">
+			<p><span><strong>Updated By </strong></span></p>
+			</td>
+			<td width="364">
+			<p><span><strong>Content Updated </strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">01/21/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added bullet to Policy section as per ModTrack 2633.</td>
+		</tr>
+		<tr>
+			<td width="132">01/22/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Updated Step 6a as per ModTrack 2635.</td>
+		</tr>
+		<tr>
+			<td width="132">02/18/2020</td>
+			<td width="126">v-katzma</td>
+			<td width="364">Added Step 6b per ModTrack 2674.</td>
+		</tr>
+		<tr>
+			<td width="132">03/16/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added pre-requisites to Policy section for India and Brazil customers.</td>
+		</tr>
+		<tr>
+			<td width="132">04/13/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Removed Policy bullet regarding&nbsp;Marketplace and other 3rd party services as per ModTrack 2758.</td>
+		</tr>
+		<tr>
+			<td width="132">04/21/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added GFS checklist as per ModTrack 2779.</td>
+		</tr>
+		<tr>
+			<td width="132">06/08/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added additional points about switching to Invoice Payment as per ModTrack 2854.</td>
+		</tr>
+		<tr>
+			<td width="132">6/18/2020</td>
+			<td width="126">kuharr</td>
+			<td width="364">Only a CAID can be used to Whitelist, the OrgID and LiveID don&#39;t always connect in the portal.&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">07/02/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Updated the team name Global Credit Services (GCS) to Global Financial Services (GFS) excluding&nbsp; queue names, which have not changed) per ModTrack 2939.</td>
+		</tr>
+		<tr>
+			<td width="132">07/20/2020</td>
+			<td width="126">mievan</td>
+			<td width="364">Updated credit check template.</td>
+		</tr>
+		<tr>
+			<td width="132">07/23/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">
+			<p>Replaced the link for &quot;Global Financial Services (GFS) team&quot; per ModTrack 3049.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">11/6/2020</td>
+			<td width="126">mievan</td>
+			<td width="364">Added <em>Policy </em>guidance on how to solve for&nbsp;switch PI to invoice pay failing&nbsp;error &quot;Credit Check Required&quot;.&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>

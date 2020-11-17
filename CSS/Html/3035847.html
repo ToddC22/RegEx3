@@ -1,0 +1,480 @@
+﻿<header><h1>ASMS – Account and Portal Sign-up and Sign-in Failures</h1></header><p><span lang="EN">Submit a </span><a href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder="><span lang="EN"><span><span>ModTrack</span></span></span></a><span lang="EN"> request to update this TSG.</span></p>
+
+<h3><a id="Known Issues" name="Known Issues"></a>Known Issues</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="122">
+			<p><span><strong>Date</strong></span></p>
+			</td>
+			<td width="226">
+			<p><span><strong>Issue</strong></span></p>
+			</td>
+			<td width="389">
+			<p><span><strong>Approved Workaround</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="122">
+			<p><span><span>0</span><span><span><span>1/17/2018</span></span></span></span></p>
+			</td>
+			<td width="226">
+			<p><span><span><span><span>Unable to use the military territory codes or payment instruments (PI) while signing up to Azure.</span></span></span></span></p>
+			</td>
+			<td width="389">
+			<p><span><span><span><span>For the military states (AE, AA, AP), the Activation and Validation System (AVS) expects that those states are also countries (state AE, country AE) while the drop-down shows them as states under country US (state AE, country US). The current behavior is by design and there is limited impact, so this new feature will not be introduced in the current billing system. In the past, we have suggested that ASMS notify the customer that there is a limitation for accepting payment instruments and addresses from the military territories and that customer should seek a PI based in one of the accepted US states.</span></span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h3><a id="Overview" name="Overview"></a>Overview</h3>
+
+<p class="ng-scope"><span><span><span><span>This TSG provides guidance and troubleshooting steps to assist customers who have trouble with the Azure Account sign-up process. </span></span></span></span></p>
+
+<p class="ng-scope"><strong><span><span><span>Examples:</span></span></span></strong></p>
+
+<ul>
+	<li>The customer tries to sign up for an Azure account or subscription but:
+	<ul style="list-style-type:circle">
+		<li>Has a payment setup problem on the payment type page.</li>
+		<li>Gets an undetermined failure or error when logging in.</li>
+		<li>Is declined due to risk.</li>
+		<li>Experiences other issues.</li>
+	</ul>
+	</li>
+	<li>Subscription status is pending in the Accounts portal.</li>
+	<li>The customer logs into the Account portal but doesn&#39;t see any subscriptions.</li>
+	<li>The account belongs to a directory that cannot be associated with an Azure subscription.</li>
+</ul>
+
+<h3><a id="Support Scenarios" name="Support Scenarios"></a>Support Scenarios</h3>
+
+<p>Follow these steps to assist your customer with sign up or sign in issues:</p>
+
+<ol>
+	<li>Send your standard scope email following the guidelines in <a href="https://internal.support.services.microsoft.com/en-us/help/2777192">TSG 2777192</a> (First Quality Response).</li>
+	<li>Gather these details from your customer:
+	<ul style="list-style-type:circle">
+		<li>Country</li>
+		<li>Error message screenshot</li>
+		<li>URL, UTC timestamp, and Network Trace</li>
+		<li>LiveID or OrgID</li>
+		<li>Payment type name (Amex, Visa, etc.)</li>
+	</ul>
+	</li>
+</ol>
+
+<h4><a id="Rule – Risk" name="Rule – Risk"></a>Rule &ndash; Risk</h4>
+
+<p><span><span><span>Sign up failed because the customer was blocked by Risk. There are several possible reasons for this decline. </span></span></span></p>
+
+<p><span><span><span><span>For more information, refer to</span></span></span></span><strong> </strong><a href="https://internal.support.services.microsoft.com/en-us/help/2658538/azure-sms-account-portal-subscription-art-team-engagement"><span><span>TSG 2658538</span></span></a> <span><span><span>(HIT Team Engagement).</span></span></span></p>
+
+<p><strong><span><span><span>Guidelines</span></span></span></strong><strong><span><span><span><span>:</span></span></span></span></strong> <a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/TSG0002%20-%20Risk.docx?d=wd62fff3c5d51453aa1df6936d788715b" managed-link="" target="_blank">Risk</a></p>
+
+<h4><a id="Rule – Comms Risk" name="Rule – Comms Risk"></a>Rule &ndash; Comms Risk</h4>
+
+<p><span><span><span>Sign up failed because commerce has rejected it. May be caused by two rules or errors: ActivityID and CommRisk.</span></span></span></p>
+
+<p><strong><span><span><span>Guidelines</span></span></span></strong><strong><span><span><span><span>: </span></span></span></span></strong><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/TSG0003%20-%20Comm%20Risk.docx?d=w0dc2b312d59a46bcbacb7833b3f728b7" managed-link="" target="_blank">Comm Risk</a></p>
+
+<h4><a id="Rule – Tenant Filtered" name="Rule – Tenant Filtered"></a>Rule &ndash; Tenant Filtered</h4>
+
+<p><span><span><span>Sign up fails because there are no tenants available or Azure cannot create tenants:</span></span></span></p>
+
+<ul>
+	<li><strong>UserDisabledInTenant</strong> &ndash; The user account is disabled in the tenant.</li>
+	<li><strong>AADDoesNotRecognizeTenant</strong> &ndash; The AAD does not recognize the tenant. This happens when the tenant was recently deleted.</li>
+	<li><strong>TenantRequiresMfa</strong> &ndash; Indicates the tenant requires users to enroll for MFA access, but the user has not yet enrolled.</li>
+	<li><strong>AccessDenied</strong> &ndash; The user is disabled or in a soft-delete state and does not have access to tenant.</li>
+	<li><strong>ViralTenant</strong> &ndash; The domain is <em>AdminManaged</em> and not verified.</li>
+	<li><strong>B2CTenant</strong> &ndash; Cannot sign up using B2C tenant.</li>
+</ul>
+
+<p><span><span><span>The most common issues are <em>ViralTenant</em>, <em>UserDisabledInTenant</em>, <em>AccessDenied</em>.</span></span></span></p>
+
+<p><strong>Note</strong>: Search by <strong>Activity Id</strong> if an issue is not identified by <strong>Email Id</strong>.</p>
+
+<p><strong><span><span><span>Guidelines: </span></span></span></strong><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/TSG0004%20-%20TenantFiltered.docx?d=w00a0a9b93416414294c2c4bc55361a4c" managed-link="" target="_blank">TenantFiltered</a></p>
+
+<h4><a id="Rule – Eligible Offerings" name="Rule – Eligible Offerings"></a>Rule &ndash; Eligible Offerings</h4>
+
+<p><strong>Eligible Offerings Result</strong> &ndash; The customer was unable to find an offering in the catalog. <span><span><span>Engage the appropriate team for assistance with the desired offers, whether they are available or not.</span></span></span></p>
+
+<p><strong><span><span><span>Example</span></span></span></strong><span><span><span>: The customer wanted to sign up for a Free Trial (44P), but the offer was not available. </span></span></span></p>
+
+<p><strong>ActivityID</strong> and <strong>Eligible Offerings Result</strong> &ndash; The customer used a link or tried to sign up directly.</p>
+
+<p><strong><span><span><span>Example</span></span></span></strong><span><span><span>: If the <strong>ActivityID</strong> rule contains <em>SignupDesideredOfferNotAvailable</em>&nbsp;the customer tried to sign up for the offer directly, but it is not available and was not returned by commerce.</span></span></span></p>
+
+<p><span><span><span><span>For more information, refer to</span></span></span></span><strong> </strong><a href="https://internal.support.services.microsoft.com/en-us/help/2646778/azure-sms-generaladmin-general-qa-how-to-how-to-purchase"><span><span>TSG 2646778</span></span></a><strong><span><span><span><span> </span></span></span></span></strong><span><span><span><span>(</span></span></span></span>How to Purchase<span><span>).</span></span></p>
+
+<p><strong><span><span><span>Guidelines: </span></span></span></strong><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/TSG0005%20-%20Eligible%20Offerings.docx?d=wec1c78616fcd4285941f296ffc063141" managed-link="" target="_blank">Eligible Offerings</a></p>
+
+<h4><a id="Rule – Blocked Mint Users" name="Rule – Blocked Mint Users"></a>Rule &ndash; Blocked Mint Users</h4>
+
+<p><strong><span><span><span>Blocked Mint User</span></span></span></strong><span><span><span> indicates the customer&rsquo;s account is still on the Mint system and access is blocked until it is migrated to the <span>Order Management System (</span>OMS) system.</span></span></span></p>
+
+<p><span><span><span><span>For more information, refer to</span></span></span></span><strong> </strong><span><span><a href="https://internal.support.services.microsoft.com/en-us/help/2820621/azure-support--management-portal-and-accounts-portal-authentication-ests---org-id-and-live-id">TSG 2820621</a>&nbsp;</span></span><span><span><span><span>(</span></span></span></span>Management portal and Accounts portal Authentication (eSTS - Org ID and Live ID)<span><span>).</span></span></p>
+
+<p><strong><span><span><span>Guidelines: </span></span></span></strong><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/TSG0006%20-%20BlockedMintUser.docx?d=w1be5f74cb54f4d1a80b71543a478add6" managed-link="" target="_blank">BlockedMintUser</a></p>
+
+<p>Advise the customer to retry the sign in process and proceed as appropriate:</p>
+
+<ul>
+	<li>Archive the case if the customer sign-in works and all their subscriptions are available.</li>
+	<li>If the customer sign in does not work or no subscriptions are available, troubleshoot the customer&rsquo;s error message with appropriate scenario below:<strong> </strong></li>
+</ul>
+
+<p><strong><span><span><span>Guidelines: </span></span></span></strong><a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/ASMS/ASMS%20Community%20Documents/VKBDocs/TSG0006%20-%20BlockedMintUser.docx?d=w1be5f74cb54f4d1a80b71543a478add6" managed-link="" target="_blank">BlockedMintUser</a></p>
+
+<h4><a id="Scenario - Customer Error or Bank Issue" name="Scenario - Customer Error or Bank Issue"></a>Scenario &ndash; Customer Error or Bank Issue</h4>
+
+<p><strong><span><span><span>Error Message</span></span></span></strong></p>
+
+<blockquote>
+<p><span><span><span>We cannot authorize the payment method. Please make sure the information is correct or use another payment method. If you continue to get this message, please contact your financial institution</span></span></span><span><span><span>.</span></span></span></p>
+</blockquote>
+
+<p><strong><span><span><span>Troubleshooting </span></span></span></strong></p>
+
+<p>Verify the following information with your customer:</p>
+
+<ol>
+	<li>Correct name, address, and postal code.<br>
+	<strong>Note for Argentina:</strong> Be sure to use the <em>C&oacute;digo Postal Argentine</em> (CPA) as the valid postal code for Azure billing. Customers can check <a href="http://www.correoargentino.com.ar/formularios/cpa">Consulta C&oacute;digo Postal Argentino</a> for their postal code.</li>
+	<li>If escalation to ASE is needed, be sure to include the information from step 1 when escalating the task.</li>
+	<li>Using a valid payment method and available credit for the transaction.<br>
+	<strong>Note:</strong> Pre-paid and expired cards are not valid forms of payment<span>.</span></li>
+</ol>
+
+<p><span><span><span>If this does not resolve the issue, advise the customer to contact their bank for assistance.</span></span></span></p>
+
+<h4><a id="Scenario - Platform Error" name="Scenario - Platform Error"></a>Scenario &ndash; Platform Error</h4>
+
+<p><strong><span><span><span>Error Message</span></span></span></strong></p>
+
+<blockquote>
+<p><span><span><span>Sorry! We could not complete the transaction using this payment method. Please contact support</span></span></span><span><span><span>.</span></span></span></p>
+</blockquote>
+
+<p><strong><span><span><span>Troubleshooting </span></span></span></strong></p>
+
+<p><span><span><span>Submit a ticket to </span></span></span><a href="https://internal.support.services.microsoft.com/en-us/help/2651579"><span><span>PayOps</span></span></a><span><span><span> with the above information gathered from the customer. Include a screenshot of the error message and network trace.</span></span></span></p>
+
+<h4><a id="Scenario – SMS Sign up Error" name="Scenario – SMS Sign up Error"></a>Scenario &ndash; SMS Sign up Error</h4>
+
+<p><strong><span><span><span>Error Message</span></span></span></strong></p>
+
+<blockquote>
+<p><span><span><span>Error code: SMS401</span></span></span></p>
+</blockquote>
+
+<p><strong><span><span><span>Note</span></span></span></strong><span><span><span>: May not be available in CMAT as it is not associated with any HIT blocks.</span></span></span></p>
+
+<p><strong><span><span><span>Troubleshooting </span></span></span></strong></p>
+
+<p><span><span><span>This error occurs when the customer tries to send the verification code multiple times after not receiving the code on the registered mobile number first.</span></span></span><span><span><span><br>
+Advise your customer to wait a minimum of three hours before they resume the sign-up process.</span></span></span><br>
+<span><span><span>If unsuccessful, proceed with basic troubleshooting and check for related HIT blocks.</span></span></span></p>
+
+<h4><a id="Scenario – Undetermined Error" name="Scenario – Undetermined Error"></a>Scenario &ndash; Undetermined Error</h4>
+
+<p><strong><span><span><span>Error Messages</span></span></span></strong></p>
+
+<blockquote>
+<ul>
+	<li>Sorry! We could not complete the operation. Please Contact Support.</li>
+	<li>Sorry, we could not complete the operation. Please try again later or reload the web page.</li>
+</ul>
+</blockquote>
+
+<p><strong><span><span><span>Troubleshooting</span></span></span></strong></p>
+
+<ol>
+	<li><span><span><span>Check the customer&#39;s Azure profile in CMAT to ensure all fields are complete.<br>
+	<strong>Note</strong>: Other error messages may not indicate a root cause for sign up failures.</span></span></span></li>
+	<li><span><span><span>Engage <a data-content-id="" data-content-type="" href="http://aka.ms/asecri" managed-link="" target="_blank">ASE via IcM</a>.</span></span></span></li>
+	<li><span><span><span>Provide all relevant data about the error condition, include a screenshot, network&nbsp;(F12) trace, exact date, and timestamp of when the error occurred.</span></span></span></li>
+</ol>
+
+<p><strong><span><span><span>Note</span></span></span></strong><strong><span><span><span><span>: </span></span></span></span></strong><span><span><span><span>U</span></span></span></span><span><span><span>se </span></span></span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2663762" managed-link="" target="_blank">TSG 2663762 (Network Trace Data)</a><span><span><span> to gather network traces from the customer.</span></span></span></p>
+
+<h4><a id="Scenario – Risk Decline" name="Scenario – Risk Decline"></a>Scenario &ndash; Risk Decline</h4>
+
+<p><strong><span><span><span>Error Messages</span></span></span></strong></p>
+
+<blockquote>
+<ul>
+	<li>Sorry, we could not complete the operation. Please try again later or reload the web page [OMS_6118].</li>
+	<li>Sorry, we could not complete the operation. Please try again later or reload the web page.</li>
+</ul>
+</blockquote>
+
+<p><strong><span><span><span>Troubleshooting</span></span></span></strong></p>
+
+<ol>
+	<li><span><span><span>Check the customer&#39;s Azure profile in CMAT to ensure all fields are complete.</span></span></span>
+
+	<ul style="list-style-type:circle">
+		<li><span><span><span><span>Additionally, in CMAT click the</span></span></span></span><strong><span><span><span><span> </span></span></span></span></strong><strong><span><span><span>Billing </span></span></span></strong><strong><span><span><span><span>tab &gt; </span></span></span></span></strong><strong><span><span><span>Declined Transactions</span></span></span></strong><strong> </strong><span><span>to</span></span> <span><span><span><span>s</span></span></span></span>how any RISK Decline<span>s</span>.</li>
+	</ul>
+	</li>
+	<li><span><span><span>Complete the template in the </span></span></span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2658538" managed-link="" target="_blank">TSG 2658538 (HIT Team Engagement)</a><span><span>.</span></span></li>
+	<li><span><span><span>Send a TFS ticket to request a review of the account titled <strong>Azure Services Commerce ART</strong>&nbsp;with the information gathered from the customer.</span></span></span>
+	<ul style="list-style-type:circle">
+		<li><span><span><span>HIT blocks (Risk Decline) may or may not be removed depending on their research protocols. HIT will provide email-ready content for you to use if the block is upheld.</span></span></span></li>
+	</ul>
+	</li>
+</ol>
+
+<p><span>During OMS account sign up, the email address field only accepts up to seven characters after the final period. If the customer has more than seven characters after last period, the customer must use another email address. </span></p>
+
+<p><strong><span>Example</span></strong><span>:<strong> </strong>This address is too long -<strong> </strong></span><a href="mailto:abc@xyz.consulting"><span><span>abc@xyz.consulting</span></span></a><span> (</span><a href="mailto:abc@xyz.12345678910">abc@xyz.12345678910</a><span>) </span></p>
+
+<h4><a id="Scenario – Subscription status is Pending in the account portal." name="Scenario – Subscription status is Pending in the account portal."></a>Scenario &ndash; Subscription Status is Pending in the Account Portal</h4>
+
+<p><strong><span><span><span>Error Message</span></span></span></strong></p>
+
+<blockquote>
+<p><span><span><span><span>None.</span></span></span></span></p>
+</blockquote>
+
+<p><strong><span><span><span>Troubleshooting</span></span></span></strong></p>
+
+<p><span><span><span>When verifying whether a customer&#39;s subscription is fully activated, you must check in CMAT <span>and</span> Jarvis before asking the customer to check in their portal.</span></span></span></p>
+
+<p><span><span><span>Unless all four statuses in CMAT and Jarvis show as&nbsp;<strong><span>Active</span></strong>, the subscription should not be considered fully active.</span></span></span></p>
+
+<ol>
+	<li>In Jarvis,&nbsp;check the <strong>Subscription Status</strong> as <strong>Active</strong> from the <strong>RDFE</strong> end:
+
+	<ul style="list-style-type:circle">
+		<li><strong>Billing/General Management/From Azure Subscription ID Get Subscription Info</strong></li>
+		<li>Subscription: <em>&lt;sub guid&gt;</em></li>
+		<li>If the output is <strong>processing: false</strong>,<strong> </strong>escalate to Azure Platform Technical Support (APTS) for MDS logs.</li>
+		<li>If the output is <strong>processing: true</strong>, escalate to CP to determine why the subscription is stuck in that state.</li>
+	</ul>
+	</li>
+	<li>Engage <a href="http://aka.ms/asecri" managed-link="" target="_blank">ASE via TFS</a>.</li>
+</ol>
+
+<p><span><span><span>Provide all relevant data about the error condition, include a screenshot of the pending state, login user details, and network (F12) trace, exact date, and timestamp of when the error occurred.</span></span></span></p>
+
+<ol>
+	<li><span><span><span>In CMAT &ndash; Ensure <strong>Subscriptions Status</strong>, <strong>Entitlement Status</strong>, and <strong>Fulfillment Status</strong> are all set to <strong><span>Active</span></strong>.</span></span></span></li>
+	<li><span><span><span>In Jarvis &ndash; Run <strong><span>AzureRT/Subscription Management/Get Subscription With Details</span></strong> to check for <strong><span>SubscriptionStatus: Active</span></strong><strong><span><span>.</span></span></strong></span></span></span></li>
+</ol>
+
+<p><strong><span><span><span>Note</span></span></span></strong><strong><span><span><span><span>: </span></span></span></span></strong><span><span><span><span>U</span></span></span></span><span><span><span>se </span></span></span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2663762" managed-link="" target="_blank">TSG 2663762 (Network Trace Data)</a><span><span><span> to gather network traces from the customer.</span></span></span></p>
+
+<h4><a id="Scenario – No Subscriptions in Account Portal" name="Scenario – No Subscriptions in Account Portal"></a>Scenario &ndash; No Subscriptions in Account Portal</h4>
+
+<p>Though the Account portal shows no subscriptions the customer will see them in the Management or Ibiza portal with the same ID.</p>
+
+<p><strong><span><span><span>Error Message</span></span></span></strong></p>
+
+<blockquote>
+<p><span><span><span><span>None.</span></span></span></span></p>
+</blockquote>
+
+<p><strong><span><span><span>Troubleshooting</span></span></span></strong></p>
+
+<ol>
+	<li><span>Have the customer click the </span><strong><span><span>Directory + Subscriptions </span></span></strong><span><span><span>icon</span></span></span><strong> </strong><span><span><span>in</span></span></span><strong> </strong><span>the</span> portal to see if the <a href="https://azure.microsoft.com/en-us/updates/updates-to-subscription-filtering/" target="_blank">Global Subscription Filter</a> for their subscriptions are unchecked.</li>
+	<li>If unchecked, check the filter box to grant access to the subscriptions in the portal.</li>
+</ol>
+
+<p>If the above does not resolve the issue, gather a network trace:</p>
+
+<ol>
+	<li>Start the trace as detailed in&nbsp;<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2663762" managed-link="" target="_blank">TSG 2663762</a>&nbsp;(Network Trace Data).</li>
+	<li>Ask the customer to log in to the Account portal to the point where they should see no subscriptions.</li>
+	<li>Get a full screenshot of the &#39;no subscriptions&#39; page so ASE can see the on-screen time and logged-in user credentials.</li>
+	<li>Stop the trace.</li>
+	<li><span>Get a screenshot of the customer browsing to </span><a href="https://account.azure.com/test%20%20">https://account.azure.com/test</a>.</li>
+	<li><span>Submit </span><a href="http://aka.ms/asecri">this IcM</a><span> to the ASE team. </span></li>
+</ol>
+
+<h4><a id="Scenario – Failure During an Initial Purchase of an Azure Subscription" name="Scenario – Failure During an Initial Purchase of an Azure Subscription"></a>Scenario &ndash; Failure During an Initial Purchase of an Azure Subscription</h4>
+
+<p><strong><span><span><span>Error Message</span></span></span></strong></p>
+
+<blockquote>
+<p><span><span><span>We were unable to find your Azure tenant.</span></span></span></p>
+</blockquote>
+
+<p><strong><span><span><span><span>Note</span></span></span></span></strong><span><span><span>: The URL is </span></span></span><a href="https://account.azure.com/Error/NoValidTenant/100%20"><span><span>https://account.azure.com/Error/NoValidTenant/100</span></span></a></p>
+
+<p><strong><span><span><span>Troubleshooting</span></span></span></strong></p>
+
+<p><span><span><span>This is an issue with Unmanaged Tenants, help your customer verify their tenant with these steps:</span></span></span></p>
+
+<ol>
+	<li>Confirm the email ID with customer.</li>
+	<li>Copy the domain name and search for a valid tenant on CMAT.
+	<ul style="list-style-type:circle">
+		<li>If unavailable, use federation link to collect tenant ID.<br>
+		<strong>Note:</strong> To utilize the federation link, insert the domain name into <a data-content-id="" data-content-type="" href="https://login.windows.net/DOMAIN_NAME/federationmetadata/2007-06/federationmetadata.xml" managed-link="" target="_blank">this link</a>.</li>
+	</ul>
+	</li>
+	<li>Use Jarvis to get the valid PUID.</li>
+	<li>Use this template to engage the Cloud Identity (CI) Team:</li>
+</ol>
+
+<blockquote>
+<p><span><span><span>Hello Team,</span></span></span></p>
+
+<p><span><span><span>Customer receives below error when he tries to sign up. &quot;Account belongs to a directory that cannot be associated with an Azure subscription Please sign in with a different account.&rdquo;</span></span></span></p>
+
+<p><span><span><span>The URL is: </span></span></span><a href="https://account.azure.com/Error/NoValidTenant/100%20"><span><span><span>https://account.azure.com/Error/NoValidTenant/100</span></span></span></a><span><span><span>. Please help the customer to verify the tenant so they can sign up for Azure.</span></span></span></p>
+</blockquote>
+
+<p>Below are the required details:</p>
+
+<ul>
+	<li><strong>Email ID used</strong>: XYZ@contoso.com</li>
+	<li><strong>PUID</strong>: 1XXX ; 0XXXX</li>
+	<li><strong>Tenant <span><span>GUID</span></span></strong><span><span>:</span></span><em><span><span> </span></span></em><span><span>XXXX-XXXX-XXX-XXXX</span></span><em><span><span> </span></span></em></li>
+	<li><strong><span><span>Domain Name</span></span></strong><span><span>: </span></span><span><span>Contoso.com Use Federation link under TSG ID </span></span><span>2820621 <span>to pull Tenant ID from domain.</span></span></li>
+</ul>
+
+<p><strong><span><span><span>Useful Resources</span></span></span></strong></p>
+
+<ul>
+	<li><a data-content-id="" data-content-type="" href="https://powerbi.microsoft.com/en-us/blog/how-to-perform-an-it-admin-takeover-with-o365/" managed-link="" target="_blank">How to perform an IT Admin Takeover with O365</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://azure.microsoft.com/en-us/documentation/articles/active-directory-self-service-signup/#why-use-self-service-signup" managed-link="" target="_blank">What is self-service sign-up for Azure Active Directory?</a>
+	<ul style="list-style-type:circle">
+		<li>This is how viral tenants are created.</li>
+	</ul>
+	</li>
+</ul>
+
+<p><span><span><span>If this does not resolve the issue, submit </span></span></span><a href="http://aka.ms/asecri"><span><span>this IcM</span></span></a><span><span><span> to the ASE team.</span></span></span></p>
+
+<h4><a id="Scenario – Error Attempting to Log Into the Azure Portal with a MINT Account" name="Scenario – Error Attempting to Log Into the Azure Portal with a MINT Account"></a>Scenario &ndash; Error Attempting to Log Into the Azure Portal with a MINT Account</h4>
+
+<p><strong><span><span><span>Error Message</span></span></span></strong></p>
+
+<blockquote>
+<p><span><span><span>We are sorry, but we could not complete that operation: </span></span></span><a href="https://account.windowsazure.com/Error/400/1190"><span><span>https://account.windowsazure.com/Error/400/1190</span></span></a><span><span><span>.</span></span></span></p>
+</blockquote>
+
+<p><strong><span><span><span>Troubleshooting</span></span></span></strong></p>
+
+<ol>
+	<li><span>Has the</span> account has been orphaned due to being tied to a MINT account but is not a MINT account itself?
+
+	<ul style="list-style-type:circle">
+		<li>If<strong> </strong>so, use the standard subscription ownership transfer (SOT) process in <a href="https://internal.support.services.microsoft.com/en-us/help/3040383">TSG 3040383</a> to resolve the orphaned account.</li>
+	</ul>
+	</li>
+	<li>Is the account a MINT account?
+	<ul style="list-style-type:circle">
+		<li>If<strong> </strong>so, file an SR with PayOps to convert the MINT account into an OMS account.</li>
+	</ul>
+	</li>
+	<li>If not, engage your technical advisor (TA) or partner technical advisor (PTA)&nbsp;with a task, and include the following:
+	<ul style="list-style-type:circle">
+		<li>Date of customer call</li>
+		<li>Case Number</li>
+		<li>Customer ID (PUID or Email)</li>
+	</ul>
+	</li>
+</ol>
+
+<h4><a id="Scenario – Unable to Activate Visual Studio Benefit Subscription" name="Scenario – Unable to Activate Visual Studio Benefit Subscription"></a>Scenario &ndash; Unable to Activate Visual Studio Benefit Subscription</h4>
+
+<p><strong><span><span><span>Error Message</span></span></span></strong></p>
+
+<blockquote>
+<p><span><span><span>The offer is already redeemed.</span></span></span></p>
+</blockquote>
+
+<p><strong><span><span><span>Troubleshooting</span></span></span></strong></p>
+
+<p>N/A</p>
+
+<p><strong><span><span><span>Workaround</span></span></span></strong></p>
+
+<ul>
+	<li><span>Ask the customer to activate a Pay-As-You-Go subscription, then convert the offer to the entitlements the customer already has.</span></li>
+	<li><span>Explain to the customer that the spending limit may not yet be active, and the card will remain associated to the subscription which was added prior to conversion.</span></li>
+</ul>
+
+<h4><a id="Scenario – Imagine or MPN Customer Error When Logging Into Azure Portal" name="Scenario – Imagine or MPN Customer Error When Logging Into Azure Portal"></a>Scenario &ndash; Imagine or MPN Customer Error When Logging Into Azure Portal</h4>
+
+<p><strong><span><span><span>Error Message</span></span></span></strong></p>
+
+<blockquote>
+<p><span><span><span>You can&#39;t sign up here with a work or school email address. Use a Personal email, such as Gmail or Yahoo or get a new Outlook email when trying to sign up using a Work Account.</span></span></span></p>
+</blockquote>
+
+<p><strong><span><span><span>Troubleshooting</span></span></span></strong></p>
+
+<p class="ng-scope"><span><span><span>This error is caused by an intentional block by Microsoft.</span></span></span></p>
+
+<p><span><span><span>Check the </span></span></span><a href="https://blogs.technet.microsoft.com/enterprisemobility/2016/09/15/cleaning-up-the-azure-ad-and-microsoft-account-overlap/"><span><span>Microsoft blog for detailed explanations</span></span></a><span><span><span>.</span></span></span></p>
+
+<h4><a id="Scenario – Redirected to login.microsoftonline.com During Azure Portal Sign in" name="Scenario – Redirected to login.microsoftonline.com During Azure Portal Sign in"></a>Scenario &ndash; Redirected to login.microsoftonline.com During Azure Portal Sign in</h4>
+
+<p><strong><span><span><span>Error Message</span></span></span></strong></p>
+
+<blockquote>
+<p><span><span>None.</span></span></p>
+</blockquote>
+
+<p><strong><span><span><span>Troubleshooting</span></span></span></strong></p>
+
+<p class="ng-scope"><span><span><span>This issue is not supported by ASE as it fails authentication outside the Azure portal.</span></span></span></p>
+
+<ul>
+	<li>Engage the evolved Secure Token Service (eSTS) team per <a href="https://internal.support.services.microsoft.com/en-us/help/3085056/azure-support---opening-an-incident-with-ests">TSG 3085056</a> (Opening an Incident with eSTS).</li>
+	<li>If the customer sign-in works or they see all their subscriptions, archive the case.</li>
+	<li>If the customer sign-in does not work or they do not see any subs, re-escalate as appropriate as per the above troubleshooting.</li>
+</ul>
+
+<h3><a id="TSG Change Log" name="TSG Change Log"></a>TSG Change Log</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="132">
+			<p><span><strong>Date</strong></span></p>
+			</td>
+			<td width="126">
+			<p><span><strong>Updated By</strong></span></p>
+			</td>
+			<td width="364">
+			<p><span><strong>Content Updated</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p><span><span>09/30/2019</span></span></p>
+			</td>
+			<td width="126">
+			<p><span><span>v-brgosn</span></span></p>
+			</td>
+			<td width="364">
+			<p><span><span><span>Comprehensive Rewrite: Updated TSG content and formatting as part of the TSG Refresh Project.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">12/31/2019</td>
+			<td width="126">v-ereric</td>
+			<td width="364">Updated &quot;The offer is already redeemed&quot; error message troubleshooting per ModTrack 2580.</td>
+		</tr>
+		<tr>
+			<td width="132">07/08/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Removed outdated Support Scenarios and Troubleshooting steps, replaced Troubleshooting point 2, and removed Online References section as per ModTrack 3019.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>

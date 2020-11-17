@@ -1,0 +1,127 @@
+﻿<header><h1>How to resolve crash and stability issues in Office programs by using the OffCAT tool</h1></header><p><span><span><span><span>This article has been retired. To get more information about this update, please refer to </span></span></span></span><a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_workitems/edit/69935?fullScreen=false"><span><u>Content Idea Request 69935</u></span></a><span>. </span><span><span><span><span><span>Submit a Content Idea via </span></span></span></span></span><a href="http://contentidea/" target="_blank"><span><u><span lang="EN"><span><span>http://contentidea</span></span></span></u></span></a><span><span lang="EN"><span><span><span> if any questions</span></span></span></span></span><span><span><span><span><span>.</span></span></span></span></span></p>
+<div class='kb-symptoms-section section'>Microsoft Office programs may sometimes crash or stop responding. In this situation, you may see a dialog box that contains the following error message:<br><br><div class='sbody-error'>&lt;<strong class='sbody-strong'>Application</strong>&gt; has encountered a problem and needs to close.</div><br>Sometimes, the program exits without warning or error. If the program stops responding, you may have to force the program to exit.</div><div class='kb-cause-section section'>This kind of instability problem may occur for various reasons. That&#39;s why it can be frustrating and time-consuming to identify the source of these problems.</div><div class="kb-resolution-section section">To help you identify and resolve known causes of instability in Office programs, a diagnostic tool, the Office Configuration Analyzer Tool (OffCAT), was developed for customers by a team of escalation engineers from Microsoft Support. The list of known issues that can be detected by OffCAT grows each month. Therefore, if no issues of yours were detected in any month, it is a good idea to use OffCAT the following month to check whether any new issues were detected.<br>
+<br>
+To use the OffCAT tool as your first step in troubleshooting these issues in an Office program, follow these steps:
+<ul class="sbody-free_list">
+	<li><span class="text-base">Step 1: Download and install OffCAT (Office Configuration Analyzer Tool).</span><br>
+	<br>
+	To do this, go to <a href="http://www.microsoft.com/en-us/download/details.aspx?id=36852" id="kb-link-1" target="_self">Microsoft Office Configuration Analyzer Tool</a>.</li>
+	<li><span class="text-base">Step 2: Start OffCAT, and then scan the Office program that&#39;s crashing.</span>
+	<ol class="sbody-alpha_list">
+		<li>Start OffCAT by using the shortcut that was created during the installation process.
+		<ul class="sbody-free_list">
+			<li><span class="text-base">Windows 7 and earlier versions</span><br>
+			<br>
+			<span asset="4052461" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4052461]</span><br>
+			&nbsp;</li>
+			<li><span class="text-base">Windows 8</span><br>
+			<br>
+			<span asset="4052462" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4052462]</span></li>
+		</ul>
+		</li>
+		<li>When OffCAT is starting, it automatically checks for the list of latest known issues. Make sure that you let this process finish so that the scan of your Office program uses the latest issues list.</li>
+		<li>On the <span class="text-base">NEW SCAN</span>&nbsp;page, click the Office program that&#39;s crashing.<br>
+		<br>
+		<span asset="4052464" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4052464]</span><br>
+		<br>
+		<br>
+		Then, click&nbsp;<strong class="uiterm">Scan</strong>.<br>
+		<br>
+		<span class="text-base">Note</span>&nbsp;If you cannot start Outlook because it crashes soon after you try to start it, right-click the Outlook tile and then select <span class="text-base">Offline</span>.<br>
+		<br>
+		<span asset="4052465" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4052465]</span><br>
+		&nbsp;</li>
+		<li>After the scan finishes, exit any Office programs that are running.</li>
+	</ol>
+	</li>
+	<li><span class="text-base">Step 3: Review the known crashing problems that have been identified by OffCAT.</span><br>
+	<br>
+	<span class="text-base">Note</span> If your Office program exhibits instability other than crashes, go to<br>
+	step 4.
+	<ol class="sbody-alpha_list">
+		<li>In the OffCAT scan results, click the <strong class="uiterm">Filter</strong> icon.<br>
+		<br>
+		<span asset="4052466" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4052466]</span><br>
+		<br>
+		<span class="text-base">Note</span> If you do not see an <strong class="uiterm">All Issues</strong> tab in the scan results, there were no known issues of the Warning or Critical type that were detected by OffCAT. Therefore, the <strong class="uiterm">Filter</strong>&nbsp;icon is not displayed.<br>
+		&nbsp;</li>
+		<li>Clear the <strong class="uiterm">Select All</strong> box, select the <strong class="uiterm">Crash</strong> symptom in the list, and then click <strong class="uiterm">OK</strong>.<br>
+		<br>
+		<span asset="4052467" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4052467]</span><br>
+		<br>
+		<span class="text-base">Note</span> If you do not see <strong class="uiterm">Crash</strong> in the list of symptoms, OffCAT did not detect any known crashing problems. In this case, go to step 4.<br>
+		&nbsp;</li>
+		<li>The first issue with a <strong class="uiterm">Crash</strong> symptom is displayed and expanded to show you more information about the issue. Click the <strong class="uiterm">Click here to see possible solutions to this issue</strong> option to open the article that contains information about a resolution.<br>
+		<br>
+		The following screen shot shows an example of one of the known crashing issues that might be detected by OffCAT:<br>
+		<br>
+		<span asset="4052468" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4052468]</span><br>
+		&nbsp;</li>
+		<li>Follow the resolution steps that are provided in the article.</li>
+		<li>Repeat steps 3c and 3d for all other issues that are listed in the report under&nbsp;the&nbsp;<span class="text-base">Crash </span>symptom.</li>
+		<li>Test your Office program to see whether it continues to crash.</li>
+		<li>If your Office program continues to crash after you follow the steps in this section, go to step 4.</li>
+	</ol>
+	</li>
+	<li><span class="text-base">Step 4: Check for Office product updates</span>
+	<ol class="sbody-alpha_list">
+		<li>In your OffCAT results, click the <strong class="uiterm">Filter</strong> control one more time.</li>
+		<li>In the <strong class="uiterm">Filter</strong> dialog box, clear the check boxes for any selected symptoms, select the <strong class="uiterm">Product not updated</strong> check box, and then click <strong class="uiterm">OK</strong>.<br>
+		<br>
+		<span asset="4052469" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4052469]</span><br>
+		<br>
+		<span class="text-base">Note</span> If you do not see the <strong class="uiterm">Product not updated</strong> check box in the list of symptoms, your Office installation has the latest updates installed. Go to step 5.</li>
+		<li>Under&nbsp;<strong class="uiterm">Product not updated</strong>, expand the first issue that was found, as shown in the following screen shot. Then, click the <strong class="uiterm">Click here to see possible solutions to this issue</strong> option to open the article that describes the download for the latest update.<br>
+		<br>
+		<span asset="4052470" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4052470]</span></li>
+		<li>Follow the steps that are provided in the article to install the latest update.</li>
+		<li>If there are two or more items under&nbsp;<strong class="uiterm">Product not updated</strong>, repeat steps 4c and 4d for each item that&#39;s listed.</li>
+		<li>After you install all the latest updates that were suggested by your OffCAT results, restart the computer if you received a notification that a restart is required to complete the installation.</li>
+		<li>Test the Office program to see whether it continues to crash.</li>
+		<li>If the Office program continues to crash after you installed all the latest available updates, restart OffCAT.</li>
+		<li>On the <span class="text-base">MANAGE SCANS </span>page, click your previous scan to see the list of options for the scan.<br>
+		<br>
+		<span asset="4052471" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4052471]</span><br>
+		&nbsp;</li>
+		<li>Click <strong class="uiterm">View report</strong> to reopen your previous scan results.</li>
+		<li>Go to step 5.</li>
+	</ol>
+	</li>
+	<li><span class="text-base">Step 5: Review additional instability-related symptoms.</span><br>
+	<br>
+	Program instability may become noticeable in many ways. Therefore, we recommend that you also filter and review your scan results for the following symptoms:
+	<ul class="sbody-free_list">
+		<li>Add-ins</li>
+		<li>Configuration (unsupported or problematic)</li>
+		<li>Delay</li>
+		<li>Error message</li>
+		<li>Exchange connection</li>
+		<li>Freeze</li>
+		<li>Not responding</li>
+		<li>Slowness</li>
+		<li>Startup</li>
+	</ul>
+	<br>
+	As a reminder, most of the issues that are detected by OffCAT have more than one symptom associated with them. Therefore, you&#39;ll probably see the same issue under one or more of the symptoms in the list. Regardless of where you find an issue (when it&#39;s listed under multiple symptoms), the resolution will be the same, and you have to act only on the issue under one of the symptoms.<br>
+	<br>
+	To filter your results for these additional symptoms, click the <strong class="uiterm">Filter</strong> control on the <strong class="uiterm">All Issues</strong> tab, and then select each symptom that appears in the list. The following screen shot shows the <strong class="uiterm">Filter</strong> control after two symptoms are selected.<br>
+	<br>
+	<span asset="4052472" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4052472]</span><br>
+	<br>
+	Then, follow the recommendations that are provided for any issues that fall under these symptoms and that are related to program instability.</li>
+</ul>
+If your OffCAT scan does not detect any issues that are related to program instability, or if you fixed all the detected issues and your Office program is still not functioning correctly, see the following resources for troubleshooting Office program instability:<br>
+&nbsp;
+<div class="indent"><a href="/help/2934538" id="kb-link-2" target="_self">How to troubleshoot crashes in Outlook 2010 and Outlook 2013</a><br>
+<br>
+<a href="/help/2758592" id="kb-link-3" target="_self">Excel: How to troubleshoot crashing and not responding issues with Excel</a><br>
+<br>
+<a href="/help/921541" id="kb-link-4" target="_self">How to troubleshoot problems that occur when you start or use Word</a><br>
+<br>
+<a href="http://office.microsoft.com/en-us/support/powerpoint-2013-not-responding-hangs-or-freezes-ha104114659.aspx" id="kb-link-5" target="_self">PowerPoint 2013 not responding, hangs or freezes</a><br>
+&nbsp;</div>
+
+<div class="indent"><a href="/help/2000071" id="kb-link-6" target="_self">Outlook 2007: Troubleshooting Outlook crashes</a></div>
+<br>
+<span class="text-base">Note</span> Some of these articles may refer to OffCAT. Because you already worked through all the issues that are currently detected by OffCAT, you can safely ignore any sections that refer to OffCAT.</div>
+<div class='kb-moreinformation-section section'>For more information about the Office Configuration Analyzer Tool (OffCAT), follow these steps to see the&#160;<span class='text-base'>OffCAT v2 ReadMe.docx</span> file: <ol class='sbody-num_list'><li>Go to <a id='kb-link-7' href='http://www.microsoft.com/en-us/download/details.aspx?id=36852' target='_self'>Microsoft Office Configuration Analyzer Tool</a>.</li><li>Click <span class='text-base'>Download</span>.</li><li>When you&#39;re prompted to choose a download, select only the&#160;<span class='text-base'>OffCAT v2 ReadMe.docx</span> option.</li></ol></div><div class='kb-securedata-section section'>Steps to reproduce: <br>Product Bug Number:<br><br>Author ID (email alias): gregmans<br>Writer ID (email alias): gregmans<br>Tech Review ID (email alias):<br><br>Edit Review ID (email alias): v-anwale, v-rhowar<br>Confirm Article has been Tech Reviewed: Yes/No<br>Confirm Article released for Publishing: Yes/No<br></div>

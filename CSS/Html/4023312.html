@@ -1,0 +1,1935 @@
+﻿<header><h1>Technical Guide: Surface: Surface Dock</h1></header><p><span asset="4049349" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4049349]</span></p>
+
+<h3>Who should use this article<span><span><span><span>?</span></span></span></span><strong> </strong></h3>
+
+<ul>
+	<li>
+	<p><span><span><span>Surface</span></span></span></p>
+	</li>
+</ul>
+
+<h3><span><span><span>What is this article about? </span></span></span></h3>
+
+<p><span><span><span>This article will help you address Surface Dock issues.</span></span></span></p>
+
+<p><span asset="4465444" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4465444]</span></p>
+
+<h3><span><span><span><span><a id="top" name="top"></a>Table of contents</span></span></span></span></h3>
+
+<h4>1.&nbsp;<a bookmark-id="1" href="#1" managed-link="">Glossary of terms</a></h4>
+
+<h4>2.&nbsp;<a bookmark-id="2" href="#2" managed-link="">Information you need to know</a></h4>
+
+<h4>3.&nbsp;<a bookmark-id="3" href="#3" managed-link="">Network problems</a></h4>
+
+<h4>4.&nbsp;<a bookmark-id="4" href="#4" managed-link="">Audio problems</a></h4>
+
+<h4>5.&nbsp;<a bookmark-id="5" href="#5" managed-link="">Physical damage to Dock</a></h4>
+
+<h4>6.&nbsp;<a bookmark-id="6" href="#6" managed-link="">Power supply/charging problem</a></h4>
+
+<h4>7.&nbsp;<a bookmark-id="7" href="#7" managed-link="">USB problems</a></h4>
+
+<h4>8.&nbsp;<a bookmark-id="8" href="#8" managed-link="">Video/display port problems, blank/black screen or flashing/flickering screen on external monitors only</a></h4>
+
+<h4>9.&nbsp;<a bookmark-id="9" href="#9" managed-link="">Scaling &ndash; image too big or too small</a>&nbsp;</h4>
+
+<p>&nbsp;</p>
+<h4><a id="1" name="1"></a>1.&nbsp;Glossary of terms&nbsp;</h4>
+
+<ul>
+	<li>
+	<p><strong>Resolution:</strong> Presented as a number <em>x </em>another number (for example, 4096 x 2304). This is the number of pixels displayed on the screen.</p>
+	</li>
+	<li>
+	<p><strong>Hertz (Hz): </strong>A number representing the refresh rate of a monitor or display. This represents the number of times per second that the display is updated. The higher the Hz value, the better quality the picture. Surface Dock (with Surface Connect) supports 30Hz and 60Hz.</p>
+	</li>
+	<li>
+	<p><strong>Display Port: </strong>A type of display output and connector that is used by Surface Dock (with Surface Connect). The Surface Dock&rsquo;s Display Port 1.2 chipset is 17.28 Gbit/s. This does not mean 17.28Gbit/s <em>per Display Port </em>but instead total throughput of 17.28Gbit/s through the Dock.</p>
+	</li>
+	<li>
+	<p><strong>Surface Connect:</strong> The connector that connects the Surface to the Surface Dock. Surface Connect plugs into the Surface where the Surface PSU connects as well.</p>
+	</li>
+	<li>
+	<p><strong>Adapter:</strong> Used to convert signal from one type of connector to another. For example, a MiniDP to HDMI adapter has a MiniDP connector on one side and HDMI adapter on the other side. See this&nbsp;<a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4023468/" managed-link="" target="_blank">list of recommended adapters</a>.</p>
+	</li>
+	<li>
+	<p><strong>Nvidia GPU, dGPU, DGPU, discrete:</strong> These are terms used to describe the Nvidia display adapter in products such as Surface Book.</p>
+	</li>
+	<li>
+	<p><strong>DisplayLink:</strong> Technology used to connect additional displays (and other components) through a USB connection. It is not supported by Surface. For more information see the third-party <a data-content-id="" data-content-type="" href="http://www.displaylink.com/" managed-link="" target="_blank">DisplayLink site</a>.</p>
+	</li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a>&nbsp;</p>
+<h3><a id="2" name="2"></a>2.&nbsp;Information you need to know&nbsp;</h3>
+
+<ul>
+	<li>
+	<p><span>Intel graphics (the chipset that Surface uses) only allows for a maximum of three displays at one time. This includes the built-in Surface Display.</span></p>
+	</li>
+	<li>
+	<p><span>The public article <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4039635" managed-link="" target="_blank">Connect Surface to a TV, monitor, or projector</a><span><span> </span></span> outlines how many monitors and what resolutions (Hz) are supported.</span></p>
+	</li>
+	<li>
+	<p><span>Surface Dock splits the total available bandwidth as described in DisplayPort 1.2 (17.28 Gbit/s) specification between the two mini Display ports (mDP). For example, two 4k monitors will only work at 30Hz if both utilize the Dock&rsquo;s mini DisplayPort&nbsp;outputs.</span></p>
+	</li>
+</ul>
+
+<div>
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a>&nbsp;</p>
+</div>
+<h3><a id="3" name="3"></a>3. Network problems</h3>
+
+<p><strong>Confirming the issue</strong></p>
+
+<p>When an ethernet cable is plugged into the Surface Dock and the customer says:</p>
+
+<ul>
+	<li>
+	<p>The ethernet icon does not appear on the taskbar.</p>
+	</li>
+	<li>
+	<p>The ethernet icon shows as not connected (red <em>x</em>) or limited connection (yellow exclamation point).</p>
+	</li>
+	<li>
+	<p>They can&rsquo;t connect to Wi-Fi while docked but can connect while undocked.</p>
+	</li>
+</ul>
+
+<p><span asset="4465445" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4465445]</span></p>
+
+<p><strong><span><span><span><span>Confirmation/paraphrase </span></span></span></span></strong></p>
+
+<p><em>&ldquo;Just to make sure I understand your issue: When an ethernet cable is plugged into the Surface Dock, the connection is not working as expected while the device is docked, correct?&rdquo;</em></p>
+
+<p><strong>How to code</strong></p>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true">Choose the appropriate product &gt; Accessories &gt; Docking Station with Surface Connect &gt; Network Problems<span><span> </span></span></p>
+	</li>
+</ul>
+
+<p><strong>Resolution steps</strong></p>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Step</span></span></strong></span></p>
+			</td>
+			<td width="35%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>How</span></span></strong></span></p>
+			</td>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Why</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>1. Paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</span></span><span><span><span> </span></span></span></span></p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7"><span><span><span>Notes template:</span></span></span></p>
+
+			<ul>
+				<li class="CxSpLast">
+				<p><span>Check known issues&gt;&gt;</span></p>
+				</li>
+				<li>
+				<p><span>Check if the issue occurs with a different physical dock&gt;&gt;</span></p>
+				</li>
+				<li>
+				<p>Disconnect peripherals and reset power&gt;&gt;</p>
+				</li>
+				<li>
+				<p><span>Connect the Surface Dock, and verify that the tip is lit and the device is charging&gt;&gt;</span></p>
+				</li>
+				<li>
+				<p><span>Try to go to www.bing.com in Edge&gt;&gt;</span></p>
+				</li>
+				<li>
+				<p><span>Run the Networking Troubleshooter&gt;&gt;</span></p>
+				</li>
+				<li>
+				<p><span>Power cycle the modem and router or gateway&gt;&gt;</span></p>
+				</li>
+				<li>
+				<p><span>With the Dock connected, restart the Surface&gt;&gt;</span></p>
+				</li>
+				<li>
+				<p><span>Try to go to www.bing.com in Edge&gt;&gt;</span></p>
+				</li>
+				<li>
+				<p><span>Run Windows Updates/Surface Diagnostic Tool (SDT) (and document which one)&gt;&gt;</span></p>
+				</li>
+				<li>
+				<p><span>Try to go to www.bing.com in Edge&gt;&gt;</span></p>
+				</li>
+				<li>
+				<p><span>Update the Surface Dock&gt;&gt;</span></p>
+				</li>
+				<li>
+				<p><span>Try to go to www.bing.com in Edge&gt;&gt;</span></p>
+				</li>
+				<li>
+				<p><span>Replace the ethernet cable&gt;&gt;</span></p>
+				</li>
+				<li>
+				<p><span>Connect directly to the Surface by using a USB to Ethernet adapter&gt;&gt;</span></p>
+				</li>
+			</ul>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>This ensures a consistent format for capturing and reviewing case information. Performing this standard procedure helps prevent instances where a step was neglected to be performed.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>2. Check known issues.</span></span></span></p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7"><span>From&nbsp;KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4072657" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select&nbsp;the customer&rsquo;s&nbsp;<strong>Surface model</strong>&nbsp;and check for the issue in the&nbsp;&ldquo;Surface Dock and external displays&rdquo;&nbsp;section. Also check KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/3098748" target="_blank">3098748 Technical Guide: Surface: Surface Dock known issues</a><span><span>.</span></span></span></p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>There may be a current known issue that the customer is experiencing that has different troubleshooting steps.</span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>Check known issues regularly.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p><span>3. Check if the issue occurs with a different physical dock.</span></p>
+			</td>
+			<td width="35%">
+			<p>Check with the customer to find out if this issue occurs with just one Surface Dock or multiple. Determine if the customer has access to another Surface Dock to test.</p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>It is important to determine if the issue impacts one Surface Dock or multiple and if the customer has tested the issue with a different Surface dock.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">4.&nbsp;Disconnect peripherals and reset power.</td>
+			<td width="35%">
+			<p><span><span><span>Do the following</span></span></span></p>
+
+			<ol>
+				<li><span><span><span><span>Disconnect the SurfaceLink connector from host device.</span></span></span></span></li>
+				<li><span><span><span><span>Disconnect all USB peripherals. Leave the MiniDP connections for external monitors.</span></span></span></span></li>
+				<li><span><span><span>Unplug the power cord. <strong>Note</strong>: Unplug the power cord from power brick. Do not just unplug power from back power port of Dock. Check if it is plugged into a UPS or power strip. If so, try plugging the Surface Dock directly into power.</span></span></span></li>
+			</ol>
+			</td>
+			<td width="32%">This helps to determine if reseating connections and power will help resolve issue.</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p><span>5. Connect the Surface Dock, and <strong>verify that the tip is lit</strong>, and the device is charging.</span></p>
+
+			<p><span>If the PSU tip is not lit, use KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/3158368" target="_blank">3158368 Technical Guide: Surface: Power supply unit issues</a>&nbsp;to troubleshoot the issue<span>.</span></span></p>
+			</td>
+			<td width="35%">
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="32%">
+			<p><span>If the Surface Dock&rsquo;s connector is lit and the device is charging, this indicates that the Dock is making a connection to the Surface.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p><span>6. Try to load www.bing.com in Microsoft Edge.</span></p>
+			</td>
+			<td width="35%">
+			<p><span>Go to <strong>Start</strong> &gt; <strong>Microsoft Edge</strong>.<strong> </strong>Type <strong>www.bing.com</strong> in the address bar and press Enter.</span></p>
+
+			<p><span>Document the error/notification message if unable to load bing.com.</span></p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>Be sure to go to the same website, using the same browser to reproduce. Use Edge instead of third-party browsers to initially troubleshoot and isolate the issue.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>7. Run the Networking Troubleshooter.</span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span><span lang="EN-SG">Go to <strong>Settings </strong>&gt;<strong> Update &amp; Security </strong>&gt;<strong> Troubleshoot </strong>&gt;<strong> Network Adapter</strong>.</span></span></p>
+
+			<p><span><span lang="EN-SG">Select <strong>Run the</strong> <strong>troubleshooter</strong>.</span></span></p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>The troubleshooter may detect an issue that you are unable to resolve. In these instances, you should work to determine whether the Dock&rsquo;s Ethernet port or the Surface&rsquo;s network card is functioning. </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>8. Power cycle the modem and router or gateway.</span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span><span lang="EN-SG">Turn off/unplug the modem and router or Gateway </span>(modem and router combined)<span lang="EN-SG">. </span></span></p>
+
+			<p><span><span lang="EN-SG">Wait for 30 seconds, and then plug-in and turn it back on again. </span></span></p>
+
+			<p><span><span lang="EN-SG"></span></span></p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>Power cycling the modem and router or gateway clears the networking cache and allows for better performance and may improve the customer&rsquo;s network speeds.</span></span></span></p>
+
+			<div class="alert-band">
+			<div class="alert alert-warning" role="alert">
+			<p class="alert-title"><strong>Note:&nbsp;</strong></p>
+
+			<div class="row">
+			<div class="col-xs-24">
+			<p><span><span><span>If the customer is using chat or VOIP this step may disconnect from the call. Get the necessary information to call them back.</span></span></span></p>
+			</div>
+			</div>
+			</div>
+			</div>
+
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>9. With the Dock connected, restart the Surface device.</span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span><span lang="EN-SG">Go to<strong> Start</strong> &gt; <strong>Power</strong> &gt; <strong>Restart</strong>.</span></span></p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>This will refresh drivers, and memory cache; as well as re-establish an internet connection.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>10. </span></span><span><span>Attempt to go to </span></span><span><span><span>www.bing.com</span></span></span> <span><span>in Microsoft Edge.</span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span>Go to <strong>Start</strong> &gt; <strong>Microsoft Edge</strong>. Type <strong>www.bing.com</strong> in the address bar, and then press Enter.</span></p>
+
+			<p><span>Document the error/notification message if not able to load bing.com</span></p>
+
+			<p><span><span lang="EN-SG"></span></span></p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>Be sure to go to the same website, using the same browser to reproduce. Use Edge instead of a third-party browsers to initially troubleshoot and isolate the issue.</span></span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>11. Run Windows Updates/Surface Diagnostic Tool (SDT).</span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span>Undock and connect to Wi-Fi to run Windows Updates/SDT.<strong><span lang="EN-SG"></span></strong></span></p>
+
+			<p><span><strong><span lang="EN-SG">English language support: </span></strong><span lang="EN-SG"></span>Install and Run the Surface Diagnostic Tool. See KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4014334" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a><span lang="EN-SG">.</span></span></p>
+
+			<p><span><strong><span lang="EN-SG">Non-English support: </span></strong><span lang="EN-SG">Install all updates for Windows and Surface.</span></span></p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>12. </span></span>Re-connect the Surface Dock and attempt to load&nbsp;www.bing.com&nbsp;in Microsoft Edge<span><span>.</span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span>Go to <strong>Start</strong> &gt; <strong>Microsoft Edge</strong>. Type <strong>www.bing.com</strong> in the address bar, and then press Enter</span></p>
+
+			<p><span>Document the error/notification message if not able to load bing.com.</span></p>
+
+			<p><span><span lang="EN-SG"></span></span></p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>Be sure to go to the same website, using the same browser to reproduce. Use Edge instead of a third-party browser&nbsp;to initially troubleshoot and isolate the issue.</span></span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>13. Update the Surface Dock.</span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span><span lang="EN-SG">Reconnect the Dock to the Surface, but make sure to stay connected via Wi-Fi. </span></span></p>
+
+			<p><span><span lang="EN-SG">To update the Dock, see </span><a data-content-id="" data-content-type="" href="https://technet.microsoft.com/itpro/surface/surface-dock-updater" managed-link="" target="_blank">Microsoft Surface Dock Updater</a><span lang="EN-SG">. </span></span></p>
+
+			<p><span><strong><span lang="EN-SG">Note:&nbsp;</span></strong><span lang="EN-SG">Visit the page yourself and walk the customer through the Dock update process.</span></span></p>
+
+			<p><span><span lang="EN-SG"></span></span></p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>Like a Surface device&rsquo;s chipset, the chipset that is built into the Surface Dock is controlled by firmware and can be updated. Learn more at </span></span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/surface/manage-surface-dock-firmware-updates" managed-link="" target="_blank">Manage Surface Dock firmware updates</a><span><span>. </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>14. </span></span><span><span><span>Attempt to go to </span></span><span><span><span>www.bing.com</span></span></span> <span><span>in Microsoft Edge</span></span></span><span><span>.</span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span>Go to <strong>Start</strong> &gt; <strong>Microsoft Edge</strong>. Type <strong><span>www.bing.com</span></strong> in the address bar, and then press Enter.</span></p>
+
+			<p><span>Document the error/notification message if not able to load bing.com.</span></p>
+
+			<p><span><span lang="EN-SG"></span></span></p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>Be sure to go to the same website, using the same browser to reproduce. Use Edge instead of a third-party browser&nbsp;to initially troubleshoot and isolate the issue.</span></span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>15.&nbsp;Replace the Ethernet cable.</span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span><span lang="EN-SG">If the customer has an alternate ethernet cable, they should try that cable. This will help eliminate whether the ethernet cable is the cause.</span></span></p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>It may be in the customer&rsquo;s best interest to attempt an alternate cable. If the cable is the issue, then replacing the Dock will not resolve the problem, and they will still have to replace the cable.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><span><span>16. Connect directly to the Surface by using a USB to ethernet adapter.</span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span><span lang="EN-SG"></span></span></p>
+			</td>
+			<td width="32%">
+			<p><span><span>If the ethernet connection works while connected directly to the Surface via a USB to ethernet adapter, the issue is with the Dock. Replace the Dock. </span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><span><strong>Is the issue resolved?</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><strong><span><span>Yes, close the case</span></span></strong><span><span>: Once resolved, have the customer check for updates.</span></span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="35%">
+			<p><span>For SDT-enabled sites, tell the customer about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a>.</span></p>
+
+			<p><span>For all other sites, check<strong> Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</span></p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="32%">
+			<p><span>Making sure Surface and Windows are up to date may help avoid this problem in the future.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><span><strong><span><span>No, replace the Dock</span></span></strong><span><span>: Set up an exchange for the customer based on the status of their warranty.</span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span>Use KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/2791320" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a></span></p>
+			</td>
+			<td width="32%">
+			<p><span>There is likely a hardware problem with the Surface Dock.</span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a>&nbsp;</p>
+<h3><a id="4" name="4"></a>4. Audio problems</h3>
+
+<p>While docked, the Surface doesn&rsquo;t play audio through an external device that is also connected to the Dock through any of the following:</p>
+
+<ul>
+	<li>
+	<p>The 3.5-mm/headphone style connection in the back of the Dock</p>
+	</li>
+	<li>
+	<p>A standard USB connection to the Dock</p>
+	</li>
+	<li>
+	<p>A Bluetooth dongle connected to the Dock&rsquo;s USB ports</p>
+	</li>
+</ul>
+
+<p>&nbsp;The following symptoms may also occur:</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td><span asset="4465446" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4465446]</span></td>
+			<td><span>The sound icon is displayed, but no audio plays through the Surface speakers or connected external speakers.</span></td>
+		</tr>
+		<tr>
+			<td><span asset="4465447" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4465447]</span></td>
+			<td><span><span>The sound icon appears as muted (there&rsquo;s an &quot;x&quot; next to the icon).</span></span></td>
+		</tr>
+		<tr>
+			<td><span asset="4465448" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4465448]</span></td>
+			<td><span><span>No sound icon is displayed on the taskbar.</span></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span><span><span><br>
+<strong>Confirmation/paraphrase </strong></span></span></span></span></p>
+
+<p><em>&ldquo;Just to make sure I understand your issue:</em> <em>When the Surface is connected to the Dock, audio does not play from external devices that are also connected to the Dock.&rdquo;</em></p>
+
+<p><strong>How to code</strong></p>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true"><span>Choose the appropriate product &gt; Accessories &gt; Docking Station with Surface Connect &gt; Audio Problems</span><span><span> </span></span></p>
+	</li>
+</ul>
+
+<p><strong>Resolution steps</strong></p>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="22%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Step</span></span></strong></span></p>
+			</td>
+			<td width="55%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>How</span></span></strong></span></p>
+			</td>
+			<td width="22%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Why</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</span></span><span><span><span> </span></span></span></span></p>
+			</td>
+			<td width="55%">
+			<p class="MsoHeading7"><span><span><span>Notes template:</span></span></span></p>
+
+			<ul>
+				<li class="CxSpLast"><span>Check known issues&gt;&gt;</span></li>
+				<li><span><span><span><span>Check if the issue occurs with a different physical dock&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span>Disconnect peripherals and reset power&gt;&gt;</span></span></span></li>
+				<li><span>Make sure that the volume is turned up on the device&gt;&gt;</span></li>
+				<li><span>Disconnect the external audio devices and use the built-in speakers&gt;&gt;</span></li>
+				<li><span>Test the audio device when it&rsquo;s connected directly to the Surface&gt;&gt;</span></li>
+				<li><span>Try running the Windows 10 Audio troubleshooter&gt;&gt;</span></li>
+				<li><span>Run Windows Updates / Surface Diagnostic Tool (SDT)&gt;&gt;</span></li>
+				<li><span>Manually update the Dock&gt;&gt;</span></li>
+				<li><span>Test the audio device on another host&gt;&gt;</span></li>
+			</ul>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>This ensures a consistent format for capturing and reviewing case information. Performing this standard procedure helps prevent instances where a step was neglected to be performed.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>2. Check known issues.</span></span></span></p>
+			</td>
+			<td width="55%">
+			<p class="MsoHeading7"><span>From&nbsp;KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4072657" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select&nbsp;the customer&rsquo;s&nbsp;<strong>Surface model</strong>&nbsp;and check for the issue in the&nbsp;&ldquo;Surface Dock and external displays&rdquo;&nbsp;section. Check KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/3098748" target="_blank">3098748 Technical Guide: Surface: Surface Dock known issues</a><span><span>.</span></span></span></p>
+
+			<p class="MsoHeading7"><span>&nbsp;</span></p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>There may be a current known issue that the customer is experiencing that has different troubleshooting steps.</span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>Check known issues regularly.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">3.&nbsp;Check if issue occurs with different physical dock.</td>
+			<td width="55%">Check with the customer to see if this issue occurs with a different physical Surface Dock or if they have access to one to test with.</td>
+			<td width="22%">It is important to determine if issue impacts one Surface Dock or multiple and if the customer has tested the issue with a different Surface dock.</td>
+		</tr>
+		<tr>
+			<td width="22%">4.&nbsp;Disconnect peripherals and reset power.</td>
+			<td width="55%">
+			<p><span><span><span>Do the following</span></span></span></p>
+
+			<ol>
+				<li><span><span><span><span>Disconnect the SurfaceLink connector from host.</span></span></span></span></li>
+				<li><span><span><span><span>Disconnect all USB peripherals. Leave the MiniDP connections for external monitors.</span></span></span></span></li>
+				<li><span><span><span>Unplug the power cord. <strong>Note</strong>: Unplug the power cord from power brick. Do not just unplug power from the back power port of Dock. Check if it is plugged into a UPS or power strip. If so, try plugging Surface Dock directly into power.</span></span></span></li>
+			</ol>
+			</td>
+			<td width="22%">This helps to determine if reseating connections and power will help resolve issue.</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p><span>5. Make sure that the volume is turned up on the Surface device.</span></p>
+			</td>
+			<td width="55%">
+			<p><span><span>Right-click the speaker icon in the lower-right corner of the screen, to the left of the clock, and select <strong><span>Open volume Mixer</span></strong>. </span></span></p>
+
+			<p><span asset="4465451" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4465451]</span><br>
+			<span asset="4465452" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4465452]</span></p>
+
+			<p><span> </span></p>
+
+			<p><span> </span></p>
+			</td>
+			<td width="22%">
+			<p><span>Each open app that has audio playback has a volume fader associated to it. Validate that the volume for that app is <strong>turned up</strong> and <strong>not muted</strong>.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p><span>6. Disconnect the external audio devices and use the built-in speakers.</span></p>
+			</td>
+			<td width="55%">
+			<p><span>Disconnect or remove (Bluetooth) the external audio device.</span></p>
+
+			<p><span>Try to play audio through the built-in speakers. </span></p>
+
+			<p><span>To make sure that you are using the built-in speakers, select the speaker icon in the lower-right corner of the screen to the left of the clock. Above and to the right of the volume bar, there is an up arrow. Selecting it will reveal all available, turned on audio devices.<br>
+			<br>
+			<span asset="4465453" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4465453]</span> </span></p>
+
+			<p><span> </span></p>
+
+			<p><span>Remember that the speakers probably won&#39;t work when headphones are plugged in.</span></p>
+
+			<p><span>Be sure to use the same source, app, or webpage every time you test audio playback.</span></p>
+
+			<p><span><strong>If the built-in speakers do not work, the issue has changed, and is not a Dock issue</strong>: Go to <a data-content-id="" data-content-type="" href="https://www.microsoft.com/surface/support/hardware-and-drivers/troubleshoot-surface-audio?os=windows-10&amp;=undefined" managed-link="" target="_blank">Troubleshoot Surface sound and audio accessories</a> for correct troubleshooting.</span></p>
+
+			<p><span>Recode your ticket to reflect the change.</span></p>
+			</td>
+			<td width="22%">
+			<p><span>The issue may concern the external audio device itself.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p><span>7. Test the audio device when it is connected directly to Surface.</span></p>
+			</td>
+			<td width="55%">
+			<p><span>Connect the external audio device, headphones, or speakers directly to the Surface&rsquo;s USB or audio port, <strong>bypassing the Dock</strong>. </span></p>
+
+			<p><span>Select&nbsp;<strong>Start</strong>,<strong> </strong>type <strong>Sound</strong>, and then select <strong>Sound</strong> from the list of results. </span></p>
+
+			<p><span asset="4465454" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4465454]</span></p>
+
+			<p><span> </span></p>
+
+			<p><span>On the <strong>Playback</strong> tab, <strong>select</strong> a device, and then <strong>Set Default</strong>.</span></p>
+
+			<p><span>Make sure that the right device is selected as default on the <strong>Playback</strong> tab of the Sound Control Panel.</span></p>
+
+			<p><span><strong>Note:</strong> If the customer is using a Bluetooth speaker while docked, test the Bluetooth speaker while <strong>undocked</strong> instead of this step. </span></p>
+
+			<p><span><strong>If connecting directly to the Surface does not work, the issue has changed, and is not a Dock issue</strong>: Go to <a data-content-id="" data-content-type="" href="https://www.microsoft.com/surface/support/hardware-and-drivers/troubleshoot-surface-audio?os=windows-10&amp;=undefined" managed-link="" target="_blank">Troubleshoot Surface sound and audio accessories</a> for correct troubleshooting.</span></p>
+
+			<p><span>Recode your ticket to reflect the change. </span></p>
+			</td>
+			<td width="22%">
+			<p><span><span><span>Steps 6-7 are intended to test whether the Surface can playback audio and help isolate the root cause.</span></span></span></p>
+
+			<p><strong><span><span><span>Note: </span></span></span></strong><span><span><span>After this step, <strong>reconnect the audio device </strong>to the<strong> Dock</strong>, to test the Dock</span></span></span><span><span>.</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>8. Try running the Windows 10 Audio troubleshooter.</span></span></span></p>
+			</td>
+			<td width="55%">
+			<p><span>Go to <strong>Settings</strong> &gt; <strong>Update &amp; Security</strong> &gt; <strong>Troubleshoot</strong> &gt; <strong>Playing Audio</strong>. Run the troubleshooter.</span></p>
+
+			<p><span><strong><span>Test audio playback</span></strong><span>. </span>Be sure to use the same source, app, or webpage every time you test audio playback.</span></p>
+			</td>
+			<td width="22%">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>9. Run Windows Updates/Surface Diagnostic Tool (SDT).</span></span></span></p>
+			</td>
+			<td width="55%">
+			<p><span><strong><span lang="EN-SG">English language support:</span></strong><span lang="EN-SG"> </span>Install and run the&nbsp;Surface Diagnostic Tool. See KB <a href="https://internal.support.services.microsoft.com/help/4014334" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a><span lang="EN-SG">. </span></span></p>
+
+			<p><span><strong><span lang="EN-SG">Non-English support:</span></strong><span lang="EN-SG"> Install all updates for Windows and Surface.</span></span></p>
+
+			<p><span><span>If not prompted to restart after updates or after running SDT, restart the Surface.</span></span></p>
+
+			<p><span><strong><span>Test audio playback</span></strong><span>. </span>Be sure to use the same source, app, or webpage every time that you test audio playback.</span></p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span lang="EN-SG"><span><span>Restarting the Surface will clear the cache and refresh drivers. </span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p><span>10. Manually update the Dock.</span></p>
+			</td>
+			<td width="55%">
+			<p><span><span>D</span>irect<span> the customer to </span><span><a data-content-id="" data-content-type="" href="https://technet.microsoft.com/itpro/surface/surface-dock-updater" managed-link="" target="_blank">Microsoft Surface Dock Updater</a></span><span> to follow the instructions for the Dock updater tool. The direct link to the tool is </span><span><a data-content-id="" data-content-type="" href="https://www.microsoft.com/download/details.aspx?id=46703" managed-link="" target="_blank">www.microsoft.com/download/details.aspx?id=46703</a>.</span></span></p>
+
+			<p><span><strong><span>Test audio playback</span></strong><span>. </span>Be sure to use the same source, app, or webpage every time you test audio playback.<span lang="EN-SG"></span></span></p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span>11. </span><span><span>Test the audio device on another host.</span></span></span></p>
+			</td>
+			<td width="55%">
+			<p><span><span lang="EN-SG">Have the customer connect their external speakers or headphones to another host device and validate that the headphones or speakers are working on their own.</span></span></p>
+
+			<p><span><strong><span>If headphones or speakers work on another device:</span></strong><span> Replace the Dock.</span></span></p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><span><strong>Is the issue resolved?</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><strong><span><span>Yes, close the case</span></span></strong><span><span>: Once resolved, have the customer check for updates.</span></span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="55%">
+			<p><span>For SDT-enabled sites, tell the customer about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a>.</span></p>
+
+			<p><span>For all other sites, <strong>check Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</span></p>
+			</td>
+			<td width="22%">
+			<p><span>Making sure Surface and Windows are up to date may help avoid this problem in the future.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><strong><span><span>No, replace the Dock</span></span></strong><span><span>: Set up an exchange for the customer based on the status of their warranty.</span></span></span></p>
+			</td>
+			<td width="55%">
+			<p><span>Use KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/2791320" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a>.</span></p>
+			</td>
+			<td width="22%">
+			<p><span>There is likely a hardware problem with the Surface Dock.</span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a>&nbsp;</p>
+<h3><a id="5" name="5"></a>5. Physical damage to Dock</h3>
+
+<p><strong>Confirming the issue</strong></p>
+
+<p>When the customer mentions:</p>
+
+<ul>
+	<li>
+	<p>Damage occurred to their Surface Dock during normal use.</p>
+	</li>
+	<li>
+	<p>Damaged occurred to their Surface Dock during abnormal use.</p>
+	</li>
+	<li>
+	<p>Their Dock was damaged prior to removing it from its original packaging.</p>
+	</li>
+</ul>
+
+<p><strong><span><span><span><span>Confirmation/paraphrase </span></span></span></span></strong></p>
+
+<p><em>&ldquo;Just to make sure I understand your issue: Your Surface Dock has experienced some physical damage, correct?&rdquo; </em></p>
+
+<p><strong>How to code</strong></p>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true"><span>Choose the appropriate product &gt; Accessories &gt; Docking Station with Surface Connect &gt; Physical Damage to Dock</span><span><span> </span></span></p>
+	</li>
+</ul>
+
+<p><strong>Resolution steps</strong></p>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="22%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Step</span></span></strong></span></p>
+			</td>
+			<td width="55%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>How</span></span></strong></span></p>
+			</td>
+			<td width="22%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Why</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</span></span><span><span><span> </span></span></span></span></p>
+			</td>
+			<td width="55%">
+			<p class="MsoHeading7"><span><span><span>Notes template:</span></span></span></p>
+
+			<ul>
+				<li>
+				<p><span><span>Was the Dock damaged out of the box?</span></span></p>
+				</li>
+				<li>
+				<p><span><span>What is the Dock&rsquo;s serial number?</span></span></p>
+				</li>
+			</ul>
+
+			<p><span><span lang="EN-SG"></span></span></p>
+
+			<p><span><span lang="EN-SG"></span>To find the Dock serial number use&nbsp;<a href="https://support.microsoft.com/help/4023453" target="_blank">Find the serial number on Surface Dock</a> </span></p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>This ensures a consistent format for capturing and reviewing case information. Performing this standard procedure helps prevent instances where a step was neglected to be performed.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>2. The Surface Dock warranty does not cover customer-induced damage and may not cover replacement Surface Docks or power supplies. </span></span></span></p>
+			</td>
+			<td width="55%">
+			<p class="MsoHeading7">For more information on fulfillment policies, see KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4514977" managed-link="" target="_blank">4514977 Procedure: Surface: Services Exchange and Repair Offers Overview</a>.</p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><span><strong>Is the issue resolved?</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><strong><span><span>Yes, close the case</span></span></strong><span><span><strong>:</strong> Once resolved, have the customer check for updates.</span></span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="55%">
+			<p><span>For SDT-enabled sites, tell the customer about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a>.</span></p>
+
+			<p><span>For all other sites, <strong>check Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</span></p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="22%">
+			<p><span>Making sure the Surface and Windows are up to date may help avoid this problem in the future.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><strong><span><span>No:&nbsp;</span></span></strong><span><span>consult <strong>Tech Lead</strong>.</span></span></span></p>
+			</td>
+			<td width="55%">
+			<p>&nbsp;</p>
+			</td>
+			<td width="22%">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a>&nbsp;</p>
+</div>
+<h3><a id="6" name="6"></a>6. Power supply/charging problem</h3>
+
+<p><strong>Confirming the issue</strong></p>
+
+<p>When the customer is trying to <strong>charge</strong> their Surface device, the Dock will not charge the device, or may not be recognized by Surface. Additionally, Windows might encounter a battery error such as &ldquo;Plugged in-Not Charging.&rdquo; Other Dock features may function (for example USB or MDP), but the Surface <strong>will not charge</strong>.</p>
+
+<p><strong><span><span><span><span>Confirmation/paraphrase </span></span></span></span></strong></p>
+
+<p><em>&ldquo;Just to make sure I understand your issue: Your Surface device will not charge when connected to the Surface Dock, correct?</em>&rdquo;</p>
+
+<p><strong>How to code</strong></p>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true"><span>Choose the appropriate product &gt; Accessories &gt; Docking Station with Surface Connect &gt; Power Supply / Charging Problems</span><span><span> </span></span></p>
+	</li>
+</ul>
+
+<p><strong>Resolution steps</strong></p>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="22%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Step</span></span></strong></span></p>
+			</td>
+			<td width="55%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>How</span></span></strong></span></p>
+			</td>
+			<td width="22%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Why</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</span></span><span><span><span> </span></span></span></span></p>
+			</td>
+			<td width="55%">
+			<p class="MsoHeading7"><span><span><span>Notes template:</span></span></span></p>
+
+			<ul>
+				<li class="CxSpLast"><span>Check known issues<span><span><span><span>&gt;&gt;</span></span></span></span></span></li>
+				<li><span><span><span><span>Check if the issue occurs with a different physical dock<span><span><span><span>&gt;&gt;</span></span></span></span></span></span></span></span></li>
+				<li><span><span><span><span>Disconnect peripherals and reset power<span><span><span><span>&gt;&gt;</span></span></span></span></span></span></span></span></li>
+				<li><span><span><span>Run Windows Update/SDT (and document which one)<span><span><span><span>&gt;&gt;</span></span></span></span></span></span></span></li>
+				<li><span>Restart the computer<span><span><span><span>&gt;&gt;</span></span></span></span></span></li>
+				<li><span>Manually update the Dock<span><span><span><span>&gt;&gt;</span></span></span></span></span></li>
+				<li><span>Force the device to shut down and restart<span><span><span><span>&gt;&gt;</span></span></span></span></span></li>
+				<li><span>Attempt to charge the Surface by using the PSU that came with the device<span><span><span><span>&gt;&gt;</span></span></span></span></span></li>
+			</ul>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>This ensures a consistent format for capturing and reviewing case information. Performing this standard procedure helps prevent instances where a step was neglected to be performed.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>2. Check known issues.</span></span></span></p>
+			</td>
+			<td width="55%">
+			<p class="MsoHeading7"><span>From&nbsp;KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4072657" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select&nbsp;the customer&rsquo;s&nbsp;<strong>Surface model</strong>&nbsp;and check for the issue in the&nbsp;&ldquo;Surface Dock and external displays&rdquo;&nbsp;section. Check KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/3098748" target="_blank">3098748 Technical Guide: Surface: Surface Dock known issues</a><span><span>.</span></span></span></p>
+
+			<p class="MsoHeading7"><span>&nbsp;</span></p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>Check known issues regularly.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">3.&nbsp;Check if the issue occurs with a different physical dock.</td>
+			<td width="55%">Check with the customer to see if this issue occurs with a different physical Surface Dock or if they have access to one to test with.</td>
+			<td width="22%">It is important to determine if issue impacts one Surface Dock or multiple, and if the customer has tested the issue with a different Surface dock.</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p><span>4. Disconnect peripherals and reset power. </span></p>
+			</td>
+			<td width="55%">
+			<p><span><span><span><span><span>Do the following</span></span></span><strong>:</strong> </span></span></p>
+
+			<ol start="1" style="list-style-type:decimal">
+				<li><span><span><span><span>Disconnect the SurfaceLink connector from host device.</span></span></span></span></li>
+				<li><span><span><span><span>Disconnect all USB peripherals. Leave the MiniDP connections for external monitors.</span></span></span></span></li>
+				<li><span><span><span><span>Unplug the power cord. <strong>Note:</strong> Unplug the power cord from power brick.&nbsp; Do not just unplug power from the back power port of Dock. Check if it is plugged into a UPS or power strip. If so, try plugging Surface Dock directly into power.</span></span></span></span></li>
+				<li><span><span><span><span>Have the customer look for metallic debris within the Surface Connector port on the device. A flashlight is sometimes needed to identify debris.</span></span></span></span></li>
+				<li><span><span><span><span>Reconnect the SurfaceLink connector to host device.</span></span></span></span></li>
+				<li><span><span><span><span>Does it work? If not rotate the connector over 180 degrees and plug it in again.</span></span></span></span></li>
+				<li><span><span><span>Make sure that the <strong>LED indicator light </strong>on the Surface Dock is<strong> lit</strong></span></span></span><span><span>.</span></span></li>
+			</ol>
+
+			<table class="table">
+				<tbody>
+					<tr>
+						<td><span asset="4465457" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4465457]</span></td>
+						<td><span asset="4465458" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4465458]</span></td>
+					</tr>
+					<tr>
+						<td>LED not lit</td>
+						<td>LED lit</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="22%">
+			<p><span><span>This is most likely a Dock or Surflink Connector issue. </span></span></p>
+
+			<p><span><span>This is the first step to assure the Dock is providing power to connector. </span></span></p>
+
+			<p><span><span>Ensure all the plug connections to 1) PSU 2) Dock and 3) Power outlet are good, because a loose connection could be a cause. </span></span></p>
+
+			<p><span><span>Any metal (for example, a paperclip or staple) can block the connection. </span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>5. Run Windows Updates/Surface Diagnostic Tool (SDT).</span></span></span></p>
+			</td>
+			<td width="55%">
+			<p><span><strong><span lang="EN-SG"></span>English Language Support:</strong>&nbsp;Install and run the&nbsp;Surface Diagnostic Tool. See KB <a href="https://internal.support.services.microsoft.com/help/4014334" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a><span lang="EN-SG">. </span></span></p>
+
+			<p><span><strong><span lang="EN-SG">Non-English support:</span></strong><span lang="EN-SG"> Install all updates for Windows and Surface.</span></span></p>
+
+			<p><span><span>If not prompted to restart after updates or after running SDT, <strong>Restart the Surface</strong>.</span></span></p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span lang="EN-SG"><span><span>Restarting the Surface will clear the cache and refresh drivers. </span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p><span>6. Manually update the Dock.</span></p>
+			</td>
+			<td width="55%">
+			<p><span><span>Direct the customer to </span><span><a data-content-id="" data-content-type="" href="https://technet.microsoft.com/itpro/surface/surface-dock-updater" managed-link="" target="_blank">Microsoft Surface Dock Updater</a></span><span> to follow the instructions for the Dock updater tool. The direct link to the tool is </span><span><a data-content-id="" data-content-type="" href="https://www.microsoft.com/download/details.aspx?id=46703" managed-link="" target="_blank">www.microsoft.com/download/details.aspx?id=46703</a></span>.</span></p>
+			</td>
+			<td width="22%">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span><span>7. Force the device to shut down and restart.</span></span></span></span></p>
+
+			<p><span><span>(P</span><span>rocess </span><span>varies by new vs. old generation.)</span></span></p>
+			</td>
+			<td width="55%">
+			<p class="MsoHeading7"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><strong>Studio (all), Laptop (all), Pro (5th Gen), Pro 6, Book 2, and Go</strong></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><strong>:</strong> Press and hold the power button for 20 seconds</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span><span><span>.</span></span></span></span></p>
+
+			<p class="MsoHeading7"><span><strong><span><span>Other devices:</span></span></strong><span><span><span> Press and hold the volume-up button and the power button at the same time for at least 15 seconds and then release both.</span></span></span></span></p>
+
+			<p><span><span><span>The Surface may boot to UEFI. This is normal. Have the customer exit UEFI.</span></span></span></p>
+
+			<p><span><span>A</span><span> v</span><span>ideo is available at </span><span><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4036280" managed-link="" target="_blank">Force a shut down and restart your Surface</a></span>.</span></p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span><span>The device may be in a &ldquo;hung&rdquo; state. Force the Surface to completely turn off all power and restart.</span></span></span></span></p>
+
+			<p><span><span>Performing a forced shutdown is like removing the battery from a laptop or unplugging a desktop PC. It resets the hardware and clears all the cache and memory for your hardware. </span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>8. Try to charge the Surface by using the PSU that came with the device.</span></span></span></p>
+			</td>
+			<td width="55%">
+			<p><span>Unplug the Surface Dock.</span></p>
+
+			<p><span>Plug in the <strong>in-box PSU</strong> and confirm if the LED is lit. </span></p>
+
+			<p><span><strong><span>If the i</span>n-box </strong><strong><span>PSU charges the device, </span></strong><span>charge the device for 5 minutes, and then plug the Dock back in. If the Dock now charges, the device battery was completely drained.</span></span></p>
+
+			<p><span><strong><span>If the in-box PSU charges the device for five&nbsp;minutes and you plug in the Dock and it does not charge</span></strong><span>, replace the Dock, as the Surface Connect on the Dock might be faulty. </span></span></p>
+
+			<p><span><strong><span><span>If the in-box PSU does not charge the Surface,</span></span></strong><span> t</span>he issue likely does not concern the in-box PSU or the Dock and might be with the device itself. Try to troubleshoot the symptom on the Surface device. </span></p>
+			</td>
+			<td width="22%">
+			<p><span>It&rsquo;s important that we test the Surface Device&rsquo;s ability to charge using the in-box PSU. </span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><span><strong>Is the issue resolved?</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><strong><span><span>Yes, close the case</span></span></strong><span><span>: Once resolved, have the customer check for updates.</span></span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="55%">
+			<p><span>For SDT-enabled sites, tell the customer about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a>.</span></p>
+
+			<p><span>For all other sites, <strong>check Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</span></p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="22%">
+			<p><span>Making sure Surface and Windows are up to date may help avoid this problem in the future.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p class="MsoHeading7"><span><strong><span><span>No, replace the Dock</span></span></strong><span><span>: Set up an exchange for the customer based on the status of warranty.</span></span></span></p>
+			</td>
+			<td width="55%">
+			<p><span>Use KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/2791320" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a>.</span></p>
+			</td>
+			<td width="22%">
+			<p><span>There is likely a hardware problem with the Surface Dock <span>or Surflink Connector.</span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a>&nbsp;</p>
+</div>
+<h3><a id="7" name="7"></a>7. USB problems</h3>
+
+<p><strong>Confirming the issue</strong></p>
+
+<p>When the customer is trying to connect a USB accessory to a USB port on the Dock, the USB accessory is not recognized, or the accessory experiences intermittent disconnects.</p>
+
+<p><strong><span><span><span><span>Confirmation/paraphrase </span></span></span></span></strong></p>
+
+<p><em>&ldquo;Just to make sure I understand your issue: Your USB accessory </em>&lt;is not recognized/experiences intermittent disconnects&gt;<em> when connected to the USB port on the Surface Dock, correct?&rdquo;</em></p>
+
+<p><strong>How to code</strong></p>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true"><span>Choose the appropriate product &gt; Accessories &gt; Docking Station with Surface Connect &gt; Power Supply / USB Problems</span><span><span> </span></span></p>
+	</li>
+</ul>
+
+<p><strong>Resolution steps</strong></p>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="19%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Step</span></span></strong></span></p>
+			</td>
+			<td width="58%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>How</span></span></strong></span></p>
+			</td>
+			<td width="22%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Why</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><span><span>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</span></span><span><span><span> </span></span></span></span></p>
+			</td>
+			<td width="58%">
+			<p class="MsoHeading7"><span><span><span>Notes template:</span></span></span></p>
+
+			<ul>
+				<li class="CxSpLast">
+				<p><span><span><span><span>Check known issues&gt;&gt;</span></span></span></span></p>
+				</li>
+				<li><span><span><span><span>Check if the issue occurs with a different physical dock&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Disconnect peripherals and reset power&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Test the USB device, by itself, plugged into the Dock&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Test if the USB device is working by using a different port&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Try using a different USB device in the non-functioning port on the Dock&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Run Windows Updates/Surface Diagnostic Tool (SDT)&gt;&gt;</span></span></span></span></li>
+				<li>
+				<p><span><span><span><span>Run the Dock Updater Tool&gt;&gt;</span></span></span></span></p>
+				</li>
+			</ul>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>This ensures a consistent format for capturing and reviewing case information. Performing this standard procedure helps prevent instances where a step was neglected to be performed.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><span><span>2. Check known issues.</span></span></span></p>
+			</td>
+			<td width="58%">
+			<p class="MsoHeading7"><span>From&nbsp;KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4072657" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select&nbsp;the customer&rsquo;s&nbsp;<strong>Surface model</strong>&nbsp;and check for the issue in the&nbsp;&ldquo;Surface Dock and external displays&rdquo;&nbsp;section. Check&nbsp;<a href="https://internal.support.services.microsoft.com/help/3098748" target="_blank">3098748 Technical Guide: Surface: Surface Dock known issues</a><span><span>.</span></span> </span></p>
+
+			<p class="MsoHeading7"><span>&nbsp;</span></p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>There may be a current known issue that the customer is experiencing </span></span><span>that has</span><span><span> different troubleshooting steps.</span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>Check known issues regularly.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p><span>3. Check if the issue occurs with a different physical dock.</span></p>
+			</td>
+			<td width="58%">
+			<p><span><span>Check with the customer to see if this issue occurs with a different physical Surface Dock or if they have access to one to test with.</span></span></p>
+			</td>
+			<td width="22%">
+			<p><span><span>It is important to determine if issue impacts one Surface Dock or multiple and if the customer has tested the issue with a different Surface dock. </span></span></p>
+
+			<p><span>&nbsp;</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">4.&nbsp;Disconnect peripherals and reset power.</td>
+			<td width="58%">
+			<p><span><span><span>Do the following:</span></span></span></p>
+
+			<ol>
+				<li><span><span><span><span>Disconnect the SurfaceLink connector from host.</span></span></span></span></li>
+				<li><span><span><span><span>Disconnect all USB peripherals. Leave the MiniDP connections for external monitors.</span></span></span></span></li>
+				<li><span><span><span>Unplug the power cord. <strong>Note</strong>: Unplug the power cord from power brick. Do not just unplug power from the back power port of Dock. Check if it is plugged into a UPS or power strip. If so, try plugging Surface Dock directly into power.</span></span></span></li>
+			</ol>
+			</td>
+			<td width="22%">This helps to determine if reseating connections and power will help resolve the issue.</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p><span>5. Test the USB device connected by itself to the Dock. </span></p>
+			</td>
+			<td width="58%">
+			<p><span><span>Plug only the USB accessory into the USB port on the Dock. </span></span></p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p><span><span>6. </span><span>Test if the USB device is working using a different port.</span></span></p>
+			</td>
+			<td width="58%">
+			<p><span>Plug the USB device into a USB port <strong>on the Surface device</strong>.</span></p>
+
+			<ol start="1" style="list-style-type:decimal">
+				<li>
+				<p><span><span>If the USB d</span>evice<span> works on a Surface USB port:</span><span> Go to step 7. </span></span></p>
+				</li>
+				<li>
+				<p><span><strong><span><span>If the USB d</span></span></strong><strong><span>evice<span> does not work on </span></span></strong><strong><span>a</span></strong><strong><span><span> Surface </span></span></strong><strong><span>USB Port<span>: </span></span></strong><span>The issue is with the customer&rsquo;s USB device. </span></span></p>
+				</li>
+			</ol>
+			</td>
+			<td width="22%">
+			<p><span>This is to determine if the USB port on the Dock has the issue OR if the USB accessory that is being used has the issue. </span></p>
+
+			<p><span>The Surface Dock&rsquo;s USB port supports standard USB power of 1.5 amps at 5 volts resulting in 7.5 watts (1.5 amp * 5 volt = 7.5 watts).</span></p>
+
+			<p><span>If the customer&rsquo;s USB device requires more power, the USB device will not work.</span></p>
+
+			<p><span><span>Some devices, like DVD players have y-connectors, which means that they need to be plugged into two USB ports or have additional power input.</span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><span><span>7. Try using a different USB device in the non-functioning port on the Dock. </span></span></span></p>
+			</td>
+			<td width="58%">
+			<p><span>Ask the customer to <strong>try another USB device</strong> such as a wired mouse, keyboard, or USB thumb drive on the non-functioning USB port on the Dock. </span></p>
+
+			<ol start="1" style="list-style-type:decimal">
+				<li>
+				<p><span><span>If the<strong> o</strong></span><strong><span>ther </span></strong><strong><span>USB d</span></strong><strong>evice </strong><span>works on <strong>the Dock:</strong></span><span>&nbsp;The Dock is not l</span>ikely <span>the issue.</span></span></p>
+				</li>
+				<li>
+				<p><span><strong><span><span>If the other USB d</span></span></strong><strong><span>evice<span> does not work on the D</span></span></strong><strong><span>ock</span></strong><strong><span><span>: </span></span></strong><span>The issue is p</span>otentially the Dock itself. Go to Step 8.</span></p>
+				</li>
+			</ol>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><span><span>8. Run Windows Updates/ Surface Diagnostic Tool (SDT).</span></span></span></p>
+			</td>
+			<td width="58%">
+			<ul>
+				<li>
+				<p><span><span><span lang="EN-SG"></span><strong><span lang="EN-SG"></span>English language support:&nbsp;</strong>Install and run the Surface Diagnostic Tool. See KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4014334" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a><span lang="EN-SG"></span><span lang="EN-SG">.</span></span></span></p>
+				</li>
+				<li>
+				<p><span><span><span lang="EN-SG"></span><strong><span lang="EN-SG">Non-English Support: </span></strong><span lang="EN-SG">Install all updates for Windows and Surface.</span></span></span></p>
+				</li>
+			</ul>
+
+			<p><span><span>Make sure to <strong>Restart</strong> the device, with the Dock connected.</span><span lang="EN-SG"></span></span></p>
+
+			<p><span><span lang="EN-SG">Test the USB Device in the non-functioning USB port.</span></span></p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span><span>Windows Updates may have resolved the issue.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><span><span>9. Run the Dock Updater Tool.</span></span></span></p>
+			</td>
+			<td width="58%">
+			<p><span><span lang="EN-SG">Direct the customer to follow the steps outlined at </span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/surface/surface-dock-updater" managed-link="" target="_blank">Microsoft Surface Dock Updater</a><span lang="EN-SG">.</span></span></p>
+
+			<p><span><span lang="EN-SG">The direct link to the tool is </span><span lang="EN-SG"><a data-content-id="" data-content-type="" href="https://www.microsoft.com/download/details.aspx?id=46703" managed-link="" target="_blank">www.microsoft.com/download/details.aspx?id=46703</a></span><span lang="EN-SG">. </span></span></p>
+
+			<p><span><span>Make sure to <strong>Restart</strong> the device with the Dock connected.</span><span lang="EN-SG"></span></span></p>
+
+			<p><span><span lang="EN-SG">Test the USB Device in the non-functioning USB port.</span></span></p>
+
+			<p><span><span lang="EN-SG"></span></span></p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>The Dock Update Tool will address a known issue that affects the Dock&rsquo;s USB ports.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><span><strong>Is the issue resolved?</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><strong><span><span>Yes, close the case</span></span></strong><strong><span><span>: </span></span></strong><span><span>Once resolved, have the customer check for updates.</span></span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="58%">
+			<p><span>For SDT enabled sites, tell the customer about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a>.</span></p>
+
+			<p><span>For all other sites, <strong>check Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</span></p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="22%">
+			<p><span>Making sure the Surface and Windows are up to date may help avoid this problem in the future.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><strong><span><span>No, replace the Dock</span></span></strong><strong><span><span>: </span></span></strong><span><span>Set up an exchange for the customer based on the status of warranty.</span></span></span></p>
+			</td>
+			<td width="58%">
+			<p><span>Use KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/2791320" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a>.</span></p>
+			</td>
+			<td width="22%">
+			<p><span>There is likely a hardware problem with the Surface Dock <span>or Surflink Connector.</span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a>&nbsp;</p>
+</div>
+<h3><a id="8" name="8"></a>8. Video/display port problems, blank/black screen or flashing/flickering screen on external monitors only</h3>
+
+<p><strong>Confirming the issue</strong></p>
+
+<p>When the customer connects the Dock, which has external monitor(s) set up for their Surface, experiences any of the following:</p>
+
+<ul>
+	<li><span><span><span lang="EN-SG"></span><span lang="EN-SG">The external monitor is<strong> </strong>blank or black. </span></span></span></li>
+	<li><span><span><span lang="EN-SG"></span><span lang="EN-SG">The external monitor that is connected to the Dock begins to flash, blink, flicker, or display a garbled screen.</span></span></span></li>
+	<li><span><span><span lang="EN-SG"></span><span lang="EN-SG">The external monitor shows &ldquo;No signal&rdquo; or a similar message.</span></span></span></li>
+</ul>
+
+<p><strong><span><span><span><span>Confirmation/paraphrase </span></span></span></span></strong></p>
+
+<p><em>&ldquo;Just to make sure I understand your issue: The external monitor connected to your Dock is not working as expected, correct?&rdquo;</em></p>
+
+<p><strong>How to code</strong></p>
+
+<ul>
+	<li><span><span><span><span><span><span>Choose the appropriate product &gt; Accessories &gt; Docking Station with Surface Connect &gt;</span></span></span></span></span></span>
+
+	<ul style="list-style-type:circle">
+		<li><span><span><span><strong><span><span><span>Blank or Black Screen, External Monitor(s) Only</span></span></span></strong></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<p><span><span><em><span><span><span>-or-</span></span></span></em></span></span></p>
+
+<ul style="list-style-type:circle">
+	<li class="indent-1"><span><span><span><strong><span><span><span>Flashing or Flickering Screen, External Monitor(s) Only</span></span></span></strong></span></span></span></li>
+</ul>
+
+<p><span><span><em><span><span><span>-or-</span></span></span></em></span></span></p>
+
+<ul style="list-style-type:circle">
+	<li class="indent-1"><span><span><span><strong><span><span><span>Video / Display Port Problems</span></span></span></strong></span></span></span></li>
+</ul>
+
+<p><strong>Resolution steps</strong></p>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="19%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Step</span></span></strong></span></p>
+			</td>
+			<td width="58%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>How</span></span></strong></span></p>
+			</td>
+			<td width="22%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Why</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><span><span>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</span></span><span><span><span> </span></span></span></span></p>
+			</td>
+			<td width="58%">
+			<p class="MsoHeading7"><span><span><span>Notes template:</span></span></span></p>
+
+			<ul>
+				<li class="CxSpLast"><span><span><span><span>Check known issues&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Check if the issue occurs with a different physical dock&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Validate that the monitor is detected when connected to the mDP port on the Surface&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Disconnect peripherals and reset power&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Validate the customer&rsquo;s monitors are compatible and configured to a compatible resolution and refresh rate&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Make sure Windows recognizes the external monitors&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Change the refresh rate of the external display&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Clear the display cache&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Run Windows Updates/Surface Diagnostic Tool&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Run the Dock Updater Tool&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Try a different cable or adapter&gt;&gt;</span></span></span></span></li>
+			</ul>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>This ensures a consistent format for capturing and reviewing case information. Performing this standard procedure helps prevent instances where a step was neglected to be performed.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><span><span>2. Check known issues.</span></span></span></p>
+			</td>
+			<td width="58%">
+			<p class="MsoHeading7"><span>From&nbsp;KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4072657" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select&nbsp;the customer&rsquo;s&nbsp;<strong>Surface model</strong>&nbsp;and check for the issue in the&nbsp;&ldquo;Surface Dock and external displays&rdquo;&nbsp;section. Check&nbsp;KB <a href="https://internal.support.services.microsoft.com/help/3098748" target="_blank">3098748 Technical Guide: Surface: Surface Dock known issues</a><span><span>.</span></span></span></p>
+
+			<p class="MsoHeading7"><span>&nbsp;</span></p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>Check known issues regularly.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">3.&nbsp;Check if the issue occurs with a different physical dock.</td>
+			<td width="58%">Check with the customer to see if this issue occurs with a different physical Surface Dock or if they have access to one to test with.</td>
+			<td width="22%">It is important to determine if issue impacts one Surface Dock or multiple and if the customer has tested the issue with a different Surface dock.</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p><span>4. Validate if the Surface can detect the monitor. </span></p>
+			</td>
+			<td width="58%">
+			<p><span>Connect the monitor directly to the Surface&rsquo;s mini Display Port (mDP) and test the connection (bypassing the Dock).</span></p>
+
+			<p><span>After testing, connect the monitor back to the Dock.</span></p>
+			</td>
+			<td width="22%">
+			<p><span>This will determine if the issue concerns the Surface or the Dock. The external monitor should work when connected directly to the Surface.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p><span>5. Disconnect peripherals and reset power.</span></p>
+			</td>
+			<td width="58%">
+			<p><span><span><span>Do the following</span></span></span></p>
+
+			<ol>
+				<li><span><span><span><span>Disconnect the SurfaceLink connector from host.</span></span></span></span></li>
+				<li><span><span><span><span>Disconnect all USB peripherals.</span></span></span></span></li>
+				<li><span><span><span><span>Disconnect monitor connections on the Surface Dock.</span></span></span></span></li>
+				<li><span><span><span><span>Unplug monitors from power and then plug them back in. Check to see if the monitors are plugged into a UPS or power strip. If so, try plugging the monitors directly into AC power.</span></span></span></span></li>
+				<li><span><span><span><span>Unplug power cord. <strong>Note</strong>: Unplug power cord from the power brick. Do not just unplug power from the back power port of Dock. Check if it is plugged into UPS or power strip. If so, try plugging Surface Dock directly into power.</span></span></span></span></li>
+				<li><span><span><span><span>Reconnect monitor connections.</span></span></span></span></li>
+				<li><span><span><span><span>Connect SurfaceLink connector to host device.</span></span></span></span></li>
+			</ol>
+			</td>
+			<td width="22%">
+			<p><span>This helps to determine if reseating the connections and power will help resolve issue.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p><span>6. Validate the customer&rsquo;s monitors are <strong>compatible</strong> and <strong>configured </strong>to a<strong> compatible resolution</strong> and <strong>refresh</strong> <strong>rate</strong>.</span></p>
+			</td>
+			<td width="58%">
+			<p><a href="https://support.microsoft.com/help/4023468" target="_blank"><span><span><span><span>Check your monitor&rsquo;s compatibility</span></span></span></span></a>.</p>
+
+			<p><span><span><span>The combination of the Surface device, plus the number of external displays, plus the refresh rate, plus the screen resolution plays a part in a given supported setup. For supported configurations see <a href="https://support.microsoft.com/help/4039635" target="_blank"><span>How many screens can I connect?</span></a></span></span><span> </span></span></p>
+			<strong><span><span><span>Daisy chaining scenarios only</span></span></span></strong><span><span><span>: Disconnect the daisy chain and guide the customer to use both mini Display Ports on the Surface Dock instead of daisy chaining</span></span></span>.</td>
+			<td width="22%">
+			<p><span>Use the website and information on the support page to provide guidance to the customer.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p><span>7. Make sure that Windows recognizes the external monitors.</span></p>
+			</td>
+			<td width="58%">
+			<ol>
+				<li><span><span> </span></span><span><span><span><span>Minimize all apps.</span></span></span></span></li>
+				<li><span><span><span><span>Right-click the desktop background and select <strong>Display Settings</strong>.</span></span></span></span></li>
+				<li><span><span><span><span>Scroll down to <strong>Multiple displays</strong>.</span></span></span></span></li>
+				<li><span><span><span><span>First select <strong>Duplicate desktop on 1 (and 2)</strong>. For multiple monitors, repeat step with desktop (1 and 3).</span></span></span></span></li>
+				<li><span><span><span><span>Select <strong>Keep settings</strong>.</span></span></span></span></li>
+				<li><span><span><span><span>Select <strong>Extend to this display</strong>.</span></span></span></span></li>
+				<li><span><span><span>Select <strong>Keep settings</strong></span></span></span><span><span>.</span></span></li>
+			</ol>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>This step may help the monitors and Windows enumerate correctly. </span></span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p><span>8. Change the <strong>refresh rate</strong> of the external display.</span></p>
+			</td>
+			<td width="58%">
+			<ol>
+				<li><span> Right-click the desktop background and select <strong>Display Settings</strong>. </span></li>
+				<li><span>Select the<strong> external display</strong>. </span></li>
+				<li><span>Scroll down and select <strong>Advanced display settings</strong>. </span></li>
+				<li><span>Select <strong>Display adapter properties for Display 2</strong> (and then repeat for Display 3 if two monitors are present).</span></li>
+				<li><span>Select the <strong>Monitor</strong> tab. </span></li>
+				<li><span>Change the <strong>Screen refresh rate</strong> from the menu. Try a <strong>lower</strong> refresh rate first. </span></li>
+			</ol>
+			</td>
+			<td width="22%">
+			<p><span>If this resolves the issue, this means that the customer was trying to project to the external display at an unsupported resolution or refresh rate.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p><span>9. Clear the display cache.</span></p>
+			</td>
+			<td width="58%">
+			<p><span><strong><span><span>(REMINDER! </span></span></strong><span><span><span>Do not use these steps if you are running Windows 10 S.)</span></span></span></span><span><span> </span></span></p>
+
+			<ol>
+				<li><span><span><span><span>Undock the Surface from the Surface Dock.</span></span></span></span></li>
+				<li><span><span><span><span><a href="http://download.microsoft.com/download/8/5/5/8554763F-DBF9-41B3-9F12-605FA0A99183/surface%20dock%20registry.zip" target="_blank"><span>Download the Surface Dock registry file</span></a>. Choose to <strong>Open</strong> the file.</span></span></span></span></li>
+				<li><span><span><span><span>Select and run <strong>surface dock registry.reg</strong></span></span></span></span></li>
+				<li><span><span><span><span>Select <strong>Yes</strong> to allow changes to the Surface, select <strong>Yes</strong> to confirm, and then select <strong>OK</strong> to close.</span></span></span></span></li>
+				<li><span><span><span>Restart the Surface, reconnect it to the Surface Dock, and try the external display again.</span></span></span></li>
+			</ol>
+
+			<p><span><span><span><strong>Note:</strong> If multiple-monitor configuration had been set up, the customer will have to re-enable the multimonitor configuration.</span></span></span></p>
+			</td>
+			<td width="22%">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p><span>10. Run Windows Updates/Surface Diagnostic Tool (SDT).</span></p>
+			</td>
+			<td width="58%">
+			<ul>
+				<li><span><span><span><strong>English language support:</strong>&nbsp;Install and run&nbsp;Surface Diagnostic Tool. See KB <a href="https://internal.support.services.microsoft.com/help/4014334" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a>. </span></span></span></li>
+				<li><span><span><span><strong>Non-English support:</strong> Install all updates for Windows and Surface.</span></span></span></li>
+			</ul>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><span><span>11. </span></span><span><span>Run the Dock Updater Tool.</span></span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="58%">
+			<p><span><span lang="EN-SG">Guide the customer to follow the steps outlined at </span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/surface/surface-dock-updater" managed-link="" target="_blank">Microsoft Surface Dock Updater</a><span lang="EN-SG">. </span></span></p>
+
+			<p><span><span lang="EN-SG">The direct link to the tool is </span><span lang="EN-SG"><a data-content-id="" data-content-type="" href="https://www.microsoft.com/download/details.aspx?id=46703" managed-link="" target="_blank">www.microsoft.com/download/details.aspx?id=46703</a></span><span lang="EN-SG">. </span></span></p>
+
+			<p><span><span>Make sure to <strong>Restart</strong> the device with the Dock connected.</span></span></p>
+
+			<p><span><span lang="EN-SG"></span></span></p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><span><span>12. Try a different cable OR adapter. </span></span></span></p>
+			</td>
+			<td width="58%">
+			<p><span><strong>Cable:</strong></span></p>
+
+			<p><span>If the monitor supports DisplayPort (DP), guide the customer to <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4023468/surface-troubleshoot-surface-dock-and-docking-stations" managed-link="" target="_blank">Use a Mini DisplayPort-to-DisplayPort cable</a>.</span></p>
+
+			<p><span><strong>Adapter:</strong></span></p>
+
+			<p><span>If the monitor doesn&rsquo;t support DisplayPort, we recommend using HDMI. Otherwise, use DVI or VGA. Direct the customer to <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4023468/surface-troubleshoot-surface-dock-and-docking-stations" managed-link="" target="_blank">Use an HDMI, DVI, or VGA adapter</a>.</span></p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>It may be that the customer&rsquo;s cable or adapter is not functioning or is having issues. </span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>It&rsquo;s best to use the shortest cable length available. The shorter the cable, the stronger the signal between monitor and Dock. </span></span></span></p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><span><strong>Is the issue resolved?</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><strong><span><span>Yes, close the case</span></span></strong><span><span><strong>: </strong>Once resolved, have the customer check for updates.</span></span></span>&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;</p>
+			</td>
+			<td width="58%">
+			<p><span>For SDT-enabled sites, tell the customer know about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a>.</span></p>
+
+			<p><span>For all other sites, <strong>check Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</span></p>
+			</td>
+			<td width="22%">
+			<p><span>Making sure the Surface and Windows are up to date may help avoid this problem in the future.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><strong><span><span>No, replace the Dock</span></span></strong><span><span><strong>:</strong> Set up an exchange for the customer based on the status of warranty.</span></span></span></p>
+			</td>
+			<td width="58%">
+			<p><span>Use KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/2791320" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a>.</span></p>
+			</td>
+			<td width="22%">
+			<p><span>There is likely a hardware problem with the Surface Dock <span>or Surflink Connector.</span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a>&nbsp;</p>
+</div>
+<h3><a id="9" name="9"></a>9. Scaling &ndash; image too big or too small</h3>
+
+<p><strong>Confirming the issue</strong></p>
+
+<p>When the customer has an external monitor connected and experiences any of the following:</p>
+
+<ul>
+	<li>Ima<span><span><span lang="EN-SG">ges are not the same size when moving windows from one monitor to another.</span></span></span></li>
+	<li><span><span><span lang="EN-SG"></span><span lang="EN-SG">One display shows apps larger or smaller than other displays.</span></span></span></li>
+	<li><span><span><span lang="EN-SG"></span><span lang="EN-SG">The Surface screen shows apps in a different resolution than is displayed on the external monitor.</span></span></span></li>
+</ul>
+
+<p><span><span lang="EN-SG">Other descriptions and more information about scaling can be </span>found at&nbsp;<a href="https://support.microsoft.com/en-us/help/3025083" target="_blank">Windows scaling issues for high-DPI devices</a><span lang="EN-SG">.<br>
+<br>
+<span asset="4465463" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4465463]</span></span><u><span lang="EN-SG"></span></u></span></p>
+
+<p><span><span lang="EN-SG"></span></span></p>
+
+<p><span> <span lang="EN-SG"></span></span></p>
+
+<p><span><span lang="EN-SG"></span></span></p>
+
+<p><strong><span><span><span><span>Confirmation/paraphrase </span></span></span></span></strong></p>
+
+<p><em>&quot;Just to make sure I understand your issue; an app appears normal on Surface built-in display, but the content displayed on an external monitor is too large or too small.&quot;</em></p>
+
+<p><strong>How to code</strong></p>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true"><span>Choose the appropriate product &gt; Accessories &gt; Docking Station with Surface Connect &gt;<strong> Scaling &ndash; Image Too Big or Too Small</strong></span><span><span> </span></span></p>
+	</li>
+</ul>
+
+<p><strong>Resolution steps</strong></p>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="19%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Step</span></span></strong></span></p>
+			</td>
+			<td width="58%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>How</span></span></strong></span></p>
+			</td>
+			<td width="22%">
+			<p align="center" class="MsoHeading7"><span><strong><span><span>Why</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><span><span>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</span></span><span><span><span> </span></span></span></span></p>
+			</td>
+			<td width="58%">
+			<p class="MsoHeading7"><span><span><span>Notes template:</span></span></span></p>
+
+			<ul>
+				<li><span><span><span><span>Check known issues&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Log out and log back into Windows&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Run Windows Updates/Surface Diagnostic Tool (SDT)&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Change display scaling&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Make older programs compatible with this version of Windows&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span><span>Update the app(s) being used&gt;&gt;</span></span></span></span></li>
+				<li><span><span><span>Refer the customer to the app developer for more information on display scaling&gt;&gt;</span></span></span></li>
+			</ul>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>This ensures a consistent format for capturing and reviewing case information. Performing this standard procedure helps prevent instances where a step was neglected to be performed.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><span><span>2. Check known issues.</span></span></span></p>
+			</td>
+			<td width="58%">
+			<p class="MsoHeading7"><span>From&nbsp;KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4072657" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select&nbsp;the customer&rsquo;s&nbsp;<strong>Surface model</strong>&nbsp;and check for the issue in the&nbsp;&ldquo;Surface Dock and external displays&rdquo;&nbsp;section. Check KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/3098748" target="_blank">3098748 Technical Guide: Surface: Surface Dock known issues</a><span><span>.</span></span></span></p>
+
+			<p class="MsoHeading7"><span>&nbsp;</span></p>
+			</td>
+			<td width="22%">
+			<p class="MsoHeading7"><span><span><span>There may be a current known issue that the customer is experiencing that has different troubleshooting steps.</span></span></span></p>
+
+			<p class="MsoHeading7"><span><span><span>Check known issues regularly.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p><span>3. Log out and log back in to Windows.</span></p>
+			</td>
+			<td width="58%">
+			<ol style="list-style-type:lower-alpha">
+				<li><span> Right-click the Start button <em>or</em> press Windows+X.</span></li>
+				<li><span> Point to <strong>Shut down or sign out</strong> &gt; <strong>Sign out</strong>.</span><br>
+				<br>
+				<span asset="4465464" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4465464]</span></li>
+			</ol>
+
+			<p><span> </span></p>
+			</td>
+			<td width="22%">
+			<p><span>Resolution or app scaling changes may require users to log out and log back in to resolve the changes.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p><span>4. Run Windows Updates/Surface Diagnostic Tool (SDT)</span></p>
+			</td>
+			<td width="58%">
+			<ul>
+				<li><span><span><strong>English language support:</strong>&nbsp;Install and run the Surface Diagnostic Tool. See KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4014334" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a>.</span></span></li>
+			</ul>
+
+			<ul>
+				<li><span><span><strong>Non-English support:</strong> Install all updates for Windows and Surface.</span></span></li>
+			</ul>
+			</td>
+			<td width="22%">
+			<p><span>The latest version of Windows starting with Windows 10 Creator&rsquo;s Update significantly improves display scaling issues.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p><span>5. Change display scaling.</span></p>
+			</td>
+			<td width="58%">
+			<ol>
+				<li><span> Open <strong>Settings</strong> &gt; <strong>System</strong> &gt; <strong>Display</strong>.</span></li>
+				<li><span>Be&nbsp;sure to first select the display that&nbsp;the adjustment is for.&nbsp;</span><span><br>
+				<span><span asset="4465465" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4465465]</span></span></span><span> </span><span> </span></li>
+				<li><span>Adjust the <strong>Scale and layout</strong> as desired.</span></li>
+				<li><span> Select <strong>Advanced scaling settings</strong> to make further changes, including <strong>Custom Scaling</strong>.</span><br>
+				&nbsp;</li>
+			</ol>
+
+			<p><span> </span></p>
+			</td>
+			<td width="22%">
+			<p><span>Windows 10 Version 1803 adds a <strong>Fix scaling for apps</strong> advanced setting to help automatically fix app scaling issues.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p><span>6. Make older programs compatible with this version of Windows</span></p>
+			</td>
+			<td width="58%">
+			<p><span>If the customer has an older program/application that scales well on other devices in the past but not on the Surface or when connected to an external monitor, consider guiding customer through <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/15078/windows-make-older-programs-compatible" managed-link="" target="_blank">Changing high DPI settings</a> for older programs. </span></p>
+
+			<ol>
+				<li><span><span>Enter the name of the program in the search box on the taskbar, press and hold (or right-click) the search result, and then select <strong>Open file location</strong>.</span></span></li>
+			</ol>
+
+			<ol start="2">
+				<li><span><span>Press and hold (or right-click) the program, select <strong>Properties</strong>, and then select the <strong>Compatibility</strong> tab &gt; <strong>Change high DPI settings</strong>.</span></span></li>
+			</ol>
+
+			<p><span><strong>Note:</strong> You might need to try more than one combination. </span></p>
+			</td>
+			<td width="22%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p><span>7. Update the app(s) being used.</span></p>
+			</td>
+			<td width="58%">
+			<p><span>App developers are responsible for delivering improvements to display scaling within their applications. </span></p>
+
+			<p><span>To update Windows Store apps: Open the Windows Store and check for updates. </span></p>
+
+			<p><span>For additional information on Office versions required to get the latest scaling updates go to <a data-content-id="" data-content-type="" href="https://support.office.com/article/Office-apps-appear-the-wrong-size-or-blurry-on-external-monitors-bc9f7279-4e42-4b15-a949-46ab8bcfe44f" managed-link="" target="_blank">Office apps appear the wrong size or blurry on external monitors</a>. To update Office, see <a data-content-id="" data-content-type="" href="https://support.office.com/article/Install-Office-updates-2ab296f3-7f03-43a2-8e50-46de917611c5" managed-link="" target="_blank">Install Office updates</a>.</span></p>
+			</td>
+			<td width="22%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p><span>8. Refer the customer to the app developer for more information on display scaling.</span></p>
+			</td>
+			<td width="58%">
+			<p><span>Help the&nbsp;customer contact the app developer&rsquo;s support. </span></p>
+
+			<p><span><strong>If the customer refuses to work with the app developer: </strong>go to<strong> Is issue Resolved &gt; No </strong>section of this table. </span></p>
+			</td>
+			<td width="22%">
+			<p><span>The app developer can provide more information about how they plan to resolve display scaling issues within their application on Windows 10.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><span><strong>Is the issue resolved?</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><strong><span><span>Yes, close the case</span></span></strong><strong><span><span>:</span></span></strong><span><span> Once resolved, have the customer check for updates.</span></span></span></p>
+			</td>
+			<td width="58%">
+			<p><span>For SDT enabled sites, tell the customer about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a>.</span></p>
+
+			<p><span>For all other sites, <strong>check Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</span></p>
+			</td>
+			<td width="22%">
+			<p><span>Making sure the Surface and Windows are up to date may help avoid this problem in the future.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="19%">
+			<p class="MsoHeading7"><span><strong><span><span>No: </span></span></strong><span><span><span>Work with a Tech Lead and escalate.</span></span></span></span></p>
+			</td>
+			<td width="58%">
+			<p><span>Before escalating, capture the following information: </span></p>
+
+			<ul>
+				<li><span>Verify that all the <strong>information to gather in your notes data is filled out.</strong> </span></li>
+				<li><span>Verify the Windows <strong>Version</strong> (Winver) of Windows 10 and <strong>Build</strong> number. </span></li>
+				<li><span>Verify the complete <strong>app</strong> <strong>name</strong> of the customer&rsquo;s app.</span></li>
+				<li><span>Verify the <strong>app version</strong> of the customer&rsquo;s app.</span></li>
+				<li><span>Any other pertinent information.</span></li>
+			</ul>
+
+			<p><span>Make sure you have as much information as possible documented.</span></p>
+
+			<p><span>Follow guidance from your Tech Lead.</span></p>
+			</td>
+			<td width="22%">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+<div><a bookmark-id="top" href="#top" managed-link="">Return to top</a>&nbsp;</div>
+</div>
+<p><span><strong><span><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span>October 2018</span></strong></span></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Change history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>Item</strong></p>
+			</td>
+			<td>
+			<p><strong>Title</strong></p>
+			</td>
+			<td>
+			<p><strong>Date</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/150550">CONTENT TRACKING 150550</a></td>
+			<td>Surface: Update KB 4023312 to update link to archived content</td>
+			<td>1/10/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/150183">CONTENT TRACKING 150183</a></td>
+			<td>Surface: Updating content [Technical Guide: Surface Dock] KB 4023312</td>
+			<td>12/16/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/140039" role="heading">Content Tracking 140039</a></td>
+			<td>Project: Surface Consumer Content Request - bulk edit to tech guide instructions - &quot;Resolution steps&quot;</td>
+			<td>2/14/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/138508" role="heading">Content Tracking 138508</a></td>
+			<td>PROJECT: Surface: SPM Only Consumer CPC Content Request - update Resolution steps text - 3203673</td>
+			<td>12/28/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/135430" role="heading">135430</a></td>
+			<td>update prods listed with &quot;Press and hold the power button for 20 seconds&quot; language</td>
+			<td>10/24/2018</td>
+		</tr>
+		<tr>
+			<td><span><span><a href="https://tfsirt/tfs/web/wi.aspx?pcguid=71a89b6f-e171-4c62-8b8c-6ac1ccf43b88&amp;id=131534" target="_blank">131534</a></span></span></td>
+			<td>rewrite for&nbsp;or slimfast project launch</td>
+			<td>9/24/2018</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/132984">132984</a></p>
+			</td>
+			<td>
+			<p>Add the Speak Up! Asset to all consumer articles</p>
+			</td>
+			<td>
+			<p>9/12/2018</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>Bug #:&nbsp; <a href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/111281" managed-link="">111281 (CSS IRT)</a></p>

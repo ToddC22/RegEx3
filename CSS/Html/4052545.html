@@ -1,0 +1,729 @@
+﻿<header><h1>ASMS – Azure Billing APIs</h1></header><form action="/" id="form1" method="post">
+<p paraeid="{655cccfb-8467-4f1b-a170-b6871577b648}{86}" paraid="859529907">Submit a <a href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder=" rel="noreferrer" target="_blank"><u>ModTrack</u></a> request to update this TSG.  </p>
+
+<h3 paraeid="{655cccfb-8467-4f1b-a170-b6871577b648}{247}" paraid="1163247090"><strong><a id="Overview " name="Overview "></a>Overview </strong></h3>
+
+<p paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{10}" paraid="103771016">The Azure Billing Application Programming Interfaces (APIs) are designed to allow Azure customers to get information about the pricing and usage of various Azure services.</p>
+
+<p paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{24}" paraid="1681713968"><strong>Applies To</strong>: This TSG applies to customers using the public Azure Billing APIs only. Enterprise Agreement (EA) customers, Cloud Solution Provider (CSP) partners, and customers looking for assistance using PowerBI should be handled as directed in the &ldquo;Policy&rdquo; section below.</p>
+</form>
+
+<form action="/" id="form1" method="post">
+<h3 aria-level="3" paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{30}" paraid="269977031" role="heading"><strong><a id="Policy " name="Policy "></a>Policy </strong></h3>
+
+<p paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{50}" paraid="1903421440">As there are three different Billing APIs available (Invoice, RateCard, and UsageAggregates) please confirm which Billing API a customer is experiencing trouble with, before starting to troubleshoot the problem.</p>
+
+<p paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{52}" paraid="110638975"><strong>Enterprise Agreement (EA) Customers</strong> -  For EA subscriptions, only the consumption.azure.com APIs are applicable. EA Customers using <a href="https://ea.azure.com/" rel="noreferrer" target="_blank"><u>https://ea.azure.com</u></a><u><a href="https://ea.azure.com" managed-link="" target="_blank"> </a></u>may be using Consumption&nbsp;APIs, not the public Azure Billing APIs. &nbsp;</p>
+
+<p paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{52}" paraid="110638975">The only exception is that EA customers may use the Public UsageAggregate API to track usage beyond EA commitment amounts.  The Ratecard API is not applicable to EA customers as the Ratecard data is obtained via EA Billing APIs only, not the public Billing APIs.</p>
+
+<p paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{52}" paraid="110638975">To learn more about Consumption APIs&nbsp;click reference the following public facing pages:</p>
+
+<ul>
+	<li paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{52}" paraid="110638975"><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/consumption-api-overview" managed-link="" target="_blank">Consumption API Overview</a></li>
+	<li paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{52}" paraid="110638975">
+	<p><a href="https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/enterprise-api" managed-link="" target="_blank">Reporting APIs for Enterprise Customers</a></p>
+	</li>
+</ul>
+
+<p paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{52}" paraid="110638975"><strong>Note:</strong> All Management API issues are handled by Engineering.&nbsp;</p>
+
+<p paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{109}" paraid="1143563286"><strong>Case handling for EA Customers&nbsp;</strong></p>
+
+<ul>
+	<li paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{109}" paraid="1143563286">EA Consumption Billing API and Ratecard scenarios are handled by the Azure EA Portal Support Team. Engage this team via a collaboration task.&nbsp;
+	<ul style="list-style-type:circle">
+		<li><span><span>SR Routing Product &ndash; Azure EA Portal (Non &ndash; GBS)</span></span></li>
+		<li><span><span>Target Queue &ndash; Azure EA Portal Support.</span></span></li>
+	</ul>
+	</li>
+	<li paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{109}" paraid="1143563286">EA Management APIs are handled by ACE via IcM
+	<ul style="list-style-type:circle">
+		<li paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{109}" paraid="1143563286"><a data-content-id="" data-content-type="" href="https://portal.microsofticm.com/imp/v3/incidents/create?tmpl=n3F1F1" managed-link="" target="_blank">ACE - Azure Commercial Experiences ICM template</a></li>
+	</ul>
+	</li>
+</ul>
+
+<p paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{155}" paraid="1986756477"><strong>Cloud Solution Provider (CSP) using Partner Center APIs and CREST </strong>- Partners using <a href="https://api.cp.microsoft.com/" rel="noreferrer" target="_blank"><u>https://api.cp.microsoft.com</u></a> are using the Partner Center APIs, not the public Azure Billing APIs, and are CSPs. Partners in these spaces will get errors when running the APIs and this is expected. </p>
+
+<p paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{172}" paraid="1152807385"><strong>Case handling for Cloud Solution Providers (CSPs) using Partner Center APIs and CREST </strong>- CSP (Partner Center and CREST) partner cases should be routed to the Global PC Partner EN queue.</p>
+
+<p paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{172}" paraid="1152807385"> Use the following routing path:</p>
+
+<ul class="indent-1">
+	<li><span><span>Transfer reason &ndash; Misroute</span></span></li>
+	<li><span><span>SR Routing Product &ndash; Partner Center</span></span></li>
+	<li><span><span>Target Queue &ndash; Global PC Partner EN</span></span></li>
+</ul>
+
+<p paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{214}" paraid="1927759552"><strong>Case Handling for PowerBi </strong>-<strong> </strong><span>Cases where the customer is requesting assistance with PowerBi and Billing Data are typically EA customers. Usually, PowerBI cases should be sent to the PowerBi Team. However if customer also mentions comparison of PowerBI data with Azure Cost Management or ACM data, then a <span asset="4498193" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4498193]</span> should be sent to the Azure Cost Management team instead. </span></p>
+
+<p paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{248}" paraid="1382891377">Use SD Case and send the Case / task to queue - <strong>MSaas Power BI - MT</strong></p>
+
+<p paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{248}" paraid="1382891377"><strong>Cost Advisor</strong></p>
+
+<p paraeid="{324a38b0-061c-4d85-b398-3a05d93194ab}{248}" paraid="1382891377">The Advisor Portal limits customers to 60 subscriptions. If a customer wants to see recommendations for more subscriptions, the Advisor Portal provides public APIs. For more information on public APIs, click&nbsp;<a href="https://docs.microsoft.com/en-us/rest/api/advisor/" managed-link="" target="_blank">here</a>.</p>
+
+<h3 aria-level="3" paraeid="{db94ed22-6586-44c1-b1bc-103d85875906}{21}" paraid="1458688768" role="heading"><a id="Customer Experience &amp; Provisioning" name="Customer Experience &amp; Provisioning"></a><strong>Customer Experience &amp; Provisioning</strong></h3>
+
+<p paraeid="{db94ed22-6586-44c1-b1bc-103d85875906}{25}" paraid="372801828">Currently Azure is offering the following APIs:</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p>Invoice</p>
+			</td>
+			<td>
+			<p>This API allows you to Access your Azure invoice in PDF Format.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>RateCard</p>
+			</td>
+			<td>
+			<p>This API can be used to get the meter / resource metadata information along with prices.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>UsageAggregates</p>
+			</td>
+			<td>
+			<p>This API allows you to get consumption data for an Azure subscription. It returns all the usage data incurred on an Azure subscription and NOT JUST the usage data that was considered for billing &ndash; this might include any usage at the end of the billing cycle that was discarded due to lateness.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><br>
+<a id="Invoice" name="Invoice"></a><strong>Invoice</strong></p>
+
+<p paraeid="{db94ed22-6586-44c1-b1bc-103d85875906}{92}" paraid="1879854555">The information returned by the invoice API is the exact same PDF invoice file that is available in the portal.</p>
+
+<p paraeid="{db94ed22-6586-44c1-b1bc-103d85875906}{94}" paraid="588499901"><a id="RateCard" name="RateCard"></a><strong>RateCard</strong></p>
+
+<p paraeid="{db94ed22-6586-44c1-b1bc-103d85875906}{94}" paraid="588499901">The RateCard API allows you to query for the resource/meter metadata and related prices used in a given subscription by:</p>
+
+<ul class="indent-1">
+	<li><span><span>Offer ID</span></span></li>
+	<li><span><span>Currency</span></span></li>
+	<li><span><span>Locale</span></span></li>
+	<li><span><span>Region</span></span></li>
+</ul>
+</form>
+
+<form action="/" id="form1" method="post">
+<p paraeid="{db94ed22-6586-44c1-b1bc-103d85875906}{148}" paraid="135560304"><strong>Sources for parameters for Ratecard</strong></p>
+
+<p paraeid="{db94ed22-6586-44c1-b1bc-103d85875906}{162}" paraid="351698963">There are presently no APIs which will get the parameters for an existing subscription.  The customer should plan to obtain these parameters manually for input into the APIs. </p>
+
+<ul class="indent-1" role="list">
+	<li><span>OfferDurableId: <a href="https://azure.microsoft.com/en-us/support/legal/offer-details/" target="_blank">https://azure.microsoft.com/en-us/support/legal/offer-details/</a> lists all offers. You need to add &quot;MS-AZR-&quot; to the beginning of the offer number from the table. (Example: MS-AZR-0003P) </span></li>
+	<li paraeid="{db94ed22-6586-44c1-b1bc-103d85875906}{200}" paraid="831376297"><span>Currency: <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">https://en.wikipedia.org/wiki/ISO_4217</a> lists ISO currency codes.  Not all countries may be represented in this API. </span></li>
+	<li paraeid="{db94ed22-6586-44c1-b1bc-103d85875906}{212}" paraid="667606662"><span>Locale: <a href="https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx" target="_blank">https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx</a> </span></li>
+	<li paraeid="{db94ed22-6586-44c1-b1bc-103d85875906}{226}" paraid="751272739"><span>Region Info:  <a href="https://en.wikipedia.org/wiki/ISO_3166-2" target="_blank">https://en.wikipedia.org/wiki/ISO_3166-2</a> </span></li>
+</ul>
+</form>
+
+<p><strong>RateCard Error Messages</strong></p>
+
+<p><strong>Note</strong>: Some meters are only created to track usage. They should not be available to customers. They will not appear in outputs (for example, see meter ID 5a55331e-8619-4981-84db-cdb4b860caba).</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p align="center"><strong>Client Error Message</strong></p>
+			</td>
+			<td>
+			<p align="center"><strong>Error Cause</strong></p>
+			</td>
+			<td>
+			<p align="center"><strong>Fix</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>&quot;Invalid query specified. Please specify valid values for OfferDurableId, Currency, Locale and RegionInfo.&quot;</p>
+			</td>
+			<td>
+			<p>Query filter either did not exist, was incorrectly formatted, or did not contain all mandatory parameters (Offer ID, Currency, Locale, Region Code).</p>
+			</td>
+			<td>
+			<p>To fix, correctly format filter query.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>&quot;Invalid query operator _ specified. Please specify a valid query operator. Supported operators are _.&quot;</p>
+			</td>
+			<td>
+			<p>Query filter contained invalid boolean logic operators (1st blank provides the invalid logic operator used) (2nd blank provides a &#39;,&#39; joined list of the suppoprted boolean operators, currently only &#39;and&#39; &amp; &#39;equal&#39;).</p>
+			</td>
+			<td>
+			<p>To fix, switch invalid operator with one of the supported operators.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>&quot;Invalid operator _ specified in the expression.&quot;</p>
+			</td>
+			<td>
+			<p>Query filter contains invalid operator in a place where &quot;eq&quot; (equals) is expected. (1st blank provides the invalid operator used</p>
+			</td>
+			<td>
+			<p>To fix, switch invalid operator with &quot;eq&quot; operator.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>&quot;Invalid query filter. Please specify valid values for OfferDurableId, Currency, Locale and RegionInfo.&quot;</p>
+			</td>
+			<td>
+			<p>Not sure that this error is ever hit?</p>
+			</td>
+			<td>
+			<p>Send case to technical support per guidelines below in &ldquo;Technical Issues&rdquo; section. </p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>&quot;Invalid query filter. Please make sure only all required parameters are provided.&quot;</p>
+			</td>
+			<td>
+			<p>$filter parameter is missing values.</p>
+			</td>
+			<td>
+			<p>To fix ensure the filter has OfferDurableId, Currency, Locale and regioninfo fields</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>&quot;Invalid IsoCode Parameter name: currency&quot;</p>
+			</td>
+			<td>
+			<p>Currency ISO Code is not a valid code for any Currency (Ex: USD for US Dollar)</p>
+			</td>
+			<td>
+			<p>To fix, update Currency ISO Code to be a valid one</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>&quot;locale _ is an invalid culture identifier.&quot;</p>
+			</td>
+			<td>
+			<p>Locale ISO Code is not valid for any locale (1st blank is the invalid locale ISO Code that was used) (Ex: en-US is valid)</p>
+			</td>
+			<td>
+			<p>To fix, update Locale ISO Code to be a valid one</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>&quot;The filter OfferDurableId:_ is invalid.&quot;</p>
+			</td>
+			<td>
+			<p>Requested offer (based on Durable ID) is not queryable for RateCard. (1st blank provides the requested offer&#39;s Durable ID)</p>
+			</td>
+			<td>
+			<p>To fix, update OfferDurableID parameter with a different offer&#39;s Durable ID.</p>
+
+			<p>See: <a href="https://azure.microsoft.com/en-us/support/legal/offer-details/" target="_blank"><u>https://azure.microsoft.com/en-us/support/legal/offer-details/</u></a> for list of all offers. <strong>Note</strong>: the offer number must be prepended with &quot;MS-AZR-&quot;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>&quot;Invalid query specified. Please specify a valid api-version, The supported api version is _&quot;</p>
+			</td>
+			<td>
+			<p>Requested RateCard version is not supported. (1st blank provides the latest supported version)</p>
+			</td>
+			<td>
+			<p>To fix, update version to a supported version. Current supported versions are (&quot;2015-03-31&quot;, &quot;2015-05-15&quot;, &quot;2015-06-01-preview&quot;)</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>&quot;Invalid query specified. Please specify a valid filter in format of $filter&quot;</p>
+			</td>
+			<td>
+			<p>Query is missing requried $filter</p>
+			</td>
+			<td>
+			<p>To fix, append correctly formatted filter to the end of the query</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>&quot;Invalid offer durable Id _&quot;</p>
+			</td>
+			<td>
+			<p>Requested offer (based on Durable ID) does not exist. (1st blank provides the requested offer&#39;s Durable ID)</p>
+			</td>
+			<td>
+			<p>To fix, update OfferDurableID parameter with a different offer&#39;s Durable ID</p>
+
+			<p>See: <a href="https://azure.microsoft.com/en-us/support/legal/offer-details/" target="_blank"><u>https://azure.microsoft.com/en-us/support/legal/offer-details/</u></a> for list of all offers. <strong>Note</strong>: the offer number must be prepended with &quot;MS-AZR-&quot;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>&quot;Country Code _ not supported. Parameter name: Country&quot;</p>
+			</td>
+			<td>
+			<p>Requested Country Code does not exist (1st blank provides the requested Country Code)</p>
+			</td>
+			<td>
+			<p>To fix, update RegionInfo parameter with an existing ISO Country Code</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>&quot;Invalid region info:_ specified&quot;</p>
+			</td>
+			<td>
+			<p>Requested Country Code is not supported (1st blank provides the requested Country Code)</p>
+			</td>
+			<td>
+			<p>To fix, update RegionInfo parameter with a supported ISO Country Code</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>&quot;Invalid region info:_ and currency code:_ combination specified&quot;</p>
+			</td>
+			<td>
+			<p>Requested Currency Code is not supported under requested Country Code (1st blank provides the requested Country Code) (2nd blank provides the requested Currency Code)</p>
+			</td>
+			<td>
+			<p>To fix, update Currency parameter to a supported currency under the given RegionInfo parameter</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+<h4><br>
+<strong><a id="UsageAggregates" name="UsageAggregates"></a>UsageAggregates</strong></h4>
+</div>
+
+<p>The UsageAggregates API allows you to query aggregate Azure subscription consumption data by:</p>
+
+<ul class="indent-1">
+	<li><span><span>Start and end date/time</span></span></li>
+	<li><span><span>Aggregation granularity (ie: daily, hourly)</span></span></li>
+	<li><span><span>Instance level detail (ie: for multiple instances of the same resource)</span></span><br>
+	&nbsp;</li>
+</ul>
+
+<h3><strong>Support Scenarios</strong></h3>
+
+<p>Support cases which are routed to the Billing APIs may fall into one of two categories: Billing and Technical. ASMS handles the Billing questions, while the <span>CIP-Cloud Cost Management API (CIP-CCMAPI) and </span>Azure Developer Team handle the Technical cases.&nbsp;</p>
+
+<p><span>The CIP-Cloud Cost Management API (CIP-CCMAPI) team supports the following Billing API scenarios: </span></p>
+
+<ul>
+	<li><span>API issues</span></li>
+	<li><span>Exports</span></li>
+	<li><span class="diff-chunk diff-chunk-inserted jsx-406281813">Issues not in any other category</span></li>
+</ul>
+
+<p>Additionally, all EA Billing Consumption API issues should be sent to Azure Ops EA Team.</p>
+
+<p><strong>Note</strong>: The EAO Team only supports Billing Consumption API&#39;s.</p>
+
+<p><strong>API-specific Scenarios</strong></p>
+
+<h4><a id="Invoice" name="Invoice"></a><strong>Invoice</strong></h4>
+
+<p>The information returned by the invoice API is the exact same PDF invoice file that is available in the portal. There should be no difference regarding the use of this API compared to the information in the normal monthly invoice and any discrepancies should be treated as regular billing questions.</p>
+
+<p><strong>What permissions do I need to access Invoices? </strong>The Azure Billing REST APIs are implemented as a Resource Provider as part of the Azure Resource Manager and share its dependencies. Access control for Azure Resource Manager uses the built-in Owner, Contributor, and Reader roles via the Role Based Access Control (RBAC) feature in the <a href="https://portal.azure.com/" target="_blank"><u>Azure Preview portal</u></a>. You must make sure that the logged-in account is assigned one of those three roles for the specified subscription. By default, all service administrators and co-administrators are assigned the Owner role, and have implicit access. For details, see <a href="https://azure.microsoft.com/documentation/articles/role-based-access-control-configure/" target="_blank"><u>Role-based access control in the Microsoft Azure portal</u></a>.</p>
+
+<p>To allow caller for Invoice API:</p>
+
+<ol>
+	<li><span>The Account admin must allow other users to download invoices.</span></li>
+	<li><span>Adding the user to the role.</span></li>
+</ol>
+
+<p><span>If this does not work then this would be an incident on billing extension/billing API team Azure Commercial Experiences, Signup and Provisioning BMX (BillingExtension).</span></p>
+
+<p>For more information about the Invoice API, see: <a href="https://azure.microsoft.com/en-us/blog/azure-billing-reader-role-and-preview-of-invoice-api/" managed-link="" target="_blank"><span>https://azure.microsoft.com/en-us/blog/azure-billing-reader-role-and-preview-of-invoice-api/</span></a></p>
+
+<p><strong>Note: </strong><span>For questions regarding the Invoice API, submit a ticket <a href="https://portal.microsofticm.com/imp/v3/incidents/create?tmpl=r1z2RA" managed-link="">via this IcM</a>.&nbsp;</span></p>
+
+<h4><strong><a id="RateCard" name="RateCard"></a>RateCard</strong></h4>
+
+<p><strong>Missing Meters:</strong></p>
+
+<p>The most common cause of a meter missing from the RateCard responses is that the meter&rsquo;s Public Disclosure Date (PDD) is future-dated, either intentionally or accidentally. The PDD updates are owned by the Azure BizOps team and any update would need to run through their team. If there is a report of a meter not showing up in RateCard, contact the Azure BizOps team and ask them to check on the meter&#39;s PDD.</p>
+
+<ul>
+	<li>If the meter&#39;s PDD is future-dated, they can either update appropriately or communicate that the meter is indeed meant to be hidden.</li>
+	<li>If the meter&#39;s PDD is back-dated and it is still not showing, engineering investigation/effort will likely be required. In these case, contact the RateCard engineering contacts for assistance.</li>
+</ul>
+
+<p><strong>Server-Side Errors: </strong></p>
+
+<ul class="indent-1">
+	<li>Any server errors should be escalated to the engineering team via ICM</li>
+	<li>The most common error is a 502 BadGateway, this will occur when requests are not being served within 100 seconds.</li>
+</ul>
+
+<p><strong>Other Questions:</strong></p>
+
+<p><strong>Q: Is it possible to derive or automatically supply the RateCard parameters (offer ID, currency, locale, region)?</strong></p>
+
+<p class="indent-1">A: We don&#39;t currently have a way to do this in RateCard, and as such all parameters are required.</p>
+
+<p><strong>Q: Where can I get a list of offer Durable Ids?</strong></p>
+
+<p class="indent-1">A: <a href="https://azure.microsoft.com/en-us/support/legal/offer-details/"><u>https://azure.microsoft.com/en-us/support/legal/offer-details/</u></a> lists all offers. The offer number from the table must be prepended with &quot;MS-AZR-&quot; Eg: MS-AZR-0003P.</p>
+
+<p><strong>Q: I&#39;m calling ratecard through ARM (direct) with a CSP subscription and I&#39;m getting an error?</strong></p>
+
+<p class="indent-1">A:<strong> </strong>CSP subscriptions must use partner ratecard to access ratecard. This is supported by the Partner Center support team.</p>
+
+<h4><strong><a id="UsageAggregates" name="UsageAggregates"></a>UsageAggregates</strong></h4>
+
+<p><strong>Common parameters</strong></p>
+
+<p>The following information is common to all tasks that might be performed related to getting usage details:</p>
+
+<ol>
+	<li>Replace {subscription-Id} in the request URI with your subscription identifier</li>
+	<li>Replace {api-version} in the request URI with 2015-06-01-preview</li>
+	<li>Set the Content-Type request header to application/json</li>
+	<li>Set the Authorization request header to an OAuth bearer token formatted as a JSON Web Token, which you obtain from Azure Active Directory. For more information, see <a href="https://msdn.microsoft.com/en-us/library/azure/dn790557"><u>Authenticating Azure Resource Manager requests</u></a>.</li>
+</ol>
+
+<p>These are the parameters used for the UsageAggregate API. Notice the Replace commands which are common to API terminology. The customer may contact ASMS because they aren&rsquo;t getting expected results from their UsageAggregates API query. Typical issues are typos in the Subscription ID, API-version incorrect, Content Type is not JSON, or Web Token is not formatted as JSON.</p>
+
+<p>Parameter-related cases should go to the POD Azure Developer team for more information.</p>
+
+<p><strong>Note:&nbsp;</strong><span>All EA related API issues should be sent to Azure Ops EA Team.</span></p>
+
+<p>For any other queries related to UsageAggregates, send the questions to the <strong>UsageOnCall</strong> alias with the following template completely filled out:</p>
+
+<ul class="indent-1">
+	<li>Issue:</li>
+	<li>Usage:</li>
+	<li>When did the issue start?</li>
+	<li>What is the problem?  </li>
+	<li>What is the impact?</li>
+	<li>API Call:</li>
+	<li>Expected Results:</li>
+	<li>Actual Results:</li>
+	<li>Notes:</li>
+</ul>
+
+<h4><strong><a id="Billing Issues" name="Billing Issues"></a>Billing Issues</strong></h4>
+
+<p>In general, billing issues include anything having to do with general questions about what APIs are available or with the output of the bill:</p>
+
+<ul class="indent-1">
+	<li>What APIs are available for getting pricing and usage information from Azure?</li>
+	<li>Can I download an invoice?</li>
+	<li>How do I calculate my bill using the Ratecard and Usage APIs?</li>
+	<li>Why does my Usage report not match up with my Invoice?</li>
+	<li>Why is the MeterId missing/wrong/different than what I expect?</li>
+	<li>Why are there multiple outputs for a resource for a single day?</li>
+</ul>
+
+<p><strong>Note</strong>: Answers for most of these questions can be found here: <a href="https://msdn.microsoft.com/en-us/library/azure/mt219001.aspx#Anchor_2"><u>https://msdn.microsoft.com/en-us/library/azure/mt219001.aspx#Anchor_2</u></a></p>
+
+<p><strong>General API FAQ:</strong></p>
+
+<p><strong>Q: The API can&rsquo;t be consumed for Multi-Enrollment scenarios?</strong></p>
+
+<p class="indent-1">A: As of this time, that option is not available.</p>
+
+<p><strong>Q: I need to associate Billing data and Monitoring data via the Billing API.</strong></p>
+
+<p class="indent-1">A: The option we have is via Microsoft&rsquo;s recent acquisition, <a href="https://internal.support.services.microsoft.com/en-us/help/4050787/asms-azure-cost-management-cloudyn"><u>Cloudyn</u></a>, because it&rsquo;s a mix of Billing API and Monitoring API functions.</p>
+
+<p><strong>Q: Could we perform resource sizing via the API without using third-party software?</strong></p>
+
+<p class="indent-1">A: As of now this is not possible without using Cloudyn features.</p>
+
+<p><strong>Q: Tags applied to Resource Groups are not showing in billing API report?</strong></p>
+
+<p class="indent-1">A: This is by design. Only tags applied to resources are visible in the report pulled via the Billing API.</p>
+
+<p><strong>Q: My refresh is taking forever.</strong></p>
+
+<p class="indent-1">A: Refresh in PowerBI will pull all the data from scratch and not just the data since the last import. This is time consuming and can take up to an hour if the volume of data is large.</p>
+
+<p><strong>Q: I&rsquo;m unable to download EA MarketPlace cost via the Billing API.</strong></p>
+
+<p class="indent-1">A: Both API v1 and v2 do not have one-time charges enabled. The product team is considering this feature but do not have a timeline available.</p>
+
+<h4><strong><a id="Technical Issues" name="Technical Issues"></a>Technical Issues</strong></h4>
+
+<p>The agreement is that 100% of Billing API support topic cases will come to ASMS queue, we will do initial triage of the case, and for the small percentage of cases that are coding/API we will transfer the case to the technical team. Technical issues include anything having to do with making actual calls to an API, such as:</p>
+
+<ul class="indent-1">
+	<li>Errors when calling an API</li>
+	<li>How do I authenticate to the API?</li>
+	<li>How to register a Billing API application in the Azure AD</li>
+	<li>How to write the Powershell/REST/C#/Python code to call an API</li>
+	<li>What is a ContinuationToken and how do I use it?</li>
+	<li>Why is the Billing API call returning http 503 Technical issues, please set the correct Support Topic and route technical cases to the <em><strong>Pod Azure Dev</strong></em> queue. Do not override the Support Topic.</li>
+	<li><span>All EA related API issues should be sent to Azure Ops EA Team.</span></li>
+</ul>
+
+<h3><a id="Engagement &amp; Escalation Path" name="Engagement &amp; Escalation Path"></a><strong>Engagement &amp; Escalation Path</strong></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong><span><span><span>Condition/Keyword/Endpoints </span></span></span></strong></p>
+			</td>
+			<td>
+			<p><strong><span><span><span>Team</span></span></span></strong></p>
+			</td>
+			<td>
+			<p><strong><span><span>Engagement Path</span></span></strong></p>
+			</td>
+			<td>
+			<p><strong><span><span><span>Live Site Emergency - IcM Escalation Template </span></span></span></strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span>Partner Center</span></span></span></p>
+
+			<p><span><span><a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fapi.partnercenter.microsoft.com&amp;data=02%7C01%7C%7C00191dfc52134a3b8a7608d5fed6bebc%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636695120632616536&amp;sdata=tbp%2F3EAwak1PEr4M3aLxNOg3CH3vZnRgbZWh71v2y%2Bo%3D&amp;reserved=0">https://api.partnercenter.microsoft.com</a> </span></span></p>
+
+			<p><br>
+			<a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fpartner.partnercenterapi.microsoftonline.cn%2F&amp;data=02%7C01%7C%7C00191dfc52134a3b8a7608d5fed6bebc%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636695120632616536&amp;sdata=u38u0N34r43CIeB%2BC2Z4fZp1w2lW6mOzHyfuAh1DiS4%3D&amp;reserved=0" originalsrc="https://partner.partnercenterapi.microsoftonline.cn/" shash="lu7xsQf4fEmEaY9eZ3T3dsDLjE10u4buKvVpHKLQWYHT/19k8I3ttWv1iX5hXure0RCnoo89RH7/hVdOyETETT60D7A5nlXgmGtXoCfAq8b3FnFZe7QXsw9s8rVQde23AsOCJzpMeUQjm/mEXrl9kZ6Tw7LRWAC+lb2T52RzqKM="><span><span><span><span><span>https://partner.partnercenterapi.microsoftonline.cn</span></span></span></span></span></a></p>
+			</td>
+			<td>
+			<p><span><span>Partner Center</span></span></p>
+			</td>
+			<td>
+			<p><a data-content-id="" data-content-type="" href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Ficm.ad.msft.net%2Fimp%2Fv3%2Fincidents%2Fcri%3Ftmpl%3DFK3KR1&amp;data=02%7C01%7C%7C00191dfc52134a3b8a7608d5fed6bebc%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636695120632606527&amp;sdata=8E7TNbJG0DRuAz7ltRXTajLolljJAhdF%2FZUuaGPcBB0%3D&amp;reserved=0" target="_blank">Partner Center Escalation</a><br>
+			&nbsp;</p>
+
+			<p><strong>Note the following:&nbsp;</strong></p>
+
+			<p><span><span><strong>Owning Service</strong>&nbsp;DOIT-Discovery, Onboarding, Incentives, Transactions</span></span></p>
+
+			<p><span><span><strong>Owning Team</strong>&nbsp;- US-DPS-DOIT-SE</span></span></p>
+			</td>
+			<td>
+			<p><a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Ficm.ad.msft.net%2Fimp%2Fv3%2Fincidents%2Fcri%3Ftmpl%3DFK3KR1&amp;data=02%7C01%7C%7C00191dfc52134a3b8a7608d5fed6bebc%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636695120632606527&amp;sdata=8E7TNbJG0DRuAz7ltRXTajLolljJAhdF%2FZUuaGPcBB0%3D&amp;reserved=0">Partner Center Escalation</a></p>
+
+			<p><strong>Have a question or Emergency? </strong>Email the&nbsp;DLs for the Universal Store DPS</p>
+
+			<p>DOIT Live Site Support &lt;<a href="mailto:USDPSDOITLSE@microsoft.com">USDPSDOITLSE@microsoft.com</a>&gt;</p>
+
+			<p>Universal Store DSE RPE Live Site Support &lt;<a href="mailto:USDSERPELSE@microsoft.com">USDSERPELSE@microsoft.com</a>&gt;</p>
+
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span>Rating </span></span></span></p>
+			</td>
+			<td>
+			<p><span><span>UST - Commerce</span></span></p>
+			</td>
+			<td>
+			<p><span><span><a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FCP_PayOps%2FSitePages%2FSubmitting%2520a%2520Service%2520Request%2520in%2520VSO%2520for%2520PayOps.aspx%3FWikiPageMode%3DEdit%26InitialTabId%3DRibbon.EditingTools.CPEditTab%26VisibilityContext%3DWSSWikiPage%26&amp;data=02%7C01%7C%7C83e29375d219488e78bd08d5fe54d5df%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636694562672031795&amp;sdata=Szsei%2Fulv2TtJq0Lbm%2F7yt4jo1KvZ4pq1MhJsF5UdPs%3D&amp;reserved=0" originalsrc="https://microsoft.sharepoint.com/teams/CP_PayOps/SitePages/Submitting%20a%20Service%20Request%20in%20VSO%20for%20PayOps.aspx?WikiPageMode=Edit&amp;InitialTabId=Ribbon.EditingTools.CPEditTab&amp;VisibilityContext=WSSWikiPage&amp;" shash="UE9Qs7ERUYZ65RM2J2WpRbUUCMAnfd7+BkB1qkYUpB4pJdgn5f+kIgY2hMMx0kRWsw97lxazGMHKNjuNtbsnWh7IKGQtYoRCBGZhgSqFIGzPcFSpeaiV5mgqhYTl+SIv86O7Yzb7m0MAcUQIkE/tprQduf+qRwTUH08/ppEnWlU=">PayOps Service Request </a></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><a data-content-id="" data-content-type="" href="https://portal.microsofticm.com/imp/v3/incidents/create?tmpl=Z2P1u3" managed-link="" originalsrc="https://portal.microsofticm.com/imp/v3/incidents/cri?tmpl=K2L3B2" shash="hSCyHsg5yMN+HzFNnOmTUPDM1lybFe+ep5ln/mxnV+MHd8i07SslrE6b1JHnqtJJJkgX/UJT9qiAy8uiKKkdQH5cXwOU2D3CzVGYcqH1UT8hsxxVBt9XJeoTXo0XzHaCVoPi1090eocEud0k7b6p5uNnex5o0VCqnxsYq7SzaGs=" target="">Rating Escalation</a> </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span>Invoicing<br>
+			Recon file </span></span></span></p>
+			</td>
+			<td>
+			<p><span><span>UST - Commerce</span></span></p>
+			</td>
+			<td>
+			<p><span><span><a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FCP_PayOps%2FSitePages%2FSubmitting%2520a%2520Service%2520Request%2520in%2520VSO%2520for%2520PayOps.aspx%3FWikiPageMode%3DEdit%26InitialTabId%3DRibbon.EditingTools.CPEditTab%26VisibilityContext%3DWSSWikiPage%26&amp;data=02%7C01%7C%7C83e29375d219488e78bd08d5fe54d5df%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636694562672051819&amp;sdata=y89rYsl4wzGUDGRmeaH%2FcG4SnzGGZTx%2BVlQDoo70Qhc%3D&amp;reserved=0" originalsrc="https://microsoft.sharepoint.com/teams/CP_PayOps/SitePages/Submitting%20a%20Service%20Request%20in%20VSO%20for%20PayOps.aspx?WikiPageMode=Edit&amp;InitialTabId=Ribbon.EditingTools.CPEditTab&amp;VisibilityContext=WSSWikiPage&amp;" shash="lKM9bv5ngDwnKq3LkhrU3K9rt/H1D6CpaU6gkcF09o3e9ZnPzcM5ZCM/CSDMpaxFlRGOWlXxEeGg/kuiwKCV3mS/FONSb35G+E2ChdVuNIHJ90mALLEhSBvCvWA8fsSZlqCTKN7+YT8HRu4LdiHtLIji4iTy0uDEaunesiIwR9w=">PayOps Service Request </a></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Ficm.ad.msft.net%2Fimp%2Fv3%2Fincidents%2Fcri%3Ftmpl%3DF3Xf2O&amp;data=02%7C01%7C%7C83e29375d219488e78bd08d5fe54d5df%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636694562672051819&amp;sdata=Ak%2BMMAvV5cIBBaKldvlSXLTeG8retwjCU5qnCMwQe6k%3D&amp;reserved=0" originalsrc="https://portal.microsofticm.com/imp/v3/incidents/cri?tmpl=F3Xf2O" shash="yasj8O/WgDwqrwdawxh4uMRlXhUJvAD/dF3RsxyLYlU0A87+zwh4UB43dhE63ihJFLM2Ob3qS+oYdHnQLcHwAL8zml8bvq98qha8oLb4slL9AKAtAse/0+OIqtRwIHS34II2N8mOfJL61ntOtezgcRi8KrAzUy2GMKUSrkSqB+g="><span>Invoicing Escalation</span></a> </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span>RateCard<br>
+			Catalog<br>
+			Meters </span></span></span></p>
+			</td>
+			<td>
+			<p><span><span>UST - Commerce</span></span></p>
+			</td>
+			<td>
+			<p><span><span><a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FCP_PayOps%2FSitePages%2FSubmitting%2520a%2520Service%2520Request%2520in%2520VSO%2520for%2520PayOps.aspx%3FWikiPageMode%3DEdit%26InitialTabId%3DRibbon.EditingTools.CPEditTab%26VisibilityContext%3DWSSWikiPage%26&amp;data=02%7C01%7C%7C83e29375d219488e78bd08d5fe54d5df%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636694562672061819&amp;sdata=4EFeOMrgn6FirtXJsVgGuuQkQz9cWgFS%2F2qrIYyoJHw%3D&amp;reserved=0" originalsrc="https://microsoft.sharepoint.com/teams/CP_PayOps/SitePages/Submitting%20a%20Service%20Request%20in%20VSO%20for%20PayOps.aspx?WikiPageMode=Edit&amp;InitialTabId=Ribbon.EditingTools.CPEditTab&amp;VisibilityContext=WSSWikiPage&amp;" shash="lQ40VH3+X4JWpCDhbViOZRLhBSCTnxg8AKZZnmqZAJdN6VIwvX5sk92dINFQY9d3WMY2HTia3G2d1Li9dZ5pcwZjbQUs9mW/CAs25b+pLyOK8HmERK4OUEJQnVw7lpdfdBlH2SBvxrURuXKcr5SwwcOeav65NfjAPK8+D1cBsK0=">PayOps Service Request </a></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Ficm.ad.msft.net%2Fimp%2Fv3%2Fincidents%2Fcri%3Ftmpl%3Dy3z1jX&amp;data=02%7C01%7C%7C83e29375d219488e78bd08d5fe54d5df%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636694562672061819&amp;sdata=nuk93rZCtuCaXtOuKgYsATjuCqVTILCwbUdcLK39Xt0%3D&amp;reserved=0" originalsrc="https://portal.microsofticm.com/imp/v3/incidents/cri?tmpl=y3z1jX" shash="HlCxgSV26AJK1ukq1rHZskqxsI7sWQwOPT74YqKSOj8JjrS4/wQfcR0MVmH2KY6crNnaQSQC1X3Xv4d5KmaY6+2cbpst2kSWV7dl/Js+uMAnGRINRoTNSwwf7N3/hyZKG2J1jv832MwayYA70wFcsyST+hzHT+UbTtm7SjXOpXo="><span>Cayman Escalation</span></a> </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span>Usage Events</span></span></span></p>
+
+			<p><span><span><span>Usage Aggregates<br>
+			Usage V2 Global <a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fusage.cp.microsoft.com%2F&amp;data=02%7C01%7C%7C83e29375d219488e78bd08d5fe54d5df%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636694562672071824&amp;sdata=Ls2YeEQ5Fce1e%2FlrRrKFRCYofb55GjigA06XWoCUtcc%3D&amp;reserved=0" originalsrc="https://usage.cp.microsoft.com/" shash="AZCFReCLPqjDBWBmTWy4aUo8N+g0SzowNuUho3l2CqLYHdCs9L+RJDroeYrjLdCmaeWFTOSxTT12mAaJ+iAFofQmNsjDy0Vh6HbXgwaPEX0GwT6Gkwo0aN27WnAPV0QRvO3lZxOstD3meCIB710W6n7JagaaI2Awxi8ibPdZULw="><span>https://usage.cp.microsoft.com</span></a><br>
+			Usage V3 Global <a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fapi.usage.cp.microsoft.com%2F&amp;data=02%7C01%7C%7C83e29375d219488e78bd08d5fe54d5df%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636694562672071824&amp;sdata=hqi%2B6AvMwJxypnd3Oth%2BLY3NDWd78sWJVX8NB890KGU%3D&amp;reserved=0" originalsrc="https://api.usage.cp.microsoft.com/" shash="AxFc3EdoQ2Lv9Ci44wS+EEiYs4DSGEXcPNxpLbOWKfvy3PxtsnBkBhKxMsmiQRQMOqQsCuuhjq/csg44z3Lvi7BhFQ4V7oPhcvPiNzhWre8B7sSR8jY/Da8qtFiitH7jJzCXXCGWHktQGX79S9ta8oURrgC/x7IefHwwsjiQ704="><span>https://api.usage.cp.microsoft.com/</span></a><br>
+			Usage V1 Gobal <a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmediation.microsoftonline.com%2F&amp;data=02%7C01%7C%7C83e29375d219488e78bd08d5fe54d5df%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636694562672081829&amp;sdata=7v%2F%2BH7qlvxexuFE1fGHO%2FUYmYYMnlaJhBFYBNreHoL8%3D&amp;reserved=0" originalsrc="https://mediation.microsoftonline.com/" shash="QJo81ydI8ZNpAURhLmaeXky8iy8SfsPwPds2bCg1Uj69oQuiTn7fjyGrUNl35g2puVh2h6TOwAo9vI0SNj4qDVyogX2gCcXmeif/pLK4jmlK9cFXSKnyxkNzWyJFyKbFsc5FJgngAFXhb3PKfdUtbfxiBPBAh/4ynp2r8LObjgM="><span>https://mediation.microsoftonline.com</span></a><br>
+			Usage V2 Sanya <a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fusage.cp.microsoftonline.cn%2F&amp;data=02%7C01%7C%7C83e29375d219488e78bd08d5fe54d5df%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636694562672081829&amp;sdata=fdf8Kmb4mKyJAZ6jOKZGccq%2FjvCthEBrNxz2Q0bEspA%3D&amp;reserved=0" originalsrc="https://usage.cp.microsoftonline.cn/" shash="yHZm6DIt998IC/zBybGu4gwi6hwQF2fxsOfv11ten+nk8FkxImpK8TH+brZ67hi7xbaJ9uYXlvlsK/P7yNO4Sx0y98DjFh4xa4FQYh6moPurx8PZAmcCxkllawkuX9fUnqD54nZcNxLTVNfvYea3sAXZhtQYUsaDBK4AAgONu5o="><span>https://usage.cp.microsoftonline.cn</span></a><br>
+			Usage V1 Sanya <a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmediation.partner.microsoftonline.cn%2F&amp;data=02%7C01%7C%7C83e29375d219488e78bd08d5fe54d5df%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636694562672091842&amp;sdata=%2F5SGLY6i37V1DAdw62%2F%2BiYjqLw3ckccmdTjGP21HDQc%3D&amp;reserved=0" originalsrc="https://mediation.partner.microsoftonline.cn/" shash="ZFY0XAGgsETS2XScuMaA+2ODyBn89BEAea4m27GSo5EixDe5ixgXjni5pYeMb1UFS5VPbgRb63JE4GxkQZSvAYeI3+Cs/GL/Nfyt6pdwsbmpiBhv7yzl4SkizH7MbfQbFVUsgc6biyxgClgHCCM4r5+46rBgndSgfSztAfQPjm8="><span>https://mediation.partner.microsoftonline.cn</span></a> </span></span></span></p>
+			</td>
+			<td>
+			<p><span><span>UST - Commerce</span></span></p>
+			</td>
+			<td>
+			<p><span><span><a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FCP_PayOps%2FSitePages%2FSubmitting%2520a%2520Service%2520Request%2520in%2520VSO%2520for%2520PayOps.aspx%3FWikiPageMode%3DEdit%26InitialTabId%3DRibbon.EditingTools.CPEditTab%26VisibilityContext%3DWSSWikiPage%26&amp;data=02%7C01%7C%7C83e29375d219488e78bd08d5fe54d5df%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636694562672091842&amp;sdata=9y9Fz7op4i9KYjgXXca%2BnsZWQSbikQ5B3Re2edjIte4%3D&amp;reserved=0" originalsrc="https://microsoft.sharepoint.com/teams/CP_PayOps/SitePages/Submitting%20a%20Service%20Request%20in%20VSO%20for%20PayOps.aspx?WikiPageMode=Edit&amp;InitialTabId=Ribbon.EditingTools.CPEditTab&amp;VisibilityContext=WSSWikiPage&amp;" shash="w7rRS1HFA1fNd9QC0ZmCLOEwHZkO4SqaNDhgHKPkiApONyLXJUuLTmnbTqZ9Gyf50WLxSWSVOgLrt1HGFQZmi2MyQJirLVw8EWa50Bd/TLHHPMWKCRqsmN5Ae/L1gnt7syzFt1MiwYlMvMEIWFGDLmzAGj8+QATu3g5kvYCFiEI=">PayOps Service Request </a></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Ficm.ad.msft.net%2Fimp%2Fv3%2Fincidents%2Fcri%3Ftmpl%3Dc3z3rt&amp;data=02%7C01%7C%7C83e29375d219488e78bd08d5fe54d5df%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636694562672101847&amp;sdata=ApJNFDJ5HD8nS5To%2FLqq%2FHqAQo73NaeEQV3enr3Q2PA%3D&amp;reserved=0" originalsrc="https://portal.microsofticm.com/imp/v3/incidents/cri?tmpl=c3z3rt" shash="CevgLkhIlrBW/+Kzuv4PvTjIWRH3PlfOp6LOpMmm16uhNzkAsXt0k6W5QOA5EqMlTZOWhAQebp260kawqXzGQAipvFh6Mk/PgYGSM6C/StYIvt6KeDIyy/mQq51LqhTQ8eAcW0M//KGw4UvAY0yWzYofqjP/3DqUJpw1TkRVj/E="><span>Usage Escalation</span></a> </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td><span>API Issues (such as 429 error)</span></td>
+			<td><span>CIP-Cloud Cost Management API (CIP-CCMAPI)</span></td>
+			<td>
+			<p><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2929022" managed-link="" target="">ICM to Cost Management (CIP-CCMApi) through TA</a></p>
+			</td>
+			<td><a class="managed-link content-anchor-link" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2929022" managed-link="" tabindex="0" target="_blank">Escalation Path through TA</a></td>
+		</tr>
+	</tbody>
+</table>
+
+<p class="ng-scope x-hidden-focus"><br>
+<strong>Note</strong>: Please reference <a href="https://internal.support.services.microsoft.com/en-us/help/4474330#Engagement%20and%20Escalation%20Path" managed-link="">TSG&nbsp;4474330</a> for the CCMApi engagement path.A</p>
+
+<h3><a id="Online References" name="Online References"></a><strong>Online References</strong></h3>
+
+<ul>
+	<li><span><span>Invoices:</span></span>
+
+	<ul style="list-style-type:circle">
+		<li><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/rest/api/billing/" managed-link="" target="_blank">Azure Billing REST API</a></li>
+		<li><a href="https://docs.microsoft.com/en-us/rest/api/billing/invoices" managed-link="" target="_blank">Invoices</a></li>
+	</ul>
+	</li>
+	<li><span><span>RateCard:</span></span>
+	<ul style="list-style-type:circle">
+		<li><span><span><a data-content-id="" data-content-type="" href="https://msdn.microsoft.com/en-us/library/azure/mt219001.aspx" managed-link="" target="_blank">Get consumption data for an Azure subscription</a></span></span></li>
+		<li><span><span><a data-content-id="" data-content-type="" href="https://msdn.microsoft.com/en-us/library/mt219005.aspx" managed-link="" target="_blank">Resource RateCard (Preview)</a></span></span></li>
+	</ul>
+	</li>
+	<li><span><span>Recorded ASMS training:</span></span>
+	<ul>
+		<li><a href="https://hcm41.sapsf.com/sf/learning?destUrl=https%3a%2f%2fmicrosoftlmsap2%2elms%2esapsf%2ecom%2flearning%2fuser%2fdeeplink%5fredirect%2ejsp%3flinkId%3dITEM%5fDETAILS%26componentID%3dS1594003%26componentTypeID%3dONLINE%2dCOURSE%26revisionDate%3d1516165200000%26fromSF%3dY&amp;company=microsofAP2" managed-link="" target="_blank">Azure Billing APIs e-Learning</a></li>
+	</ul>
+	</li>
+	<li><span><span>UsageAggregates</span></span>
+	<ul style="list-style-type:circle">
+		<li><span><span><a data-content-id="" data-content-type="" href="https://msdn.microsoft.com/en-us/library/azure/mt219001.aspx" managed-link="" target="_blank">Get consumption data for an Azure subscription</a></span></span></li>
+		<li><span><span><a data-content-id="" data-content-type="" href="https://msdn.microsoft.com/en-us/library/mt219003.aspx" managed-link="" target="_blank">Resource Usage (Preview)</a></span></span></li>
+	</ul>
+	</li>
+</ul>
+<h3><a id="TSG Change Log" name="TSG Change Log"></a><strong>TSG Change Log</strong></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="132">
+			<p><strong>Date </strong></p>
+			</td>
+			<td width="126">
+			<p><strong>Updated By </strong></p>
+			</td>
+			<td width="364">
+			<p><strong>Content Updated </strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">08/09/2018</td>
+			<td width="126">mievan</td>
+			<td width="364">Updated entire Escalation Path section&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">10/17/2018</td>
+			<td width="126">mievan</td>
+			<td width="364">Changed engagement queue from&nbsp;
+			<div class="WordSection1">
+			<p><span><span><span><span>&quot;POD Azure PaaS Developer&quot; queue</span></span><span><span><span>&nbsp;to &quot;</span></span></span><span><span>POD&nbsp;Azure Dev&quot; queue</span></span></span></span></p>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">12/21/2018</td>
+			<td width="126">kuharr</td>
+			<td width="364">Updated Power BI queue</td>
+		</tr>
+		<tr>
+			<td width="132">12/26/2018</td>
+			<td width="126">v-brgosn</td>
+			<td width="364">Added details indicating <span>EA related API issues should be sent to Azure Ops EA Team.</span></td>
+		</tr>
+		<tr>
+			<td width="132">03/14/2019</td>
+			<td width="126">v-ajbur</td>
+			<td width="364">Updated &quot;Case Handling for Power BI&quot;.</td>
+		</tr>
+		<tr>
+			<td width="132">06/24/2019</td>
+			<td width="126">v-brgosn</td>
+			<td width="364">Added caller for Invoice API details.</td>
+		</tr>
+		<tr>
+			<td width="132">10/25/2019</td>
+			<td width="126">v-ereric</td>
+			<td width="364">Added Cost Advisor section.</td>
+		</tr>
+		<tr>
+			<td width="132">12/09/2019</td>
+			<td width="126">mievan</td>
+			<td width="364">Added note under <em>support scenario</em> section, that EAO only handles Billing Consumption API&#39;s.</td>
+		</tr>
+		<tr>
+			<td width="132">01/10/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added to Support Scenarios and Engagement and Escalation Path sections as per ModTrack 2607.</td>
+		</tr>
+		<tr>
+			<td width="132">04/13/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Updated Note in Invoice section as per ModTrack 2765.</td>
+		</tr>
+		<tr>
+			<td width="132">06/03/2020</td>
+			<td width="126">mievan</td>
+			<td width="364">Updated EA customer case handling section to include public facing link, and guidance on handling Management APIs vs Consumption APIs.&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">06/30/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Added the Note under the&nbsp;<em>RateCard Error Messages</em> section before the table per ModTrack 2789.</td>
+		</tr>
+		<tr>
+			<td width="132">07/20/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Updated the link for the&nbsp;Recorded ASMS training and reorganized Online Resources per ModTrack 3012.</td>
+		</tr>
+		<tr>
+			<td width="132">07/29/2020</td>
+			<td width="126">v-adhigg</td>
+			<td width="364">Updated IcM link for Rating escalations.&nbsp;</td>
+		</tr>
+	</tbody>
+</table>

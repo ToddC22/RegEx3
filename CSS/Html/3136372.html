@@ -1,0 +1,2589 @@
+﻿<header><h1>Technical Guide: Surface: Start-up failures</h1></header><p><span asset="4049349" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4049349]</span></p>
+
+<h3><span><span><span><span>Who should use this article?</span></span></span></span> <span><span> </span></span></h3>
+
+<ul>
+	<li><span><span><span>Surface</span></span></span></li>
+</ul>
+
+<h3><span><span><span>What is this article about?&nbsp;</span></span></span></h3>
+
+<p><span><span><span><span>This article helps you handle issues where the Surface does not boot into Windows. For example, the device may not turn on at all, it may turn on but hang at the logo, or it may turn on and display an error or warning or simply turn back off.</span></span></span></span></p>
+
+<p class="ng-scope"><span><span><span><span>Since there are many specific types of startup failures, identify the most specific scenario based on the customers description of what is happening. Follow the steps and case coding for that specific scenario.</span></span></span></span></p>
+
+<p><span><span><span><span><span>If an exchange is needed, use the Problem Type coding recommendations listed for the scenario.</span></span></span></span></span></p>
+
+<div>&nbsp;</div>
+
+<h3><a id="top" name="top"></a>Table of contents</h3>
+
+<ol>
+	<li>
+	<h4><a bookmark-id="1" href="#1" managed-link="">No power, black screen, won&rsquo;t turn on or wake from sleep</a></h4>
+	</li>
+	<li>
+	<h4><a bookmark-id="2" href="#2" managed-link="" target="">Boots to the Surface or Windows logo screen then hangs or turns off</a></h4>
+	</li>
+	<li>
+	<h4><a bookmark-id="3" href="#3" managed-link="">Stuck or looped at the automatic repair screen</a></h4>
+	</li>
+	<li>
+	<h4><a bookmark-id="4" href="#4" managed-link="">Stuck at the choose an option screen</a></h4>
+	</li>
+	<li>
+	<h4><a bookmark-id="5" href="#5" managed-link="">Boots to UEFI - Couldn&#39;t find a bootable operating system</a></h4>
+	</li>
+	<li>
+	<h4><a bookmark-id="6" href="#5" managed-link="" target="">Stuck at the UEFI/bios screen</a></h4>
+	</li>
+	<li>
+	<h4><a bookmark-id="7" href="#6" managed-link="" target="">Stopped at the thermal warning</a></h4>
+	</li>
+	<li>
+	<h4><a bookmark-id="8" href="#7" managed-link="" target="">Stopped at low battery warning</a></h4>
+	</li>
+	<li>
+	<h4><a bookmark-id="9" href="#8" managed-link="" target="">Secure boot disabled (red screen)</a></h4>
+	</li>
+	<li>
+	<h4><a bookmark-id="10" href="#9" managed-link="" target="">Customer forgot UEFI password</a></h4>
+	</li>
+	<li>
+	<h4><a bookmark-id="11" href="#10" managed-link="" target="">Stuck at Recovery Screen - Boot Configuration Data error</a></h4>
+	</li>
+	<li>
+	<h4><a bookmark-id="12" href="#11" managed-link="" target="">Boots to Microsoft logo screen with the SSD progress icon</a></h4>
+	</li>
+</ol>
+
+<div>
+<div>&nbsp;</div>
+</div>
+<h3><a id="1" name="1"></a>1. No power, black screen, won&rsquo;t turn on or wake from sleep</h3>
+
+<h4>Confirming the issue</h4>
+
+<p>When pressing the power button the customer sees:</p>
+
+<ul>
+	<li>The Surface screen is blank or black, and the backlight may or may not be on.</li>
+	<li>There is no Microsoft logo, Surface logo, icons, or cursor displayed on the screen.</li>
+</ul>
+
+<p><span asset="4288202" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4288202]</span></p>
+
+<h4>Confirmation</h4>
+
+<p><em>&ldquo;Just to make sure I understand your issue:&nbsp;When you press the power button, the Surface screen remains black and it does not turn on. Is that correct?&rdquo;</em><em> </em></p>
+
+<h4>How to code</h4>
+
+<p>After confirming the issue, code the case:</p>
+
+<ul>
+	<li>
+	<p no-loc="true">Surface Device &gt; Startup - Pre-Windows &gt; Start-up Failure &gt;&nbsp;Won&#39;t Power On (No Logo)</p>
+	</li>
+</ul>
+
+<h4>Resolution steps</h4>
+
+<p>Follow the steps below until the issue is resolved or until all the steps have been completed. While following the steps, use the <strong>Why</strong> column to inform the customer why you are performing the step and, if successful, to better understand what the cause may have been. As you follow the steps, document the result of each one in your notes. Then proceed to the <strong>Is the issue resolved?</strong> section at the end of the table for next steps.&nbsp;</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p align="center"><span><strong><span><span><span>Step</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p align="center"><span><strong><span><span><span>How</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p align="center"><span><strong><span><span><span>Why</span></span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Notes template:</span></span></span></span></p>
+
+			<ul>
+				<li><span><span><span><span><span>Attach the PSU, confirm the tip is lit, and disconnect all extra peripherals from the device &gt;&gt;</span></span></span></span></span></li>
+				<li><span><span><span><span><span>Force the device to restart &gt;&gt;</span></span></span></span></span></li>
+			</ul>
+			</td>
+			<td>
+			<p><span><span><span><span>This ensures a consistent format for capturing and reviewing case information. This helps prevent skipping steps.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>2. Attach the PSU, confirm the tip is lit, and disconnect all extra peripherals from the device.</span></span></span></span></p>
+
+			<p><span><span><span><span>If the tip does not light, follow KB </span></span></span><span><a href="https://internal.support.services.microsoft.com/help/3158368" target="_blank"><span><span><span>3158368 Technical guide: Surface: Power supply unit issues</span></span></span></a></span><span><span><span>.</span></span></span></span></p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+
+			<p><span asset="4286750" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4286750]</span></p>
+
+			<p><span><span><span><span>If a battery icon appears on screen, the battery is drained and needs time to charge.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>The battery may be drained and unable to turn on the Surface.</span></span></span></span></p>
+
+			<p><span><span><span><span>If the tip doesn&#39;t light, there may be an issue with the PSU. A connected accessory or monitor may be causing the problem.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span>3. Force the device to restart.</span></span></span></span></p>
+
+			<p><span><span><span><span>(varies by new versus old generation)</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><strong><span><span><span>All current devices</span></span></span></strong><span><span><span>: Press and hold the power button for 20 seconds.</span></span></span></span></p>
+
+			<p><span><strong><span><span><span>Pro 1, Pro 2, Pro 3, Pro 4, Book 1, RT, Surface 2, Surface 3:</span></span></span></strong><span><span><span> Press and hold the volume-up button and the power button at the same time for at least 15 seconds and then release both. The Surface may boot to UEFI. This is normal. Have the customer exit UEFI.</span></span></span></span></p>
+
+			<p><span><span><span><span>Video available at </span></span></span><span><a href="https://support.microsoft.com/help/4036280" target="_blank"><span><span><span>Force a shut down and restart your Surface</span></span></span></a></span><span><span><span>.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>The device may be in a <strong>hung</strong> state. Force the Surface to completely turn off all power and restart.</span></span></span></span></p>
+
+			<p><span><span><span><span>Performing a Forced restart is like removing the battery from a laptop or unplugging a desktop PC. It resets the hardware and clears all the cache and memory for your hardware.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+			<p><span><strong><span><span><span>Is the issue resolved?</span></span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><strong><span><span><span>Yes, close the case</span></span></span></strong><span><span><span>: Once resolved, have the customer check for updates.</span></span></span></span></p>
+
+			<p><span> </span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Reattach all peripherals, if needed, and let the device charge. Check <strong>Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</span></span></span></span></p>
+
+			<p><span><span><span><span>For SDT enabled sites, let the customer know about the </span></span></span><span><a href="https://support.microsoft.com/help/4037239" target="_blank"><span><span><span>Surface Diagnostic Toolkit</span></span></span></a></span><span><span><span>.</span></span></span></span></p>
+
+			<p><span><span><span><span>KB </span></span></span><span><a href="https://internal.support.services.microsoft.com/help/4014334" target="_blank"><span><span><span>4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</span></span></span></a></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Making sure the Surface and Windows are up to date may help avoid this problem in the future.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><strong><span><span><span>No, replace the device</span></span></span></strong><span><span><span>: Set up an exchange for the customer based on the status of their warranty.</span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Use KB </span></span></span><span><a href="https://internal.support.services.microsoft.com/help/2791320" target="_blank"><span><span><span>2791320 Informational: Surface: Exchange and fulfillment landing page</span></span></span></a></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>If the tip is lit and device could not be forced to restart, there is likely a hardware problem with the Surface device.</span></span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+<div>&nbsp;</div>
+</div>
+
+<div>
+<div>
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<p class="alert-title">How to code an exchange order</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><span><span><span>When selecting the <strong>Problem Type</strong> choose:</span></span></span></p>
+
+<ul>
+	<li><span><span><span>Will not turn on</span></span></span></li>
+</ul>
+
+<p><span><span><span>Accurate coding assists in the analysis of returned units and better insights.</span></span></span><span><span><span> </span></span></span></p>
+
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+
+<p><a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a></p>
+</div>
+
+<div>
+<h3><a id="2" name="2"></a>2. Stuck at the Surface or Windows logo screen then hangs or turns off</h3>
+
+<h4>Confirming the issue</h4>
+
+<p>When pressing the power button, the customer sees the following:</p>
+
+<ul>
+	<li>
+	<p>The Surface turns on, and never goes past the Microsoft&nbsp;logo screen.</p>
+	</li>
+	<li>
+	<p>There is no progress bar or message beneath the Microsoft or Surface logo.</p>
+	</li>
+	<li>
+	<p>There may or may not be dots spinning in a circle below the Microsoft&nbsp;logo.</p>
+	</li>
+	<li>
+	<p>After the Microsoft logo appears the device turns off.<br>
+	<br>
+	<span asset="4290737" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4290737]</span><span asset="4290744" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4290744]</span></p>
+	</li>
+</ul>
+
+<h4>Confirmation</h4>
+
+<p><em>&ldquo;Just to make sure I understand your issue: When you press the power button, the Surface turns on but it never moves past the Microsoft or Surface logo. Is that correct?&rdquo;</em></p>
+
+<h4>How to code</h4>
+
+<p>After confirming the issue, code the case, based on the customers issue.</p>
+
+<p><em><strong>Spinning dots</strong></em></p>
+
+<ul>
+	<li>
+	<p no-loc="true">Surface Device &gt; Startup - Pre-Windows &gt; Start-up Failure &gt; Stuck at Surface Logo Screen - With Spinning Dots</p>
+	</li>
+</ul>
+
+<p><em><strong>No spinning dots</strong></em></p>
+
+<ul>
+	<li>
+	<p no-loc="true">Surface Device &gt; Startup - Pre-Windows &gt; Start-up Failure &gt; Stuck at Surface Logo Screen - No Spinning Dots</p>
+	</li>
+</ul>
+
+<p><strong><em>Boots to logo and turns off</em></strong></p>
+
+<ul>
+	<li no-loc="true">Surface Device &gt; Startup &ndash; Pre-Windows &gt; Start-up Failure &gt; Boots to Microsoft logo screen &ndash; Then turns off&nbsp;</li>
+</ul>
+
+<h4>Resolution steps</h4>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><strong>Step</strong></p>
+			</td>
+			<td width="35%">
+			<p align="center" class="MsoHeading7"><strong>How</strong></p>
+			</td>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><strong>Why</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7">Notes template:</p>
+
+			<ul>
+				<li class="CxSpMiddle">Check known issues &gt;&gt;</li>
+				<li class="CxSpMiddle">Verify whether or not a System Update is installing &gt;&gt;</li>
+				<li class="CxSpMiddle">Remove all external devices &gt;&gt;</li>
+				<li class="CxSpMiddle">Force the device to shut down and restart &gt;&gt;</li>
+				<li class="CxSpMiddle">Startup Repair &gt;&gt;</li>
+				<li class="CxSpMiddle">Reset the PC &gt;&gt;</li>
+				<li class="CxSpLast">Recover from a drive &gt;&gt;</li>
+			</ul>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">This ensures a consistent format for capturing and reviewing case information. This helps prevent skipping steps.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">2. Check known issues</p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7">See KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4072657/" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select the customer&rsquo;s Surface model and check for the issue in the <strong>Startup Failures</strong> section.</p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</p>
+
+			<p class="MsoHeading7">Check known issues regularly.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>3. Verify whether or not a System Update is installing.</p>
+
+			<p>If an update is installing, let it complete.</p>
+			</td>
+			<td width="35%">
+			<p>A progress bar for <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/surface/manage-surface-uefi-settings" managed-link="" target="_blank">system firmware updates</a> may appear below the logo.</p>
+
+			<p><span asset="4286962" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4286962]</span></p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">System firmware updates are installed when the system boots. There will be a colored progress bar to indicate if updates are being installed.</p>
+
+			<p class="MsoHeading7">If an update is being installed, we don&rsquo;t want to interrupt it. This may take up to 10 minutes. During this time, do not attempt to power off or restart the device.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>4. Remove all external devices.</p>
+			</td>
+			<td>
+			<p>Leave the Surface plugged into the power supply included with the device and remove all external devices including USB drives, SD cards, or any keyboard or mouse dongles.</p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">External devices can sometimes cause the device to boot incorrectly.</p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">5. Force the device to shut down and restart.</p>
+
+			<p class="MsoHeading7">(varies by new vs old generation)</p>
+			</td>
+			<td width="35%">
+			<p><span><strong><span><span>All current devices</span></span></strong><span><span>: Press and hold the power button for 20 seconds.</span></span></span></p>
+
+			<p><span><strong><span><span>Pro 1, Pro 2, Pro 3, Pro 4, Book 1, RT, Surface 2, and Surface 3:</span></span></strong><span><span> Press and hold the volume-up button and the power button at the same time for at least 15 seconds and then release both. The Surface may boot to UEFI. This is normal. Have the customer exit UEFI.</span></span></span></p>
+
+			<p>&nbsp;</p>
+
+			<p class="MsoHeading7"><span><span><span>Video available at </span></span></span><span><span><span><a href="https://support.microsoft.com/help/4036280" target="_blank"><span><span><span><span>Force a shut down and restart your Surface</span></span></span></span></a></span></span></span><span><span><span>.</span></span></span></p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">The device may be in a <strong>hung</strong> state. Force he Surface to completely turn off all power and restart.</p>
+
+			<p>Performing a Forced Shutdown is like removing the battery from a laptop or unplugging a desktop PC. It resets the hardware and clears all the cache and memory for your hardware.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>6. If the customer sees no spinning dots, proceed to the <strong>USB Recovery</strong> step.</p>
+
+			<p>If the customer sees spinning dots. Force the device to open advanced repair options.</p>
+			</td>
+			<td width="35%">
+			<p>Force the device to shut down again and restart, after two consecutive failed attempts to start Windows, the Recovery menu will appear. Select <strong>See advanced repair options </strong>to open a <strong>Choose an option</strong> menu.</p>
+			</td>
+			<td width="32%">
+			<p>Advanced repair options may be available to perform, including Go back to the previous version, Startup Repair, System Restore, and Reset this PC.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">7. Repair and Reset.</p>
+			</td>
+			<td width="35%">
+			<p><span><strong>Good: </strong><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/12415/" managed-link="" target="_blank">Startup Repair</a></span></p>
+
+			<p><span>From the Recovery menu, select <strong>See advanced repair options.</strong></span></p>
+
+			<p><span>From the <strong>Choose an option</strong> menu, select <strong>Troubleshoot &gt; Advanced options &gt; Startup Repair.</strong></span></p>
+
+			<p><span>If prompted, enter the BitLocker recovery key.</span></p>
+
+			<p><span><strong>Better: </strong><a href="https://support.microsoft.com/help/4023533" target="_blank"><span>Reset the PC</span></a></span></p>
+
+			<p><span>From the Recovery menu, select <strong>See advanced repair options.</strong></span></p>
+
+			<p><span>From the <strong>Choose an option</strong> menu, select <strong>Troubleshoot &gt; Reset the PC &gt; Keep my files.</strong></span></p>
+
+			<p><span><strong>Best:</strong> <a href="https://support.microsoft.com/help/4023512" target="_blank"><span>USB recovery</span></a></span></p>
+
+			<p><span>The customer will need to download and set up a recovery image on a USB drive. Send the <a href="https://support.microsoft.com/surfacerecoveryimage" target="_blank"><span>USB recovery link</span></a> to the customer and help them get started. Information on what size and type of drive is provided at the destination page.</span></p>
+
+			<p><span><em>-OR-</em></span></p>
+
+			<p><span>Set up an order to have a USB recovery drive sent to the customer.</span></p>
+
+			<p><span>When using devices with only Type C ports, confirm with the customer that they have a USB C male to USB A female adapter, or a Surface Dock to use the USB recovery drive with.</span></p>
+
+			<p><span><strong>Recommended: <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/12415/windows-10-recovery-options" managed-link="" target="_blank">Recovery options in Windows 10</a>.</strong></span></p>
+
+			<p><span>For devices running Windows 20H1 (Version 2004) or newer.</span></p>
+
+			<p><span>In settings, advance to <strong>Update &amp; Security</strong> &gt; <strong>Recovery</strong> from the Recovery menu. Under <strong>Reset this PC,</strong> select <strong>Get Started</strong> in the pop-up window. Confirm with the customer and then proceed to <strong>Remove Everything</strong> or <strong>Keep my Files</strong>, then select <strong>Cloud Download</strong>, and continue with the recovery steps. Make sure the device is plugged into power and connected to a stable network.</span></p>
+			</td>
+			<td width="32%">
+			<p><strong>Reset the PC (better): </strong></p>
+
+			<ul>
+				<li>This will remove apps and settings and reinstall Windows.</li>
+				<li>This won&rsquo;t affect personal files.</li>
+			</ul>
+
+			<p><strong>USB recovery (best):</strong></p>
+
+			<ul>
+				<li>This option reimages the entire device, including the partition on the hard drive.</li>
+				<li>It is the most complete form of reset.</li>
+				<li>Customers will need to back up their personal data.</li>
+				<li>Customers will need to reinstall desktop apps. They will also need to run updates after completion.</li>
+			</ul>
+
+			<p>If the issue occurs after a reset, the root cause is very likely hardware related.</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><strong>Is the issue resolved?</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><strong>Yes, close the case</strong>: Once resolved, have the customer check for updates.</p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="35%">
+			<p>For SDT enabled sites, let the customer know about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a>.</p>
+
+			<p>For all other sites, check <strong>Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</p>
+
+			<p>KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4014334" managed-link="" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a></p>
+			</td>
+			<td width="32%">
+			<p>Making sure Surface and Windows are up to date may help avoid this problem in the future.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><strong>No, replace the device</strong>: Set up an exchange for the customer based on the status of their warranty.</p>
+			</td>
+			<td width="35%">
+			<p>Use KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2791320" managed-link="" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a></p>
+			</td>
+			<td width="32%">
+			<p>There is likely a hardware problem with the Surface device.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+<div>
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<p class="alert-title">How to code an exchange order</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><span><span><span>When selecting the <strong>Problem Type</strong> choose:</span></span></span></p>
+
+<ul>
+	<li><span><span><span>Turns on but won&rsquo;t start up</span></span></span></li>
+</ul>
+
+<p><span><span><span>Accurate coding assists in the analysis of returned units and better insights.</span></span></span><span><span><span> </span></span></span></p>
+
+<div>
+<div>&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p><a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a></p>
+</div>
+
+<h3><a id="3" name="3"></a>3. Stuck or looped at the automatic repair screen</h3>
+
+<div>
+<h4>Confirming the issue</h4>
+
+<p>When pressing the power button, the customer sees the following:</p>
+
+<ul>
+	<li>
+	<p>An automatic repair screen, or a screen with a message for automatic repair.</p>
+	</li>
+</ul>
+
+<h4>Confirmation</h4>
+
+<p><em>&ldquo;Just to make sure I understand your issue: When you press the power button, the Surface turns on, but it shows or prompts for an automatic repair. Is that correct?&rdquo;</em></p>
+
+<h4>How to code</h4>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true">Surface Device &gt; Startup - Pre-Windows &gt; Start-up Failure &gt; Stuck / Looped at Automatic Repair screen</p>
+	</li>
+</ul>
+
+<h4>Resolution steps</h4>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="30%">
+			<p align="center" class="MsoHeading7"><strong>Step</strong></p>
+			</td>
+			<td width="33%">
+			<p align="center" class="MsoHeading7"><strong>How</strong></p>
+			</td>
+			<td width="35%">
+			<p align="center" class="MsoHeading7"><strong>Why</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="30%">
+			<p class="MsoHeading7">1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</p>
+			</td>
+			<td width="33%">
+			<p class="MsoHeading7">Notes template:</p>
+
+			<ul>
+				<li class="CxSpMiddle">Check known issues &gt;&gt;</li>
+				<li class="CxSpMiddle">Startup Repair &gt;&gt;</li>
+				<li class="CxSpMiddle">Reset the PC &gt;&gt;</li>
+				<li class="CxSpLast">Recover from a drive &gt;&gt;</li>
+			</ul>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7">This ensures a consistent format for capturing and reviewing case information. This helps prevent skipping steps.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="30%">
+			<p class="MsoHeading7">2. Check known issues</p>
+			</td>
+			<td width="33%">
+			<p class="MsoHeading7">See KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4072657/" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select the customer&rsquo;s Surface model and check for the issue in the <strong>Startup Failures</strong> section.</p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7">There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</p>
+
+			<p class="MsoHeading7">Check known issues regularly.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="30%">
+			<p class="MsoHeading7">3. Repair and Reset</p>
+			</td>
+			<td width="33%">
+			<p class="MsoHeading7"><strong>Good: </strong><a href="https://internal.support.services.microsoft.com/help/12415/" target="_blank">Startup Repair</a></p>
+
+			<p>From the Recovery menu, select <strong>See advanced repair options.</strong></p>
+
+			<p>From the <strong>Choose an option</strong> menu, select <strong>Troubleshoot &gt; Advanced options &gt; Startup Repair.</strong></p>
+
+			<p>If prompted, enter the BitLocker recovery key.</p>
+
+			<p><strong>Better: </strong><a href="https://support.microsoft.com/help/4023533" target="_blank">Reset the PC</a></p>
+
+			<p>From the Recovery menu, select <strong>See advanced repair options.</strong></p>
+
+			<p>From the <strong>Choose an option</strong> menu, select <strong>Troubleshoot &gt; Reset the PC &gt; Keep my files</strong></p>
+
+			<p><strong>Best:</strong> <a href="https://support.microsoft.com/help/4023512" target="_blank">USB recovery</a></p>
+
+			<p>The customer will need to download and set up a recovery image on a USB drive. Send the <a href="https://support.microsoft.com/surfacerecoveryimage" target="_blank">USB recovery link</a> to the customer and help them get started. Information on what size and type of drive is provided at the destination page.</p>
+
+			<p><em>-OR-</em></p>
+
+			<p><span>Set up an order to have a USB recovery drive sent to the customer.</span></p>
+
+			<p><span>When using devices with only Type C ports, confirm with the customer that they have a USB C male to USB A female adapter, or a Surface Dock to use the USB recovery drive with.</span></p>
+
+			<p><span><strong>Recommended: <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/12415/windows-10-recovery-options" managed-link="" target="_blank">Recovery options in Windows 10</a>.</strong></span></p>
+
+			<p><span>For devices running Windows 20H1 (Version 2004) or newer.</span></p>
+
+			<p><span><span><span>In settings, advance to <strong>Update &amp; Security</strong> &gt; <strong>Recovery</strong> from the Recovery menu. Under <strong>Reset this PC,</strong> select <strong>Get Started</strong> in the pop-up window. Confirm with the customer and then proceed to <strong>Remove Everything</strong> or <strong>Keep my Files</strong>, then select <strong>Cloud Download</strong>, and continue with the recovery steps. Make sure the device is plugged into power and connected to a stable network.</span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><strong>Startup Repair (good)</strong>:</p>
+
+			<ul>
+				<li>This will attempt to fix problems that keep Windows from loading.</li>
+				<li>This won&rsquo;t affect personal files.</li>
+			</ul>
+
+			<p><strong>Reset the PC (better): </strong></p>
+
+			<ul>
+				<li>This will remove apps and settings and reinstall Windows.</li>
+				<li>This won&rsquo;t affect personal files.</li>
+			</ul>
+
+			<p><strong>USB recovery (best):</strong></p>
+
+			<ul>
+				<li>This option reimages the entire device, including the partition on the hard drive.</li>
+				<li>It is the most complete form of reset.</li>
+				<li>Customers will need to back up their personal data.</li>
+				<li>Customers will need to reinstall desktop apps. Customers will need to run updates after completion.</li>
+			</ul>
+
+			<p>If the issue occurs after a reset, the root cause is very likely hardware related.</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><strong>Is the issue resolved?</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="30%">
+			<p class="MsoHeading7"><strong>Yes, close the case</strong>: Once resolved, have the customer check for updates.</p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="33%">
+			<p>For SDT enabled sites, let the customer know about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a>.</p>
+
+			<p>For all other sites, check <strong>Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</p>
+
+			<p>KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4014334" managed-link="" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a></p>
+			</td>
+			<td width="35%">
+			<p>Making sure the Surface and Windows are up to date may help avoid this problem in the future.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="30%">
+			<p class="MsoHeading7"><strong>No, replace the device</strong>: Set up an exchange for the customer based on the status of their warranty.</p>
+			</td>
+			<td width="33%">
+			<p>Use KB <a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2791320" managed-link="" tabindex="0" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a></p>
+			</td>
+			<td width="35%">
+			<p>There is likely a hardware problem with the Surface device.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<p class="alert-title">How to code an exchange order</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><span><span><span>When selecting the <strong>Problem Type</strong> choose:</span></span></span></p>
+
+<ul>
+	<li><span><span><span>Turns on but won&rsquo;t start up</span></span></span></li>
+</ul>
+
+<p><span><span><span>Accurate coding assists in the analysis of returned units and better insights.</span></span></span><span><span><span> </span></span></span></p>
+
+<div>
+<div>&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p><a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a></p>
+
+<h3><a id="4" name="4"></a>4. Stuck at the choose an option screen</h3>
+
+<h4>Confirming the issue</h4>
+
+<p>When pressing the power button, the customer sees the following:</p>
+
+<ul>
+	<li>
+	<p>A screen with a blue background that asks the customer to choose an option such as Continue, Use a device, or Troubleshoot.<br>
+	<br>
+	<span asset="4294160" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4294160]</span></p>
+	</li>
+</ul>
+
+<h4>Confirmation</h4>
+
+<p><em>&ldquo;Just to make sure I understand your issue: When you press the power button, the Surface turns on but boots to a &#39;choose an option&rsquo; screen. Is that correct?&rdquo;</em></p>
+
+<h4>How to code</h4>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true">Surface Device &gt; Startup - Pre-Windows &gt; Start-up Failure &gt; Stuck at Choose an Option Screen</p>
+	</li>
+</ul>
+
+<h4>Resolution steps</h4>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><strong>Step</strong></p>
+			</td>
+			<td width="35%">
+			<p align="center" class="MsoHeading7"><strong>How</strong></p>
+			</td>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><strong>Why</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7">Notes template:</p>
+
+			<ul>
+				<li class="CxSpMiddle">Check known issues &gt;&gt;</li>
+				<li class="CxSpMiddle">Turn off and on device &gt;&gt;</li>
+				<li class="CxSpMiddle">Startup Repair &gt;&gt;</li>
+				<li class="CxSpMiddle">Reset the PC &gt;&gt;</li>
+				<li class="CxSpLast">Recover from a drive &gt;&gt;</li>
+			</ul>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">This ensures a consistent format for capturing and reviewing case information. This helps prevent skipping steps.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">2. Check known issues</p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7">See KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4072657/" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select the customer&rsquo;s Surface model and check for the issue in the <strong>Startup Failures</strong> section.</p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</p>
+
+			<p class="MsoHeading7">Check known issues regularly.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">3. Turn off and on device</p>
+			</td>
+			<td width="35%">
+			<p>Remove any USB drives and select Turn off your PC, from the Choose an option menu</p>
+
+			<p class="MsoHeading7">After the device powers off, attempt to power on the device again.</p>
+			</td>
+			<td width="32%">
+			<p>We want to ensure this was just not a temporarily issue.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">4. Repair and Reset</p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7"><strong>Good: </strong><a href="https://internal.support.services.microsoft.com/help/12415/" target="_blank">Startup Repair</a></p>
+
+			<p>From the Recovery menu, select <strong>See advanced repair options.</strong></p>
+
+			<p>From the <strong>Choose an option</strong> menu, select <strong>Troubleshoot &gt; Advanced options &gt; Startup Repair.</strong></p>
+
+			<p>If prompted, enter the BitLocker recovery key.</p>
+
+			<p><strong>Better: </strong><a href="https://support.microsoft.com/help/4023533" target="_blank">Reset the PC</a></p>
+
+			<p>From the Recovery menu, select <strong>See advanced repair options.</strong></p>
+
+			<p>From the <strong>Choose an option</strong> menu, select <strong>Troubleshoot &gt; Reset the PC &gt; Keep my files.</strong></p>
+
+			<p><strong>Best:</strong> <a href="https://support.microsoft.com/help/4023512" target="_blank">USB recovery</a></p>
+
+			<p>The customer will need to download and set up a recovery image on a USB drive. Send the <a href="https://support.microsoft.com/surfacerecoveryimage" target="_blank">USB recovery link</a> to the customer and help them get started. Information on what size and type of drive is provided at the destination page.</p>
+
+			<p><em>-OR-</em></p>
+
+			<p><span>Set up an order to have a USB recovery drive sent to the customer.</span></p>
+
+			<p><span>When using devices with only Type C ports, confirm with the customer that they have a USB C male to USB A female adapter, or a Surface Dock to use the USB recovery drive with.</span></p>
+
+			<p><span><strong>Recommended: <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/12415/windows-10-recovery-options" managed-link="" target="_blank">Recovery options in Windows 10</a>.</strong></span></p>
+
+			<p><span>For devices running Windows 20H1 (Version 2004) or newer.</span></p>
+
+			<p><span><span><span>In settings, advance to <strong>Update &amp; Security</strong> &gt; <strong>Recovery</strong> from the Recovery menu. Under <strong>Reset this PC,</strong> select <strong>Get Started</strong> in the pop-up window. Confirm with the customer and then proceed to <strong>Remove Everything</strong> or <strong>Keep my Files</strong>, then select <strong>Cloud Download</strong>, and continue with the recovery steps. Make sure the device is plugged into power and connected to a stable network.</span></span></span></p>
+			</td>
+			<td width="32%">
+			<p><strong>Startup Repair (good)</strong>:</p>
+
+			<ul>
+				<li>This will attempt to fix problems that keep Windows from loading.</li>
+				<li>This won&rsquo;t affect personal files.</li>
+			</ul>
+
+			<p><strong>Reset the PC (better): </strong></p>
+
+			<ul>
+				<li>This will remove apps and settings and reinstall Windows.</li>
+				<li>This won&rsquo;t affect personal files.</li>
+			</ul>
+
+			<p><strong>USB recovery (best):</strong></p>
+
+			<ul>
+				<li>This option reimages the entire device, including the partition on the hard drive.</li>
+				<li>It is the most complete form of reset.</li>
+				<li>Customers will need to back up their personal data.</li>
+				<li>Customers will need to reinstall desktop apps. Customers will need to run updates after completion.</li>
+			</ul>
+
+			<p>If the issue occurs after a reset, the root cause is very likely hardware related.</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><strong>Is the issue resolved?</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><strong>Yes, close the case</strong>: Once resolved, have the customer check for updates.</p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="35%">
+			<p>For SDT enabled sites, let the customer know about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a>.</p>
+
+			<p>For all other sites, check <strong>Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</p>
+
+			<p>KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4014334" managed-link="" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a></p>
+			</td>
+			<td width="32%">
+			<p>Making sure the Surface and Windows are up to date may help avoid this problem in the future.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><strong>No, replace the device</strong>: Set up an exchange for the customer based on the status of their warranty.</p>
+			</td>
+			<td width="35%">
+			<p>Use KB <a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2791320" managed-link="" tabindex="0" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a></p>
+			</td>
+			<td width="32%">
+			<p>There is likely a hardware problem with the Surface device.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<p class="alert-title">How to code an exchange order</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p>When selecting the <strong>Problem Type</strong>&nbsp;choose:</p>
+
+<ul>
+	<li>Turns on but won&rsquo;t start up</li>
+</ul>
+
+<p>Accurate coding assists in the analysis of returned units and better insights.</p>
+
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+
+<p><a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a></p>
+
+<h3><a id="5" name="5"></a>5. Boots to UEFI - Couldn&#39;t find a bootable operating system</h3>
+
+<p><span><span><strong><span><span><span>Confirming the issue</span></span></span></strong></span></span></p>
+
+<p><span><span><span><span><span>When pressing the power button, the Surface turns on and immediately boots to an error displaying:</span></span></span></span></span></p>
+
+<p no-loc="true"><span><span><span><span><span>&ldquo;<span>Couldn&rsquo;t find a bootable operating system. Check the Boot configuration to try to fix this.&rdquo; </span></span></span></span><span><span> </span></span></span></span></p>
+
+<p><span><span><span><span><span>The customer sees the following and after selecting <strong>OK</strong>, UEFI loads:</span></span></span></span></span></p>
+
+<p><span asset="4588171" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4588171]</span></p>
+
+<p><span><span><strong><span><span><span>Confirmation</span></span></span></strong></span></span></p>
+
+<p><span><span><em><span><span><span>&quot;Just to make sure I understand your issue: When you press the power button, the Surface turns on but it boots to an error that states there is not a bootable operating system. Is that correct?&quot;</span></span></span></em></span></span></p>
+
+<p><span><span><strong><span><span><span>How to code</span></span></span></strong></span></span></p>
+
+<p><span><span><span><span><span>After confirming the issue, code the case.</span></span></span></span></span></p>
+
+<ul>
+	<li>
+	<p no-loc="true"><span><span><span><span><span><span><span>Surface Device &gt; Startup - Pre-Windows &gt; Start-up Failure &gt; Boots to UEFI - Couldn&#39;t find a bootable operating system</span></span></span></span><span><span> </span></span></span></span></span></p>
+	</li>
+</ul>
+
+<p><span><span><strong><span><span><span>Resolution steps</span></span></span></strong></span></span></p>
+
+<p><span><span><span>Follow the steps in the order below until the issue is resolved or until all the steps have been completed. While following the steps, use the <strong>Why</strong> column to inform the customer why you are performing the step and, if successful, to better understand what the cause may have been. As you follow the steps, document the result of each one in your notes. Then proceed to the <strong>Is the issue resolved?</strong> section at the end of the table for next steps.</span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="32%">
+			<p align="center"><span><strong><span><span><span>Step</span></span></span></strong></span></p>
+			</td>
+			<td width="35%">
+			<p align="center"><span><strong><span><span><span>How</span></span></span></strong></span></p>
+			</td>
+			<td width="33%">
+			<p align="center"><span><strong><span><span><span>Why</span></span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p><span><span><span><span>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</span></span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span><span><span><span>Notes template:</span></span></span></span></p>
+
+			<ul>
+				<li><span><span><span><span><span>Check known issues &gt;&gt;</span></span></span></span></span></li>
+				<li><span><span><span><span><span>Check the boot configuration in UEFI &gt;&gt;</span></span></span></span></span></li>
+				<li><span><span><span><span><span>Force the device to shut down and restart &gt;&gt;</span></span></span></span></span></li>
+				<li><span><span><span><span><span>Reimage the device &gt;&gt;</span></span></span></span></span></li>
+			</ul>
+			</td>
+			<td width="33%">
+			<p><span><span><span><span>This ensures a consistent format for capturing and reviewing case information. This helps prevent skipping steps.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p><span><span><span><span>2. Check known issues</span></span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span><span><span><span>See KB </span></span></span><span><a href="https://internal.support.services.microsoft.com/help/4072657/" target="_blank"><span><span><span>4072657 Technical Guide: Surface known-issues landing page</span></span></span></a></span><span><span><span>, select the customer&rsquo;s Surface model and check for the issue in the <strong>Startup Failures</strong> section.</span></span></span></span></p>
+			</td>
+			<td width="33%">
+			<p><span><span><span><span>There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</span></span></span></span></p>
+
+			<p><span><span><span><span>Check known issues regularly.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p><span><span><span><span>3. Check the boot configuration</span></span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span><span><span><span><span>Select <strong>OK</strong> to dismiss the dialog and then select <strong>Boot configuration</strong> from the menu on the left.</span></span></span></span></span></p>
+
+			<p><span><span><span><span><span>Ensure that there is a valid boot device selected. By default, all the options including Windows Boot Manager, Internal Storage, USB Storage, and PXE Network should be selected.</span></span></span></span></span></p>
+			</td>
+			<td width="33%">
+			<p><span><span><span><span>It&rsquo;s possible that the configuration has changed and the customer is already in UEFI to check.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p><span><span><span><span>4. Force the device to shut down and restart.</span></span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span><strong><span><span><span>All current devices</span></span></span></strong><span><span><span>: Press and hold the power button for 20 seconds. </span></span></span></span></p>
+
+			<p><span><span><span><span>Video available at </span></span></span><span><a href="https://support.microsoft.com/help/4036280" target="_blank"><span><span><span>Force a shut down and restart your Surface</span></span></span></a></span><span><span><span>.</span></span></span></span></p>
+			</td>
+			<td width="33%">
+			<p><span><span><span><span>Performing a Forced Shutdown is like removing the battery from a laptop or unplugging a desktop PC. It resets the hardware and clears all the cache and memory for your hardware.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p><span><span><span><span>5. Reimage the device</span></span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span> </span></p>
+
+			<p><span><span><span><span>1. Use </span></span></span><span><a href="https://docs.microsoft.com/surface/microsoft-surface-data-eraser" target="_blank"><span><span><span>Surface Data Eraser (SDE)</span></span></span></a></span><span><span><span> to erase the drive.</span></span></span></span></p>
+
+			<p><span><span><span><span>If SDE fails (No disk found, 0 disk size, and others) proceed to <strong>Replace the device</strong>.</span></span></span></span></p>
+
+			<p><span><span><span><span>2. Then perform a </span></span></span><span><a href="https://support.microsoft.com/help/4023512" target="_blank"><span><span><span>USB recovery</span></span></span></a></span><span><span><span>.</span></span></span></span></p>
+
+			<p><span><span><span><span>The customer will need to download and set up a recovery image on a USB drive. Send the </span></span></span><span><a href="https://support.microsoft.com/surfacerecoveryimage" target="_blank"><span><span><span>USB recovery link</span></span></span></a></span><span><span><span> to the customer and help them get started. Information on what size and type of drive is provided at the destination page.</span></span></span></span></p>
+
+			<p><span><em><span><span><span>-OR-</span></span></span></em></span></p>
+
+			<p><span><span><span><span>Set up an order to have a USB recovery drive sent to the customer.</span></span></span></span></p>
+
+			<p><span> </span></p>
+			</td>
+			<td width="33%">
+			<p><span><strong><span><span><span>USB recovery (best):</span></span></span></strong></span></p>
+
+			<ul>
+				<li><span><span><span><span><span>This option reimages the entire device, including the partition on the hard drive.</span></span></span></span></span></li>
+				<li><span><span><span><span><span>It is the most complete form of reset.</span></span></span></span></span></li>
+				<li><span><span><span><span><span>Customers will need to reinstall desktop apps. Customers will need to run updates after completion.</span></span></span></span></span></li>
+			</ul>
+
+			<p><span><span><span><span>If the issue occurs after a reset, the root cause is very likely hardware. </span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p class="align-center"><span><strong><span><span><span>Is the issue resolved?</span></span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="align-center"><span><strong><span><span><span>Yes, close the case</span></span></span></strong><span><span><span>: Once resolved, have the customer check for updates.</span></span></span></span></p>
+
+			<p><span> </span></p>
+			</td>
+			<td width="35%">
+			<p><span><span><span><span>For SDT enabled sites, let the customer know about the </span></span></span><span><a href="https://support.microsoft.com/help/4037239" target="_blank"><span><span><span>Surface Diagnostic Toolkit</span></span></span></a></span><span><span><span>.</span></span></span></span></p>
+
+			<p><span><span><span><span>For all other sites, check<strong> Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</span></span></span></span></p>
+
+			<p><span><span><span><span>KB </span></span></span><span><a href="https://internal.support.services.microsoft.com/help/4014334" target="_blank"><span><span><span>4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</span></span></span></a></span></span></p>
+			</td>
+			<td width="33%">
+			<p><span><span><span><span>Making sure the Surface and Windows are up to date may help avoid this problem in the future.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p><span><strong><span><span><span>No, replace the device</span></span></span></strong><span><span><span>: Set up an exchange for the customer based on the status of their warranty.</span></span></span></span></p>
+			</td>
+			<td width="35%">
+			<p><span><span><span><span>Use KB </span></span></span><span><a href="https://internal.support.services.microsoft.com/help/2791320" target="_blank"><span><span><span>2791320 Informational: Surface: Exchange and fulfillment landing page</span></span></span></a></span></span></p>
+			</td>
+			<td width="33%">
+			<p><span><span><span><span>There is likely a hardware problem with the Surface device.</span></span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span><span><span><span>How to code an exchange order</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>When selecting the <strong>Problem Type</strong> choose:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>Turns on but won&rsquo;t start up.</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span>Accurate coding assists in the analysis of returned units and better insights.</span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<div>
+<h3><a id="6" name="6"></a>6. Stuck at UEFI or bios screen</h3>
+</div>
+
+<h4>Confirming the issue</h4>
+
+<p>When pressing the power button, the customer sees the following:</p>
+
+<ul>
+	<li>
+	<p>A UEFI configuration screen. Depending on the customer&rsquo;s device this screen may look different, but the key is to look for &ldquo;UEFI.&rdquo;<br>
+	<br>
+	<span asset="4290922" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4290922]</span></p>
+	</li>
+</ul>
+
+<h4>Confirmation</h4>
+
+<p><em>&quot;Just to make sure I understand your issue: When you press the power button, the Surface turns on but it boots to a UEFI configuration screen. Is that correct?&quot;</em></p>
+
+<h4>How to code</h4>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true">Surface Device &gt; Startup - Pre-Windows &gt; Start-up Failure &gt; Start-up Failure &gt; Stuck at UEFI / BIOS Screen</p>
+	</li>
+</ul>
+
+<h4>Resolution steps</h4>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><strong>Step</strong></p>
+			</td>
+			<td width="35%">
+			<p align="center" class="MsoHeading7"><strong>How</strong></p>
+			</td>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><strong>Why</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7">Notes template:</p>
+
+			<ul>
+				<li class="CxSpMiddle">Check known issues &gt;&gt;</li>
+				<li class="CxSpMiddle">Check for SSD Status Icon in UEFI &gt;&gt;</li>
+				<li class="CxSpMiddle">Exit UEFI and restart the device &gt;&gt;</li>
+				<li class="CxSpLast">Force the device to shut down and restart &gt;&gt;</li>
+				<li class="CxSpLast">Reimage the device &gt;&gt;</li>
+			</ul>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">This ensures a consistent format for capturing and reviewing case information. This helps prevent skipping steps.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">2. Check known issues</p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7">See KB <a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4072657/" managed-link="" tabindex="0" target="_blank">4072657 Technical Guide: Surface known-issues landing page</a>, select the customer&rsquo;s Surface model and check for the issue in the <strong>Startup Failures</strong> section.</p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</p>
+
+			<p class="MsoHeading7">Check known issues regularly.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">3. Check for SSD Status Icon in UEFI.</p>
+			</td>
+			<td width="35%">
+			<p>If Surface is unable to detect a bootable operating system the below icon will appear in the top right corner of the UEFI screen.</p>
+
+			<p><span asset="4287302" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4287302]</span></p>
+			</td>
+			<td width="32%">
+			<p>Surface is unable to find a bootable operating system.</p>
+
+			<p>This may be due to no valid boot options being available, an invalid boot manager, disk corruption, or the drive not being physically detected.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>4. Force the device to shut down and restart.</p>
+
+			<p class="MsoHeading7">(varies by new vs old generation)</p>
+			</td>
+			<td width="35%">
+			<p><span><strong><span><span>All current devices</span></span></strong><span><span>: Press and hold the power button for 20 seconds.</span></span></span></p>
+
+			<p><span><strong><span><span>Pro 1, Pro 2, Pro 3, Pro 4, Book 1, RT, Surface 2, and Surface 3:</span></span></strong><span><span> Press and hold the volume-up button and the power button at the same time for at least 15 seconds and then release both. The Surface may boot to UEFI. This is normal. Have the customer exit UEFI.</span></span></span></p>
+
+			<p>&nbsp;</p>
+
+			<p><span><span><span>Video available at </span></span></span><span><span><span><a href="https://support.microsoft.com/help/4036280" target="_blank"><span><span><span><span>Force a shut down and restart your Surface</span></span></span></span></a></span></span></span></p>
+			</td>
+			<td width="32%">
+			<p>The device may be in a <strong>hung</strong> state. Force the Surface to completely turn off all power and restart.</p>
+
+			<p>Performing a Forced Shutdown is like removing the battery from a laptop or unplugging a desktop PC. It resets the hardware and clears all the cache and memory for your hardware.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">5. Reimage the device</td>
+			<td width="35%">
+			<p>&nbsp;</p>
+
+			<p><span><span>1. Use <a href="https://docs.microsoft.com/surface/microsoft-surface-data-eraser" target="_blank"><span>Surface Data Eraser (SDE)</span></a> to erase the drive.</span></span></p>
+
+			<p><span><span>If SDE fails (No disk found, 0 disk size, and others) proceed to <strong>Replace the device</strong>.</span></span></p>
+
+			<p><span><span>2. Then perform a </span><a href="https://support.microsoft.com/help/4023512" target="_blank"><span>USB recovery</span></a></span></p>
+
+			<p>The customer will need to download and set up a recovery image on a USB drive. Send the <a href="https://support.microsoft.com/surfacerecoveryimage" target="_blank">USB recovery link</a> to the customer and help them get started. Information on what size and type of drive is provided at the destination page.</p>
+
+			<p><em>-OR-</em></p>
+
+			<p><span>Set up an order to have a USB recovery drive sent to the customer.</span></p>
+
+			<p><span>When using devices with only Type C ports, confirm with the customer that they have a USB C male to USB A female adapter, or a Surface Dock to use the USB recovery drive with.</span></p>
+
+			<p><span><strong>Recommended: <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/12415/windows-10-recovery-options" managed-link="" target="_blank">Recovery options in Windows 10</a>.</strong></span></p>
+
+			<p><span>For devices running Windows 20H1 (Version 2004) or newer.</span></p>
+
+			<p><span><span><span>In settings, advance to <strong>Update &amp; Security</strong> &gt; <strong>Recovery</strong> from the Recovery menu. Under <strong>Reset this PC,</strong> select <strong>Get Started</strong> in the pop-up window. Confirm with the customer and then proceed to <strong>Remove Everything</strong> or <strong>Keep my Files</strong>, then select <strong>Cloud Download</strong>, and continue with the recovery steps. Make sure the device is plugged into power and connected to a stable network.</span></span></span></p>
+
+			<div>
+			<div>&nbsp;</div>
+			</div>
+			</td>
+			<td width="32%">
+			<p><strong>USB recovery (best):</strong></p>
+
+			<ul>
+				<li>This option reimages the entire device, including the partition on the hard drive.</li>
+				<li>It is the most complete form of reset.</li>
+				<li>Customers will need to reinstall desktop apps. Customers will need to run updates after completion.</li>
+			</ul>
+			If the issue occurs after a reset, the root cause is very likely hardware.&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><strong>Is the issue resolved?</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><strong>Yes, close the case</strong>: Once resolved, have the customer check for updates.</p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="35%">
+			<p>For SDT enabled sites, let the customer know about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a>.</p>
+
+			<p>For all other sites, check <strong>Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</p>
+
+			<p>KB <a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4014334" managed-link="" tabindex="0" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a></p>
+			</td>
+			<td width="32%">
+			<p>Making sure the Surface and Windows are up to date may help avoid this problem in the future.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><strong>No, replace the device</strong>: Set up an exchange for the customer based on the status of their warranty.</p>
+			</td>
+			<td width="35%">
+			<p>Use KB <a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2791320" managed-link="" tabindex="0" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a></p>
+			</td>
+			<td width="32%">
+			<p>There is likely a hardware problem with the Surface device.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<p class="alert-title">How to code an exchange order</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><span><span><span>When selecting the <strong>Problem Type</strong> choose:</span></span></span></p>
+
+<ul>
+	<li><span><span><span>Turns on but won&rsquo;t start up</span></span></span></li>
+</ul>
+
+<p><span><span><span>Accurate coding assists in the analysis of returned units and better insights.</span></span></span><span><span><span> </span></span></span></p>
+
+<div>
+<div>&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p><a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a></p>
+
+<h3><a id="7" name="7"></a>7. Stopped at the thermal warning</h3>
+
+<h4>Confirming the issue</h4>
+
+<p>When pressing the power button, the customer sees the following:</p>
+
+<ul>
+	<li>
+	<p>A large thermometer icon on a black background.<br>
+	<br>
+	<span asset="4287389" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4287389]</span></p>
+	</li>
+</ul>
+
+<h4>Confirmation</h4>
+
+<p><em>&ldquo;Just to make sure I understand your issue: When you press the power button, the Surface turns on but it boots to a large thermometer icon. Is that correct?&rdquo;</em></p>
+
+<h4>How to code</h4>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true">Surface Device &gt; Startup - Pre-Windows &gt; Start-up Failure &gt; Stuck / Looped at Thermal warning</p>
+	</li>
+</ul>
+
+<h4>Resolution steps</h4>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><strong>Step</strong></p>
+			</td>
+			<td width="35%">
+			<p align="center" class="MsoHeading7"><strong>How</strong></p>
+			</td>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><strong>Why</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7">Notes template:</p>
+
+			<ul>
+				<li class="CxSpMiddle">Check known issues &gt;&gt;</li>
+				<li class="CxSpMiddle">Allow the Surface to shut down after the thermometer icon appears and disconnect all peripherals.</li>
+				<li class="CxSpLast">Attach the PSU, confirm the tip is lit, and press the power button</li>
+			</ul>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">This ensures a consistent format for capturing and reviewing case information. This helps prevent skipping steps.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">2. Check known Issues</p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7">See KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4072657/" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select the customer&rsquo;s Surface model and check for the issue in the <strong>Startup Failures</strong> section.</p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</p>
+
+			<p class="MsoHeading7">Check known issues regularly.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>3. Allow the Surface to shut down after the thermometer icon appears and disconnect all peripherals.</p>
+			</td>
+			<td width="35%">
+			<p>Surface will automatically turn off after displaying the screen.</p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">There is an <a href="https://support.microsoft.com/help/4023454" target="_blank">internal temperature threshold</a> set on all Surface devices.</p>
+
+			<p class="MsoHeading7">When that threshold is met, or exceeded, the&nbsp;<a href="https://support.microsoft.com/help/4036297" target="_blank">Surface will automatically shut down</a>&nbsp;to ensure there is no damage to hardware</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>4. Attach the PSU, confirm the tip is lit, and press the power button</p>
+
+			<p>If the tip does not light, <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/3158368" managed-link="" target="_blank">follow PSU troubleshooting instead</a>.</p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="35%">
+			<p><span asset="4287442" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4287442]</span></p>
+
+			<p>If a battery icon appears on screen, the battery is drained and needs time to charge, up to 10-15 minutes.</p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">We want to make sure the device has power and can turn on and boot to Windows.</p>
+
+			<p>High Temperature Operation and Battery Life may be linked due to high intensity processes running on the Surface.</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><strong>Is the issue resolved?</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><strong>Yes, close the case</strong>: Once resolved, have the customer check for updates.</p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="35%">
+			<p>For SDT enabled sites, let the customer know about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a>.</p>
+
+			<p>For all other sites, check <strong>Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</p>
+
+			<p>KB <a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4014334" managed-link="" tabindex="0" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a></p>
+			</td>
+			<td width="32%">
+			<p>Making sure the Surface and Windows are up to date may help avoid this problem in the future.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><strong>No, replace the device</strong><strong>:</strong> Set up an exchange for the customer based on the status of their warranty.</p>
+			</td>
+			<td width="35%">
+			<p>Use KB <a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2791320" managed-link="" tabindex="0" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a></p>
+			</td>
+			<td width="32%">
+			<p>There is likely a hardware problem with the Surface device.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+<div>
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<p class="alert-title">How to code an exchange order</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><span><span><span>When selecting the <strong>Problem Type</strong> choose:</span></span></span></p>
+
+<ul>
+	<li><span><span><span>Overheating</span></span></span></li>
+</ul>
+
+<p><span><span><span>Accurate coding assists in the analysis of returned units and better insights.</span></span></span><span><span><span> </span></span></span></p>
+
+<div>
+<div>&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p><a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a></p>
+</div>
+
+<div>
+<h3><a id="8" name="8"></a>8. Stopped at low battery warning</h3>
+
+<h4>Confirming the issue</h4>
+
+<p>When pressing the power button, the customer sees the following:</p>
+
+<ul>
+	<li>
+	<p>A large battery icon on a black background.<br>
+	<br>
+	<span asset="4290972" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4290972]</span></p>
+	</li>
+</ul>
+
+<h4>Confirmation</h4>
+
+<p><em>&quot;Just to make sure I understand your issue: When you press the power button, the Surface turns on but it boots to a large battery icon.&quot;</em></p>
+
+<h4>How to code</h4>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true">Surface Device &gt; Startup - Pre-Windows &gt; Start-up Failure &gt; Stopped at Low Battery Warning</p>
+	</li>
+</ul>
+
+<h4>Resolution steps</h4>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><strong>Step</strong></p>
+			</td>
+			<td width="35%">
+			<p align="center" class="MsoHeading7"><strong>How</strong></p>
+			</td>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><strong>Why</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">1. Copy and paste the template to the right to begin your note taking for this scenario.</p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7">Notes template:</p>
+
+			<ul>
+				<li class="CxSpMiddle">
+				<p>Check known issues &gt;&gt;</p>
+				</li>
+				<li class="CxSpMiddle">
+				<p>Attach the PSU, confirm the tip is lit, and press the power button &gt;&gt;</p>
+				</li>
+				<li class="CxSpMiddle">
+				<p>Disconnect extra peripherals, then press the power button &gt;&gt;</p>
+				</li>
+				<li class="CxSpLast">
+				<p>Force the device to shut down and restart &gt;&gt;</p>
+				</li>
+			</ul>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">This ensures a consistent format for capturing and reviewing case information. This helps prevent skipping steps.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">2. Check known issues.</p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7">See KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4072657/" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select the customer&rsquo;s Surface model and check for the issue in the <strong>Startup Failures </strong>section.</p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</p>
+
+			<p class="MsoHeading7">Check known issues regularly.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>3. Attach the PSU, confirm the tip is lit, and press the power button.</p>
+
+			<p>If the tip does not light,&nbsp;<a href="https://internal.support.services.microsoft.com/help/3158368" target="_blank">follow PSU troubleshooting instead</a>.</p>
+			</td>
+			<td width="35%">
+			<p><span asset="4287442" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4287442]</span></p>
+
+			<p>If a battery icon appears on screen, the battery is drained and needs time to charge, up to 10-15 minutes.</p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">The battery may be drained and unable to turn on the Surface.</p>
+
+			<p class="MsoHeading7">If the tip does not light, there may be an issue with the PSU.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">4. Disconnect extra peripherals, then press the power button.</p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7">Leave the Surface plugged in to the power supply included with the device&nbsp;but disconnect any USB or external monitor.</p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">Connected peripherals could be taking away from the power that would be used to charge the device.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">5. Force the device to shut down and restart.</p>
+
+			<p class="MsoHeading7">(varies by new vs old generation)</p>
+			</td>
+			<td width="35%">
+			<p><span><strong><span><span>All current devices</span></span></strong><span><span>: Press and hold the power button for 20 seconds.</span></span></span></p>
+
+			<p><span><strong><span><span>Pro 1, Pro 2, Pro 3, Pro 4, Book 1, RT, Surface 2, and Surface 3:</span></span></strong><span><span> Press and hold the volume-up button and the power button at the same time for at least 15 seconds and then release both. The Surface may boot to UEFI. This is normal. Have the customer exit UEFI.</span></span></span></p>
+
+			<p>&nbsp;</p>
+
+			<p><span><span><span>Video available at </span></span></span><span><span><span><a href="https://support.microsoft.com/help/4036280" target="_blank"><span><span><span><span>Force a shut down and restart your Surface</span></span></span></span></a></span></span></span><span><span><span>.</span></span></span></p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">The device may be in a <strong>hung</strong> state. Force the Surface to completely turn off all power and restart.</p>
+
+			<p>Performing a Forced Shutdown is like removing the battery from a laptop or unplugging a desktop PC. It resets the hardware and clears all the cache and memory for your hardware.</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><strong>Is the issue resolved?</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><strong>Yes, close the case</strong><strong>:</strong> Once resolved, have the customer check for updates.</p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="35%">
+			<p>For SDT enabled sites, let the customer know about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a>.</p>
+
+			<p>For all other sites, check <strong>Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</p>
+
+			<p>KB&nbsp;<a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4014334" managed-link="" tabindex="0" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a></p>
+			</td>
+			<td width="32%">
+			<p>Making sure the Surface and Windows are up to date may help avoid this problem in the future.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><strong>No, replace the device</strong><strong>:</strong> Set up an exchange for the customer based on the status of their warranty.</p>
+			</td>
+			<td width="35%">
+			<p>Create a service order. See KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2791320" managed-link="" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a> for more information.</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="32%">
+			<p>There is likely a hardware problem with the Surface device.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<p class="alert-title">How to code an exchange order</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><span><span><span>When selecting the <strong>Problem Type</strong> choose:</span></span></span></p>
+
+<ul>
+	<li><span><span><span>Battery and Charging</span></span></span></li>
+</ul>
+
+<p><span><span><span>Accurate coding assists in the analysis of returned units and better insights.</span></span></span><span><span><span> </span></span></span></p>
+
+<div>
+<div>&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p><a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a></p>
+
+<h3><a id="9" name="9"></a>9. Secure boot disable (red screen)</h3>
+
+<h4>Confirming the issue</h4>
+
+<p>When pressing the power button, the customer sees the following:</p>
+
+<ul>
+	<li>
+	<p>The Surface turns on and shows a red bar with a lock icon as it boots.</p>
+	</li>
+	<li>
+	<p>The Surface turns on, but shows the Surface logo inside a black, rectangular box, surrounded by red.<br>
+	<br>
+	<span asset="4287715" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4287715]</span></p>
+	</li>
+</ul>
+
+<h4>Confirmation</h4>
+
+<p><em>&ldquo;Just to make sure I understand your issue: When you press the power button, the Surface turns on, but displays a red bar or screen as it boots. Is that correct?&rdquo;</em></p>
+
+<h4>How to code</h4>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true">Surface Device &gt; Startup - Pre-Windows &gt; Start-up Failure &gt; Secure Boot Disabled (Red Screen)</p>
+	</li>
+</ul>
+
+<h4>Resolution steps</h4>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><strong>Step</strong></p>
+			</td>
+			<td width="35%">
+			<p align="center" class="MsoHeading7"><strong>How</strong></p>
+			</td>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><strong>Why</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7">Notes template:</p>
+
+			<ul>
+				<li class="CxSpMiddle">Check known issues &gt;&gt;</li>
+				<li class="CxSpMiddle">Log into Windows and Suspend BitLocker &gt;&gt;</li>
+				<li class="CxSpMiddle">Boot to UEFI &gt;&gt;</li>
+				<li class="CxSpLast">Enable Trusted Platform Module (TPM), and Secure Boot Control &gt;&gt;</li>
+			</ul>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">This ensures a consistent format for capturing and reviewing case information. This helps prevent skipping steps.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7">2. Check known issues</p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7">See KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4072657/" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select the customer&rsquo;s Surface model and check for the issue in the <strong>Startup Failures</strong> section.</p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</p>
+
+			<p class="MsoHeading7">Check known issues regularly.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>3. Log into Windows and Suspend BitLocker</p>
+			</td>
+			<td width="35%">
+			<p><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4058270" managed-link="" target="_blank">Manage BitLocker</a>:</p>
+
+			<p>Go to <strong>Start</strong> and search for <strong>Manage BitLocker</strong>. Tap or Select it from the Start Menu</p>
+
+			<p>Put BitLocker in a Suspended State.</p>
+
+			<p>See KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4058270" managed-link="" target="_blank">4058270 Technical Guide: Surface: BitLocker</a>.</p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">Suspending BitLocker will make sure that the customer doesn&rsquo;t need to input a Recovery Key after changing TPM settings.</p>
+
+			<p>It will automatically enable, once the device restarts into Windows.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>4. Boot to UEFI</p>
+			</td>
+			<td width="35%">
+			<p><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4023531/surface-how-to-use-surface-uefi" managed-link="" target="_blank">Boot to UEFI</a>:</p>
+
+			<p>From Start, select <strong>Settings &gt; Update &amp; Security &gt; Recovery</strong></p>
+
+			<p>Select <strong>Restart now</strong> from the <strong>Advanced startup</strong> section.</p>
+
+			<p>From the <strong>Choose an option</strong> screen, select <strong>Troubleshoot &gt; Advanced options &gt; UEFI Firmware Settings &gt; Restart</strong></p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">We need to boot into UEFI to enable Secure Boot.</p>
+
+			<p class="MsoHeading7">Booting to UEFI from Advanced startup ensures that the customer will boot directly into UEFI and not accidentally put BitLocker back into a non-suspended state too early.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>5. Enable Trusted Platform Module (TPM), and Secure Boot Control</p>
+			</td>
+			<td width="35%">
+			<p><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4023531" managed-link="" target="_blank">Enable Security options</a>:</p>
+
+			<p>From the Security menu in UEFI, enable TPM and set Secure Boot to <strong>Microsoft only</strong> or to <strong>Microsoft &amp; third-party CA</strong> (if the customers uses it)</p>
+
+			<p>Choose <strong>Exit</strong> or <strong>Exit</strong> <strong>Setup</strong> and <strong>Restart</strong> <strong>now</strong>.</p>
+
+			<p>Choose <strong>Yes</strong> if prompted. This will save all changes made.</p>
+			</td>
+			<td width="32%">
+			<p class="MsoHeading7">This will remove the red warning screen when the device boots.</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><strong>Is the issue resolved?</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><strong>Yes, close the case</strong>: Once resolved, have the customer check for updates.</p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="35%">
+			<p>For SDT enabled sites, let the customer know about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a>.</p>
+
+			<p>For all other sites, check <strong>Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</p>
+
+			<p>KB <a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4014334" managed-link="" tabindex="0" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a></p>
+			</td>
+			<td width="32%">
+			<p>Making sure the Surface and Windows are up to date may help avoid this problem in the future.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><strong>No, replace the device</strong>: Set up an exchange for the customer based on the status of their warranty.</p>
+			</td>
+			<td width="35%">
+			<p>Use KB <a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2791320" managed-link="" tabindex="0" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a>.</p>
+			</td>
+			<td width="32%">
+			<p>There is likely a hardware problem with the Surface device.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+<div>
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<p class="alert-title">How to code an exchange order</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><span><span><span>When selecting the <strong>Problem Type</strong> choose:</span></span></span></p>
+
+<ul>
+	<li><span><span><span>Turns on but won&rsquo;t start up</span></span></span></li>
+</ul>
+
+<p><span><span><span>Accurate coding assists in the analysis of returned units and better insights.</span></span></span><span><span><span> </span></span></span></p>
+
+<div>
+<div>&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p><a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a></p>
+</div>
+
+<div>
+<h3><a id="10" name="10"></a>10. Customer forgot UEFI password</h3>
+
+<h4>Confirming the issue</h4>
+
+<p>The customer is attempting to enter UEFI which has been locked with a password but has forgotten the password.</p>
+
+<h4>Confirmation</h4>
+
+<p><em>&ldquo;Just to make sure I understand your issue: There is a password set for the UEFI on the device, but you do not know what the password is. Is that correct?&rdquo;</em></p>
+
+<h4>How to code</h4>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>
+	<p no-loc="true">Surface Device &gt; Startup - Pre-Windows &gt; Start-up Failure &gt; Customer Forgot UEFI Password</p>
+	</li>
+</ul>
+
+<h4>Resolution steps</h4>
+
+<p><span asset="4486344" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4486344]</span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><strong>Step</strong></p>
+			</td>
+			<td width="35%">
+			<p align="center" class="MsoHeading7"><strong>How</strong></p>
+			</td>
+			<td width="32%">
+			<p align="center" class="MsoHeading7"><strong>Why</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</p>
+			</td>
+			<td width="35%">
+			<p class="MsoHeading7">Notes template:</p>
+
+			<ul>
+				<li class="CxSpMiddle">Check known issues &gt;&gt;</li>
+				<li class="CxSpMiddle">Do other users know &gt;&gt;</li>
+			</ul>
+			</td>
+			<td width="32%">
+			<p>This ensures a consistent format for capturing and reviewing case information. This helps prevent skipping steps.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>2. Check known issues</p>
+			</td>
+			<td width="35%">
+			<p>See KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4072657/" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select the customer&rsquo;s Surface model and check for the issue in the <strong>Startup Failures</strong> section.</p>
+			</td>
+			<td width="32%">
+			<p>There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</p>
+
+			<p>Check known issues regularly.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>3. Do other users know?</p>
+			</td>
+			<td width="35%">
+			<p>Is there another user of the device, that may know what the password is?</p>
+			</td>
+			<td width="32%">
+			<p>If the device is used by other users, it is possible that one of them set the password.</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><strong>Is the issue resolved?</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><strong>Yes, close the case</strong>: Once resolved, have the customer check for updates.</p>
+
+			<p class="MsoHeading7">&nbsp;</p>
+			</td>
+			<td width="35%">
+			<p>For SDT enabled sites, let the customer know about the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/4037239" managed-link="" target="_blank">Surface Diagnostic Toolkit</a>.</p>
+
+			<p>For all other sites, check <strong>Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</p>
+
+			<p>KB &nbsp;<a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4014334" managed-link="" tabindex="0" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a></p>
+			</td>
+			<td width="32%">
+			<p>Making sure the Surface and Windows are up to date may help avoid this problem in the future.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p class="MsoHeading7"><strong>No, replace the device</strong>: Set up an exchange for the customer based on the status of their warranty.</p>
+			</td>
+			<td width="35%">
+			<p>Use KB <a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2791320" managed-link="" tabindex="0" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a></p>
+			</td>
+			<td width="32%">
+			<p>If the customer does not remember the password, the only option we can provide is a service order.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+<div>
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<p class="alert-title">How to code an exchange order</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><span><span><span>When selecting the <strong>Problem Type</strong> choose:</span></span></span></p>
+
+<ul>
+	<li><span><span><span>Turns on but won&rsquo;t start up</span></span></span></li>
+</ul>
+
+<p><span><span><span>Accurate coding assists in the analysis of returned units and better insights.</span></span></span><span><span><span> </span></span></span></p>
+
+<div>
+<div>&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p><a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a></p>
+</div>
+
+<div>
+<h3><a id="11" name="11"></a>11. Stuck at Recovery Screen - Boot Configuration Data error</h3>
+
+<h4>Confirming the issue</h4>
+
+<p>When booting the device, the customer sees a screen titled <strong>Recovery</strong> with a blue background and information like this:</p>
+
+<ul>
+	<li>&ldquo;<em>Your PC/Device needs to be repaired&quot; or &quot;Your PC needs to be repaired</em>&quot;</li>
+	<li>&quot;<em>The Boot Configuration Data file doesn&#39;t contain valid information for an operating system</em>.&quot;, or &quot;<em>The Boot Configuration Data for your PC is missing or contains errors</em>.&rdquo;, or a similar message</li>
+	<li>File: \BCD or File: \Boot\BCD</li>
+</ul>
+
+<ul>
+	<li>An error code will be listed (there are many different numeric BCD error codes). For example, a common error code on Surface Go is 0xc0000098.<br>
+	<br>
+	<span asset="4497945" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4497945]</span></li>
+</ul>
+
+<h4>Confirmation</h4>
+
+<p><em>&ldquo;Just to make sure I understand your issue: &ldquo;When you are booting your Surface, you see a blue Recovery screen with an error about the Boot Configuration Data. Is that correct?&rdquo; </em></p>
+
+<h4>How to code</h4>
+
+<p>After confirming the issue, code the case:</p>
+
+<ul>
+	<li>Surface Device &gt; Startup - Pre-Windows &gt; Start-up Failure &gt; Stuck at Recovery Screen - Boot Configuration Data error</li>
+</ul>
+
+<h4>Resolution steps</h4>
+
+<p>Follow the steps in the order below until the issue is resolved or until all the steps have been completed. While following the steps, use the <strong>Why</strong> column to inform the customer why you are performing the step and, if successful, to better understand what the cause may have been. As you follow the steps, document the result of each one in your notes. Then proceed to the <strong>Is the issue resolved?</strong> section at the end of the table for next steps.</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="22%">
+			<p align="center"><strong>Step</strong></p>
+			</td>
+			<td width="53%">
+			<p align="center"><strong>How</strong></p>
+			</td>
+			<td width="23%">
+			<p align="center"><strong>Why</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</p>
+			</td>
+			<td width="53%">
+			<p>Notes template:</p>
+
+			<ul>
+				<li>Check known issues &gt;&gt;</li>
+				<li>Rebuild BCD &gt;&gt;</li>
+				<li>Recover from a drive &gt;&gt;</li>
+			</ul>
+			</td>
+			<td width="23%">
+			<p>This ensures a consistent format for capturing and reviewing case information. This helps prevent skipping steps.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p>2. Check known Issues</p>
+			</td>
+			<td width="53%">
+			<p>See KB&nbsp;<a href="https://internal.support.services.microsoft.com/help/4072657/" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select the customer&rsquo;s Surface model and check for the issue in the <strong>Startup Failures</strong> section.</p>
+			</td>
+			<td width="23%">
+			<p>There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</p>
+
+			<p>Check known issues regularly.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p>3. Rebuild the BCD</p>
+			</td>
+			<td width="53%">
+			<p>Turn off the Surface and attempt to boot again. Repeat this process and after two&nbsp;failed boot attempts, the device should automatically enter the Windows Recovery Environment (WinRE).</p>
+
+			<p>If the device does not enter WinRE after three&nbsp;failed attempts at booting, try using a USB recovery image to boot from and follow the steps below.</p>
+
+			<p>From the <strong>Choose an option</strong> menu, select <strong>Troubleshoot &gt; Advanced options &gt; Command Prompt</strong></p>
+
+			<p>If prompted, enter the BitLocker recovery key then enter the following commands at the prompt:</p>
+
+			<p>CMD&gt; <strong>bootrec /scanos</strong></p>
+
+			<p>CMD&gt; <strong>bootrec /rebuildbcd</strong></p>
+
+			<p>CMD&gt; <strong>bootrec /fixmbr</strong></p>
+
+			<p>CMD&gt; <strong>bootrec /fixboot</strong></p>
+			</td>
+			<td width="23%">
+			<p>It may be possible to rebuild the BCD instead of needing to do a factory recovery (BMR).</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p>4. Recover from a drive.</p>
+			</td>
+			<td width="53%">
+			<p><a href="https://support.microsoft.com/help/4023512" target="_blank">Recovery from a USB drive</a>:</p>
+
+			<p>Have the customer download a USB recovery drive image from <a href="https://support.microsoft.com/surfacerecoveryimage" target="_blank">here.</a></p>
+
+			<p>If the customer is unable to do this, setup a fulfillment order to ship the customer USB recovery media.</p>
+
+			<p class="MsoHeading7">Boot to the recovery drive, and on the <strong>Choose an option</strong> screen, select <strong>Troubleshoot &gt;Recover from a drive</strong></p>
+
+			<p>If prompted for the BitLocker recovery key, select <strong>Skip this Drive.</strong></p>
+			</td>
+			<td width="23%">
+			<p>This will reimage the device to a factory state.</p>
+
+			<p>All information on the drive will be erased.</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><strong>Is the issue resolved?</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p><strong>Yes, close the case</strong>: Once resolved, have the customer check for updates.</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="53%">
+			<p>For SDT enabled sites, let the customer know about the <a href="https://support.microsoft.com/help/4037239" target="_blank">Surface Diagnostic Toolkit</a>.</p>
+
+			<p>For all other sites, check <strong>Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</p>
+
+			<p>KB <a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4014334" managed-link="" tabindex="0" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a></p>
+			</td>
+			<td width="23%">
+			<p>Making sure the Surface and Windows are up to date may help avoid this problem in the future.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="22%">
+			<p><strong>No, replace the device</strong>: Set up an exchange for the customer based on the status of their warranty.</p>
+			</td>
+			<td width="53%">
+			<p>Use KB <a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2791320" managed-link="" tabindex="0" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a></p>
+			</td>
+			<td width="23%">
+			<p>There is likely a hardware problem with the Surface device.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<p class="alert-title">How to code an exchange order</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><span><span><span>When selecting the <strong>Problem Type</strong> choose:</span></span></span></p>
+
+<ul>
+	<li><span><span><span>Turns on but won&rsquo;t start up</span></span></span></li>
+</ul>
+
+<p><span><span><span>Accurate coding assists in the analysis of returned units and better insights.</span></span></span><span><span><span> </span></span></span></p>
+
+<div>
+<div>&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p><a bookmark-id="top" href="#top" managed-link="" target="">Return to top</a></p>
+
+<h3><strong><a id="12" name="12"></a></strong>12. Boots to Microsoft logo screen &ndash; SSD progress icon</h3>
+
+<h4>Confirming the issue</h4>
+
+<p>When pressing the power button, the customer sees the following:</p>
+
+<ul>
+	<li>The Surface turns on, and boots to the Microsoft logo screen. In the lower right, there is an SSD progress icon shown.</li>
+</ul>
+
+<p class="indent-1"><span asset="4539084" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4539084]</span></p>
+
+<h4>Confirmation</h4>
+
+<p><em>&ldquo;Just to make sure I understand your issue: When you press the power button, the Surface turns on and shows the Microsoft logo with a circular progress indicator in the lower right corner. Is that correct?&rdquo;</em></p>
+
+<h4>How to code</h4>
+
+<p>After confirming the issue, code the case.</p>
+
+<ul>
+	<li>Surface Device &gt; Startup - Pre-Windows &gt; Start-up Failure &gt; Boots to Microsoft logo screen &ndash; SSD progress icon</li>
+</ul>
+
+<h4>Resolution steps</h4>
+
+<p>Follow the steps in the order below until the issue is resolved or until all the steps have been completed. While following the steps, use the <strong>Why</strong> column to inform the customer why you are performing the step and, if successful, to better understand what the cause may have been. As you follow the steps, document the result of each one in your notes. Then proceed to the <strong>Is the issue resolved?</strong> section at the end of the table for next steps.</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="32%">
+			<p align="center"><strong>Step</strong></p>
+			</td>
+			<td width="35%">
+			<p align="center"><strong>How</strong></p>
+			</td>
+			<td width="33%">
+			<p align="center"><strong>Why</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>1. Copy and paste the template to the right to begin your note taking for this scenario. Document your findings for every step performed.</p>
+			</td>
+			<td width="35%">
+			<p>Notes template:</p>
+
+			<ul>
+				<li>Check known issues &gt;&gt;</li>
+				<li>Wait for five minutes &gt;&gt;</li>
+				<li>Force the device to shut down and restart &gt;&gt;</li>
+				<li>Reimage the device &gt;&gt;</li>
+			</ul>
+			</td>
+			<td width="33%">
+			<p>This ensures a consistent format for capturing and reviewing case information. This helps prevent skipping steps.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>2. Check known issues</p>
+			</td>
+			<td width="35%">
+			<p>See KB <a href="https://internal.support.services.microsoft.com/help/4072657/" target="_blank">4072657 Informational: Surface: Technical guides and known issues landing page</a>, select the customer&rsquo;s Surface model and check for the issue in the <strong>Startup Failures</strong> section.</p>
+			</td>
+			<td width="33%">
+			<p>There may be a current known issue that the customer is experiencing, with different troubleshooting steps.</p>
+
+			<p>Check known issues regularly.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>3. Wait for five minutes</p>
+			</td>
+			<td width="35%">
+			<p>If the Surface device previously experienced an unexpected shutdown, the SSD drive cache may have been corrupted.</p>
+
+			<p><span asset="4539085" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4539085]</span></p>
+
+			<p>Wait for at least five minutes for the cache to be rebuilt.</p>
+			</td>
+			<td width="33%">
+			<p>Rebuilding the SSD cache may take several minutes. During this time, the SSD progress icon is displayed so the device does not appear to be simply stuck at the logo screen.</p>
+
+			<p>After the SSD cache is rebuilt, the device will continue to boot.</p>
+
+			<p>If, after this icon is seen, the device boots, then this is normal. If this icon stays on the screen and/or after it is gone the device doesn&rsquo;t boot that probably indicates a hardware issue with the SSD.&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>4. Force the device to shut down and restart.</p>
+
+			<p>(varies by new vs. old generation)</p>
+			</td>
+			<td width="35%">
+			<p><span><strong><span><span>All current devices</span></span></strong><span><span>: Press and hold the power button for 20 seconds.</span></span></span></p>
+
+			<p><span><strong><span><span>Pro 1, Pro 2, Pro 3, Pro 4, Book 1, RT, Surface 2, and Surface 3:</span></span></strong><span><span> Press and hold the volume-up button and the power button at the same time for at least 15 seconds and then release both. The Surface may boot to UEFI. This is normal. Have the customer exit UEFI.</span></span></span></p>
+
+			<p>&nbsp;</p>
+
+			<p><span><span><span>Video available at </span></span></span><span><span><span><a href="https://support.microsoft.com/help/4036280" target="_blank"><span><span><span><span>Force a shut down and restart your Surface</span></span></span></span></a></span></span></span></p>
+			</td>
+			<td width="33%">
+			<p>The device may be in a &ldquo;hung&rdquo; state. Force Surface to completely turn off all power and restart.</p>
+
+			<p>Performing a Forced Shutdown is like removing the battery from a laptop or unplugging a desktop PC. It resets the hardware and clears all the cache and memory for your hardware.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p>5. Reimage the device</p>
+			</td>
+			<td width="35%">
+			<p><span><a href="https://support.microsoft.com/help/4023512" target="_blank"><span>USB recovery</span></a></span></p>
+
+			<p><span>The customer will need to download and set up a recovery image on a USB drive. Send the <a href="https://support.microsoft.com/surfacerecoveryimage" target="_blank"><span>USB recovery link</span></a> to the customer and help them get started. Information on what size and type of drive is provided at the destination page.</span></p>
+
+			<p><span><em>-OR-</em></span></p>
+
+			<p><span>Set up an order to have a USB recovery drive sent to the customer.</span></p>
+
+			<p><span>When using devices with only Type C ports, confirm with the customer that they have a USB C male to USB A female adapter, or a Surface Dock to use the USB recovery drive with.</span></p>
+
+			<p><span><strong>Recommended: <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/12415/windows-10-recovery-options" managed-link="" target="_blank">Recovery options in Windows 10</a>.</strong></span></p>
+
+			<p><span>For devices running Windows 20H1 (Version 2004) or newer.</span></p>
+
+			<p><span>In settings, advance to <strong>Update &amp; Security</strong> &gt; <strong>Recovery</strong> from the Recovery menu. Under <strong>Reset this PC,</strong> select <strong>Get Started</strong> in the pop-up window. Confirm with the customer and then proceed to <strong>Remove Everything</strong> or <strong>Keep my Files</strong>, then select <strong>Cloud Download</strong>, and continue with the recovery steps. Make sure the device is plugged into power and connected to a stable network.</span></p>
+
+			<p><span><a href="https://docs.microsoft.com/surface/microsoft-surface-data-eraser" target="_blank"><span>Surface Data Eraser (SDE)</span></a></span></p>
+
+			<p><span>For commercial customers that will be installing their own customer image, try using the Surface Data Eraser instead.</span></p>
+
+			<p><span>If SDE fails (No disk found, 0 disk size, and others) proceed to <strong>Replace the device</strong>.</span></p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="33%">
+			<p><strong>USB recovery (best):</strong></p>
+
+			<ul>
+				<li>This option reimages the entire device, including the partition on the hard drive.</li>
+				<li>It is the most complete form of reset.</li>
+				<li>Customers will need to reinstall desktop apps. Customers will need to run updates after completion.</li>
+			</ul>
+
+			<p>If the issue occurs after a reset, then the root cause is very likely hardware.</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" width="100%">
+			<p><strong>Is the issue resolved?</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p><strong>Yes, close the case</strong>: Once resolved, have the customer check for updates.</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="35%">
+			<p>For SDT enabled sites, let the customer know about the <a href="https://support.microsoft.com/help/4037239" target="_blank">Surface Diagnostic Toolkit</a>.</p>
+
+			<p>For all other sites, check <strong>Settings &gt; Update &amp; Security &gt; Windows Update</strong> for updates.</p>
+
+			<p>KB <a href="https://internal.support.services.microsoft.com/help/4014334" target="_blank">4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</a></p>
+			</td>
+			<td width="33%">
+			<p>Making sure Surface and Windows are up to date may help avoid this problem in the future.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="32%">
+			<p><strong>No, replace the device</strong>: Set up an exchange for the customer based on the status of their warranty.</p>
+			</td>
+			<td width="35%">
+			<p>Use KB <a href="https://internal.support.services.microsoft.com/help/2791320" target="_blank">2791320 Informational: Surface: Exchange and fulfillment landing page</a><u>.</u></p>
+			</td>
+			<td width="33%">
+			<p>There is likely a hardware problem with the Surface device.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="alert-band">
+<div class="alert alert-warning" role="alert">
+<p class="alert-title">How to code an exchange order</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><span><span><span>When selecting the <strong>Problem Type</strong> choose:</span></span></span></p>
+
+<p><span><span><span>Turns on but won&rsquo;t start up</span></span></span></p>
+
+<p><span><span><span>Accurate coding assists in the analysis of returned units and better insights.</span></span></span><span><span><span> </span></span></span></p>
+
+<div>
+<div>&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p><a bookmark-id="top" href="https://internal.support.services.microsoft.com/en-us/help/3136372#top" managed-link="" target="">Return to top</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="kb-securedata-section section">
+<p><strong><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span>December 2018</strong></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Change history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><strong><span><span><span>Item</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><strong><span><span><span>Title</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><strong><span><span><span>Date</span></span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/160044">CONTENT TRACKING 160044</a></td>
+			<td>Surface: Add Boot Error to Startup Failures TG</td>
+			<td>10/12/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/159442">CONTENT TRACKING 159442</a></td>
+			<td>Surface: Update coding for WPO in Startup Failures TG</td>
+			<td>9/23/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/158798">CONTENT TRACKING 158798</a></td>
+			<td>
+			<p>Surface: Update TG 3136372: Surface: Start-up failures - add resolution steps &amp; update best solution</p>
+			</td>
+			<td>9/10/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/155753">CONTENT TRACKING 155753</a></td>
+			<td>Surface: Update Startup Failures TG (update reset steps, fix coding, add ref table)</td>
+			<td>6/15/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/155546">CONTENT TRACKING 155546</a></td>
+			<td>Surface: update agent TG 3136372 for startup failures - won&#39;t power on</td>
+			<td>6/4/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/151805" managed-link="">CONTENT TRACKING 151805</a></td>
+			<td>Surface: Update step for Stuck at the Surface or Windows logo screen [TG: Surface: Start-up failures] KB 3136372</td>
+			<td>2/24/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/151620">CONTENT TRACKING 151620</a></td>
+			<td>Surface: Reorders steps in Startup failures section 5 [TG Surface Startup failures] KB 3136372</td>
+			<td>2/19/2020</td>
+		</tr>
+		<tr>
+			<td><a class="caption" href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/150838">Content Tracking 150838</a></td>
+			<td>Simple Language Project: KB ID 3136372 Technical Guide: Surface: Start-up failures</td>
+			<td>2/7/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/151116">CONTENT TRACKING 151116</a></td>
+			<td>Surface: Remove extra content [TG: Surface: Start-up failures] KB 3136372</td>
+			<td>2/4/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/150888">CONTENT TRACKING 150888</a></td>
+			<td>Surface: Add NVMe spinner steps [TG: Surface: Start-up failures] KB 3136372</td>
+			<td>1/22/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_queries?tempQueryId=29e7bdc3-b378-4281-a577-bc23266d15ee" managed-link="">CONTENT TRACKING 150769</a></td>
+			<td>Surface: Add code for Stuck at Microsoft logo [TG: Surface: Start-up failures] KB 3136372</td>
+			<td>1/20/2020</td>
+		</tr>
+		<tr>
+			<td><br>
+			<a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_queries/edit/147754/?triage=true" managed-link="">CONTENT TRACKING 147754</a></td>
+			<td>Surface: Consumer Content Request - Internal - Update Start-up failures TG for agents 3136372</td>
+			<td>10/1/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/146406">CONTENT TRACKING 146406</a></td>
+			<td>{Surface}: {update agent content 3136372 Technical Guide: Surface: Start-up failures}</td>
+			<td>8/13/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/144710">CONTENT TRACKING 144710</a></td>
+			<td>Surface Consumer Content Request - new step for Surface: Start-up failures TG</td>
+			<td>6/11/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/144292">CONTENT TRACKING 144292</a></td>
+			<td>Surface Consumer Content Request - update Stuck at Recovery Screen - Boot Configuration Data error - child CT</td>
+			<td>5/29/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/144053">CONTENT TRACKING 144053</a></td>
+			<td>Surface Consumer Content Request - update Stuck at Recovery Screen - Boot Configuration Data error</td>
+			<td>5/28/2019</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/141763">Content Tracking&nbsp;141763</a></p>
+			</td>
+			<td>Surface Consumer Content Request - add Boot Configuration Data error to startup failure TG 3136372</td>
+			<td>4/1/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/141167" role="heading">Content Tracking 141167</a></td>
+			<td>Surface Consumer Content Request - Agent startup failures TG 3136372 change recovery steps to existing good, better, best approach</td>
+			<td width="58">3/11/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/140039" role="heading">Content Tracking 140039</a></td>
+			<td>Project: Surface Consumer Content Request - bulk edit to tech guide instructions - &quot;Resolution steps&quot;</td>
+			<td width="58">2/14/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/138657" role="heading">Content Tracking 138657</a></td>
+			<td>SUE774: Surface: Advocate instructions on KB 3136372</td>
+			<td width="58">12/27/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/138486" role="heading">Content Tracking 138486</a></td>
+			<td>Surface: SPM Only Consumer CPC Content Request - update scenario heading and Why info</td>
+			<td width="58">12/20/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/135430" role="heading">135430</a></td>
+			<td>update prods in step &quot;Press and hold the power button for 20 seconds.&quot;</td>
+			<td width="58">10/24/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" class="caption" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/131671" role="heading">Content Tracking 131671</a></td>
+			<td><span class="info-text">Surface: Consumer CPC Content Tracking Request - Move Startup Failures TG 4248114 to 3136372</span></td>
+			<td width="58">7/13/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" class="caption" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/123250" role="heading">Content Tracking 123250</a></td>
+			<td><span class="info-text">Surface: Re-write VKB 3136372 - Surface Startup Failures</span></td>
+			<td width="58">1/21/2018</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><span><span><span><a href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems?id=123797&amp;fullScreen=false&amp;_a=edit" target="_self"><span>Content Tracking 123797</span></a></span></span></span></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Add Speak Up Express asset box for the articles in portals 423 and 421 </span></span></span></span></p>
+			</td>
+			<td width="58">
+			<p><span><span><span><span>1/15/2018</span></span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>
+</div>

@@ -1,0 +1,978 @@
+﻿<header><h1>Workflow: Net: SMB: Basic troubleshooting with common support scenarios</h1></header><p><span asset="4570728" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4570728]</span></p>
+<div><p style="margin-right:0cm;margin-left:0cm;text-align:center;font-size:28pt;font-family:&quot;Calibri Light&quot;, sans-serif;letter-spacing:-0.5pt;"><span lang="EN-US">SMB WORKFLOW</span></p>
+ <p style="margin:12pt 0cm 0.0001pt;font-size:16pt;font-family:&quot;Calibri Light&quot;, sans-serif;color:rgb(47, 84, 150);"><span style="font-weight:bold;"><span lang="EN-US" style="font-size:18.0pt;">Contents</span></span><span lang="EN-US" style="font-size:11.0pt;color:windowtext;"></span></p>
+ <p style="margin:0cm 0cm 5pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774915"><span>Microsoft
+ SMB Protocol Overview</span><span style="color:windowtext;display:none;"><span>.. </span></span><span style="color:windowtext;display:none;">3</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 11pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774916"><span>SMB Components</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">3</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774917"><span>SMB Client</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">3</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774918"><span>SMB Server</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">4</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774919"><span>Microsoft SMB Protocol
+ Dialects</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">6</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 11pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774920"><span>How to enable or disable
+ SMB Versions.</span><span style="color:windowtext;display:none;"><span> </span></span><span style="color:windowtext;display:none;">7</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 11pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774921"><span>Controlling SMB dialects</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">7</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 11pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774922"><span>Difference SMB Negotiate
+ in Windows 10 - 1703 vs. 1709</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">8</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774923"><span>Microsoft SMB Protocol
+ Connection</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">9</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 11pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774924"><span>Other SMB Features</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">9</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774925"><span>Access-Based Enumeration
+ (ABE)</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">9</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774926"><span>Scale-Out File Server
+ (SOFS)</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">10</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774927"><span>Continuous availability
+ (CA)</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">10</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774928"><span>Things you need to know
+ before starting</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">11</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774929"><span>Troubleshooting Server
+ Message Block (SMB) issues</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">12</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774930"><span>Find the source</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">12</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774931"><span>Collect data</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">12</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774932"><span>Analyze the traffic</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">12</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774933"><span>Protocol Analysis</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">13</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774934"><span>Update Binaries</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">14</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 11pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774935"><span>Data Collection:</span><span style="color:windowtext;display:none;"><span> </span></span><span style="color:windowtext;display:none;">15</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774936"><span>Automatic data collection:</span><span style="color:windowtext;display:none;"><span> </span></span><span style="color:windowtext;display:none;">15</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774937"><span>Manual data collection:</span><span style="color:windowtext;display:none;"><span> </span></span><span style="color:windowtext;display:none;">16</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774938"><span>Update TSS Tools to its
+ latest version</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">18</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774939"><span>Convert .etl file to .cap
+ file</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">18</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774940"><span>Collect Support
+ Diagnostics Package:</span><span style="color:windowtext;display:none;"><span> </span></span><span style="color:windowtext;display:none;">19</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774941"><span>Collect network trace on
+ Linux hosts</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">20</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774942"><span>Looking for Known
+ Solutions</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">21</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 11pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774943"><span>Common solutions for this
+ topic</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">21</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774944"><span>TCP 3-way handshake fails</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">21</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774945"><span>Negotiate Fails</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">21</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774946"><span>Session Setup fails</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">22</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774947"><span>Tree Connect fails</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">22</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774948"><span>Abort During Validate
+ Negotiate</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">23</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774949"><span>Large File Copies are Slow</span><span style="color:windowtext;display:none;"><span>.. </span></span><span style="color:windowtext;display:none;">23</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774950"><span>Small File Copies are Slow</span><span style="color:windowtext;display:none;"><span>.. </span></span><span style="color:windowtext;display:none;">24</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774951"><span>Opening Office Docs are
+ Slow</span><span style="color:windowtext;display:none;"><span>.. </span></span><span style="color:windowtext;display:none;">24</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774952"><span>Issues related to
+ enumerating Folders</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">25</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774953"><span>High CPU System Caused by
+ SRV2</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">26</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774954"><span>Event ID 50 logged</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">27</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774955"><span>Multichannel
+ troubleshooting</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">28</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774956"><span>The virtual network
+ adapter on the host does not perform well</span><span style="color:windowtext;display:none;"><span> </span></span><span style="color:windowtext;display:none;">29</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774957"><span>SMB prefers to use the
+ slower physical network adapter over the virtual network adapter</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">30</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774958"><span>When using multiple
+ network adapters on the same subnet in a cluster, only one network adapter is
+ used</span><span style="color:windowtext;display:none;"><span>&nbsp;&nbsp; </span></span><span style="color:windowtext;display:none;">30</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774959"><span>What is the required
+ amount of network traffic before SMB Multichannel starts?</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">30</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774960"><span>SMB Multichannel does not
+ aggregate multiple 10GbE network adapters</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">31</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 5pt 22pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="#_Toc26774961"><span>When accessing a Scale-Out
+ File Server, performance is limited</span><span style="color:windowtext;display:none;"><span>. </span></span><span style="color:windowtext;display:none;">31</span></a></span><span lang="EN-US"></span></p>
+ <p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">&nbsp;</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">&nbsp;</span></p><h1 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:18pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><a></a><a><span><span lang="EN-US">Microsoft SMB Protocol Overview</span></span></a><span lang="EN-US"></span></h1><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">The Server Message Block (SMB) Protocol is
+a network file sharing protocol, and as implemented in Microsoft Windows is
+known as Microsoft SMB Protocol. The set of message packets that defines a
+particular version of the protocol is called a dialect. Thus, we have:</span></p><ul style="margin-bottom:0cm;"><li><span lang="EN-US">SMBv1 including <a href="https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cifs/d416ff7c-c536-406e-a951-4f04b2fd1d2b?redirectedfrom=MSDN">CIFS</a></span></li><li><span lang="EN-US"><a href="https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962">SMBv2</a></span></li><li><span lang="EN-US"><a href="https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962">SMBv3</a></span></li></ul><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">SMB is also available on VMS, several
+versions of Unix, and other operating systems. There are third party of SMB
+implementations, one of them is <a href="https://www.samba.org/">Samba</a>.</span></p><h2 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:16pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><a></a><a><span><span lang="EN-US" style="font-family:&quot;Calibri&quot;,sans-serif;">SMB Components</span></span></a><span lang="EN-US"></span></h2><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><span>&nbsp;</span>There are two basic SMB
+components installed on all Windows operating Systems.</span><span lang="EN-US"></span></p><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><span>&nbsp;</span><a></a><a><span>SMB
+Client</span></a></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">The SMB client handles connections that are initiated to a remote file
+system. Any system, regardless of the operating system, is said to be the SMB
+client if it is accessing a remote file system.</span><span lang="EN-US"></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><span>&nbsp;</span>The technical name for the SMB
+client service is LanManWorkstation. This is how it appears in the registry and
+in lower levels of Windows. The name is simplified in the Services console and
+is named the Workstation service.</span><span lang="EN-US"></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><span>&nbsp;<span asset="4535148" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4535148]</span></span></span><span lang="EN-US"></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"></span><span lang="EN-US"></span></p><h4 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:11pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><span lang="EN-US" style="color:red;"><span>&nbsp;</span></span><span lang="EN-US"><br>
+Client for Microsoft Networks</span></h4><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US" style="color:#161616;">Purpose:
+Allows Windows to connect to SMB Shares on an SMB Server; Windows or 3<sup>rd</sup>
+party. This option must be checked in the network adapter properties for the
+SMB client process to work on a given network connection.</span><span lang="EN-US"><br><span></span></span><span lang="EN-US" style="color:red;"><span>&nbsp;<span asset="4535149" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4535149]</span></span></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">&nbsp;</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">If this service is stopped or “Client for Microsoft Networks” is
+uninstalled, or not bound to the network adapter, the SMB Client has no means
+to connect to an SMB Share.</span></p><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a></a><a><span><span lang="EN-US">SMB Server</span></span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">SMB server handles incoming requests for a local file system. In other
+words, the system hosting the file system is said to be the SMB server,
+regardless of the operating system being used. </span><span lang="EN-US"></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">The low-level term for this service is called the LanManServer. The
+simplified name is the Server service.</span><span lang="EN-US"></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><span>&nbsp;</span></span><span lang="EN-US"></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><span asset="4535150" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4535150]</span></span><span lang="EN-US"></span></p><h4 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:11pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><span lang="EN-US" style="color:red;"><span>&nbsp;</span></span><span lang="EN-US">File and Printer Sharing for Microsoft Networks</span></h4><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Purpose: Allows Windows to be a SMB Server to SMB clients.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">If the Server service is stopped, cannot start, or “File and Printer
+Sharing for Microsoft Networks” is uninstalled or not bound to the network
+connection, the machine will not allow SMB connections from SMB Clients.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Although its main purpose is file sharing,
+additional Microsoft SMB Protocol functionality includes the following:</span></p><ul style="margin-bottom:0cm;"><li><span lang="EN-US"><a href="https://docs.microsoft.com/en-us/windows/win32/fileio/microsoft-smb-protocol-dialects">Dialect
+negotiation</a></span></li><li><span lang="EN-US">Determining other Microsoft SMB
+Protocol servers on the network, or network browsing</span></li><li><span lang="EN-US">Printing over a network</span></li><li><span lang="EN-US"><a href="https://docs.microsoft.com/en-us/windows/win32/fileio/microsoft-smb-protocol-authentication">File,
+directory, and share access authentication</a></span></li><li><span lang="EN-US">File and record locking</span></li><li><span lang="EN-US">File and directory change
+notification</span></li><li><span lang="EN-US">Extended file attribute
+handling</span></li><li><span lang="EN-US">Unicode support</span></li><li><span lang="EN-US"><a href="https://docs.microsoft.com/en-us/windows/win32/fileio/opportunistic-locks">Opportunistic
+Locks</a></span></li></ul><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">In the OSI networking model, Microsoft SMB
+Protocol is most often used as an Application layer or a Presentation layer
+protocol, and it relies on lower-level protocols for transport. The transport
+layer protocol that Microsoft SMB Protocol is most often used with is NetBIOS
+over TCP/IP (<a href="https://msdn.microsoft.com/library/Bb870909%28v=VS.85%29.aspx">NBT</a>).
+However, Microsoft SMB Protocol can also be used without a separate transport
+protocol the Microsoft SMB Protocol/NBT combination is generally used for
+backward compatibility.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">The Microsoft SMB Protocol is a
+client-server implementation and consists of a set of data packets, each
+containing a request sent by the client or a response sent by the server. These
+packets can be broadly classified as follows:</span></p><ul style="margin-bottom:0cm;"><li><span lang="EN-US">Session control packets
+Establishes and discontinues a connection to shared server resources.</span></li><li><span lang="EN-US">File access packets Accesses
+and manipulates files and directories on the remote server.</span></li><li><span lang="EN-US">General message packets Sends
+data to print queues, mailslots, and named pipes, and provides data about the
+status of print queues.</span></li></ul><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Some message packets may be grouped and
+sent in one transmission to reduce response latency and increase network
+bandwidth. This is called &quot;batching.&quot; </span></p><h1 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:18pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><a></a><a><span><span lang="EN-US">Microsoft SMB Protocol Dialects</span></span></a><span lang="EN-US"></span></h1><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">The list of Microsoft SMB Protocol message
+packets has grown over the years to accommodate the increasing functionality of
+Microsoft SMB Protocol, and now numbers in the hundreds. Each stage of its
+growth is marked by a standard packet set, or dialect. Each dialect is
+identified by a standard string such as &quot;PC NETWORK PROGRAM 1.0&quot;,
+&quot;MICROSOFT NETWORKS 3.0&quot;, &quot;DOS LANMAN 2.1&quot;, or &quot;NT LM
+0.12&quot;. The first string identifies the first dialect of SMB, and the last
+string identifies CIFS, the first dialect of Microsoft SMB Protocol.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Most Windows clients support at least six
+different dialects of Microsoft SMB Protocol, so one of the first steps in
+establishing a connection between a client and a server using Microsoft SMB
+Protocol is to determine the dialect with the highest level of functionality
+that both the client and server support. This process is known as
+&quot;negotiating the dialect.&quot; The dialect strings mentioned above are
+included in the dialect negotiation request and response packets for this
+purpose.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">&nbsp;</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">&nbsp;</span></p><table width="100%" style="width:100.0%;border-collapse:collapse;border:none;">
+ <tbody><tr>
+  <td width="16%" style="width:16.08%;border:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">OS</span></p>
+  </td>
+  <td width="15%" style="width:15.58%;border:double windowtext 1.0pt;border-left:none;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">Windows
+  10 WS *2016 TP2</span></p>
+  </td>
+  <td width="15%" style="width:15.44%;border:double windowtext 1.0pt;border-left:none;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">Windows
+  8.1 WS* 2012 R2</span></p>
+  </td>
+  <td width="12%" style="width:12.54%;border:double windowtext 1.0pt;border-left:none;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">Windows
+  8 WS* 2012</span></p>
+  </td>
+  <td width="14%" style="width:14.48%;border:double windowtext 1.0pt;border-left:none;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">Windows
+  7 WS* 2008 R2</span></p>
+  </td>
+  <td width="15%" style="width:15.8%;border:double windowtext 1.0pt;border-left:none;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">Windows
+  Vista WS* 2008</span></p>
+  </td>
+  <td width="10%" style="width:10.08%;border:double windowtext 1.0pt;border-left:none;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">Previous
+  versions</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width="16%" style="width:16.08%;border:double windowtext 1.0pt;border-top:none;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;"><span lang="EN-US">Windows 10</span></p>
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;"><span lang="EN-US">WS *2016 TP2</span></p>
+  </td>
+  <td width="15%" style="width:15.58%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><b><span lang="EN-US">SMB
+  3.1.1</span></b></p>
+  </td>
+  <td width="15%" style="width:15.44%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><b><span lang="EN-US">SMB
+  3.0.2</span></b></p>
+  </td>
+  <td width="12%" style="width:12.54%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><b><span lang="EN-US">SMB
+  3.0</span></b></p>
+  </td>
+  <td width="14%" style="width:14.48%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  2.1</span></p>
+  </td>
+  <td width="15%" style="width:15.8%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  2.0.2</span></p>
+  </td>
+  <td width="10%" style="width:10.08%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  1.x</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width="16%" style="width:16.08%;border:double windowtext 1.0pt;border-top:none;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;"><span lang="EN-US">Windows 8.1</span></p>
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;"><span lang="EN-US">WS* 2012 R2</span></p>
+  </td>
+  <td width="15%" style="width:15.58%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><b><span lang="EN-US">SMB
+  3.0.2</span></b></p>
+  </td>
+  <td width="15%" style="width:15.44%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><b><span lang="EN-US">SMB
+  3.0.2</span></b></p>
+  </td>
+  <td width="12%" style="width:12.54%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><b><span lang="EN-US">SMB
+  3.0</span></b></p>
+  </td>
+  <td width="14%" style="width:14.48%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  2.1</span></p>
+  </td>
+  <td width="15%" style="width:15.8%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  2.0.2</span></p>
+  </td>
+  <td width="10%" style="width:10.08%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  1.x</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width="16%" style="width:16.08%;border:double windowtext 1.0pt;border-top:none;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;"><span lang="EN-US">Windows 8</span></p>
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;"><span lang="EN-US">WS* 2012</span></p>
+  </td>
+  <td width="15%" style="width:15.58%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><b><span lang="EN-US">SMB
+  3.0</span></b></p>
+  </td>
+  <td width="15%" style="width:15.44%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><b><span lang="EN-US">SMB
+  3.0</span></b></p>
+  </td>
+  <td width="12%" style="width:12.54%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><b><span lang="EN-US">SMB
+  3.0</span></b></p>
+  </td>
+  <td width="14%" style="width:14.48%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  2.1</span></p>
+  </td>
+  <td width="15%" style="width:15.8%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  2.0.2</span></p>
+  </td>
+  <td width="10%" style="width:10.08%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  1.x</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width="16%" style="width:16.08%;border:double windowtext 1.0pt;border-top:none;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;"><span lang="EN-US">Windows 7</span></p>
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;"><span lang="EN-US">WS* 2008 R2</span></p>
+  </td>
+  <td width="15%" style="width:15.58%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  2.1</span></p>
+  </td>
+  <td width="15%" style="width:15.44%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  2.1</span></p>
+  </td>
+  <td width="12%" style="width:12.54%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  2.1</span></p>
+  </td>
+  <td width="14%" style="width:14.48%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  2.1</span></p>
+  </td>
+  <td width="15%" style="width:15.8%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  2.0.2</span></p>
+  </td>
+  <td width="10%" style="width:10.08%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  1.x</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width="16%" style="width:16.08%;border:double windowtext 1.0pt;border-top:none;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;"><span lang="EN-US">Windows Vista</span></p>
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;"><span lang="EN-US">WS* 2008</span></p>
+  </td>
+  <td width="15%" style="width:15.58%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  2.0.2</span></p>
+  </td>
+  <td width="15%" style="width:15.44%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  2.0.2</span></p>
+  </td>
+  <td width="12%" style="width:12.54%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  2.0.2</span></p>
+  </td>
+  <td width="14%" style="width:14.48%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  2.0.2</span></p>
+  </td>
+  <td width="15%" style="width:15.8%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  2.0.2</span></p>
+  </td>
+  <td width="10%" style="width:10.08%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  1.x</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width="16%" style="width:16.08%;border:double windowtext 1.0pt;border-top:none;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;"><span lang="EN-US">Previous versions</span></p>
+  </td>
+  <td width="15%" style="width:15.58%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  1.x</span></p>
+  </td>
+  <td width="15%" style="width:15.44%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  1.x</span></p>
+  </td>
+  <td width="12%" style="width:12.54%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  1.x</span></p>
+  </td>
+  <td width="14%" style="width:14.48%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  1.x</span></p>
+  </td>
+  <td width="15%" style="width:15.8%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  1.x</span></p>
+  </td>
+  <td width="10%" style="width:10.08%;border-top:none;border-left:none;border-bottom:double windowtext 1.0pt;border-right:double windowtext 1.0pt;padding:0cm .7pt 0cm .7pt;">
+  <p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:18.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:0cm;text-align:center;"><span lang="EN-US">SMB
+  1.x</span></p>
+  </td>
+ </tr></tbody></table><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">&nbsp;</span></p><h2 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:16pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><a></a><a><span><span lang="EN-US">How to enable or disable SMB Versions.</span></span></a><span lang="EN-US"></span></h2><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US" style="color:red;">You should disable SMB1!</span></b></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">The original SMB1 protocol is over <a href="https://en.wikipedia.org/wiki/Server_Message_Block#History">30 years old</a>,
+and like much of the software made in the 80’s, it was designed for a world
+that no longer exists. A world without malicious actors, without vast sets of
+important data, without near-universal computer usage. Frankly, its naivete is
+staggering when viewed though modern eyes.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">In September of 2016, <a href="https://support.microsoft.com/en-us/kb/3177186">MS16-114</a>, a security
+update that prevents denial of service and remote code execution. If you need
+this security patch, you already have a much bigger problem: you are still
+running SMB1.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Stop-using-SMB1/ba-p/425858">https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Stop-using-SMB1/ba-p/425858</a></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="https://secureinfra.blog/2018/12/17/step-by-step-safely-disabling-smb-v1-from-your-production-environment/">https://secureinfra.blog/2018/12/17/step-by-step-safely-disabling-smb-v1-from-your-production-environment/</a></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">If you disable SMB1 on devices that only can speak SMB1 your access to
+that device will fail. If you will encounter such a situation, <b>please
+upgrade your system</b>!</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">You cannot disable SMB2 -<b>or</b>- SMB3 in your system. Those 2 versions are part of the same driver. </span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">While you can technically disable SMB2/3, you should never tell a customer to do so, nor leave them in a state where SMB2/3 is disabled. This is no longer a valid troubleshooting step! You can tell a customer to either disable SMB1 and keep SMB2 and SMB3 enabled (recommended), or enable
+SMB1 and keep SMB2 and SMB3 enabled. </span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Please take a look to the following article for details: </span><span lang="EN-US"><a href="https://support.microsoft.com/en-us/help/2696547/detect-enable-disable-smbv1-smbv2-smbv3-in-windows-and-windows-server">How
+to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows and Windows
+Server</a>.</span><br></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">SMBv1 is not installed by default in Windows 10 Fall Creators Update
+and Windows Server, version 1709 and later versions</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">In Windows 10 Fall Creators Update and Windows Server, version 1709
+(RS3) and later versions, the Server Message Block version 1 (SMBv1) network
+protocol is no longer installed by default. It was superseded by SMBv2 and
+later protocols starting in 2007. Microsoft publicly deprecated the SMBv1
+protocol in 2014.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="https://support.microsoft.com/en-us/help/4034314/smbv1-is-not-installed-by-default-in-windows"><span>https://support.microsoft.com/en-us/help/4034314/smbv1-is-not-installed-by-default-in-windows</span></a></span><span lang="EN-US"> </span></p><h2 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:16pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><a></a><a><span><span lang="EN-US">Controlling SMB dialects</span></span></a><span lang="EN-US"></span></h2><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">SMB Dialects are simply significant versions - just like dialects
+within human languages - that allow a client and server to agree on conversation
+behaviors. For example, the SMB 3.1.1 dialect came with Windows 10 and Windows
+Server 2016. These dialects allow assignment of various capabilities like
+encryption, signing algorithms, multichannel connections, etc. When the SMB
+client initially connects to a destination server, it negotiates the matched
+and required set of capabilities.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Controlling-SMB-Dialects/ba-p/860024"><span>https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Controlling-SMB-Dialects/ba-p/860024</span></a></span><span lang="EN-US"> </span></p><h2 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:16pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><a></a><a><span><span lang="EN-US">Difference SMB Negotiate in Windows 10 - 1703
+vs. 1709</span></span></a><span lang="EN-US"></span></h2><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">This is an intentional change. &nbsp;&nbsp;</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">We now always attempt a multiprotocol
+negotiate with an SMB1 dialect even if SMB1 is disabled on the client. This is so
+that we can quickly detect SMB1 servers and bubble up an appropriate error
+message to the user.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">If we tried SMB2 negotiate directly like in
+1703, a server who only speaks SMB1 will simply ignore the request and either
+not respond or drop the connection – which makes it difficult for the client to
+figure out why.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">&nbsp;</span></p><h1 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:18pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><a></a><a><span><span lang="EN-US">Microsoft SMB Protocol Connection</span></span></a><span lang="EN-US"></span></h1><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">The security model used in Microsoft SMB
+Protocol is identical to the one used by other variants of SMB and consists of
+two levels of security – user and share. A share is a file, directory, or
+printer that can be accessed by Microsoft SMB Protocol clients.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">User-level authentication indicates that
+the client attempting to access a share on a server must provide a username and
+password. When authenticated, the user can then access all shares on a server
+not also protected by share-level security. This security level allows system
+administrators to specifically determine which users and groups can access a
+share.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Share-level authentication indicates that
+access to a share is controlled by a password assigned to that share only.
+Unlike user-level security, this security level does not require a username for
+authentication and no user identity is established.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Under both security levels, the password is
+encrypted before it is sent to the server. NTLM and the older LAN Manager (LM)
+encryption are supported by Microsoft SMB Protocol. Both encryption methods use
+challenge-response authentication, where the server sends the client a random
+string and the client returns a computed response string that proves the client
+has sufficient credentials for access.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">In fact, an SMB connection has 3 major
+parts: </span></p><ol style="margin-bottom:0cm;"><li><b><span lang="EN-US">Authentication</span></b><span lang="EN-US"> represents the authentication against the other systems</span></li><li><b><span lang="EN-US">Session setup</span></b><span lang="EN-US">: using NTLM or Kerberos</span></li><li><b><span lang="EN-US">Tree connect</span></b><span lang="EN-US">: share properties, ABE, continuous availability, caching</span></li></ol><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">There are such features that can be enabled
+on the share, that can be </span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">The SMB connection will follow those steps.
+Also is a good idea to check those steps in troubleshooting:</span></p><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>1.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><b><span lang="EN-US">TCP connection</span></b><span lang="EN-US">. On this step, both hosts will establish a TCP connection, aka TCP
+handshake.</span></p><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Check if the TCP handshake
+was performed!</span></p><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>2.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><b><span lang="EN-US">Protocol negotiation</span></b><span lang="EN-US">. Here both hosts will check and negotiate the protocol to be use. </span><br><br><span lang="EN-US">Check if the negotiated
+protocol on both ends!</span></p><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>3.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><b><span lang="EN-US">Authentication</span></b><span lang="EN-US"> – On this step, the client will try to authenticate against the
+server.</span><br><br><span lang="EN-US">Check the authentication
+method used to see if and where fails!</span></p><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>4.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><b><span lang="EN-US">Tree connect</span></b><span lang="EN-US">. Get the actual connection to the tree on the share.</span></p><p style="margin:0cm 0cm 8pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">See what shares are
+requested by the client and what responses come from the server.</span></p><h2 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:16pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><a></a><a><span><span lang="EN-US">Other SMB Features</span></span></a><span lang="EN-US"></span></h2><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a></a><a><span><span lang="EN-US">Access-Based Enumeration (ABE)</span></span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Access-based enumeration displays only the
+files and folders that a user has permissions to access. If a user does not
+have Read (or equivalent) permissions for a folder, Windows hides the folder
+from the user’s view. This feature is active only when viewing files and
+folders in a shared folder; it is not active when viewing files and folders in
+the local file system.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US" style="color:red;">Do not enable ABE unless
+you really need to.</span></p><ul style="margin-bottom:0cm;"><li><span lang="EN-US"><a href="https://blogs.technet.microsoft.com/askds/2016/09/01/access-based-enumeration-abe-concepts-part-1-of-2/">Access-Based
+Enumeration (ABE) Concepts (part 1 of 2)</a></span></li><li><span lang="EN-US"><a href="https://blogs.technet.microsoft.com/askds/2016/09/21/access-based-enumeration-abe-troubleshooting-part-2-of-2/">Access-Based
+Enumeration (ABE) Troubleshooting (part 2 of 2)</a></span></li></ul><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a></a><a><span><span lang="EN-US">Scale-Out File Server (SOFS)</span></span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">We released Scale-Out File Server (SOFS) in
+Windows Server 2012. SOFS adds highly available, active-active, file data access
+for application data workloads to Windows Server clusters through SMB,
+Continuous Availability (CA), and Cluster Shared Volumes (CSV). CA file shares
+ensure - amongst other things - that when you connect through SMB 3, the server
+synchronously writes through to the disk for data integrity in the event of a
+node failure. In other words, it makes sure that your files are consistent and
+safe even if the power goes out.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/To-scale-out-or-not-to-scale-out-that-is-the-question/ba-p/425080">https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/To-scale-out-or-not-to-scale-out-that-is-the-question/ba-p/425080</a></span></p><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a></a><a><span><span lang="EN-US">Continuous availability (CA)</span></span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Was designed for the Scale-out File Server
+workload, and it provides both disk write-through guarantees and “ transparent
+failover ”, where a client re-attaches to file handles after a cluster
+failover, thanks to a resume key filter running on the server. This means that
+applications like Hyper-V and SQL Server continue to dish out their virtual
+machines and databases when a storage cluster node reboots. You can enable CA
+on non- SOFS shares in a cluster, and you can use end-user applications like
+Word with them, but for a variety of reasons, it’s not something we recommend .
+On a standalone file server, you cannot configure it at all. Windows Server
+2012 set the precedent of enabling CA by default on all clustered shares;
+something I now regret but cannot change.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Offline-Files-and-Continuous-Availability-the-monstrous-union/ba-p/425647">https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Offline-Files-and-Continuous-Availability-the-monstrous-union/ba-p/425647</a></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">CA is incompatible with DFSN and don’t use
+office docs on CA file share because it will hurt. </span></p><h1 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:18pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><a><span lang="EN-US">Things you need to know before
+starting</span></a><span lang="EN-US"></span></h1><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">You must create a blueprint of your
+environment to contains also the issue. This will help you to troubleshoot, to have
+a clue on what to search for on collected data and will save you time, in case
+you are not able to find a solution by your own and you will ask us for help.</span></p><ol style="margin-bottom:0cm;"><li><span lang="EN-US">The complete problem
+description</span></li><li><span lang="EN-US">Is the problem reproducible?</span></li><li><span lang="EN-US">What are the steps in order, to
+reproduce the issue? </span></li><li><span lang="EN-US">The exact text of the Error
+message and the Error Code which is triggered during the repro </span></li><li><span lang="EN-US">How does the problem begin to
+appear \ how does it show? </span></li><li><span lang="EN-US">When was the problem first
+observed? </span></li><li><span lang="EN-US">How long is the problem
+persisting? How often does it occur? When does it occur?</span></li><li><span lang="EN-US">What were the steps that you
+performed when the problem occurred? </span></li><li><span lang="EN-US">Did this configuration /
+setting ever worked? Is yes, when and for how long did it work? </span></li><li><span lang="EN-US">What Documentation did you
+follow / use to implement the current configuration? Can you please provide us
+theses? </span></li><li><span lang="EN-US">Was there any Hardware or
+Software change undertaken?</span></li><li><span lang="EN-US">What is the UNC path being
+used? Examples:</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US"><a href="file://server/share">\\server\share</a></span></li><li><span lang="EN-US"><a href="file://contoso/Memes">\\contoso\Memes</a></span></li><li><span lang="EN-US"><a href="file://IPaddress/sharename">\\IPaddress\sharename</a></span></li><li><span lang="EN-US"><a href="file://DomainName/sharename">\\DomainName\sharename</a></span></li><li><span lang="EN-US"><a href="file://ServerFQDN/sharename">\\ServerFQDN\sharename</a></span></li></ol><li><span lang="EN-US">Are the file servers
+Windows-based or third-party (NetApp, EMC, Samba, etc.)?</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">OS or software version?</span></li><li><span lang="EN-US">If third-party, what is the
+highest version of SMB supported (1, 2, or 3)?</span></li></ol><li><span lang="EN-US">What version Windows client is
+being used? Is a non-Windows client being used?</span></li><li><span lang="EN-US">How many users are impacted?</span></li><li><span lang="EN-US">When did this issue start
+happening?</span></li><li><span lang="EN-US">Are the file servers local to
+the clients, or across a WAN connection? If across a WAN is a WAN accelerator
+being used?</span></li><li><span lang="EN-US">Do end users experience slow
+connections or no connectivity?</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">slow connections:</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">Are all users experiencing slow
+connections?</span></li><li><span lang="EN-US">If no, is there a specific
+subnet, site, group, version of Windows, or file server target that is slow?</span></li><li><span lang="EN-US">What is the expected
+performance?</span></li><li><span lang="EN-US">What is the unexpected, or
+slow, performance?</span></li><li><span lang="EN-US">Does this affect all
+applications or just some (Office, PDF files, text files, etc)</span></li></ol><li><span lang="EN-US">no connectivity:</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">Is the affected computer on the
+corporate network or over a VPN connection?</span></li></ol></ol></ol><h1 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:18pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><a></a><a><span><span lang="EN-US">Troubleshooting Server Message Block (SMB)
+issues</span></span></a><span lang="EN-US"></span></h1><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Server Message Block, more commonly known
+as SMB, is one of the more complex networking technologies to troubleshoot,
+outside of virtualization. SMB's primary purpose is to allow remote file system
+access between two systems over TCP/IP. In this sense SMB is merely a network
+transport for file systems operations, which allows a client to access
+resources on a server.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">SMB troubleshooting can be extremely
+complex. This guide is a short primer to understand the basics of how to
+effectively troubleshoot SMB but is by no means an exhaustive guide. </span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Communicating correct terminology is a key
+aspect of quality SMB troubleshooting. Thus, you should learn basic SMB
+terminology to ensure accuracy of data collection and analysis.</span></p><ul style="margin-bottom:0cm;"><li><span lang="EN-US">The <b>SMB Server</b> (SRV) is ALWAYS
+the system hosting the file system, also called the file server</span></li><li><span lang="EN-US">The <b>SMB Client</b> (CLI) is ALWAYS
+the system trying to access the file system</span></li><li><span lang="EN-US">This is regardless of the OS
+version or edition</span></li><li><span lang="EN-US">For example, Windows Server
+2016 is the SMB Client and Windows 10 the SMB Server in the diagram below
+because Windows Server 2016 is trying to reach the SMB share
+\\MyWorkstation\Data, which is hosted on Windows 10.</span></li></ul><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a></a><a></a><a><span><span><span lang="EN-US">Find the source</span></span></span></a><span><span lang="EN-US"></span></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span><span lang="EN-US">Do
+not trust the surface symptoms as there are a number of errors and states that
+can make it look like the issue is in one place, when the issue is really
+somewhere else.</span></span></p><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><span><a></a><a><span><span lang="EN-US">Collect
+data</span></span></a><span lang="EN-US"></span></span></h3><ol style="margin-bottom:0cm;"><li><span><span lang="EN-US">Collect a two-sided network
+trace. Always start with data collection!!!</span></span></li><ol style="margin-bottom:0cm;"><li><span><span lang="EN-US">On Windows systems, we can use netshell (netsh), Network Monitor,
+Message Analyser or Wireshark to collect data</span></span></li><li><span><span lang="EN-US">Third-party devices almost always have an in-box packet capture
+utility, like tcpdump (Linux/FreeBSD/Unix), pktt (NetApp), etc.</span></span></li></ol><li><span><span lang="EN-US">Start by looking at the
+two-sided traces to find where the issue is: CLI, SRV, or somewhere in the
+middle.</span></span></li></ol><span></span><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a></a><a><span><span lang="EN-US">Analyze the traffic</span></span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">SMB is an application level protocol that
+uses TCP/IP as the network transport protocol; as such, an SMB issue can
+actually be caused by TCP/IP issues.</span></p><ol style="margin-bottom:0cm;"><li><span lang="EN-US">Start by determining whether
+the issue is TCP/IP or SMB related</span></li><li><span lang="EN-US">Are there any TCP/IP issues?</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">TCP 3-way handshake is not
+completing typically means there is a firewall block, or the Server service is
+not running</span></li><li><span lang="EN-US">Retransmits could be causing
+slow file transfers due to Compound TCP congestion throttling</span></li><li><span lang="EN-US">Five retransmits followed by a
+TCP Reset could mean the connection between systems was lost, or one of the SMB
+services crashed or hung.</span></li><li><span lang="EN-US">A diminishing TCP receive
+window could point to slow storage or some other issue preventing data being
+retrieved from the AFD Winsock buffer</span></li></ol><li><span lang="EN-US">Look for SMB errors when there
+are no noticeable TCP/IP issues</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">Always check SMB errors against
+the MS-SMB2 protocol specification. There are many SMB errors that are benign
+(not harmful), try to find why SMB returned the error before concluding it is
+related to the issue.</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">The <a href="https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/6eaf6e75-9c23-4eda-be99-c9223c60b181">MS-SMB2
+Message Syntax</a> section details each SMB command and its options.</span></li><li><span lang="EN-US">The <a href="https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/df0625a5-6516-4fbe-bf97-01bef451cab2">MS-SMB2
+Client Processing</a> section details how the SMB client creates requests and
+responds to server messages.</span></li><li><span lang="EN-US">The <a href="https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/e1d08834-42e0-41ca-a833-fc26f5132a6f">MS-SMB2
+Server Processing</a> section details how the SMB server creates requests and
+responds to client requests.</span></li></ol><li><span lang="EN-US">Is a TCP reset being sent
+immediately after a FSCTL_VALIDATE_NEGOTIATE_INFO (validate negotiate) command?</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">The SMB session must be
+terminated (TCP Reset) when the validate negotiate process fails on either the
+client or the server.</span></li><li><span lang="EN-US">This might be caused by a WAN
+optimizer modifying the SMB Negotiate.</span></li><li><span lang="EN-US">If you see that connection
+prematurely ended check what was the last exchange communication between the
+client and server </span></li></ol></ol></ol><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a></a><a><span><span lang="EN-US">Protocol Analysis</span></span></a><span lang="EN-US"></span></h3><ol style="margin-bottom:0cm;"><li><span lang="EN-US">Look at the actual SMB protocol
+details in netmon/MA to understand the exact commands and options being used.
+Note that only MA can parse the SMB3+ commands. Learn to use it.</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">Remember that SMB is an
+extension of the file system, and simply does what it is told.</span></li><li><span lang="EN-US">You can learn a lot about what
+the application is trying to do by examining the SMB commands.</span></li></ol><li><span lang="EN-US">Compare the commands and
+operations to the protocol specification to ensure everything is operating by
+design, and to better understand what is happening versus what should be
+happening.</span></li><li><span lang="EN-US">Collect data closer to, or at a
+lower level, to look for more information about the root cause</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">Start with a normal packet
+capture, the first step in this troubleshooting guide.</span></li><li><span lang="EN-US">Then move to a netsh scenario
+trace to gather details about whether there are issues in the network stack or
+drops in WFP (firewall/AV).</span></li><li><span lang="EN-US">Lastly, when all other options
+have failed, collect a t.cmd when you suspect the issue is in SMB itself, or
+none of the other data provides enough root cause.</span></li><li><span lang="EN-US">Example:</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">You are experiencing slow file
+transfers to a single file server.</span></li><li><span lang="EN-US">The two-sided trace shows the
+SRV responding slowly to a READ request.</span></li><li><span lang="EN-US">Removing AV resolves the file
+transfer slowness.</span></li><li><span lang="EN-US">Involve the AV vendor to
+resolve the issue.</span></li></ol></ol></ol><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><span>&nbsp;</span></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Both SMB Client and SMB server have
+detailed event logging as follows so please look at the events as well to get
+ideas on what may be going on here:</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><span asset="4535151" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4535151]</span></span><span lang="EN-US"></span></p><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a></a><a><span><span lang="EN-US">Update Binaries</span></span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Make sure that the latest rollup is
+installed on your OS (<a href="https://support.microsoft.com/en-us/help/4498140/windows-10-update-history">https://support.microsoft.com/en-us/help/4498140/windows-10-update-history</a>)</span><u><span lang="EN-US"></span></u></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:12.0pt;"><u><span lang="EN-US">SMB Client
+binaries:</span></u></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Under <b>%windir%\system32\Drivers</b> </span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">RDBSS.sys</span><span lang="EN-US"><br></span><span lang="EN-US">MRXSMB.sys</span><span lang="EN-US"><br></span><span lang="EN-US">MRXSMB10.sys</span><span lang="EN-US"><br></span><span lang="EN-US">MRXSMB20.sys</span><span lang="EN-US"><br></span><span lang="EN-US">MUP.sys</span><span lang="EN-US"><br></span><span lang="EN-US">SMBdirect.sys</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:12.0pt;"><u><span lang="EN-US">SMB Server
+binaries:</span></u></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Under <b>%windir%\system32\Drivers</b></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">SRVNET.sys</span><span lang="EN-US"><br></span><span lang="EN-US">SRV.sys</span><span lang="EN-US"><br></span><span lang="EN-US">SRV2.sys</span><span lang="EN-US"><br></span><span lang="EN-US">SMBdirect.sys</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Under <b>%windir%\system32</b></span></p><p align="center" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-align:center;"><span lang="EN-US">srvsvc.dll</span><span lang="EN-US"><br><span><span asset="4535152" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4535152]</span></span></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-top:12.0pt;"><u><span lang="EN-US">Both SMB hosts:</span></u></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">A file server also
+needs File Storage. If your Storage have iSCSI component, please update that
+components as well</span></a></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span><span lang="EN-US">Because
+SMB cannot work without network component you need to update the network
+components as well</span></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span><span lang="EN-US">For
+better performance and stability your Windows Core should be updated too.</span></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span><span lang="EN-US">Just
+to be sure that you don’t miss anything, we strongly recommend updating all of
+your system components.</span></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span><span lang="EN-US">Before
+starting to troubleshoot, we strongly advise also to uninstall your antivirus!</span></span><span lang="EN-US"></span></p><h2 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:16pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><a><span lang="EN-US">Data Collection:</span></a><span lang="EN-US"></span></h2><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Take a network trace on the client and the
+server with Network Monitor, Message Analyzer, Wireshark or:</span></p><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">Automatic data collection:</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">For a more complete data collection in
+preparation for analysis by the customer services team you can collect data
+with the TSS script found at: </span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="https://github.com/CSS-Windows/WindowsDiag/tree/master/ALL/TSS">https://github.com/CSS-Windows/WindowsDiag/tree/master/ALL/TSS</a></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Download the tss_tools.zip file and extract
+it to a location on the server and the client, for example C:\Tools. From an
+administrative command prompt run following in the directory with the tool.
+Follow the instructions to generate a customer services ready CAB file.</span></p><h4 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:11pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><span lang="EN-US">SMB Client</span></h4><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">TSS
+General CliOn</span><span lang="EN-US"></span></p></div><h4 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:11pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><span lang="EN-US">SMB Server</span></h4><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">TSS
+General SrvOn</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">If you encounter an error that running
+scripts is disabled, run:</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Set-ExecutionPolicy
+-ExecutionPolicy Bypass -force -Scope Process</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Alternate method: if scripts are blocked by
+Policy, run in elevated Powershell: </span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Set-ItemProperty
+-Path HKLM:\Software\Policies\Microsoft\Windows\PowerShell -Name
+ExecutionPolicy -Value ByPass</span><span lang="EN-US"></span></p></div><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">Manual data collection:</span></a><span lang="EN-US"></span></h3><h4 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:11pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><span lang="EN-US">Netsh</span></h4><h5 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:11pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><span lang="EN-US">Packets without Provider Events - a.k.a. trace</span><span lang="EN-US" style="font-weight:normal;"></span></h5><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Netsh trace creates an ETL file. ETL files
+can only be opened in Message Analyzer (MA) and Network Monitor 3.4 (set the
+parser to Network Monitor Parsers &gt; Windows).</span></p><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>1.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">On both hosts (SMB Server and
+SMB Client), create a <b>Temp</b> folder on<b> C</b> drive</span></p><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>2.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Open an elevated Command Prompt
+(Run as administrator). Please use domain admin account to collect data from
+server.</span></p><p style="margin:0cm 0cm 8pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>3.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Execute these commands to start
+the packet capture.</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">psr
+/stop</span><span lang="EN-US"></span></p><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">psr
+/start /output C:\Temp\%computername%_nettrace.zip</span><span lang="EN-US"></span></p><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">netsh
+trace </span><span lang="EN-US" style="color:#0070C0;">start </span><span lang="EN-US" style="color:black;">capture=yes
+tracefile=c:\Temp\%computername%_nettrace.etl</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>4.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Reproduce the issue.</span></p><p style="margin:0cm 0cm 8pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>5.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Stop the trace by running this
+command.</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">netsh
+trace </span><span lang="EN-US" style="color:#0070C0;">stop</span></p><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">psr
+/stop</span><span lang="EN-US"></span></p></div><h5 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:11pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><span lang="EN-US">Packets with Provider Events - a.k.a. NetConnection trace</span></h5><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">You can use providers as NetConnection.
+Thus, netsh command will looks like:</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">netsh
+trace </span><span lang="EN-US" style="color:#0070C0;">start </span><span lang="EN-US" style="color:black;">capture=yes
+persistent=yes report=yes scenario=NetConnection level=5 maxsize=1024 tracefile=c:\Temp\%computername%_nettrace.etl</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Note </span></p><ul style="margin-bottom:0cm;"><li><span lang="EN-US">Please use <a href="https://insightweb">https://insightweb</a> for more providers / scenarios
+</span></li><li><span lang="EN-US">You only trace a minimum amount
+of data transferred and for performance issues always take a good and a bad
+trace if the situation allows it. </span></li><li><span lang="EN-US">You can view the nettrace.et in
+Message Analyzer or Network Monitor (after enabling Windows parsers from the
+options)</span></li></ul><h4 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:11pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><span lang="EN-US">PowerShell</span></h4><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Packet capturing in PowerShell is available
+in Windows 8.1+/2012 R2+. The PowerShell method will usually work when
+&quot;netsh trace&quot; has failed. PowerShell saves files in the ETL format.</span></p><h5 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:11pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><span lang="EN-US">Basic Packet Capture</span></h5><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>1.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">On both hosts (SMB Server and
+SMB Client), create a <b>Temp</b> folder on<b> C</b> drive</span></p><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>2.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Open an elevated PowerShell
+(Run as administrator). Please use domain admin account to collect data from
+server.</span></p><p style="margin:0cm 0cm 8pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>3.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Execute these commands to start
+the packet capture.</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">psr
+/stop</span><span lang="EN-US"></span></p><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">psr
+/start /output &quot;C:\Temp\$env:computername`_netCap.zip”</span><span lang="EN-US"></span></p><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">New-NetEventSession
+-Name trace -LocalFilePath &quot;C:\Temp\$env:computername`_netCap.etl&quot;
+-MaxFileSize 1024</span><span lang="EN-US"></span></p><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Add-NetEventPacketCaptureProvider
+-SessionName trace -TruncationLength 1500</span><span lang="EN-US"></span></p><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Start-NetEventSession
+trace</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>4.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Reproduce the issue.</span></p><p style="margin:0cm 0cm 8pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>5.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Run these commands to stop and
+clear the packet capture session. Please be aware that you cannot start a new
+packet capture until the existing session has been removed.</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Stop-NetEventSession
+trace</span><span lang="EN-US"></span></p><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">psr
+/stop</span><span lang="EN-US"></span></p><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Remove-NetEventSession
+trace</span><span lang="EN-US"></span></p></div><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">Update TSS Tools to its latest
+version</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Always is recommended to use the latest version
+of TSS Tools. </span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Starting with TSS Tools v2019.11.17.3+ now
+you can update to its latest version, simply by typing into an elevated CMD
+window, on TSS Tools path, the following command:</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">TSS
+Update</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">To check your version of TSS you can use
+the following command:</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">TSS
+Version</span><span lang="EN-US"></span></p></div><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">Convert .etl file to .cap file</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">In case you prefer using Wireshark, you can
+simply open the etl file in Network Monitor and then Save as – and chose cap
+file, or just use the following command</span></p><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>1.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Open and elevated CMD window</span></p><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>2.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Navigate to the path where the
+file is located</span></p><p style="margin:0cm 0cm 8pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>3.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Run the following command</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">nmcap
+/inputcapture original_networktrace.etl /capture &lt;filters&gt; /file converted_networktrace.cap</span><span lang="EN-US"></span></p></div><p align="left" style="margin:0cm 0cm 8pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-align:left;text-indent:-18.0pt;"><span lang="EN-US"><span>4.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">All done</span></p><p align="left" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-align:left;"><span lang="EN-US">Note</span></p><ul style="margin-bottom:0cm;"><li><span lang="EN-US">You need to have Network
+Monitor installed</span></li><li><span lang="EN-US">&lt;filters&gt; can be used if required,
+in NM format</span></li></ul><p align="left" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-align:left;"><span lang="EN-US">Example
+to convert an etl file to a cap file and filter the communication only between
+2 IP addresses (10.1.2.3 and 10.1.2.4):</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">nmcap
+/inputcapture original_networktrace.etl /capture ipv4.address==10.1.2.3 and
+ipv4.address==10.1.2.4 /file converted_networktrace.cap</span><span lang="EN-US"></span></p></div><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">Collect Support Diagnostics Package:</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">To collect an SDP report, you need to use the
+TSS Tools. TSS Tools package is available here: </span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="https://github.com/CSS-Windows/WindowsDiag/tree/master/ALL/TSS">https://github.com/CSS-Windows/WindowsDiag/tree/master/ALL/TSS</a></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Download the latest tss_tools.zip file and
+extract it to a location on the server and on the client, for example </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">C:\Tools</span></span><span lang="EN-US">. </span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">From an elevated PowerShell, navigate to
+the path where the tss_tools archive was extracted, and run the following
+command. <span>&nbsp;</span></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">On both SMB Server and SMB Client, run
+the following command to get an SDP report:</span></b><span lang="EN-US"></span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">.\Get-psSDP.ps1
+Net -savePath C:\temp</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">For collecting SDP NETworking Diagnostic
+data and saving data to folder </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">C:\Temp</span></span><span lang="EN-US">.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">If you encounter an error that running
+scripts is disabled, run:</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Set-ExecutionPolicy
+-ExecutionPolicy Bypass -force -Scope Process</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Alternate method #1: to sign .ps1 scripts:
+run in elevated CMD: </span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">tss_PS1sign.cmd
+Get-psSDP</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Alternate method #2: if scripts are blocked
+by Policy, run in elevated Powershell: </span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Set-ItemProperty
+-Path HKLM:\Software\Policies\Microsoft\Windows\PowerShell -Name
+ExecutionPolicy -Value ByPass</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">Note:</span></b><span lang="EN-US" style="color:red;"> </span><span lang="EN-US">Please always use the latest version
+of tss_tools.zip.</span></p><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">Collect network trace on Linux hosts</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">If the SMB Client or SMB Server is a Unix
+host, you can collect data with tcpdump. </span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Stop collecting data with Ctrl + C from
+keyboard:</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">#
+tcpdump -s0 -n -i any -w /tmp/$(hostname)-smbtrace.pcap</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">tcpdump</span></b><span lang="EN-US">
+options (ref: <a href="https://www.tcpdump.org/manpages/tcpdump.1.html">https://www.tcpdump.org/manpages/tcpdump.1.html</a>)<b>:</b></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-bottom:0cm;margin-bottom:.0001pt;"><b><span lang="EN-US">-s </span></b><i><span lang="EN-US">snaplen</span></i><b><span lang="EN-US"></span></b></p><p><span lang="EN-US"><span>&nbsp;&nbsp;
+</span><b>--snapshot-length=snaplen</b></span></p><p style="margin-left:36.0pt;"><span lang="EN-US">Snarf snaplen
+bytes of data from each packet rather than the default of 262144 bytes. Packets
+truncated because of a limited snapshot are indicated in the output with
+``[|proto]'', where proto is the name of the protocol level at which the
+truncation has occurred.</span></p><p style="margin-left:36.0pt;"><span lang="EN-US">Note that taking
+larger snapshots both increases the amount of time it takes to process packets
+and, effectively, decreases the amount of packet buffering. This may cause
+packets to be lost. Note also that taking smaller snapshots will discard data
+from protocols above the transport layer, which loses information that may be
+important. NFS and AFS requests and replies, for example, are very large, and
+much of the detail won't be available if a too-short snapshot length is
+selected.</span></p><p style="margin-left:36.0pt;"><span lang="EN-US">If you need to
+reduce the snapshot size below the default, you should limit snaplen to the
+smallest number that will capture the protocol information you're interested
+in. <b>Setting snaplen to 0 sets it to the default of 262144, for backwards
+compatibility with recent older versions of tcpdump</b>.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-bottom:0cm;margin-bottom:.0001pt;"><b><span lang="EN-US">-n</span></b></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:36.0pt;"><span lang="EN-US">Don't convert addresses (i.e., host addresses, port numbers, etc.)
+to names.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-bottom:0cm;margin-bottom:.0001pt;"><b><span lang="EN-US">-i</span></b><span lang="EN-US"> <i>interface</i></span></p><p><b><span lang="EN-US"><span>&nbsp;&nbsp;
+</span>--interface=</span></b><i><span lang="EN-US">interface</span></i><span lang="EN-US"></span></p><p style="margin-left:36.0pt;"><span lang="EN-US">Listen on
+interface. If unspecified, tcpdump searches the system interface list for the
+lowest numbered, configured up interface (excluding loopback), which may turn
+out to be, for example, “eth0”.</span></p><p style="margin-left:36.0pt;"><span lang="EN-US">On Linux systems
+with 2.2 or later kernels, an interface argument of “<b>any</b>” can be used to
+capture packets from all interfaces. Note that captures on the “any” device
+will not be done in promiscuous mode.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">If the -D flag is supported, an interface
+number as printed by that flag can be used as the interface argument, if no
+interface on the system has that number as a name.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">Note:</span></b></p><ul style="margin-bottom:0cm;"><li><span lang="EN-US">Please be sure that you
+captured the issue during capture data process. Otherwise, you need to capture
+all data again!</span></li></ul><h1 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:18pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><a><span lang="EN-US">Looking for Known Solutions</span></a><span lang="EN-US"></span></h1><h2 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:16pt;font-family:&quot;Calibri Light&quot;, sans-serif;"><a><span lang="EN-US">Common solutions for this topic</span></a><span lang="EN-US"></span></h2><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">TCP 3-way handshake fails</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>1.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Normally caused by a firewall,
+local or in the infrastructure, blocking the traffic</span></p><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>2.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Traffic arrives on the SMB
+server, but no TCP SYN-ACK is sent</span></p><p style="margin:0cm 0cm 8pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-left:72.0pt;text-indent:-18.0pt;"><span lang="EN-US"><span>a.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Use <b>netstat </b>and/or <b>Get-NetTcpConnection</b>
+to make sure there is a listener on TCP port 445 which should be owned by the
+SYSTEM process.</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">netstat
+-ano | findstr :445</span><span lang="EN-US"></span></p><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Get-NetTcpConnection
+-LocalPort 445</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-left:72.0pt;text-indent:-18.0pt;"><span lang="EN-US"><span>b.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Make sure the Server service is
+started and running</span></p><ul style="margin-bottom:0cm;"><ol style="margin-bottom:0cm;"><li><span lang="EN-US">Get a scenario trace and look
+for WFP drops of SMB traffic (TCP port 445), or if Windows firewall is enabled
+enable firewall logging and see if it records a drop.</span></li><li><span lang="EN-US">Make sure the appropriate
+&quot;File and Printer Sharing (SMB-In)&quot; rule(s) is enabled in Windows
+Firewall with Advanced Security &gt; Inbound Rules</span></li><li><span lang="EN-US">Remove anti-virus, which is not
+always WFP-based</span></li><li><span lang="EN-US">Get a WFP capture and see which
+rule/program is dropping the traffic</span></li></ol></ul><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">netsh
+wfp capture start</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Repro the issue</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">netsh
+wfp capture stop</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>3.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">If the TCP SYN traffic never
+arrives at the SMB server then engage the customer network team to investigate
+devices along the network path</span></p><ul style="margin-bottom:0cm;"><ol style="margin-bottom:0cm;"><li><span lang="EN-US">We cannot troubleshoot third
+party devices</span></li><li><span lang="EN-US">We can, however, analyze
+network traces captured on either side of a vendor product to see if traffic is
+being blocked by the device</span></li></ol></ul><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">Negotiate Fails</span></a><span lang="EN-US"></span></h3><ol style="margin-bottom:0cm;"><li><span lang="EN-US">The SRV gets the CLI NEGOTIATE,
+the connection times out and is reset after 60 seconds. There may be an ACK
+after ~200ms.</span></li><li><span lang="EN-US">Most often caused by anti-virus
+(AV).</span></li><li><span lang="EN-US">There have been hotfixes for
+this behavior in Server 2008 R2. Make sure the SMB binaries are up to date.</span></li></ol><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">Session Setup fails</span></a><span lang="EN-US"></span></h3><ol style="margin-bottom:0cm;"><li><span lang="EN-US">If the </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">FQDN</span></span><span lang="EN-US"> or </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">NetBIOS</span></span><span lang="EN-US"> name of
+the server is used in the </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">UNC</span></span><span lang="EN-US"> path, then Kerberos should be used for authentication. After the
+Negotiate response there will be an attempt to get a Kerberos ticket for the </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">CIFS SPN</span></span><span lang="EN-US"> of the
+server. Look at the Kerberos traffic on TCP port 88 to make sure there are no
+Kerberos errors when getting the token</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">Pre-auth errors are okay</span></li><li><span lang="EN-US">Errors after pre-auth, where
+auth never works, are what you are looking for</span></li></ol><li><span lang="EN-US">Look at the security blob to
+make sure the correct credentials are being sent</span></li><li><span lang="EN-US">Disable SMB server name
+hardening (</span><span style="font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;background:rgb(217, 217, 217);font-weight:bold;"><span lang="EN-US" style="color:black;">SmbServerNameHardeningLevel
+= 0</span></span><span lang="EN-US">)</span></li><li><span lang="EN-US">Make sure the SRV has an SPN
+when it is being accessed via a </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">CNAME
+DNS</span></span><span lang="EN-US"> record</span></li><li><span lang="EN-US">Make sure SMB signing is
+working (important with older 3rd-party devices)</span></li></ol><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">Tree Connect fails</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>1.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Causes of common Tree Connect
+errors can be found in <a href="https://msdn.microsoft.com/en-us/library/cc246774.aspx%2c">3.3.5.7
+Receiving an SMB2 TREE_CONNECT Request</a></span></p><ul style="margin-bottom:0cm;"><ol style="margin-bottom:0cm;"><li><span lang="EN-US">[</span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">STATUS_BAD_NETWORK_NAME</span></span><span lang="EN-US">] Make sure the share exists on the server, and that it is spelled
+correctly in the CLI request</span></li><li><span lang="EN-US">[</span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">STATUS_ACCESS_DENIED</span></span><span lang="EN-US">]</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">Verify that the disk and folder
+used by the share exists and is accessible</span></li><li><span lang="EN-US">[</span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">SMB3+</span></span><span lang="EN-US">] Check
+whether the server and/or share require encryption, but the CLI doesn't support
+encryption</span></li><ul style="margin-bottom:0cm;"><li><span lang="EN-US">Check the server (When </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">EncryptData</span></span><span lang="EN-US"> and </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">RejectUnencryptedAccess</span></span><span lang="EN-US"> are true the server requires encryption):</span></li></ul></ol></ol></ul><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Get-SmbServerConfiguration
+| select Encrypt*</span><span lang="EN-US"></span></p></div><ul style="margin-bottom:0cm;"><ul style="margin-bottom:0cm;"><ul style="margin-bottom:0cm;"><ul style="margin-bottom:0cm;"><li><span lang="EN-US">Check the share (when </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">EncryptData</span></span><span lang="EN-US"> is
+true on the share, and </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">RejectUnencryptedAccess</span></span><span lang="EN-US"> is true on the server, then encryption is required by the share):</span></li></ul></ul></ul></ul><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Get-SmbShare
+| select name, EncryptData</span><span lang="EN-US"></span></p></div><ul style="margin-bottom:0cm;"><ul style="margin-bottom:0cm;"><ul style="margin-bottom:0cm;"><ul style="margin-bottom:0cm;"><li><span lang="EN-US">Windows 8+/2012+ support client-side
+encryption (</span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">SMB3+</span></span><span lang="EN-US">).</span></li><li><span lang="EN-US">Windows 7/2008 R2 and older do
+not.</span></li><li><span lang="EN-US">Samba and third-party device
+likewise may not support encryption. Product documentation may need to be
+consulted.</span></li></ul></ul></ul></ul><p style="margin:0cm 0cm 8pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>2.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Make sure the credentials have
+both share and NTFS access</span></p><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">Abort During Validate Negotiate</span></a><span lang="EN-US"></span></h3><ol style="margin-bottom:0cm;"><li><span lang="EN-US">An abort in this case is a TCP
+Reset</span></li><li><span lang="EN-US">This can be caused by a failed
+negotiate validation, which is normally the result of a </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">WAN</span></span><span lang="EN-US"> accelerator
+modifying the original </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">SMB NEGOTIATE</span></span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">The vendor product altering the
+negotiate needs to become compliant with this protocol specification</span></li><li><span lang="EN-US">Microsoft no longer allows
+modification of the Negotiate for any reason, as this is a serious security
+risk</span></li></ol><li><span lang="EN-US">The Validate Negotiate uses the
+</span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">FSCTL_VALIDATE_NEGOTIATE_INFO</span></span><span lang="EN-US"> command</span></li><li><span lang="EN-US">Validate negotiate response
+must be signed, and will abort the connection if not</span></li><li><span lang="EN-US">Compare the </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">FSCTL_VALIDATE_NEGOTIATE_INFO</span></span><span lang="EN-US"> messages to the Negotiate messages to make sure nothing was altered</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">3.3.5.15.12 Handling a Validate
+Negotiate Info Request <a href="https://msdn.microsoft.com/en-us/library/hh880525.aspx">https://msdn.microsoft.com/en-us/library/hh880525.aspx</a></span></li><li><span lang="EN-US">3.2.5.14.12 Handling a Validate
+Negotiate Info Response <a href="https://msdn.microsoft.com/en-us/library/hh880630.aspx">https://msdn.microsoft.com/en-us/library/hh880630.aspx</a></span></li></ol><li><span lang="EN-US">Validate negotiate can be temporarily disabled on Win8[.1]/2012[R2]
+by setting </span><span style="font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;background:rgb(217, 217, 217);font-weight:bold;"><span lang="EN-US" style="color:black;">RequireSecureNegotiate
+to 0</span></span></li></ol><p style="margin:0cm 0cm 8pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-left:72.0pt;text-indent:-18.0pt;"><span lang="EN-US"><span>a.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">PowerShell:</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Set-ItemProperty
+-Path &quot;HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters&quot;
+RequireSecureNegotiate -Value 0 -Force</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-left:72.0pt;text-indent:-18.0pt;"><span lang="EN-US"><span>b.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">The validate negotiate <a href="https://blogs.msdn.microsoft.com/openspecification/2015/08/11/smb-3-1-1-pre-authentication-integrity-in-windows-10/%2c">cannot
+be disabled in Windows 10+/2016+</a></span></p><ul style="margin-bottom:0cm;"><ol style="margin-bottom:0cm;"><li><span lang="EN-US">If either the client or server
+cannot support the validate negotiate command this can be worked around by setting
+SMB signing to be required. SMB signing is considered more secure than the
+validate negotiate command. There can also be a performance hit when requiring
+signing.</span></li></ol></ul><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">Large File Copies are Slow</span></a><span lang="EN-US"></span></h3><ol style="margin-bottom:0cm;"><li><span lang="EN-US">Try the file copy with
+unbuffered IO (</span><span style="font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;background:rgb(217, 217, 217);font-weight:bold;"><span lang="EN-US" style="color:black;">xcopy
+/J</span></span><span lang="EN-US"> or </span><span style="font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;background:rgb(217, 217, 217);font-weight:bold;"><span lang="EN-US" style="color:black;">robocopy /J</span></span><span lang="EN-US">)</span></li><li><span lang="EN-US">Make sure RSS is correctly
+configured</span></li><li><span lang="EN-US">Test storage speed, as file
+copy speeds are limited by storage speed</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">File copies will sometimes
+start fast and then slow down</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">This usually happens when the
+initial copy is cached/buffered (either in memory or the RAID controller’s
+memory cache) and the cache runs out, forcing data to be written directly to
+disk (write-through) which is slower</span></li><li><span lang="EN-US">Use storage performance monitor
+counters to see if storage performance degrades over time </span><br><br><span lang="EN-US"><a href="https://blogs.technet.microsoft.com/askcore/2012/02/07/measuring-disk-latency-with-windows-performance-monitor-perfmon/">https://blogs.technet.microsoft.com/askcore/2012/02/07/measuring-disk-latency-with-windows-performance-monitor-perfmon/</a></span></li><li><span lang="EN-US">Use RAMMap (SysInternals) to
+see if “Mapped File” usage in memory stops growing due to free memory
+exhaustion</span></li></ol></ol><li><span lang="EN-US">Look for packet loss in the
+trace, which can cause throttling by the TCP congestion provider</span></li><li><span lang="EN-US">[</span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">SMB3+</span></span><span lang="EN-US">] Make sure
+SMB Multichannel is enabled and working</span></li><li><span lang="EN-US">[</span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">SMB Client</span></span><span lang="EN-US">]
+Enable large MTU in SMB (</span><span style="font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;background:rgb(217, 217, 217);font-weight:bold;"><span lang="EN-US" style="color:black;">EnableLargeMtu = 1</span></span><span lang="EN-US">)</span></li><li><span lang="EN-US">[</span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">SMB Client</span></span><span lang="EN-US">]
+Disable bandwidth throttling (</span><span style="font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;background:rgb(217, 217, 217);font-weight:bold;"><span lang="EN-US" style="color:black;">EnableBandwidthThrottling = 0</span></span><span lang="EN-US">)</span></li></ol><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">Small File Copies are Slow</span></a><span lang="EN-US"></span></h3><ol style="margin-bottom:0cm;"><li><span lang="EN-US">This is most often seen when
+there are a large number of small files</span></li><li><span lang="EN-US">This is expected, to a point,
+and a well-known behavior</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">Small file copies are slow
+because there is both a high protocol and a high file system cost to creating a
+file</span></li><li><span lang="EN-US">Large files transfer fast
+because the file creation cost only happens once</span></li><li><span lang="EN-US">When a large number of small
+files are copied the cost is repetitive and causes slow transfers</span></li></ol><li><span lang="EN-US">Perform the file copy locally
+between two disks</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">This will be faster than over
+the network, as there is no protocol overhead or network latency, but still
+much slower than copying larger files locally</span></li><li><span lang="EN-US">This is a good visual
+demonstration of how small file copies are slow, even locally</span></li></ol><li><span lang="EN-US">From a technical perspective
+there are two main reasons why small file copies are slow: protocol overhead
+and file system overhead</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">SMB does a Create to request
+the file be created. Some code will also check whether the file exists, then
+create the file. Or some variation of Create commands to make the actual file.</span></li><li><span lang="EN-US">Each Create command generates
+activity on the file system</span></li><li><span lang="EN-US">Then the data must be written</span></li><li><span lang="EN-US">The file is then closed</span></li><li><span lang="EN-US">All the while the process
+suffers from network latency, SRV latency as the SMB request is translated to a
+file system command, and then the actual file system latency to complete the
+operation</span></li><li><span lang="EN-US">Add in any anti-virus cost and
+the transfer will slow down even more, as the data is typically scanned once by
+the packet sniffer and a second time when written to disk</span></li><li><span lang="EN-US">Repeat thousands of time and
+you potentially get sub-1MB/s speeds</span></li></ol></ol><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">Opening Office Docs are Slow</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>1.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">This happens primarily over WAN
+connections</span></p><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>2.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">This is common, and typically
+caused by the way Office, Excel in particular, accesses and reads data</span></p><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>3.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Make sure the Office and SMB
+binaries are up to date</span></p><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>4.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Look at Oplocks</span></p><ul style="margin-bottom:0cm;"><ol style="margin-bottom:0cm;"><li><span lang="EN-US">When the Oplock on the file is
+broken the client cannot fully cache the file and that makes access slower</span></li><li><span lang="EN-US">There's not much that can be
+done in this case since there can be no file caching, only byte range caching</span></li></ol></ul><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>5.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Test with leasing disabled on
+the SMB server</span></p><p style="margin:0cm 0cm 8pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-left:72.0pt;text-indent:-18.0pt;"><span lang="EN-US"><span>a.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">PowerShell method (8+/2012+):</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Set-SmbServerConfiguration
+-EnableLeasing $false</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-left:72.0pt;text-indent:-18.0pt;"><span lang="EN-US"><span>b.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Command Prompt method:</span></p><p style="margin:0cm 0cm 8pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-left:108.0pt;text-indent:-108.0pt;"><span lang="EN-US"><span><span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Run the following command in an
+elevated (Run as administrator) Command Prompt:</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">REG
+ADD
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanserver\parameters /v
+DisableLeasing /t REG_DWORD /d 1 /f</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-left:108.0pt;"><b><span lang="EN-US">Note</span></b><span lang="EN-US">: After you set this
+registry key, SMB2 leases are no longer granted, but oplocks are still
+available. This setting is primarily used for troubleshooting.</span></p><p style="margin:0cm 0cm 8pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;margin-left:108.0pt;text-indent:-108.0pt;"><span lang="EN-US"><span><span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Restart the file server or
+restart the Server service. To restart the service, run the following commands:</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">NET
+STOP SERVER</span><span lang="EN-US"></span></p><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">NET
+START SERVER</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 8pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>6.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Replicate the file to a local
+file server</span></p><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">Issues related to enumerating
+Folders</span></a><span lang="EN-US"> </span></h3><ol style="margin-bottom:0cm;"><li><span lang="EN-US">Causing high CPU</span></li><ol style="margin-bottom:0cm;"><li><span lang="EN-US">Disable Access Based
+Enumeration.</span><br><br><span lang="EN-US">To determine which shares,
+have ABE enabled you can run the following PowerShell code,<br><b>get-smbshare |select Name, FolderEnumerationMode </b><br>
+Unrestricted = No ABE <br>
+AccessBase = ABE<br><br></span><br><br><span lang="EN-US">From GUI:</span><br><br><span lang="EN-US"><span asset="4535153" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4535153]</span></span><span lang="EN-US">ABELevel
+levels, a lower level (1 or 2) typically helps performance.</span><br><br><b><span lang="EN-US">Reference</span></b><span lang="EN-US">: <a href="https://support.microsoft.com/en-us/help/2732618">https://support.microsoft.com/en-us/help/2732618</a></span><br><br><span lang="EN-US">&nbsp;</span></li><li><span lang="EN-US">Update the SMB SRV2 binary.</span></li></ol><li><span lang="EN-US">Check disk performance when
+enumeration is slow by opening the folder locally through a console/RDP session</span></li></ol><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">High CPU System Caused by SRV2</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>1.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">Check disk performance,
+specifically Avg. Disk sec/Transfer, Avg. Disk sec/Read, and Avg. Disk
+sec/Write, which measures how long, in milliseconds, Windows waits on storage
+to complete a disk operation </span></p><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="https://blogs.technet.microsoft.com/askcore/2012/02/07/measuring-disk-latency-with-windows-performance-monitor-perfmon/">https://blogs.technet.microsoft.com/askcore/2012/02/07/measuring-disk-latency-with-windows-performance-monitor-perfmon/</a></span></p><p style="margin:0cm 0cm 0.0001pt 36pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-indent:-18.0pt;"><span lang="EN-US"><span>2.<span style="font:7.0pt &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span lang="EN-US">For the storage performance
+troubleshooting</span></p><ul style="margin-bottom:0cm;"><ol style="margin-bottom:0cm;"><li><span lang="EN-US">SAN admins will often say that
+their storage response time and IO is fine, but those performance metrics are
+typically at an overall, aggregate level</span></li><li><span lang="EN-US">When dealing with SMB we are
+concerned about individual request response times, which can be slow even when
+overall SAN performance appears fine.</span></li><li><span lang="EN-US">This is often caused by some
+form of command queuing in the SAN</span></li><li><span lang="EN-US">Storport tracing can be
+captured and analyzed by the HA team to accurately determine storage
+responsiveness</span></li></ol></ul><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>4.<span>&nbsp; </span>Make sure Srv2.sys is up to
+date. </span></p>
+
+
+<h4 dir="ltr"><span><br>
+&lrm;File Server High CPU? Check Statistics Before Debug!</span></h4>
+
+<span asset="4575849" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4575849]</span>
+
+<h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">Event ID 50 logged</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">When writing to a network share, a failure
+may cause the following event to be written to the event log:</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Event
+ID: 50 <br>
+Event Type: Warning <br>
+Event Source: Ftdisk <br>
+Description: {Lost Delayed-Write Data} The system was attempting to transfer
+file data from buffers to \Device\HarddiskVolume4. The write operation failed,
+and only some of the data may have been written to the file.<br><span>&nbsp;</span>Data: <br>
+0000: 00 00 04 00 02 00 56 00 <br>
+0008: 00 00 00 00 32 00 04 80 <br>
+0010: 00 00 00 00 00 00 00 00 <br>
+0018: 00 00 00 00 00 00 00 00 <br>
+0020: 00 00 00 00 00 00 00 00 <br>
+0028: 11 00 00 80</span><span lang="EN-US"></span></p></div><p align="left" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-align:left;"><span lang="EN-US">-and-</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Event
+ID: 26 <br>
+Event Type: Information<br><span>&nbsp;</span>Event Source: Application Popup<br><span>&nbsp;</span>Description: Windows - Delayed Write
+Failed : Windows was unable to save all the data for the file
+\Device\HarddiskVolume4\Program Files\Microsoft SQL
+Server\MSSQL$INSTANCETWO\LOG\ERRORLOG. The data has been lost. This error may
+be caused by a failure of your computer hardware or network connection.<br><span>&nbsp;</span><br>
+Please try to save this file elsewhere.</span><strong><span lang="EN-US" style="font-weight:normal;"></span></strong></p></div><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><strong><span lang="EN-US" style="font-family:&quot;Calibri&quot;,sans-serif;">Cause</span></strong></p><p align="left" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-align:left;"><span lang="EN-US">This
+error can occur if there are pending cached writes to a file located on a
+remote network share and the connection to that file is unexpectedly
+terminated.<span>&nbsp; </span>The connection to the file
+could have been terminated for various reasons, including network communication
+failures and filter drivers on either the client or the server cancelling the
+write I/O.<span>&nbsp; </span>When this error occurs, the
+pending cached write I/O in memory cannot be written to the target file on the
+remote network share.<span>&nbsp; </span>The delayed write fails,
+and the target file may now be corrupt.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><strong><span lang="EN-US" style="font-family:&quot;Calibri&quot;,sans-serif;">More Information</span></strong></p><p align="left" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-align:left;"><span lang="EN-US">It is
+the responsibility of the application to handle this error.<span>&nbsp; </span>Some applications may try to reconnect to the
+remote file and retry the write operation.<span>&nbsp;
+</span>Other applications may ignore the error or fail altogether and leave the
+target file corrupted. Some applications like Windows Explorer may report the
+error to the user if a file copy fails.<span>&nbsp;
+</span>In the scenario of a failed file copy, the source file remains unchanged
+and copy operation can be restarted, overwriting the corrupted targeted remote
+file.</span></p><p align="left" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-align:left;"><span lang="EN-US">Please
+see the following link for more information this event:</span></p><p align="left" style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;text-align:left;"><span lang="EN-US"><a href="http://support.microsoft.com/kb/816004"><span style="color:#0067B8;">http://support.microsoft.com/kb/816004</span></a></span></p><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">Multichannel troubleshooting</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Make sure the binding for the NIC is set to
+true for SMB client (MS_client) and SMB server (MS_server). The command below
+should show True under Enabled for both.</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Get-NetAdapterBinding
+-ComponentID ms_server,ms_msclient</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Then make sure the interface is shown in
+the output of these commands. You may need to lookup the interface index using
+Get-NetAdapter to be sure. This shows all the active SMB adapters actively
+bound to the appropriate interface.</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Get-SmbServerNetworkInterface</span><span lang="EN-US"></span></p><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Get-SmbClientNetworkInterface</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">If everything looks good there, check the
+firewall. If there is only a link-local address, and no publicly routable
+address, then chances are the network profile is set to Public and that means
+SMB is blocked at the firewall by default.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">This command shows what connection profile
+is being used. You can also use Network &amp; Sharing Center.</span></p><div style="border:solid windowtext 1.0pt;padding:10.0pt 4.0pt 10.0pt 4.0pt;background:#D9D9D9;"><p style="margin:12pt 0cm;background:rgb(217, 217, 217);border:none;padding:0cm;font-size:11pt;font-family:&quot;Courier New&quot;;letter-spacing:-0.5pt;font-weight:bold;"><span lang="EN-US" style="color:black;">Get-NetConnectionProfile</span><span lang="EN-US"></span></p></div><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Check the firewall inbound rules, under the
+File and Printer Sharing group, to make sure SMB-In is enabled for the correct
+profile.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><span asset="4535154" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4535154]</span></span><span lang="EN-US"></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Or you can enable File and Printer Sharing
+from Network &amp; Sharing Center, under “Change advanced sharing settings”
+from the menu on the left. Select the profile and turn on File and Printer
+Sharing (all that does is enable the File and Printer Sharing firewall rules).</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><span asset="4535155" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4535155]</span></span><span lang="EN-US"></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">If everything is bound and connected, and
+the firewall rules are in order, and it’s still not working, then we move on to
+a two-sided packet capture. You need the SMB connection from the TCP 3-way
+handshake. The safe way to get that is to close all apps (especially Windows
+Explorer) and restart the Workstation service on the SMB client. Then start the
+packet capture, then repro the issue).</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">First check make sure SMB 3.x is being
+negotiated and something in between isn’t messing with dialect negotiation.
+SMB2 and older doesn’t support multichannel.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Next, you’re looking for the </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">NETWORK_INTERFACE_INFO</span></span><span lang="EN-US"> packets. This is where the SMB client requests a list of adapters
+from the SMB server. If these packets aren’t exchanged, then multichannel
+doesn’t work.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/147adde4-d936-4597-924a-8caa3429c6b0">https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/147adde4-d936-4597-924a-8caa3429c6b0</a></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Then the server responds with a list of
+valid network interfaces.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/fcd862d1-1b85-42df-92b1-e103199f531f">https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/fcd862d1-1b85-42df-92b1-e103199f531f</a></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">And then the SMB client adds those to the
+list of available adapters for multichannel. At this point multichannel should
+kick in and at least attempt.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/5459722b-1eaa-4ead-b465-284363264cad">https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/5459722b-1eaa-4ead-b465-284363264cad</a></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">The only time an adapter should not be used
+is when:</span></p><ul style="margin-bottom:0cm;"><li><span lang="EN-US">There is a routing issue on the
+client. This is normally caused by someone messing with the routing table and
+they create a route that forces traffic over the wrong interface. Yes, I have
+seen this before.</span></li><li><span lang="EN-US">Multichannel constraints have
+been set (</span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">*-SmbMultichannelConstraint</span></span><span lang="EN-US">).</span></li><li><span lang="EN-US">Something blocked the network
+interface request/response packets.</span></li><li><span lang="EN-US">Or the client and server can’t
+communicate over the extra NIC. Such as, the TCP 3-way handshake failed,
+blocked by a firewall, session setup failure, etc.</span></li></ul><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Assuming the adapter and its IPv6 address
+are on the list sent by the server, the next step is to see whether communications
+are attempted over that interface. Filter the trace by the link-local address
+and/or SMB traffic, and look for a connection attempt. If this is a
+NetConnection trace you can also poke around at WFP events to see if the
+connection is being blocked for some reason.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">If there is no attempt to communicate at
+all on the secondary interface, and nothing in the traces or protocol behavior
+that explains why it’s failing, then we need to move to more advanced logging.</span></p><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">The virtual network adapter on the
+host does not perform well</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">Cause</span></b><span lang="EN-US">: The
+virtual network adapter on the host is not RSS-capable. Without a RSS-capable
+network adapter, SMB uses only one TCP connection. This occurs when using 10GbE
+network adapters, RSS-capable network adapters, and NIC Teaming.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">Solution</span></b><span lang="EN-US">:
+Use multiple virtual network adapters to make sure you have multiple TCP
+connections. For more information, see the following blog post: Windows Server
+2012 File Server Tip: Make sure your network interfaces are RSS-capable.<span>&nbsp; </span><a href="http://blogs.technet.com/b/josebda/archive/2012/11/10/windows-server-2012-file-server-tip-make-sure-your-network-interfaces-are-rss-capable.aspx">http://blogs.technet.com/b/josebda/archive/2012/11/10/windows-server-2012-file-server-tip-make-sure-your-network-interfaces-are-rss-capable.aspx</a></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">Note</span></b></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">With the new Virtual Receive-side scaling
+feature in Windows Server 2012 R2, virtual network adapters are now RSS-capable
+and provide four TCP connections for each network adapter. In Windows Server
+2012, there was only one TCP connection for each virtual network adapter. In
+Windows Server 2012 R2, SMB client connections are tracked per file share
+(instead of per server), and clients are then redirected to the cluster node
+with the best access to the volume used by the file share. This improves
+efficiency by reducing redirection traffic between file server nodes. Clients
+are redirected following an initial connection and when cluster storage is
+reconfigured.</span><b><span lang="EN-US" style="font-size:12.0pt;"></span></b></p><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">SMB prefers to use the slower
+physical network adapter over the virtual network adapter</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">Cause</span></b><span lang="EN-US">: The
+virtual network adapter on the host is not RSS-capable while the physical
+network adapter is RSS-capable. SMB always uses the RSS-capable network adapter
+over the non-RSS network adapter even when the RSS network adapter is slower.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">Solution</span></b><span lang="EN-US">:
+You should disable the RSS capability on the physical network adapter or use
+SMB Multichannel constraints to restrict SMB communication to one or more
+defined network interfaces. For more information, see the </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">New-SmbMultichannelConstraint</span></span><span lang="EN-US"> SMB Share cmdlet in Windows PowerShell.</span></p><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">When using multiple network
+adapters on the same subnet in a cluster, only one network adapter is used</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">Cause</span></b><span lang="EN-US">:
+Failover cluster networking cannot use more than one network adapter per
+subnet. To confirm this, use the </span><span style="font-family:&quot;Courier New&quot;;"><span lang="EN-US">Get-SmbServerNetworkInterface</span></span><span lang="EN-US"> SMB Share cmdlet in Windows PowerShell.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">Solution</span></b><span lang="EN-US">:
+You should configure each network adapter to use a different subnet. For more
+information, see the following blog post: <span>&nbsp;</span><a href="https://blogs.technet.microsoft.com/josebda/2012/11/12/windows-server-2012-file-server-tip-use-multiple-subnets-when-deploying-smb-multichannel-in-a-cluster/">https://blogs.technet.microsoft.com/josebda/2012/11/12/windows-server-2012-file-server-tip-use-multiple-subnets-when-deploying-smb-multichannel-in-a-cluster/</a><b><i><span>&nbsp;</span></i></b></span></p><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">What is the required amount of
+network traffic before SMB Multichannel starts?</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">Cause</span></b><span lang="EN-US">: SMB
+Multichannel is used to discover the RSS and RDMA capabilities of network
+adapters. On server operating systems, SMB Multichannel starts when the initial
+read/write operation occurs. On client operating systems, SMB Multichannel does
+not start until a certain amount of network traffic occurs.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">Solution</span></b><span lang="EN-US">: On
+server operating systems, SMB Multichannel starts quickly is only once per
+session. On client operating systems, you can configure a registry entry to
+initiate SMB Multichannel more quickly. For more information, see the following
+blog post: </span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="http://blogs.technet.com/b/josebda/archive/2013/01/18/how-much-traffic-needs-to-pass-between-the-smb-client-and-server-before-multichannel-actually-starts.aspx">http://blogs.technet.com/b/josebda/archive/2013/01/18/how-much-traffic-needs-to-pass-between-the-smb-client-and-server-before-multichannel-actually-starts.aspx</a></span><span lang="EN-US" style="font-size:12.0pt;"></span></p><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">SMB Multichannel does not aggregate
+multiple 10GbE network adapters</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">Causes</span></b><span lang="EN-US">: An
+RSS-capable 10GbE network adapter is sometimes identified as non-RSS capable.
+When this occurs, SMB uses only one TCP connection.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">When using both RSS-capable and non-RSS
+network adapters, SMB Multichannel should only use the RSS-capable network
+adapters.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">Solutions</span></b><span lang="EN-US">:
+Server-class network adapters should appear as RSS-capable, and if they don’t,
+you should update the network adapter’s driver from the manufacturer’s web
+site, and then recheck the RSS settings.</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">You may need to disable RSS on both network
+adapters to aggregate throughput. For more information, see the following blog
+post: </span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US"><a href="http://blogs.technet.com/b/josebda/archive/2012/11/10/windows-server-2012-file-server-tip-make-sure-your-network-interfaces-are-rss-capable.aspx">http://blogs.technet.com/b/josebda/archive/2012/11/10/windows-server-2012-file-server-tip-make-sure-your-network-interfaces-are-rss-capable.aspx</a></span></p><h3 style="margin-right:0cm;margin-left:0cm;text-align:justify;font-size:12pt;font-family:Calibri, sans-serif;"><a><span lang="EN-US">When accessing a Scale-Out File Server,
+performance is limited</span></a><span lang="EN-US"></span></h3><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">Cause</span></b><span lang="EN-US">: The
+client access network uses high speed RDMA, but the cluster network does not.
+This causes redirection to occur only over the cluster network (which is
+usually a 1GbE network adapter).</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><b><span lang="EN-US">Solutions</span></b><span lang="EN-US">:
+You can configure the option to use the client access network for Cluster
+Shared Volumes (CSV).</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">Upgrade to Windows Server 2012 R2 where
+clients are automatically redirected to the cluster node with the best access
+to the volume used by the file share. For more information, see the following
+blog post: <a href="http://blogs.technet.com/b/josebda/archive/2013/10/30/automatic-smb-scale-out-rebalancing-in-windows-server-2012-r2.aspx">http://blogs.technet.com/b/josebda/archive/2013/10/30/automatic-smb-scale-out-rebalancing-in-windows-server-2012-r2.aspx</a></span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">&nbsp;</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">&nbsp;</span></p><p style="margin:0cm 0cm 8pt;text-align:justify;font-size:11pt;font-family:Calibri, sans-serif;"><span lang="EN-US">&nbsp;</span></p></div><div><p><span style="font-size:10.5pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:#222222;background:white;"></span></p><div style="box-sizing:border-box;">Contributing engineer:&nbsp;James Kehr &lt;James.Kehr@microsoft.com&gt;;&nbsp;Edmund Spatariu &lt;Edmund.Spatariu@microsoft.com&gt;; Misba Yousuf &lt;Misba.Yousuf@microsoft.com&gt;</div><div style="box-sizing:border-box;">Feedback/ suggestions:<span>&nbsp;</span><a href="mailto:networkflowdevs@microsoft.com;jakehr@microsoft.com;Edmund.Spatariu@microsoft.com;Misba.Yousuf@microsoft.com?subject=SMB-Workflow%20feedback" style="font-family:Calibri, sans-serif;font-size:11pt;"><span style="font-size:10.5pt;background-image:initial;background-position:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;">EMAIL</span></a></div><div style="box-sizing:border-box;">For more Windows Networking Workflows, go to:<span>&nbsp;</span><a href="https://aka.ms/networkflows" style="box-sizing:border-box;text-decoration:underline;cursor:pointer;">https://aka.ms/networkflows</a></div><p></div>

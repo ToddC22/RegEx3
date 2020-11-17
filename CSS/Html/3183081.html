@@ -1,0 +1,690 @@
+﻿<header><h1>Informational: Microsoft Advertising: Bidding and price estimation</h1></header><p><a id="Top" title="Top"></a><span asset="4509089" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4509089]</span></p>
+
+<h3>Who should use this article?</h3>
+
+<ul>
+	<li>Microsoft Advertising</li>
+</ul>
+
+<h3>What is this article about?</h3>
+
+<p>This article&nbsp;describes how to use the bidding and price estimation feature for Microsoft Advertising. This article is intended to help you explain bidding best practices to advertisers, and the various tools they can use to help choose the right bid for their goals.</p>
+
+<h3><a id="top" name="top"></a>Table of contents</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<h4>1.&nbsp;<a bookmark-id="1" href="https://internal.support.services.microsoft.com/en-us/help/3183081#1" managed-link="" target="">Bid management</a></h4>
+			</td>
+			<td>
+			<p>1.1&nbsp;<a bookmark-id="1.1" href="https://internal.support.services.microsoft.com/en-us/help/3183081#1.1" managed-link="" target="">Bid setting&nbsp;options</a></p>
+
+			<p>1.2&nbsp;<a bookmark-id="1.2" href="https://internal.support.services.microsoft.com/en-us/help/3183081#1.2" managed-link="" target="">Automated bid strategies</a></p>
+
+			<p>1.3&nbsp;<a bookmark-id="1.3" href="#1.3" managed-link="">Manual bids (currently being deprecated)</a></p>
+
+			<p>1.4&nbsp;<a bookmark-id="1.4" href="#1.4" managed-link="">Enhanced CPC</a></p>
+
+			<p>1.5&nbsp;<a bookmark-id="1.5" href="https://internal.support.services.microsoft.com/en-us/help/3183081#1.5" managed-link="" target="">Maximize conversions (Targeting AU, CA, CH, DE, ES, FR, IT, NL, SE, UK, US)</a></p>
+
+			<p>1.6&nbsp;<a bookmark-id="1.6" href="https://internal.support.services.microsoft.com/en-us/help/3183081#1.6" managed-link="" target="">Target CPA (Targeting AU, CA, CH DE, ES, IT, FR, NL, SE, UK, US)</a></p>
+
+			<p>1.7&nbsp;<a bookmark-id="1.7" href="https://internal.support.services.microsoft.com/en-us/help/3183081#1.7" managed-link="" target="">Maximize clicks</a></p>
+
+			<p>1.8&nbsp;<a bookmark-id="1.8" href="#1.8" managed-link="">Automated bidding &ndash; troubleshooting for maximize clicks</a></p>
+
+			<p>1.9&nbsp;<a bookmark-id="1.9" href="https://internal.support.services.microsoft.com/en-us/help/3183081#1.9" managed-link="" target="">Target ROAS (AU, CA, DE, FR, UK, US)</a></p>
+
+			<p>1.10&nbsp;<a bookmark-id="1.10" href="https://internal.support.services.microsoft.com/en-us/help/3183081#1.10" managed-link="" target="">Max clicks FAQ</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>2.&nbsp;<a bookmark-id="2" href="#2" managed-link="">Incremental bidding</a></h4>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>3.&nbsp;<a bookmark-id="3" href="https://internal.support.services.microsoft.com/en-us/help/3183081#4" managed-link="" target="">What is price estimation?</a></h4>
+			</td>
+			<td>
+			<h4>&nbsp;</h4>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>4. Tools to help</h4>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>
+			<p>4.1&nbsp;<a bookmark-id="4.1" href="https://internal.support.services.microsoft.com/en-us/help/3183081#5.1" managed-link="" target="">Bid landscape at the keyword level (Global)</a></p>
+
+			<p>4.2&nbsp;<a bookmark-id="4.2" href="https://internal.support.services.microsoft.com/en-us/help/3183081#5.2" managed-link="" target="">Bid landscape at the ad-group level (Global)</a></p>
+
+			<p>4.3&nbsp;<a bookmark-id="4.3" href="https://internal.support.services.microsoft.com/en-us/help/3183081#5.3" managed-link="" target="">Bid landscape at the campaign level (Global)</a></p>
+
+			<p>4.4&nbsp;<a bookmark-id="4.4" href="https://internal.support.services.microsoft.com/en-us/help/3183081#5.4" managed-link="" target="">Keywords tab - Price Estimation</a></p>
+
+			<p>4.5&nbsp;<a bookmark-id="4.5" href="https://internal.support.services.microsoft.com/en-us/help/3183081#5.5" managed-link="" target="">Intelligence (keyword performance)</a></p>
+
+			<p>4.6&nbsp;<a bookmark-id="4.6" href="https://internal.support.services.microsoft.com/en-us/help/3183081#5.6" managed-link="" target="">Opportunities</a></p>
+
+			<p>4.7&nbsp;<a bookmark-id="4.7" href="https://internal.support.services.microsoft.com/en-us/help/3183081#5.7" managed-link="" target="">Ad Inquiry</a></p>
+
+			<p>4.8&nbsp;<a bookmark-id="4.8" href="https://internal.support.services.microsoft.com/en-us/help/3183081#5.8" managed-link="" target="">Editor (keyword research - get bid suggestions)</a></p>
+
+			<p>4.9&nbsp;<a bookmark-id="4.9" href="https://internal.support.services.microsoft.com/en-us/help/3183081#5.9" managed-link="" target="">Bid and traffic estimation for new keywords</a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+<div class="kb-generic-section section">
+<h3><a id="1" name="1"></a>1. Bid management</h3>
+
+<p><span><span><span><span>A bid is the amount that an advertiser chooses to pay for a specific keyword. </span></span></span></span></p>
+
+<p>Our <a data-content-id="" data-content-type="" href="https://help.ads.microsoft.com/#apex/3/en/53099/0" managed-link="" target="_blank">Set your campaign budget &amp; bid amounts</a> help article contains a lot of useful information on this topic.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+<a id="header1" title="header1"></a>
+
+<h4><a id="1.1" name="1.1"></a>1.1&nbsp;Bid setting&nbsp;options</h4>
+
+<p><span><span><span><span>When an advertiser first creates a campaign, the bids entered in the last step of the process are default bids that will be used if specific bids for keywords aren&rsquo;t entered. The default is the first page bid minimum.</span></span></span></span></p>
+
+<p><span><span><span lang="EN-GB"><span><span>In addition, advertisers will see in-context recommendations during the create new workflow for campaigns, ad groups and keywords, advising them of the additional traffic they could potentially reach if they were to increase bids via pop-up alert. Advertisers can either select&nbsp;<strong>OK </strong>or <strong>Cancel</strong> to accept/reject the suggested bid changes.</span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><strong><span><span><a id="1.2" name="1.2"></a></span></span></strong><span><span>1.2 Automated bid strategies</span></span></span><span><span lang="EN"></span></span></h4>
+
+<p>A variety of automated bid strategies are available to help advertisers manage their keyword bids in the way that best suits their needs. These are:</p>
+
+<ul>
+	<li><span><span><span><span><span>Manual&nbsp;(currently being deprecated)</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Enhanced CPC</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Maximize Clicks</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Maximize Conversions</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Target CPA (TCPA)</span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Target Return on Ad Spend (</span></span></span><span><span><span>ROAS)</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span><span><span lang="EN"></span></span></span></span></span></span></span><span lang="EN-GB"><span><span><span>Automated bid strategies will bypass the budget settings in place at the campaign level. Advertisers using budget strategies to preserve budget throughout the month should be aware that using automated bid strategies may therefore use up their monthly budget before the month is over.</span></span></span></span></p>
+
+<p><span><span lang="EN-GB"><span>Shared budgets&nbsp;are not compatible with this feature. </span></span></span></p>
+
+<p><span lang="EN-GB"><span></span></span></p>
+
+<p><span><span><span lang="EN-GB"><span><span>Although there is no minimum conversion requirement, some strategies (such as, Max. Conversions, TCPA, and TROAS) will perform significantly better with more historical conversion data from which to calculate. (There is a known issue with Editor, when creating new campaigns, which continues to display a legacy alert that a minimum number of conversions is required. We are working to remove this alert.) </span></span></span></span></span></p>
+
+<p><span><span><strong><span lang="EN-GB"><span><span>Note</span></span></span></strong><span lang="EN-GB"><span><span>: For Max. Conversions, TCPA, and TROAS the advertiser must still have an active conversion goal set up. TROAS also requires revenue tracking to be set up and actively pulling data. </span></span></span></span></span></p>
+
+<p><span lang="EN-GB"><span></span></span></p>
+
+<p><span><span><strong><span lang="EN-GB"><span><span>Learning&nbsp;message</span></span></span></strong></span></span></p>
+
+<p><span><span><span lang="EN-GB"><span><span><span><span><span lang="EN-GB"><span><span>Some automated bid strategies (for example, Max. Clicks, Max. Conversions, Target CPA, and Target ROAS) require a minimum of two weeks to learn the best bids to apply. During this time, advertisers will see delivery, but it can be slow to start. </span></span></span></span></span> </span></span></span></span></span></p>
+
+<p><span><span><span lang="EN-GB"><span><span>In the UI, we have the following alert message to call this out:<br>
+<span asset="4532872" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4532872]</span></span></span></span></span></span></p>
+
+<p><span><span><span lang="EN-GB"><span><span>This is referenced on our </span></span></span><span lang="EN-GB"><span><span><a data-content-id="" data-content-type="" href="https://help.ads.microsoft.com/#apex/3/en/52024/1/en-us/%23ext:default" managed-link="" target="_blank">Delivery status</a> help page.</span></span></span><span lang="EN-GB"></span></span></span></p>
+
+<p><span><span><span lang="EN-GB"><span><span>Reassure advertisers who contact you about this message that this should resolve itself naturally within one to two weeks, after the system has been able to study the account performance enough to begin accurately bidding on auctions using their desired bid strategy. </span></span></span><span lang="EN-GB"></span></span></span></p>
+
+<p><span><span><strong><span lang="EN-GB"><span><span>Note: </span></span></span></strong><span lang="EN-GB"><span><span>Changing the campaign budget can cause automated bid strategies to reset their learning period, as the system will need time to optimize performance against the new campaign budget, so that it learns not to exceed this target. (Unless a customer has chosen to override specific ad groups/keywords, as described in the &ldquo;Setting a Campaign&rsquo;s Bid Strategy&rdquo;<strong> </strong>section of&nbsp;</span></span></span><span lang="EN-GB"><span><a data-content-id="" data-content-type="" href="https://help.ads.microsoft.com/#apex/3/en/56786/1" managed-link="" target="_blank">Let Microsoft Advertising manage your bids with bid strategies</a>).</span></span><span lang="EN-GB"></span></span></span></p>
+
+<p><span><span><span lang="EN-GB"><span>For this reason, as a best practice we advise that customers do not make more than weekly modifications to their budget.</span></span><span lang="EN-GB"></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><strong><span lang="EN"><span><a id="1.3" name="1.3"></a></span></span></strong></span><span><span><span><span><span>1.3 Manual bids (currently being deprecated) </span></span></span></span></span></h4>
+
+<p><span><span><strong><span><span><span>Deprecation Note: </span></span></span></strong><span><span><span>As of October 2020, Manual CPC will no longer be a bid option on Expert Mode accounts that registered via SMART campaign signup. We are also opting a proportion of customers who signed up as Expert Mode into the Manual CPC deprecation pilot.&nbsp; </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>For these customers, do not escalate to Global Support for missing Manual CPC tactics, as this is by design. Encourage customers to use <strong>Enhanced CPC</strong> instead. </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Legacy advertisers may currently have the option to select <strong>Manual CPC</strong> as their Bid Strategy. </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Using this method, advertisers manually select the max. bid they would like to place for each keyword in their library. </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>During auction, Bing will not modify the max. bid value or exceed it.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Users can bid in three ways:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>Enter a bid for all keywords.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Change the bids for individual keywords.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Estimate the bids needed for each keyword to reach average position.</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span>To get the most out of their budgets, advertisers should closely monitor keywords for positioning and set reports to run frequently. They&rsquo;ll want to prioritize the keywords that bring the most traffic and are most relevant to their products and services.<br>
+<br>
+Focusing on specific phrases and keywords, and on their demographic, will help advertisers target the right customers. For example, a business in Seattle that offers services to certain areas might use those neighborhood names as keywords, or they can try incremental bidding to improve their chances of reaching target demographics.</span></span></span></span></span></p>
+
+<p><span><span lang="EN"><span><span><span><span><span><span><span><span><span>See <a href="https://help.ads.microsoft.com/#apex/3/en/53092/0" target="_blank"><span>Refine your bids</span></a> for more information.</span></span></span></span></span></span></span></span> </span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><strong><a id="1.4" name="1.4"></a></strong>1.4 Enhanced CPC</h4>
+
+<p><span lang="EN">Enhanced CPC is a feature that automatically adjusts advertiser&#39;s bids in real time to increase the chances of a conversion.&nbsp;The bid will go&nbsp;higher on searches that are more likely to convert, and&nbsp;lower on searches that are less likely to convert. </span></p>
+
+<p><span lang="EN">Enhanced CPC is the default bid strategy setting when you create a new campaign. Note that there is no learning period for ECPC as confirmed by Engineering. Therefore, if customers are asking for optimization assistance, we should not recommend they create manual bidding campaigns in the first few weeks.</span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<p><span><strong> </strong></span></p>
+
+<h4><span><strong><span><span><a id="1.5" name="1.5"></a></span></span></strong><span><span>1.5 Maximize conversions (Targeting AU, CA, CH,&nbsp;DE, ES, FR, IT, NL, SE,&nbsp;UK, US)</span></span></span></h4>
+
+<p><span><span><span><span lang="EN-GB"><span><span>With this feature, Microsoft Advertising will automatically adjust bids in real time to get as many conversions as possible. </span></span></span><span lang="EN"><span><span>There is no need to apply ad group or keyword bids. Advertisers can use the <strong>max CPC</strong> field to apply a maximum bid. <strong>Note</strong>: Audience ads are not eligible to serve using this tactic.</span></span></span><span lang="EN-GB"></span></span></span><span lang="EN"><span><span lang="EN"></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<p><span> </span></p>
+
+<h4><span><strong><span lang="EN"><span><a id="1.6" name="1.6"></a></span></span></strong><span lang="EN"><span>1.6 Target CPA </span></span><span><span>(Targeting AU, CA, CH DE, ES, IT, FR, NL, SE, UK, US)</span></span></span></h4>
+
+<p><span><span lang="EN"><span><span><span><span lang="EN"><span><span>With the Cost Per Acquisition (CPA) feature, advertisers can set their budget and their target 30-day average CPA, and Microsoft Advertising will automatically adjust bids in real time to get to this average. There is no need to apply ad group or keyword bids.</span></span></span><span lang="EN-GB"></span></span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><span lang="EN"><span><a id="1.7" name="1.7"></a>1.7 Maximize clicks</span></span></span></h4>
+
+<p><span><span lang="EN"></span></span><span><span lang="EN"></span></span><span><span><span lang="EN"><span><span>With the maximize clicks feature, Microsoft Advertising automatically adjusts advertiser bids in real time to get as many clicks as possible within their budget. There is no need to apply ad group or keyword bids.</span></span></span><span lang="EN-GB"></span></span></span></p>
+
+<p><span><span><span lang="EN"><span><span>If there is no performance data in the account to base bid adjustments on (for example, new account/campaign), Bing will use historical market performance for keywords to calculate a mainline bid value. Over time (usually one to two weeks) the bids will begin to use contextual signals to optimize bids based on each keyword&rsquo;s performance within the customer&rsquo;s account.</span></span></span><span lang="EN-GB"></span></span></span></p>
+
+<p><span><span lang="EN"></span></span></p>
+
+<p><strong>Note:</strong> For this feature to function, check in Microsoft Advertising UI that:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; 1. The ad group inherits the campaign&rsquo;s bid strategy:</p>
+
+<p><span asset="4345185" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4345185]</span></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; 2. The keywords are inheriting auto bidding strategy. When you see <strong>Auto</strong> next to the bid value, it indicates that auto bidding is in effect and the user will not be able to edit the bids.</p>
+
+<p><span asset="4345184" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4345184]</span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="1.8" name="1.8"></a>1.8 Automated bidding &ndash; troubleshooting for maximize clicks</h4>
+
+<p><span><span><span><span lang="EN-GB"><span><span>The following information will help you troubleshoot advertiser issues relating to the max clicks automated bidding strategy.</span></span></span></span></span></span></p>
+
+<p><span><strong><span lang="EN-GB"><span>Scenario 1: Max clicks bid strategy appears to be slow and the customer does not see any clicks on their keywords.</span></span></strong></span></p>
+
+<ol>
+	<li><span><span><span><span><span><span lang="EN-GB">Determine when the account was created. </span></span></span></span></span></span>
+
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><strong><span lang="EN-GB"></span></strong></span></span></span></span></span><span><span><span><span lang="EN-GB"></span><strong><span lang="EN-GB"><span><span>If the account is fairly new</span></span></span></strong><span lang="EN-GB"><span><span>: Perform the basic checks that are related to new accounts, and see KB </span></span></span><span lang="EN-GB"><a href="https://internal.support.services.microsoft.com/help/3168884" target="_blank"><span><span><span>3168884 Process: Microsoft Advertising: No or low impressions</span></span></span></a></span><span lang="EN-GB"><span><span> for the troubleshooting workflow.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span><span lang="EN-GB"></span></span></span></span></span></span><span><span><span><span><span><strong><span lang="EN-GB">If the account is not new:</span></strong><span lang="EN-GB"> Check for other optimizations to improve performance, such as adding keywords or match types. Use Intelligence to find how the keywords in the customer&rsquo;s account are performing in the market they are targeting. See&nbsp;the following Microsoft Advertising help articles: </span></span></span></span></span></span>
+		<ul style="list-style-type:circle">
+			<li><span><span><span><span><span lang="EN-GB"></span></span></span></span></span><span><span><span><span lang="EN-GB"></span><span lang="EN-GB"><a data-content-id="" data-content-type="" href="https://help.ads.microsoft.com/#apex/3/en/51010/1" managed-link="" target="_blank">What are keywords and how should I build my keyword list?</a></span><span lang="EN-GB"></span></span></span></span></li>
+			<li><span lang="EN-GB"><span><span><a data-content-id="" data-content-type="" href="https://help.ads.microsoft.com/#apex/3/en/50822/1" managed-link="" target="_blank">What are keyword match types, and how do I use them?</a></span></span></span><span lang="EN-GB"></span><span><span><span><span><span lang="EN-GB"></span></span></span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li><span><span><span lang="EN-GB"></span><span lang="EN-GB"><span>If the campaign is <strong>not </strong>new, and if the strategy was updated on an existing ad campaign, compare the performance before and after the strategy was applied.</span></span></span></span></li>
+</ol>
+
+<p><span><span lang="EN-GB"><span>If the campaign did <strong>not </strong>perform before the strategy was applied, investigate whether there are&nbsp;other factors that could be affecting the delivery.</span></span></span></p>
+
+<ol start="3">
+	<li><span><span><span><span><span><span lang="EN-GB"></span>Determine whether any improvements can be made with the ad copy, and if there are any policy violations. Investigate if there are any quality score and CTR issues. See KB&nbsp;<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2870957" managed-link="" target="_blank">2870957 Delivery: Troubleshooting ad results in the Ad Diagnostic Tool (ADT)</a>.<span lang="EN-GB"></span></span></span></span></span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span><span><span lang="EN-GB"></span>Educate the customer on how to understand the quality score by sharing the information in&nbsp;<a href="https://help.ads.microsoft.com/#apex/3/en/50813/2" target="_blank">Quality score in depth</a>, and reiterate the improvement opportunities documented in the following sections of the article: Expected click-through rate score, Ad relevance score, Landing page experience score.<span lang="EN-GB"></span></span></span></span></span></span></li>
+</ul>
+
+<p><span><strong><span lang="EN-GB"><span>Scenario 2: CPCs are high after adopting max clicks bid strategy.</span></span></strong></span></p>
+
+<p><span><span><span><span><span><span lang="EN-GB">1. Check </span></span></span></span></span></span><span><span lang="EN-GB"></span><span lang="EN-GB"><span>if the campaign had any campaign performance history <em>before</em>&nbsp;max clicks was applied. Campaigns with no performance history will be started at mainline position bidding, to allow them to begin serving competitively immediately. CPC will reduce naturally over time once performance history is gathered and the system can use this to estimate bids. </span></span></span></p>
+
+<p><span><span><span><span><span><span lang="EN-GB"></span></span></span></span></span></span></p>
+
+<p align="center"><span> </span></p>
+
+<p><span><span><span><span><span><span lang="EN-GB">2. Check that&nbsp;</span></span></span></span></span></span>the customer has used the <strong>I want to set a maximum CPC</strong> checkbox.</p>
+
+<ul>
+	<li><span><span><span><span lang="EN-GB">A <strong>max CPC</strong> value is set in the amount field.</span></span></span></span></li>
+</ul>
+
+<p><span asset="4345192" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4345192]</span></p>
+
+<p><span><span><span><span><span><span lang="EN-GB"></span></span></span></span></span></span></p>
+
+<ul>
+	<li>
+	<p><span><strong><span lang="EN-GB"><span>If the max CPC was never set by the client</span></span></strong><span lang="EN-GB"><span>: Educate the customer that they will need to set max CPC cap to avoid overspending on the clicks. </span></span>Share <a href="https://help.ads.microsoft.com/#apex/3/en/56786/1" target="_blank">Let Microsoft Advertising manage your bids with bid strategies</a>, and highlight the max CPC setting section<span lang="EN-GB"><span>. </span></span></span></p>
+	</li>
+</ul>
+
+<ol>
+	<li><span><span><span><span><span><span lang="EN-GB">If you confirm that the <strong>max CPC</strong> value was set, and the CPC is still higher, check to see if the advertiser has any incremental bidding for any of the target settings. </span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><strong><span lang="EN-GB">Escalate to Tier2 </span></strong><span lang="EN-GB">i</span><span lang="EN-GB">f the above steps do not clearly indicate the spike in CPC.</span></span></span></span></span></span></li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><span><span><span><span><a id="1.9" name="1.9"></a>1.9 Target ROAS (AU, CA, DE, FR, UK, US)</span></span></span></span></span></h4>
+
+<p><span><span><span><span><span>With this strategy, Microsoft Advertising will automatically adjust bids to maximize the return on ad spend. </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>As a best practice, we recommend using <strong>last 30 days ROAS, </strong>and avoiding any changes to the campaign for a minimum of two weeks to allow the system to learn&nbsp;so that it can make more accurate bid changes. </span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><span lang="EN-GB"><span><a id="1.10" name="1.10"></a>1.10&nbsp;Max clicks FAQ</span></span></span></h4>
+
+<p><span><span> </span></span><span><span><strong><span><span>Q: Inline keyword diagnosis indicates that my keywords are below the first page and I&#39;m using auto max clicks. Why is this?</span></span></strong></span></span></p>
+
+<p><span><span><strong><span><span>A: </span></span></strong><span><span>Max clicks is not currently supported by keyword inline diagnosis.&nbsp;If the keyword/s have defaulted to very low bids, we recommend that the advertiser use ECPC as a bid strategy to start off. Based on performance they can optimize campaigns and switch to automated bidding strategy (auto max clicks).</span></span></span></span></p>
+
+<p><span><span><strong><span><span>Q: I have auto max clicks and would like to know if my campaigns are running or not?</span></span></strong></span></span></p>
+
+<p><span><span><strong><span><span>A: </span></span></strong><span><span>Use the<strong>&nbsp;</strong>troubleshooting scenarios above, offer optimization, or escalate if required. </span></span></span></span></p>
+
+<p><span><span><strong><span><span>Related articles</span></span></strong></span></span></p>
+
+<ul>
+	<li>
+	<p><span><span><span><span><span><span lang="EN-GB"></span></span></span></span></span></span><span><span><span><span lang="EN-GB"></span><span lang="EN-GB"><a href="https://help.ads.microsoft.com/#apex/3/en/56786/1" target="_blank"><span><span><span>Let Microsoft Advertising manage your bids with bid strategies</span></span></span></a></span><span lang="EN-GB"></span></span></span></span></p>
+	</li>
+	<li><span lang="EN-GB"><span><span><a href="https://docs.microsoft.com/en-us/advertising/guides/budget-bid-strategies?view=bingads-13#bidstrategytypes" target="_blank"><span><span><span><span>Bid Strategy Types (docs.microsoft.com, formerly MSDN)</span></span></span></span></a></span></span></span>
+	<p><span><span><span><span><span><span><span><span lang="EN-GB"></span></span></span></span></span></span></span></span></p>
+	</li>
+</ul>
+
+<p><span> </span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="2" name="2"></a>2. Incremental bidding</h3>
+
+<p><span><span><span><span>Incremental bids can increase an ad&#39;s exposure to potential customers who meet specific targeting criteria. Increasing the overall bid makes the ad appear higher in an individual&rsquo;s search results.</span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span>The incremental bid is a percentage increase of the base bid that is applied when customers meet the target criteria and click the ad.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Because the incremental bid amount is derived from a percentage of the base bid, the incremental bid amount fluctuates when changes are made to the base bid.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>The incremental percentage amount is calculated for each targeted area:</span></span></span></span></span>
+	<ul style="list-style-type:circle">
+		<li><span><span><span><span><span>Location</span></span></span></span></span></li>
+		<li><span><span><span><span><span>Days of the week</span></span></span></span></span></li>
+		<li><span><span><span><span><span>Time of day</span></span></span></span></span></li>
+		<li><span><span><span><span><span>Age</span></span></span></span></span></li>
+		<li><span><span><span><span><span>Gender</span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span>Incremental bids are optional and bid adjustments for most variables can range, in 1% increments, from -90% to + 900%.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>As per above, negative bid adjustments for most targets can go to -90%. However, if you are using a negative bid adjustment for tablets or smartphones, you can go to -100%. Using -100% for one of these devices would effectively opt you out of displaying your ads on that device. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>Default bids are established at the ad group level. Advertisers can use default bid to simplify workflow, but they may want to override default bids for specific high-performing keywords to improve ROI.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Adjustments to the default bid will not override existing bid prices.</span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span>The incremental bid applies only when user falls within the desired audience. This incremental bid may increase the chances of appearing in a higher position for that desired audience, but it must be high enough to compete with other bidders on the same keyword.<br>
+<br>
+If a customer who does not match the target criteria clicks your ad, you do not pay any incremental bids. If a customer who matches more than one of your target criteria clicks your ad all the incremental bids apply as outlined below.<br>
+<br>
+To make it easier for you to import Google AdWords campaigns to Microsoft Advertising, and to align with industry standards, we&#39;re updating the way Microsoft Advertising calculates incremental bids when you use multiple incremental bids.<br>
+<br>
+Microsoft Advertising uses the industry-standard calculation method, multiplication, to combine your incremental bid adjustments.</span></span></span></span></p>
+
+<p><span><span><span lang="EN-GB"><span><span>See the following help resources for more information: </span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span><a data-content-id="" data-content-type="" href="https://help.ads.microsoft.com/#apex/3/en/51004/1" managed-link="" target="_blank">How to target my customers by adjusting my bids</a></span></span></span></span></span></li>
+	<li><span><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span><a data-content-id="" data-content-type="" href="https://help.ads.microsoft.com/#apex/3/en/51128/-1" managed-link="" target="_blank">Bid adjustment - Definition</a></span></span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="3" name="3"></a>3. What is price estimation?</h3>
+
+<p><span><span><span><span>Price estimates use each advertiser&rsquo;s unique performance history to improve the accuracy of the predictions. Advertisers with high CTR for a keyword should bid less to reach position one&nbsp;than advertisers with low CTR. Performance predictions also benefit from the higher data granularity.<br>
+<br>
+If an advertiser is based in one country and is focusing advertising efforts in another, the price estimation tool will compare data from any competitors in his target market, not just the competitors using the same currency. For example, if the advertiser is based in the <span><span><span><span>US</span></span></span></span> and advertises in the UK, the price estimation tool will compare data across advertisers who advertise in the UK, perform back-end currency conversions and deliver price estimations in USD. The price estimate to reach first position does not take into consideration any extra incremental bid an advertiser may have placed to reach targeted users.</span></span></span><br>
+<br>
+<span><span><span><strong>Note: </strong>A notification will appear if a default keyword or ad group bid exceeds the advertiser&#39;s daily target budget.</span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3>4. Tools to help</h3>
+
+<h4><a id="4.1" name="4.1"></a>4.1&nbsp;Bid landscape at the keyword level (Global)</h4>
+
+<p><strong>Customer facing?</strong> Yes</p>
+
+<p><strong>How to use:</strong></p>
+
+<p class="indent-1">Advertisers in all markets&nbsp;can see the estimated cost, clicks, impressions and top impressions for keyword bids at a variety of price points simultaneously with bid landscape.</p>
+
+<p class="indent-1">Advertisers can select the bid that best meets their goals and then apply it directly to the campaign. The estimations are what they would have seen in impressions and clicks over the last seven days or the time period specified at the bottom of the table. <strong>Note</strong>: Bid landscape may not be available for some keywords if not enough data is available.</p>
+
+<p class="indent-1">In the UI, users click <strong>Campaigns</strong> at the top of the screen, select a campaign and click the <strong>Keywords </strong>tab. There will be a chart icon representing bid landscape to the right of the current CPC bid. <strong>Note</strong>: The icon will not appear if there are not enough bid values.</p>
+
+<p class="indent-1">For API users, GetBidLandscapeByKeywordIds is available in the Ad Intelligence service in API Version 9. The operation provides bid landscapes for existing keywords under a specific account and supports up to 1,000 Keyword Ids in one call.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><strong><a id="4.2" name="4.2"></a></strong>4.2 Bid landscape at the ad-group level (Global)</h4>
+
+<p><strong>Customer facing?</strong> Yes</p>
+
+<p><strong>How to use:</strong></p>
+
+<p class="indent-1">Bid landscape is also available at the ad-group level for advertisers in all markets. You can now see the estimated cost, clicks, impressions and top impressions for an ad group&rsquo;s keyword bids at a variety of price points simultaneously.</p>
+
+<p class="indent-1">You can use bid landscape for an ad group in two modes: Default and Uniform.</p>
+
+<ul>
+	<li class="indent-1">If you use the Default mode, you will update only your ad-group bid and leave custom bids for individual keywords as-is.</li>
+	<li class="indent-1">If you use the Uniform mode, you will update the ad-group bid and apply it to all keywords, overriding any custom keyword bids. (Uniform mode is available only for ad groups with up to 1,000 keywords).</li>
+</ul>
+
+<p class="indent-1">Select the bid that best meets your goals and then apply it directly to your campaign. The estimations are what you would have seen in impressions and clicks over the last seven days or the time period specified at the bottom of the table.</p>
+
+<p class="indent-1">In Microsoft Advertising online, select the <strong>ad groups</strong> tab. There will be a chart icon representing bid landscape below the ad group CPC value. The icon will appear if any of the keywords in the ad group have sufficient impression/click data.</p>
+
+<p class="indent-1">For API users, this feature is available in the Ad Intelligence service in API.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="4.3" name="4.3"></a>4.3&nbsp;Bid landscape at the campaign level (Global)</h4>
+
+<p><span><span><strong><span lang="EN-GB"><span><span>Customer facing?</span></span></span></strong><span lang="EN-GB"><span><span> Yes</span></span></span></span></span></p>
+
+<p><span><span><strong><span lang="EN-GB"><span><span>How to use:</span></span></span></strong></span></span></p>
+
+<p class="indent-1"><span><span><span lang="EN-GB"><span><span>Bid landscape is available at the campaign level for advertisers in all markets. You can see the estimated cost, clicks, impressions, and top impressions for a campaign&rsquo;s keyword bids at a variety of price points simultaneously. </span></span></span></span></span></p>
+
+<p class="indent-1"><span><span><span lang="EN-GB"><span><span>Bid landscape also suggests how much to increase the campaign budget if you were to increase the bid. This appears in the column <strong>Additional budget/daily required</strong>. If no additional budget is required, it will show a &ldquo;-&ldquo; instead. </span></span></span></span></span></p>
+
+<p class="indent-1"><span><span><span lang="EN-GB"><span><span>You can use campaign bid landscape in two modes: <strong>Bid scaling</strong> and <strong>Campaign-wide bid</strong>.</span></span></span></span></span></p>
+
+<ul>
+	<li class="indent-1"><span><span><span><span lang="EN-GB"></span><strong><span lang="EN-GB"><span><span>Bid scaling (%) mode</span></span></span></strong><span lang="EN-GB"><span><span>: Will show how your campaign will perform if all your keywords and ad group bids increase or decrease by different percentages. This percentage will range from -50% to +300%.</span></span></span></span></span></span></li>
+	<li class="indent-1"><span><span><span><span lang="EN-GB"></span><strong><span lang="EN-GB"><span><span>Campaign-wide bid mode</span></span></span></strong><span lang="EN-GB"><span><span>: Will simulate how your campaign might perform if all your keyword and ad group bids were set to specific values.</span></span></span></span></span></span></li>
+</ul>
+
+<p class="indent-1"><span><span><span lang="EN-GB"></span></span></span></p>
+
+<p class="indent-1"><span><span><span lang="EN-GB"><span><span>Select the bid that best meets your goals and then apply it directly to your campaign. The estimations are what you would have seen in impressions and clicks over the last seven days or the time period specified at the bottom of the table.</span></span></span></span></span></p>
+
+<p class="indent-1"><span><span><span lang="EN-GB"><span><span>In the Microsoft Advertising UI, select the <strong>Campaign</strong> tab. There will be a chart icon representing bid landscape below the campaign budget value. The icon will appear disabled (grey) if there is insufficient historical performance data. Otherwise it will appear enabled (black) and the campaign bid landscape will appear when you select it.</span></span></span></span></span></p>
+
+<p class="indent-1"><span><span><span lang="EN-GB"><span><span>Campaign bid landscape is currently not available for API users. </span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="4.4" name="4.4"></a>4.4 Keywords tab - Price Estimation</h4>
+
+<p><strong>Customer facing? </strong>Yes</p>
+
+<p><strong>How to use:</strong></p>
+
+<p class="indent-1"><strong>Data source:</strong> Examines historical and current Microsoft Advertising performance, recommends a bid to reach a desired position. Determines minimum suggested bid value of one or more keywords (by keyword ID) that could result in an ad appearing in targeted position:&nbsp;best, mainline, bottom of page and sidebar (in markets still supporting this feature) in search results.</p>
+
+<p class="indent-1"><strong>When to use:</strong> Depends on future market conditions. No guarantee that estimated bids will place ad in estimated position. Use when you know exactly what position is desired. Best used when the keyword is already in the account and has historical performance.</p>
+
+<p class="indent-1"><strong>How does account age affect bids:</strong> Takes into account the advertiser&#39;s historical performance on a given keyword. As a rule, the more performance an advertiser has on a given keyword, the more accurate the bids estimate.</p>
+
+<p class="indent-1"><strong>Advantages:</strong> Gives a more accurate bid estimation for keywords already in the account with performance history.</p>
+
+<p class="indent-1"><strong>Limitations:</strong> Does not look at auction dynamics, such as other advertisers bidding on the same terms.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="4.5" name="4.5"></a>4.5&nbsp;Intelligence (keyword performance)</h4>
+
+<p><strong>Customer facing? </strong>Yes</p>
+
+<p><strong>How to use:</strong></p>
+
+<p class="indent-1"><strong>Data source:</strong> Not related to specific advertiser&#39;s account. It looks at the overall Microsoft Advertising marketplace and gives a historical average of data for the selected time period (last day, last week, last 30 days).</p>
+
+<p class="indent-1"><strong>When to use:</strong> A good place to get bid optimizations for new keywords or keywords without a lot of history. Bids and CPCs represent an aggregation of entire Microsoft Advertising marketplace for a keyword. Can provide guidance on what a new advertiser should expect to pay and the bids of other advertisers.</p>
+
+<p class="indent-1"><strong>How does account age affect bids:</strong> Advertiser/account dynamics are not considered.</p>
+
+<p class="indent-1"><strong>Advantages:</strong> Uses past auction performance by all advertisers bidding on a term to give an &quot;initial&quot; directional estimate of what advertiser should bid. This is based on auction history.</p>
+
+<p class="indent-1"><strong>Limitations:</strong> Auction dynamics change month-to-month. Revisit bids after a month.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="4.6" name="4.6"></a>4.6&nbsp;Opportunities</h4>
+
+<p><strong>Customer facing? </strong>Yes</p>
+
+<p><strong>How to use:</strong></p>
+
+<p class="indent-1"><strong>Data source:</strong> Gives suggestions for advertiser&#39;s account. If advertiser is new or doesn&#39;t have enough history, it may not show opportunities.</p>
+
+<p class="indent-1"><strong>When to use:</strong> Microsoft Advertising can track keyword bids and provide suggested bids that could increase impressions and clicks for ads using these keywords. Microsoft Advertising also reveals how these suggested bid changes are likely to affect cost per click and overall costs. The Opportunities page appears in the top navigation in the Microsoft Advertising UI.</p>
+
+<p class="indent-1"><strong>How does account age affect bids:</strong> No effect; however, recommendations are based on current performance, and opportunities for bid changes are pulled in for underperforming keywords.</p>
+
+<p class="indent-1"><strong>Advantages:</strong> Unlock the potential of underperforming keywords across the account. Speedy notice of improvements needed using the enhanced status notification feature. Specific to account&#39;s performance.</p>
+
+<p class="indent-1">Does not consider future Microsoft Advertising auction dynamics.</p>
+
+<p class="indent-1">The Opportunities page allows users to filter suggestions by various criteria. For example, users can filter all bid suggestions where the click increase is greater than X number of clicks that they determine. <span><span><span><span>US</span></span></span></span>, UK only: Users can also search within the keyword suggestions for keywords that contain a specific term.</p>
+
+<p class="indent-1"><strong>Available for all markets:</strong></p>
+
+<ul>
+	<li class="indent-1">Get broad match suggestions for exact and phrase match keywords.</li>
+	<li class="indent-1">More clearly see the impact of changing your campaign budgets with a landscape view of estimated campaign clicks and impressions at a variety of budget amounts.</li>
+	<li class="indent-1">Get bid suggestions that help you move your ads to higher positions.</li>
+</ul>
+
+<p class="indent-1">In English for CA, UK, AU, IN. In Chinese for HK, TW, CN:</p>
+
+<ul>
+	<li class="indent-1">Get even better keyword suggestions based on your ad copy, landing pages and current keywords.</li>
+</ul>
+
+<p class="indent-1"><span><span><span lang="EN-GB"><span><span>Use the new <strong>Competition&nbsp;</strong>column on the Opportunities page to see the competition from other advertisers when bidding on suggested keywords. The column will show Low, Medium, or High values, indicating expected levels of competition for a keyword. Export the suggestions to Microsoft Office Excel to see a more detailed rating score on a scale of 0.01‒1.0 that relates to the Low, Medium, or High values.</span></span></span></span></span></p>
+
+<p class="indent-1"><span lang="EN-GB"><span><span><span>API users can see this information through the <strong>Optimizer service</strong> (Keyword Opportunity data object), but it does not require development or workflow changes</span></span></span></span>.</p>
+
+<p class="indent-1">No specific suggestions are available, advertisers get helpful best practices&nbsp;tips that can improve click-through rates.</p>
+
+<p class="indent-1">If advertisers don&rsquo;t want to accept a suggestion, they can select a reason why the suggestion isn&rsquo;t appropriate. Over time, Microsoft Advertising will get better at providing suggestions based on that feedback.</p>
+
+<p class="indent-1"><strong>Budget suggestion decline reasons:</strong></p>
+
+<ul>
+	<li class="indent-1">Not now, maybe later</li>
+	<li class="indent-1">Campaign isn&rsquo;t a priority</li>
+	<li class="indent-1">Don&rsquo;t have the money</li>
+	<li class="indent-1">Performing well already</li>
+</ul>
+
+<p class="indent-1"><strong>Bid suggestion decline reasons:</strong></p>
+
+<ul>
+	<li class="indent-1">Not now, maybe later</li>
+	<li class="indent-1">Ad group/campaign isn&rsquo;t a priority</li>
+	<li class="indent-1">Keyword isn&rsquo;t a priority</li>
+	<li class="indent-1">Performing well already</li>
+</ul>
+
+<p class="indent-1"><span><span><strong><span lang="EN-GB"><span><span>Actual cost per click</span></span></span></strong><span lang="EN-GB"></span></span></span></p>
+
+<p class="indent-1">When someone clicks an ad, the actual cost per click is deducted from the campaign budget. The actual cost per click for each keyword varies based on the following:</p>
+
+<ul>
+	<li class="indent-1"><strong>The bid on a keyword.</strong> When not using incremental bids, the keyword bid is the maximum amount an advertiser can be charged for a click.</li>
+	<li class="indent-1"><strong>Other advertisers&#39; bids for the same keyword.</strong> In online advertising, advertisers pay just $.01 more than the next-highest bidder, all other factors being equal. As a result, they could possibly pay less than the bid amount. (Microsoft Advertising does not disclose what other advertisers are bidding.)</li>
+	<li class="indent-1"><strong>Incremental bids to target customers by time of day, gender, or other target criteria.</strong> If a customer who matches one or more of an advertiser&rsquo;s target criteria clicks an ad, the advertiser also pays the amount of the corresponding&nbsp;incremental bids, see <a data-content-id="" data-content-type="" href="https://help.ads.microsoft.com/#apex/3/en/ext51004/-1/en" managed-link="" target="_blank">How to target my customers by adjusting my bids</a> for more information.</li>
+	<li class="indent-1"><strong>Note on how incremental bids are calculated: </strong>Previously, if advertisers used multiple incremental bids, those adjustments were added together if a searcher met more than one of the criteria. Now, Microsoft Advertising uses the industry-standard calculation method, multiplication, to combine incremental bid adjustments.</li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="4.7" name="4.7"></a>4.7&nbsp;Ad Inquiry</h4>
+
+<p><strong>Customer facing? </strong>No; use only for bid recommendations.</p>
+
+<p><strong>How to use:</strong></p>
+
+<p class="indent-1"><strong>Data source:</strong> Provides actual bids for advertisers by position.</p>
+
+<p class="indent-1"><strong>When to use:</strong> Use when an advertiser wants to know exactly how much to bid to ensure a position versus the competitive set.</p>
+
+<p class="indent-1">Use when bidding is focused on a specific KW or small set. Tool runs one at a time.</p>
+
+<p class="indent-1"><strong>How does account age affect bids:</strong> The higher the CTR%, the more likely the CPC will be lower to achieve desired position.</p>
+
+<p class="indent-1"><strong>Advantages:</strong> Calculate exact amount an advertiser needs to pay to achieve a position. View metrics for competitive set.</p>
+
+<p class="indent-1"><strong>Limitations:</strong> Does not give actual recommended bids. User will need to calculate based on competitive set.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="4.8" name="4.8"></a>4.8&nbsp;Editor (keyword research - get bid suggestions)</h4>
+
+<p><strong>Customer facing?</strong> Yes</p>
+
+<p><strong>How to use:</strong></p>
+
+<p class="indent-1"><strong>Data source:</strong> Uses same data source as keyword tab price estimation in Microsoft Advertising user interface. Differences between two interfaces is typically a result of the referenced time range.</p>
+
+<p class="indent-1"><strong>When to use:</strong> Estimated bids represent the average historical cost per click (CPC) paid.</p>
+
+<p class="indent-1">Average CPC is based on this formula: maximum CPC &times; CTR. Tool cannot predict actual market conditions, so no guarantee estimated bids will place an ad in estimated position. Use when you know exactly what position is desired.</p>
+
+<p class="indent-1"><strong>How does account age affect bids:</strong> Advertiser/account dynamics are not considered.</p>
+
+<p class="indent-1"><strong>Advantages:</strong> Simulates a bid amount an advertiser needs to take it to reach a desired position.</p>
+
+<p class="indent-1"><strong>Limitations:</strong> Does not consider&nbsp;auction historical performance.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="4.9" name="4.9"></a>4.9 Bid and traffic estimation for new keywords</h4>
+
+<p><strong>Customer facing?</strong> Yes</p>
+
+<p><strong>How to use:</strong></p>
+
+<p class="indent-1"><strong>Data source:</strong> Estimates are based on a keyword&rsquo;s performance in the past seven&nbsp;days, and bids are based on marketplace average bids during same time period.</p>
+
+<p class="indent-1"><strong>When to use:</strong> When bidding on keywords.</p>
+
+<p class="indent-1"><strong>Advantages:</strong> This information gives advertisers a great starting point for deciding what to bid on keywords.</p>
+</div>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+<p><strong><strong><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span>February&nbsp;</strong>2019</strong></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Change history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td><strong>Item</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong>Date</strong></td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/160261">CONTENT TRACKING 160261</a></td>
+			<td>MAST: KB 3183081 - Bidding and Price Estimation - Manual CPC updates section 1.3</td>
+			<td>10/15/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/159606">CONTENT TRACKING 159606</a></td>
+			<td>MAST - KB 3183081 - Bidding and Price Estimation - Max. Conversions Market Update section 1.5 &amp;1.7</td>
+			<td>9/24/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/159549">CONTENT TRACKING 159549</a></td>
+			<td>MAST: KB 3183081 - Bidding and Price Estimation - Target ROAS GA section 1.9</td>
+			<td>9/22/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/158371">CONTENT TRACKING 158371</a></td>
+			<td>MAST - KB 3183081 - Bidding and Price Estimation - Target CPA clarification</td>
+			<td>8/25/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/157846">CONTENT TRACKING 157846</a></td>
+			<td>MAST: KB 3183081 - Microsoft Advertising Bidding and price estimation - Removal of min, conversion requirements section 1.2</td>
+			<td>8/7/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/155040">CONTENT TRACKING 155040</a></td>
+			<td>MAST - KB 3183081 added new section and information about Target ROAS section 1.8</td>
+			<td>5/19/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/152466">CONTENT TRACKING 152466</a></td>
+			<td>MAST - KB 3183081 - Bidding and price estimation - Automated Bids Learning Period Update</td>
+			<td>3/5/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/149007">CONTENT TRACKING 149007</a></td>
+			<td>MAST - KB 3183081 - In-Context Recommendations</td>
+			<td>11/25/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/149360">CONTENT TRACKING 149360</a></td>
+			<td>MAST - KB 3183081 - &#39;Learning&#39; Status for Automated Bid Strategies</td>
+			<td>11/21/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/147876">CONTENT TRACKING 147876</a></td>
+			<td>MAST: Update KB 3183081</td>
+			<td>10/3/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/146335">CONTENT TRACKING 146335</a></td>
+			<td>MAST: Article 3183081 update to soection 1.4 ACT</td>
+			<td>8/9/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/145004">CONTENT TRACKING 145004</a></td>
+			<td>MAST: Add Speak Up asset to listed KBs</td>
+			<td>6/26/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/142508">CONTENT TRACKING 142508</a></td>
+			<td>KB 3183081 - Maximise Clicks update</td>
+			<td>4/15/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/140096" role="heading">Content Tracking 140096</a></td>
+			<td>MAST: Bidding KB 3183081 Updating max clicks guidance</td>
+			<td>2/14/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/139842" role="heading">Content Tracking 139842</a></td>
+			<td>MAST: KB 3183081 Adding link to section 3.</td>
+			<td>2/7/2019</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>

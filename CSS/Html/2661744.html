@@ -1,0 +1,175 @@
+﻿<header><h1>ASMS – Understanding EA Billing and Invoice Issues</h1></header><p><span lang="EN">Submit a </span><a href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder="><span lang="EN"><span><span>ModTrack</span></span></span></a><span lang="EN"> request to update this TSG.</span></p>
+
+<h3><a id="Overview" name="Overview"></a>Overview</h3>
+
+<p>This TSG provides directions for common EA Portal billing scenarios. It applies to Direct Customers and Partners who have an Azure Enterprise Agreement (EA).</p>
+
+<p><strong>Note:</strong>&nbsp;This TSG applies to SEs and TAs who are monitoring the following queues:</p>
+
+<ul>
+	<li><strong>MSaaS ASMS EAL MCA&nbsp;</strong>(Global English and non-APJ LL; includes USG)</li>
+	<li><strong>MSaaS ASMS EAL MCA - APJ Local Language&nbsp;</strong>(Mandarin, Korean, Japanese)<br>
+	&nbsp;</li>
+</ul>
+
+<h3><strong><a id="Policy" name="Policy"></a>Policy</strong></h3>
+
+<p><strong>Important</strong>: When assisting a customer, you may be required to provide them with a copy of details that contain Personal Identifiable Information (PII) (Ex: copy of invoice). In these scenarios, you must always be sure to delete these downloads from your computer&rsquo;s hard drive as soon as you are done using them. This is to avoid accidently exposing the customer&rsquo;s PII.</p>
+
+<h3><strong><a id="Customer Experience and Provisioning" name="Customer Experience and Provisioning"></a>Customer Experience and Provisioning</strong></h3>
+
+<p>Customers should follow these instructions to view their billing information in the EA Portal.</p>
+
+<ol>
+	<li><span lang="EN-GB"><span>Click <strong>Reports</strong> on the left navigation, and view the <strong>Usage Summary</strong> tab</span></span><span><span>.</span></span></li>
+	<li><span lang="EN-GB"><span><span>Select the desired date range from the drop-down menu on the top left</span></span></span><span><span>.</span></span>
+	<ol style="list-style-type:lower-alpha">
+		<li><span lang="EN-GB"><span><span>To view the Usage Summary with custom start and end dates, toggle from Monthly (M) to Custom (C) view on the top right</span></span></span><span><span>. The first time a customer uses C view, it will default to the previous 12 months, or less if their EA agreement began fewer than 12 months ago.</span></span></li>
+	</ol>
+	</li>
+	<li><span lang="EN-GB"><span><span>Select a time period on the graph to view additional detail.</span></span></span><span><span> The customer can also filter by department, account, or subscription below the graph, or view details for Azure Services, Charges Billed Separately, and Azure Marketplace charges. </span></span></li>
+</ol>
+
+<p><span><span> </span></span><span asset="4538663" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4538663]</span><br>
+&nbsp;</p>
+
+<h4><strong><a id="Charges" name="Charges"></a>Charges</strong></h4>
+
+<p>Total Overage has two components, Service Overage and Charges Billed Separately, which are billed together in a single Overage invoice as seen below. Overages can be applied against Monetary Credit (MC) following <a data-content-id="" data-content-type="" href="https://empguide-v4.trafficmanager.net/concession/1963" managed-link="" target="_blank">EmpGuide 1963</a><span><span>. Charges Billed Separately cannot be applied against MC.</span></span><br>
+<br>
+<span asset="4538664" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4538664]</span><br>
+<br>
+<span><span>The Sum of the Extended Cost in the Usage Detail Report should match the sum of Commitment Usage, Service Overage, and Charges Billed Separately in the Usage Summary. Reserved Instance (RI) purchasing fees are only visible in the Usage Summary, and not in the Usage Details report; this may cause a mismatch between the two totals.</span></span>&nbsp;Thus, it is recommended to check the &ldquo;Azure Service&rdquo; line items first when discrepancy is reported by a customer.<br>
+&nbsp;</p>
+
+<h4><strong><a id="Marketplace Invoicing" name="Marketplace Invoicing"></a>Marketplace Invoicing</strong></h4>
+
+<p>Azure customers receive a combined invoice for Azure First-Party overage and Third-Party Azure Marketplace purchases and consumption. The exception to this is customers in Australia, Japan, and Singapore, who receive separate invoices for First-Party overage and Third-Party products.</p>
+
+<p><span><span>See </span></span><a href="https://internal.support.services.microsoft.com/en-us/help/4538368" managed-link="" target="_blank"><span><span><span>Combined Overage and Marketplace Invoices</span></span></span></a><span><span> for more information.</span></span></p>
+
+<p><strong>Note:</strong> If a single&nbsp;overage invoice contains more than the maximum of 1100 rows, the system automatically generates a second invoice for the same billing period to display&nbsp;the remaining services.<br>
+&nbsp;</p>
+
+<h3><strong><a id="Support Scenarios" name="Support Scenarios"></a>Support Scenarios</strong></h3>
+
+<h4><strong><a id="Viewing the Customer Bill" name="Viewing the Customer Bill"></a>Viewing the Customer Bill</strong></h4>
+
+<p>This scenario applies to customers who need help understanding their EA bill.</p>
+
+<ol>
+	<li>Determine which of the following scenarios applies:
+	<ol style="list-style-type:lower-alpha">
+		<li><span>Total invoice does not match usage listed in EA Portal.</span></li>
+		<li><span>Customer is unable to reconcile the usage summary with their invoice.</span></li>
+		<li><span>Other specific requests about SKU price, coverage period, etc.</span></li>
+	</ol>
+	</li>
+	<li>Look up the customer&rsquo;s enrollment in the EA portal using the <strong>Search function</strong>.</li>
+	<li>Make sure the customer is using the EA Portal, as opposed to some other tool.</li>
+	<li>Click <strong>Usage Summary</strong> and select the time period in question using the Commitment Term drop-down list.</li>
+	<li>Download the invoice from <a href="https://www.explore.ms/" managed-link="" target="_blank">Explore.ms</a> and compare it to the usage in Usage Summary.
+	<ul>
+		<li>For more information on Explore.ms and downloading invoices, see <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4463565" managed-link="" target="_blank">TSG 4463565</a>.</li>
+	</ul>
+	For price-specific questions, download or search for the <strong>Price Sheet</strong> to check for errors or omissions.</li>
+	<li>Triage and share the details with the customer.</li>
+	<li>In case there is an actual error, follow the guidance in&nbsp;<a href="https://internal.support.services.microsoft.com/en-us/help/2658533">TSG 2658533</a>.</li>
+	<li>Assist the customer with downloading usage information as appropriate.<br>
+	&nbsp;</li>
+</ol>
+
+<h4><strong><a id="Account Migration Scenarios" name="Account Migration Scenarios"></a>Account Migration Scenarios</strong></h4>
+
+<p>The following scenarios apply to customers who have migrated their accounts to EA from a non-EA system.</p>
+
+<p><strong>Customer received a bill from a non-EA system after enrolling in EA</strong></p>
+
+<p>This happens if EA account migrations were completed within three days of the invoice for the previous month&rsquo;s usage. The customer should pay this bill via their regular payment process. All future billing notifications from CMAT will show $0.</p>
+
+<p><strong>Customer didn&rsquo;t receive a bill from a non-EA after enrolling in EA</strong>:</p>
+
+<p>This happens if EA account migrations are completed in the middle of the customer&rsquo;s billing cycle, outside the three-day window on either side of the invoice. The usage-to-date is brought forward and paid against the Azure Pre-payment. If there is no Pre-payment balance left, the customer will be invoiced at the end of the quarter.</p>
+
+<h4><strong><a id="Negative Balances" name="Negative Balances"></a>Negative Balances</strong></h4>
+
+<p>If the customer&rsquo;s Usage Summary lists a negative balance (as shown below in green), there is probably an invoice cancellation pending. Reach out to Billing Team to complete the invoice calculation and remove the negative balance.<br>
+<br>
+<span asset="4538671" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4538671]</span><br>
+&nbsp;</p>
+
+<h4><strong><a id="Misapplied Payments" name="Misapplied Payments"></a>Misapplied Payments</strong></h4>
+
+<p><span><span><span>If a customer reports an issue with a misapplied payment for an EA invoice, connect the customer (for direct customers) or the Partner (for indirect customers) with the Credit and Collections team.</span></span></span></p>
+
+<p><strong>Note:</strong> Indirect customers should contact their Partner for pricing, billing, and credit scenarios.<br>
+&nbsp;</p>
+
+<h4><strong><a id="Customer Requests an Invoice Originating from a Specific Location" name="Customer Requests an Invoice Originating from a Specific Location"></a>Customer Requests an Invoice Originating from a Specific Location</strong></h4>
+
+<p>If you receive such a case, advise the customer to work with their Partner and Account Manager.<br>
+<br>
+<strong>Note</strong>: The origin of an invoice is based on the EA contract, which ASMS cannot change.<br>
+&nbsp;</p>
+
+<h3><strong><a id="Engagement and Escalation Path" name="Engagement and Escalation Path"></a>Engagement and Escalation Path</strong></h3>
+
+<p>Follow the guidance in&nbsp;<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4563342" managed-link="" rel="noreferrer noopener" tabindex="-1" target="_blank" title="https://internal.support.services.microsoft.com/en-us/help/2872061">TSG 4563342</a>&nbsp;for any questions you may have about the above processes.<br>
+&nbsp;</p>
+
+<h3><strong><a id="Online References" name="Online References"></a>Online References</strong></h3>
+
+<ul>
+	<li>For more information about using the EA portal to look up customer accounts, see <a href="https://internal.support.services.microsoft.com/en-us/help/2870258">TSG <span><span>2870258</span></span></a><span><span>.</span></span></li>
+	<li>For specific handling instructions for corrections and credits, see <a href="https://internal.support.services.microsoft.com/en-us/help/2658533">TSG 2658533</a>.<br>
+	&nbsp;</li>
+</ul>
+
+<h3><strong><a id="TSG Change Log" name="TSG Change Log"></a>TSG Change Log</strong></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="132">
+			<p><span><strong>Date </strong></span></p>
+			</td>
+			<td width="126">
+			<p><span><strong>Updated By </strong></span></p>
+			</td>
+			<td width="364">
+			<p><span><strong>Content Updated </strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">08/19/2020</td>
+			<td width="126"><span><span>v-katzma</span></span></td>
+			<td width="364"><span><span>Comprehensive Rewrite: Updated TSG content and formatting as part of the TSG Refresh Project</span></span></td>
+		</tr>
+		<tr>
+			<td width="132">09/10/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added Note about what happens if an invoice has more that 1100 rows as per ModTrack 3133.</td>
+		</tr>
+		<tr>
+			<td width="132">10/09/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Added&nbsp;<em>Customer Requests an Invoice Originating from a Specific Location</em> scenario per ModTrack 3217.</td>
+		</tr>
+		<tr>
+			<td width="132">10/13/2020</td>
+			<td width="126">mievan</td>
+			<td width="364">Added <em>Policy </em>guidance on handling customer PII.&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">11/06/2020</td>
+			<td width="126">v-viizza</td>
+			<td width="364">Added a reference to TSG 4463565 in step 5 of the <em>Viewing the Customer Bill</em> scenario related to ModTrack 3175.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<div>
+<div>&nbsp;</div>
+</div>

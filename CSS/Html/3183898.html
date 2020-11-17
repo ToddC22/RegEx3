@@ -1,0 +1,347 @@
+﻿<header><h1>Process: Microsoft Advertising: Using Google Import</h1></header><p><span asset="4509089" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4509089]</span></p>
+
+<h3><span><span><span><span>Who should use this article?</span></span></span></span></h3>
+
+<ul>
+	<li><span><span><span><span><span>Microsoft Advertising</span></span></span></span></span></li>
+</ul>
+
+<h3><span><span><span><span>What is this article about?</span></span></span></span></h3>
+
+<p class="ng-scope"><span><span><span lang="EN-GB"><span><span>This article is about how advertisers can import campaigns from Google Ads directly through the web user interface using their Google Ads credentials. They can also import using a Google Ads import file, using the process outlined in KB </span></span></span><span lang="EN-GB"><a href="https://internal.support.services.microsoft.com/help/3183709" target="_blank"><span><span><span><span><span>3183709 Process: Microsoft Advertising: Bulk Upload (Import from File)</span></span></span></span></span></a></span><span lang="EN-GB"><span><span>.</span></span></span></span></span></p>
+
+<h3><span><span><span><span><a id="top" name="top"></a>Table of contents </span></span></span></span></h3>
+
+<h4><span><span><span><span>1. </span></span><a bookmark-id="1" href="#1" managed-link=""><span><span><span><span><span>How to use the Google Import tool</span></span></span></span></span></a><a bookmark-id="1" href="#1" managed-link="">&nbsp;</a> &nbsp; &nbsp; &nbsp;&nbsp;</span></span></h4>
+
+<h4><span><span><span><span>2. </span></span><a bookmark-id="2" href="https://internal.support.services.microsoft.com/en-us/help/3183898#2" managed-link="" target="">How to create an Import File</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span></h4>
+
+<h4><span><span><span><span>3. </span></span><a bookmark-id="3" href="https://internal.support.services.microsoft.com/en-us/help/3183898#3" managed-link="" target="">What gets imported from Google Ads</a></span></span></h4>
+
+<h4><span><span><span><span>4. </span></span><a bookmark-id="4" href="#4" managed-link=""><span><span><span><span><span>Best practices for Google Import</span></span></span></span></span></a><a bookmark-id="4" href="#4" managed-link="">&nbsp; &nbsp;</a> &nbsp; &nbsp; &nbsp;</span></span></h4>
+
+<h4><span><span><span><span>5. </span></span><a bookmark-id="5" href="https://internal.support.services.microsoft.com/en-us/help/3183898#5" managed-link="" target="">Audience Campaign Imports (Google Display Network - GDN)</a></span></span></h4>
+
+<h4><span><span><span><span>6. </span></span><a bookmark-id="6" href="https://internal.support.services.microsoft.com/en-us/help/3183898#7" managed-link="" target="">Technical issues preventing Google Import</a></span></span></h4>
+
+<h4><span><span><span><span>7. </span></span><a bookmark-id="7" href="https://internal.support.services.microsoft.com/en-us/help/3183898#9" managed-link="" target="">Viewing Import History Logs</a></span></span></h4>
+
+<h4><span><span><span><span>8.<a bookmark-id="8" href="#8" managed-link=""> </a></span></span><a bookmark-id="8" href="#8" managed-link=""><span><span><span><span><span>Exporting from Microsoft Advertising</span></span></span></span></span></a></span></span></h4>
+
+<h4><span><span><span><span>9. </span></span><a bookmark-id="9" href="https://internal.support.services.microsoft.com/en-us/help/3183898#11" managed-link="" target="">Customer cannot log into Google Ads</a></span></span></h4>
+
+<p>&nbsp;</p>
+
+<h3><a id="1" name="1"></a>1.&nbsp;<span><span><span><span>How to use the Google Import tool</span></span></span></span></h3>
+
+<p><span><span><span><span><span>Advertisers can import campaigns from Google Ads directly through the web user interface using their Google Ads credentials. An Import Preview will show a summary of the changes that will be applied by the import. Advertisers will also have the option to opt out of certain settings or features like Ad Distribution&nbsp;and determine what aspects of their Google Ads campaigns to import.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>The preview will display the additions, updates, and total for the main entities campaign, ad groups, ads, and keywords. All other entities will be grouped into others.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Advertisers can use the Google Import Tool to import both individual and multiple accounts into Microsoft Advertising. </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Before import, be aware of the following:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>We currently <strong>do not support mixed campaigns</strong>. If a customer wants to import Search <strong>and</strong> DSA, they will need to do two separate imports.</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><a name="1.1"></a><strong><span><span><span>Importing process:</span></span></span></strong></span></span></p>
+
+<p><span><span><span><span><span>Advertisers can use the process outlined in <a data-content-id="" data-content-type="" href="https://help.ads.microsoft.com/#apex/ads/en/51050/0-500" managed-link="" target="_blank">Import Campaigns Directly from Google Ads</a> to import both single and multiple Google Ads campaigns. </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>For imports, note the following: </span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span>Google Ads sign-in is required, and advertisers will need to agree to grant permissions to Microsoft Advertising&rsquo;s UI to import all data successfully.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>During import, advertisers can use <strong>What to Import </strong>to select several additional import options such as tracking, lists, or new/existing items.</span></span></span></span></span>
+	<ul style="list-style-type:circle">
+		<li><span><span><span><span><span>Selecting <strong>Show Advanced Options </strong>will further increase their customization for these options. </span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span>Advertisers can set up a recurring <strong>Sync Schedule</strong>. See <a data-content-id="" data-content-type="" href="https://help.ads.microsoft.com/#apex/3/en/56817/0-500" managed-link="" target="_blank">Schedule Imports from Google Ads and Review Import Error Logs</a> for more information. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>By default, we will raise bids/budgets to meet our system&rsquo;s minimum requirements, unless an advertiser opts out of this during the import process. </span></span></span></span></span></li>
+	<li><span><span><strong><span><span><span>Budget/Bid note</span></span></span></strong><span><span><span>: A common error when importing from Google Ads is to overlook the bid/budget options within the <strong>What to Import &gt; Updates to Existing Items</strong> section, as these are hidden under the <strong>Show Advanced Options</strong> drop-down. </span></span></span></span></span></li>
+</ul>
+
+<p class="indent-1"><span><span><span><span><span>These operate separately from the bids and budgets values for new imports. Ask advertisers to review <strong>both</strong> sets of bid or budget options, especially if they plan to set up recurring Google Imports, to avoid unexpected changes being made in their Microsoft Advertising account.</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><strong><span><span><span>Multiple account import notes: </span></span></span></strong></span></span>
+
+	<ul style="list-style-type:circle">
+		<li><span><span><strong><span><span><span>Account level URL options</span></span></span></strong><span><span><span> &ndash; We currently support only a single check box to opt in/out of the multiple account level URL options for all the accounts being imported. Customers can select the <strong>Show Tracking Template</strong> link, to open a pop-up box which will contain the tracking templates for all the accounts.</span></span></span></span></span></li>
+		<li><span><span><strong><span><span><span>Microsoft Merchant Center</span></span></span></strong><span><span><span> &ndash; We currently do not support multiple MMC store mappings for different accounts or for different campaigns for an account. </span></span></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><span><span><span><span><a id="2" name="2"></a>2. How to create an Import file</span></span></span></span></h3>
+
+<p class="ng-scope"><span><span><span>You can import data from other online advertising programs into Microsoft Advertising using a file. </span></span></span></p>
+
+<p class="ng-scope"><span><span><span>Simply fill out the import template which you can download from Microsoft Advertising by selecting <strong>Import Campaigns</strong>, then <strong>Import from file</strong>. Select <strong>Download the import template</strong>, fill it out with your campaign data, and save it as a .csv file. You can then import the file into your Microsoft Advertising account.</span></span></span></p>
+
+<p class="ng-scope"><span><span><span>For guidance on using the import file, see the </span></span></span><a data-content-id="" data-content-type="" href="https://help.ads.microsoft.com/#apex/3/en/51039/0-500" managed-link="" target="_blank">Import data using a file</a><span><span> help page</span></span><span><span><span>.</span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link=""><span><span><span>Return to top</span></span></span></a></p>
+
+<h3><span><span><span><span><a id="3" name="3"></a>3. What gets imported from Google Ads </span></span></span></span></h3>
+
+<p><span><span><span><span><span>Not all data is included in an import from Google Ads (for example, radius targeting or zip code targeting information). Be aware that you may not see a warning about the data that is not imported.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>See <a href="https://help.ads.microsoft.com/#apex/3/en/50851/0-500" target="_blank"><span><span><span>What gets imported</span></span></span></a> for more information on what does and doesn&rsquo;t get brought in from Google Ads.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>After the import, be sure to review your campaigns and ensure that targeting, bids, and all other data is configured correctly. Then make any needed changes within Microsoft Advertising.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Things to be aware of:</span></span></span></strong></span></span></p>
+
+<ul>
+	<li><span><span><span><strong><span><span><span>Audience Campaigns (Display Ads, in Google):</span></span></span></strong><span><span><span> Only images with supported aspect rations will be imported.</span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>Location Targeting/Bid Adjustments</span></span></span></strong><span><span><span>: Be aware that if a location target from Google Ads doesn&rsquo;t exist in Microsoft Advertising, campaigns targeting those locations will be <strong>mapped to the parent location</strong> if matched. Unmatched locations aren&rsquo;t imported, but the corresponding campaigns may be active. We flag Location targeting errors with a warning message during import.</span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>Campaign Start/End Date: </span></span></span></strong><span><span><span>If the campaign end-date is already in the past, the campaign will be set to paused. Otherwise, the campaign start and end dates will be applied to all Ad Groups within the campaign.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Certain <strong>Automated Bid Strategies in Google Ads</strong> are either unavailable in Microsoft Advertising, or require a minimum number of conversions to be available (see KB </span></span></span><span lang="EN-GB"><a href="https://internal.support.services.microsoft.com/help/3183081" target="_blank"><span lang="EN-US"><span><span><span><span>3183081 Informational: Microsoft Advertising: Bidding and price estimation</span></span></span></span></span></a></span><span><span><span> for more information). In these scenarios, the campaigns will be imported as eCPC and use a bid value taken from the Bid Management Platform.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><strong><span><span>Currency note: </span></span></strong><span><span>In Google Ads and Microsoft Advertising, currency is set at the account level when the account is created, and cannot be updated later. When importing from a Google account using one currency, into a Microsoft Ads account with another currency, the system will provide two options:</span></span></span></span></span></span></li>
+</ul>
+
+<ol>
+	<li><span><span><span><span><span>Import using a currency converter, which will apply a monthly conversion rate to the bids/budget values. (Default option.)</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Import bids/budget values as-is, with no conversion for currency. (Advertisers will then need to manually adjust bids/budget.) </span></span></span></span></span></li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link=""><span><span><span>Return to top</span></span></span></a></p>
+
+<h3><span><span><span><span><a id="4" name="4"></a>4. Best practices for Google Import </span></span></span></span></h3>
+
+<ul>
+	<li><span><span><span><span><span>Your web browser must be set to allow pop-up windows. </span></span></span></span></span></li>
+	<li><span><span><span><span lang="EN-GB"><span>Make sure your import file doesn&rsquo;t exceed the Microsoft Advertising UI limits for campaigns or ad groups, as noted in the account setup and size limitations section of KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/3183363" managed-link="" target="_blank">3183363 Tool User Guide: Microsoft Advertising UI</a>.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Each keyword or phrase is limited to 100 characters. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>If you use keywords as dynamic text, make sure that they do not exceed 70 characters. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>Adding multiple negative match keywords at the keyword level is limited to 1,022 characters. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>The total file size must be 2 megabytes (MB) or smaller. <strong>Note</strong>: In instances where the file size exceeds 2 MB and it is not practical, divide the file into smaller multiple files. You may use Editor for campaign import. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>Look for duplicate keywords in the file. For example, &quot;Apple&quot; and &quot;apple&quot; will appear as duplicates. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>Look for&nbsp;</span></span></span></span></span><span><span><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>keywords that may not be permitted. For example, &quot;gambling&quot; and &quot;sexually explicit.&quot;</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span>When importing from Google Ads, select <strong>not importing</strong> for the following columns to avoid creating errors due to unsupported functionality: </span></span></span></span></span>
+	<ul style="list-style-type:circle">
+		<li><span><span><span><span><span>Tracking Template</span></span></span></span></span></li>
+		<li><span><span><span><span><span>Destination URL</span></span></span></span></span></li>
+		<li><span><span><span><span><span>Customer Parameters</span></span></span></span></span></li>
+		<li><span><span><span><span><span>Mobile final URL</span></span></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<p class="ng-scope"><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span>Return to top</span></span></span></a></span></span></span></p>
+
+<h3><a id="5" name="5"></a>5. Audience Campaign Imports (Google Display Network - GDN)</h3>
+
+<p><span><span><span lang="EN-GB"><span><span>Advertisers can import Audience Campaigns (known in Google as GDN) into their accounts, including images, associated feed lists and Audiences and Targets.</span></span></span></span></span></p>
+
+<p><span><span><strong><span lang="EN-GB"><span><span>Things to note:</span></span></span></strong><span lang="EN-GB"></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span lang="EN-GB"></span><strong><span lang="EN-GB"><span><span>Feed Lists: </span></span></span></strong><span lang="EN-GB"><span><span>If Google feeds haven&rsquo;t yet been imported into Microsoft Merchant Center, advertisers should <strong>import product offers to Microsoft Merchant Center first</strong>. Once the Microsoft Merchant Center store is set up, select this store under <strong>Import Options</strong> in the Google Import tool to link it to feed-based Audience Campaigns.</span></span></span></span></span></span></li>
+	<li><span><span><span><span lang="EN-GB"></span><strong><span lang="EN-GB"><span><span>Campaign Placement Exclusions: </span></span></span></strong><span lang="EN-GB"><span><span>To import these, select <strong>Website Exclusions &gt; Advanced Import Options</strong>.</span></span></span></span></span></span></li>
+	<li><span><span><span><span lang="EN-GB"></span><strong><span lang="EN-GB"><span><span>Ad Extensions</span></span></span></strong><span lang="EN-GB"><span><span>: Imported into an account&rsquo;s shared library, but Microsoft Advertising currently doesn&rsquo;t support association of Ad Extensions to Audience Campaigns.</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><strong><span lang="EN-GB"><span><span>Audiences and Targets: </span></span></span></strong></span></span></p>
+
+<p><span><span><span lang="EN-GB"><span><span>The following Audiences and Targets are available for import: </span></span></span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="301">
+			<p align="center"><span><strong><span lang="EN-GB"><span><span>Audience Ads in Search Campaigns</span></span></span></strong></span></p>
+			</td>
+			<td width="301">
+			<p align="center"><span><strong><span lang="EN-GB"><span><span>Dedicated Audience Campaigns</span></span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="301">
+			<p><span><span lang="EN-GB"><span><span>In-Market Audiences.</span></span></span></span></p>
+			</td>
+			<td width="301">
+			<p><span><span lang="EN-GB"><span><span>In-Market Audiences.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="301">
+			<p><span><span lang="EN-GB"><span><span>Rule-based remarketing lists.</span></span></span></span></p>
+			</td>
+			<td width="301">
+			<p><span><span lang="EN-GB"><span><span>Rule-based remarketing lists.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="301">
+			<p><span><span lang="EN-GB"><span><span>Custom combination lists.</span></span></span></span></p>
+			</td>
+			<td width="301">
+			<p><span><span lang="EN-GB"><span><span>Custom combination lists.</span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="301">
+			<p><span><span lang="EN-GB"><span><span>Campaign-level and ad group-level associations for the audiences.</span></span></span></span></p>
+			</td>
+			<td width="301">
+			<p><span><span lang="EN-GB"><span><span>Ad group-level associations for the audiences (campaign-level not supported for dedicated Audience campaigns). </span></span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span><strong><span lang="EN-GB"><span><span>Importing Audience Campaigns</span></span></span></strong><span lang="EN-GB"></span></span></span></p>
+
+<p><span><span><span lang="EN-GB"><span><span>Advertisers can use the majority of the process outlined in </span></span></span><span lang="EN-GB"><a href="https://help.ads.microsoft.com/#apex/ads/en/51050/0-500" target="_blank"><span><span><span><span><span>Import Campaigns Directly from Google Ads</span></span></span></span></span></a></span><span lang="EN-GB"><span><span> to import both single and multiple Google Ads campaigns, with the following extra callouts:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>At the <strong>What To Import </strong>stage, choose <strong>Show Advanced Options</strong>.</span></span></span></span></span></span></li>
+	<li><span><span><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>Select the tick-box for <strong>Audience Lists and targets</strong>. </span></span></span></span></span></span></li>
+</ul>
+
+<p class="indent-1"><span><span><strong><span lang="EN-GB"><span><span>Note</span></span></span></strong><span lang="EN-GB"><span><span>: Customers can currently only import Audiences and Targets into single accounts. Shared lists will not be imported.</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span lang="EN-GB"></span><strong><span lang="EN-GB"><span><span>New Remarketing List</span></span></span></strong><span lang="EN-GB"><span><span>,<strong> Audience Goal</strong>,<strong> </strong>or<strong> Conversion Goal Note</strong>: If these haven&rsquo;t previously been imported the advertiser <strong>must</strong> do the <strong>one-time manual step of associating their UET tag</strong>.</span></span></span></span></span></span></li>
+	<li><span><span><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>Microsoft Advertising matches Google Ads In-Market Audience Associations to the <strong>corresponding</strong> In-Market Audience Segment in Microsoft Advertising, importing all associated attributes including <strong>status</strong> and <strong>bid boost</strong>.</span></span></span></span></span></span></li>
+	<li><span><span><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>If an In-Market Audience in Google Ads <strong>does not exist</strong> in Microsoft Advertising, ad groups associated with those segments in Google Ads will be <strong>mapped to the parent</strong> audience in Microsoft Advertising instead.</span></span></span></span></span></span></li>
+	<li><span><span><span><span lang="EN-GB"></span><span lang="EN-GB"><span><span>If there are multiple ad group associations for the same in-market audience, the exact matching segment with the audience will be imported (for example, Apparel &amp; Accessories &gt; Active wear). If no exact matching segment is available, then active targeting segments with the highest bid boost will be imported. If an association with parent segment was imported because the child segment wasn&rsquo;t available at the time, when the child segment later become available, we will delete the original parent association and add the child association.</span></span></span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a>&nbsp;</p>
+
+<h3><span><span><span><span><span><a id="6" name="6"></a>6. Technical issues preventing Google Import</span></span></span></span></span></h3>
+
+<p><span><span><span><span><span>If the advertiser is having trouble importing campaigns, here are a few tips that can help:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span>Set the web browser to allow pop-up windows. For more information, see the help section in the web browser.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Make sure the data you import meets the entity limits, features that are supported in Microsoft Advertising, and entities that do not get imported because they are not supported in Microsoft Advertising yet:</span></span></span></span></span></span>
+	<ul style="list-style-type:circle">
+		<li><span><span><span><span><span><span>Refer to </span></span></span><span lang="EN-GB"><a href="https://help.ads.microsoft.com/#apex/3/en/50851/0" target="_blank"><span lang="EN-US"><span><span><span><span>What gets imported</span></span></span></span></span></a></span><span><span><span> for more information on what to check after importing from Google Ads. Review all the areas under <strong>Items you should check after import - Some specific situations require special attention during import. If you are importing any of the items below, make sure to review the following information.</strong> The import of these attributes may cause customer DSAT due to feature disparity. These are the areas where the customer may request for refunds and credits.</span></span></span></span></span></span>
+		<ul style="list-style-type:disc">
+			<li><span><span><span><strong><span><span><span>Multiple Campaign Languages: </span></span></span></strong><span><span><span>Go to </span></span></span><span lang="EN-GB"><a href="https://help.ads.microsoft.com/#apex/3/en/50851/0" target="_blank"><span lang="EN-US"><span><span><span><span>What gets imported</span></span></span></span></span></a></span><span><span><span>, to understand how languages are handled during import.</span></span></span></span></span></span>
+			<ul style="list-style-type:circle">
+				<li><span><span><span><strong><span><span><span>Problem: </span></span></span></strong><span><span><span>Due to how Microsoft Advertising handles languages, your ad group language may get set to English during the import and can cause low impressions if the customer wants to target different language customers.</span></span></span></span></span></span></li>
+			</ul>
+			</li>
+			<li><span><span><span><strong><span><span><span>CPA Bidding:</span></span></span></strong><span><span><span> Microsoft Advertising doesn&#39;t have CPA (cost-per-acquisition) bidding. When a CPA bid is imported from Google Ads, Microsoft Advertising changes the CPA bid to a CPC (cost-per-click) bid. If you use CPA bidding in Google Ads, we recommend that you review your ad group bids after importing.</span></span></span></span></span></span>
+			<ul style="list-style-type:circle">
+				<li><span><span><span><strong><span><span><span>Problem: </span></span></span></strong><span><span><span>This will result in running out of budget very quickly since CPA bids are usually way higher than CPC bids.</span></span></span></span></span></span></li>
+			</ul>
+			</li>
+			<li><span><span><span><span><span><span>A detailed list of entities and attributes that do and do not get imported can be found at </span></span></span><span lang="EN-GB"><a href="https://help.ads.microsoft.com/#apex/3/en/50851/0" target="_blank"><span lang="EN-US"><span><span><span><span>What gets imported</span></span></span></span></span></a></span><span><span><span> (<strong>Note</strong>: Some information can be re-created after import using Microsoft Advertising).</span></span></span></span></span></span></li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span><span>Have the customer try a different browser.</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span>For detailed troubleshooting on Google Imports, see KB </span></span></span><span lang="EN-GB"><a href="https://internal.support.services.microsoft.com/help/4294834" target="_blank"><span lang="EN-US"><span><span><span><span>4294834 Campaign Management: Errors signing into Google Ads</span></span></span></span></span></a></span><span><span><span> (Owned by Global Support).</span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><span><span><span><span><span><a id="7" name="7"></a>7. Viewing Import History Logs</span></span></span></span></span></h3>
+
+<ol>
+	<li><span><span><span><span><span><span>Select <strong>Import Campaigns</strong>, then Import schedule and history. The table in the Logs section contains details on imports that ran in the last 90 days. <strong>Note</strong>: To review an error file, in the <strong>Error file</strong> column, select <strong>Download error file</strong>.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Advertisers can check their past imports using the <strong>Import Settings</strong> column. This will provide a summary of the settings used during previous imports, with a selectable ellipsis control.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Selecting the ellipsis will open a pop-up window that will display the import settings.</span></span></span></span></span></span></li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a>&nbsp;</p>
+
+<h3><span><span><span><span><span><a id="8" name="8"></a>8. Exporting from Microsoft Advertising</span></span></span></span></span></h3>
+
+<p><span><span><span><span><span>Advertisers can export ads to a comma-separated values (.csv) file in Microsoft Office Excel, which they can then edit and import back into Microsoft Advertising or into another online advertising program.</span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="9" name="9"></a>9. Customer cannot log into Google Ads</h3>
+
+<p><span><span><span><span><span>If Google two-step verification is turned on, advertisers will need to create an application-specific password for Microsoft Advertising. Refer advertisers to </span></span></span><span lang="EN-GB"><a href="https://support.google.com/adwords/editor/answer/1075856?hl=en" target="_blank"><span lang="EN-US"><span><span><span><span>support.google.com/adwords</span></span></span></span></span></a></span><span><span><span> for guidance on establishing a unique password for Microsoft Advertising.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>A unique password is required for Microsoft Advertising within Google Ads because Microsoft uses the advertiser sign in information to request campaign data from Google. Microsoft Advertising doesn&rsquo;t retain sign in information for any purpose other than the import process.</span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+<p><strong><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span>June 2019</strong></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Change history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>Item</strong></p>
+			</td>
+			<td>
+			<p><strong>Title</strong></p>
+			</td>
+			<td>
+			<p><strong>Date</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/160264">CONTENT TRACKING 160264</a></td>
+			<td>MAST: Process: KB 3183898 - Using Google Import - update section 5 Audience campaign imports</td>
+			<td>10/19/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/159240">CONTENT TRACKING 159240</a></td>
+			<td>MAST - KB 3183898 - Using Google Import - Article Rewrite and Audience Import update</td>
+			<td>9/17/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/155442">CONTENT TRACKING 155442</a></td>
+			<td>MAST: KB 3183898 - Using Google Import - Currency Conversion Update section 3</td>
+			<td>5/29/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/152439">CONTENT TRACKING 152439</a></td>
+			<td>MAST - KB 3183898 - Using Google Import - Multiple Account Imports</td>
+			<td>3/9/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/149105" managed-link="">CONTENT TRACKING 149105</a></td>
+			<td>MAST - KB 3183898 - Google Import for unsupported bid strategies</td>
+			<td>11/13/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/147235">CONTENT TRACKING 147235</a></td>
+			<td>Process: Microsoft Advertising: Using Google Import - Outdated Links</td>
+			<td>9/11/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/147106">CONTENT TRACKING 147106</a></td>
+			<td>MAST: &quot;Using Google Import&quot; KB 3183898 Content Update</td>
+			<td>9/6/2019</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/145004">CONTENT TRACKING 145004</a></p>
+			</td>
+			<td>
+			<p>MAST: Add Speak Up asset to listed KBs</p>
+			</td>
+			<td>
+			<p>6/26/2019</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>

@@ -1,0 +1,268 @@
+﻿<header><h1>Procedure: Subscription payment is declined</h1></header><p><span asset="4049349" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4049349]</span></p>
+
+<p>&nbsp;</p>
+
+<p><span asset="4557567" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4557567]</span></p>
+
+<h3>Who should use this article?</h3>
+
+<ul>
+	<li>Accounts and Billing</li>
+	<li>Office</li>
+</ul>
+
+<h3>What is this article about?</h3>
+
+<p>This article describes how to handle various situations where a customer&#39;s payment is declined.</p>
+
+<h3><a id="top" name="top"></a>Table of contents</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<h4>1. <a bookmark-id="1" href="#1" managed-link="">Overview</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>2. Scenarios</h4>
+			</td>
+			<td>
+			<p class="MsoToc2">2.1 <a bookmark-id="2.1" href="#2.1" managed-link="">A user wants to cancel a subscription</a></p>
+
+			<p class="MsoToc2">2.2 <a bookmark-id="2.2" href="#2.2" managed-link="">The customer wants to renew or continue with a subscription</a></p>
+
+			<p class="MsoToc2">2.3 <a bookmark-id="2.3" href="#2.3" managed-link="" target="">The customer has a subscription token but can&rsquo;t redeem because of an issue with the token</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4 class="MsoToc1">3. What happens when a subscription charge fails to process</h4>
+			</td>
+			<td>
+			<p class="MsoToc2">3.1 <a bookmark-id="3.1" href="#3.1" managed-link="" target="">For customers with an Microsoft 365 subscription</a></p>
+
+			<p class="MsoToc2">3.2 <a bookmark-id="3.2" href="#3.2" managed-link="" target="">For customers with a Modern Xbox subscription</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4 class="MsoToc1">4. <a bookmark-id="4" href="#4" managed-link="">More information</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+<div class="kb-summary-section section">
+<h3><a id="1" name="1"></a>1. Overview</h3>
+
+<p>When our billing service tried to bill the credit card listed in the customer&#39;s account, the credit card was declined. The billing service will make several attempts to charge the payment to the customer&#39;s credit card. The customer&#39;s subscription will be suspended, then cancelled, unless the customer updates the payment option on their Microsoft account (or changes to a new payment option).</p>
+
+<p><strong><span><span><span><span>Identify if subscription is suspended</span></span></span></span></strong></p>
+
+<p><span><span><span><span><span><span><span><span><span>Review the System Activity comments in MST within the last three months to check if an <strong>AddViolationSubscription</strong> event has occurred. If no <strong>CancelSubscription</strong> or <strong>RemoveViolationSubscription</strong> occurs more recently in the comments, the subscription is suspended. Follow the appropriate scenarios for if a suspension has or has not occurred.</span></span></span></span></span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3 class="sbody-h4">2. Scenarios<span class="text-base"></span></h3>
+
+<h4 class="sbody-h4"><span class="text-base"><a id="2.1" name="2.1"></a></span>2.1 A customer wants to cancel a subscription:</h4>
+
+<p>If a customer is in decline and contacts support to cancel their subscription, refer to the following article:</p>
+
+<ul>
+	<li><span><span><span><span><span><span>KB </span></span></span></span><a href="https://internal.support.services.microsoft.com/help/2916962" target="_blank"><span><span><span>2916962 Procedure: Microsoft 365 Save and Retention</span></span></span></a></span></span></li>
+	<li><span><span><span><span><span>KB </span></span></span><a href="https://internal.support.services.microsoft.com/help/4547191" target="_blank">4547191 Procedure: Xbox: Dunning support for Xbox subscriptions</a><span><span> </span></span></span></span></li>
+</ul>
+
+<p><span><span><span></span></span></span><span><span><span><span>If the customer still wishes to cancel the subscription; any past balances in decline will need to be paid before you can assist with cancelation of the subscription, otherwise the suspension cycle will be left on the account. If the subscription is an Xbox subscription, refer to KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4547191" managed-link="" target="_blank">4547191</a>.</span></span></span></span></p>
+<span class="text-base"><strong>How to process declined payment with suspended status</strong>:</span><br>
+&nbsp;
+<ol class="sbody-num_list">
+	<li>Check account&nbsp;status to see if it has a billing violation in MST on account summary and in comment/information tab. If the account has a declined payment and violation comment, add new payment instrument.&nbsp;&nbsp;<br>
+	<br>
+	<span><span><span><span><strong>Note</strong>: Updating the existing payment instrument could be an option, however if the current payment instrument still fails to process a charge, a new payment is required before moving forward.</span></span></span></span></li>
+	<li>Switch payment instrument linked to the subscription.</li>
+	<li>Process the balance to the new payment instrument if the system does not automatically do so.</li>
+	<li>After the balance has been paid in full, ensure the billing violation has been removed and the subscription status is &#39;enabled&#39;. If the system did not remove violation,&nbsp;engage with A&amp;B ERA/Xbox offline team for PayOps escalation.</li>
+</ol>
+
+<p><strong>Note</strong>: See KB&nbsp;<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/3065764" managed-link="" target="_blank">3065764&nbsp;Tool User Guide: Membership Support Tool (MST)</a> for additional guidance.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="2.2" name="2.2"></a>2.2 The customer wants to renew or continue with a subscription</h4>
+
+<p>If the customer wants to continue and not cancel a subscription, follow the steps in the matching scenario below.</p>
+
+<ol class="sbody-num_list">
+	<li>If the subscription was canceled or suspended; explain to the customer that access to the subscription was cancelled due to an unpaid $XX.XX balance.</li>
+	<li><span><span><span><span>The customer must first clear any outstanding balance that the customer owes Microsoft.</span></span></span></span></li>
+	<li><span><span><span><span>If the payment instrument has expired, the customer can pay in full<span> </span></span></span></span></span><span><span><span> </span></span></span><span><span><span><span>any outstanding balances&nbsp;by updating the existing payment instrument; the customer can also add a different payment instrument and transfer the balance onto that new payment instrument</span></span></span></span>.</li>
+</ol>
+
+<p class="indent-2"><strong>Note</strong>: For customers in Germany, Italy, Netherlands, and Austria who are trying to transfer their balance to a SEPA direct debit payment instrument; the customer must perform these steps at the&nbsp;AMC website (http://account.microsoft.com). Refer to KB&nbsp;<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4488312" managed-link="" target="_blank">4488312 Informational: Payment Instrument (PI) methods</a>.</p>
+
+<ol class="sbody-num_list" start="4">
+	<li>After the customer pays the outstanding balance, any violations that the subscription might have associated with the account will be automatically removed. If the system did not remove the violation after successfully processing the outstanding balance,&nbsp;<span><span><span><span><span>engage with A&amp;B ERA/Xbox offline team for PayOps escalation.</span></span></span></span></span></li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><span><span><span><a id="2.3" name="2.3"></a>2.3 The customer has a subscription token but can&rsquo;t redeem because of an issue with the token</span></span></span></span></h4>
+
+<p><span><span><span><span><span><span>All Xbox subscriptions are on the modern platform and should not need the following manual process. When a modern subscription is in dunning, redeeming a non-trial token for a&nbsp;subscription product will resolve the past due balance. The subscription in dunning will be canceled, and a new subscription will be created based on the time remaining on the token after reducing for used grace time. This is sometimes internally called <strong>token out of dunning</strong>.</span></span></span></span></span></span></p>
+
+<p><span><span><span><span><span><span>For subscriptions still on the legacy platform, follow the steps within KB </span></span></span></span><span><span><span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/818928" managed-link="" target="_blank">818928 Procedure: Xbox: Code redemption issues (prepaid, trial, in-game, and subscription)</a> in section 5.</span></span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><span><span><span><span>3. What happens when a subscription charge fails to process:</span></span></span></span></h3>
+
+<h4><span><span><span><span><a id="3.1" name="3.1"></a>3.1 For customers with a Microsoft&nbsp;365 subscription:</span></span></span> </span></h4>
+
+<p><span><span><span><span>The subscription will have a 27-day grace period. After which the Skype monthly plan is canceled. The OneDrive benefits still function properly. The customer can still use Office. We try to bill the customer three more times evenly spaced throughout this period. Alerts will appear within the product about a billing problem, devices (mobile, slate) will be denied.<br>
+<br>
+After 54 days, the subscription enters the expired state. A customer now only has a five-day grace period of full functionality. After 59 days, Office goes into reduced functionality mode and access to Office through other devices (mobile, slate) will be denied. </span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span>No further attempts are made at billing the customer</span></span></span></span></li>
+	<li><span><span><span><span>If the customer renews during this period:</span></span></span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span>The subscription is restored to &ldquo;Active Status&rdquo;.</span></span></span></span></li>
+	<li class="indent-1"><span><span><span><span>The subscription anniversary date changes to the date on which the charge succeeds.</span></span></span></span></li>
+</ul>
+
+<ol start="3">
+	<li><span><span><span><span>After 90 days,&nbsp;the subscription enters a canceled state and cannot be renewed. The extra 1TB of OneDrive is removed from the customer&rsquo;s accounts. </span></span></span></span></li>
+</ol>
+
+<p><span><span><span><span><span><span>See KB <a href="https://internal.support.services.microsoft.com/help/2846004" target="_blank"><span>2846004 Procedure: Microsoft 365 subscription billing was unsuccessful</span></a> for the detailed timeline of the Microsoft 365 dunning cycle.</span></span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4 class="CxSpMiddle"><span><span><span><span><a id="3.2" name="3.2"></a>3.2 For customers with an&nbsp;Xbox subscription</span></span></span></span></h4>
+
+<p class="CxSpMiddle"><span><span><span></span></span></span><span><span><span><span>The subscription will have a grace period, after which the customer will lose access to their Xbox subscription&rsquo;s features until the amount is paid. After 60 days total the subscription will expire, and the customer will have to repurchase or renew the subscription.</span></span></span></span></p>
+
+<p><span><span><span><span>If a customer asks to cancel because they do not want the subscription, you are now allowed to cancel in dunning for Xbox subscriptions only.</span></span></span></span></p>
+
+<p><span><span><span><span>Refer to KB </span></span><span><a href="https://internal.support.services.microsoft.com/help/4547191" target="_blank"><span><span>4547191 Procedure: Xbox: Dunning support for Xbox subscriptions</span></span></a></span></span></span></p>
+
+<p class="CxSpMiddle"><span><span><span></span></span></span></p>
+
+<p class="CxSpMiddle"><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3 class="kb-moreinformation-section section"><a id="4" name="4"></a>4.&nbsp;More information</h3>
+
+<div class="kb-moreinformation-section section">
+<p><span><span><span><span></span></span></span></span></p>
+
+<p><span><span><span><span>KB </span></span><span><a href="https://internal.support.services.microsoft.com/help/2846004" target="_blank"><span><span>2846004 Procedure: Microsoft 365 subscription billing was unsuccessful</span></span></a></span><span><span><br>
+<br>
+KB </span></span><span><a href="https://internal.support.services.microsoft.com/help/2846008" target="_blank"><span><span>2846008 Procedure: Billing Errors</span></span></a></span><span><span><br>
+<br>
+KB </span></span><span><a href="https://internal.support.services.microsoft.com/help/4488312" target="_blank"><span><span>4488312 Informational: Payment Instrument (PI) methods</span></span></a></span></span></span></p>
+
+<p><span><span><span><span>KB </span></span><span><a href="https://internal.support.services.microsoft.com/help/4547191" target="_blank"><span><span>4547191 Procedure: Xbox: Dunning support for Xbox subscriptions</span></span></a></span></span></span></p>
+
+<p><span><span><span><a href="https://internal.support.services.microsoft.com/help/4547191" target="_blank"><span></span></a></span></span></span></p>
+
+<p><span><span><span><a href="https://internal.support.services.microsoft.com/help/4488312" target="_blank"><span><span></span></span></a></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+</div>
+</div>
+<div class="kb-securedata-section section">
+<p><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span><strong>May 2019</strong></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Change history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><span><span><strong><span>Item</span></strong> </span></span></p>
+			</td>
+			<td>
+			<p><span><span><strong><span>Title</span></strong> </span></span></p>
+			</td>
+			<td width="179">
+			<p><span><span><strong><span>Date</span></strong> </span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/157702">CONTENT TRACKING 157702</a></td>
+			<td>Xbox: KB 2852430-Subscription payment is declined update</td>
+			<td width="179">8/6/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/154225">CONTENT TRACKING 154225</a></td>
+			<td>Xbox: From SU372: Update section 2.3 for legacy token issues</td>
+			<td width="179">5/5/2020</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/153869">CONTENT TRACKING 153869</a></p>
+			</td>
+			<td>AB: KB KB 2852430 Subscription payment is declined - Manual Alta change</td>
+			<td width="179">4/21/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/145829">CONTENT TRACKING 145829</a></td>
+			<td>Xbox: Minor updates to KB 2852430 regarding dunning</td>
+			<td width="179">8/8/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/145365">CONTENT TRACKING 145365</a></td>
+			<td>A&amp;B: Replace references to KB 3134186 with KB 4488312</td>
+			<td width="179">7/2/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/143947">CONTENT TRACKING 143947</a></td>
+			<td>Cross LoB: Bulk restatement request - AB&nbsp;</td>
+			<td width="179">5/23/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/135564" role="heading">Content Tracking 135564</a></td>
+			<td>Billing: Update KB 2852430 Process: Subscription payment is declined</td>
+			<td width="179">10/24/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/132984" role="heading">Content Tracking 132984</a></td>
+			<td>Add the Speak Up! asset to all consumer articles</td>
+			<td width="179">8/30/2018</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/129698">Content Tracking 129698</a></td>
+			<td>A&amp;B: Update KB 2852430 Process: Tier 1 - Subscription payment is declined</td>
+			<td width="179">5/31/2018</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/120207" role="heading">Content Tracking 120207</a></span></p>
+			</td>
+			<td>
+			<p><span>Subscriptions: Update to 2852430 Process: Tier 1 - Subscription payment is declined </span></p>
+			</td>
+			<td width="179">
+			<p><span><span><span>11/5/2017</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>
+</div>

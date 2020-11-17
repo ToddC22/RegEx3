@@ -1,0 +1,57 @@
+﻿<header><h1>Kerberos tickets are issued even though the time difference between the client clock and the domain controller clock is greater than the &quot;Maximum tolerance for computer clock synchronization&quot; value</h1></header><div><span><b>Content Idea (CI): </b><a managed-link="" href="https://aka.ms/CIEdit?id=109659" target="" data-content-type="" data-content-id="" bookmark-id="">109659</a></span></div><div><b>Support Topic: </b>Windows Servers\Windows Server 2019, all versions\Windows Security Technologies\Kerberos authentication</div><div class='kb-notice-section section'>BUG #: <a href='http://bugcheck/bugs/ContentMaintenance/93676.asp' title='Link only available for Microsoft corporate network users' target='_blank'>93676 (Content Maintenance)</a></div><div class="kb-summary-section section">This article describes behavior in which Kerberos tickets are issued even though the time difference between a client clock and a domain controller clock is greater than the &quot;Maximum tolerance for computer clock synchronization&quot; value.<br>
+<br>
+For example, assume that you have configured the <span class="text-base">Maximum tolerance for computer clock synchronization</span> Group Policy setting in a domain environment. A Windows Server domain controller may issue a Kerberos ticket to a client computer even though the time difference between the client clock and the domain controller clock is more than the value that you configured for this Group policy setting.</div>
+<div class="kb-moreinformation-section section">
+<p>There are two phases in which the computer clock and ticket timestamps are relevant.</p>
+
+<h3><span><span><span><span>Ticket acquisition (TGT, TGS phase)</span></span></span></span></h3>
+
+<p><span><span><span><span>If a client computer sends a time stamp whose value differs from that of the KDC&rsquo;s time stamp by more than the value that you configured in the &ldquo;Maximum tolerance for computer clock synchronization&rdquo; (SkewTime) setting, the domain controller returns a &quot;KRB_AP_ERR_SKEW&quot; error code in its response packet. In this packet, the domain controller also includes a time stamp of its own clock.</span></span></span></span></p>
+
+<p><span><span><span><span>When the Windows client computer receives this packet, it uses the time stamp of the domain controller together with the value of the Maximum tolerance for computer clock synchronization setting to calculate the valid time. Then, the client computer uses the valid time to retry the request. On this second try, the KDC time-check is successful and the TGT is issued to the client computer.</span></span></span></span></p>
+
+<p><span><strong><span><span><span>Note&nbsp;</span></span></span></strong><span><span><span>This behavior is documented in Request for Comments (RFC) 4430, &quot;Kerberized Internet Negotiation of Keys (KINK).&quot; To see RFC 4430, visit the following Request for Comments Web site:</span></span></span><br>
+<a href="ftp://ftp.rfc-editor.org/in-notes/rfc4430.txt" target="_self"><span lang="EN-US"><span><span>ftp://ftp.rfc-editor.org/in-notes/rfc4430.txt</span></span></span></a></span></p>
+
+<p><span><span><span><span>Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.<br>
+<br>
+Third-party Kerberos runtimes may behave differently. You will have to contact the vendor for specific information about how their runtime responds to this situation..</span></span></span></span></p>
+
+<h3><span><span><span><span>Ticket Use (AP phase)</span></span></span></span></h3>
+
+<p><span><span><span><span>The tickets that are issued are stored in the client ticket cache and are sent to a resource server to be authenticated. If the clock of the <strong>resource server</strong> drifts relative to the <strong>domain controller</strong>, there are two scenarios in which the ticket is rejected by the resource server. </span></span></span></span></p>
+
+<p><span><span><span><span>When the client sends the TGS in an AP request to the server, the server decodes the time-stamp that was created when the ticket was issued, compares it with the local clock, and finds that either of the following conditions is true:</span></span></span></span></p>
+
+<ol style="list-style-type:lower-alpha">
+	<li><span><span><span><span>The ticket is not valid yet (KRB_AP_ERR_TKT_NYV). This enables 2xSkewTime.</span></span></span></span></li>
+	<li><span><span><span><span>The ticket is already expired (KRB_AP_ERR_TKT_EXPIRED). This enables&nbsp;SkewTime&nbsp;but also considers TicketLifetime.</span></span></span></span></li>
+</ol>
+
+<p><span><span><span><span>At the default settings, the ticket is considered valid on a freshly issued ticket if the following conditions are true:</span></span></span></span></p>
+
+<ol style="list-style-type:lower-alpha">
+	<li><span><span><span><span>Server time is up to 10 minutes behind KDC time.</span></span></span></span></li>
+	<li><span><span><span><span>Server time is up to 10 hours and five minutes <span><span><span><span>ahead of&nbsp;</span></span></span></span>KDC time.</span></span></span></span></li>
+</ol>
+
+<p><span><span><span><span>The validity windows shift as the ticket &ldquo;ages&rdquo; in the client ticket cache. If the ticket is one hour old, the server clock may be allowed to stretch one hour more into the future in case a).<br>
+<br>
+<strong>Note</strong> At this time, there is no protocol option to make the resource server update its clock to match the KDC clock, as in scenario 1.</span></span></span></span></p>
+
+<p><strong><span><span><span><span>Important </span></span></span></span></strong><span><span><span><span>The resource server may be the local &ldquo;interactive logon&rdquo; service of the computer that the user is logging on to. In this case, ticket timestamps are not checked, and the user successfully logs on despite the time drift. The special case here is that this ticket is always retrieved immediately after the TGT for an interactive logon session is retrieved or refreshed.</span></span></span></span></p>
+
+<h3><span><span><span><span>Manage relevant policy settings</span></span></span></span></h3>
+
+<p><span><span><span><span>The default time skew that is allowed on TGT requests is five minutes. To modify the lifetime value, configure the following Group Policy settings:</span></span></span></span><br>
+<strong><span><span><span><span>Computer Configuration/Windows Settings/Security Settings/Account Policies/Kerberos Policy/Maximum tolerance for computer clock synchronization</span></span></span></span></strong></p>
+
+<p><span><span><span><span>The default lifetime of a Kerberos ticket is 10 hours (600 minutes). To modify the lifetime value, configure the following Group Policy settings:</span></span></span></span><br>
+<strong><span><span><span><span><span>Computer Configuration/Windows Settings/Security Settings/Account Policies/Kerberos Policy/Maximum lifetime for service ticket</span></span></span></span></span></strong></p>
+
+<p><span><span><span><span>For more information about the Kerberos time handling Group Policy settings, see&nbsp;</span></span></span></span><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/maximum-lifetime-for-service-ticket" managed-link="">TicketLifetime</a>&nbsp;and&nbsp;<span><span lang="DE"><span><span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/maximum-tolerance-for-computer-clock-synchronization" managed-link="" target="">SkewTime</a>.</span></span></span></span></p>
+</div>
+<div class="kb-securedata-section section"><span class="text-base">Author: sahakube;herbertm</span><br>
+<span class="text-base">Writer: v-lihua</span><br>
+<span class="text-base">Tech Reviewer: v-lihua;sahakube; cjiang</span><br>
+<span class="text-base">Editor:v-crweb</span></div>

@@ -1,0 +1,223 @@
+﻿<header><h1>Procedure: Office: Outlook can’t send or receive email</h1></header><ul>
+	<li>Technical Support</li>
+	<li>Up and Running</li>
+</ul>
+<p class="ParagraphText">This KB&nbsp;provides information about how to troubleshoot Outlook send and receive problems for non-joined domain (e.g. <a href="mailto:someone@outlook.com">someone@outlook.com</a>) accounts. For joined domain (e.g. <a href="mailto:someone@contoso.com">someone@contoso.com</a>) accounts, go <a bookmark-id="domain" href="#domain" managed-link="">here</a>.</p>
+<p class="ParagraphText">You can use the <a data-content-id="" data-content-type="" href="https://diagnostics.outlook.com/#/?env=ExRCA" target="_blank">Microsoft Support and Recovery Assistant for Microsoft 365</a> tool to troubleshoot and fix problems with Outlook and mobile device connectivity.&nbsp; This tool troubleshoots Outlook account configuration (profile), sign-in credentials, Outlook connectivity, shared mailboxes, and mobile device connectivity.&nbsp; In many case, Support and Recovery Assistant offers automated solution that can fix problems.&nbsp; For other cases, instructions are provided so they can be used to fix the problem.&nbsp; A detailed log is provided in case they are needed.&nbsp;</p>
+<p><strong>Governing Body: Agent Content Triage </strong></p>
+
+<p><strong>Special review required?: No</strong></p>
+
+<p><strong>Reviewed for privacy compliance on 5/23/2019</strong></p>
+
+<table class="table">
+	<tbody>
+		<tr><td><p><strong>Item</strong></p></td><td><p><strong>Title</strong></p></td><td><p><strong>Date</strong></p></td></tr> <tr><td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/153727">CONTENT TRACKING 153727</a></td><td>Proj: Office: Alta project for rebranding within Office</td><td>4/21/2020</td> </tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/143966">CONTENT TRACKING 143966</a></td>
+			<td>Office: Batch Title Restate Request to procedure</td>
+			<td>5/23/2019</td>
+		</tr>
+	</tbody>
+</table>
+<p class="paragraph">Set customer expectations by letting&nbsp;them know what we&rsquo;ll be doing during the troubleshooting process. You will tell them that&nbsp;we may need them to contact their email provider. Use the following talking points:<br>
+&nbsp;</p>
+
+<ul>
+	<li class="paragraph">I&rsquo;m going to gather some information and check connectivity </li>
+	<li class="paragraph">If connectivity looks good, we&rsquo;ll check your account settings</li>
+	<li class="paragraph">I may need you to contact your email provider, but we won&rsquo;t do that unless it&rsquo;s necessary<span>&nbsp;</span></li>
+</ul>
+
+<p class="ParagraphText">Once you&#39;ve set expectations, you should gather information from the customer to determine how best to troubleshoot their email problem.</p>
+<p class="ParagraphText"><span>Ask the customer for the following information:</span></p>
+
+<ul>
+	<li class="ParagraphText"><span> What version of Outlook are&nbsp;they using? </span><br>
+	<br>
+	<span><strong><span> </span>Tip</strong>: To find out, see <a data-content-id="" data-content-type="" href="https://support.office.com/article/b3a9568c-edb5-42b9-9825-d48d82b2257c" target="_blank">What version of Outlook do I have?</a></span></li>
+	<li class="ParagraphText"><span> Who is&nbsp;their email provider? </span><br>
+	<br>
+	 <strong>Tip:</strong> If the customer doesn&#39;t know&nbsp;who their email provider is, look&nbsp;at their email address. The word immediately after the @ symbol is usually their email provider.</li>
+	<li class="ParagraphText"><span> When did the issue start?</span></li>
+	<li class="ParagraphText"><span>Has there been any recent changes to&nbsp;the customer&#39;s&nbsp;PC?</span></li>
+	<li class="ParagraphText"><span> Have&nbsp;they tried sending or receiving on a different computer?</span></li>
+	<li class="ParagraphText"><span> </span><span> What happens when&nbsp;they try to send or receive email?&nbsp;</span><span>Do&nbsp;they get any errors?</span><br>
+	<br>
+	<strong>Tip:</strong><span>&nbsp;Click the &ldquo;Errors&rdquo; tab in the &ldquo;Outlook Send/Receive Progress&rdquo; window to view any errors that occurred during the last Send/Receive.</span></li>
+</ul>
+<p class="ParagraphText">Have the customer check their mail via webmail. Webmail is hosted on the server and bypasses the local email client which makes it ideal for troubleshooting.&nbsp;</p>
+
+<ol>
+	<li class="ParagraphText">Ask the customer to sign-in to their webmail (e.g. Gmail, Yahoo, Outlook.com).</li>
+	<li class="ParagraphText">Was the customer able to sign-in successfully?<br>
+	<br>
+	<strong>Tip</strong>: Use a private or incognito browser window so that the customer needs to enter their password.&nbsp; This will make sure the customer&rsquo;s password isn&rsquo;t saved or cached when signing-in.<br>
+	<br>
+	<span><strong>Tip</strong>: Check if there was any additional security verification while signing in.</span> </li>
+</ol>
+
+<div>
+<div>&nbsp;</div>
+</div>
+<p class="ParagraphText">If the customer can sign-in to their webmail and send/receive is functional, the next step is to check their account settings:</p>
+
+<ol>
+	<li class="ParagraphText">Review the <a href="https://support.office.com/article/8361E398-8AF4-4E97-B147-6C6C4AC95353" managed-link="" target="_blank">POP and IMAP email settings for Outlook</a> the user should have based on their email provider.</li>
+	<li class="ParagraphText">Next, guide the user to <a href="https://support.office.com/article/58b62e89-6a9b-467b-8865-d5633fcacc3f" managed-link="" target="_blank">find their account settings</a>.</li>
+	<li class="ParagraphText">Confirm the settings match. If not <a href="https://support.office.com/article/6e27792a-9267-4aa4-8bb6-c84ef146101b" managed-link="" target="_blank">update them</a>.<br>
+	&nbsp;</li>
+</ol>
+
+<p class="ParagraphText"><strong>Tip</strong>: You can use the <a href="https://testconnectivity.microsoft.com/" managed-link="" target="_blank">Remote Connectivity Analyzer</a> to test IMAP settings</p>
+
+<p class="ParagraphText"><span> </span><strong>Tip</strong>:&nbsp;If we&rsquo;re unable to locate correct settings, we may need to refer to the user&#39;s email provider or exchange admins for updated ports and server names.</p>
+
+<ul>
+</ul>
+<p>If there isn&#39;t a problem with their&nbsp;connection and their email settings are correct, the next step is to check for any external factors that&nbsp;may be impacting their ability to send/receive email.</p>
+
+<h3><u>Connectivity Issues</u></h3>
+
+<h4>Firewall</h4>
+
+<p>If the customer&nbsp;is using a firewall from another manufacturer, have them visit the manufacturer&#39;s website for information about how to temporarily disable the firewall. For Windows Firewall, please see below.</p>
+
+<section class="ParagraphText" dir="ltr" id="ocHelp">
+<article id="ocpArticleContent">
+<section>
+<p><strong>Windows 10</strong></p>
+
+<ul>
+	<li>
+	<p><a data-content-id="" data-content-type="" href="https://windows.microsoft.com/windows-10/turn-windows-firewall-on-or-off" ms.cmpgrp="content" ms.pgarea="Body" target="_blank">Turn Windows Firewall on or off</a></p>
+	</li>
+</ul>
+
+<p><strong>Windows 8.1 and 7</strong></p>
+
+<ul>
+	<li>
+	<p>Scroll to <strong>Turn Windows Firewall on or off</strong> in <a data-content-id="" data-content-type="" href="https://windows.microsoft.com/windows/turn-windows-firewall-on-off#turn-windows-firewall-on-off=windows-7" ms.cmpgrp="content" ms.pgarea="Body" target="_blank">Protect my PC from viruses</a></p>
+	</li>
+</ul>
+</section>
+</article>
+</section>
+
+<p class="ParagraphText"><strong><span>Important:</span></strong>&nbsp; Explain to the customer that when they change their antivirus or firewall settings, this may make their PC vulnerable to viral, fraudulent, or malicious attacks. Changing their antivirus or firewall settings as a workaround is at their own risk.<span> </span><br>
+<br>
+<strong>Tip</strong>: Firewalls usually show up in task manager under Processes.&nbsp; They may also show up in the System Tray.&nbsp;</p>
+
+<h4 class="ParagraphText">Network Connection Type</h4>
+
+<p class="ParagraphText">Is the user connected to a work, school,&nbsp;or public network?&nbsp; If so, are other users experiencing the same issue?<br>
+<br>
+If multiple users are experiencing issues on the same network, or they&rsquo;re unable to disable advanced network security features, they may need to be referred to their network admin or IT.<br>
+&nbsp;</p>
+
+<h3 class="ParagraphText"><u>Add-in Issues</u></h3>
+
+<section dir="ltr" id="ocHelp">
+<article id="ocpArticleContent">
+<section>
+<section>
+<p>Certain add-ins may cause issues with Outlook. A quick way to find out is by starting Outlook in Safe Mode. To do this, follow these steps:</p>
+
+<ol itemscope="" itemtype="http://schema.org/ItemList" style="list-style-type:decimal" type="1">
+	<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+	<p itemprop="name">Right-click the <strong>Start</strong> button&nbsp;and choose <strong>Run</strong>. If you&#39;re in Windows 7, you can click on <strong>Start</strong> &gt; <strong>Run</strong>.</p>
+	</li>
+	<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+	<p itemprop="name">Type <strong>outlook /safe</strong> and press <strong>Enter</strong> to start Outlook.</p>
+
+	<p><strong>Note:</strong>&nbsp;If you get a &quot;can&#39;t find&quot; error after typing the command, check if you included a space between the app name and /safe.</p>
+	</li>
+</ol>
+
+<p>To ensure Outlook is in Safe Mode, check the title bar. You should see something like: Microsoft Outlook (Safe Mode).</p>
+
+<p><strong>If the send/receive problem doesn&#39;t occur&nbsp;in Safe Mode</strong>, disable the application add-ins and COM add-ins one at a time:</p>
+
+<ol itemscope="" itemtype="http://schema.org/ItemList" style="list-style-type:decimal" type="1">
+	<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+	<p itemprop="name">With Outlook still in Safe Mode, click <strong>File</strong> &gt; <strong>Options</strong> &gt; <strong>Add-Ins</strong>.</p>
+	</li>
+	<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+	<p itemprop="name">Check the <strong>Manage</strong> list for Add-ins options, such as Outlook Add-ins, and then click <strong>Go</strong>. If you can&#39;t find the Outlook Add-ins option in the <strong>Manage</strong> list, choose <strong>COM Add-ins</strong> instead.</p>
+	</li>
+	<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+	<p itemprop="name">Uncheck one of the add-ins in the list and click <strong>OK</strong>.</p>
+
+	<p><strong>Note:</strong>&nbsp;Some older add-ins are known to cause problems. Uncheck these add-ins first if they are in your list: Abbyy FineReader PowerWord, and Dragon Naturally Speaking.</p>
+	</li>
+	<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+	<p itemprop="name">Restart the application (not in Safe Mode this time).</p>
+	</li>
+</ol>
+
+<p><strong>If the send/receive problem doesn&#39;t occur</strong>, there&rsquo;s a problem with the add-in you unchecked. We recommend you visit the company website for the add-in to check for an updated version you can install. If there isn&rsquo;t a newer version or if you don&rsquo;t need to use the add-in you can leave it unchecked or remove it from your PC.</p>
+
+<p>&nbsp;</p>
+</section>
+</section>
+</article>
+</section>
+
+<p class="ParagraphText"><meta content="1" itemprop="position"><meta content="2" itemprop="position"><meta content="1" itemprop="position"><meta content="2" itemprop="position"><meta content="3" itemprop="position"><meta content="4" itemprop="position"></p>
+<p>If there isn&#39;t a problem with their connection or external factors,&nbsp;and their email settings are correct,&nbsp;the next step is to check for Outlook file or profile corruption. To do this:</p>
+
+<ol>
+	<li class="ParagraphText">Install the latest&nbsp;<a data-content-id="" data-content-type="" href="https://support.office.com/article/2ab296f3-7f03-43a2-8e50-46de917611c5" target="_blank">Office updates</a></li>
+	<li class="ParagraphText">Try a new <a data-content-id="" data-content-type="" href="https://support.office.com/article/F544C1BA-3352-4B3B-BE0B-8D42A540459D" target="_blank">Outlook Profile</a></li>
+	<li class="ParagraphText">Try <a data-content-id="" data-content-type="" href="https://support.office.com/Article/7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b" target="_blank">repairing Outlook</a></li>
+	<li class="ParagraphText">Try a different Windows Profile</li>
+	<li class="ParagraphText"><a data-content-id="" data-content-type="" href="https://support.office.com/article/9dd49b83-264a-477a-8fcc-2fdf5dbf61d8" target="_blank">Uninstall/Reinstall Office</a></li>
+</ol>
+
+<p class="ParagraphText"><span> </span><strong>Tip</strong>: You can use the <a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/2812744" target="_blank">Office Configuration Analyzer Tool (OffCAT)</a> to diagnose potential issues with Office installation!&nbsp; OffCAT provides a detailed report of your installed Office, including any known problems detected when OffCAT scans your computer.&nbsp; OffCAT also provides documentation and potential fixes for many of the problems it detects.</p>
+<p class="ParagraphText">Is the customer receiving one of the following errors:</p>
+
+<ul>
+	<li class="ParagraphText"><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/2659085" target="_blank">Error 0x8004010F when you try to send or receive email in Outlook 2010 or Outlook 2013</a></li>
+	<li class="ParagraphText"><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/2652320" target="_blank">&quot;Outlook not responding&quot; error or Outlook freezes when you open a file or send mail</a></li>
+	<li class="ParagraphText"><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/3161084" target="_blank">Can&#39;t send or receive email in Outlook and &quot;Metered Connection Warning&quot; is triggered</a></li>
+</ul>
+
+<p class="ParagraphText">If the customer is getting a different error than what&#39;s listed above, check the <strong>error list</strong> drop-down in this <a href="https://support.microsoft.com/help/813514/" managed-link="" target="_blank">article</a>.</p>
+
+<p class="ParagraphText">&nbsp;</p>
+<p>View the status bar at the bottom of Outlook.</p>
+
+<p>&nbsp;</p>
+
+<p><span asset="4052684" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4052684]</span></p>
+
+<ul>
+</ul>
+
+<p>What&#39;s the status?</p>
+<p class="ParagraphText">If the customer has an Outlook.com email account, <a href="https://portal.office.com/servicestatus" managed-link="" target="_blank">check service health</a>.</p>
+
+<p class="ParagraphText"><span>For other providers, such as Gmail or Yahoo!, check the domain provider site for any outage messages.</span></p>
+
+<p>If there are no outages, let the customer know they need to contact their webmail provider or go through their account recovery process.</p>
+<p>If the status says offline, have the user switch from working offline to online. To do this, choose the article based on the user&#39;s Outlook version:</p>
+
+<ul>
+	<li><a data-content-id="" data-content-type="" href="https://support.office.com/article/2460e4a8-16c7-47fc-b204-b1549275aac9" target="_blank">Outlook Desktop</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://support.office.com/article/5018fdd3-26b9-4fa0-b111-b656cdb5afae" target="_blank">Mac</a></li>
+	<li><a data-content-id="" data-content-type="" href="https://support.office.com/article/387485d9-a4ae-4033-b8dd-41984cff5b0c" target="_blank">Outlook.com/OWA</a>)</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>Is the user prompted for second verification? If so, the user may have 2 step verification enabled.&nbsp;&nbsp;Try to <a href="https://support.microsoft.com/help/12408/" managed-link="" target="_blank">disable two-step verification</a>&nbsp;and try again.&nbsp;</p>
+
+<p><strong>Tip</strong>: Some mail providers have a <strong>Secure Apps</strong> setting.&nbsp; We may need to toggle this setting.<br>
+<br>
+<strong>Tip</strong>: Some email providers require two-step verification.&nbsp; In these instances, <strong>App Passwords </strong>can be used to allow Outlook to connect to these Servers.&nbsp; <span>Follow </span><a data-content-id="" data-content-type="" href="https://support.microsoft.com/help/12409" target="_blank">these</a> steps to set up an App Password in Outlook (App password generation may vary based on email provider).&nbsp; We may need to refer to email providers for additional security assistance if we&rsquo;re unable to configure the webmail security settings correctly. </p>
+
+<div>
+<div>&nbsp;</div>
+</div>

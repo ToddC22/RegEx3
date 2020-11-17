@@ -1,0 +1,699 @@
+﻿<header><h1>Guideline: Partner: Partner Center: Account clean-up</h1></header><p><span asset="4090831" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4090831]</span></p>
+<p><a id="top" name="top"></a><a bookmark-id="1" href="#1" managed-link="">1. Purpose of this article </a><br>
+<a bookmark-id="2" href="#2" managed-link="">2.&nbsp;Glossary of Terms</a><br>
+<a bookmark-id="3" href="#3" managed-link="">3.&nbsp;MPN cleanup</a><br>
+&nbsp; &nbsp;&nbsp;<a bookmark-id="3" href="#3" managed-link="">3.1 Scenarios for cleanup</a><br>
+&nbsp; &nbsp;&nbsp;<a bookmark-id="32" href="#32" managed-link="">3.2 Frontline support call to action</a><br>
+&nbsp; &nbsp;&nbsp;<a bookmark-id="33" href="#33" managed-link="">3.3 MPN Global support call to action</a><br>
+&nbsp; &nbsp;&nbsp;<a bookmark-id="34" href="#34" managed-link="">3.4 PrOSE Cleanup feature</a><a bookmark-id="6" href="#6" managed-link=""> </a><br>
+<a bookmark-id="4" href="#4" managed-link="">4. CSP cleanup</a><a bookmark-id="6" href="#6" managed-link=""> </a><br>
+<a bookmark-id="5" href="#5" managed-link="">5. Consolidate two or more accounts that are in PC</a><br>
+<a bookmark-id="6" href="#6" managed-link="">6. Undo a consolidation</a><br>
+<a bookmark-id="7" href="#7" managed-link="">7. Escalation Process</a><br>
+<a bookmark-id="8" href="#8" managed-link="">8. FAQs</a><br>
+&nbsp; &nbsp; &nbsp;&nbsp;<a bookmark-id="101" href="#101" managed-link="">How to guide the Partner through the re-migration process after cleanup is complete</a><br>
+&nbsp; &nbsp; &nbsp; <a bookmark-id="102" href="#102" managed-link="">Refund eligibility</a><br>
+&nbsp; &nbsp; &nbsp; <a bookmark-id="103" href="#103" managed-link="">Will Partners receive their benefits back once the cleanup process is completed?</a><br>
+<a bookmark-id="9" href="#9" managed-link="">9. CRC Codes</a></p>
+<p><span><span><span><a id="1" name="1"></a></span></span></span><span><span><span>The purpose of this article is to provide proper explanations for frontline Partner Advocates regarding the account clean-up process, what it is and how such cases should be treated for a proper resolution. This article applies to all frontline advocate teams supporting the PMC to PC migration and Partner (Center) Dashboard Partners.</span></span></span></p>
+<p><strong><a id="2" name="2"></a>AAD</strong> - an acronym for Azure Active Directory&nbsp;<br>
+<strong>Tenant </strong>- represents the AAD tenant or identity partner wants to use&nbsp;<br>
+<strong>Account</strong> - represents what Partner Center creates as a partner footprint<br>
+<strong>CSP</strong> - Cloud Solution Provider<br>
+<strong>VAR</strong> - Value Added Reseller / Indirect reseller<br>
+<strong>Active Enrollment</strong> &ndash; an active MPN offer subscription on the account (MAPS Active / Silver Active/ Competency Active)<br>
+<strong>Account Clean UP</strong> - the process, done in one or multiple phases, that erases the connection made upon migrating from Partner Membership Center (PMC) to Partner (Center) Dashboard, between the MPN Membership of a Partner with an AAD tenant that the Partner considers as being incorrect, and that enables the Partner to re-migrate and re-associate his MPN membership with the tenant the Partner considers as being correct.&nbsp;The process also applies to new MPN accounts created in Partner Center or to CSP accounts.</p>
+
+<p><a bookmark-id="top" data-bi-name="content-anchor-link" href="https://internal.support.services.microsoft.com/en-us/help/4340330#top" managed-link="" tabindex="0">Back to top</a></p>
+<h4><a id="3" name="3"></a>3.1 Scenarios for cleanup</h4>
+
+<p>Both frontline support and Partners can notice that the account/tenant used for migration from Partner Membership Center (PMC) to Partner Center is incorrect.&nbsp;</p>
+
+<p>1)&nbsp;Partner used a wrong tenant to setup Partner Center Account. Here are reasons for that:</p>
+
+<p class="indent-1">a. They ended up creating a new tenant and later realized they had an AAD identity in an existing tenant.</p>
+
+<p class="indent-1">b. They were logged in with some other AAD identity and ended up using that. Later realized that it was not their corporate identity they want to setup PC account with.&nbsp;</p>
+
+<p>2) Partner was managing multiple V-orgs and ended up migrating a V-org from PMC using AAD tenant of an organization which was not owner of V-org. In this case, user is working with multiple companies.&nbsp;</p>
+
+<p>3) Partner ended up enrolling as a net new partner and now wants to migrate their existing organization from PMC using same tenant.</p>
+
+<p><a bookmark-id="top" data-bi-name="content-anchor-link" href="https://internal.support.services.microsoft.com/en-us/help/4340330#top" managed-link="" tabindex="0">Back to top</a></p>
+
+<h4><a id="32" name="32"></a>3.2&nbsp;Frontline support call to action<span></span></h4>
+
+<p><span><span><span>Frontline support should first check <span><span><span><span><span>that the cleanup request comes from the Global Admin on the tenant. In order to check this, search in CMAT with the tenant and see if the user has Company Administrator role. Note there may be multiple admins; any one of them can request the cleanup. </span></span></span></span></span></span></span></span></p>
+
+<p><span><span><span>Then check if there is an active enrollment (subscription) on the account or not in Prose:</span></span></span></p>
+
+<p class="x"><span><span><span>a) I</span></span></span><span><span><span>f there is an existing active enrollment (subscription) on the account (visible in Prose), frontline support should check to see </span></span></span><strong><span><span><span>if Anniversary Date is less than 3 months in the future</span></span></span></strong><span><span><span> - they should advise Partner to wait until their anniversary date and afterwards for the cleanup to be performed. In this way, Partner will experience uninterrupted access to his benefits management and account. If the cleanup would be performed now, Partner would lose temporarily the access to the management of his account.</span></span></span></p>
+
+<p><span><span>b) I</span></span><span><span>f there is an existing active enrollment (subscription) on the account (visible in Prose), frontline support should check to see </span></span><strong><span><span>if Anniversary Date is more than 3 months in the future</span></span></strong><span><span> - <strong>Partner should be set with the correct expectations that the cleanup procedure can take around 1.5 weeks average, depending on the complexity of his account</strong>. </span></span></p>
+
+<div class="alert-band">
+<div class="alert alert-info" role="alert">
+<p class="alert-title"><strong>Note:</strong></p>
+
+<div class="row">
+<div class="col-xs-24">
+<p>If purchase is visible in the Offline PI tool, then the request for benefit and enrollment cancellation should be escalated as per escalation path in VKB article 4134503 (if payment was made by Partner via Wire Transfer) or as per escalation path in VKB article 4340330 (if payment was made by Partner via Credit Card) prior to escalating to MPN Global Support for the cleanup itself.</p>
+</div>
+</div>
+</div>
+</div>
+
+<p><span><span> </span></span></p>
+
+<p class="x"><span><span>Any account cleanup request with an active enrollment on the account and with an order that is not visible in Offline PI tool should be escalated to MPN Global Support, using the recommended template from </span></span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2865698" managed-link="" target="_blank">VKB article 2865698</a></span></p>
+
+<p class="x"><span><span><span>While the account cleanup is being done, Partner will, in phases: </span></span></span></p>
+
+<p class="x"><span><span><span>- lose access to benefit management from Partner Center;</span></span></span></p>
+
+<p class="x"><span><span><span>- have his MPN enrollment (subscription) de-activated from Partner Center;</span></span></span></p>
+
+<p class="x"><span><span><span>- not be able to access the account altogether until the re-migration occurs. </span></span></span></p>
+
+<p class="x"><span><span><span>After the account cleanup procedure is completed, Partner will receive a new link that he should use to migrate to his tenant/account of choice in Partner Center. Partner should perform the re-migration in an InPrivate browser window, making sure that his user has Global Admin credentials.</span></span></span></p>
+
+<div class="alert-band">
+<div class="alert alert-info" role="alert">
+<p class="alert-title"><strong>IMPORTANT NOTES:</strong></p>
+
+<div class="row">
+<div class="col-xs-24">
+<ul>
+	<li class="x"><span><span><span><span>If Partner has used any of the license benefits, those will not be affected during the cleanup process.</span></span></span></span></li>
+	<li class="x"><span><span><span><span>If Partner has used any of the user-assigned benefits, those will be interrupted during the cleanup process.</span></span></span></span></li>
+	<li class="x"><span><span><span><span>If Partner has purchased in PMC (he migrated to the incorrect tenant an active enrollment), then he will not receive a refund and once he performs the re-migration, he will have his active enrollment migrated back to correct PC tenant.</span></span></span></span></li>
+	<li class="x"><span><span><span><span>All other refunds in account cleanup scenarios are subject to the refund policy in place.</span></span></span></span></li>
+	<li class="x"><span><span><span><span>If there is a CSP/ VAR enrollment on the same tenant&nbsp;and with the same Account ID to be cleaned up, we need to inform the partner that cleanup would lead to cleanup of CSP and VAR enrollments as well. They would need to re-enroll as CSP / VARs after cleanup is done to gain access to the program again.</span></span></span></span></li>
+</ul>
+
+<p class="x"><strong><span lang="EN-PH"><span>Regarding Partner&rsquo;s benefits, after an account cleanup the following applies:</span></span></strong></p>
+
+<ul>
+	<li><span><span><span lang="EN-PH"></span><span lang="EN-PH">If purchase was made on the Partner Center platform and an account cleanup is performed, regardless of Partner being eligible or not for a refund, when he performs the re-migration, Partner will have to re-purchase the desired offer/s.</span></span></span></li>
+	<li><span><span><span lang="EN-PH"></span><span lang="EN-PH">If purchase was made on the PMC platform (active enrollment was migrated to PC) and an account cleanup is performed, their benefits will be re-migrated together with the re-migration of the MPN Id to the new tenant after both account cleanup and re-migration are completed.</span></span></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<p class="x"><span><span><span>c) If there is <strong>NO active enrollment on the tenant to be cleaned up -&nbsp;If the MPN account is net new (created in Partner Center, not migrated from PMC), check if the PGA or any locations are connected to a CSP account. If yes, cleaning the account may create issues for the partner&rsquo;s CSP account in the future, therefore explain to the partner and request written confirmation to proceed with the cleanup. Partner should be set with the correct expectations that the cleanup procedure can take around 3 business days average, </strong>and</span></span></span><span><span> partner advocates should escalate to MPN Global Support, using the recommended template in&nbsp;</span></span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2865698" managed-link="" target="_blank">article 2865698</a>.</span></p>
+
+<p class="x"><strong><span><span><span>For frontline support awareness only (no action to be taken):</span></span></span></strong></p>
+
+<p class="x"><strong><span><span><span>When there is an existing active enrollment (subscription) on the account</span></span></span></strong><span><span><span>, the account cleanup procedure is split between three engineering teams that perform the following phases of the account cleanup:</span></span></span></p>
+
+<p class="x"><span><span><span>1) Deactivation of enrollment (active enrollment /subscription status is set to status DENIED/CLOSED in the system and will reflect as such in PrOSE).</span></span></span></p>
+
+<p class="x"><span><span><span>2) Decommissioning of benefits (all benefits from the account are disassociated from the tenant that is being cleaned up).</span></span></span></p>
+
+<p class="x"><span><span><span>3) PMC dates are being reset (the new anniversary date obtained in the moment of enrollment purchase, will be changed in the backend to reflect the previous Anniversary date that the Partner had) &ndash; applicable only for purchases made in PC.</span></span></span></p>
+
+<p class="x"><span><span><span>4) Account cleanup (in this last phase, the last disassociations between the MPN account and the tenant are being performed. In this very last phase, MPN Global Support will perform the account cleanup.</span></span></span></p>
+
+<p class="x"><strong><span><span><span>If there is NO existing active enrollment (subscription) on the account</span></span></span></strong><span><span><span>, frontline support should set correct expectations with Partner that account cleanup procedure can take around 3 business days to be completed and that at some point in this timeframe, he will not be able to access the account in Partner Center until the re-migration occurs. After the account cleanup procedure is completed, Partner will receive a new link that he should use to migrate to his tenant/account of choice in Partner Center. Partner should perform the re-migration in an InPrivate browser window, making sure that his user has Global Admin credentials. </span></span></span><span><span><span>In this case, MPN Global Support will perform the account cleanup.</span></span></span></p>
+
+<p class="x"><a bookmark-id="top" data-bi-name="content-anchor-link" href="https://internal.support.services.microsoft.com/en-us/help/4340330#top" managed-link="" tabindex="0">Back to top</a></p>
+
+<h4 class="x"><a id="33" name="33"></a>3.3&nbsp;MPN Global Support call to action</h4>
+
+<p><span><span>In this exact order and only by following the &ldquo;Mandatory step?&rdquo; action checks, MPN Global Support team should ensure that all pre-requisite steps of an account cleanup are performed before the cleanup itself is executed in Prose. </span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="46">
+			<p><span><strong><span><span>Step</span></span></strong></span></p>
+			</td>
+			<td width="219">
+			<p><span><strong><span><span>Bug to be raised</span></span></strong></span></p>
+			</td>
+			<td width="150">
+			<p><span><strong><span><span>Bug Title</span></span></strong></span></p>
+			</td>
+			<td width="150">
+			<p><span><strong><span><span>Bug Nature/Description</span></span></strong></span></p>
+			</td>
+			<td width="142">
+			<p><span><strong><span><span>Mandatory step?</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="46">
+			<p><span><span><span>1</span></span></span></p>
+			</td>
+			<td width="219">
+			<p><span><span><span>Benefits team</span></span></span></p>
+
+			<p>&nbsp;</p>
+
+			<p><span><u><span><span>Azure DevOPS Area:</span></span></u></span></p>
+
+			<p><span><span><span>OSGS\PartnerExperience\PACE-Partner Network and Certification Experience\MPN\Benefits</span></span></span></p>
+			</td>
+			<td width="150">
+			<p><span><span><span>BENEFIT DECOMMISSIONING DUE TO ACCOUNT CLEANUP [PARTNER COMPANY NAME]</span></span></span></p>
+			</td>
+			<td width="150">
+			<p><span><span><span>If there is an active enrollment in the tenant (MAPS/ Competency) and purchase was made in PC/PMC the benefits must be decommissioned (&ldquo;removed&rdquo;) from the wrong tenant used for migration and the active enrollment on the wrong tenant must be canceled </span></span></span></p>
+			</td>
+			<td width="142">
+			<p><span><strong><span><span>Only if </span></span></strong><span><span>active enrollment is present on the tenant to be cleaned up</span></span></span></p>
+
+			<p>&nbsp;</p>
+
+			<div class="alert-band">
+			<div class="alert alert-info" role="alert">
+			<p class="alert-title"><strong>Note:</strong></p>
+
+			<div class="row">
+			<div class="col-xs-24">
+			<p><span><span><span>For active migrated Competency enrollments scenarios from PMC, raise also BUG following instructions from step 2 in this table.</span></span></span></p>
+			</div>
+			</div>
+			</div>
+			</div>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="46">
+			<p><span><span><span>2</span></span></span></p>
+			</td>
+			<td width="219">
+			<p><span><span><span>PMC team </span></span></span></p>
+
+			<p>&nbsp;</p>
+
+			<p><span><u><span><span>Azure DevOPS Area:</span></span></u></span></p>
+
+			<p><span><span><span>OSGS\PartnerExperience\PACE-Partner Network and Certification Experience\MPN</span></span></span></p>
+			</td>
+			<td width="150">
+			<p><span><span><span>PMC RESET DATES DUE TO ACCOUNT CLEANUP [PARTNER COMPANY NAME]</span></span></span></p>
+			</td>
+			<td width="150">
+			<p><span><span><span>If there is </span></span></span></p>
+
+			<ul>
+				<li><span><span><span>an active enrollment in the tenant (MAPS/ Competency) and purchase was made in PC there must be a reset of dates in the PMC data so that it won&rsquo;t affect the Partner after re-migrating to the correct tenant (e.g.- ability to purchase an offer, wrong offer start/end dates, etc.)</span></span></span></li>
+			</ul>
+
+			<p><span><strong><span><span>OR</span></span></strong></span></p>
+
+			<p>&nbsp;</p>
+
+			<ul>
+				<li><span><span><span> active migrated Competency enrollment scenario from PMC</span></span></span></li>
+			</ul>
+			</td>
+			<td width="142">
+			<p><span><strong><span><span>Only if</span></span></strong> <span><span>the purchase of offer was made in PC <strong>or</strong> there is an active Competency migrated from PMC</span></span></span></p>
+
+			<p>&nbsp;</p>
+
+			<div class="alert-band">
+			<div class="alert alert-info" role="alert">
+			<p class="alert-title"><strong>Note:</strong></p>
+
+			<div class="row">
+			<div class="col-xs-24">
+			<ul>
+				<li><span><span><span><span>F</span></span></span><span><span>or an active enrollment in the tenant (MAPS/ Competency) and if purchase was made in PC, please request in the bug to reset the PMC data on the MPN ID that is being cleaned up</span></span></span></li>
+				<li><span><span><span>For Competency migrated active enrollments, please request in the bug </span></span><span lang="EN-IN"><span>to reset the status of all the competencies in PMC for the partner. Ideally, PMC should have the same active competencies that the partner had before he migrated for the first time</span></span><span><span> so that when performing the re-migration, the Partner will pull the Competency over, again, in PC</span></span>.</span></li>
+			</ul>
+			</div>
+			</div>
+			</div>
+			</div>
+
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="46">
+			<p><span><span><span>3</span></span></span></p>
+			</td>
+			<td width="219">
+			<p><span><span><span>MPN Global Performs this last step by following instructions in section VI.) PrOSE cleanup feature of this article</span></span></span></p>
+			</td>
+			<td width="150">
+			<p><span><span><span>NA</span></span></span></p>
+			</td>
+			<td width="150">
+			<p><span><span><span>The actual process of cleaning up the account involves cleaning up all MPN ID and PMC account data that has been wrongfully migrated into the wrong account.</span></span></span></p>
+
+			<p>&nbsp;</p>
+
+			<p><span><span><span>At the completion of the process Partner is provided with a new link to redo the migration on the correct tenant </span></span></span></p>
+			</td>
+			<td width="142">
+			<p><span><strong><span><span>Yes</span></span></strong></span></p>
+
+			<ul>
+				<li><span><span><span>For tenants with active enrollments </span></span><strong><span><span>only after bugs 1 and 2 or just 1 (according to scenario) have been completed</span></span></strong></span></li>
+			</ul>
+
+			<p>&nbsp;</p>
+
+			<ul>
+				<li><span><span><span>For tenants with </span></span><span><span><strong>no active enrollments</strong> </span></span><span>this is the only step to be done</span></span></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><span><strong><span><span><span>Trail of thoughts when acting on MPN PC Account Cleanup scenarios:</span></span></span></strong></span></p>
+
+<p><span asset="4552293" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4552293]</span></p>
+
+<p><a bookmark-id="top" data-bi-name="content-anchor-link" href="https://internal.support.services.microsoft.com/en-us/help/4340330#top" managed-link="" tabindex="0">Back to top</a></p>
+
+<h4><a id="34" name="34"></a>3.4&nbsp;PrOSE cleanup feature</h4>
+
+<p><span><span><span><span><strong><span><span><span><span>1.) </span></span></span></span></strong>Search in PrOSE the MPN ID/ tenant GUID that needs to be cleaned up and click on the <strong>PartnerGlobal </strong>result (or on Tenant if the account was migrated through the simple accounts migration flow, making sure that the selected account is the MPN management account tenant).</span></span></span></span></p>
+
+<p><span asset="4488276" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4488276]</span></p>
+
+<p><strong><span><span>2.) </span></span></strong><span><span>In the Profile of the tenant that holds the MPN Membership, click on <strong>Clean Up Account</strong> option.</span></span></p>
+
+<p><span asset="4488277" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4488277]</span></p>
+
+<p><strong><span><span>3.) </span></span></strong><span><span>Always make sure that any active enrollment is Cancelled/Denied/Closed prior to account cleanup being performed.</span></span></p>
+
+<p><span asset="4488279" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4488279]</span></p>
+
+<p><strong><span><span>4.) </span></span></strong><span><span>After that, we should select if we want to enable the Partner&rsquo;s MPN ID for re-migration and if yes, then we will be prompted to select the Partner&rsquo;s HQ MPN ID from a dropdown menu.</span></span> <span><span>The HQ MPN ID will not appear in the Dropdown list if the HQ did not migrate. Please select &lsquo;Other&rsquo; option in the dropdown and provide the required HQ MPN id in the textbox.</span></span></p>
+
+<p><strong><span><span>Note</span></span></strong><span><span>: Please select the correct HQ MPN id to enable re-migration. If HQ MPN id was not correctly inserted during the process and re-migration fails for the Partner, MPN Global Support team will escalate to Accounts team.</span></span></p>
+
+<p><span asset="4488280" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4488280]</span></p>
+
+<p><strong><span><span>5.) </span></span></strong><span><span>In the<strong> Comments </strong>box we should always indicate the action performed and the bug ID plus, in the<strong> Service request </strong>field, the activity number we are doing the cleanup for.</span></span></p>
+
+<p><span asset="4488281" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4488281]</span></p>
+
+<p><strong><span><span>6.) </span></span></strong><span><span>Finally, <strong>we should double check that we are cleaning the intended tenant </strong></span></span><u><strong><span><span>since the account information can&rsquo;t be recovered once the cleanup is confirmed</span></span></strong><strong><span><span>.</span></span></strong></u></p>
+
+<p>To clean up the tenant, only after performing the <strong>mandatory checks/actions explained in table above (benefit decommissioning, enrollment </strong><strong>cancellation</strong><strong> and, if necessary the PMC data reset) </strong><strong><span><span><u>and</u> </span></span></strong><strong><span><span>the steps 1.) to 5.) above</span></span></strong><span><span>, click on <strong>Clean Up Account</strong> button.</span></span></p>
+
+<p><span asset="4488282" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4488282]</span></p>
+
+<div class="alert-band">
+<div class="alert alert-info" role="alert">
+<p class="alert-title"><strong>NOTE:</strong></p>
+
+<div class="row">
+<div class="col-xs-24">
+<p>Account cleanup page in PrOSE will display all accounts associated with the AAD tenant id.</p>
+
+<p>If Partner Global account (PGA) ID is selected for clean-up, we will clean-up PGA, Partner Location account (PLA) and respective enrollments and tenant account (TA). But we don&rsquo;t delete TA if TA is enrolled into CSP / VAR, though TA account detail is displaying it on the account cleanup page.</p>
+
+<p>If the Tenant account (TA) id is selected for cleanup, we will only allow to clean up TA account if AAD tenant id is associated with only that tenant account.</p>
+
+<p>Some Partners will have an active CSP enrollment on their tenant (usually marked with<strong> Account Type </strong>as <strong>Tenant</strong>):</p>
+</div>
+</div>
+</div>
+</div>
+
+<p><span asset="4488283" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4488283]</span></p>
+
+<p><strong><span><span>For tenants with CSP / VAR, if Partner desires, via cleanup we can also erase the CSP enrollment &ndash; if Partners explicitly request this. For such scenarios, where we want to clean up the VAR enrollment also, we must select the Account Type Tenant result and tick the &ldquo;Force clean up account regardless of enrollment&rdquo; box then follow steps 4.) to 6.) above.&nbsp;</span></span>See more about the CSP cleanup process in section 5.</strong></p>
+
+<p><strong><span asset="4488284" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4488284]</span></strong></p>
+
+<p><strong>Benefit decommissioning feature in PrOSE</strong></p>
+
+<p>This feature is applicable for both cleanup scenarios where the purchase of an Active Enrollment was done in PMC and PC. Benefits decommissioning feature will cancel all the benefits <span>no matter if migrated from PMC or bought in PC</span>.</p>
+
+<p><strong>Note:</strong> All the other Benefit Decommissioning related cases will be done through OfflinePI Tool (if refund is applicable) or by following the normal flow with the engineering team.</p>
+
+<p>In addition to the above steps from point <strong>6. PrOSE cleanup feature:</strong></p>
+
+<p class="indent-1">1.) No active Enrollments on the account</p>
+
+<p class="indent-1">The checkbox &quot;<em><strong>Do you want to perform Benefits cleanup for the account?</strong></em>&quot; will appear in every case even though there are no active enrollments on the account. In this case, the checkbox should not be checked and the cleanup process should be followed as per normal steps.</p>
+
+<p><span asset="4538880" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4538880]</span></p>
+
+<p>Mark with:</p>
+
+<p>*Yes &ndash; the partner will be enabled for re-migration and the re-migration link will be generated (applicable only for migrated partners and not for Net New Enrollments).</p>
+
+<p><span><span><span>*No &ndash; partner will not be enabled for re-migration. All Net new accounts to be cleaned up will be marked with No.</span></span></span></p>
+
+<p class="indent-1">2.) Active Enrollments on the account</p>
+
+<p class="indent-1">The checkbox <em>&ldquo;</em><strong><em>Do you want to perform Benefits cleanup for the account?</em></strong><em>&rdquo;</em> will appear in every case even though there are no active enrollments on the account. In this case, the checkbox should be checked&nbsp;and the cleanup process should be followed as per normal steps.</p>
+
+<p class="indent-1"><span><span><span>The checkbox <em>&ldquo;</em><strong><em>Force clean up account regardless of enrollment</em></strong><em>&rdquo;</em> should always be checked when there are active enrollments on the account. This will decommission the benefits and cancel the enrollment so the cleanup will be processed.</span></span></span></p>
+
+<p><span asset="4538881" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4538881]</span></p>
+
+<p>After the cleanup is done, please proceed with the PMC reset dates BUG as per the description from the above diagram from <strong>point 5. Trail of thoughts when acting on MPN PC Account Cleanup scenarios</strong>.<strong> </strong>Only after that BUG is&nbsp;closed, the re-migration link can be shared with the partner so the re-migration can begin.</p>
+
+<p><span><span><span><strong>Note:</strong> When asked to <em>select/enter location MPN ID to enable this partner for re-migration &ndash; </em>always insert the HQ MPN ID as per PMC MPN structure (HQ can be checked in VMT tool).</span></span></span></p>
+
+<p><a bookmark-id="top" data-bi-name="content-anchor-link" href="https://internal.support.services.microsoft.com/en-us/help/4340330#top" managed-link="" tabindex="0">Back to top</a></p>
+<p><span><span><span></span></span></span><span><span><span><span><span><a id="4" name="4"></a>Partners can also request to clean up their CSP accounts for various reasons, see below common scenarios: </span></span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span>They enrolled on the wrong tenant and they want to enroll on a different one.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>They want to use that tenant for multi tenancy on an MPN account and this is not possible if the tenant is already in use.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>They already have a CSP account on a different tenant and have applied again by mistake.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>The CSP account is no longer needed and they want to clean it up so that the tenant is free of any enrollments.</span></span></span></span></span></li>
+</ol>
+
+<p><span><span><span><span><span>If you receive CSP clean up requests, please escalate all cases following escalation template in&nbsp;<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2865698" managed-link="" target="_blank">article 2865698</a>, to MPN Global Support.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Necessary checks before escalating: </span></span></span></strong></span></span></p>
+
+<p><span><span><span><span><span>Check if the user requesting the cleanup is a<strong> </strong>Global Admin on the tenant. In order to verify this, search in CMAT with the tenant and see if the user has Company Administrator role. Note there may be multiple admins; any one of them can request the cleanup. </span></span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span>If the CSP account is in &ldquo;<strong>Active</strong>&rdquo; state, inform the partner that they will lose anything related to the CSP and they will need to start over if they still require a CSP account. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>If the CSP account has a &ldquo;<strong>Suspended</strong>&rdquo; status, this means they were offboarded and we need to check the reason with the Offboarding and Remediation Intake team. Escalate the clean-up cases to MPNGS team who will reach out to them. If the Offboarding team approve the clean-up they will re-instate the account and change the status to &ldquo;Active&rdquo;. Only then the clean-up can be done. </span></span></span></span></span></li>
+</ol>
+
+<p><span><span><strong><span><span><span>Note: </span></span></span></strong><span><span><span>Through the <strong>Offboarding </strong>process the CSP account remains in Partner Center/Prose under the &quot;Suspended&quot; status and the partner will not be able to use the tenant for anything. Request the offboarding only if the partner does not wish to use the tenant for anything in the future.</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>Account Clean-up</span></span></span></strong><span><span><span> does not prevent re-enrollment. Clean-up is basically removing the AAD tenant association with the Partner Center account. It was intended for scenarios where the partner migrated with the wrong identity &ndash; the cleanup removes that association and they can use the tenant to migrate/enroll again.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>You can see more details on the Offboarding process in the <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4476181" managed-link="" target="_blank">Partner Center Offboarding</a> article. </span></span></span></span></span></p>
+
+<p>
+
+<ol start="3">
+	<li><span><span><span><span><span>If the CSP account has a &ldquo;<strong>Declined</strong>&rdquo; status, in most cases they have failed the vetting process. This means that they have not yet signed a contract, however we need to check with OneVet team the reason the partner failed the vetting. The MPNGS team will reach out to them. Depending on the reason and if they approve, we can then proceed with the clean-up. </span></span></span></span></span></li>
+</ol>
+
+<p>
+
+<p><span><span><strong><span><span><span>REQUIREMENT</span></span></span></strong><span><span><span>: Please ask the partner to provide a written confirmation for the CSP clean-up, regardless of the status on the account (active, suspended, declined etc.). </span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><span><span><span><span>You may encounter less common scenarios and you can escalate those for cleanup as well. The MPN Global Support team will review each case and provide additional guidance if needed.</span></span></span></span> </span></span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to top</a></p>
+<p><strong><span><span><span><span><span><a id="5" name="5"></a></span></span></span></span></span></strong>Basically, this feature combines scenarios A.&amp;B. from <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4498851/partner-center-multiple-vorgs-with-single-tenant-migration-vorg-consol" managed-link="" target="_blank">article 4498851&nbsp;Multiple VOrgs with Single Tenant Migration (VOrg Consolidation)</a>.</p>
+
+<p>Note: The Partner Global Account - PGA is the first account to be migrated. All the other ones will land as Partner Location Account &ndash; PLA under the PGA.</p>
+
+<p><strong>Scenarios</strong></p>
+
+<p>For all below scenarios, please gather from partner a Business Justification Letter where he motivates why he is requesting a de-consolidation.</p>
+
+<p class="indent-1">A. If all the V-orgs were migrated from PMC</p>
+
+<p>In this case the clean-up will be done on all the accounts and the re-migration link will be provided. After deciding which account will be the PGA, the partner will firstly migrate it and then, after the migration is successful, all the others will proceed to re-migrate according to their business needs.</p>
+
+<p class="indent-1">&nbsp;B. If one of the V-orgs is created in PC (NetNew)</p>
+
+<p>Then the partner should be informed that once NetNew V-orgs are cleaned up, they cannot re-migrate so the partner needs to re-enroll. In this case the partner either choses the NetNew V-org as PGA (so it will not be cleaned up) or&nbsp;choses another PMC generated V-org as PGA so the NetNew will be cleaned up and the partner will need to&nbsp; re-enroll and then consolidate.</p>
+
+<p>Note: <strong>Check if Net-New has a CSP footprint</strong> by searching in PROSE with all the NetNew MPN IDs an account type equal to <strong><em>&ldquo;Tenant&rdquo;</em></strong></p>
+
+<p>If CSP Footprint found:</p>
+
+<ul>
+	<li>Confirm with partner if he is ready to clean up CSP account also (e.g. if CSP account is declined, pending qualification or the partner does not use it).</li>
+	<li>Gather written confirmation from the partner that CSP enrollment can be also cleaned up.</li>
+</ul>
+
+<p><a href="https://internal.support.services.microsoft.com/en-us/help/2865698" target="_blank" title="https://internal.support.services.microsoft.com/en-us/help/2865698"><span></span></a><a bookmark-id="top" href="#top" managed-link="">Back to top</a></p>
+<p><span><span><a id="6" name="6"></a></span></span><strong>6.1. Introduction</strong></p>
+
+<p>Please advise the Partner that there is absolutely no impact for his company account in the current form. Also, please provide following documentation to Partner for him to get familiarized with:</p>
+
+<p>- <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/partner-center/account-structure" managed-link="" target="_blank">the account structure in PC</a></p>
+
+<p>- <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/partner-center/move-pmc-pc-map" managed-link="" target="_blank">differences between PMC and PC</a></p>
+
+<p>Please present the partner the benefits of this feature as presented in sub-section 2 below.</p>
+
+<p><strong>6.2. Benefits of V-org consolidation</strong></p>
+
+<p>Firstly we need to set up the expectations with the partners and let them know that this feature was implemented&nbsp; for them to manage multiple V-orgs for their company and to consolidate them into their single Partner Center account.</p>
+
+<p>Based on our experiences, some partners chose to consolidate all their accounts for ease of access as well as attainment of competencies, partner management understanding the fact that they might see a decrease in IURs. Hence for these partners, they chose to go through the route of&nbsp; purchasing their other licenses through Commercial Licensing as they will have better control of what specific licenses they utilize within their organization as well as control over the numbers of licenses they need for each user within their organization.</p>
+
+<p><strong>Why consolidate?</strong></p>
+
+<ol>
+	<li>You will find it easier to manage MPN, Cosell, solution publishing under one account structure.</li>
+	<li>You will need to pay for competencies and MAPS one time.</li>
+	<li>You will have consolidated reporting for earnings and payments. No need to log on to separate v-org accounts for full picture.</li>
+	<li>You may be eligible for more competencies after consolidating other accounts.</li>
+	<li>If you become eligible for more competencies you can gain eligibility to incentive programs you were not previously eligible for.</li>
+	<li>If you consolidate with an existing active enrollment (Active SILVER, GOLD), One year Extension offers are unlocked post Consolidation which makes up for the Benefits you enjoyed in PMC as individual organizations, for an additional year to help you plan moving forward.&nbsp; &nbsp;</li>
+</ol>
+
+<p><strong>Important Note: </strong>please inform the partner that this process is a very complex one and it may take up to several weeks to be completed. They might not be able to use their benefits while we are doing the deconsolidation.</p>
+
+<p><strong>6.3. Frontline support call to action:</strong></p>
+
+<ul>
+	<li>Present the partner the benefits of the V-org consolidation feature and all the helpful public articles.</li>
+	<li>Ask the partner to provide the reason and the Business Justification Letter.</li>
+	<li>Check the purchases of the consolidated accounts and present and set the expectations to the partner according to the refund policy.</li>
+	<li>Additionally, as the V-org de-consolidation process involves an account clean up the impact on the partner side will also be the one from general account clean up:</li>
+</ul>
+
+<p>1.) Any cloud products and on-prem (software) activated tokens will continue to run until their expiry date.</p>
+
+<p>2.) Any user assignment subscriptions for the account will be disabled (Azure Bulk Credit / Azure monthly credit / Visual Studio Subscription / Technical Benefits &ndash; Advisory hours / Products support -, Go-to-market).</p>
+
+<p>3.) Any benefit not consumed will be deprovisioned.</p>
+
+<p>4.) Gold enrollment will be disabled.</p>
+
+<p>5.) Any MCP associated in the old PMC platform, will still show up after the re-migration is completed.</p>
+
+<p>6.) Any MCP associated only on Partner Center will need to re-associate themselves after the re-migration is completed under</p>
+
+<ul>
+	<li>Make the partner aware of the fact that this is a complex process and they may not be able to access their inactivated benefits in this time as per rules outlined in above bullet point.</li>
+	<li>After above process has been performed and all the necessary documents have been gathered, please escalated accordingly to MPN Global Support queue by following the steps outlined in<a href="https://internal.support.services.microsoft.com/en-us/help/2865698" target="_blank" title="https://internal.support.services.microsoft.com/en-us/help/2865698">&nbsp;article 2865698</a>.</li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Back to top</a></p>
+<p><a id="7" name="7"></a>All account cleanup requests should be escalated, following escalation template in&nbsp;<a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2865698" managed-link="" target="_blank">article 2865698</a>, to MPN Global Support.</p>
+
+<p><strong>If purchase of active enrollment is visible in the Offline PI tool,</strong> then the Partner advocates should first request for benefit and enrollment cancellation, prior to escalating for account cleanup, as per escalation process described in:</p>
+
+<ul>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4134503" managed-link="" target="_blank">article 4134503</a> (if payment was made by Partner via Wire Transfer)</li>
+</ul>
+
+<p><strong>OR </strong></p>
+
+<ul>
+	<li><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4340330" managed-link="" target="_blank">article 4340330</a> (if payment was made by Partner via Credit Card)</li>
+</ul>
+
+<p><a bookmark-id="top" data-bi-name="content-anchor-link" href="https://internal.support.services.microsoft.com/en-us/help/4340330#top" managed-link="" tabindex="0">Back to top</a></p>
+<p><a id="8" name="8"></a>&nbsp;</p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><a id="101" name="101"><strong>How to guide the Partner through the re-migration process after cleanup is complete?</strong></a></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><a name="101"><span><span><span><span>When accessing the link for re-migration they should firstly use MSA account login (associated to a PMC Admin) and afterwards the company work e-mail (e.g..: </span></span></span></span></a><br>
+<span><span><span><span><a href="mailto:tom@tomscompany.com">tom@tomscompany.com</a></span></span></span></span><a name="101"><span><span><span><span>). Please make sure that the partner is accessing those accounts with the users that have GLOBAL ADMIN rights.</span></span></span></span></a></p>
+
+<p><a name="101"><span><span><span><span>Please ask the Partner to do the following: &#8203;</span></span></span></span></a></p>
+
+<p><a name="101"><span><span><span><span>1.) login to PMC from an InPrivate browser window&#8203;</span></span></span></span></a></p>
+
+<p><a name="101"><span><span><span><span>2.) copy paste in the InPrivate window following link (unique to each Partner and provided by MPN Global Support after the cleanup process has been completed):&#8203;</span></span></span></span></a></p>
+
+<p><a name="101"><span><span><span><span>https://partnercenter.microsoft.com/pcmsa/accountsettings/setmsampncontext?mpnId=XXXXX&amp;programName=partnernetwork </span></span></span></span></a></p>
+
+<p><a name="101"><span><span><span><span>3.) ask the Partner to read notice on screen and then to click next&#8203;</span></span></span></span></a></p>
+
+<p><a name="101"><span><span><span><span>4.) when prompted to login, ask Partner to use their AAD credentials&#8203;</span></span></span></span></a></p>
+
+<p><a name="101"><span><span><span><span>5.) after signing in give the portal a few moments to work through the association&#8203;</span></span></span></span></a></p>
+
+<p><a name="101"><span><span><span><span>6.) when page loading is successful, click on Accept and Continue button to finalize migration</span></span></span></span></a></p>
+</div>
+</div>
+</div>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><a id="102" name="102"><strong>Refund eligibility </strong></a></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><a name="102"><strong><span lang="EN-PH"><span>Regarding Partner&rsquo;s benefits, after an account cleanup the following applies:</span></span></strong></a></p>
+
+<ul>
+	<li><a name="102"><span><span lang="EN-PH">&nbsp;If purchase was made on the Partner Center platform and an account cleanup is performed, regardless of Partner being eligible or not for a refund, when he performs the re-migration, Partner will have to re-purchase the desired offer/s.</span></span></a></li>
+</ul>
+
+<p><a name="102"><span><strong><span lang="EN-PH"></span></strong></span></a></p>
+
+<ul>
+	<li><a name="102"><span><span lang="EN-PH">&nbsp;If purchase was made on the PMC platform (active enrollment was migrated to PC) and an account cleanup is performed, their benefits will be re-migrated together with the re-migration of the MPN Id to the new tenant after both account cleanup and re-migration are completed.</span></span></a></li>
+</ul>
+
+<p><a name="102"><span lang="EN-PH"></span></a></p>
+
+<p><a name="102"><span><span lang="EN-PH">Are all account clean-up scenario for <strong>AD more than 3 months in the future</strong> subject to refund request? If so, we&rsquo;re to follow the refund policy?</span></span></a></p>
+
+<p><a name="102"><strong><span lang="EN-PH">NOTE: </span></strong><span lang="EN-PH">If we follow the normal refund policy, no partner &ldquo;with AD more than 3 months in the future&rdquo; would ever receive a refund. Considering the complexity and particularities of the account cleanups, it was agreed that some special way of actions would apply.</span></a></p>
+
+<div class="alert-band">
+<div class="alert alert-info" role="alert">
+<p class="alert-title"><strong>HIGH IMPORTANCE</strong></p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><a name="102">Partner&rsquo;s purchase is visible in Offline PI and it was made through Wire Transfer &ndash; partner MIGHT be eligible for a refund and each Frontline team should work first with the Global Finance team to obtain refund for Partner and only after escalate to MPN Global Support.Partner&rsquo;s purchase is visible in Offline PI and it was made through Wire Transfer &ndash; partner MIGHT be eligible for a refund and each Frontline team should work first with the Global Finance team to obtain refund for Partner and only after escalate to MPN Global Support.Each of the following scenarios explains partner&rsquo;s eligibility for a refund in account cleanup scenarios. <strong>This is internal only info. As said before, if Partners inquire about the refund aspect, they should be advised that their eligibility for a refund will be checked together with the engineering team, during the account cleanup process. &nbsp;Partner must also be informed that there is a possibility that he might not be eligible for a refund</strong></a></p>
+
+<ul>
+	<li><a name="102"><span> <strong><u><span lang="EN-PH">Scenario 1:</span></u></strong><span lang="EN-PH"> Partner&rsquo;s purchase is visible in CMAT and more than 30 days have passed / benefits used &ndash; partner <strong><span>is usually not </span></strong>eligible for a refund but confirmation of this aspect will come on an one by one case basis, after an analysis according to a multitude of factors and cleanup complexity.</span></span></a></li>
+	<li><a name="102"><span> <strong><u><span lang="EN-PH">Scenario 2:</span></u></strong><span lang="EN-PH"> Partner&rsquo;s purchase is visible in Offline PI and it was made via CC &ndash; partner <strong><span>might be</span></strong> eligible for a refund but confirmation of this aspect will come on an one by one case basis, after an analysis according to a multitude of factors and cleanup complexity.</span></span></a></li>
+	<li><a name="102"><span> <strong><u><span lang="EN-PH">Scenario 3:</span></u></strong><span lang="EN-PH"> </span></span>Partner&rsquo;s purchase is visible in Offline PI and it was made through Wire Transfer &ndash; partner <strong>MIGHT be</strong> eligible for a refund and each Frontline team should work first with the Global Finance team to obtain refund for Partner and only after escalate to MPN Global Support.</a></li>
+	<li><a name="102"><span> <strong><u><span lang="EN-PH">Scenario 4:</span></u></strong><span lang="EN-PH"> Partner&rsquo;s purchase is not visible in CMAT or Offline PI tool, but it is visible in PMC &ndash; partner <strong><span>is not</span></strong> eligible for a refund since their benefits will be remigrated together with the re-migration of the MPN ID to the new tenant.</span></span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><a id="103" name="103"></a><a id="83" name="83"><strong>Will Partners receive their benefits back once the cleanup process is completed?</strong></a></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><a name="103"></a><a name="83"><span><span><span>There are two scenarios to answer this question:</span></span></span></a></p>
+
+<p><a name="103"></a><a name="83"><span><span><span>1.) If there is an active enrollment (MAPS/Silver/Gold) migrated from PMC in the account to be cleaned up, then after the cleanup is performed and the Partner re-migrates to desired tenant, previous active enrollments (MAPS/Silver/Gold) will also be re-migrated over to PC.</span></span></span></a></p>
+
+<p><a name="103"></a><a name="83"><span><span><span><span><span>2.) If there is an active enrollment (MAPS/Silver/Gold) purchased from PC in the account to be cleaned up, then after the cleanup is performed and the Partner re-migrates to desired tenant, Partner will have to re-purchase to have an active enrollment. </span></span></span></span></span></a></p>
+</div>
+</div>
+</div>
+
+<p><a bookmark-id="top" data-bi-name="content-anchor-link" href="https://internal.support.services.microsoft.com/en-us/help/4340330#top" managed-link="" tabindex="0">Back to top</a>&nbsp;</p>
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="30%">
+			<p>CRC 1&nbsp;<a id="9" name="9"></a></p>
+			</td>
+			<td width="30%">
+			<p>CRC 2</p>
+			</td>
+			<td width="40%">
+			<p>CRC 3</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="237">
+			<p>Manage Partner Organization</p>
+			</td>
+			<td width="240">
+			<p>Update Partner Profile</p>
+			</td>
+			<td width="230">
+			<p>Account Cleanup</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a bookmark-id="top" data-bi-name="content-anchor-link" href="https://internal.support.services.microsoft.com/en-us/help/4340330#top" managed-link="" tabindex="0">Back to top</a>&nbsp;</p>
+
+<p>&nbsp;</p>
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="20%"><strong>Date</strong></td>
+			<td width="20%"><strong>CI</strong></td>
+			<td width="60%"><strong>Description</strong></td>
+		</tr>
+		<tr>
+			<td width="20%">9/3/2020</td>
+			<td width="20%"><a href="https://dev.azure.com/contentidea/ContentIdea/_workitems/edit/122933" managed-link="" target="_blank">COMMERCIAL CONTENT TRACKING 122933</a></td>
+			<td width="60%">Added Global Admin information.&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="20%">8/3/2020</td>
+			<td width="20%"><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/121485" managed-link="" target="_blank">COMMERCIAL CONTENT TRACKING 121485</a></td>
+			<td width="60%">Update the entire article</td>
+		</tr>
+		<tr>
+			<td width="20%">7/23/2020</td>
+			<td width="20%"><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/121298" managed-link="" target="_blank">COMMERCIAL CONTENT TRACKING 121298</a></td>
+			<td width="60%">Add a note on Offboarding vs. Account Clean up</td>
+		</tr>
+		<tr>
+			<td width="20%">3/16/2020</td>
+			<td width="20%"><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/115209" managed-link="" target="_blank">Commercial Content Tracking 115209</a></td>
+			<td width="60%">Updated section 5 &amp; 6</td>
+		</tr>
+		<tr>
+			<td width="20%">1/21/2020</td>
+			<td width="20%"><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/113161" managed-link="" target="_blank">COMMERCIAL CONTENT TRACKING 113161</a></td>
+			<td width="60%">Added Benefit decommissioning feature in PrOSE</td>
+		</tr>
+		<tr>
+			<td width="20%">10/17/2019</td>
+			<td width="20%">
+			<p><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/107814" target="_blank">Commercial Content Tracking 107814</a></p>
+			</td>
+			<td width="60%">Changed title to align with the new taxonomy standard.</td>
+		</tr>
+		<tr>
+			<td width="20%">10/9/2019</td>
+			<td width="20%"><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/108606">COMMERCIAL CONTENT TRACKING 108606</a></td>
+			<td width="60%">Add 2 sections</td>
+		</tr>
+		<tr>
+			<td width="20%">9/19/2019</td>
+			<td width="20%"><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/107994" managed-link="" target="_blank">Commercial Content Tracking 107994</a></td>
+			<td width="60%">Updated Scenario 3 in &ldquo;Refund eligibility&rdquo; part in section 8.</td>
+		</tr>
+		<tr>
+			<td width="20%">7/18/2019&nbsp;</td>
+			<td width="20%"><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/104455" managed-link="" target="_blank">104455</a></td>
+			<td width="60%">Added FAQ to section 8, updated the Important notes in section 4 and updated CRC 3 in section 9.</td>
+		</tr>
+		<tr>
+			<td width="20%">4/24/2019</td>
+			<td width="20%"><a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_queries?id=101074&amp;triage=true&amp;fullScreen=false&amp;_a=edit" managed-link="" target="_blank">101074</a> (SPOT 10523)</td>
+			<td width="60%">Add FAQ section and update section 4 and 5</td>
+		</tr>
+		<tr>
+			<td width="20%">2/11/2019</td>
+			<td width="20%"><a href="https://vstf-us-wa-28.partners.extranet.microsoft.com:8443/tfs/ContentIdea/ContentIdea/_queries?id=97791&amp;triage=true&amp;fullScreen=false&amp;_a=edit" managed-link="" target="_blank">97791</a></td>
+			<td width="60%">Updated&nbsp; the CRC Codes.</td>
+		</tr>
+		<tr>
+			<td width="20%">1/21,2019</td>
+			<td width="20%"><a href="https://spot/release/details/9002#/summary" managed-link="" target="_blank">9002</a></td>
+			<td width="60%">Created the new article</td>
+		</tr>
+	</tbody>
+</table>

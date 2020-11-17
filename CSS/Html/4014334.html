@@ -1,0 +1,490 @@
+﻿<header><h1>Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</h1></header><p><span asset="4049349" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4049349]</span></p>
+
+<h3><span>Who</span><span> should use this article?</span></h3>
+
+<ul style="list-style-type:disc" type="disc">
+	<li><span><span>Surface</span></span></li>
+</ul>
+
+<h3><span>What</span><span> is this article about?</span></h3>
+
+<p>This article explains how to use the Microsoft Surface Diagnostic Toolkit (SDT) and the Microsoft Surface Diagnostic Toolkit for Business (SDT4B) as an additional <strong>requirement</strong> to current troubleshooting. This should be followed when a customer is contacting us about their Surface device running Windows 10. If troubleshooting steps prior to that guidance resolves the issue, then SDT or SDT4B is not required, but can be used optionally to add value.</p>
+
+<p><strong>Note:</strong> SDT and SDT4B do not work on Surface Duo.</p>
+
+<p><span><span><span><span lang="EN-GB"></span></span></span></span><span><span><span><span lang="EN-GB"></span></span></span></span><span><span><span lang="EN-GB"></span></span></span></p>
+
+<h3><a id="top" name="top"></a>Table of contents</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="301">
+			<h4><span><span><span><span>1.&nbsp;<a bookmark-id="1" href="#1" managed-link="">SDT use exceptions </a></span></span></span></span></h4>
+			</td>
+			<td width="301">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="301">
+			<h4><span><span><span><span>2.&nbsp;<a bookmark-id="2" href="#2" managed-link="">Overview </a></span></span></span></span></h4>
+			</td>
+			<td width="301">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="301">
+			<h4><span><span><span><span>3. Procedures</span></span></span></span></h4>
+			</td>
+			<td width="301">
+			<p><span><span><span><span>3.1 <a bookmark-id="3.1" href="#3.1" managed-link="">SDT download</a></span></span></span></span></p>
+
+			<p><span><span><span><span>3.2 <a bookmark-id="3.2" href="#3.2" managed-link="">Customer objects to using SDT</a></span></span></span></span></p>
+
+			<p><span><span><span><span>3.3 <a bookmark-id="3.3" href="#3.3" managed-link="">Customer agrees to using SDT</a></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="301">
+			<h4><span><span><span><span>4.&nbsp;<a bookmark-id="4" href="#4" managed-link="">Documentation requirements </a></span></span></span></span></h4>
+			</td>
+			<td width="301">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>&nbsp;</h3>
+
+<h3><a id="1" name="1"></a>1. SDT use exceptions</h3>
+
+<p>SDT or SDT4B is required on every repair order that is setup unless the issue is related to one of the exceptions:</p>
+
+<ul>
+	<li><span><span><span><span><span>Devices running Windows 8.1 or earlier.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Customer induced damage scenarios (for example, cracked screen or broken kickstand).</span></span></span></span></span></li>
+	<li><span><span><span><span><span>No network connectivity as the tool requires an internet connection.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Issues where the device will not turn on or boot to Windows.</span></span></span></span></span></li>
+	<li><span><span><span><span>Issues where SDT or Windows Update is not a troubleshooting step (for example, Microsoft Account Forgotten Password or Pen requires a new battery).</span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><span><a id="2" name="2"></a>2. Overview</span></h3>
+
+<p>The Microsoft Surface Diagnostic Toolkit (SDT) and the Microsoft Surface Diagnostic Toolkit for Business (SDT4B) resolves the most common Surface issues.</p>
+
+<p><strong>Note:</strong> For the rest of this article, except when needed, SDT will mean either SDT or SDT4B as appropriate based on customer&rsquo;s segment.</p>
+
+<p>SDT is downloadable by the customer and can take 10-15 minutes to complete if their device is up to date with all Windows Updates.</p>
+
+<p>The automated tool pinpoints and auto heals issues that can contribute to or cause the symptoms the customer is facing. SDT4B allows the customer to create a support request directly from the tool and includes device information and diagnostic logs, so you can begin troubleshooting right away.</p>
+
+<p><span><span><span><span> </span></span></span></span></p>
+
+<p><strong>There are four versions of this tool:</strong></p>
+
+<ul>
+	<li><span><span><span><span>All <span><span><span>devices running Windows 10 (not in S mode) should download and use the executable (.exe) version of the toolkit appropriate for their customer segment. See <span><a bookmark-id="3.1" href="#3.1" managed-link="">section 3.1</a> </span></span></span></span><span><span><span> </span></span></span><span><span><span>for appropriate links.</span></span></span></span></span></span></span></li>
+	<li><span>Consumer only: Surface Laptop running Windows 10 in S mode should download the app version from the Microsoft Store since executable files won&rsquo;t install on a device running Windows 10 in S mode.</span></li>
+</ul>
+
+<p><span><strong><span><span><span>If SDT is not listed in the troubleshooting steps, but Windows Update is, then SDT should be run in place of Windows Update.</span></span></span></strong> </span></p>
+
+<ul>
+	<li><span>SDT is <strong>required</strong> on every repair order that is setup unless the issue is related to one of the exceptions in <a bookmark-id="1" href="#1" managed-link=""><span>section 1</span></a>. <strong>Requirement:</strong> The reference ID (19 digits) under the Telemetry section must be recorded in case management notes after the SDT diagnostics have run in the customer&rsquo;s device.</span></li>
+	<li><span>If a customer indicates that they have already run SDT, have the customer start SDT and on the&nbsp;<strong>Telemetry</strong>&nbsp;tab, verify that the last run was within the last five days. If not within the last five days, the customer will need to carry out a new diagnostic run.</span></li>
+	<li><span>If SDT does not resolve the customer&rsquo;s issue, the next step is to continue standard troubleshooting, or the device reset step.</span></li>
+	<li><span><span><span>Follow the steps and guidance provided in the <a bookmark-id="3.1" href="#3.1" managed-link=""><span>section 3</span></a></span></span></span><span><span><span>, for specific situational handling instructions</span></span></span><span><span><span><span>.</span></span></span></span></li>
+</ul>
+
+<p><span><strong><span><span><span>Note:</span></span></span></strong><span><span><span>&nbsp;</span></span></span><span><span><span>If either of the following conditions are true then include a link to SDT, in any email you may send. SDT may resolve the customer&rsquo;s issue without need for further support or device servicing. See <span><a bookmark-id="3.1" href="#3.1" managed-link="">section 3.1</a> </span></span></span></span><span><span><span> </span></span></span><span><span><span>for appropriate links.</span></span></span></span></p>
+
+<p>
+
+<ul>
+	<li><span><span><span><span>The customer is out of warranty (OOW) and declines the paid diagnostics offers.</span></span></span></span></li>
+	<li><span><span><span><span>The issue is resolved with standard troubleshooting steps before SDT is used.&nbsp;Providing the information about SDT can be a value add for the customer</span></span></span></span><span>.</span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><span>3. Procedures</span></h3>
+
+<h4><a id="3.1" name="3.1"></a>3.1 SDT download</h4>
+
+<p><span><strong><span><span><span>Note:</span></span></span></strong><span><span><span> The online page does not provide screen sequence instructions.&nbsp;If customers ask questions about specific screens, refer to KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4456776" managed-link="" target="_blank">4456776 Tool User Guide: Surface Diagnostic Toolkit (SDT)</a>&nbsp;and access the training content. </span></span></span></span></p>
+
+<p>Follow existing troubleshooting steps for the customer&rsquo;s issue but <strong>stop</strong> at the step where you would install Windows Updates and run SDT instead.</p>
+
+<p><span><span>Messaging:</span></span><br>
+<br>
+<span><em>&ldquo;Please download and run this program on your device. It is a self-healing tool which looks for potential issues and fixes them, as well as ensures your device is completely up to date. The tool takes about 10-15 minutes to run and is a requirement for progressing your repair order. I&rsquo;ll send you an email with the link now.&rdquo;</em></span></p>
+
+<ul>
+	<li><strong>SDT</strong>
+
+	<ul style="list-style-type:circle">
+		<li><strong>Windows 10 Home or Windows 10 Pro:</strong> Direct link to the executable<strong> </strong><a href="http://aka.ms/surfacedt" target="_blank">http://aka.ms/surfacedt</a></li>
+		<li><strong>Windows 10 Home S or Windows 10 Pro S:</strong> Direct link to app in Microsoft Store <a href="http://aka.ms/surfacerepairuwp" target="_blank">http://aka.ms/surfacerepairuwp</a></li>
+	</ul>
+	</li>
+	<li><strong><span>SDT4B</span></strong>
+	<ul style="list-style-type:circle">
+		<li><strong><span>Surface ProX:</span></strong> <a data-content-id="" data-content-type="" href="https://aka.ms/SDTB_tool_ProX" managed-link="" target="_blank">https://aka.ms/SDTB_tool_ProX</a></li>
+		<li><strong><span>All other Surface devices:</span></strong> <a data-content-id="" data-content-type="" href="https://aka.ms/SDT4B_tool" managed-link="" target="_blank">https://aka.ms/SDT4B_tool</a></li>
+	</ul>
+	</li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="3.2" name="3.2"></a>3.2 Customer objects to using SDT</h4>
+
+<p><span><span><span><span>If the customer objects, highlight that running SDT is a requirement as part of our device repairs process and running SDT will avoid potential extensive delays if the device requires repairs.</span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><strong>Stop</strong> repair order steps if the customer refuses the tool usage and advise the customer that you cannot proceed with the repair request unless SDT diagnostic information (Run ID and date) is provided. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>See Telemetry screen in KB </span></span></span><span><span><span><a href="https://internal.support.services.microsoft.com/help/4456776" target="_blank"><span>4456776 Tool User Guide: Surface Diagnostic Toolkit (SDT</span></a></span></span></span><span><span><span><a href="https://internal.support.services.microsoft.com/help/4456776" target="_blank"><span>)</span></a></span></span></span><span><span><span> to provide a view of information required.</span></span></span></span></span></li>
+</ul>
+
+<p><span> </span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><a id="3.3" name="3.3"></a><span><span><span>3.3 Customer agrees to using SDT</span></span></span></span></h4>
+
+<p class="indent-1"><span>1. If the customer agrees to proceed, continue with the following and set expectations:</span></p>
+
+<ul>
+	<li class="indent-2"><span>The tool takes 10-15 minutes to run unless the tool resolves a Windows Update issue and there are additional Windows Updates that need to be installed.</span></li>
+	<li class="indent-2"><span>Let the customer know that if the tool does not resolve the issue that there are some additional troubleshooting steps that can be done which may include the need to reset the device.</span></li>
+</ul>
+
+<p class="indent-1"><span><span><span>2. Walk the </span></span></span><span><span><span>customer through the steps to download and install the tool. See<a bookmark-id="3.1" href="#3.1" managed-link=""> </a><span><a bookmark-id="3.1" href="#3.1" managed-link="">section 3.1</a> </span></span></span></span><span><span><span> </span></span></span><span><span><span>for appropriate links.</span></span></span><span><span><span><span><span> </span></span></span></span></span></p>
+
+<p class="indent-1"><span>3. Remain on the phone/chat until SDT starts to download Windows Updates. </span></p>
+
+<ul>
+	<li class="indent-2"><span>If a <strong>Windows Update is pending</strong>, inform the customer that you will send an email with the link above so that the customer may finish the SDT steps completely.</span></li>
+	<li class="indent-2"><span>If the <strong>device is already up to date</strong>, Windows Update may not initiate &ndash; in which case stay on with the customer to finish the steps. If the customer asks to be called back, schedule a call back.</span></li>
+	<li class="indent-2"><span>If the <strong>customer is running Windows 10</strong> in S mode on their Surface Laptop, the executable version of Software Repair Tool will not install or run. In this case:</span></li>
+</ul>
+
+<ol>
+	<li class="indent-2"><span>Have the customer use the app version (<a href="http://aka.ms/surfacerepairuwp" target="_blank">http://aka.ms/surfacerepairuwp</a>) available in Microsoft Store&nbsp;instead. </span></li>
+	<li class="indent-2"><span>The app needs to run as Administrator. <strong>Start</strong> menu &gt; find <strong>Software Repair Tool</strong> &gt; right-click &gt; Select <strong>More</strong> &gt; Select <strong>Run as administrator</strong>.</span></li>
+</ol>
+
+<ul>
+	<li class="indent-2">If <strong>the customer does not want to stay on the call</strong>, send the customer an email with this link (<a href="https://www.microsoft.com/surface/support/warranty-service-and-recovery/surface-diagnostic-tool?icid=agent_SDT" target="_blank">Fix common Surface problems using the Surface Diagnostic Toolkit</a>) which provides step by step instructions. Let the customer know there can be a callback to check on the status of their issue and whether the tool helped resolve it. If the customer refuses a callback, offer to send the customer an e-mail and request they reply with the outcome.</li>
+</ul>
+
+<p class="indent-1"><span><span><span><span><span>4. </span></span></span></span></span>In case the customer requests a callback and contacts us first, leave notes in the <strong>Comments</strong> field<span><span><span><span>:</span></span></span></span></p>
+
+<ul>
+	<li class="indent-2"><span><span><span><span><span>What troubleshooting has been completed.</span></span></span></span></span></li>
+	<li class="indent-2"><span><span><span><span><span>Next steps which includes any additional troubleshooting, may include a device restore/recovery/reset.</span></span></span></span></span></li>
+</ul>
+
+<p class="indent-1"><span><strong><span><span><span>Note:&nbsp;</span></span></span>Consumer:&nbsp;</strong><span><span><span>If the customer did not complete running SDT prior to a repair/exchange order being written in MST due to one of the highlighted SDT exceptions, you may receive an error stating that you cannot proceed until running the tool. Review KB </span></span></span><span><span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/4053533/" managed-link="" target="_blank">4053533 TUG: MST: Devices section</a></span></span></span><span><span><span> for the exact error message.</span></span></span></span></p>
+
+<p class="indent-1"><span><span><span><span>This error message indicates that the customer did not run the Surface Diagnostic Toolkit (SDT) within the <strong>last five days</strong> or did not complete<em> </em>the running of SDT. If the customer did not run the SDT tool yet, have them do so and then create the order again. If the customer is calling back after having been provided these instructions by a different advocate, ensure that the notes are complete, and the customer completed running SDT without issue.</span></span></span></span></p>
+
+<p class="indent-1"><span><span><span><span>If the customer claims they already ran SDT or is unable to do so,&nbsp;<strong>consult with a Tech Lead</strong>&nbsp;on next actions. Note that you may see an MST problem type of&nbsp;<strong>SDT Bypass (Requires Approval)</strong>, which is <strong>not</strong> to be used unless a Tech Lead reviewed and approved use. Do <strong>not</strong> try to change the problem type in MST to bypass the process.</span></span></span></span></p>
+
+<ol class="indent-1">
+	<li class="indent-1"><span><span><span><span><span><span><span>Code </span></span></span></span></span></span></span>the&nbsp;<strong>Did you run Surface Diagnostic Toolkit (SDT)</strong>&nbsp;field. Review&nbsp;<a bookmark-id="4" href="https://internal.support.services.microsoft.com/en-us/help/4014334#4" managed-link="" target="">section 4</a>, for guidance on how to code.</li>
+	<li class="indent-1"><span><span><span><span><span><span><span>Document </span></span></span></span></span></span></span>specific outcomes in the&nbsp;<strong>Comments</strong>&nbsp;field in case management tool. Review&nbsp;<a bookmark-id="4" href="https://internal.support.services.microsoft.com/en-us/help/4014334#4" managed-link="" target="">section 4</a>, for additional guidance.</li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><span><span><span><a id="4" name="4"></a>4. Documentation requirements</span></span></span></h3>
+
+<p><span><span><span>Make sure the following data points are recorded in the <strong>Comments</strong> field in the case management tool:</span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span>Document that SDT was used as part of troubleshooting and if it resolved the customers issue.</span></span></span></span></span></li>
+	<li><span><span><span><span>Consumer: Use the <strong>Did you run Surface Diagnostic Toolkit (SDT)</strong>&nbsp;field to accurately describe why you are able to or not able to use SDT.</span></span></span></span></li>
+</ul>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="213">
+			<p><span><strong><span><span>Value</span></span></strong></span></p>
+			</td>
+			<td width="388">
+			<p><span><strong><span><span>When to select</span></span></strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="213">
+			<p><span><span><span>SDT is <strong>required</strong> to be used on every repair order that is setup unless the issue is related to one of the exceptions in this article.</span></span></span></p>
+			</td>
+			<td width="388">
+			<p><span><strong>Requirement:</strong> The reference ID (19 digits) under the Telemetry section&nbsp;<strong>must</strong>&nbsp;be recorded in case management notes after the SDT diagnostics have run on the customer&rsquo;s device.</span></p>
+
+			<ul>
+				<li><span><span><span><span>If a customer indicates that they have already run SDT, have the customer start SDT and on the <strong>Telemetry</strong> tab, verify that the last run was within the last five days. If not within the last five days, the customer will need to carry out a new diagnostic run.</span></span></span></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td width="213">Yes, SDT used and resolved the issue</td>
+			<td width="388">
+			<ul>
+				<li><span>SDT was run with the customer on the call/chat and it resolved the issue. Advocates recorded the Reference ID in the appropriate area(s) of the case management tool. </span></li>
+				<li><span>After recommendation, customers ran SDT by themselves after call/chat and it resolved issue. You can find the history within the last five days on the Telemetry tab.</span></li>
+				<li><span>Reference ID is required.</span></li>
+				<li><span><span><span>SDT solved the issue.</span></span></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td width="213">
+			<p><span><span><span>Yes, SDT used but did not resolve issue</span></span></span></p>
+			</td>
+			<td width="388">
+			<ul>
+				<li><span>SDT was run with the customer on the call/chat, but it <strong>didn&rsquo;t </strong>resolve the issue. Record the Reference ID. </span></li>
+				<li><span>After recommendation, customers ran SDT by themselves after call/chat, but it <strong>didn&rsquo;t</strong> resolve the issue. You can find the record within the last five days on the Telemetry tab. </span></li>
+				<li><span>Reference ID is required.</span></li>
+				<li><span><span><span>If the issue was not solved by SDT, even if the issue was solved finally by other operations, you still need to use this bucket.</span></span></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td width="213">
+			<p><span><span><span>Yes, SDT recommended, but unsure if customer ran</span></span></span></p>
+			</td>
+			<td width="388">
+			<ul>
+				<li><span>SDT was recommended, but the customer was discontinued/unresponsive.</span></li>
+				<li><span>The customer said they ran SDT after you recommended it and the issue was resolved but the customer didn&#39;t provide the Reference ID. </span></li>
+				<li><span>The customer said they ran SDT after it was recommended, and the issue was not resolved, and the customer didn&#39;t provide the Reference ID.</span></li>
+				<li><span><span><span>The </span></span></span>customer was out of warranty (OOW) and declined the paid diagnostics offers. Send SDT link for the customer to self-help.</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td width="213">
+			<p><span><span><span>No, issue was resolved, SDT does not apply for this issue</span></span></span></p>
+			</td>
+			<td width="388">
+			<ul>
+				<li><span>Issue did not require SDT because the issue was resolved by troubleshooting steps before running SDT. </span></li>
+			</ul>
+
+			<p><span><span><span><strong><span><span><span>Note</span></span></span></strong><span><span><span>: If SDT wasn&rsquo;t applicable to this issue then one of the other options should be selected</span></span></span>.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="213">
+			<p><span><span><span>No - Could not install SDT from Store or Download Center</span></span></span></p>
+			</td>
+			<td width="388">
+			<p><span><span><span>Use in any of the following cases:</span></span></span></p>
+
+			<ul>
+				<li><span>Customer does not have internet connectivity and was unable to download the tool.</span></li>
+				<li><span>Customer is not an administrator on the Surface and is not able to install the tool. </span></li>
+				<li><span><span><span>An error occurred during the installation of the tool.</span></span></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td width="213">
+			<p><span><span><span>No - Customer has already used SDT</span></span></span></p>
+			</td>
+			<td width="388">
+			<ul>
+				<li><span><span lang="EN-GB"></span><span lang="EN-GB"></span></span><span>The customer ran SDT within the last five days before the SR was created. <strong>Note</strong>: The customer used SDT before contacting Microsoft.</span></li>
+				<li><span lang="EN-GB"><span><span>Reference ID is required.</span></span></span><span><span lang="EN-GB"></span></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td width="213">
+			<p><span><span><span>No - Device won&#39;t turn on or boot to Windows</span></span></span></p>
+			</td>
+			<td width="388">
+			<p><span><span><span>Use in any of the following cases:</span></span></span></p>
+
+			<ul>
+				<li><span><span><span><span>Device will not turn on even after troubleshooting.</span></span></span></span></li>
+				<li><span><span><span><span>Device will turn on, but unable to boot the device into Windows.</span></span></span></span></li>
+			</ul>
+
+			<p><span><strong>Note</strong>: If you can tell that the customer&rsquo;s issue is indeed a &ldquo;won&rsquo;t turn on or boot to Windows&rdquo; symptom, even if the customer&rsquo;s call is discontinued/unresponsive or the case can&#39;t be continued due to different reasons, choose this taxonomy.<strong> </strong>If during the troubleshooting, device can turn on and booted into Windows, this taxonomy is not applicable<span><span>.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="213">
+			<p><span><span><span>No - Physical damage to the device</span></span></span></p>
+
+			<p><span> </span></p>
+			</td>
+			<td width="388">
+			<ul>
+				<li><span><span><span><span>The issue the customer is calling about is related to physical damage of the device such as cracked screen, damage to the buttons or ports, or damage to the case.</span></span></span></span></li>
+			</ul>
+
+			<p><span><strong><span><span>Note</span></span></strong><span><span>: If you can tell that the customer&rsquo;s issue belongs to &ldquo;Physical damage&rdquo; scenarios, even if the customer is discontinued/unresponsive or the case can&#39;t be continued due to different reasons, choose this taxonomy.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="213">
+			<p><span><span><span>No - SDT installed but would not launch/run</span></span></span></p>
+			</td>
+			<td width="388">
+			<p><span><span><span>Use in any of the following cases:</span></span></span></p>
+
+			<ul>
+				<li><span><span><span><span>The customer was able to install the tool, but it would not launch or run due to the application error.</span></span></span></span></li>
+				<li><span><span><span><span>The customer was able to install the tool, but it could not run because they do not have administrator rights.</span></span></span></span></li>
+				<li><span><span><span><span>The customer is running Windows RT or a version of Windows earlier than Windows 10.</span></span></span></span></li>
+				<li><span><span><span><span>The customer is running Windows 10, but they are using a Surface Pro (v1) or Surface Pro 2.</span></span></span></span></li>
+			</ul>
+
+			<p><span><strong>Note</strong>: If the SDT issue is resolved, choose the appropriate SDT taxonomy<span><span>.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="213">
+			<p><span><span><span>Not applicable - Misroute, disconnected, warranty, RRT, or other approved reasons</span></span></span></p>
+			</td>
+			<td width="388">
+			<ul>
+				<li><span><span><span><span>The customers issues are not related to troubleshooting the device, but instead are misroutes, disconnected calls/chats, warranty, or RRT.</span></span></span></span></li>
+				<li><span><span><span><span>Choose this taxonomy if the case doesn&#39;t belong to any other taxonomy. </span></span></span></span></li>
+			</ul>
+
+			<p><span><strong><span><span>Note</span></span></strong><span><span>: Create a Speak Up! item if more taxonomy options are needed.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="213">
+			<p><span><span><span>SDT is not available in my customer&#39;s language</span></span></span></p>
+			</td>
+			<td width="388">
+			<p><span><span><span>The tool is not available in the customer&rsquo;s language.</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="213">
+			<p><span><span><span>No - Customer refused to run SDT</span></span></span></p>
+			</td>
+			<td width="388">
+			<ul>
+				<li><span>Thecustomer said they ran SDT and refused to run it again. Customer could not or was not willing to provide the reference ID or records. </span></li>
+				<li><span>SDT was recommended. The customer didn&#39;t refuse to run SDT directly; however, they wanted to try other solutions instead of SDT and never ran SDT.</span></li>
+				<li><span><span><span>The customer refused to run SDT (if SDT is applicable to that case)</span></span></span><span><span><span><span>.</span></span></span></span></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+<p><strong><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span>May 2018</strong></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Change history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td style="width:150px">
+			<p><span><strong><span><span><span>Item</span></span></span></strong></span></p>
+			</td>
+			<td>
+			<p><span><strong><span><span><span>Title</span></span></span></strong></span></p>
+			</td>
+			<td style="width:130px"><span><strong><span><span><span>Date</span></span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/158570" managed-link="">CONTENT TRACKING 158570</a></td>
+			<td>Surface: Update KB 4014334 to add commercial SDT4B tool</td>
+			<td>8/28/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/147965">CONTENT TRACKING 147965</a></td>
+			<td>4014334: Update JA-jp translation per SUE496</td>
+			<td>10/9/2019</td>
+		</tr>
+		<tr>
+			<td><a class="caption" href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/148019">Content Tracking 148019</a></td>
+			<td>KB: From SU4728: Incorrect Information in KB 3107652</td>
+			<td>10/9/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/143585">CONTENT TRACKING 143585</a></td>
+			<td>Surface: Update KB 4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</td>
+			<td>5/10/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/142098">CONTENT TRACKING 142098</a></td>
+			<td>Surface: Update KB 4014334 Procedure: Surface: Using the Microsoft Surface Diagnostic Toolkit</td>
+			<td>4/3/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/141354">CONTENT TRACKING 141354</a></td>
+			<td>4014334 How to use the Surface Diagnostic Toolkit&nbsp;</td>
+			<td>4/2/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/137871" role="heading">Content Tracking 137871</a></td>
+			<td>4014334 - Documentation requirements section update</td>
+			<td>12/7/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/134843" role="heading">134843</a></td>
+			<td>delete two rows near end of table at end of article</td>
+			<td>10/29/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/132962" role="heading">Content Tracking 132962</a></td>
+			<td>4014334 - Using SDT content update</td>
+			<td>8/3/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/129730" role="heading">SIRT 129730</a></td>
+			<td>Update to policies for the usage of Surface Diagnostic Toolkit (SDT)</td>
+			<td>5/21/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" class="caption" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/126056" role="heading">Content Tracking 126056</a></td>
+			<td><span class="info-text">UPDATE VKB: 4014334: Process: Using the Microsoft Surface Diagnostic Toolkit</span></td>
+			<td>3/1/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" class="caption" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/123428" role="heading">Content Tracking 123428</a></td>
+			<td><span class="info-text">Surface: KB 4014334 - DMAT keyword</span></td>
+			<td>2/14/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" class="caption" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/123859" role="heading">Content Tracking 123859</a></td>
+			<td><span class="info-text">Surface: KB 4014334 - DMAT steps</span></td>
+			<td>2/12/2018</td>
+		</tr>
+		<tr>
+			<td>
+			<p><span><a href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems?id=123797&amp;fullScreen=false&amp;_a=edit" target="_self"><span><span><span>Content Tracking 123797</span></span></span></a></span></p>
+			</td>
+			<td>
+			<p><span><span><span><span>Add Speak Up Express asset box for the articles in portals 423 and 421 </span></span></span></span></p>
+			</td>
+			<td><span><span><span><span>1/15/2018</span></span></span></span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>

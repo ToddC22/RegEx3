@@ -1,0 +1,412 @@
+﻿<header><h1>ASMS – Misroutes and Duplicates</h1></header><p>Submit a <a href="http://sharepoint/sites/fastrack/Lists/ModTrack/NewForm.aspx?RootFolder=">ModTrack</a> request to update this TSG.</p>
+
+<h3><strong><a id="Overview" name="Overview"></a>Overview </strong></h3>
+
+<p>This TSG provides guidance on how to handle&nbsp;case incorrectly sent (misrouted) to ASMS, that should be supported by another team. It also explains how to handle duplicate cases.&nbsp;&nbsp;</p>
+
+<p><strong>Important:</strong> It is crucial ASMS engineers reroute technical misroutes to the correct support team through this Misroute process as soon as possible once the case is assigned. It is also important to update the case&#39;s Routing Product to be the correct non-ASMS product and support topic. We must be sure to give the support team enough time to assign the case and meet FQR before it expires.</p>
+
+<h3><strong><a id="Policy" name="Policy"></a>Policy</strong></h3>
+
+<ul>
+	<li><strong><span><span>Duplicate Cases</span></span></strong>
+
+	<ul style="list-style-type:circle">
+		<li>
+		<p>If you receive a duplicate case, you should follow the Quick Close scenario steps for duplicate cases&nbsp;outlined in CSS&rsquo;s <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4346835" managed-link="" target="_blank">Commercial Case Management Standards</a>.&nbsp;</p>
+		</li>
+	</ul>
+	</li>
+	<li><strong>Misroutes</strong>&nbsp;</li>
+</ul>
+
+<ol class="indent-3">
+	<li>If you receive a case&nbsp;that is a technical misroute, collect as much information as possible about the&nbsp;request from the customer and document it in the case. Be sure to also include why this case is being <span><span><span>transferred </span></span></span>and do not accept ownership of the case.&nbsp;
+
+	<ul>
+		<li>If you have already taken ownership of a case and sent FQR&nbsp;but later find that it is technical in nature, continue to collect as much information from the customer. If the case verbatim does not clearly indicate which Azure technology the customer needs assistance with, ask the customer for a brief description of the issue so that you can send the case to the right team. Add a detailed case note&nbsp;explaining why this case is no longer in scope for ASMS.&nbsp;</li>
+	</ul>
+	</li>
+	<li>
+	<p>Use the <a data-content-id="" data-content-type="" href="https://msaas.support.microsoft.com/queue" managed-link="" target="_blank">MSaaS Queues Portal</a> to determine which&nbsp;queue the case belongs to.<br>
+	<br>
+	<span>If you cannot confirm the correct queue and routing information even after searching in the Queues Portal for at least 5 minutes, email the Azure DMs (</span><a href="mailto:wadm@microsoft.com">wadm@microsoft.com</a><span>) and ask them to help you find the correct queue for that case. Include all the details of the request you collected from the customer, so that the DMs can use those details to&nbsp;find&nbsp;the correct queue.</span></p>
+	</li>
+</ol>
+
+<ul>
+	<li class="indent-1">Queues Portal Search Tip: Use keywords #AzurePOD or #AzureSupport for Azure Support Teams.</li>
+	<li class="indent-1">You do not need to use the WhichAzureTeam alias. The Duty Managers (DMs) will do that if needed.</li>
+	<li class="indent-1">Service Impacting Events (SIEs) have separate queues depending on what service is affected. Let the DMs figure which queue to use.</li>
+</ul>
+
+<ol start="3">
+	<li>
+	<p>Update the <em>Routing Product</em> and <em>Support Topic </em>of the case.&nbsp;When selecting the Support Topic, select the lowest level and most accurate topic (avoid Advisory) based on what you know about the customer&#39;s request.<br>
+	<br>
+	<strong>Note:&nbsp;</strong>Some teams will have multiple queues in which a case can land in,&nbsp;so accuracy is important. Do not transfer the case using the &quot;Manual Override&quot; feature.<br>
+	<br>
+	Be sure to also do the following before transferring :&nbsp;</p>
+	</li>
+</ol>
+
+<ul style="list-style-type:disc">
+	<li class="indent-1">Change the title of the case by adding &ldquo;MISROUTE&rdquo; to the beginning of the title.</li>
+	<li class="indent-1">If the user has <strong>Basic</strong> or <strong>Developer</strong> level support, adjust the severity to Sev C.</li>
+	<li class="indent-1">If you accepted the case and sent FQR, then you will need to follow some additional steps:
+	<ul style="list-style-type:circle">
+		<li class="indent-1">Create a new Task titled &ldquo;Customer Callback Needed.&rdquo;</li>
+		<li class="indent-1">In the case notes, indicate the&nbsp;status of the issue&nbsp;and the customer expectations.</li>
+	</ul>
+	</li>
+</ul>
+
+<ol start="3">
+	<li>
+	<p>Once you have transferred the case,&nbsp;let the customer know (using the preferred contact method indicated in the case) that you have transferred the case to the correct queue.</p>
+
+	<ul>
+		<li>
+		<p><strong>Note:</strong> If you receive pushback from one of the Azure Technical teams that they won&#39;t accept a support case opened as a Billing/Subscription case, please contact <a data-content-id="" data-content-type="" href="mailto:kimlftedr@microsoft.com" target="">kimlftedr@microsoft.com</a> with the case number and ask for assistance.</p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p>If the customer emails you back or creates a new ticket with ASMS stating that they did not receive a response on the technical ticket within the expected SLA, do the following:&nbsp;</p>
+
+	<ul>
+		<li>
+		<p>Email the DMs at <a href="mailto:wadm@microsoft.com">wadm@microsoft.com</a>&nbsp;and ask them to check on the transferred case, as the customer has yet to be contacted. Be sure to provide them the case number of the transferred case.</p>
+		</li>
+		<li>
+		<p>If discovered that the case has not been assigned,&nbsp;email <a href="mailto:azuresvcsic@microsoft.com">azuresvcsic@microsoft.com</a> so that the technical DMs can assign the case.&nbsp;</p>
+		</li>
+	</ul>
+	</li>
+</ol>
+
+<ul>
+	<li>
+	<p><strong><strong>Cases transferred to ASMS when another team has partial ownership and has already engaged the customer:</strong></strong></p>
+
+	<ul style="list-style-type:circle">
+		<li>
+		<p>If you receive a case from an Internal CSS or Non-CSS team (example - MPN, EA, AAD, VM) that has partial ownership of a case and they have already worked with the customer, you should not accept the entire case. The team who initially contacted the customer, should enagge us via a task (following the One Stop policy on <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4346610" managed-link="" target="_blank">Collaboration</a>).</p>
+		</li>
+		<li>If you receive a case from an I<span>nternal CSS or Non-CSS team</span> who has no ownership over the scenario, and it is determined that ASMS should own the case, the internal team should follow the One Stop <a href="https://internal.support.services.microsoft.com/en-us/help/4339947" managed-link="" target="_blank">Misroute</a> process to send ASMS the entire case.</li>
+		<li>
+		<p>Per the <a href="https://internal.support.services.microsoft.com/en-us/help/4340336" managed-link="" target="_blank">Transfer Ownership</a> policy for incoming case transfers, we should check if any part of the case is owned by the sending team. If so, have them follow the <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4346610" managed-link="" target="_blank">collaboration </a>policy, not the <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4339947" managed-link="" target="_blank">misroute</a> policy. You should not accept the case unless the SE has spoken with the other team prior to the handoff and everyone is following the correct OneStop procedures.</p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><strong><strong>Initially misrouted cases that come back to ASMS for additional assistance:</strong></strong></p>
+
+	<ul style="list-style-type:circle">
+		<li>Follow-up task for ASMS sometimes get&nbsp;transferred to the original engineer, or to that engineer&rsquo;s team. This happens i<span>f a misroute is sent to a technical team who then needs additional assistance from ASMS.&nbsp;</span></li>
+		<li>Leverage <span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3189895" managed-link="" target="_blank">TSG 3189895</a>&nbsp;to ensure these follow-up tasks are routed to the&nbsp;</span></span><span><span>correct ASMS queue, and not back to the original team that handled the misroute initially.</span></span></li>
+	</ul>
+	</li>
+	<li><span><span><strong>Multiple Spam or Auto-generated Cases</strong></span></span>
+	<ul style="list-style-type:circle">
+		<li>If you receive multiple spam cases&nbsp;from a customer or customers that have invalid contact information (email/phone) or indecipherable (gibberish) verbatims,&nbsp;<a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/servicesincident/Lists/Submit_Incident_Form/Submit%20Form.aspx" managed-link="" target="_blank">file an incident</a>.&nbsp;</li>
+	</ul>
+	</li>
+</ul>
+
+<h3><strong>Azure Virtual Training</strong></h3>
+
+<p class="Body">Microsoft Azure Virtual Training Days are not a part of Microsoft Certification, Courseware, Imagine Academy, Azure Dev Tools for Teaching, or other World Wide Learning or developer programs. It is a separate Microsoft initiative, so do not reroute such cases to the Technical Skills for Business Team.</p>
+
+<ul>
+	<li class="Body">The Technical Skills for Business Team is only involved in these types of cases if the&nbsp;customer becomes eligible for the Microsoft Certification exam discount by attending various Microsoft events, which may include&nbsp;Azure Virtual Training Days.</li>
+	<li class="Body">Then, and only if the customer has issues claiming the Microsoft Certification exam discount from&nbsp;<span><span><a href="https://examregistration.microsoft.com/">Microsoft Learning Exam Registration</a></span></span>, should the case be rerouted to the Microsoft Certification program. All other cases will be bounced back.</li>
+</ul>
+
+<p class="Body indent-1"><strong>Note:</strong>&nbsp;&ldquo;Microsoft Certified Professional&quot;&nbsp;refers to Service Desk.</p>
+
+<ul>
+	<li class="Body"><span><span><span><span><span><span>The Technical Skills for Business Team does support&nbsp;</span></span></span>issues related to Azure Virtual Training Days. But it does not have their queue in Service Desk,&nbsp;so those cases cannot be rerouted to the team. Instead, escalate them <span><span><span><span><span><span>internally&nbsp;</span></span></span></span></span></span>to the team&#39;s&nbsp;alias email account at&nbsp;<a href="mailto:techskillssupport@microsoft.com">techskillssupport@microsoft.com</a>.</span></span></span><span><span><span>&nbsp;</span></span></span></li>
+</ul>
+
+<p class="Body indent-1"><span><span><span><span><span><span><strong>Note:</strong>&nbsp;DO NOT share this alias email address with customers!</span></span></span></span></span></span></p>
+
+<h3><strong><a id="Support Scenarios" name="Support Scenarios"></a>Support Scenarios</strong></h3>
+
+<p>Below is a list of common support scenarios that require special case handling.&nbsp;Refer to each scenario to learn how to best handle these cases.&nbsp;</p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="312">
+			<p><span><strong><span>BizSpark Technical Misroutes</span></strong></span></p>
+			</td>
+			<td width="312">
+			<p><span>For BizSpark related issues refer to <a href="https://internal.support.services.microsoft.com/en-US/help/3070105" target="_blank" title="https://internal.support.services.microsoft.com/en-us/help/3070105">TSG 3070105</a>.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span>HIT Related Duplicate Cases</span></strong></span></p>
+			</td>
+			<td width="312">
+			<p><span>If you receive a duplicate HIT case, you should do the following:</span></p>
+
+			<ol>
+				<li><span><span>Accept the case.</span></span></li>
+				<li><span><span>Send FQR to the customer stating the issue will be managed in SR# XYZ (the original case) and that this new case will be transferred over to the owner of their existing case for administration.</span></span></li>
+				<li><span><span>The duplicate case owner should then send the duplicate case over to be owned by the original case owner. The duplicate case owner should notify the original case owner via email that they are sending over this duplicate case for their ownership. </span></span></li>
+				<li><span><span>The original case owner will keep both cases open until the issue is fully resolved, and then close all related cases at the same time.</span></span></li>
+			</ol>
+
+			<p><span><strong>Note: </strong>If a Premier SE receives a duplicate case which is already worked and owned by a Professional SE, the duplicate case should be sent to the original case owner, regardless of support level.</span></p>
+
+			<p><span><strong>Note:</strong> If HIT says to stop working with a customer and the customer continues to file more duplicates, follow HIT&#39;s instructions in the ticket. Additional guidance on handling HIT cases can be found in <a href="https://internal.support.services.microsoft.com/en-US/help/2658538" target="_blank">TSG 2658538</a>. </span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span>Microsoft Security Response Center Misroutes</span></strong></span></p>
+			</td>
+			<td width="312">
+			<p><span>If ASMS receives a Security misroute, set the SAP to <strong><em>Azure\Subscription management\Security and compliance requests for Subscriptions\Guidance for security advisories or vulnerabilities</em>. </strong></span></p>
+
+			<p><span><strong>Note:</strong> MSaaS will then route the case accordingly. </span></p>
+
+			<p><span>If the customer has a security issue, advise the customer to submit abuse report at <a href="http://cert.microsoft.com" target="_blank" title="http://cert.microsoft.com">http://cert.microsoft.com</a>.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span>MPN Misroutes</span></strong></span></p>
+			</td>
+			<td width="312">
+			<p><span>For more MPN related scenarios refer to <a href="https://internal.support.services.microsoft.com/en-US/help/2836909" target="_blank" title="https://internal.support.services.microsoft.com/en-us/help/2836909">TSG 2836909</a>. </span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312"><strong>Non-Cloud Misroutes</strong></td>
+			<td width="312">
+			<p>Non-cloud cases are cases not related to Azure, M365, or any other cloud offer. If you receive such a case do the following:&nbsp;</p>
+
+			<ol>
+				<li>Send an email with the following details to&nbsp;<strong><a aria-live="assertive" data-bi-name="content-anchor-link" href="mailto:%20csslnaomposadp@Microsoft.com" managed-link="" tabindex="0" target="_blank">NOAM CSS Comm PostSales DP</a>.&nbsp;</strong><br>
+				The subject line of your email must include&nbsp;<strong>Project Orion &ndash; SR#&lt; &gt; - &lt;customer issue&gt;:&nbsp;</strong>
+
+				<ul>
+					<li>Customer contact information (email and/or phone number)</li>
+					<li>Microsoft product</li>
+					<li>Version info (if known)</li>
+					<li>Problem description</li>
+					<li>Service Desk case ID</li>
+				</ul>
+				</li>
+			</ol>
+
+			<ol start="2">
+				<li>A tech&nbsp;router will receive this email and determine which team this issue should be routed to. Once the team is&nbsp;determined, the case will be taken over by that team. At that point, no further actions will be required of you as the ASMS SE.</li>
+			</ol>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span>O365/M365/D365 Commerce, Technical, Home, Concierge Support</span></strong></span></p>
+			</td>
+			<td width="312">
+			<p><span>For issues you assess as either O365/M365/D365 Commerce, Technical, Home, or Concierge, follow the engagement processes outlined in <a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4506349" managed-link="" target="_blank">TSG 4506349</a>.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span>Payment Central Login Issues</span></strong></span></p>
+			</td>
+			<td width="312">
+			<p><span>Microsoft Payment Central is the centralized onboarding and account management tool for partners/suppliers/payees receiving payment from Microsoft.</span></p>
+
+			<p><span>Sometimes customers experience Azure AD login issue, which prevents them from accessing Microsoft Payment Central. In these instances, The Payment Central AP Ops team will create and transfers cases to Azure AD Synchronization and Account Management teams to obtain further assistance for the following scenarios: <strong>Synchronization Issues, Viral Tenant, and Abandon Tenant.</strong> </span></p>
+
+			<p><span>For <em>Microsoft Payment Central</em> login issues, route the case to the AAD team based on the related scenario and provide the following details. </span></p>
+
+			<p><span><strong>Scenarios:</strong></span></p>
+
+			<ul>
+				<li><span><span><strong>Synchronization &ndash; </strong>Azure Active Directory\Active Directory to Azure AD Synchronization\Other failures regarding Active Directory to Azure AD synchronization</span></span></li>
+				<li><span><span><strong>Viral Tenant &ndash;</strong> Azure Active Directory\Domain Name Management\Other questions regarding custom domain name management</span></span></li>
+				<li><span><span><strong>Abandon &ndash;</strong> Azure Active Directory\Domain Name Management\Other questions regarding custom domain name management</span></span></li>
+			</ul>
+
+			<p><span><strong>Case Title: </strong>Microsoft Payment Central: AAD Support: CRM Ticket #</span></p>
+
+			<p><span><strong>Case Details:</strong></span></p>
+
+			<ul>
+				<li><span><span>High Level Description:</span></span></li>
+				<li><span><span>Error messages received (if available):</span></span></li>
+				<li><span><span>Additional Background Information:</span></span></li>
+				<li><span><span>AP Ops Engineer Contact:</span></span></li>
+				<li><span><span>Customer Domain:</span></span></li>
+				<li><span><span>Closing Contact - Identity SEs need to send email to the contact (a DL) once case is closed.</span></span></li>
+			</ul>
+
+			<p><span><strong>Note:</strong> The AP Ops will use this email to confirm the issue is resolved and close their ticket, since they use a different CRM tool.</span></p>
+
+			<p><span><strong>Sev A issues:</strong> Escalation AP Ops should email Azure Identity Tech Advisors at <a href="mailto:cloudidpodta@microsoft.com">cloudidpodta@microsoft.com</a> so they are aware of the case and take appropriate steps to ensure a resolution for the customer.</span></p>
+
+			<p><span><strong>Other Common Issues</strong></span></p>
+
+			<ul>
+				<li><span><span>Users or IT admin do not know how they got onboarded to Azure AD.</span></span></li>
+				<li><span><span>IT admin left their organization and the new IT admin does know how to support Azure AD.</span></span></li>
+				<li><span><span>IT admin tried performing Azure AD onboarding on a trial basis but did complete.</span></span></li>
+				<li><span><span>Not all user accounts from the organization are synchronized with Azure AD.</span></span></li>
+				<li><span><span>Custom STS page errors/time out.</span></span></li>
+				<li><span><span>Suppliers do not know they have to use a corporate account with corporate credentials.</span></span></li>
+				<li><span><span>Suppliers do not know they should use domain\account format in their STS page.</span></span></li>
+				<li><span><span>Not all suppliers enabled a password reset experience or capability.</span></span></li>
+			</ul>
+
+			<p><span><strong>Note:</strong> The bulk of issues forwarded to CSS fall within the Sync category.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span>Premier, ProDirect, or Partner Support Misroutes</span></strong></span></p>
+			</td>
+			<td width="312">
+			<p><span>If you are assigned a non-technical ASMS case that is covered by a higher level of support entitlement (e.g., Microsoft Unified Support, Partner, Premier, or ProDirect), route it to the <strong><span>ASMS Premier Accounts and Portal</span></strong> queue. Please refer to <a href="https://internal.support.services.microsoft.com/en-us/help/2786284" managed-link="" target="_blank">TSG 2786284</a> for more information on identifying and routing these cases.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312"><strong>Public Sector (Project Five)</strong></td>
+			<td width="312">
+			<p><span><span><span>Public sector cases related to Australia, New Zealand, C<span><span><span>anada, the U</span></span></span>nited States, and the United Kingdom require special security requirements when handling their cases. </span></span></span></p>
+
+			<p><span><span><span>For more (optional) information, see the </span></span></span><a href="https://microsoft.sharepoint.com/teams/ProjectFive/"><span><span><span>Project Five SharePoint</span></span></span></a><span><span><span>.</span></span></span></p>
+
+			<p><span><span><span>While these cases should not come to ASMS, misroutes are always possible. In these instances, manually override the case routing and send it to the <strong>MSaaSFVEY</strong> queue&nbsp;if any of the&nbsp;</span></span></span>conditions are true:</p>
+
+			<ul>
+				<li><strong>Project Five</strong> is part of your case title.</li>
+				<li>Your customer requests or mentions <strong>Project Five</strong> as a support option.</li>
+			</ul>
+
+			<p>If you are unsure whether your case qualifies for this type of transfer, engage your TA/PTA.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312"><strong>Publisher Support</strong></td>
+			<td width="312">
+			<p>If you receive a case related to Publisher Support (i.e. General marketplace help, How To questions, or Deployment issue), transfer the case to the <strong><span><span><span>CSS PE Global Sonata Redmond/Hyderabad Marketplace EN T1 </span></span></span></strong><span><span><span>queue<strong>. </strong></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong>SAP Cloud Platform</strong></span></p>
+			</td>
+			<td width="312">
+			<p><span>SAP Cloud Platform is an open business platform for developing applications across multiple clouds (for example: GCP, AWS, and Azure). It enables customers to build applications and easily transport them between cloud providers.</span></p>
+
+			<p><span>Currently, there is no scope for ASMS as it relates to SAP. All SAP issues should be treated as a misroute.</span></p>
+
+			<ul>
+				<li><span><span>Transfer SAP Cloud Platform technical support tickets to the <strong>SAP Embrace</strong> technical queue.</span></span></li>
+				<li><span><span>Transfer SAP Cloud Platform tickets with Accounts and Billing Scope to the EAO team.</span></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span>Technical </span></strong></span></p>
+			</td>
+			<td width="312">
+			<p><span><strong>Scenario 1: Customer with no technical support files a billing case for a technical issue</strong></span></p>
+
+			<p><span>Do not accept ownership of the case. Update the <strong>Routing Product</strong>/<strong>Support Topic</strong> of the case to point to the correct technical subtopic (not to ASMS). Add &ldquo;MISROUTE&rdquo; to the case title and change the title of the case to accurately describe the issue. Send the case to the correct technical queue per the <a href="https://msaas.support.microsoft.com/queue">Queues Portal</a>.</span></p>
+
+			<p><span><strong>Note:</strong> Make sure severity aligns with support level. No Sev A or Sev B. Don&#39;t use the <strong>Advisory</strong> support topic as these users are not entitled to advisory support.</span></p>
+
+			<p><span><strong>Scenario 2: </strong><strong>Customer with technical support files a billing case, but is able to file a technical support case from the portal</strong></span></p>
+
+			<p><span>Do not accept ownership of the case. Update the <strong>Routing Product</strong>/<strong>Support Topic</strong> of the case to point to the correct technical topic (not to ASMS). Add &ldquo;MISROUTE&rdquo; to the case title and change the title of the case to accurately describe the issue. Send the case to the correct technical queue per the <a href="https://msaas.support.microsoft.com/queue" target="_blank">Queues Portal</a>.</span></p>
+
+			<p><span><strong>Note:</strong> Make sure case severity aligns with support level. No Sev A or Sev B for <strong>Basic</strong> or <strong>Developer</strong> level support. Be sure to use the most accurate support topic when transferring. Don&rsquo;t use the <strong>Advisory</strong> support topic unless it&rsquo;s a Pro-direct or Premier customer and the issue is truly advisory.</span><br>
+			&nbsp;</p>
+
+			<p><span><strong>Scenario 3: Customer with tech support files a billing case because they cannot file a technical support case from the portal</strong></span></p>
+
+			<p><span>1. Keep the original case and use it to work with engineering to fix the entitlement in Ibiza. Be sure to collect screenshots from the customer.</span></p>
+
+			<p><span>2. Create a second case for the customer (using the <a href="https://internal.support.services.microsoft.com/en-us/help/2895582" target="_blank">Grace Case TSG 2895582</a>) with their technical issue and send it to the correct technical queue.</span></p>
+
+			<p><span><strong>Note:</strong> Make sure that severity aligns with support level. No Severity (Sev) A or B for <strong>Basic</strong> or <strong>Developer</strong> level support. Be sure to use the most accurate support topic when transferring. Don&rsquo;t use the <strong>Advisory</strong> support topic unless it&rsquo;s a Pro-direct or Premier customer and the issue is truly advisory.</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<p><span><strong><span>Volume Licensing (VL)</span></strong></span></p>
+			</td>
+			<td width="312">
+			<p><span>For cases you access as VL scope, follow the guidance outlined in <a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4506349" managed-link="" target="_blank">TSG 4506349</a>. </span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3><br>
+<strong><a id="TSG Change Log" name="TSG Change Log"></a>TSG Change Log</strong></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>Date</strong></p>
+			</td>
+			<td>
+			<p><strong>Updated By</strong></p>
+			</td>
+			<td width="408">
+			<p><strong>Content Updated</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>04/07/2020</td>
+			<td>v-ishan</td>
+			<td width="408">Added SAP misroute information to Azure Technical and Other Non-ASMS Misroutes table as per ModTrack 2678.</td>
+		</tr>
+		<tr>
+			<td>06/04/2020</td>
+			<td>kuharr</td>
+			<td width="408">Added non-cloud misroutes path and users that create multiple fake cases with invalid contact info.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>06/24/2020</td>
+			<td>mievan&nbsp;</td>
+			<td width="408">Added guidance on Microsoft Security Response Center Misroutes. Also, organized list of scenarios, Updated ART to HIT, removed MsSolve callouts.</td>
+		</tr>
+		<tr>
+			<td>06/24/2020</td>
+			<td>v-viizza</td>
+			<td width="408">Added a description for the TSG when searched for using SDK.</td>
+		</tr>
+		<tr>
+			<td>06/30/2020</td>
+			<td>v-adhigg</td>
+			<td width="408">Removed USNAT Misroutes. (This information can now be found in TSG&nbsp;3005247.)</td>
+		</tr>
+		<tr>
+			<td>7/20/2020</td>
+			<td>mievan</td>
+			<td width="408">Added guidance on handling general duplicate cases to Policy section. Removed Port 25 guidance, see&nbsp; TSG&nbsp;4511085 instead. Re-organized scenarios.</td>
+		</tr>
+		<tr>
+			<td>10/2/2020</td>
+			<td>mievan</td>
+			<td width="408">Added Public Sector (Project Five) and Publisher Support Scenarios.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>11/1/2020</td>
+			<td>v-kproctor</td>
+			<td width="408">Added the&nbsp;Azure Virtual Training section.</td>
+		</tr>
+	</tbody>
+</table>

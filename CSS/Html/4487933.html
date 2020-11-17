@@ -1,0 +1,309 @@
+﻿<header><h1>TUG: CST: Subscriptions</h1></header><p><span asset="4462485" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4462485]</span></p>
+
+<h3><span><span><span><span><span><span>Who should use this article?</span></span></span></span></span></span></h3>
+
+<ul>
+	<li><span><span><span><span><span><span><span>All Commercial</span></span></span></span><span><span> </span></span></span></span></span></li>
+</ul>
+
+<h3><span><span><span><span><span>What is this article about?</span></span></span></span></span></h3>
+
+<p><span><span><span><span><span>This article covers how to accomplish various tasks within the new tool, Modern Commerce Support Tooling (CST) v2. It is not intended to replace existing guidance &ndash; refer here for help understanding how to execute a task.</span></span></span><span><span> </span></span></span></span></p>
+
+<h3><span><span><span><span><span><a id="top" name="top"></a>Table of contents</span></span></span></span></span></h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span>1. <a bookmark-id="1" href="#1" managed-link="">Assets + subscriptions blade</a></span></span></span></span></h4>
+			</td>
+			<td width="312">
+			<p><span><span><span><span>1.1 <a bookmark-id="1.1" href="#1.1" managed-link="">Azure subscriptions + Assets</a></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span>2. <a bookmark-id="2" href="#2" managed-link="">Legacy subscriptions blade</a></span></span></span></span></h4>
+			</td>
+			<td width="312">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span>3. <a bookmark-id="3" href="#3" managed-link="">Subscription GUID</a></span></h4>
+			</td>
+			<td width="312">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h3><a id="1" name="1"></a>1. Assets + subscriptions blade</h3>
+
+<p>Assets are containers for ownership and management of various products, for more detail see the Modern Assets training On Success Factors&#8203; or Learning&#8203;.</p>
+
+<p>The Assets Tile gives an overview of all Assets in a customer&rsquo;s account. The <strong>View All</strong> &nbsp;experience has a number of filtering options (for example, Asset ID, Subscription GUID&#8203;, Reservation Order ID and Project) that will allow a support agent to quickly identify and perform actions on an Asset. The operations available in this experience are Asset Transfer (for example, Subscription Ownership Transfer by doing a Usage Asset transfer) and auto-renewal management using the <strong>Manage</strong> operation for subscription based assets (for example, Azure Support Plan or Marketplace Dev Services).</p>
+
+<h4><a id="1.1" name="1.1"></a>1.1 Azure subscriptions + Assets</h4>
+
+<p>Azure subscriptions are represented as Usage Assets&#8203; in CST. Support Agents can filter out the Asset associated with an Azure Subscription by Azure Subscription GUID to perform various actions.&#8203;&#8203; While not all <em>Usage Assets</em> are necessarily Azure Subscriptions, all Modern Azure Subscriptions (17G and 148G offer types) have a corresponding Usage Asset in a 1:1 relationship.</p>
+
+<p>In the <em>Assets Tile</em> or <em>Assets View All</em>, <strong>Usage Assets</strong> can be filtered by the behavior of <em>Usage</em>. Currently, only Azure subscriptions create Usage Assets.&nbsp; You can search and filter by the follow sets of data:</p>
+
+<ul>
+	<li>Project &ndash; Project that is tied to the Asset</li>
+	<li>Behavior- Defines the Asset relationship to Commerce
+	<ul style="list-style-type:circle">
+		<li>Values - Ratable, Usage, Future Billing Term Based, Quantifiable</li>
+	</ul>
+	</li>
+	<li>Custom Search Attribute &ndash; Asset ID, Subscription, GUID, Reservation Order ID</li>
+	<li>Custom Search Value</li>
+	<li>Asset ID- Unique Identifier that ties the Asset to the Billing Group</li>
+	<li>Asset Name &ndash; Name of Asset (for example, Azure Standard, RI and VM)</li>
+	<li>Type &ndash; Same as Behavior (Ratable Usage, Future Billing, Term Based, Quantifiable)</li>
+	<li>Subscription GUID &ndash; Subscription tied to the Asset</li>
+	<li>Start Date &ndash; Asset ID start date</li>
+	<li>End Date &ndash; Date Asset ID ends (Free Trial End Date)</li>
+	<li>Is Free Trial &ndash; True or False based on the Asset</li>
+	<li>Quantity &ndash; Number of Assets</li>
+	<li>State &ndash; Active or inactive</li>
+</ul>
+
+<p><span asset="4525774" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4525774]</span></p>
+
+<p>There are two types of transfers a customer can perform. An Asset Transfer (Transfer Asset) <strong>and/or a Billing Ownership Transfer (BOT).</strong></p>
+
+<p><strong>Asset transfer: </strong>The customer can transfer their Asset (for example, Saas) along with the Billing Ownership to another Entity. You would perform this transfer like a normal Asset Transfer, but then select the checkbox that states to transfer billing.</p>
+
+<p><strong>Ownership transfer: The</strong> customer has the option to transfer just the ownership on an Asset without converting the offer.&nbsp;</p>
+
+<p>You can transfer one or more subscriptions from one customer to another.</p>
+
+<p>For example, Azure subscriptions are typically bought by individuals and not tenants. When employees change jobs, customers need to transfer an Azure subscription from one employee to another or from one partner to another.</p>
+
+<p><span><strong>Things to consider:</strong></span></p>
+
+<ul>
+	<li><span>The customer that you&rsquo;re transferring the subscription to, needs to have a billable account with a valid PI. </span></li>
+	<li><span>The financial liability present before the transfer stays with the original customer (the existing financial liability isn&rsquo;t transferred with the subscription). </span></li>
+</ul>
+
+<p><strong>To perform an operation on an Asset:</strong></p>
+
+<ol>
+	<li>Go to the <strong>Assets Section </strong>and select <strong>View All</strong></li>
+	<li>Select the Corresponding Asset</li>
+	<li>Select the Blue Dial and you will be able to perform the following (we will be covering in more detail)
+	<ol style="list-style-type:lower-alpha">
+		<li>Transferring an Asset &ndash; Allows customers to move an Asset from one entity to another.</li>
+		<li>Returning an Asset</li>
+		<li>Manage (auto renew and cancellation operations)</li>
+		<li>Converting an offer</li>
+		<li>Transferring Ownership - Allows customers to change ownership of their subscriptions&nbsp; from an existing owner to a new owner.</li>
+	</ol>
+	</li>
+</ol>
+
+<p><span asset="4525775" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4525775]</span></p>
+
+<p>Alternatively, a specific subscription can be filtered by GUID as the search parameter:</p>
+
+<ol>
+	<li>Copy Subscription GUID<strong>.</strong></li>
+	<li>Select <strong>Subscription GUID</strong> from the <em>Custom Search Attribute</em> drop down.</li>
+	<li>Paste <em>Subscription GUID</em> in <strong>Custom Search Field.</strong></li>
+	<li>Select <strong>Apply </strong>to filter the list.</li>
+</ol>
+
+<p><span asset="4525776" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4525776]</span></p>
+
+<p><span><strong><span>The Details tab displays the following:</span></strong></span></p>
+
+<ul>
+	<li><span><span><span>Project - Project/Invoice section to which the subscription is associated.</span></span></span></li>
+	<li><span><span><span>Description - the Azure subscription name. </span></span></span></li>
+	<li><span><span><span>Delegated - Whether the Asset has been delegated to another project.</span></span></span>
+	<ul style="list-style-type:circle">
+		<li><span><span><span>Whether or not the customer&rsquo;s entitlement is tied to two assets/projects.</span></span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<p><span asset="4525777" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4525777]</span></p>
+
+<ul>
+	<li><span><span><span>Subscription GUID - Azure Subscription GUID</span></span></span></li>
+	<li><span><span><span>Start Date - Subscription creation date.</span></span></span></li>
+	<li><span><span><span>End Date - Specifies whether the subscription has a termination date.</span></span></span></li>
+	<li><span><span><span>Updated - Date when Asset was last changed by the system (for instance, the transfer date).</span></span></span></li>
+</ul>
+
+<p><span asset="4525778" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4525778]</span></p>
+
+<p><span><strong><span>The Related tab displays</span></strong><span> the different types of Rating Assets (first Party, third Party, Marketplace, Reservation) that are tied to the customer&rsquo;s usage Asset. If you have a customer that has multiple Assets tied to their usage Asset, it will list out each one (by Asset ID) in this section.</span></span></p>
+
+<p><span asset="4525779" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4525779]</span></p>
+
+<p><span><strong><span>The Events tab</span></strong><span> displays a log of all system operations performed on this particular Usage Asset. This will include when the Usage Asset was created, which was captured below.&nbsp;&nbsp; </span></span></p>
+
+<ul>
+	<li><span><span>Event ID &ndash; Unique identifier that is created at the point the Event occurs.</span></span></li>
+	<li><span><span>Date &ndash; The date of the Event </span></span></li>
+	<li><span><span>Type &ndash; This is the type of Event (for example, Usage Asset Created, transferred and deleted)</span></span></li>
+</ul>
+
+<p><span><span asset="4525780" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4525780]</span></span></p>
+
+<p><span><strong><span>The Subscription and Offer Details tab</span></strong><span> displays the following:</span></span></p>
+
+<ul>
+	<li><span><span><span>Subscription ID - Commerce Identifier for Azure subscription.</span></span></span></li>
+	<li><span><span><span>Entitlement Status&#8203; - This is the status detail of the asset in Commerce. Same as Entitlement Status in CMAT.</span></span></span></li>
+	<li><span><span><span>Fulfillment Status -This is the ARM status of the subscription from the Azure side. If the Status and Entitlement Status show suspended, but Fulfillment Status is Active, the Azure subscriptions and services are still active and editable.</span></span></span></li>
+	<li><span><span><span>Purchase Date - Date when subscription was provisioned with resources.</span></span></span></li>
+	<li><span><span><span>Start Date - Date when subscription was provisioned in Azure.</span></span></span></li>
+	<li><span><span><span>End Date - Date when subscription will expire.</span></span></span></li>
+	<li><span><span><span>Billing Cycle - Cadence of billing for subscription (Annually/Monthly).</span></span></span></li>
+</ul>
+
+<p><span><strong><span>Billing/Offer</span></strong><span> displays the following:</span></span></p>
+
+<ul>
+	<li><span><span><span>Offer GUID - Indicates the subscription&#39;s offer type:</span></span></span>
+
+	<ul style="list-style-type:circle">
+		<li><span><span><span>Standard = f8e068a9-d288-4056-96f8-16cd485c4353</span></span></span></li>
+		<li><span><span><span>Dev/Test = 45dea93b-65c2-431a-a6e8-41316b9f6e82&#8203;</span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span>Product SKU - N/A</span></span></span></li>
+	<li><span><span><span>Revenue SKU - N/A</span></span></span></li>
+	<li><span><span><span><span>Order ID - This is a Legacy concept and is the same from CMAT. Represents the relationship between. </span></span></span></span></li>
+	<li><span><span><span><span>Payment Instrument This is a Legacy concept and is the same from CMAT (Credit Card/Invoice).</span></span></span></span></li>
+</ul>
+
+<p><span asset="4525781" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4525781]</span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link=""><span><span><span>Return to top</span></span></span></a></p>
+
+<h3><a id="2" name="2"></a>2. Legacy subscriptions blade</h3>
+
+<p><span><span>The legacy Subscription tile shows non-Modern subscriptions that do not have any Marketplace purchases tied to the Tenant in context. This means the Legacy Subscriptions do not have a Modern presence.&nbsp; If a customer is partially converted to Modern and partially in Legacy then you will see Legacy subscriptions under <strong>Legacy Subscription Blade</strong> and the remaining Modernized under the <strong>Assets +Subscriptions Blade</strong>.</span></span></p>
+
+<p><span><span>This section provides details on the following below. This is where can also perform Subscription Transfer, Offer Conversion and Transfer Ownership which is detailed in the below section.</span></span></p>
+
+<ul>
+	<li><span><span>Offer Name &ndash; Name of offer</span></span></li>
+	<li><span><span>Offer Type &ndash; Free Trial or paid offer</span></span></li>
+	<li><span><span>Admin Email &ndash; Email address of admin assigned to the Legacy subscriptions</span></span></li>
+	<li><span><span>Plan ID &ndash; Unique ID that is tied to the subscription plan </span></span></li>
+	<li><span><span>Start and End Date &ndash; Start and End date of the subscription</span></span></li>
+	<li><span><span>Status &ndash; Active or inactive</span></span></li>
+</ul>
+
+<p><span asset="4525782" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4525782]</span></p>
+
+<p><span><strong><span>Details + Offer/Billing tab</span></strong><span> displays<strong>:</strong></span></span></p>
+
+<ul>
+	<li><span><span>Subscription ID &ndash; Same as the Subscription GUID</span></span></li>
+	<li><span><span>Enrollment Status &ndash; Displays active or inactive status</span></span></li>
+	<li><span><span>Purchase Date &ndash; Date offer was purchased</span></span></li>
+	<li><span><span>Billing Cycle &ndash; Type of Billing Cycle (Monthly, Annually)</span></span></li>
+	<li><span><span><span>Auto Renewal &ndash; True or False</span></span></span></li>
+</ul>
+
+<ul>
+	<li><span><span><span>Offer GUID &ndash; GUID assigned to the specific offer</span></span></span></li>
+	<li><span><span><span>Product SKU &ndash; If applicable, Product SKU will display here</span></span></span></li>
+	<li><span><span><span>Revenue SKU &ndash; Revenue SKU tied to this offer</span></span></span></li>
+	<li><span><span><span>Order ID &ndash; Unique identifier tied to this order</span></span></span></li>
+	<li><span><span><span>Payment Instrument &ndash; Type of PI assigned to this offer (for example, CC, Check/Wire or Invoice)</span></span></span></li>
+</ul>
+
+<p><span asset="4525783" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4525783]</span></p>
+
+<p><span><span><span><a bookmark-id="top" href="#top" managed-link=""><span><span><span>Return to top</span></span></span></a></span></span></span></p>
+
+<h3><span><a id="3" name="3"></a>3.Subscription GUID</span></h3>
+
+<p>Expand the Subscription GUID to be able to see the following:</p>
+
+<p><strong>Details</strong></p>
+
+<ul>
+	<li class="MsoNoSpacing"><span>Subscription ID &ndash; Same as Subscription GUID</span></li>
+	<li class="MsoNoSpacing"><span>Entitlement status &ndash; (New, active or disabled)</span></li>
+	<li class="MsoNoSpacing"><span>Fulfillment status &ndash; (New, active or disabled)</span></li>
+	<li class="MsoNoSpacing"><span>Purchase Date &ndash; Date subscription was purchased and activated</span></li>
+	<li class="MsoNoSpacing"><span>Billing Cycle &ndash; Date billing is due, if applicable</span></li>
+	<li class="MsoNoSpacing"><span>Auto Renewal &ndash; (True or False) </span></li>
+</ul>
+
+<p class="MsoNoSpacing"><strong>Offer/Billing</strong></p>
+
+<ul>
+	<li class="MsoNoSpacing"><span>Offer GUID - Unique identifier tied to the offer</span></li>
+	<li class="MsoNoSpacing"><span>Product SKU &ndash; Where applicable, SKU of products purchased</span></li>
+	<li class="MsoNoSpacing"><span>Revenue SKU &ndash; Where applicable, will show N/A if not applicable</span></li>
+	<li class="MsoNoSpacing"><span>Order ID &ndash; Unique ID that is generated when order is place</span></li>
+	<li class="MsoNoSpacing"><span>Payment Instrument &ndash; Default PI that is tied to the billing group</span></li>
+</ul>
+
+<p class="MsoNoSpacing"><strong>From this section, you are able to perform the following actions which are called out in the Step By Step GUIDe in this document </strong></p>
+
+<ul>
+	<li class="MsoNoSpacing"><span>Transfer Subscription &ndash; When you transfer subscription ownership from user to another.</span></li>
+	<li class="MsoNoSpacing"><span>Offer Conversion &ndash; When you convert an offer from free-trial to paid.</span></li>
+	<li class="MsoNoSpacing"><span>Transfer Ownership &ndash; When you transfer ownership from owner to another.</span></li>
+</ul>
+
+<p class="MsoNoSpacing"><span asset="4525784" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4525784]</span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link=""><span><span><span>Return to top</span></span></span></a></p>
+<p><strong><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span>&nbsp;</strong><strong>January 2019</strong></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Change history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>Item</strong></p>
+			</td>
+			<td><strong>Title</strong></td>
+			<td><strong>Date</strong></td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/148045">CONTENT TRACKING 148045*</a></td>
+			<td>Cross LOB: KB 4487933 Subscriptions: Rewrite TUG for New CST tool</td>
+			<td>10/10/2019</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/139093" role="heading">Content Tracking 139093</a></p>
+			</td>
+			<td>New TUG: Customer View</td>
+			<td>1/18/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/116128" managed-link="">CT 116128</a></td>
+			<td>Remove Keyword&nbsp;vkb69 and LOB19 tag for Commercial CS Post-Sales</td>
+			<td>April 2, 2020</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>

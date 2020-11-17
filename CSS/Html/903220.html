@@ -1,0 +1,81 @@
+﻿<header><h1>Description of the changes to DCOM security settings after you install Windows Server 2003 Service Pack 1</h1></header><div class='kb-notice-section section'><div internal-content-body=""><div class="internal-content"><div class="bold internal-content-body-title spacer-12-bottom">Microsoft Internal Support Information</div><div class="row"><div class="col-xs-24 internal-content-body-content"><p>BUG #: <a href='http://bugcheck/bugs/ContentMaintenance/34600.asp' title='Link only available for Microsoft corporate network users' target='_blank'>34600 (Content Maintenance)</a></p></div></div></div></div></div><div class='kb-summary-section section'>Microsoft Windows Server 2003 Service Pack 1 (SP1) introduces some enhanced default security settings for the DCOM protocol. Specifically, Windows Server 2003 SP1 introduces rights that give an administrator independent control over local and remote permissions for starting COM servers, activating COM server settings, and accessing COM servers. This article describes the changes to DCOM security settings.</div><div class="kb-moreinformation-section section">Windows Server 2003 certificate services uses the DCOM protocol to provide enrollment and administration services. Certificate services provides several DCOM interfaces to make enrollment and administration services available. For correct access and usage of these services, certificate services assumes that the DCOM interfaces are set to enable remote activation and access permissions. However, because default security settings for DCOM are applied when you upgrade to Windows Server 2003 SP1, you may have to update these security settings to make sure that enrollment and administration services are available.<br>
+<br>
+By default, all DCOM interfaces in Windows Server 2003 SP1 are configured to grant remote access permissions, remote launch permissions, and remote activation permissions to administrators. However, when you upgrade to Windows Server 2003 SP1, security configuration changes are made to the global DCOM interface and to the CertSrv Request DCOM interface. These changes are made to enable certificate services to work correctly.<br>
+<br>
+<span class="text-base">Note</span> Any changes that have been made to the CertSrv Request DCOM interface security settings before you install Windows Server 2003 SP1 are lost. Windows Server 2003 SP1 Setup resets all previous security settings in the CertSrv Request DCOM interface to their default settings.<br>
+<br>
+During Windows Server 2003 SP1 Setup, certificate services automatically updates the DCOM security settings as follows:
+<ul class="sbody-free_list">
+	<li><span class="text-base">CertSrv Request DCOM interface</span>
+	<ul class="sbody-free_list">
+		<li>The Everyone security group is granted local and remote access permissions.</li>
+		<li>The Everyone security group is granted local and remote activation permissions.</li>
+		<li>The Everyone security group is not granted local or remote launch permissions.</li>
+	</ul>
+	</li>
+	<li><span class="text-base">DCOM computer restriction settings</span>
+	<ul class="sbody-free_list">
+		<li>A new security group, CERTSVC_DCOM_ACCESS, is automatically created.<br>
+		<br>
+		If the certification authority is installed on a member server, CERTSVC_DCOM_ACCESS is created as a computer local group. The Everyone security group is added to CERTSVC_DCOM_ACCESS.<br>
+		<br>
+		If the certification authority is installed on a domain controller, CERTSVC_DCOM_ACCESS is created as a domain local group. The Domain Users security group and the Domain Computers security group from the certification authority&rsquo;s domain are added to CERTSVC_DCOM_ACCESS. If domain controllers need access to this interface to request certificates from the certification authority, you must add the Domain Controllers security group. You must do this because domain controllers are not part of the Domain Computers security group.</li>
+		<li>The CERTSVC_DCOM_ACCESS security group is granted local and remote access permissions.</li>
+		<li>The CERTSVC_DCOM_ACCESS security group is granted local and remote activation permissions.</li>
+		<li>The CERTSVC_DCOM_ACCESS security group is not granted local or remote launch permissions.</li>
+	</ul>
+	<span class="text-base">Note</span> If the certification authority is installed on a domain controller and if the enterprise consists of more than one domain, certificate services cannot automatically update the DCOM security settings for enrollees from outside the certification authority&#39;s domain. Therefore, these enrollees will be denied enrollment access to the certification authority.<br>
+	<br>
+	To resolve this issue, you must manually add the users to the CERTSVC_DCOM_ACCESS security group. Because the CERTSVC_DCOM_ACCESS security group is a domain local group, you can add only domain groups to it. For example, if users and computers from another domain, the Contoso domain, have to enroll with the certification authority, you must manually add the Contoso\Domain Users group and the Contoso\Domain Computers group to the CERTSVC_DCOM_ACCESS security group.<br>
+	<br>
+	If any enrollees that should be authorized by the certification authority are denied authorization after Windows Server 2003 SP1 is installed, you can have certificate services update the DCOM security settings again. To do this, type the following commands at the command prompt, and then press ENTER after each command.
+	<div class="indent"><span class="sbody-userinput"> certutil &ndash;setreg SetupStatus &ndash;SETUP_DCOM_SECURITY_UPDATED_FLAG</span></div>
+
+	<div class="indent"><span class="sbody-userinput">net stop certsvc</span></div>
+
+	<div class="indent"><span class="sbody-userinput">net start certsvc</span></div>
+	DCOM_SECURITY_UPDATED_FLAG is an internal certificate services registry flag that indicates that the DCOM security settings were successfully updated. Certificate services checks this flag every time that certificate services is started. The previous commands reset the flag and then stop and start certificate services. This behavior causes certificate services to update the DCOM security settings again.</li>
+</ul>
+The following events may be logged after you install Windows Server 2003 SP1.<br>
+<br>
+<span class="text-base">Event message 1</span>
+
+<div class="sbody-error">Event Type: Error<br>
+Event Source: AutoEnrollment<br>
+Event Category: None<br>
+Event ID: 13<br>
+Date: <strong class="sbody-strong">date</strong><br>
+Time: <strong class="sbody-strong">time</strong><br>
+User: N/A<br>
+Computer: <strong class="sbody-strong">computer_name</strong><br>
+Description: Automatic certificate enrollment for local system failed to enroll for one Directory Email Replication certificate (0x80070005). Access is denied. For more information, see Help and Support Center at http://support.microsoft.com.</div>
+<span class="text-base">Event message 2</span>
+
+<div class="sbody-error">Event Type: Error<br>
+Event Source: AutoEnrollment<br>
+Event Category: None<br>
+Event ID: 13<br>
+Date: <strong class="sbody-strong">date</strong><br>
+Time: <strong class="sbody-strong">time</strong><br>
+User: N/A<br>
+Computer: <strong class="sbody-strong">computer_name</strong><br>
+Description: Automatic certificate enrollment for local system failed to enroll for one Workstation Authentication certificate (0x80070005). Access is denied. For more information, see Help and Support Center at http://support.microsoft.com.</div>
+When you manually request a certificate by using the Certificate snap-in, you may receive the following error message:
+
+<div class="sbody-error">The certificate request failed because of one of the following conditions: -The certificate request was submitted to a Certification Authority (CA) that is not started. -You do not have the permissions to request certificates from the available CAs.</div>
+<span class="text-base">Note</span> If these errors occur on a domain controller, then add the Domain Controllers group to the CERTSVC_DCOM_ACCESS group. Domain controllers are not members of the Domain Computers global group and will not have sufficient DCOM permissions by default.<br>
+<br>
+If you change the group membership to include the Domain Controllers group, you must restart the domain controller to reflect the change.
+<h3 class="sbody-h3"><span>Technical support for x64-based versions of Microsoft Windows</span></h3>
+<span> If your hardware came with a Microsoft Windows x64 edition already installed, your hardware manufacturer provides technical support and assistance for the Windows x64 edition. In this case, your hardware manufacturer provides support because a Windows x64 edition was included with your hardware. Your hardware manufacturer might have customized the Windows x64 edition installation by using unique components. Unique components might include specific device drivers or might include optional settings to maximize the performance of the hardware. Microsoft will provide reasonable-effort assistance if you need technical help with a Windows x64 edition. However, you might have to contact your manufacturer directly. Your manufacturer is best qualified to support the software that your manufacturer installed on the hardware. If you purchased a Windows x64 edition such as a Microsoft Windows Server 2003 x64 edition separately, contact Microsoft for technical support.<br>
+<br>
+For product information about Microsoft Windows XP Professional x64 Edition, visit the following Microsoft Web site: </span>
+
+<div class="indent"><span><a href="http://www.microsoft.com/windowsxp/64bit/default.mspx" id="kb-link-1" target="_self">http://www.microsoft.com/windowsxp/64bit/default.mspx</a></span></div>
+<span> For product information about x64-based versions of Microsoft Windows Server 2003, visit the following Microsoft Web site: </span>
+
+<div class="indent"><span><a href="http://www.microsoft.com/windowsserver2003/64bit/x64/editions.mspx" id="kb-link-2" target="_self">http://www.microsoft.com/windowsserver2003/64bit/x64/editions.mspx</a></span></div>
+
+<div class="indent">&nbsp;</div>
+</div>
+<div class='kb-securedata-section section'>Winx64 Windowsx64 64bit 64-bit</div><div class='kb-securedata-section section'>Content Maintenance 34600</div><div class='kb-securedata-section section'>Author: lanaef<br>Writer: v-xieren<br>Tech reviewer: v-jackho<br>Editor: v-crweb</div>

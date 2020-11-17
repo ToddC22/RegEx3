@@ -1,0 +1,623 @@
+﻿<header><h1>Procedure: M365 Commerce: Helping customers with credit or debit card issues and questions</h1></header><div class="kb-references-section section">
+<p class="sbody-h3"><span asset="4462485" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4462485]</span></p>
+
+<h3 class="sbody-h3"><span class="text-base"><span class="text-base"><a id="top" name="top"></a>Content</span></span><a class="bookmark" id="toc"></a></h3>
+&nbsp;
+
+<div class="indent">
+<div class="indent">
+<div class="indent">
+<div class="indent"><a bookmark-id="applies" href="#applies" managed-link="" target="">1. Applies to</a><br>
+<a bookmark-id="policy" href="#policy" managed-link="" target="">2. Guidance</a><br>
+<a bookmark-id="process" href="#process" managed-link="" target="">3. Procedure</a><br>
+<a bookmark-id="5" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3088818#5" managed-link="" target="_blank">4. Supporting documents</a><br>
+<a bookmark-id="version" href="#version" managed-link="" target="">5. Version history</a></div>
+</div>
+</div>
+</div>
+&nbsp;
+
+<h3 class="sbody-h3">1. Applies to <a class="bookmark" id="applies"></a></h3>
+
+<div class="indent"><span class="text-base">The following services:</span> All services</div>
+
+<div class="indent"><span class="text-base">The following advocate roles:</span> All roles</div>
+
+<div class="indent"><span class="text-base">The following markets: </span>All markets (For detailed information about product-specific availability, see <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2748142" id="kb-link-1" managed-link="" target="_blank">2748142 Informational: M365 Commerce: Markets where Microsoft Online Services are available</a></div>
+
+<div class="indent">
+<div class="indent"><span class="text-base"></span>
+
+<h3 class="sbody-h3"><span class="text-base">Scenarios</span></h3>
+</div>
+</div>
+
+<ul class="sbody-free_list">
+	<li>If the error encountered by the customer is not documented or the following troubleshooting steps fail to resolve the issue, escalate to Tier 3, Engineering. Refer to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2778091" id="kb-link-2" managed-link="" target="_blank">2778091 Procedure: M365 Commerce: How to escalate a case to Tier 3, Engineering</a>.</li>
+	<li><a bookmark-id="when" href="#when" managed-link="" target="">Customer asks when their credit/debit card will be charged.</a></li>
+	<li><a bookmark-id="$1" href="#$1" managed-link="" target="">Customer asks about a $1 charge on their card ($1 hold for credit card authorization).</a></li>
+	<li><a bookmark-id="which" href="#which" managed-link="" target="">Customer asks what credit cards are accepted as payment in their country.</a></li>
+	<li><a bookmark-id="editcard" href="#editcard" managed-link="" target="">Customer wants to view or edit a credit card on their tenant, but cannot see the card details.</a></li>
+	<li><a bookmark-id="cvv" href="#cvv" managed-link="" target="">Customer states that they are unable to update the CVV or CVN number for their credit card in the Microsoft&nbsp;365 admin center.</a></li>
+	<li><a bookmark-id="remove" href="#remove" managed-link="" target="">Customer wants to remove their credit card.</a></li>
+	<li><a bookmark-id="tshoot" href="#tshoot" managed-link="" target="">Troubleshooting credit card decline or error messages received by the customer during checkout or while managing their payment instrument in the Microsoft&nbsp;365 admin center.</a></li>
+	<li><a bookmark-id="payment" href="#payment" managed-link="" target="">Payment instrument errors seen in CMAT.</a></li>
+	<li><a bookmark-id="updatedecline" href="#updatedecline" managed-link="" target="">Customer has updated their credit card but gets a credit card declined notice or their old credit card is still being charged.</a></li>
+	<li><a bookmark-id="new" href="#new" managed-link="" target="">Customer recently added a new credit card, but is still being charged on their old credit card.</a></li>
+	<li><a bookmark-id="exp" href="#exp" managed-link="" target="">Customer updated the expiration date of their credit card in the Microsoft&nbsp;365 admin center, but CMAT does not reflect the updated expiration date and charges to the card are failing.</a></li>
+	<li><a bookmark-id="blocked" href="#blocked" managed-link="" target="">Customer states that admins are blocked from completing admin functions.</a></li>
+	<li><span><span><span><span><span><span><a bookmark-id="PaymentSecurity" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3088818#PaymentSecurity" managed-link="" target="_blank">Customer asks about payment security (multi-factor authentication*)</a>.</span></span></span></span></span></span></li>
+	<li><a bookmark-id="•	Customer asks about the error message shown: “Check the info you entered. It doesn’t match the info for this card.”" href="#•	Customer asks about the error message shown: “Check the info you entered. It doesn’t match the info for this card.”" managed-link=""><span><span><span><span><span><span>Customer asks about the error message shown: &ldquo;Check the info you entered. It doesn&rsquo;t match the info for this card.&rdquo;</span></span></span></span></span></span></a></li>
+</ul>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to the top</a><br>
+<br>
+<span class="text-base"></span>
+
+<h3 class="sbody-h3">2. Guidance<a class="bookmark" id="policy"></a></h3>
+
+<ul class="sbody-free_list">
+	<li>Do not document customers&rsquo; credit or debit card details except the last 4 digits of the card number, the credit card type, the name on the card and the expiration date, and only in cases where you must escalate a credit or debit card issue.</li>
+	<li>Billed currency is tied to the country selected at purchase and cannot be changed.</li>
+	<li><span><span><span><span><span><span>When adding a credit card, the customer is not able to select a country other than the one the tenant was set up in. This will lead to the bank declining the authorization since the country being submitted for verification does not match the address of the payment instrument. If the customer needs to add a card with an address in a country that is different than the tenant, customer will need to coordinate with their bank to make this happen.</span></span></span></span></span></span></li>
+	<li>Credit card details are visible only to the administrator who originally added the card. Other billing and global admins cannot see or edit the details of a credit card added by another.</li>
+	<li>Credit card details can only be updated if the subscription is active.</li>
+	<li><span><span><span><span><span><span>Changes are shown in CMAT as done by <strong>SfbDemeter</strong> when these are performed by a Global or a Billing Administrator via (new) <strong>M365 Admin Center.</strong></span></span></span></span></span></span></li>
+</ul>
+
+<p class="indent-1"><span asset="4580948" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4580948]</span></p>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to the top</a><br>
+&nbsp;
+<h3 class="sbody-h3">3. Procedure<a class="bookmark" id="process"></a></h3>
+<span class="text-base">If the error encountered by the customer is not documented or the following troubleshooting steps fail to resolve the issue, escalate to Tier 3, Engineering. Refer to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2778091" id="kb-link-3" managed-link="" target="_blank">2778091 Procedure: M365 Commerce: How to escalate a case to Tier 3, Engineering</a>.</span><br>
+<br>
+<a class="bookmark" id="when"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Customer asks when their credit/debit card will be charged.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed">
+<ul class="sbody-free_list">
+	<li><span>When a subscription is purchased:<br>
+	<span><span>We will charge your credit card the day after the Invoice Date.</span></span></span></li>
+	<li><span>For recurring charges with no billing changes:<br>
+	<span><span><span>We will charge your credit card the day after the Invoice Date.&nbsp;</span></span></span></span></li>
+	<li><span><span class="sbody-italic">When the <span class="text-base">customer </span>re-enables their subscription in the Microsoft 365 admin center:</span><br>
+	The customer&rsquo;s card will be charged in 4 calendar days.&nbsp;</span></li>
+	<li><span><span class="sbody-italic">When <span class="text-base">Support </span>re-enables the customer&rsquo;s subscription in CMAT:</span><span class="sbody-italic"></span><br>
+	<span><span><span><span><span><span><span><span>The customer&rsquo;s card will be charged at the next billing cycle (<span><span><span><span>the day after the next Invoice Date</span></span></span></span>).</span></span></span></span></span><span><span><span> </span></span></span></span></span></span></span>
+	<div>
+	<div>&nbsp;</div>
+	</div>
+	</li>
+	<li><span>If a customer is being dunned, the charge to their card will be attempted at certain intervals. Refer to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2815640" id="kb-link-4" managed-link="" target="_blank">2815640 Informational: M365 Commerce: billing and dunning emails and the dunning cycle</a>.</span></li>
+</ul>
+<span><a bookmark-id="toc" href="#toc" managed-link="" target="">back to the top</a></span></div>
+</div>
+</div>
+</div>
+<br>
+<a class="bookmark" id="$1"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Customer asks about a $1 charge on their card ($1 hold for credit card authorization).</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed"><br>
+<span>Once the card has been validated, the hold will be removed and the customer&rsquo;s card will be charged for the full amount of the initial billing period.<br>
+<br>
+For subsequent billing cycles, the customer&rsquo;s card may have a hold placed on it for up to 30 days for the next bill amount. For example, if the customer&rsquo;s invoice is $100 per month, an authorization hold for $100 may be placed on the card. If a customer asks to have this hold removed, tell them we cannot release the hold or authorize a payment prior to their charge date. If the customer has concerns regarding the authorization hold, they should contact their financial institution.<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to the top</a></span></div>
+</div>
+</div>
+</div>
+<br>
+<a class="bookmark" id="which"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Customer asks what credit cards are accepted as payment in their country.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed"><span>A list of credit/debit cards, pricing currencies, and local currency settlement is <a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/126/bemisdocuments/2907643_en-US.xlsx?d=wfa5af079c258402c900902cf47dc6b56" id="kb-link-5" managed-link="" target="_blank">here</a>.<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to the top</a></span></div>
+</div>
+</div>
+</div>
+<br>
+<a class="bookmark" id="editcard"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Customer wants to view or edit a credit card on their tenant, but cannot see the card details.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed"><span>Billing and global administrators cannot see or edit the details of a credit card added by another admin. They can change the credit card to be billed for a subscription by adding a new credit card in the Microsoft&nbsp;365 admin center.<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to the top</a></span></div>
+</div>
+</div>
+</div>
+<br>
+<a class="bookmark" id="cvv"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Customer states that they are unable to update the CVV or CVN number for their credit card in the Microsoft 365 admin center.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed"><span>Advise the customer that the Card Verification Value (CVV) or Card Verification Number (CVN) does not need to be updated as long as:<br>
+<br>
+&bull; The credit card number has not changed<br>
+&bull; The credit card has been successfully charged on the customer&rsquo;s Microsoft Office 365, Intune, or Microsoft Dynamics 365 account in the past.<br>
+<br>
+<span class="text-base">If these conditions are true</span>, then no action is required from either the customer or the advocate.<br>
+<span class="text-base">If these conditions are not met</span>, escalate to Tier 3 Engineering. Refer to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2778091" id="kb-link-6" managed-link="" target="_blank">2778091 Procedure: M365 Commerce: How to escalate a case to Tier 3, Engineering</a>.<br>
+<br>
+<span class="text-base">NOTE</span>: Card Verification Numbers are not stored or referenced by Microsoft or our credit card authorization partners.<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to the top</a></span></div>
+</div>
+</div>
+</div>
+<br>
+<a class="bookmark" id="remove"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Customer wants to remove their credit card.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed">&nbsp;
+<div class="indent"><span>If a customer asks about the credit card retention guidance, let them know that a credit card that is not assigned to a subscription will be removed from the system automatically within 18 months. </span></div>
+
+<div class="indent"><span>If a customer wants the card removed immediately, follow this procedure:</span></div>
+
+<div class="indent"><strong>Note:&nbsp;</strong><span><span><span><span><span>This procedure is only applicable if customers are unable to remove credit/debit card on their own. It is still recommended that payment instrument is to be removed from the Admin portal for self-help. Refer to this <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/microsoft-365/commerce/billing-and-payments/manage-payment-methods?view=o365-worldwide#:~:text=Select%20the%20row%20for%20the%20payment%20method%20to,drop-down%20list%2C%20select%20Next%2C%20and%20then%20select%20Delete." managed-link="" target="_blank">link</a> for steps. &nbsp;</span></span></span></span></span></div>
+
+<div class="indent"><span><span class="text-base">Payment Instrument Removal Guidelines:</span></span></div>
+
+<ol class="sbody-num_list">
+	<li><span>The Open and Ready Balances must be zero. If they are not, the Remove Payment Instrument option will remain grayed out and the payment instrument cannot be removed. </span></li>
+	<li><span>The payment instrument cannot be associated with a subscription that is in any state other than de-provisioned. If the payment instrument is associated with a subscription that is not de-provisioned, the payment instrument cannot be removed. </span></li>
+	<li><span>The only option for payment instrument removal is in CMAT. If the option is not available, the card cannot be removed. </span></li>
+</ol>
+
+<div class="indent"><span><span class="text-base">Payment Instrument Removal Steps: </span></span></div>
+
+<div class="indent">i.&nbsp;<span><span><span>In CMAT, navigate to the admin user account that added the credit card.<br>
+<span asset="4578467" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4578467]</span></span></span></span></div>
+
+<div class="indent"><span>ii. On the Payment Instruments tab&nbsp;<span><span><span>or the admin user account</span></span></span>, verify the <span class="text-base">Open Balance</span> and <span class="text-base">Ready Balance</span> of the credit card to be removed show a zero balance.</span></div>
+
+<div class="indent"><span>iii. Click the down arrow of the credit card to view details.<br>
+<span asset="4578468" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4578468]</span>&nbsp;</span></div>
+
+<div class="kb-collapsible kb-collapsible-collapsed">
+<div class="indent"><span>iv. Click <span class="text-base">Remove Payment Instrument</span> at the bottom of the Payment Instrument details frame.</span><br>
+<span asset="4578469" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4578469]</span></div>
+&nbsp;
+
+<div class="kb-collapsible kb-collapsible-collapsed">
+<div class="indent"><span>v. In the window that appears, enter the following memo in the Comments field: &quot;<span class="text-base">Removing <span class="sbody-italic">(Type of card)</span> ending in <span class="sbody-italic">(last 4 digits of the card)</span> at the request of <span class="sbody-italic">(name of person requesting the removal and admin type)</span>.</span>&quot; Click the right arrow at the bottom of the window to continue.<br>
+<span asset="4578470" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4578470]</span>&nbsp;</span></div>
+
+<div class="kb-collapsible kb-collapsible-collapsed">
+<div class="indent"><span>vi. Confirm the card number is correct and paste the Service Request number in the Service Request Number field.</span></div>
+
+<div class="indent"><span>vii. Click the check mark in the lower right-hand corner to remove the payment instrument.<br>
+<span asset="4578471" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4578471]</span></span></div>
+
+<div class="kb-collapsible kb-collapsible-collapsed">
+<div class="indent"><span>viii. A message will be displayed at the top of the screen for a couple of seconds and the payment instrument status will be changed to &quot;Removed&quot;. The card is now removed from the customer&#39;s portal.</span></div>
+<span><a bookmark-id="toc" href="#toc" managed-link="" target="">back to the top</a></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+<a class="bookmark" id="tshoot"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Troubleshooting credit card decline or error messages received by the customer during checkout or while managing their payment instrument in the Microsoft 365 admin center.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed"><br>
+<br>
+<span>If the customer receives an error while purchasing a plan or while managing their payment instrument in the Microsoft 365 admin center, ask the customer for the error/decline code or message. Find the error code (or alternate error code) in this <a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/126/bemisdocuments/3143047_en-US.xlsx?d=wc254dced74a6451f85468aa34e9e3186" id="kb-link-7" managed-link="" target="_blank">table</a> to troubleshoot the error/decline. If the customer provides the decline code, use the 1st five digits of the code in the table.<br>
+<br>
+A diagram showing the high-level procedure to troubleshoot credit card and debit card errors or declines is <a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/126/bemisdocuments/3093823_en-US.pdf" id="kb-link-8" managed-link="" target="_blank">here</a>. </span>
+
+<ul class="sbody-free_list">
+	<li><span><span class="sbody-italic">Some financial institutions block recurring charges. If the previous troubleshooting steps do not resolve the issue, the customer should check with their financial institution to see if their credit card is enabled for recurring transactions. If recurring transactions are not enabled, the payment may be blocked.</span></span></li>
+	<li><span>If these steps fail to fix the error, ask the customer if it is possible to use a different credit card or debit card to complete the purchase. </span></li>
+	<li><span>If the customer declines to use another card, escalate the error to the Tier 3 Commerce Engineering Escalation Team using the procedure in <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2778091" id="kb-link-9" managed-link="" target="_blank">2778091 Procedure: M365 Commerce: How to escalate a case to Tier 3, Engineering</a>. </span>
+	<ul class="sbody-free_list">
+		<li><span>If the customer has no existing subscription and is trying to purchase a new plan, ask the customer to sign up for the trial subscription, if available. </span></li>
+		<li><span>If the customer is trying to purchase a plan that has no trial version, ask the customer to sign up for the trial version of a plan that includes the services needed. (Example: If customer wants to purchase Exchange Online, you can ask the customer to sign up for E3 trial in the meantime.)</span></li>
+		<li><span>If there is an existing trial subscription, you may extend the appropriate trial subscription and/or add seats depending on the customer&rsquo;s need using the process in <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2761499" id="kb-link-10" managed-link="" target="_blank">2761499 Procedure: M365 Commerce: Rules for trial extensions and seat increases</a>.</span></li>
+	</ul>
+	</li>
+</ul>
+<span><a bookmark-id="toc" href="#toc" managed-link="" target="">back to the top</a></span></div>
+</div>
+</div>
+</div>
+<br>
+<a class="bookmark" id="payment"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Payment instrument errors seen in CMAT.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed">
+<ul class="sbody-free_list">
+	<li><span>Errors seen by customers during checkout or managing their payment instrument are not visible in CMAT. Refer to the section: <span class="text-base"><a bookmark-id="tshoot" href="#tshoot" managed-link="" target="">Troubleshooting credit card decline or error messages received by the customer during checkout or while managing their payment instrument in the Microsoft&nbsp;365 admin center</a>&nbsp;</span><span>and to <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/4015522" managed-link="" target="_blank">4015522 Procedure: M365 Commerce: How to Unban a Payment Instrument in CMAT</a>.</span></span></li>
+	<li><span>Errors that occur during an attempt to charge a card for the recurring monthly or annual charge are visible in CMAT on the Charge Attempts page. </span>
+	<div class="kb-collapsible kb-collapsible-collapsed"><br>
+	<span><span asset="4578472" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4578472]</span><br>
+	Common errors are:</span>
+	<ul class="sbody-free_list">
+		<li><span>&ldquo;Declined by Financial Institution&rdquo;. The issuing bank has declined the charge attempt. Refer the customer to their financial institution for further assistance.</span></li>
+		<li>&ldquo;ChargeBack&rdquo;.&nbsp; Chargeback is a request, forcibly initiated by the issuing bank of the payment instrument, to return funds collected by the payee to the card holder. Specifically, it is the reversal of a prior charge on the customer&rsquo;s bank account to the payee.&nbsp; Refer the customer to their financial institution for further assistance. If the customer did this by mistake, they will need to contact their bank to remove the dispute (ChargeBack) and allow the charge to process. To settle the balance of their account, they will need to use a different card.</li>
+		<li><span>&ldquo;Banned PI &ndash; Verify Expiration Date, Billing Address and/or Account Status&rdquo;. Advocates will need to verify the Payment Instrument Details are correct in CMAT (e.g. name on card, billing address, phone number, and expiration date). If the information is accurate, escalate to Tier 3, Engineering for resolution.</span></li>
+		<li>&quot;PGW_E_AMOUNT_EXCEEDS_LIMIT&quot;.&nbsp;This means that the customer has most likely exceeded their credit limit with their bank.</li>
+	</ul>
+	</div>
+	</li>
+</ul>
+<span><a bookmark-id="toc" href="#toc" managed-link="" target="">back to the top</a></span><br>
+&nbsp;</div>
+</div>
+</div>
+</div>
+<br>
+<a class="bookmark" id="updatedecline"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Customer has updated their credit card but gets a credit card declined notice or their old credit card is still being charged.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed"><br>
+<span><span class="text-base"></span></span>
+
+<div class="indent"><span><span class="text-base">Potential cause:</span></span></div>
+
+<div class="indent"><span>If a customer has a past due balance when they update their account with a new credit card, the past due balance will be charged to the new card. If the spending limit on the new card is not sufficient to settle the past due balance or if another problem occurs with the new card, the card is added, but not associated with the subscription in the billing system. The old credit card will continue to be billed and the customer will continue to receive credit card declined emails. The sequence of events would be: </span></div>
+
+<div class="indent">
+<div class="indent"><span>a. Customer receives a decline email on their old credit card.</span></div>
+</div>
+
+<div class="indent">
+<div class="indent"><span>b. Customer updates their subscription with a new credit card.</span></div>
+</div>
+
+<div class="indent">
+<div class="indent"><span>c. If the balance settlement fails on the new card, the customer will receive a decline email on the new card.</span></div>
+</div>
+
+<div class="indent">
+<div class="indent"><span>d. After the initial failed attempt on the new card, settlement attempts will resume on the old card and the customer will receive decline emails on the old card.</span></div>
+</div>
+<span><span class="text-base"></span></span>
+
+<div class="indent"><span><span class="text-base">Steps <span lang="EN-US"><span><span>advocate</span></span></span>s should take using CMAT: </span></span></div>
+
+<div class="indent">
+<div class="indent"><span>i. Verify that the newly-added credit card is in the <span class="text-base">Payment Instruments</span> page in CMAT. </span></div>
+</div>
+
+<div class="indent">
+<div class="indent"><span>ii. Get the date and time from the customer when the new credit card was added. </span></div>
+</div>
+
+<div class="indent">
+<div class="indent"><span>iii. Check <span class="text-base">Charge Attempts</span> in CMAT for any transactions that were declined. Declined transactions will show as <span class="text-base">Failed </span>in the <span class="text-base">Status </span>column. </span></div>
+</div>
+
+<p>&nbsp;&nbsp;<span asset="4578473" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4578473]</span></p>
+
+<div class="kb-collapsible kb-collapsible-collapsed">&nbsp;
+<div class="indent">
+<div class="indent"><span>iv. If balance settlement failed on the new card, then the new credit card is not associated with the order in billing and the old credit card will continue to be charged. </span></div>
+
+<div class="indent">
+<p><span><span><span><span><span>v. Check in CMAT -&gt; Subscriptions -&gt; select subscription -&gt; Expand and look at Payment Instrument. Click on Order ID&rsquo;s value and check if the same card is added here. Usually there is a difference as shown below:</span></span></span></span></span></p>
+
+<p><span asset="4580951" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4580951]</span></p>
+
+<p><span><span><span><span><span>vi. Open the affected subscription and click on <strong>Sync again</strong> button. This will transfer the </span></span></span></span></span><span><span><span><span><span>balance from the old payment instrument to the new one.</span></span></span></span></span></p>
+
+<p><span asset="4580952" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4580952]</span></p>
+
+<p><span><span><span><span><span>vii. This will be visible in Activities Tab.</span></span></span></span></span></p>
+</div>
+</div>
+<span><a bookmark-id="toc" href="#toc" managed-link="" target="">back to the top</a></span></div>
+</div>
+</div>
+</div>
+</div>
+<br>
+<a class="bookmark" id="new"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Customer recently added a new credit card, but is still being charged on their old credit card.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed">
+<div class="indent"><span>i. Check CMAT to see if the old credit card is still associated with the order. (Go to the Subscriptions page and click the down arrow next to the subscription to see the subscription details. Check the <span class="text-base">Payment Instrument</span> field to see which credit card is associated with the subscription.)</span></div>
+
+<div class="indent"><span>ii. Ask the customer to verify that their updated credit card is associated with their subscription in the Microsoft&nbsp;365 admin center. If the customer needs help doing this, refer to the navigation KBs listed in the <a bookmark-id="suppdocs" href="#suppdocs" managed-link="" target="">Supporting Documents</a> section.</span></div>
+
+<div class="indent">
+<div class="indent"><span>&bull; If the old credit card is still displayed in <span class="text-base">Payment details</span>, the customer can change the credit card to a new credit card.</span></div>
+</div>
+
+<div class="indent">
+<div class="indent"><span>&bull; If the new credit card is displayed in Payment details in the Microsoft&nbsp;365 admin center, go to the next step.</span></div>
+</div>
+
+<div class="indent"><span>iii. If the old credit card is still associated with the subscription in CMAT, do not submit a request to delete the old card. Perform a sync using CMAT. This will update the credit card associated with the subscription in CMAT. On the <span class="text-base">Subscription</span> page of one of the subscriptions associated with the order, click <span class="text-base">Sync again</span> at the bottom of the window.</span></div>
+<span><a bookmark-id="toc" href="#toc" managed-link="" target="">back to the top</a></span></div>
+</div>
+</div>
+</div>
+<br>
+<a class="bookmark" id="exp"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Customer updated the expiration date of their credit card in the Microsoft 365 admin center, but CMAT does not reflect the updated expiration date and charges to the card are failing.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed"><br>
+<span><span class="text-base"></span></span>
+
+<div class="indent"><span><span class="text-base">Note: Only the administrator who initially entered the credit card in the Microsoft&nbsp;365 admin center has the ability to update the expiration date.</span></span></div>
+
+<div class="indent"><span>i. Gather the following information:</span></div>
+
+<div class="indent">
+<div class="indent"><span>&bull; When was the successful attempt to change the credit card expiration date?</span></div>
+</div>
+
+<div class="indent">
+<div class="indent"><span>&bull; What username was used to change the credit card expiration date?</span></div>
+</div>
+
+<div class="indent">
+<div class="indent"><span>&bull; Ask for payment instrument details to complete the Payment Issues Add-on Template in <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2778091" id="kb-link-11" managed-link="" target="_blank">2778091 Procedure: M365 Commerce: How to escalate a case to Tier 3, Engineering</a>:</span></div>
+</div>
+
+<div class="indent">
+<div class="indent">
+<div class="indent"><span>Type of Credit Card: &lt;Visa, AMEX, etc.&gt;</span></div>
+</div>
+</div>
+
+<div class="indent">
+<div class="indent">
+<div class="indent"><span>Expiration date:</span></div>
+</div>
+</div>
+
+<div class="indent">
+<div class="indent">
+<div class="indent"><span>Name on Credit Card:</span></div>
+</div>
+</div>
+
+<div class="indent">
+<div class="indent"><span>&bull; The credit card expiration date in CMAT and the credit card expiration date the customer sees during the call in the Microsoft&nbsp;365 admin center. </span></div>
+</div>
+
+<div class="indent"><span>ii. Send the customer the Payment Issues Add-on Template in <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2778091" id="kb-link-12" managed-link="" target="_blank">2778091 Procedure: M365 Commerce: How to escalate a case to Tier 3, Engineering</a>. Ask them to complete and return the form to request that we update the expiration date for them. There is no need to ask for Trace Information or Source Code, because the credit card update was successful in the Microsoft&nbsp;365 admin center.</span></div>
+
+<div class="indent"><span>iii. Document the steps taken to identify and troubleshoot the issue for Tier 3. For example:</span></div>
+
+<div class="indent">
+<div class="indent"><span>Problem Details: Admin Lorraine was successful in changing the credit card expiration date from 09/2014 to 09/2016 on September 1, 2014, but the new expiration date does not show in CMAT. Who is the Billable Admin (username initially used to enter the credit card expiration date)? We would like to check if we can inform the caller of the specific admin who has the ability to update the expiration date in the Microsoft&nbsp;365 admin center or if have to ask the caller to fill-out the authorization template to update the expiration date.</span></div>
+</div>
+
+<div class="indent">
+<div class="indent"><span>Troubleshooting Completed: Walked the customer through the portal on September 29, 2014 and was able to confirm that she is seeing the new expiration date of 09/2016. Confirmed the username used to change the credit card expiration date on September 1, 2014. Force Sync performed on September 29, 2014, but the credit card expiration date is still not updated in CMAT (still showing 09/2014).</span></div>
+</div>
+<span><a bookmark-id="toc" href="#toc" managed-link="" target="">back to the top</a></span></div>
+</div>
+</div>
+</div>
+<br>
+<a class="bookmark" id="blocked"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link">Customer states that admins are blocked from completing admin functions</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed"><br>
+<br>
+<span>Specific symptoms appear to be blocking admins from completing the following admin functions in an Admin Profile. </span>
+
+<ul class="sbody-free_list">
+	<li><span>Update credit card, change PI, change Payment frequency</span></li>
+	<li><span>Add credit card</span></li>
+	<li><span>Purchase subscription licenses and others</span></li>
+</ul>
+<span><span class="text-base">Common Error message:</span></span>
+
+<div class="indent"><span>&ldquo;We&#39;re investigating right now. Please try again later.&rdquo;</span></div>
+<span><span class="text-base">Common Case Response:</span></span>
+
+<div class="indent"><span>&ldquo;Please review CMAT and the admin &#39;user profile&#39; as the org ID of this admin is missing valid data in &#39;ADDRESS&#39;, &#39;CITY&#39;, &#39;STATE&#39;, &#39;ZIP&#39;. Help them edit, logout, re-login, then to retry the transaction. If issue persists, then update the troubleshooting trace (view-source) for the most recent attempt.&rdquo;</span></div>
+
+<p><span>Please assist the customer updating the address for their profile then try to change the payment method. If the issue persists after the profile is updated, then please provide the error message and update troubleshooting of view-source trace from the error page experience.</span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">back to the top</a></p>
+</div>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading="" faq-panel-id="PaymentSecurity"><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span><span><strong><span><span><span>Customer asks about payment security (multi-factor authentication*).</span></span></span></strong></span></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><span><span><span><span><span>Support should explain to customers that their&nbsp;bank may require them a multi-factor authentication on purchases, changing&nbsp;payment instrument (credit/debit card), increasing&nbsp;license count, upgrading/downgrading, etc. If customer&#39;s bank requires multi-factor authentication, customers&nbsp;will be prompted to enter a code during the process. This code will be sent to their&nbsp;personal account or device (usually mobile phone number or email address) that is associated to their bank. </span></span></span></span></span></p>
+
+<p><strong>If receives inquiries about what is the multi-factor authentication or PSD2, below information will be a reference to approach this kind of questions.</strong><br>
+<span><span><span><span><span>*PSD2 (Payment Services Directive 2) is a new regulation that will be in effect in September 14, 2019 in Europe (31 European countries). The goal of the regulation is to decrease fraud for online transactions, which can be think of continuation of the chip card mandate in Europe (for in store transactions) to online world. The regulation mainly mandates the issuing banks in Europe to provide the technology for the customers to provide MFA (multi-factor authentication). Merchants are strongly recommended to integrate with the banks MFA technology, otherwise issuing banks will start declining transactions.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span><strong>If customers have any concerns or questions about the MFA</strong>,<strong> </strong>advise them to contact their issuing bank. When working on an active case, support&nbsp;needs to add &lsquo;<strong>#PSD2#&rsquo; </strong>tag<strong> </strong>to the <em>Issue Description</em> area on <em>Summary</em> tab in Rave. And support&nbsp;can explain to customers that:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span>Microsoft does not verify multi-factor Authentication.</span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Microsoft doesn&rsquo;t have the capability to trigger or resend the code</span></span></span><span><span><span>.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>The phone number/email is registered with the bank and Microsoft doesn&rsquo;t have visibility to which account the code is sent to.</span></span></span></span></span></span></li>
+	<li><span><span><span><span><span><span>Microsoft doesn&rsquo;t have the capability to change or update the email or phone number registered with the bank.</span></span></span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">back to the top</a></p>
+</div>
+</div>
+</div>
+
+<p><a id="•	Customer asks about the error message shown: “Check the info you entered. It doesn’t match the info for this card.”" name="•	Customer asks about the error message shown: “Check the info you entered. It doesn’t match the info for this card.”"></a></p>
+
+<p>&nbsp;</p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span><span><strong><span><span><span>Customer asks about the error message shown: &ldquo;Check the info you entered. It doesn&rsquo;t match the info for this card.&rdquo;</span></span></span></strong></span></span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p><span><span><span><span><span>When trying to add same payment instrument (Credit Card, Direct Debit) on multiple tenants, there is the error message shown: <em>&ldquo;Check the info you entered. It doesn&rsquo;t match the info for this card.&rdquo;</em></span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Potentially there are several reasons for this error message: </span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span>Customer has exceeded the number of accounts that can be associated to a single payment method. Customer should use a different payment method or use an account that already has the payment method attached. There is a limit for how many times a payment instrument can be added in M365 Admin Center. Unfortunately, it can&#39;t be disclosed due to security and compliance reasons. </span></span></span></span></li>
+	<li><span><span><span><span>User&rsquo;s country is different from organization&rsquo;s country. Here are the basic Troubleshooting details.</span></span></span></span>
+	<ul>
+		<li><span><span><span><span>Step 1: Verify organization&rsquo;s country &ndash; use Tenant id/billing account id in CMAT</span></span></span></span></li>
+		<li><span><span><span><span>Step 2: Verify user&rsquo;s country</span></span></span></span></li>
+		<li><span><span><span><span>Step 3: Workaround</span></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<ol start="1" style="list-style-type:lower-alpha">
+	<li class="indent-1"><span><span><span><span>Look up other users in customer&rsquo;s account profile. Find the user(s) having the same country as organizations. That user(s) can help do the purchase - in this example, user is in Kazakhstan therefor could place the order.</span></span></span></span></li>
+	<li class="indent-1"><span><span><span><span>If customer requires this particular user to place the order, please have the customer&rsquo;s user admin to add a new user for the purchaser or try Edit the user&rsquo;s country in admin portal to be the organization&rsquo;s country.</span></span></span></span></li>
+</ol>
+</div>
+</div>
+</div>
+
+<p><br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to the top</a></p>
+
+<h3 class="sbody-h3"><br>
+<a id="5" name="5"></a><span>4. Supporting documents&nbsp;&nbsp;</span></h3>
+
+<div class="indent"><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2840807" managed-link="" target="_blank">2840807 Informational: M365 Commerce: Microsoft 365 Admin Center</a></div>
+
+<p>&nbsp;</p>
+
+<p><a bookmark-id="toc" href="#toc" managed-link="" target="">back to the top</a></p>
+
+<h3 class="sbody-h3">&nbsp;</h3>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">5. Version history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td">CI #</td>
+			<td class="sbody-td">Date</td>
+			<td class="sbody-td">Brief description of changes</td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/122894" managed-link="" target="_blank">CT122894</a></td>
+			<td class="sbody-td">September 11, 2020</td>
+			<td class="sbody-td">Added a note for customers who want to remove their credit card immediately.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><a data-content-id="" data-content-type="" href="https://dev.azure.com/contentidea/ContentIdea/_workitems/edit/122468" managed-link="" target="_blank">CT122468</a></td>
+			<td class="sbody-td">September 4, 2020</td>
+			<td class="sbody-td">Added a new scenario on pay ment method to be added or saved.&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><a data-content-id="" data-content-type="" href="https://dev.azure.com/contentidea/ContentIdea/_workitems/edit/122466" managed-link="" target="_blank">CT122466</a></td>
+			<td class="sbody-td">September 4, 2020</td>
+			<td class="sbody-td">Added SfbDemeter change from CMAT. Added CMAT details under section: Customer has updated their credit card but gets a credit card declined notice or their old credit card is still being charged.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/122091" managed-link="" target="_blank">122091</a></td>
+			<td class="sbody-td">August 21, 2020</td>
+			<td class="sbody-td">Updated Payment Instrument Removal steps.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td"><a href="https://dev.azure.com/ContentIdea/ContentIdea/_queries/edit/112977" managed-link="" target="_blank">112977</a></td>
+			<td class="sbody-td">January 14, 2020</td>
+			<td class="sbody-td">Update Bemis file links.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">111006</td>
+			<td class="sbody-td">December 12, 2019</td>
+			<td class="sbody-td">Article title update and term changes. Also removed empty sections.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">106743</td>
+			<td class="sbody-td">9/5/2019</td>
+			<td class="sbody-td">Updated two-factor authentication to multi-factor authentication.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">105920</td>
+			<td class="sbody-td">8/23/2019</td>
+			<td class="sbody-td">Updated the policy of adding a credit card issued outside the tenant country.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">105276</td>
+			<td class="sbody-td">8/16/2019</td>
+			<td class="sbody-td">Updated CRM to Dynamics 365.</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">104436</td>
+			<td class="sbody-td">7/29/2019</td>
+			<td class="sbody-td">Added a new scenario named &ldquo;Customer asks about payment security (Two Factor Authentication*)&rdquo;</td>
+		</tr>
+		<tr>
+			<td class="sbody-td">99531</td>
+			<td class="sbody-td">4/17/2019</td>
+			<td class="sbody-td">Removed article 2840708 and modified article 2840807 title.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<h3 class="sbody-h3"><a class="bookmark" id="version"></a></h3>
+&nbsp;<br>
+<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">back to the top</a><br>
+&nbsp;</div>
+<div class="kb-securedata-section section">Author ID (email alias): v-kebro, v-zejing<br>
+Writer ID (email alias): v-maqiu, a-fllic, v-zejing<br>
+SME ID (email alias): jkinma<br>
+Contributor ID (email alias):</div>

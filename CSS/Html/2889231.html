@@ -1,0 +1,554 @@
+﻿<header><h1>Procedure: Microsoft Store: Pre-order scenarios</h1></header><p><span asset="4049349" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4049349]</span></p>
+
+<h3><span>Who should use this article? </span></h3>
+
+<ul>
+	<li><span>Accounts &amp; Billing</span></li>
+	<li>Sales</li>
+</ul>
+
+<h3><span>What is this article about?</span></h3>
+
+<p>This article provides how to handle customer&rsquo;s Microsoft Store&rsquo;s pre-order related questions and orders.&nbsp;</p>
+
+<h3><a id="top" name="top"></a>Table of contents</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<h4>1.&nbsp;<a bookmark-id="1" href="#1" managed-link="">General information</a></h4>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>2.&nbsp;Payment authorization of pre-orders</h4>
+			</td>
+			<td>
+			<p><span>2.1&nbsp;<a bookmark-id="2.1" href="#2.1" managed-link="">Process for authorization</a></span></p>
+
+			<p><span>2.2&nbsp;<a bookmark-id="2.2" href="#2.2" managed-link="">Method of payment</a></span></p>
+
+			<p>2.3&nbsp;<a bookmark-id="2.3" href="#2.3" managed-link="">Authorization failure on pre-orders</a></p>
+
+			<p>2.4&nbsp;<a bookmark-id="2.4" href="#2.4" managed-link="">Re-authorization process</a></p>
+
+			<p>2.5 <a bookmark-id="2.5" href="#2.5" managed-link="">System auto sending emails</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4><span><span><span><span>3.&nbsp;Cancelling pre-orders</span></span></span></span></h4>
+			</td>
+			<td>
+			<p>3.1 <a bookmark-id="3.1" href="#3.1" managed-link="">Physical goods</a></p>
+
+			<p>3.2 <a bookmark-id="3.2" href="#3.2" managed-link="">Digital goods</a></p>
+
+			<p>3.3&nbsp;<a bookmark-id="3.3" href="#3.3" managed-link="">Pre-order Status: Advocate action to cancel pre-order next to transaction</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<h4>4.&nbsp;FAQ</h4>
+			</td>
+			<td>
+			<p>4.1&nbsp;<a bookmark-id="4.1" href="#4.1" managed-link=""><span>How can customers pay for a pre-order?</span></a></p>
+
+			<p>4.2&nbsp;<a bookmark-id="4.2" href="#4.2" managed-link=""><span>When will customers get their confirmation email?</span></a></p>
+
+			<p>4.3&nbsp;<a bookmark-id="4.3" href="#4.3" managed-link="">When&nbsp;will customers receive their digital product?</a></p>
+
+			<p><span>4.4&nbsp;<a bookmark-id="4.4" href="#4.4" managed-link="">When will customers receive their physical product?</a></span></p>
+
+			<p>4.5&nbsp;<a bookmark-id="4.5" href="#4.5" managed-link=""><span>How do I handle inquiries on release date changes?</span></a></p>
+
+			<p>4.6&nbsp;<a bookmark-id="4.6" href="#4.6" managed-link=""><span>What if the customer needs to make changes to their pre-order?</span>&nbsp;</a></p>
+
+			<p>4.7 <a bookmark-id="4.7" href="#4.7" managed-link="">Will the price of the pre-order change?</a></p>
+
+			<p>4.8&nbsp;<a bookmark-id="4.8" href="#4.8" managed-link=""><span><span><span><span>For games that are playable on both the Xbox One and Windows 10 Desktop device, if I want to play on both systems, do I need to pre-order the game twice on both platforms or can I pre-order once on my Xbox One, then it will be available for download on both systems when it is released?</span></span></span></span></a></p>
+
+			<p>4.9&nbsp;<a bookmark-id="4.9" href="#4.9" managed-link=""><span><span><span><span>&quot;I made a pre-order for a game, but I haven&rsquo;t received it yet on my system since the release date of a few days ago. How come?&quot;</span></span></span></span></a></p>
+
+			<p>4.10&nbsp;<a bookmark-id="4.10" href="#4.10" managed-link="">Does the link in the email ever expire?&nbsp;</a></p>
+
+			<p>4.11&nbsp;<a bookmark-id="4.11" href="#4.11" managed-link="">If we can update the payment method, can we update the shipping address?</a></p>
+
+			<p>4.12&nbsp;<a bookmark-id="4.12" href="#4.12" managed-link="">How should we code these calls?</a></p>
+
+			<p>4.13&nbsp;<a bookmark-id="4.13" href="#4.13" managed-link="">When is the customer&rsquo;s card charged for the full amount?</a></p>
+
+			<p>4.14&nbsp;<a bookmark-id="4.14" href="#4.14" managed-link=""><span>How do customers track their order?</span></a></p>
+
+			<p>4.15&nbsp;<a bookmark-id="4.15" href="#4.15" managed-link=""><span>Can customers get a full refund if they are not satisfied with their purchase?</span></a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+<h3><a id="1" name="1"></a>1. General information</h3>
+
+<p><strong>Pre-orders</strong><br>
+Pre-orders are products and content that are not yet available for immediate delivery or download.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><span>2. Payment authorization of pre-orders</span></h3>
+
+<h4><span><a id="2.1" name="2.1"></a>2.1 Process for authorization</span></h4>
+
+<p><span>Customers can purchase products available for pre-order using credit on their Microsoft account, a debit/credit card, or both. They will be charged at different times depending on how they pay:</span></p>
+
+<ul>
+	<li><strong><span>Microsoft account credit (CSV)</span></strong><span>. If the customer pays for their pre-order completely with credit from the Microsoft account, the credit will be subtracted right away. </span></li>
+	<li><strong><span>Debit or credit card</span></strong><span>. Pre-orders made using just a debit or credit card won&rsquo;t be charged until about 10&nbsp;days before the product is released. </span></li>
+	<li><strong><span>A combination of account credit (CSV) and a debit/credit card</span></strong><span>. If the customer doesn&rsquo;t have enough credit to cover the whole cost of the pre-order, they can combine payments. This will act the same as a pre-order with a debit or credit card and won&rsquo;t be charged until about 10&nbsp;days before the product is released. </span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><a id="2.2" name="2.2"></a>2.2 Method of payment</span></h4>
+
+<p><strong><span>A combination of account credit (CSV) and a debit/credit card</span></strong><span><span><span><span><span><br>
+If the customer used a combination of account credit and a credit card, their account credit and the card will be charged about 10&nbsp;days before the product launches. The customer will receive an email confirming that the payment was collected successfully and, if it is a physical product, include a tracking number for the shipment (not applicable for digital goods). If the customer has spent all the CSV since the pre-order, then the full amount will be charged to the debit/credit card. </span></span></span></span> </span></p>
+
+<p><strong><span>Debit/credit card only</span></strong><span><br>
+If the customer used their credit/debit card to place the pre-order, they will be billed around 10 days before the products launches. The customer will receive an email confirming that the payment was collected successfully&nbsp;and include a tracking number&nbsp;to track the pre-order shipment. </span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><a id="2.3" name="2.3"></a>2.3 Authorization failure on Pre-Orders</span></h4>
+
+<p><span>If for any reason the card payment failed, or the payment couldn&rsquo;t be taken, the customer will receive a notification that their payment couldn&rsquo;t be taken. If this happens, the customer should: </span></p>
+
+<ol>
+	<li><span>Sign into their account at <a data-content-id="" data-content-type="" href="https://account.microsoft.com/billing/payments" managed-link="" target="_blank">https://account.microsoft.com/billing/payments</a>.</span></li>
+	<li><span>Review their current payment options to ensure that everything is correct. If the customer needs to add or remove a payment method, they can do this here.</span></li>
+</ol>
+
+<p><span>The customer can also select a different payment method for an individual purchase by doing the following: </span></p>
+
+<ol>
+	<li><span>Sign into their account at <a data-content-id="" data-content-type="" href="https://account.microsoft.com/billing" managed-link="" target="_blank">https://account.microsoft.com/billing</a>.</span></li>
+	<li><span><span><span><span><span>Within the order history, find the pre-ordered product and select <strong>Change how you pay</strong>.</span></span></span></span></span></li>
+	<li><span>On the <strong>Pick another way to pay</strong> screen, the customer can either choose a different payment method, or add a new one.</span></li>
+</ol>
+
+<p><span>In both cases, we will attempt to bill the customer again before the product launches, so they won&rsquo;t lose any pre-order bonuses (if applicable).</span></p>
+
+<p><span><strong><span><span><span>Note:</span></span></span></strong><span><span><span> If the customer wants to cancel a pre-ordered product and the payment method is still being processed by the bank, you may need to wait a day or two before Microsoft can refund the purchase. If you are processing a refund, make sure that the pre-order didn&rsquo;t ship to the customer. If it has already shipped, then the customer would need to return the product to receive a refund. </span></span></span></span><span> </span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><a id="2.4" name="2.4"></a>2.4&nbsp;Re-authorization process</span></h4>
+
+<p><span><span><span><span>If the customer&rsquo;s payment method fails to authorize and they haven&rsquo;t been charged for any items on their order, then they will be eligible to update their payment method and attempt to re-authorize. Customers that fall into this process will experience the following: </span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span>Customer receives payment update e-mail and selects the link to <strong>update</strong>. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>Customer signs in with their Microsoft account.</span></span></span></span></span>
+	<ul>
+		<li><span><span><span><span><span><strong>Note:</strong> The customer MUST use the Microsoft account that is associated with the order.</span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span> </span></span></span></span></span><span><span><span><span><span>A page appears asking the customer to update their payment information. The customer can do the following:</span></span></span></span></span>
+	<ul>
+		<li>&nbsp;<span><span><span><span>Use an existing payment method.</span></span></span></span></li>
+		<li><span><span><span><span>Edit an existing payment method and then use it. If the customer is updating an expired card, they should enter this as a brand-new payment instrument (PI). The CVV (three-digit security code) will <em>need</em> to be added, and the system will not ask for this for expired cards. This will cause the PI to fail.</span></span></span></span></li>
+		<li><span><span><span><span>Add a new payment method and then use it.</span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span><span><span><span><span>Once updated, the customer will see a Confirmation page, outlining the order information (the order has not been placed yet).</span></span></span></span></span></li>
+	<li><span><span><span><span><span> </span></span></span></span></span><span><span><span><span><span>Customer selects <strong>Confirm your order</strong></span></span></span></span></span>
+	<ul>
+		<li><span><span><span><span><span>Order success &ndash; Order is placed, customer arrives on the Thank You page with their receipt.</span></span></span></span></span></li>
+		<li><span><span><span><span><span>Authorization failed &ndash; Order was not placed, and the card failed authorization. The customer will go back to step 3 and attempt to update the payment information again.</span></span></span></span></span></li>
+		<li><span><span><span><span>Customers have a limited number of attempts and a limited timeline</span></span></span></span></li>
+		<li><span><span><span><span>Customers will have a maximum of two (2) attempts, or 7 days (whichever happens first), to authorize their payment method. After a 2nd failed attempt, the customer will no longer be able to update their payment method, and the order/product will be cancelled.</span></span></span></span></li>
+	</ul>
+	</li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><span><span><span><a id="2.5" name="2.5"></a>2.5 System auto sending emails </span></span></span></span></h4>
+
+<p><span><span><span>KB <a href="https://internal.support.services.microsoft.com/help/4491312" target="_blank"><span>4491312 Informational: System Auto Sending Email: Payment Instruments</span></a></span></span></span></p>
+
+<p><span><span><span>KB <a href="https://internal.support.services.microsoft.com/help/4491448" target="_blank"><span>4491448 Informational: System Auto Sending Email: Order</span></a></span></span></span></p>
+
+<p><span><span><span>KB <a href="https://internal.support.services.microsoft.com/help/4491449" target="_blank"><span>4491449 Informational: System Auto Sending Email: Subscriptions</span></a></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3 class="CxSpFirst"><span><span><span><span>3. Cancelling pre-orders</span></span></span></span></h3>
+
+<h4 class="CxSpMiddle"><span><span><span><span><a id="3.1" name="3.1"></a>3.1 Physical goods</span></span></span></span></h4>
+
+<p class="CxSpMiddle"><span><span><span><span>Customers can freely cancel their pre-order if the <strong>cancel</strong> button is available in the advocate tool. Some customers may also be able to cancel their pre-orders themselves online via <a data-content-id="" data-content-type="" href="https://account.microsoft.com" managed-link="" target="_blank">account.microsoft.com</a></span></span></span></span></p>
+
+<p><span><span><span><span><span>Pre-orders may be cancelled by the system without any action from the customer or a member of Microsoft Support. If anything is canceled, then the order/product cannot be fulfilled. A new order will need to be created for the customer if they still wish to purchase that product. If a product is out of stock, there is no way for a customer or you to place an order for that product. See KB </span></span></span><span><span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2988925" managed-link="" target="_blank">2988925 2988925 Procedure: Microsoft Store: Physical products/software Returns/Exchange/Engagement</a></span></span></span><span><span><span>t for more details about OOS. </span></span></span></span><span><span><span> </span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4 class="CxSpMiddle"><span><span><span><span><a id="3.2" name="3.2"></a>3.2 Digital goods</span></span></span></span></h4>
+
+<p class="CxSpMiddle"><span><span><span><span><span>Customers can cancel a pre-order any time before the release date. Once the release date of a game has passed, our common refund procedure (KB <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/3083551" managed-link="" target="_blank">3083551 3083551 Guideline: Microsoft Store: Return and refund</a></span></span></span></span><span><span><span> </span></span></span><span><span><span><span>) is applicable. </span></span></span></span></span><span><span><span><span> Pre-orders work the same for games on the Xbox One and Windows 10 Store. We will explain to the customer that pre-orders can be cancelled any time before the release date without incurring any penalties or charges to the customer&#39;s account. However, if the charge/dunning cycle has started (10-12 days prior to game being released) we will be unable to cancel if they are in an authorization failed state.<br>
+<br>
+See MST steps below for cancelling a Digital pre-order.</span></span></span></span></p>
+
+<div>
+<div><a bookmark-id="top" href="#top" managed-link="">Return to top</a></div>
+
+<div>&nbsp;</div>
+</div>
+
+<h4><span><span><span><span><a id="3.3" name="3.3"></a>3.3 Pre-order Status: Advocate action to cancel pre-order next to transaction</span></span></span></span></h4>
+
+<p><span><span><span></span></span></span><span><span><span><span>Once an order state has changed to <strong>Purchased</strong> follow steps to return line item in KB </span></span></span><span><span><span><a href="https://internal.support.services.microsoft.com/help/840536" target="_blank">840536 Procedure: Microsoft Store: Digital content return/refund</a>.</span></span></span></span><span><span><span></span></span></span></p>
+
+<p><span><span><span><span>Once an order state has changed to <strong>Authorization Failed</strong> you have two options</span></span></span></span><span><span><span><span>:</span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span>Continue to allow the system to attempt to charge the PI used on the pre-order, and if we continue to get an authorization decline, the order will be automatically cancelled by the system three days prior to the game release date. </span></span></span></span></span>
+
+	<ul style="list-style-type:circle">
+		<li><span><span><span><span><span>If the customer does get charged, you can return the item since the game has not yet released per KB </span></span><span><span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/3083551" managed-link="" target="_blank">3083551</a>.</span></span></span></span></span></span></li>
+		<li><span><span><span><span><span>Use a different credit card to have the order process successfully and then process a return line item on the purchased order state per KB </span></span><span><span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/3083551" managed-link="" target="_blank">3083551</a>.</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<p><span><span><span><span><span>For pre-orders in the order state of&nbsp;<strong>pre-order</strong>:</span></span></span></span><span> </span></span></p>
+
+<p class="CxSpMiddle"><span><span><span><span>1. Select <strong>Pre-order</strong>&nbsp;located under <strong>order state</strong>:<br>
+<span asset="4055374" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4055374]</span><br>
+<br>
+2. The <strong>Cancel Pre-order</strong> screen will appear:<br>
+<span asset="4055375" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4055375]</span><br>
+<br>
+<br>
+3. In the <strong>Reason Code</strong>&nbsp;dropdown, select the reason for cancellation:<br>
+<span asset="4055376" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4055376]</span><br>
+<br>
+<br>
+4. Confirm cancellation:<br>
+<span asset="4055377" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4055377]</span><br>
+<br>
+5. Cancellation complete:</span></span></span></span><br>
+<span asset="4055378" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4055378]</span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3>4. FAQ</h3>
+
+<h4><span><a id="4.1" name="4.1"></a>4.1 How can customers pay for a pre-order? </span></h4>
+
+<p><span><span><span><span>A credit card is required for all pre-orders, but the card will not be charged until the order is shipped or the product is made available for download.<br>
+<br>
+<strong>Note:</strong>&nbsp;The order cannot be charged and completed if the card expires between the date the pre-order is placed and the date the item becomes available for purchase. Explain to the customers&nbsp;that their billing and contact information must always be current. If the customer&rsquo;s card expires before the pre-order is shipped, Microsoft will make multiple attempts to reach out to the customer informing them of their card expiring before the pre-order ship date.</span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><a id="4.2" name="4.2"></a>4.2 When will customers get their confirmation email? </span></h4>
+
+<p><span><span><span><span>Customers will get a confirmation email within the same day of ordering. This email will include the transaction information and any special instructions that may be needed for purchase. This email will also include the order number, the date the order was placed, and the release date of the product if it is known.</span></span></span><br>
+<br>
+If customers do not receive their confirmation email within 24 hours, tell the customer to call us for their order status update. (You should provide regional Microsoft store contact information. The information can be found on <a href="http://www.microsoft.com/store" target="_blank">www.microsoft.com/store</a><span><span><span>.</span></span></span><span><span><span>)</span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><a id="4.3" name="4.3"></a>4.3 When will customers receive their physical product? </span></h4>
+
+<p><span><span><span><span>Most pre-orders will ship either before or by the GA (General Availability) date, if known. Product pages will generally list a &ldquo;ships by&rdquo; date if possible. Physical products will be shipped Monday through Friday during normal business hours. The shipping timeline is based on the shipping method that was selected for the purchase.</span></span></span></span></p>
+
+<p><span><span><span></span></span><span><span><span><strong>Note: </strong><em>US/Canada only</em>: If a customer pre-orders a device and purchases Microsoft Complete, the Complete warranty will activate when the products ships at GA, NOT at the time of pre-order. For more information about Microsoft Complete,&nbsp;see KB </span></span></span><span><span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/help/2901841" managed-link="" target="_blank">2901841 Procedure: Supporting Microsoft Complete plans</a></span></span></span><span><span><span>. </span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<p><span> </span></p>
+
+<h4><a id="4.4" name="4.4"></a>4.4 When&nbsp;will customers receive their digital product?</h4>
+
+<p><span><span><span><span>Customers will be able to download their digital content on the day of release as stated on the product&rsquo;s page.</span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><a id="4.5" name="4.5"></a>4.5 How do I handle inquiries on release date changes?</span></h4>
+
+<p><span><span><span><span>Depending on when the customer submitted the order, the order confirmation email will auto-populate the date from the PDP. If the date changes, it will not be updated in that email. Inform the customer that the </span></span></span><span><span><span><a data-content-id="" data-content-type="" href="http://www.microsoft.com/store" managed-link="" target="_blank">www.Microsoft.com/store</a></span></span></span><span><span><span> will have the current release date. </span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><a id="4.6" name="4.6"></a>4.6 What if the customer needs to make changes to their pre-order? </span></h4>
+
+<div class="alert-band">
+<div class="alert alert-info" role="alert">
+<p class="alert-title">Nothing can be changed on a pre-order including shipping methods for physical products</p>
+
+<div class="row">
+<div class="col-xs-24">
+<p><span><span><span><span><strong>Note:</strong>&nbsp;Additional exceptions and details below.</span></span></span></span></p>
+</div>
+</div>
+</div>
+</div>
+
+<p><span><span><span><span>If the product has not shipped, the original order needs to be cancelled and a new order needs to be placed. Changes cannot be made to the original order. Customers can update their billing information at </span></span></span><span><span><span><a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/www.commerce.microsoft.com" managed-link="" target="_blank">www.commerce.microsoft.com</a></span></span></span><span><span><span> by logging in with their Microsoft account and placing a new order with the changes through the Microsoft Store or with the help of an advocate.</span></span></span><br>
+<br>
+Exception: For customers who need to update their payment instrument due to pre-authorization failure see KB <a href="https://internal.support.services.microsoft.com/help/2889231" target="_blank">2907960 Procedure: Microsoft Store: Pre-Order scenarios</a><span><span><span>.</span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<p><span> </span></p>
+
+<h4><span><a id="4.7" name="4.7"></a>4.7 Will the price of the pre-order change? </span></h4>
+
+<p><span>Prices for pre-order items are covered in the </span><a data-content-id="" data-content-type="" href="http://www.microsoftstore.com/store/msusa/en_us/displayhelppaymentpricingpage/" managed-link="" target="_blank">Pre-order Price Guarantee</a><span>.<br>
+<br>
+The advertised price for pre-order items may increase or decrease prior to the date the product is released to the public. However, customers will only be charged the lowest price offered between the time the pre-order was placed and the date the product is released to the public. Also, the credit card won&rsquo;t be charged until the download is available or the product is shipped. The pre-order price guarantee only applies to pre-order items and prices offered on Microsoft Store. It does not apply to items and prices advertised by other sellers, prices inclusive of taxes, shipping charges, or typographical errors. For pre-order offers based on an estimated price rather than the official price, the pre-order price guarantee only applies to and will be based on the official price for the item when announced.</span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4 class="CxSpFirst"><span><span><span><span><a id="4.8" name="4.8"></a>4.8 For games that are playable on both the Xbox One and Windows 10 Desktop device, if I want to play on both systems, do I need to pre-order the game twice on both platforms or can I pre-order once on my Xbox One, then it will be available for download on both systems when it is released?</span></span></span></span></h4>
+
+<p class="CxSpMiddle"><span><span><span><span>You will explain to the customer how to identify compatibility when making purchasing choices. The playable/available on information is displayed on a product description page indicating which platform the game can be played on.<br>
+<span><span asset="4055379" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4055379]</span><br>
+<br>
+Or the Xbox Play Anywhere logo:<br>
+<span asset="4055380" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4055380]</span></span></span></span></span><span> </span></span></p>
+
+<p class="CxSpMiddle"><span><span><span><span>Play Anywhere pre-orders will be purchasable and playable on both Xbox One and Windows 10 Desktop platforms with one purchase.</span></span></span></span></p>
+
+<p class="CxSpMiddle"><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4 class="CxSpMiddle"><span><span><span><span><a id="4.9" name="4.9"></a>4.9 &quot;I made a pre-order for a game, but I haven&rsquo;t received it yet on my system since the release date of a few days ago. How come?&quot;</span></span></span></span></h4>
+
+<p class="CxSpMiddle"><span><span><span><span>In this scenario, the customer&#39;s payment method expired before the release date of the game and the customer has forgotten to update their payment method in their order before the release date.<br>
+<br>
+With all pre-orders, a stub (thumbnail) of the item is available on the customer&#39;s system when a pre-order is first made. The item or game will not work until the release date. A generic &quot;do not have license error&quot; may appear.<br>
+<br>
+Ten days before the release date of a pre-order, the customer&#39;s payment method will be charged the full amount of the purchase. Customers will receive email notifications to update their payment method to complete the order purchase.<br>
+<br>
+If the customer&#39;s payment goes into a dunning state such as expired credit card, this will require the customer intervention. If the customer does not take corrective actions, the order will be cancelled before the release date.</span></span></span></span></p>
+
+<p class="CxSpMiddle"><span><span><span><span>You will assist the customer to purchase the game, since the original purchase pre-order has been cancelled.</span></span></span></span></p>
+
+<p><span><span><span><span>For missing pre-order downloadable content, you will do a Make It Right on downloadable content that the customer was supposed to get if they had successfully received the pre-order.</span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span>Select to Xbox Live icon.</span></span></span></span></li>
+	<li><span><span><span><span>Next to the player&rsquo;s profile. Select the ellipses (&hellip;) and then <strong>Issue Token</strong>. </span></span></span></span><br>
+	<span><span><span><span>Under <strong>Token Types</strong>, select <strong>Content Token</strong>, and the list of available codes will appear under <strong>Content Types.</strong></span></span></span></span></li>
+</ol>
+
+<p class="CxSpMiddle">
+
+<p class="CxSpMiddle"><span><a bookmark-id="top" href="#top" managed-link="">Return to top</a><span><span> </span></span><span> </span></span></p>
+
+<h4><a id="4.10" name="4.10"></a>4.10 Does the link in the email ever expire?</h4>
+
+<p>Yes, the link expires 10 days after receiving the email.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="4.11" name="4.11"></a>4.11 If we can update the payment method, can we update the shipping address?</h4>
+
+<p>No, we cannot modify or update the shipping address of an order that has already been placed. This limitation includes pre-orders, even ones that fail authorization.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4 class="CxSpFirst"><a id="4.12" name="4.12"></a>4.12 How should we code these calls?</h4>
+
+<p class="CxSpFirst">Current taxonomy requires the use of an option that is not listed. Taxonomy will be updated so that you won&rsquo;t have to use an option that not listed in the future. For now, follow the requested coding below.<span><span><span></span></span></span></p>
+
+<p class="CxSpFirst"><span><span><span><span>The customer failed payment authorization and can update themselves but has additional questions. </span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><strong><span><span>The customer need</span></span></strong><span><span>: My purchase status and history</span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span>The customer question</span></span></strong><span><span>: I have a question about a charge </span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span>Symptom/cause</span></span></strong><span><span>: Authorization charges </span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span>Root cause</span></span></strong><span><span>: Option not listed </span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span>Brief description</span></span></strong><span><span>: Pre-order authorization failed</span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span>The customer&rsquo;s product was canceled due to failed payment authorization on a mixed cart. </span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><strong><span><span>The customer need</span></span></strong><span><span>: My purchase status and history </span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span>The customer question</span></span></strong><span><span>: I have a question about a purchase </span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span>Symptom/cause</span></span></strong><span><span>: Option not listed </span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span>Brief description</span></span></strong><span><span>: Product was canceled</span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span>The customer calls in requesting to cancel their pre-order rather than update their payment information. </span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><strong><span><span>The customer need</span></span></strong><span><span>: My purchase status and history </span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span>The customer question</span></span></strong><span><span>: I want to cancel an order </span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span>Symptom/cause</span></span></strong><span><span>: Choose the most appropriate option </span></span></span></span></span><span><span><span><span> </span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="4.13" name="4.13"></a>4.13 When is the customer&rsquo;s card charged for the full amount?</h4>
+
+<p><span><span><span><span>Microsoft store doesn&#39;t charge customers for preordering products. It does submit a token authorization that will validate the customer&rsquo;s card by placing an authorization up to $1 depending on the bank&rsquo;s policy. In North America this is typically $0 and Rest of World is typically $1. This token authorization will drop from the customer&#39;s card in 7-10 business days based on their bank&rsquo;s policy. The full value of the product will be charged shortly before the product ship date or available for download.<br>
+<br>
+In the scenario where the customer makes a purchase of an in-stock item (physical or digital) with a pre-order item, the customer will get pre-authorized for the full amount of the in-stock item only and will get charged for the pre-order when it&rsquo;s shipped or available for download.<br>
+<br>
+Also:<br>
+<br>
+Debit cards are handled the same way as credit cards.<br>
+<br>
+PayPal does a pre-authorization for the full amount. </span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<p><span> </span></p>
+
+<h4><span><a id="4.14" name="4.14"></a>4.14 How do customers track their order?</span></h4>
+
+<p><span>When customers place an order, they will receive the following emails: </span></p>
+
+<ul>
+	<li><span>An order confirmation. </span></li>
+	<li><span>If it is a physical product, they will receive a shipment notification when the item ships. </span></li>
+	<li><span>If an item is delayed or back ordered, they will receive a delay notification. </span></li>
+	<li><span>If they return an item, they will receive a return receipt. </span></li>
+</ul>
+
+<p><span>To track the orders online: </span></p>
+
+<ol>
+	<li><span><span><span><span><span>Have the customer go to </span></span><span><span><span><a data-content-id="" data-content-type="" href="http://www.microsoft.com/store" managed-link="" target="_blank">microsoft.com/store.com</a></span></span></span><span><span> or </span></span><span><span><span><a data-content-id="" data-content-type="" href="file:///C:/Users/v-jcree/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/1L40JMTY/account.microsoft.com/billing/orders" managed-link="" target="_blank">account.microsoft.com/billing/orders</a></span></span></span><span><span> and sign in using their Microsoft account. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>Their order status should read <strong>PreOrdered</strong>. Once it ships, the status will change to <strong>Shipped</strong>. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>Locate their specific order by date of purchase. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>They can select <strong>View Original Receipt</strong> to review or print their order confirmation page which will show their order number, date placed and the release date of your product if it is known. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>For physical products, they can select <strong>Track Package</strong> to view the delivery service&rsquo;s tracking page with their tracking number entered for them. </span></span></span></span></span><span> </span></li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><a id="4.15" name="4.15"></a>4.15 Can customers get a full refund if they are not satisfied with their purchase? </span></h4>
+
+<p><span>If customers wish to return an item that was pre-ordered, the 30 day return procedure: </span></p>
+
+<ul>
+	<li><span>When downloadable products are delivered electronically to their account. </span></li>
+	<li><span>When physical products are shipped. </span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+<p><strong><strong>Reviewed for privacy compliance in</strong>&nbsp;June 2018</strong></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Version history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>Item</strong></p>
+			</td>
+			<td>
+			<p><strong>Title</strong></p>
+			</td>
+			<td width="96">
+			<p><strong>Date</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/147144">CONTENT TRACKING 147144</a></td>
+			<td>Xbox : KB 2889231 Format table and capitalization&nbsp;</td>
+			<td width="96">9/20/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/147097">CONTENT TRACKING 147097</a></td>
+			<td>Xbox : KB 2889231 Update incorrect pre-order charge date from 12 to 10 days</td>
+			<td width="58">9/5/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/143264">CONTENT TRACKING 143264</a></td>
+			<td>Store: KB 2889231: Update some verbiage</td>
+			<td width="58">05/07/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/140780" role="heading">Content Tracking 140780</a></td>
+			<td>Sales: Adding system auto sending email KBs link to KB 2889231 Process: Microsoft Online Store: Pre-Order scenarios</td>
+			<td width="58">02/26/2019</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/132984" role="heading">Content Tracking 132984</a></td>
+			<td>Add the Speak Up! asset to all consumer articles</td>
+			<td width="58">8/30/2018</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/132710" role="heading">Content Tracking 132710</a></td>
+			<td>All: Update ACT tracking table to remove GDPR reference</td>
+			<td width="58">7/27/2018</td>
+		</tr>
+		<tr>
+			<td><br>
+			<a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/131336" role="heading">Content Tracking 131336</a></td>
+			<td>Store: Update 2889231 Process: Microsoft Online Store: Pre-Order scenarios</td>
+			<td width="58">6/27/2018</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems?id=119740&amp;_a=edit" managed-link="" target="_blank">Content Tracking 119740</a></td>
+			<td>Pre-Orders: Update to consolidate information from KB 3161785 into KB 2889231</td>
+			<td width="58">11/20/2017</td>
+		</tr>
+		<tr>
+			<td>
+			<div class="main-container">
+			<div class="main">
+			<div class="content-section">
+			<div class="explorer hub-view work-item-editor-view work-items-view" id="14">
+			<div class="hub-content">
+			<div class="horizontal hub-splitter no-split splitter stateful toggle-button-enabled toggle-button-hotkey-enabled" id="5">
+			<div class="hotkey-section hotkey-section-1 rightPane" role="main">
+			<div class="hub-title">
+			<div class="workitem-info-bar" id="27">
+			<div class="info-text-wrapper"><a aria-level="1" class="caption" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/121085" role="heading">Content Tracking 121085</a></div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</td>
+			<td><span class="info-text">KB 2889231: Update process for expired cards</span></td>
+			<td width="58">11/18/2017</td>
+		</tr>
+		<tr>
+			<td><a aria-level="1" class="caption" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/118305" role="heading">Content Tracking 118305</a></td>
+			<td><span class="info-text">KB 2889231: Update for pre-order authorizations</span></td>
+			<td width="58">10/5/2017</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a aria-level="1" href="http://tfsirt:8080/tfs/IRT1/CSS%20IRT/_workitems/edit/115761" role="heading">Content Tracking 115761</a></p>
+			</td>
+			<td>
+			<p>KB 2889231: Update title and remove from U&amp;R VKB portal</p>
+			</td>
+			<td width="58">
+			<p>8/9/2017</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>

@@ -1,0 +1,55 @@
+﻿<header><h1>&quot;An unknown error has occurred&quot; error message in Outlook</h1></header><div class="kb-notice-section section">BUG #: <a href="http://bugcheck/bugs/ContentMaintenance/71408.asp" target="_blank" title="Link only available for Microsoft corporate network users">71408 (Content Maintenance)</a></div>
+<div class='kb-notice-section section'>This article is part of the Global Support Automation (GSA) Consumer Experience Improvement Pilot (CEIP). Do not archive this article without the permission of the Content Project Manager (CPM). All changes to this article must follow the CEIP core writing guidelines.</div><div class='kb-symptoms-section section'>In Microsoft Outlook, you may receive one of the following error messages when you try to read, send, receive, or delete an email message.&#160;<br><br><span class='text-base'>Error message 1</span><div class='indent'><div class='sbody-error'>An unknown error has occurred. 0x80040119</div></div><span class='text-base'>Error message 2</span><div class='indent'><div class='sbody-error'>An unknown error has occurred. 0x80040600</div></div>Or, when you try to delete email messages, you may receive the following error message:&#160;<div class='indent'><div class='sbody-error'>Messaging interface has caused an unknown error</div></div></div><div class="kb-resolution-section section">The error may be caused by a corrupted Outlook Data File (*.pst) in the Outlook profile. &nbsp;<br>
+<br>
+To repair the corrupted file, follow these steps.<br>
+&nbsp;
+<h3 class="sbody-h3">Step 1: Locate the default *.pst file that is using the Outlook profile</h3>
+
+<ol class="sbody-num_list">
+	<li>In Control Panel, open the <strong class="uiterm">Mail</strong> the item.</li>
+	<li>Click <strong class="uiterm">Show Profiles</strong>. Select the Outlook profile that experiences the issue, and then click <strong class="uiterm">Properties</strong>.</li>
+	<li>Click <strong class="uiterm">Data files</strong>.</li>
+	<li>Make a note of the location of the default *.pst file. The name of the default *.pst file contains a black circle with a check mark.<br>
+	<span asset="4052395" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4052395]</span><br>
+	&nbsp;</li>
+</ol>
+
+<h3 class="sbody-h3">Step 2: Run the Outlook Inbox Repair Tool (SCANPST.exe) to repair the *.pst file</h3>
+
+<ol class="sbody-num_list">
+	<li>Exit Outlook.</li>
+	<li>Open the Outlook Inbox Repair Tool (SCANPST.exe).</li>
+	<li>In the <strong class="uiterm">Enter the name of the file you want to scan</strong> box, type the location of the *.pst file.</li>
+	<li>Click <strong class="uiterm">Start</strong>.</li>
+</ol>
+
+<h3 class="sbody-h3">Where to find the Outlook Inbox Repair Tool</h3>
+<span class="text-base">Outlook 2013</span><br>
+<br>
+32-bit version of Windows: C:\Program Files\Microsoft Office\Office15\<br>
+64-bit version of Windows: C:\Program Files (x86)\Microsoft Office\Office15\<br>
+64-bit Outlook: C:\Program Files\Microsoft Office\Office15\<br>
+<br>
+<br>
+<span class="text-base">Office 365 Home or Business, Outlook 2013 Click to Run</span><br>
+<br>
+Any version of Windows: C:\Program Files\Microsoft Office 15\root\office15\<br>
+<br>
+<span class="text-base">Outlook 2010</span><br>
+<br>
+32-bit version of Windows: C:\Program Files\Microsoft Office\Office14\<br>
+64-bit version of Windows: C:\Program Files (x86)\Microsoft Office\Office14\<br>
+64-bit Outlook: C:\Program Files\Microsoft Office\Office14\<br>
+<br>
+<br>
+<span class="text-base">Outlook 2007 </span><br>
+<br>
+32-bit version of Windows: C:\Program Files\Microsoft Office\Office12\<br>
+64-bit version of Windows: C:\Program Files (x86)\Microsoft Office\Office12\</div>
+<div class='kb-moreinformation-section section'>If the methods that are described in the &quot;Resolution&quot; section don&#39;t resolve the problem, you can try creating a new Unicode .pst file, setting it as the default, and then importing the data from your older .pst file. For information about how to do this, see the &quot;How to point Outlook to your new Personal Folders file&quot; section of the following article in the Microsoft Knowledge Base:<br><div class='indent'><a id='kb-link-2' href='/en-us/help/291636'>291636 </a> How to move your personal folders (.pst) file in Outlook</div><br>To import the original .pst file, it must be removed from the Outlook profile. When Outlook is running, right-click the name of the Outlook data file (.pst) that you want to remove from the <strong class='uiterm'>Outlook Bar </strong>or <strong class='uiterm'>Navigation Pane</strong>, and then click <strong class='uiterm'><span class='text-base'>Close &lt;<strong class='sbody-strong'>name</strong>&gt;</span></strong>. If the <span class='text-base'><strong class='uiterm'>Close</strong></span> command is not available, you are probably trying to remove the default Outlook data file (.pst) that is used to save your new messages. The article that was referenced earlier provides the steps to change the .pst file that&#39;s used as the default delivery location.<br><br>After you remove the original .pst file from the profile, you can import the data into the new .pst file by following the steps in the &quot;How to import .pst file data into Outlook&quot; section of the following article in the Microsoft Knowledge Base:<br><br><div class='indent'><a id='kb-link-3' href='/en-us/help/287070'>287070 </a> How to manage .pst files in Outlook 2007, in Outlook 2003, and in Outlook 2002</div><br>If you&#39;re using Outlook with Exchange Server, you might want to contact the Exchange Server administrator for help. You can also use the Microsoft Customer Support Services website to find other solutions. Some services that the Microsoft Customer Support Services website provides include the following: <ul class='sbody-free_list'><li><a id='kb-link-4' href='/search/?adv=1' target='_self'>Searchable Knowledge Base</a>: Search technical support information and self-help tools for Microsoft products.</li><li><a id='kb-link-5' href='/select/?target=hub' target='_self'>Solution Centers</a>: View product-specific frequently asked questions and support highlights.</li><li><a id='kb-link-6' href='/default.aspx?pr=csshome' target='_self'>Other support options</a>: Use the web to ask a question, to contact Microsoft Customer Support Services, or to provide feedback.</li></ul>If you continue to have questions after you use these Microsoft websites or cannot find a solution on the Microsoft Support Services website, go to the <a id='kb-link-7' href='/contactus' target='_self'>Contact Microsoft</a> website.<br></div><div class='kb-securedata-section section'>0x80040119 OL2007 OL2003 OL2002 OL2010 SDReviewed olkke</div><div class="kb-securedata-section section">Author: v-1philm<br>
+Product bug:<br>
+<br>
+Writer: v-willhe, v-six<br>
+Tech Reviewer: v-jomcc<br>
+Editor: v-jhugh; v-anwale, v-rhowar<br>
+Rewrite 5/27/12 - Writer: v-shtown; v-kathyd</div>

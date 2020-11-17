@@ -1,0 +1,825 @@
+﻿<header><h1>Process: Microsoft Advertising: Application Programming Interface (API)</h1></header><p><span asset="4509089" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4509089]</span></p>
+
+<h3>Who should use this article?</h3>
+
+<ul>
+	<li>Microsoft Advertising&nbsp;</li>
+</ul>
+
+<h3>What is this article about?</h3>
+
+<p><span><span><span><span><span>This article explains what an Application Programming Interface (API) is and outlines the benefits of using it, and also provides the process and steps to take when there are issues with the API. </span></span></span></span></span></p>
+
+<h3><a id="top" name="top"></a>Table of contents&nbsp;</h3>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span><span><span>1. Overview</span></span></span></span></span></span></h4>
+			</td>
+			<td width="312">
+			<p><span><span><span>1.1 <a bookmark-id="1.1" href="#1.1" managed-link="">What is an API? </a></span></span></span></p>
+
+			<p>1.2 <a bookmark-id="1.2" href="https://internal.support.services.microsoft.com/en-us/help/3180171#1" managed-link="" target="">Benefits of using the API</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span><span><span>2. <a bookmark-id="2" href="#2" managed-link="">Eligibility and cost </a></span></span></span></span></span></span></h4>
+			</td>
+			<td width="312">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span><span><span>3. <a bookmark-id="3" href="#3" managed-link="">Customer management models and API </a></span></span></span></span></span></span></h4>
+			</td>
+			<td width="312">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span><span><span>4. <a bookmark-id="4" href="#4" managed-link="">Developer tokens </a></span></span></span></span></span></span></h4>
+			</td>
+			<td width="312">
+			<p><span><span><span><span><span><span>4.1 <a bookmark-id="4.1" href="#4.1" managed-link="" target="">Multi user token through third-party tool</a></span></span></span></span></span></span></p>
+
+			<p><span><span><span><span><span><span>4.2 <a bookmark-id="4.2" href="#4.2" managed-link="">Retrieve customer ID and account ID</a></span><a bookmark-id="4.2" href="#4.2" managed-link=""> </a></span></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span><span><span>5. <a bookmark-id="5" href="#5" managed-link="">Authentication</a></span><a bookmark-id="5" href="#5" managed-link=""> </a></span></span></span></span></span></h4>
+			</td>
+			<td width="312">
+			<p><span><span><span><span><span><span>5.1 <a bookmark-id="5.1" href="#5.1" managed-link="">Legacy/managed authentication</a></span><a bookmark-id="5.1" href="#5.1" managed-link=""> </a></span></span></span></span></span></p>
+
+			<p><span><span><span><span><span><span>5.2 <a bookmark-id="5.2" href="#5.2" managed-link="" target="">OAuth authentication for Microsoft account migrated users</a></span></span></span></span></span></span></p>
+
+			<p><span><span><span><span><span><span>5.3 <a bookmark-id="5.3" href="#5.3" managed-link="">Access/authentication token </a></span></span></span></span></span></span></p>
+
+			<p><span><span><span><span><span><span>5.4 <a bookmark-id="5.4" href="#5.4" managed-link="">Refresh token </a></span></span></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span><span><span>6. <a bookmark-id="6" href="#6" managed-link="">Reporting and data </a></span></span></span></span></span></span></h4>
+			</td>
+			<td width="312">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span><span><span>7. Troubleshooting </span></span></span></span></span></span></h4>
+			</td>
+			<td width="312">
+			<p><span><span><span><span><span><span>7.1 <a bookmark-id="7.1" href="#7.1" managed-link="">SOAP (simple object access protocol) </a></span></span></span></span></span></span></p>
+
+			<p><span><span><span><span><span>7.2 ﻿﻿<a bookmark-id="7.2" href="#7.2" managed-link="" target="">Advocate support scope</a></span></span></span></span></span></p>
+
+			<p><span><span><span><span><span><span>7.3 <a bookmark-id="7.3" href="#7.3" managed-link="" target="">Troubleshooting checklist for help with calls to API services</a></span></span></span></span></span></span></p>
+
+			<p>7.4&nbsp;<a bookmark-id="7.4" href="#7.4" managed-link="" target="">Troubleshooting checklist for help with access or refresh tokens</a></p>
+
+			<p><span><span><span><span><span><span>7.5&nbsp;<a bookmark-id="7.5" href="#7.4" managed-link="" target="">Common API error messages</a></span></span></span></span></span></span></p>
+
+			<p>7.6 <a bookmark-id="7.6" href="#7.6" managed-link="" target="">Troubleshooting grant identity (AAD and OAuth) errors</a></p>
+
+			<p>7.7 <a bookmark-id="7.7" href="#7.7" managed-link="" target="">API user is unable to manage account</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span><span><span>8. <a bookmark-id="8" href="#8" managed-link="">How to enable API user </a></span></span></span></span></span></span></h4>
+			</td>
+			<td width="312">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span><span><span>9. <a bookmark-id="9" href="#9" managed-link="">How to disable a developer token </a></span></span></span></span></span></span></h4>
+			</td>
+			<td width="312">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span><span><span>10. <a bookmark-id="10" href="#10" managed-link="">Content API </a></span></span></span></span></span></span></h4>
+			</td>
+			<td width="312">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span><span><span>11. <a bookmark-id="11" href="#11" managed-link="">Sandbox/test environment </a></span></span></span></span></span></span></h4>
+			</td>
+			<td width="312">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="312">
+			<h4><span><span><span><span><span><span>12. <a bookmark-id="12" href="#12" managed-link="">FAQ</a></span></span></span></span></span></span></h4>
+			</td>
+			<td width="312">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+<div class="kb-generic-section section"><a id="Top" title="Top"></a>
+<h3><a id="1" name="1"></a>1. <span class="rangySelectionBoundary" id="selectionBoundary_1489761135788_9198631651449183">Overview</span></h3>
+
+<h4><a id="1.1" name="1.1"></a>1.1 What is an API?</h4>
+
+<p><span><span><span><span><span>An Application Programming Interface (API) is a set of routines, protocols, and tools for building software and applications. APIs assist in creating programs and applications that access, modify, and display data from specific sources.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>The API enables advertisers to use their own applications to communicate and exchange data directly with Microsoft Advertising without going through the Microsoft Advertising UI. </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Using the API is the most efficient way to manage many large campaigns or to integrate marketing with other in-house systems. It requires technical knowledge and is designed for advertisers with access to a development team. The API also supports multiple customer accounts, making it easy for ad agencies to manage campaigns for many clients. In addition, the API offers robust reporting with ROI analysis. </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Some of the many uses for the API include:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><strong><span><span><span>Managing Campaigns</span></span></span></strong><span><span><span> &ndash; Add/Update/Delete Campaigns, Ad Groups, Ads, Keywords</span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>Managing Customers/accounts/Users</span></span></span></strong><span><span><span> &ndash; Update Customer and account info, Invite/Delete/Modify users.</span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>Obtaining Performance Data</span></span></span></strong><span><span><span> &ndash; Create and download custom performance reports.</span></span></span></span></span></span></li>
+	<li><span><span><span><strong><span><span><span>Gather Insights Data</span></span></span></strong><span><span><span> &ndash; Research keywords, optimize bids, compare performance and opportunities across entities.</span></span></span></span></span></span></li>
+</ul>
+
+<p><span><span><span><span><span>The API is a free collection of XML-based web services that use SOAP (Simple Object Access Protocol) to enable programmatic management of advertising campaigns. To call the services, you have to use the Microsoft Advertising Web Service Description Language (WSDL) documents. Approved API users can develop an application to access the API by sending commands through SOAP-based web services that can be developed in languages that support web service calls, such as Java, Perl, PHP, Python or .NET.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>For complete API information, see the articles in API Docs. Use the navigation menu on the left to browse the various articles and the search box above the menu to find articles about specific API topics.</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Here are a few helpful API overview articles:</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><a href="https://docs.microsoft.com/en-us/advertising/guides/?view=bingads-13" target="_blank"><span><span><span><span>Bing Ads API Overview</span></span></span></span></a></span></span></span></span></span></li>
+	<li><span><span><span><span><span><a href="https://docs.microsoft.com/en-us/advertising/guides/entity-hierarchy-limits?view=bingads-12" target="_blank"><span><span><span><span>Entity Hierarchy and Limits</span></span></span></span></a></span></span></span></span></span></li>
+	<li><span><span><span><span><span><a href="https://docs.microsoft.com/en-us/advertising/guides/faq?view=bingads-13" target="_blank"><span><span><span><span>API FAQ</span></span></span></span></a></span></span></span></span></span></li>
+	<li><span><span><span><span><span><a href="https://docs.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13" target="_blank"><span><span><span><span>Get Started with the Bing Ads API</span></span></span></span></a></span></span></span></span></span></li>
+	<li><span><span><span><span><span><a href="https://docs.microsoft.com/en-us/advertising/guides/code-examples?view=bingads-12" target="_blank"><span><span><span><span>Bing Ads API Code Examples</span></span></span></span></a></span></span></span></span></span></li>
+	<li><span><span><span><span><span><a href="https://docs.microsoft.com/en-us/advertising/guides/client-libraries?view=bingads-12" target="_blank"><span><span><span><span>Bing Ads API Client Libraries</span></span></span></span></a></span></span></span></span></span></li>
+	<li><span><span><span><span><span><a href="https://docs.microsoft.com/en-us/advertising/guides/technical-guides?view=bingads-12" target="_blank"><span><span><span><span>Bing Ads API Technical Guides</span></span></span></span></a></span></span></span></span></span></li>
+	<li><span><span><span><span><span><a href="https://docs.microsoft.com/en-us/advertising/guides/reference?view=bingads-12" target="_blank"><span><span><span><span>Bing Ads API Reference</span></span></span></span></a></span></span></span></span></span></li>
+	<li><span><span><span><span><span><a href="https://docs.microsoft.com/en-us/advertising/guides/migration-guide?view=bingads-12" target="_blank"><span><span><span><span>API Migration Guide</span></span></span></span></a></span></span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="1.2" name="1.2"></a>1.2 Benefits of using the API&nbsp;﻿</h4>
+
+<p>There are three main benefits of using the API:</p>
+
+<ol>
+	<li><strong>Large Scale Operations&nbsp;</strong>&ndash; The API helps manage many campaigns efficiently.
+
+	<ul>
+		<li>Example:&nbsp;Having to create and manage 100 campaigns in 25 different advertising accounts.</li>
+	</ul>
+	</li>
+	<li><strong>Automation and Efficiency</strong><strong>&nbsp;</strong>&ndash; Use current data to make frequent changes and adjustments based on market conditions, performance and&nbsp;several other factors.
+	<ul>
+		<li>Example: You want to increase the bids on all keywords that performed well yesterday and decrease the bids on those that didn&rsquo;t.&nbsp;</li>
+	</ul>
+	</li>
+	<li><strong>Customization</strong>&nbsp;&ndash; Developers can plug in to the API to obtain relevant data and display it in their own custom dashboard/UI, creating brand loyalty and making the data impactful to their clients.
+	<ul>
+		<li>Example: You prefer that customers perform only certain operations on their accounts, such as only adding new keywords.</li>
+		<li>Example:&nbsp;A need to display data in a way that is unique to the business or vertical.</li>
+	</ul>
+	</li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="2" name="2"></a>2. Eligibility &amp; cost<span class="rangySelectionBoundary" id="selectionBoundary_1489761150014_5663495546497974">﻿</span><span><a class="bookmark" id="eligibility">&nbsp;</a></span></h3>
+
+<p>API access tokens are not granted to customers with accounts that are flagged with a fraud penalty. Anyone else with access to a Microsoft Advertising account is eligible.</p>
+
+<p>The API is free to use, however there is a business cost associated with coding to the API&nbsp;&ndash; clients will need to have a developer resource available &ndash; either an individual or team that knows how to code and has some API experience preferably.</p>
+
+<ul>
+	<li>Microsoft is not liable for the above cost &ndash; we make no guarantee or implication that a customer will receive direct assistance with coding their application, &ldquo;getting things up and running&rdquo;, or any downtime associated with client coding issues.</li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+<a id="header2" title="header2"></a>
+
+<h3><a id="3" name="3"></a>3. Customer management models &amp; API</h3>
+
+<p><span><span><span><span><span>Visit <span><a href="https://docs.microsoft.com/en-us/advertising/guides/account-hierarchy-permissions?redirectedfrom=MSDN&amp;view=bingads-13" managed-link="" target="_blank">Account Hierarchy and User Permissions</a> </span></span></span></span><span><span><span> </span></span></span><span><span><span>on API Docs to see best practices for the four broad customer management models: Direct Advertiser, Tool Provider, Agency, Reseller. </span></span></span></span></span></p>
+
+<ol>
+	<li><strong>Direct advertiser.</strong> A direct advertiser builds a Microsoft Advertising application for its own advertising campaigns and is billed directly by Microsoft for valid ad clicks.&nbsp;</li>
+	<li><strong>Tool provider.</strong> A tool provider builds a Microsoft Advertising application for other companies to manage their advertising campaigns&nbsp;and is not billed by Microsoft. The advertiser user owns the accounts, is billed directly by Microsoft for valid ad clicks, and may pay a fee to the tool provider.</li>
+	<li><strong>Agency.</strong> An agency builds a Microsoft Advertising application for their company to manage the campaigns of their advertising clients. The client of the agency owns the accounts, is billed directly by Microsoft for valid ad clicks, and may pay a fee to the agency.</li>
+	<li><strong>Reseller.</strong>&nbsp;A reseller builds a Microsoft Advertising application to manage the campaigns of their advertising clients&nbsp;and is billed directly by Microsoft for valid live clicks. The advertiser does not sign up for Microsoft Advertising credentials and may pay a fee to the reseller.</li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="4" name="4"></a>4. Developer tokens&nbsp;<span class="rangySelectionBoundary" id="selectionBoundary_1489761183946_561444943002579">﻿</span><a class="ms-asset-internalBookmark" id="UserTokens" title="UserTokens"></a><span><a class="bookmark" id="developer">&nbsp;</a></span></h3>
+
+<p>A developer token enables programmatic access to the accounts permitted for a user. Each provisioned user is assigned a role, for example Super Admin, and granted permissions to one or more accounts. The token does NOT grant or alter permissions to accounts. A developer token can be Single-User or Multi-User:</p>
+
+<div>
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong><span><a class="bookmark" id="singleuser">&nbsp;</a></span>Single-user <span class="rangySelectionBoundary" id="selectionBoundary_1489761264193_5743189784749911">﻿</span></strong><a class="ms-asset-internalBookmark" id="SingleUser" title="SingleUser"></a></p>
+			</td>
+			<td>
+			<p><strong><span><a class="bookmark" id="multiuser">&nbsp;</a></span>Multi-user <a id="multiuser" name="multiuser"></a><span class="rangySelectionBoundary" id="selectionBoundary_1489761278190_341733443259987">﻿</span></strong><a class="ms-asset-internalBookmark" id="MultiUser" title="MultiUser"></a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>This token may only be paired with one designated username and password.</p>
+			</td>
+			<td>
+			<p>This token may be paired with any valid Microsoft Advertising username and password.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span><span><span> As of July 2019, new API tokens created in the system are multi-user by default so it&rsquo;s no longer necessary to upgrade from single user to multi-user tokens. Customers with legacy single-user tokens can upgrade to multi-user themselves by going to the Developer Center and selecting the <strong>Upgrade</strong> button. You can also do this on the customer&rsquo;s behalf.</span></span></span></p>
+
+<p><span><span><span><span><span>The most important customer management concept to understand is that access to accounts and campaigns is based on the user role and permissions. A token enables users to access their designated accounts and campaigns programmatically via the API. In other words, the API developer token does not grant new access to additional accounts.</span></span></span></span></span></p>
+
+<p><span><span><span>For more information, see the <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-developer-token" managed-link="" target="_blank">Get a Developer Token</a></span></span></span><span><span> </span></span><span><span><span> article.</span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+</div>
+
+<h4><a id="4.1" name="4.1"></a>4.1 Multi-user token through third-party tool&nbsp;﻿&nbsp;</h4>
+
+<p>A tool provider builds a Microsoft Advertising application for other companies to manage their advertising campaigns&nbsp;and is not billed by Microsoft. The advertiser user owns the accounts, is billed directly by Microsoft for valid ad clicks and may pay a fee to the tool provider. The following sections describe the entity model and credentials for tool providers.&nbsp;</p>
+
+<p><span><span><span><span><span>A tool provider should use the multi-user developer token to authenticate with users of their application. A tool provider needs only one such token. Tool providers should not ask clients to provide their own single-user token. For more information about token types, see <a data-content-id="" data-content-type="" href="https://msdn.microsoft.com/library/jj966425.aspx#accountpermissions" managed-link="" target="_blank">account Permissions and the Developer Token</a>. </span></span></span></span></span></p>
+
+<p>Third-party tools may be used to manage some or all aspects of an advertiser account. Your users may also manage their respective accounts through the Microsoft Advertising web application or another third-party tool.&nbsp;</p>
+
+<p>A tool provider with a multi-user developer token will need the following to manage the client account:&nbsp;</p>
+
+<ol>
+	<li><span><span><span><span>Microsoft&nbsp;Advertising username or OAuth token corresponding to the third-party tool provider&rsquo;s linked Microsoft Advertising&nbsp;shell. More info on OAuth tokens can be found in the &ldquo;Authentication&rdquo; section of this article.</span></span></span></span></li>
+	<li>Developer&nbsp;token (the tool provider&rsquo;s token which should be a multi-user developer token).&nbsp;</li>
+</ol>
+
+<p><strong>Note</strong>: Users of a third-party tool do not need to be API-enabled.&nbsp;<strong><span><a class="bookmark" id="wantsupgrade">&nbsp;</a></span></strong></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="4.2" name="4.2"></a>4.2 Retrieve&nbsp;customer ID and account ID</h4>
+
+<p><span><span><span><span><span>Clients will need to know their customer and account identifiers to use the API. In order to get the account ID and Customer ID of the accounts they want to manage, they can do either of the following: </span></span></span></span></span></p>
+
+<ul>
+	<li>Check the URL of the Microsoft Advertising account, as described in <a data-content-id="" data-content-type="" href="https://msdn.microsoft.com/en-us/library/bing-ads-getting-started.aspx" managed-link="" target="_blank" title="">Getting Your account ID and Customer ID</a>.<br>
+	<br>
+	To get a user&rsquo;s customer ID and account ID, you can sign in to the Microsoft Advertising web application and select an account within accounts &amp; Billing. The URL will contain a CID key/value pair in the query string that identifies your customer ID, and an aid key/value pair that identifies your account ID. For example,&nbsp;<a data-content-id="" data-content-type="" href="https://ads.microsoft.com/?signout=true&amp;msg=sessionexpired&amp;RURL=https%3a%2f%2fui.bingads.microsoft.com%2fcampaign%2fCampaigns.m%3fcid%3dFindCustomerIdHere%26aid%3dFindAccountIdHere&amp;ccuisrc=4#/customer/FindCustomerIdHere/account/FindAccountIdHere/campaign" managed-link="" target="_blank">https://ads.microsoft.com/?signout=true&amp;msg=sessionexpired&amp;RURL=https%3a%2f%2fui.bingads.microsoft.com%2fcampaign%2fCampaigns.m%3fcid%3dFindCustomerIdHere%26aid%3dFindaccountIdHere&amp;ccuisrc=4#/customer/FindCustomerIdHere/account/FindaccountIdHere/campaign</a>.&nbsp;&nbsp;</li>
+	<li>Use&nbsp;<span><span><span><span>the&nbsp;<span><span><span><span><a href="https://docs.microsoft.com/en-us/advertising/customer-management-service/searchaccounts?redirectedfrom=MSDN&amp;view=bingads-13" target="_blank"><span><span><span>Search accounts service </span></span></span></a></span></span></span></span><span><span><span> </span></span></span><span><span><span><span>operation to programmatically retrieve accounts that the user can access. For code examples that show how to search for accounts that can be managed by the current authenticated user, see <a href="https://msdn.microsoft.com/en-us/library/bing-ads-search-accounts-csharp-code-example.aspx" target="_blank"><span><span><span>C#</span></span></span></a> | <a href="https://msdn.microsoft.com/en-us/library/bing-ads-search-accounts-java-code-example.aspx" target="_blank"><span><span><span>Java</span></span></span></a> | <a href="https://msdn.microsoft.com/en-us/library/dn629678.aspx" target="_blank"><span><span><span>PHP</span></span></span></a> | <a href="https://msdn.microsoft.com/en-us/library/bing-ads-search-accounts-python-code-example.aspx" target="_blank"><span><span><span>Python</span></span></span></a>.</span></span></span></span></span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="5" name="5"></a>5. Authentication <span class="rangySelectionBoundary" id="selectionBoundary_1489761421547_5672800125518527">﻿</span><a class="ms-asset-internalBookmark" id="Authentication" title="Authentication"></a><span><a class="bookmark" id="authentication">&nbsp;</a></span></h3>
+
+<p>There are two types of API authentication:&nbsp;Legacy/Managed and OAuth.</p>
+
+<h4><a id="5.1" name="5.1"></a>5.1 Legacy/managed authentication utilizes the following:&nbsp;<span class="rangySelectionBoundary" id="selectionBoundary_1489761487159_8791896681251423">﻿</span><span><a class="bookmark" id="legacy">&nbsp;</a></span><strong><a class="ms-asset-internalBookmark" id="Legacy" title="Legacy"></a></strong></h4>
+
+<ul>
+	<li>UserName&nbsp;and Password combination (such as API_Customer).</li>
+	<li>UserName does not follow email format</li>
+	<li>Developer Token, such as &ldquo;00823FY7839FJ7&rdquo;</li>
+	<li>Support/account teams are the only ones that can provision these credentials</li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="5.2" name="5.2"></a>5.2&nbsp;OAuth authentication for Microsoft account migrated users</h4>
+
+<p><span><span><strong><span><span>OAuth authentication for Microsoft account migrated users will utilize:﻿ </span></span></strong></span></span></p>
+
+<ul>
+	<li>Authentication token (obtained by following the OAuth process)</li>
+	<li>Developer token</li>
+</ul>
+
+<p>OAuth is the current industry standard for two-step authentication and is much more secure than traditional username/password combinations.</p>
+
+<p><span><span><span><span><span>As a part of the OAuth process, a user is asked if they would like to grant the application permissions to manage Microsoft Advertising campaigns. The user enters their Microsoft account credentials, selects <strong>Yes</strong>, and a set of secure tokens is then shared with the application to use to make calls on their behalf.</span></span></span></span></span></p>
+
+<p>Key things to know about OAuth:</p>
+
+<ul>
+	<li>This is one of the very few areas in the platform that the user will need to completely execute.&nbsp;The user needs&nbsp;to grant permission to the&nbsp;third-party application.</li>
+	<li>Microsoft Advertising engineering teams do not control or influence this process &ndash; Microsoft account security teams manage this process for all Microsoft products.</li>
+	<li>Microsoft&nbsp;Advertising engineering teams do not have access to any logs or diagnostic information regarding Microsoft accounts or OAuth tokens.</li>
+</ul>
+
+<p><span><span><span><span><span>The following resources are critical in troubleshooting authentication issues and helping customers understand the OAuth workflow:</span></span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span><span>First, walk the customer through the <span><a href="https://docs.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13" managed-link="" target="_blank">Get Started With the Bing Ads API</a> </span></span></span></span><span><span><span> </span></span></span><span><span><span>article which outlines the full grant consent workflow and authentication process under the &ldquo;Production Quick Start&rdquo; section. Ensure each step was completed correctly.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Next, review the steps in the <a href="https://docs.microsoft.com/en-us/advertising/guides/authentication-oauth-identity-platform?view=bingads-13#registerapplication" managed-link="" target="_blank"><span>Register Your Application</span></a></span></span></span><span><span><span> </span></span></span><span><span><span> article to ensure the customer correctly followed the application registration process. This is one of the most common authentication issues.</span></span></span></span></span></li>
+	<li><span><span><span><span><span>Finally, the <span><a href="https://docs.microsoft.com/en-us/advertising/guides/authentication-oauth?view=bingads-13" managed-link="" target="_blank">Authentication with OAuth</a> </span></span></span></span><span><span><span> </span></span></span><span><span><span>article contains an OAuth overview and general FAQ at the bottom of the page which can help answer customer inquiries.</span></span></span></span></span></li>
+</ol>
+
+<p>&nbsp;<a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="5.3" name="5.3"></a>5.3 Access/authentication token<span class="rangySelectionBoundary" id="selectionBoundary_1489762457559_5961677844012083">﻿</span><span><a class="bookmark" id="access">&nbsp;</a></span><a class="ms-asset-internalBookmark" id="AccessToken" title="AccessToken"></a></h4>
+
+<ul>
+	<li>
+	<div>The token obtained by the user after following the OAuth process.</div>
+	</li>
+	<li>
+	<div>Replaces&nbsp;the username/password fields in their API calls.</div>
+	</li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="5.4" name="5.4"></a>5.4 Refresh token<span class="rangySelectionBoundary" id="selectionBoundary_1489762467241_7006312403274748">﻿</span><span><a class="bookmark" id="refresh">&nbsp;</a></span><a class="ms-asset-internalBookmark" id="RefreshToken" title="RefreshToken"></a></h4>
+
+<ul>
+	<li>
+	<div>Another&nbsp;token obtained because of the OAuth process.</div>
+	</li>
+	<li>
+	<div>Used to &ldquo;refresh&rdquo; the access/authentication token after it expires (which happens by design).</div>
+	</li>
+	<li>
+	<div>Not sent in the client&rsquo;s API calls to Microsoft Advertising.</div>
+	</li>
+</ul>
+
+<div>
+<p><span><span><strong><span><span><span>Note</span></span></span></strong><span><span><span>: Access and refresh tokens expire. Access tokens typically expire after one hour. Refresh tokens are long-lived (90 days for public clients) but can be invalidated at any moment. The app should not be written to expect that a refresh token will last for any period of time.</span></span></span></span></span></p>
+
+<p><span><span><span>For more information about token expiration, see the <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/faq?view=bingads-13#oauth" managed-link="" target="_blank">OAuth FAQ</a> article. </span></span></span></p>
+</div>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="6" name="6"></a>6. Reporting and data <span class="rangySelectionBoundary" id="selectionBoundary_1489762496027_5982054001424564">﻿</span><a class="ms-asset-internalBookmark" id="ReportingandData" title="ReportingandData"></a><span><a class="bookmark" id="reporting">&nbsp;</a></span></h3>
+
+<p>The same reporting rules, SLA&rsquo;s, and availability that apply to UI reports also apply to API reports.</p>
+
+<p><span><span><span><span><span>If an account has campaigns in multiple time zones, the client cannot pull complete data until roughly five hours after close of business for the westernmost campaign time zone. </span></span></span></span></span></p>
+
+<ul>
+	<li>
+	<div>Example:&nbsp;If an account has campaigns in both&nbsp;EST and&nbsp;in PST, the advertiser will still need to wait four-five hours after the close of books in PST before pulling the report.&nbsp;This means pulling the report at 7-8 AM EST, and not at 4-5 AM EST.</div>
+	</li>
+</ul>
+
+<div>
+<p><span><span><span><span>For&nbsp;more information about API reporting, see the various articles in API Docs:</span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/reports?view=bingads-12" managed-link="" target="_blank">Reports Overview</a></span></span></span></span></li>
+	<li><span><span><span><span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/report-attributes-performance-statistics?view=bingads-12" managed-link="" target="_blank">Reports Attributes and Performance Statistics</a></span></span></span></span></li>
+	<li><span><span><span><span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/report-types?view=bingads-12" managed-link="" target="_blank">Report Types</a></span></span></span></span></li>
+	<li><span><span><span><span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/request-download-report?view=bingads-12" managed-link="" target="_blank">Request and Download a Report</a></span></span></span></span></li>
+	<li><span><span><span><span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/report-data-retention-time-periods?view=bingads-12" managed-link="" target="_blank">Reporting Data Retention Time Periods</a></span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+</div>
+
+<h3>7. Troubleshooting ﻿<a id="troubleshooting" title="troubleshooting"></a><a id="troubleshooting">&nbsp;</a></h3>
+
+<h4><a id="7.1" name="7.1"></a>7.1 SOAP (simple object access protocol) ﻿<a id="soap">&nbsp;</a><a id="SOAP" title="SOAP"></a></h4>
+
+<p><span><span><span><span><span>SOAP messages are used to help troubleshoot API support issues, and clients should be asked to submit them with their API inquiries. Using them can help Global Support efficiently diagnose API issues by capturing the SOAP messages that are exchanged between the client and Microsoft Advertising. If customers don&rsquo;t know how to capture SOAP messages, use the troubleshooting guide.</span></span></span></span></span></p>
+
+<p>Here&rsquo;s what you need from the customer for troubleshooting:</p>
+
+<ul>
+	<li>Description of the issue (expected vs. actual result).&nbsp;</li>
+	<li>SOAP Request and response attached in XML Format (Y/N).</li>
+	<li>Environment (production/sandbox).</li>
+	<li>API Version.</li>
+	<li>Service being called (Ad Insight, Bulk, Campaign Management, Customer Billing, Customer Management, Reporting).</li>
+	<li>Date, time, and time zone of error?</li>
+	<li>How long has the customer been&nbsp;using API?</li>
+	<li>Is the error consistent or&nbsp;occasional?&nbsp;</li>
+	<li>Developer token.</li>
+</ul>
+
+<p>Best practices for SOAP messages:&nbsp;</p>
+
+<ul>
+	<li><span><span><span><span><span>Customers using Microsoft Advertising credentials can log in using their username and password. Microsoft account users must acquire an OAuth token to use API. </span></span></span></span></span></li>
+	<li>Include relevant username and token information, and remove sensitive account information, including password, before sending the messages to support teams.&nbsp;&nbsp;</li>
+	<li>Try to<span><span><span><span><span><span>&nbsp;compare SOAP messages with API Docs examples (for example, </span></span></span><span><span><a href="https://msdn.microsoft.com/en-us/library/bing-ads-campaign-management-addcampaigns.aspx#request" target="_blank"><span><span><span><span>Sample SOAP for Campaign Management AddCampaigns Service Operation</span></span></span></span></a></span></span><span><span><span> and </span></span></span><span><span><a href="https://msdn.microsoft.com/en-us/library/bing-ads-reporting-pollgeneratereport.aspx#request" target="_blank"><span><span><span><span>Sample SOAP for Reporting PollGenerateReport Service Operation</span></span></span></span></a></span></span><span><span><span>) to troubleshoot and identify issues. </span></span></span></span></span></span></li>
+	<li>Use <a data-content-id="" data-content-type="" href="https://www.microsoft.com/en-us/download/details.aspx?id=7973" managed-link="" target="_blank" title="">Microsoft XML Notepad </a>to compare the XML in the SOAP messages.&nbsp;&nbsp;</li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="7.2" name="7.2"></a>7.2 Advocate support scope<span class="rangySelectionBoundary" id="selectionBoundary_1489762545947_1460945187850493">﻿</span><span><a class="bookmark" id="agent">&nbsp;</a></span><a class="ms-asset-internalBookmark" id="AgentSupport" title="AgentSupport"></a></h4>
+
+<p><span>When a customer calls in with an API issue, agents should do the following:</span></p>
+
+<ol>
+	<li><span>Use the&nbsp;<span><span><span><span>troubleshooting checklists in <span><a bookmark-id="7.3" href="#7.3" managed-link="">sections 7.3</a> and <a bookmark-id="7.4" href="#7.4" managed-link="">7.4</a> </span></span></span></span></span><span><span><span> </span></span></span><span><span><span><span>below to collect a detailed account of what the customer is facing.</span></span></span></span></span></li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span></span></span></span></span>Example:&nbsp;Customer is trying to obtain a keyword performance report, and is receiving the following error: &ldquo;Invalid Credentials&hellip;.etc.&rdquo;.</li>
+</ul>
+
+<ol start="2">
+	<li>
+	<div><span>Obtain all error messages, tracking ID&rsquo;s, timestamps of the error/issue.&nbsp;Try to get a same-day reproduction of the issue (ask the client try again and send over the most recent set of tracking IDs/timestamp).</span></div>
+	</li>
+</ol>
+
+<ul>
+	<li class="indent-1"><span><span><span><span><span><span>Review the list of specific error messages in <span><a bookmark-id="7.5" href="#7.5" managed-link="">sections 7.5</a> and <a bookmark-id="7.6" href="#7.6" managed-link="">7.6</a> </span></span></span><span><span> </span></span><span><span>below and follow the guidance to try to resolve the customer&rsquo;s issue.</span></span></span></span></span></span></li>
+</ul>
+
+<ol start="3">
+	<li>
+	<div><span>Do your best to obtain the full SOAP request and response from the customer. If they can&rsquo;t provide the XML SOAP request, obtain the code they are trying to use. If they can&rsquo;t provide anything, please obtain the above tracking IDs and timestamps, as well as know the call they are trying to run.&nbsp;</span></div>
+	</li>
+	<li><span><span><span><span><span><span>If you&rsquo;re unable to resolve the issue, escalate to Global Support and provide all of the information collected from the customer.</span></span></span></span></span></span></li>
+</ol>
+
+<p><span>Things to remember about API Issues:</span></p>
+
+<ol>
+	<li>
+	<div><span>API&nbsp;issues can be complex and vary greatly from customer to customer. Collect all information and escalate to Tier 2 (Global Support) for assistance.</span></div>
+	</li>
+	<li>
+	<div><span>We&nbsp;cannot code for customers &ndash; We can give best effort suggestions, but it is ultimately the customer&rsquo;s responsibility to code correctly and follow our guides on&nbsp;API Docs.</span></div>
+	</li>
+	<li>
+	<div><span>Given the complexity of the layer and the multitude of moving parts API issues can sometimes require extra time, involving multiple teams/engineering resources, and communication with the customer.&nbsp;</span></div>
+	</li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<div>
+<h4><a id="7.3" name="7.3"></a>7.3 Troubleshooting checklist for help with calls to API services</h4>
+
+<p><span><span><span><span><span>When a customer encounters an issue making an API call to the Bing Ads API services, walk through the below troubleshooting checklist and send the information to Global Support if you&rsquo;re unable to resolve the issue. This checklist can be found in the <span><a href="https://docs.microsoft.com/en-us/advertising/guides/handle-service-errors-exceptions?view=bingads-13#contact-support" managed-link="" target="_blank">Contact Support</a> </span></span></span></span><span><span><span> </span></span></span><span><span><span>article.</span></span></span></span></span></p>
+
+<ul>
+	<li><span><span><span><span>Who is the user attempting to call the service (what is the login email address)?</span></span></span></span></li>
+	<li><span><span><span><span>What is the account ID or account number the user is trying to access?</span></span></span></span></li>
+	<li><span><span><span><span>What are the steps needed to reproduce the error? Include the full request, response, and timestamp, except for private credentials (for example, access token).</span></span></span></span></li>
+	<li><span><span><span><span>Are you targeting the production or sandbox environment? Ensure that you are using the correct app registration and authorization endpoints for production vs sandbox. Likewise be sure to use the correct <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/web-service-addresses?view=bingads-13" managed-link="" target="_blank">web service addresses</a></span></span><span> </span><span><span> for the same environment.</span></span></span></span></li>
+	<li><span><span><span><span>Indicate whether the same request had worked for you in the past (historical performance).</span></span></span></span></li>
+	<li><span><span><span><span>Indicate whether you can now reproduce the issue every time or intermittently.</span></span></span></span></li>
+	<li><span><span><span><span>For issues related to the Bulk or Reporting service please include the trace for both the request and status poll operations.</span></span></span></span></li>
+	<li><span><span><span><span>For an authentication issue related to error code 105 or 106, please also include the system identifier for the Microsoft Advertising user&#39;s login credentials. To get the user identifier for the current user, see the <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#quick-start" managed-link="" target="_blank">Quick Start</a></span></span><span> </span><span><span> guide.</span></span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="7.4" name="7.4"></a>7.4 Troubleshooting checklist for help with access or refresh tokens</h4>
+
+<p><span><span>For help getting access and refresh tokens via the <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/authentication-oauth-live-connect?view=bingads-13" managed-link="" target="_blank">Live Connect</a> or <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/authentication-oauth-identity-platform?view=bingads-13" managed-link="" target="_blank">Microsoft identity platform</a> endpoints, step through this checklist&nbsp;with the customer and escalate to Global Support if necessary:</span></span></p>
+
+<ul>
+	<li><span><span><span><span>Who is the user attempting to authenticate (what is the login email address)?</span></span></span></span></li>
+	<li><span><span><span><span>What is the account ID or account number the user is trying to access?</span></span></span></span></li>
+	<li><span><span><span><span>What are the steps needed to reproduce the error? Include the full request, response, and timestamp, except for private credentials (for example, access token and client secret).</span></span></span></span></li>
+	<li><span><span><span><span>Are you targeting the production or sandbox environment? Ensure that you are using the correct app registration and authorization endpoints for production vs sandbox. Likewise be sure to use the correct <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/web-service-addresses?view=bingads-13" managed-link="" target="_blank">web service addresses</a> for the same environment.</span></span></span></span></li>
+	<li><span><span><span><span>Have you registered a native or web application? Clients running apps on services that span regions and devices such as Microsoft Azure should register a web application with client secret.</span></span></span></span></li>
+	<li><span><span><span><span>What is your registered application ID (client_id)? If you also have an application secret (client_secret) please confirm that you are setting it when you request access tokens from the authorization endpoint, but do not share it with anyone.</span></span></span></span></li>
+	<li><span><span><span><span>Run an OAuth diagnostic health check. Can you successfully obtain an access token and complete the documented <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#quick-start" managed-link="" target="_blank">Quick Start</a> for production or sandbox? If not, where does authentication fail and what is the error?</span></span></span></span></li>
+</ul>
+
+<div>
+<div><a bookmark-id="top" href="#top" managed-link="">Return to top</a></div>
+
+<div>&nbsp;</div>
+</div>
+</div>
+
+<h4><a id="7.5" name="7.5"></a>7.5&nbsp;<span>Common API error messages﻿</span></h4>
+
+<p><span><span><span><span><span><span>For a complete list of common API and SOAP errors, see the <a href="https://docs.microsoft.com/en-us/advertising/guides/handle-service-errors-exceptions?view=bingads-13#common-api-errors" target="_blank"><span>Common API Errors</span></a> article.</span></span></span></span></span></span><a class="ms-asset-internalBookmark" id="1" title="1"></a></p>
+
+<p><strong>Code 105 </strong>- &ldquo;Invalid Credentials&rdquo; - Authentication failed - Either supplied credentials are invalid or the account is inactive. Things to check:</p>
+
+<ul>
+	<li><span><span><span><span><span>Check whether the client is using OAuth or legacy/managed user. OAuth steps are outlined <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/authentication-oauth?redirectedfrom=MSDN&amp;view=bingads-13" managed-link="" target="_blank">here</a>.</span></span></span><span><span><span> </span></span></span></span></span></li>
+	<li>Ensure proper username/password is being used, or if the client uses OAuth, ensure they aren&rsquo;t putting an email address in the &lsquo;UserName&rsquo; field (OAuth uses an Authentication Token and not Username/Password)</li>
+	<li>The developer token is correct and not assigned to another user</li>
+	<li>Entering&nbsp;the proper customer/account ID&rsquo;s where necessary</li>
+</ul>
+
+<p><strong>Code 109&nbsp;</strong>-&nbsp;&ldquo;Authentication Token Expired&rdquo; - Authentication token has expired. Please renew it or obtain a new token. Things to check:</p>
+
+<ul>
+	<li>This error&nbsp;that indicates OAuth authentication token need to be refreshed&nbsp;&ndash; we have step-by-step guides on this located&nbsp;on API Docs.</li>
+</ul>
+
+<p><span><span><span>For a more complete list of common OAuth errors, see the <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/handle-service-errors-exceptions?view=bingads-13#common-oauth-errors" managed-link="" target="_blank">Common OAuth Errors</a> article.</span></span></span></p>
+
+<p><strong>Code 2005 </strong>- &ldquo;Reporting Service No Complete Data Available&rdquo; - You requested a report with complete data for all included campaigns. Currently only partial data is available in the respective time zone of one or more campaigns. Please try again later or submit a report request for partial data. Things to check:</p>
+
+<ul>
+	<li>The most common cause of this is that the advertiser is pulling reports too early in the day to obtain complete prior-day performance based on campaign time zones.</li>
+	<li>If their account has campaigns in multiple time zones, they cannot pull complete data until roughly five&nbsp;hours after close of business for the westernmost campaign time zone. Example: If they have one campaign set for PST time, they may not get complete data at 5 AM&nbsp;EST.</li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><span><span><span><span><a id="7.6" name="7.6"></a>7.6&nbsp;Troubleshooting grant identity (AAD and OAuth) errors</span></span></span></span></h4>
+
+<p><strong><span><span><span><span>Scenario: </span></span></span></span></strong>When an API customer tries to register API and carry forward the API authentication or OAuth process, they encounter errors in the Grant Consent workflow.</p>
+
+<p>We&rsquo;ll explain how to resolve each of the grant identity errors a customer may encounter due to an API authentication or OAuth process error.</p>
+
+<p><span><span><strong><span><span><span>Resources:</span></span></span></strong></span><span><span><span> For more information, see the following API help docs which can be shared with customers:</span></span></span><span> </span></span></p>
+
+<ul>
+	<li><span><span><span><span><span><a href="https://ms.portal.azure.com/#home" target="_blank"><span>Azure Portal</span></a></span></span></span></span></span></li>
+	<li><span><span><span><span><span><a href="https://docs.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13" target="_blank"><span>API Authentication</span></a></span></span></span></span></span></li>
+	<li><span><span><span><span><span><a href="https://docs.microsoft.com/en-us/advertising/guides/handle-service-errors-exceptions?view=bingads-13#common-oauth-errors" target="_blank"><span>Handling Service Errors and Exceptions - Common OAuth Errors</span></a></span></span></span></span></span></li>
+	<li><span><span><span><span><span><a href="https://docs.microsoft.com/en-us/advertising/guides/authentication-oauth-identity-platform?view=bingads-13#registerapplication" target="_blank"><span>Authentication with the Microsoft identity platform endpoint for developers - Register Your Application</span></a></span></span></span></span></span></li>
+</ul>
+
+<p><span><strong><span><span><span>Troubleshooting steps</span></span></span></strong></span></p>
+
+<p><strong><span><span>Error message 1: </span></span></strong><span><span>&ldquo;</span></span><span><span>AADSTS650052: </span></span><span><span>The app needs access to a service that your organization has not subscribed to or enabled. </span></span><span><span>Contact your IT Admin to review the configuration of your service subscriptions.&rdquo;</span></span></p>
+
+<p><span asset="4536485" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4536485]</span></p>
+
+<p><strong><span>Procedure</span></strong></p>
+
+<p><span><span><strong><span><span><span>Note: </span></span></span></strong><span><span><span>Walk the customer through the below steps. If a resolution isn&rsquo;t identified, ask them to send screenshots of the app registration page (Step 3 below) and the Redirect URLs section (Step 4 below), then escalate to Global Support.</span></span></span></span></span></p>
+
+<ol>
+	<li>Go to the <a data-content-id="" data-content-type="" href="https://ms.portal.azure.com/#home" managed-link="" target="_blank">Azure portal</a><span><span> and select <strong>App registration</strong>.</span></span></li>
+	<li><span><span>Select the App Display name and select <strong>Authentication</strong> from the sidebar.</span></span></li>
+	<li>Under <strong>Support account types</strong>, verify that <strong>accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox) </strong>is selected.</li>
+</ol>
+
+<p class="indent-1"><strong>Note</strong>: To change the supported accounts for an existing registration, use the manifest editor. Take care, as certain properties may cause errors for personal accounts.</p>
+
+<p class="indent-1"><span asset="4536486" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4536486]</span></p>
+
+<ol start="4">
+	<li>Under <strong>Redirect URLs</strong>, verify that a new end point is showing and selected.</li>
+</ol>
+
+<p class="indent-1"><span asset="4536487" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4536487]</span></p>
+
+<ol start="5">
+	<li>Select <strong>Permissions</strong> and check that the <strong>Basic</strong> permissions package is enabled.</li>
+	<li>Verify the Grant Consent endpoint is set correctly by checking that the dev used the correct common endpoint (correct URL).</li>
+</ol>
+
+<p class="indent-1"><strong>Note</strong>: The common endpoint means that both Microsoft account and AAD identities are equally valid choices going forward, as far as the Identity platform is concerned.</p>
+
+<p class="indent-1"><strong>Example</strong>: User attempts to authenticate with Contoso@user.com, which exists in both systems (AAD &amp; Microsoft account), during the OAuth flow, the user was presented with a disambiguation prompt (pop-up dialog) asking them to choose between personal and work account. If they choose <strong>Work</strong> <strong>account</strong>, that puts them on the path to getting an AAD token, which is the wrong pat in this case.</p>
+
+<p class="indent-1"><strong>Note: </strong>If the customer is not in the AAD pilot, make sure they always choose <strong>Personal</strong> <strong>account</strong>.</p>
+
+<p class="indent-1">The user should choose the <strong>Personal account</strong> option to avoid the error. If the dev is building a general-purpose Microsoft Advertising app, they should catch that error and interpret it as the user not having access to Microsoft Advertising with AAD credentials. They should either migrate from the website first or redirect to the consumers endpoint instead and retry the authentication.</p>
+
+<ol start="7">
+	<li>Verify if cache interference is an issue by completing the following:
+	<ol start="1" style="list-style-type:lower-alpha">
+		<li>Have the user log out of their corporate tenant credentials account before making the OAuth request. This will prevent their cached login requesting the token.</li>
+		<li>Select <strong>Personal account</strong> when prompted to select Ads Identity.</li>
+		<li>Make the following request in a new window:</li>
+	</ol>
+	</li>
+</ol>
+
+<p class="indent-1">https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=<strong><span>YOUR CLIENT ID HERE</span></strong>&amp;scope=openid%20profile%20https://ads.microsoft.com/ads.manage%20offline_access&amp;response_type=code&amp;redirect_uri=https://login.microsoftonline.com/common/oauth2/nativeclient&amp;state=ClientStateGoesHere&amp;prompt=consent</p>
+
+<p class="indent-1">If a blank html page with a URL containing <strong>common/oauth2/nativeclient?code= </strong>appear, it indicates success and confirms they&rsquo;re using incorrect cached credentials in the below test.</p>
+
+<p><strong>Error message 2: </strong>&ldquo;AADSTS500201: We are unable to issue Tokens from the API version for a Microsoft account&hellip;Need to use version 2.0 of the protocol.&rdquo;</p>
+
+<p><span asset="4536488" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4536488]</span></p>
+
+<p>Check the URL and look at the tenant to find if it is showing as &ldquo;<strong>common&rdquo;</strong> or &ldquo;<strong>organization&rdquo;</strong> (see the example shown below).</p>
+
+<p class="indent-1"><strong>Note: Organization</strong> is only for AAD pilot enabled customers. The <strong>common</strong> OAuth2 tenant is the correct one.</p>
+
+<p class="indent-1"><strong>Example:</strong></p>
+
+<p class="indent-1"><em><span><span><span>https://login.microsoftonline.com/</span></span></span></em><strong><span><span><span><span>common</span></span></span></span></strong><em><span><span><span>/oauth2/v2.0/authorize?client_id=23faba87-5413-4c18-8764-7329f4b97fa3&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Flogin.microsoftonline.com%2Fcommon%2Foauth2%2Fnativeclient&amp;response_mode=query&amp;scope=openid%20offline_access%20https%3A%2F%2Fads.microsoft.com%2Fads.manage&amp;state=Oofaekahmoow5aungie7Xiew</span></span></span></em></p>
+
+<p><span><span><span><span><span>Guidance on other common OAuth errors can be found in the <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/handle-service-errors-exceptions?view=bingads-13" managed-link="" target="_blank">Handling Service Errors and Exceptions</a></span></span></span><span><span><span> </span></span></span><span><span><span> article (scroll down to the &ldquo;Common OAuth Errors&rdquo; section). </span></span></span></span></span></p>
+
+<p><span><span><span><span><span>For a complete list of AAD error messages, go to the </span></span></span><span><span><span><span><a data-content-id="" data-content-type="" href="https://login.microsoftonline.com/error" managed-link="" target="_blank">https://login.microsoftonline.com/error</a></span></span></span></span><span><span><span> page and type in the specific AAD error code to view the details.</span></span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="7.7" name="7.7"></a>7.7&nbsp;API user is unable to manage account﻿&nbsp;<a class="ms-asset-internalBookmark" id="UnabletoManageAccount" title="UnabletoManageAccount"></a></h4>
+
+<p>Ensure&nbsp;that the advertiser has permissions to sign into the Microsoft Advertising web user interface with the same username and password that they are using in the API call.</p>
+
+<p>Perform the following checks on the UserName, DeveloperToken and entity IDs:&nbsp;</p>
+
+<div>
+<ol>
+	<li>Request the SOAP request from the advertiser - ask them to remove the password.&nbsp;</li>
+	<li>In the Microsoft Advertising UI, check the user role and <a data-content-id="" data-content-type="" href="https://msdn.microsoft.com/en-us/library/bing-ads-managing-customer-accounts-guide.aspx#accountpermissions" managed-link="" target="_blank" title="">permissions</a> to determine whether the user should have access to the account in question. Authenticate and modify permissions as needed. The same accounts available in the Microsoft Advertising web application are available to the corresponding user programmatically through the API.</li>
+	<li>If the&nbsp;customer logs in with a Microsoft Advertising username, locate the username from the SOAP request. Look for &lt;v11:UserName &gt;api_username&lt;/v11:UserName&gt;.</li>
+	<li><span><span><span><span>If the customer logs in with a Microsoft account, see&nbsp;</span></span></span></span><a data-content-id="" data-content-type="" href="https://msdn.microsoft.com/en-us/library/bing-ads-user-authentication-oauth-guide.aspx" managed-link="" target="_blank">Managing User Authentication with OAuth</a>&nbsp;for more information<span><span><span><span>. Make sure the Microsoft account they&rsquo;re using is linked to a Microsoft Advertising account</span></span></span></span>.</li>
+	<li>Search&nbsp;for the username specified in the SOAP request. From the search results page, hover over the username and access the Developer Center. Locate the DeveloperToken value and confirm it matches the value in the SOAP request. Look for &lt;v11:DeveloperToken&gt;123ABC&lt;/v11:DeveloperToken&gt;.&nbsp;</li>
+	<li>Locate&nbsp;the DeveloperToken value and confirm it matches the value in the SOAP request. Look for &lt;v11:DeveloperToken&gt;123ABC&lt;/v11:DeveloperToken&gt;. <strong>Note:</strong> A multi-user token in the UI may not match the SOAP call and may not be the cause of the issue. Proceed with the steps below even if you encounter a mismatch with a multi-user token.&nbsp;Advise the advertiser that the single-use token should match the SOAP call if there is a mismatch.</li>
+	<li>Verify the account, campaign, and ad group the user is attempting to access and ensure they match the SOAP call. Select the lowest level of the hierarchy the advertiser is trying to manage and then look at the URL in your web browser, for example: https://ui.bingads.microsoft.com/campaign/Campaigns.m?cid=FindCustomerIdHere&amp;aid=FindaccountIdHere#/customer/FindCustomerIdHere/account/FindaccountIdHere/campaign. The numbers following CID=, aid=, cmpid= and adgid= represent the Customer ID, account ID, Campaign ID and Ad Group ID respectively.&nbsp;</li>
+	<li>If none of the above steps resolve the issue, escalate to Global Support &ndash; API.&nbsp;</li>
+</ol>
+</div>
+
+<div><a bookmark-id="top" href="#top" managed-link="">Return to top</a></div>
+
+<div>&nbsp;</div>
+
+<h3><a id="8" name="8"></a>8. How to&nbsp;enable API user&nbsp;﻿&nbsp;</h3>
+
+<ol style="list-style-type:decimal" type="1">
+	<li>Determine whether a user already has API access by searching their username and hovering over the <strong>Developer Center</strong> hyperlink. The advertiser can also determine whether they have API access by logging in at <a data-content-id="" data-content-type="" href="https://developers.bingads.microsoft.com/Account" managed-link="" target="_blank">https://developers.bingads.microsoft.com/Account</a> using their Microsoft account login. If the username is enabled for API access, the developer token will be visible<span>. </span></li>
+	<li><span>If the user does not already have API access, assist the advertiser with enabling their account in one of two ways: </span>
+	<ol style="list-style-type:lower-alpha" type="a">
+		<li value="1"><span>Self-serve token request - The advertiser can log in to their Microsoft Advertising account, and visit the <a data-content-id="" data-content-type="" href="https://developers.bingads.microsoft.com/Account" managed-link="" target="_blank">Developer Center</a>. They can select <strong>Request Token</strong> and the token will immediately be available just below the address. </span></li>
+		<li><span>Generate a&nbsp;developer token on the advertiser&rsquo;s behalf &ndash; After authenticating the user, hover over the username and access the Developer Center. Select <strong>Request Token</strong>. The token will be available immediately just below the address.&nbsp;</span></li>
+	</ol>
+	</li>
+</ol>
+
+<p><strong><span><span><span>Note</span></span></span></strong><span><span><span>: Only Super Admin users can enable the account for API.</span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="9" name="9"></a>9. How to disable a developer token&nbsp;<span class="rangySelectionBoundary" id="selectionBoundary_1489762592345_08983450653103864">﻿</span><a class="ms-asset-internalBookmark" id="DisableToken" title="DisableToken"></a><span><a class="bookmark" id="howto">&nbsp;</a></span></h3>
+
+<div>
+<p><span><span><span><span><span>The <strong>Reject</strong> button in the Developer Center has been removed. To disable a developer token for a user, you&rsquo;ll need to limit their account or user access. The following options are available depending on the customer&rsquo;s preference:</span></span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span>Delete the user from the account entirely.</span></span></span></span></li>
+	<li><span><span><span><span>Edit&nbsp;the user&rsquo;s role so they&rsquo;re not a Super Admin on the account. The customer may also opt to restrict the user&rsquo;s account access, allowing access to only certain accounts. All these changes can be made from the <strong>Users</strong> tab in the <strong>Accounts</strong> page.</span></span></span></span></li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+</div>
+
+<h3><a id="10" name="10"></a>10. Content API (CAPI)&nbsp;<span class="rangySelectionBoundary" id="selectionBoundary_1489762747426_2572541979026044">﻿</span><a class="ms-asset-internalBookmark" id="ContentAPI" title="ContentAPI"></a><span><a class="bookmark" id="content">&nbsp;</a></span></h3>
+
+<p>The Microsoft Advertising Content API allows advertisers to programmatically create, update and get the status of some of their Microsoft Advertising Merchant Center store data. The Content API is an alternative to uploading data or downloading reports using the Microsoft Advertising Merchant Center web page or via FTP. The Content API has the following advantages:&nbsp;</p>
+
+<ul>
+	<li>The products resource allows advertisers to update product offers incrementally rather than uploading the entire data feed. For example, updating only a subset of your products is far more efficient using the Content API.&nbsp;</li>
+	<li>Content API provides support for faster pricing and availability updates for product offers to reflect close to real time market conditions. For example, if your product goes out of stock, you can quickly turn around and provide an Availability field update using the Content API.&nbsp;</li>
+	<li>Content&nbsp;API supports batch processing so that many items may be processed in a single request. One single batch operation can include inserts, deletes and updates for product offers. Using the API is efficient from a bandwidth perspective and allows feed updates to be processed more quickly.&nbsp;</li>
+	<li>The status resource allows advertisers to retrieve a URL that can be used to download a report of items rejected from a catalog.&nbsp;</li>
+</ul>
+
+<p>The Microsoft Advertising Content API is a RESTful API. Standard CRUD (Create, Read, Update, Delete) operations are performed by sending HTTPS requests to a specific URI. An HTTPS request is composed of a header containing authentication fields, a body containing the data to be acted upon, an endpoint where the request will be sent, and any necessary or optional query string parameters to be appended to the endpoint URL.&nbsp;</p>
+
+<p><span><span><span><span><span>For complete information about the Content API, review the <a href="https://docs.microsoft.com/en-us/advertising/index#pivot=main&amp;panel=contentapi" target="_blank"><span>Content API articles in API Docs.</span></a> Here are a few helpful overview articles:</span></span></span></span></span></p>
+
+<ul>
+	<li><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/shopping-content/" managed-link="" target="_blank">Content API Overview</a><span><span> </span></span></li>
+	<li><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/shopping-content/get-started" managed-link="" target="_blank">Get Started with the Content API</a><span><span> </span></span></li>
+	<li><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/shopping-content/api-best-practices" managed-link="" target="_blank">Content API Best Practices</a><span><span> </span></span></li>
+</ul>
+
+<p><strong>Troubleshooting steps for Content API (CAPI) </strong></p>
+
+<div>
+<p>When a customer escalates in with issues related to CAPI, there are a few common checks to make (depending on the issue).</p>
+
+<ol>
+	<li>Does the customer have an active BMC store, and are they sending their requests to the correct Store/MerchantId?&nbsp;This can be found in the BMC UI within the Store details.</li>
+	<li><span><span><span><span><span>Does the customer have an active API catalog? The following guides&nbsp;on API Docs will explain how to enable a catalog for API management: &nbsp;</span></span></span></span></span>
+	<ul style="list-style-type:disc">
+		<li><span><span><span><span><span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/shopping-content/get-started" managed-link="" target="_blank">Get Started with the Content API</a></span></span></span></span></span></li>
+		<li><span><span><span><span><span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/shopping-content/manage-catalogs" managed-link="" target="_blank">Managing Your Catalogs</a></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li>Are&nbsp;they formatting their products correctly when sending?&nbsp;The correct product schema can be found on API Docs&nbsp;<a href="https://msdn.microsoft.com/en-US/library/bing-ads-content-api-reference-91-products(v=msads.90).aspx" target="_blank">here</a>.&nbsp;</li>
+</ol>
+
+<p>If the common scenarios above look correct from the customer&#39;s end, escalate to Global Support.&nbsp;The following information will be required:</p>
+
+<ol>
+	<li>Customer Details &ndash; this includes CustomerId, AccountId/Number, BMC Store/MerchantId, UserName (either legacy username or Microsoft account email), developer token</li>
+	<li>Thorough description of the issue.&nbsp;&nbsp;
+	<ul>
+		<li>Example - &quot;Customer is attempting to send in a product via Content API but is consistently receiving an error message stating that their authentication failed.&nbsp;Please see attached request and response examples.&quot;</li>
+	</ul>
+	</li>
+	<li>Full API requests and responses, including TimeStamp and WebRequestActivityId.&nbsp;</li>
+</ol>
+</div>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><a id="11" name="11"></a>11. Sandbox/test environment<a class="ms-asset-internalBookmark" id="Sandbox" title="Sandbox"></a></h3>
+
+<p><span><span><span><span><span>The sandbox environment is a test environment where advertisers manage their campaigns, practice with data and test their code in a realistic environment without making actual changes in the production environment. </span></span></span></span></span></p>
+
+<ul>
+	<li>Customers will sign up for a <a data-content-id="" data-content-type="" href="https://sandbox.bingads.microsoft.com/" managed-link="" target="_blank" title="">Sandbox Microsoft Advertising account </a>in order to get a specific sandbox API user name.&nbsp;</li>
+	<li><span><span><span><span><span>Customers should create a unique username for API sandbox (For example, sandbox_username). Existing Microsoft Advertising usernames or Microsoft accounts will not be accepted. </span></span></span></span></span></li>
+	<li><span><span><span><span><span>All Microsoft Advertising customers may use the following multi-user developer token in sandbox: BBD37VB98. </span></span></span></span></span></li>
+	<li><span><span><span><span>For instructions on requesting a sandbox token and using the sandbox environment, follow directions </span></span></span></span><span><span><span>in the <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/advertising/guides/sandbox?view=bingads-13" managed-link="" target="_blank">Microsoft Advertising Sandbox</a></span></span></span><span><span><span> </span></span></span><span><span><span> article.</span></span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="12" name="12"></a>12. FAQ</h4>
+
+<p><strong>Q: Where can API users go to provide feedback and/or to engage with engineering?</strong></p>
+
+<p><strong>A:</strong> The API forums: <a data-content-id="" data-content-type="" href="https://social.msdn.microsoft.com/forums/en-us/home?forum=BingAds" managed-link="" target="_blank">https://social.msdn.microsoft.com/forums/en-us/home?forum=BingAds</a></p>
+
+<p>We can also make requests on their behalf through the UserVoice tool. Flag them as API feature requests.</p>
+
+<p><strong><span lang="EN-GB"><span>Q:&nbsp; A customer would like to cache their API data&nbsp;to speed up API performance.&nbsp;Is this possible?</span></span></strong></p>
+
+<p><strong><span lang="EN-GB"><span>A:</span></span></strong><span lang="EN-GB"><span>&nbsp; Bing does not allow the caching of data/results&nbsp;for the following reasons: </span></span></p>
+
+<ul>
+	<li><span lang="EN-GB"></span><span lang="EN-GB"><span>Ads and algorithm (within the unified API) are provided in one stream and thus optimized for one another. To get the fully optimized experience with results that lead to conversion, a fresh pull is required each time.</span></span></li>
+	<li><span lang="EN-GB"></span><span lang="EN-GB"><span>Caching results causes customers to lose relevancy. Bing is currently pulling algo results and modifying URLs with each delivery to give the most recent/relevant responses. Caching can cause dated URLs to show up (leading to broken pages). For example, Bing pulls from Twitter, which may have posted an update 30 seconds ago. Caching results means you would not have this latest news from Twitter, which would reduce your relevancy.</span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+</div>
+<p><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span><strong>May 2019</strong></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Change history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td><strong>Item</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong>Date</strong></td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/151707" managed-link="">CONTENT TRACKING 151707</a></td>
+			<td>Advertising: 3180171 API links</td>
+			<td>2/21/2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/150353" managed-link="">CONTENT TRACKING 150353</a></td>
+			<td>MAST: Update to KB 3180171 API</td>
+			<td>12/23/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/150276" managed-link="">CONTENT TRACKING 150276</a></td>
+			<td>MAST: Update KB 3180171 API</td>
+			<td>12/19/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/146415">CONTENT TRACKING 146415</a></td>
+			<td>Project: MAST: Update formatting in KB 3180171</td>
+			<td>8/16/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/146383">CONTENT TRACKING 146383</a></td>
+			<td>Process: Microsoft Advertising: Application Programming Interface (API)</td>
+			<td>8/9/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/145004">CONTENT TRACKING 145004</a></td>
+			<td>MAST: Add Speak Up asset to listed KBs</td>
+			<td>6/26/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/141778">CONTENT TRACKING 141778</a></td>
+			<td>SU3320: MAST: Microsoft Advertising: How to Disable a Developer Token &nbsp;</td>
+			<td>5/7/2019</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>

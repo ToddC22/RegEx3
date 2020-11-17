@@ -1,0 +1,556 @@
+﻿<header><h1>ASMS — Capturing Network, HAR, and Fiddler Traces</h1></header><div class="kb-generic-section section">
+<div class="BCX1 SCXW7614948">
+<div class="BCX1 Ltr OutlineElement SCXW7614948">
+<h3 class="BCX1 Paragraph SCXW7614948" paraeid="{036dfd69-a5e4-4a95-b790-7fc5657742ac}{230}" paraid="1666261260"><strong>Overview&nbsp;</strong></h3>
+
+<p class="BCX1 Paragraph SCXW7614948" paraeid="{036dfd69-a5e4-4a95-b790-7fc5657742ac}{230}" paraid="1666261260"><span>This TSG provides detailed steps for customers to leverage when requested by ASMS to capture a HAR file, Network trace, or Fiddler trace for further troubleshooting.&nbsp;</span></p>
+
+<p class="BCX1 Paragraph SCXW7614948" paraeid="{036dfd69-a5e4-4a95-b790-7fc5657742ac}{230}" paraid="1666261260"><span>Without providing a trace, it is difficult to provide help focused on the customer&#39;s specific needs. If a customer has questions about the use of a network trace, explain to the customer that the trace is needed even if there are no errors in the portal because it provides correlation IDs, session specifics, and details to specifically target the user&#39;s interaction with the systems. This will help us understand the issue and eventually reach a resolution.</span></p>
+
+<p class="BCX1 Paragraph SCXW7614948" paraeid="{036dfd69-a5e4-4a95-b790-7fc5657742ac}{230}" paraid="1666261260">Additional guidance can be found on the public-facing&nbsp;<a href="https://docs.microsoft.com/en-us/azure/azure-portal/capture-browser-trace" managed-link="">Capture a browser trace for troubleshooting</a>&nbsp;page.</p>
+
+<h3 class="BCX1 Paragraph SCXW7614948" paraeid="{036dfd69-a5e4-4a95-b790-7fc5657742ac}{230}" paraid="1666261260"><strong>Procedures</strong></h3>
+
+<p class="BCX1 Paragraph SCXW7614948" paraeid="{036dfd69-a5e4-4a95-b790-7fc5657742ac}{230}" paraid="1666261260"><span>Most issues that require troubleshooting can be solved by using the network trace capability within Internet Explorer. This is commonly known as the&nbsp;</span><em>F12</em><strong> </strong><span>trace data, because a user will push the F12 key in Internet Explorer to collect the data.</span></p>
+
+<p class="BCX1 Paragraph SCXW7614948" paraeid="{036dfd69-a5e4-4a95-b790-7fc5657742ac}{230}" paraid="1666261260"><span> In other scenarios a more robust network capture tool such as </span><strong>Fiddler </strong>or<strong> HAR</strong><span> will need to be used. Use the options below to determine which steps your customer will need to use, so that further troubleshooting can be completed. &nbsp;</span></p>
+
+<p class="BCX1 Paragraph SCXW7614948" paraeid="{036dfd69-a5e4-4a95-b790-7fc5657742ac}{230}" paraid="1666261260">&nbsp;</p>
+
+<p>If you ever need to capture trace from within the Azure Portal to troubleshoot an issue, here are the steps required to do that.</p>
+<span> </span>
+
+<ol>
+	<li>Login to the portal <a href="https://portal.azure.com/?trace=diagnostics" rel="noopener" target="_blank">here</a>.</li>
+	<li>Navigate to the step just prior to where the issue is happening.&nbsp; Press F5 or Refresh.
+	<ul>
+		<li>I<span>t is important to only enable the tracing after you have already logged, because if logging is enabled when you login, then the log will include some sensitive data which would require some actions on your side to maintain the integrity of your account.&nbsp; Also, pressing F5 or Refreshing will remove any unnecessary cached values.</span></li>
+	</ul>
+	</li>
+	<li>Press F12 to start the browser Developer Tools (IE and Edge)
+	<ul>
+		<li><span>In IE and Edge pressing the F12 open a console within the browser that provides some troubleshooting and debugging capabilities.</span></li>
+	</ul>
+	</li>
+	<li>Click on the Network, stop the tracing and click on the clear session button.</li>
+	<li>Start the session and reproduce the issue.</li>
+	<li>Stop the trace and save as an HAR file.</li>
+</ol>
+<span> </span>
+
+<p>&nbsp;</p>
+
+<p class="BCX1 Paragraph SCXW7614948" paraeid="{036dfd69-a5e4-4a95-b790-7fc5657742ac}{230}" paraid="1666261260"><strong class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">How to generate a capture file </span><span class="BCX1 ContextualSpellingAndGrammarError SCXW7614948">in</span><span class="BCX1 NormalTextRun SCXW7614948"> Internet Explorer (IE)</span></strong><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948"> </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+
+<div class="BCX1 SCXW7614948">
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="1" style="list-style-type:decimal">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="1" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="3" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{14}" paraid="1911250360"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Use </span></span><a class="Hyperlink SCXW7614948 BCX1" href="https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/" rel="noreferrer" target="_blank"><u class="BCX1 SCXW7614948 TextRun Underlined" data-contrast="none" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Microsoft F12 Developer Tools</span></u></a><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948"> and the </span></span><a class="Hyperlink SCXW7614948 BCX1" href="https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/network/" rel="noreferrer" target="_blank"><u class="BCX1 SCXW7614948 TextRun Underlined" data-contrast="none" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Network Tool</span></u></a><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948"> to capture the browser headers. Then export the captured traffic as HAR file (or XML if using an older version of IE). </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="2" style="list-style-type:decimal">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="2" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="3" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{31}" paraid="1836535208"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Press the F12 key on your keyboard. This should open the Developer Tools panel </span><span class="BCX1 ContextualSpellingAndGrammarError SCXW7614948">in</span><span class="BCX1 NormalTextRun SCXW7614948"> IE. If not, find it on the browser menu: F12 Developer Tools </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="3" style="list-style-type:decimal">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="3" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="3" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{38}" paraid="350954225"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">In the Developer Tools panel, click the Network panel and then deselect the Clear entries on navigate option. (On by default). </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+</div>
+
+<div class="BCX1 SCXW7614948">
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="4" style="list-style-type:decimal">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="4" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="3" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{45}" paraid="464003901"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Click the Network panel/button and then the Start Capturing button (or press Ctrl + E). Note: the icon looks like a green triangle </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="5" style="list-style-type:decimal">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="5" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="3" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{52}" paraid="475826859"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Click the IE Refresh button. The goal is to reproduce the problem you&#39;ve been experiencing while IE is recording activity </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="6" style="list-style-type:decimal">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="6" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="3" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{59}" paraid="624982974"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">The Developer Tool panel should now show a list of the URLs that are included in the page you have in your browser. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="7" style="list-style-type:decimal">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="7" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="3" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{66}" paraid="903345574"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Click the Stop button when the issue has been reproduced (or press Ctrl + E). Note: the icon looks like a red square </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="8" style="list-style-type:decimal">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="8" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="3" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{73}" paraid="955761162"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Click the Export captured traffic icon and save the file somewhere convenient (or press Ctrl + S). Note: the icon looks like a floppy disk. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+</div>
+
+<div class="BCX1 SCXW7614948">
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="9" style="list-style-type:decimal">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="9" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="3" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{80}" paraid="333168696"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Please attach the file to your email or case with us so that we can assist further. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="10" style="list-style-type:decimal">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="10" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="3" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{87}" paraid="1885985757"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Click on the Console tab and look for any errors/warnings reported. If errors are shown, please right-click on the console errors and select Copy all or send a screenshot </span><span class="BCX1 ContextualSpellingAndGrammarError SCXW7614948">of</span><span class="BCX1 NormalTextRun SCXW7614948"> them. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="11" style="list-style-type:decimal">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="11" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="3" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{94}" paraid="673488379"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Close the Developer Tools panel and you&#39;re done!  </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 Ltr OutlineElement SCXW7614948">
+<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{101}" paraid="533553371"><strong class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">How to collect via Fiddler</span></strong><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948"> </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+</div>
+</div>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="1">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="1" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="1" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{036dfd69-a5e4-4a95-b790-7fc5657742ac}{238}" paraid="980264038"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Download Fiddler on your machine from </span></span><a class="Hyperlink SCXW7614948 BCX1" href="http://www.telerik.com/fiddler" rel="noreferrer" target="_blank"><u class="BCX1 SCXW7614948 TextRun Underlined" data-contrast="none" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">http://www.telerik.com/fiddler</span></u></a><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948"> </span></span><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">  </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="2">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="2" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="1" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{036dfd69-a5e4-4a95-b790-7fc5657742ac}{252}" paraid="457747234"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Close all browsing and windows, then run Fiddler.  </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="3">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="3" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="1" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{4}" paraid="1306129707"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Configure Fiddler with below options: </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle2 SCXW7614948" role="list" start="1">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="2" data-aria-posinset="1" data-font="Calibri,Times New Roman" data-leveltext="%2." data-listid="1" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{11}" paraid="1033848535"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Within </span><span class="BCX1 ContextualSpellingAndGrammarError SCXW7614948">Fiddler,</span><span class="BCX1 NormalTextRun SCXW7614948"> click <strong>Tools</strong> &gt; <strong>Fiddler Options  </strong></span></span><strong><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></strong></p>
+	</li>
+</ol>
+</div>
+</div>
+
+<div class="BCX1 SCXW7614948">
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle2 SCXW7614948" role="list" start="2">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="2" data-aria-posinset="2" data-font="Calibri,Times New Roman" data-leveltext="%2." data-listid="1" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{18}" paraid="577603134"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Select the HTTPS tab  </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle2 SCXW7614948" role="list" start="3">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="2" data-aria-posinset="3" data-font="Calibri,Times New Roman" data-leveltext="%2." data-listid="1" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{25}" paraid="1589882297"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Check the checkbox </span><span class="BCX1 ContextualSpellingAndGrammarError SCXW7614948">to</span><span class="BCX1 NormalTextRun SCXW7614948"> Decrypt HTTPS traffic  </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle2 SCXW7614948" role="list" start="4">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="2" data-aria-posinset="4" data-font="Calibri,Times New Roman" data-leveltext="%2." data-listid="1" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{32}" paraid="334260915"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">You will receive a few pop-ups that are required </span></span><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">in order to</span></span><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948"> install the Fiddler root certificate, which allows Fiddler to sit as a man-in-the-middle </span><span class="BCX1 ContextualSpellingAndGrammarError SCXW7614948">to</span><span class="BCX1 NormalTextRun SCXW7614948"> your HTTPS session. Click Yes </span><span class="BCX1 ContextualSpellingAndGrammarError SCXW7614948">to</span><span class="BCX1 NormalTextRun SCXW7614948"> these prompts.  </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle2 SCXW7614948" role="list" start="5">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="2" data-aria-posinset="5" data-font="Calibri,Times New Roman" data-leveltext="%2." data-listid="1" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{43}" paraid="1875254363"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Click OK to close Fiddler Options.  </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="4">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="4" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="1" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{50}" paraid="507169860"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Start Capturing the trace as below: Click <strong>File</strong> &gt; <strong>Capture Traffic </strong>to stop capturing.  </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+</div>
+
+<div class="BCX1 SCXW7614948">
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="5">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="5" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="1" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{57}" paraid="1354437698"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Click in the Browse button to launch IE. Now reproduce the issue; go to the Azure portal and try to reproduce the error message once with the single user and another time with the group when they&rsquo;re granted the &ldquo;Cost Management Reader&rdquo; role.  </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="6">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="6" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="1" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{64}" paraid="872747961"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Save the trace</span><span class="BCX1 NormalTextRun SCXW7614948">: File Transfer - Case &lt;insert case number&gt;. &nbsp;</span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 Ltr OutlineElement SCXW7614948">
+<h4 class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{73}" paraid="1104314800"><strong class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">How to generate a HAR capture file </span><span class="BCX1 ContextualSpellingAndGrammarError SCXW7614948">in</span><span class="BCX1 NormalTextRun SCXW7614948"> Chrome</span></strong><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948"> </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></h4>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="1">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="1" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="5" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{81}" paraid="1137058519"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Start by opening Google Chrome. If you do not have Google Chrome and you are free to install additional programs, please </span></span><a class="Hyperlink SCXW7614948 BCX1" href="https://www.google.com/chrome" rel="noreferrer" target="_blank"><u class="BCX1 SCXW7614948 TextRun Underlined" data-contrast="none" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">download Google Chrome </span></u></a><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">and install it. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="2">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="2" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="5" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{93}" paraid="590572837"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">In Chrome, go to the required page within ACM where you are experiencing trouble. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+</div>
+
+<div class="BCX1 SCXW7614948">
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="3">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="3" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="5" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{100}" paraid="116322949"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Select the Chrome menu <strong>(</strong></span></span><strong><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">⋮</span></span></strong><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948"><strong>)</strong> at the top-right of your browser window, then select <strong>Tools</strong> &gt; <strong>Developer Tools</strong>. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="4">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="4" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="5" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{111}" paraid="400201251"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">The Developer Tools will open as a docked panel at the side or bottom of Chrome. Click on the Network tab. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="5">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="5" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="5" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{118}" paraid="935226002"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Select the option Preserve log </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="6">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="6" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="5" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{125}" paraid="520831789"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">The recording should auto-start and you will see a red circle at the top left of the Network tab. If not, click the black circle, to start recording activity in your browser. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="7">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="7" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="5" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{132}" paraid="236767885"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Refresh the ACM page you are on. The goal is to reproduce the problem you&#39;ve been experiencing while Google Chrome is recording activity. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+</div>
+
+<div class="BCX1 SCXW7614948">
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="8">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="8" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="5" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{139}" paraid="26424667"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Once you have successfully reproduced the issue while recording, right-click within the Network tab and click Save as HAR with Content to save a copy of the activity that you recorded. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="9">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="9" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="5" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{146}" paraid="124945672"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Save the HAR file somewhere convenient. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="10">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="10" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="5" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{153}" paraid="1332098147"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Now click the <strong>Console tab</strong> and right-click anywhere in the console log. Select the popup option <strong>Save as </strong>and name the log file: Chrome-console.log </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="11">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="11" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="5" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{160}" paraid="519343347"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Close the developer panel and you&#39;re done! Please attach the HAR file and </span></span><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">the Chrome-console.log to your email or case.&nbsp;</span></span></p>
+	</li>
+</ol>
+</div>
+</div>
+
+<div class="BCX1 SCXW7614948">
+<div class="BCX1 Ltr OutlineElement SCXW7614948">
+<h4 class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{176}" paraid="394356400"><strong class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">How to generate a HAR capture file in Firefox</span></strong><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948"> </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></h4>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="1">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="1" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="4" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{184}" paraid="1515007776"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Start by opening Firefox. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;134233279&quot;:true,&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="2">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="2" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="4" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{191}" paraid="1578482051"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">In Firefox, go to the page within ACM where you are experiencing trouble. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;134233279&quot;:true,&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="3">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="3" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="4" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{198}" paraid="41598233"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Select the Firefox menu (Three horizontal parallel lines) at the top-right of your browser window, then select Developer &gt; Network. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;134233279&quot;:true,&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="4">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="4" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="4" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{205}" paraid="968165319"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">The Developer Network Tools will open as a docked panel at the side or bottom of Firefox. Click on the Network tab. Before starting the capture, be sure to enable the setting: </span></span><a class="Hyperlink SCXW7614948 BCX1" href="https://developer.mozilla.org/en-US/docs/Tools/Settings" rel="noreferrer" target="_blank"><u class="BCX1 SCXW7614948 TextRun Underlined" data-contrast="none" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Enable persistent logs </span></u></a><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">in the Toolbox Options &gt; Common Preferences (click on </span></span><a class="Hyperlink SCXW7614948 BCX1" href="https://developer.mozilla.org/en-US/docs/Tools/Settings" rel="noreferrer" target="_blank"><u class="BCX1 SCXW7614948 TextRun Underlined" data-contrast="none" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">gear icon on the Toolbox toolbar</span></u></a><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948"> to open the Toolbox Options pane).  Click on the Network tab after setting the option.  </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;134233279&quot;:true,&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+</div>
+
+<div class="BCX1 SCXW7614948">
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="5">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="5" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="4" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{222}" paraid="1895313603"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">The recording will </span><span class="BCX1 SCXW7614948 SpellingError">autostart</span><span class="BCX1 NormalTextRun SCXW7614948"> once you start performing actions in the browser. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;134233279&quot;:true,&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="6">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="6" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="4" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{229}" paraid="2087954180"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Refresh the ACM page you are on. The goal is to reproduce the problem you&#39;ve been experiencing while Firefox is recording activity. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;134233279&quot;:true,&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="7">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="7" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="4" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{236}" paraid="2077966376"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Once you have reproduced the issue and you see that </span><span class="AdvancedProofingIssue BCX1 SCXW7614948">all of</span><span class="BCX1 NormalTextRun SCXW7614948"> the actions have been generated in the Developer Network Panel (should just take a few seconds), right-click anywhere under the &quot;File&quot; column and click on &quot;Save All as Har&quot; </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;134233279&quot;:true,&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="8">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="8" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="4" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{243}" paraid="624507530"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Save the HAR file somewhere convenient and close the developer panel.  </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;134233279&quot;:true,&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="9">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="9" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="4" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{1380efe3-f3ca-4957-ba6e-e5aaf09d7f8e}{250}" paraid="528976714"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">You&#39;re done! Please attach the HAR file to your email or case with us so that we can assist further. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;134233279&quot;:true,&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+</div>
+
+<div class="BCX1 SCXW7614948">
+<div class="BCX1 Ltr OutlineElement SCXW7614948">
+<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{2}" paraid="771182714"><strong class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">How to generate a HAR capture file </span><span class="BCX1 ContextualSpellingAndGrammarError SCXW7614948">in</span><span class="BCX1 NormalTextRun SCXW7614948"> Safari </span></strong><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948"> </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+</div>
+</div>
+
+<div class="BCX1 SCXW7614948">
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="1">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="1" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="2" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{113}" paraid="1975545105"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Start by opening Safari. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="2">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="2" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="2" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{120}" paraid="1915033437"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">In Safari, go to the page within ACM where you are experiencing trouble. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="3">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="3" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="2" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{127}" paraid="335430681"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Right-click anywhere on the page and select &quot;Inspect Element&quot;. (If you do not see this option, </span></span><a class="Hyperlink SCXW7614948 BCX1" href="https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/Web_Inspector_Tutorial/EnableWebInspector/EnableWebInspector.html" rel="noreferrer" target="_blank"><u class="BCX1 SCXW7614948 TextRun Underlined" data-contrast="none" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">enable the Web Inspector</span></u></a><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="4">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="4" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="2" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{139}" paraid="478620047"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Go to the Console tab and check the option Preserve Log. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="5">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="5" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="2" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{146}" paraid="139593844"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Go to the Network tab and check the option Preserve Log. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+</div>
+
+<div class="BCX1 SCXW7614948">
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="6">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="6" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="2" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{153}" paraid="1310388679"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Refresh the </span><span class="BCX1 SCXW7614948 SpellingError">ACMACpage</span><span class="BCX1 NormalTextRun SCXW7614948"> you are on. The goal is to reproduce the problem you&#39;ve been experiencing while Safari is recording activity. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="7">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="7" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="2" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{160}" paraid="2059025536"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Once you have reproduced the issue and recorded it, go to the Network tab and click Export to save a copy of the activity that you recorded. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="8">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="8" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="2" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{167}" paraid="1437595956"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Save the HAR file somewhere convenient. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="9">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="9" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="2" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{174}" paraid="1526210489"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Now click the Console tab and take a screenshot. Depending on how much shows up there, you may need to expand the window by dragging the top border up to capture more information. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+
+<div class="BCX1 ListContainerWrapper SCXW7614948">
+<ol class="BCX1 NumberListStyle1 SCXW7614948" role="list" start="10">
+	<li aria-setsize="-1" class="OutlineElement Ltr SCXW7614948 BCX1" data-aria-level="1" data-aria-posinset="10" data-font="Calibri,Times New Roman" data-leveltext="%1." data-listid="2" role="listitem">
+	<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{181}" paraid="2078663234"><span class="BCX1 SCXW7614948 TextRun" data-contrast="auto" lang="EN-US" xml:lang="EN-US"><span class="BCX1 NormalTextRun SCXW7614948">Close the Web Inspector and you&#39;re done! Please attach both the HAR file and the Console log screenshots to your email or case with us so that we can assist further. </span></span><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span><span id="cke_bm_89C">&nbsp;</span></p>
+	</li>
+</ol>
+</div>
+</div>
+
+<div class="BCX1 Ltr OutlineElement SCXW7614948">
+<h3 class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{188}" paraid="1025894132">TSG Change Log</h3>
+<span> </span>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="132">
+			<p><span><strong>Date </strong></span></p>
+			</td>
+			<td width="126">
+			<p><span><strong>Updated By </strong></span></p>
+			</td>
+			<td width="364">
+			<p><span><strong>Content Updated </strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">
+			<p><span>5/1/2019</span></p>
+			</td>
+			<td width="126">
+			<p><span>mievan</span></p>
+			</td>
+			<td width="364">
+			<p><span>Updated TSG to include HAR steps</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="132">09/19/2019</td>
+			<td width="126">v-brgosn</td>
+			<td width="364">Updated Overview regarding network trace details.</td>
+		</tr>
+		<tr>
+			<td width="132">12/11/2019</td>
+			<td width="126">mievan</td>
+			<td width="364">Updated title of TSG.&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="132">1/29/2019</td>
+			<td width="126">v-katzma</td>
+			<td width="364">Updated content of TSG per <a href="https://sharepoint/sites/fastrack/Lists/ModTrack/DispForm.aspx?ID=2614&amp;e=erG9Mg" managed-link="" target="_blank">ModTrack 2614</a>.</td>
+		</tr>
+		<tr>
+			<td width="132">10/20/2020</td>
+			<td width="126">v-ishan</td>
+			<td width="364">Added public-facing link as per ModTrack 3248.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p class="BCX1 Paragraph SCXW7614948" paraeid="{40e387f3-5484-49e0-a923-b54c8b8ab908}{188}" paraid="1025894132"><span class="BCX1 EOP SCXW7614948" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"></span></p>
+</div>
+</div>

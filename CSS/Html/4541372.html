@@ -1,0 +1,1287 @@
+﻿<header><h1>Extended Security Updates Troubleshooting Guide</h1></header><span asset="4476087" contenteditable="false" unselectable="on" props="{&#34;size&#34;:&#34;full&#34;}">[Asset 4476087]</span><ul><li><strong>Content Idea (CI): </strong><a managed-link="" href="https://aka.ms/CIEdit?id=114063" target="" data-content-type="" data-content-id="" bookmark-id="">114063</a></li></ul><p><strong>Support Topic: </strong><ul><li>Windows\Windows 7\Windows 7 Enterprise ESU\Installation and Activation of ESU MAK</li><li>Windows\Windows 7\Windows 7 Enterprise ESU\Issues with ESU Hotfix Installation</li><li>Windows\Windows 7\Windows 7 Professional ESU\Installation and Activation of ESU MAK</li><li>Windows\Windows 7\Windows 7 Professional ESU\Issues with ESU Hotfix Installation</li><li>Windows Servers\Windows Server 2008\Windows Server 2008 Datacenter ESU \Installation and Activation of ESU MAK</li><li>Windows Servers\Windows Server 2008\Windows Server 2008 Datacenter ESU \Issues with ESU Hotfix Installation</li><li>Windows Servers\Windows Server 2008 R2\Windows Server 2008 R2 Datacenter ESU\Installation and Activation of ESU MAK</li><li>Windows Servers\Windows Server 2008 R2\Windows Server 2008 R2 Datacenter ESU\Issues with ESU Hotfix Installation</li></ul></p><div><div>This document provides troubleshooting information to help
+you respond to error messages that you may receive from customers when they
+deploy the Extended Security Updates (ESU) solution in their environment.&nbsp;
+Refer to the ESU <a href="https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/How-to-get-Extended-Security-Updates-for-eligible-Windows/ba-p/917807">blog</a>
+for end-to-end deployment instructions for ESU.</div></div><div>&nbsp;</div>
+
+<h2><span>Section 1. Prerequisite updates installation errors</span></h2>
+
+<div><span>State of the user machine - Trying to install the ESU prerequisites as mentioned here.</span></div>
+
+<div>&nbsp;</div>
+
+<blockquote dir="ltr">
+<div>
+<div>
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="498">
+			<p><span>&nbsp;<strong>Error</strong></span></p>
+			</td>
+			<td width="203">
+			<p><span>&nbsp;<strong>Possible Cause</strong></span></p>
+			</td>
+			<td width="230">
+			<p><span>&nbsp;<strong>Actions to Take</strong></span></p>
+			</td>
+			<td width="198">
+			<p><span><strong>If the issue is not resolved, gather this for further investigation</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<div><span>&nbsp;</span></div>
+
+			<div><span>The update is not applicable to your computer.</span></div>
+
+			<p>&nbsp;</p>
+
+			<p><span><span asset="4541398" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541398]</span></span></p>
+			</td>
+			<td width="203">
+			<div><span>The package (SSU or the ESU monthly rollup/security only/standalone) you are trying to install is not applicable to your Windows OS edition/architecture.</span></div>
+			</td>
+			<td width="230">
+			<ol>
+				<li><span>Make sure that the package is meant for your OS edition and architecture.</span></li>
+				<li><span>Reboot the system and try installing the package again.&#8203;</span></li>
+				<li><span>If you still see the error message then please visit <a href="https://docs.microsoft.com/en-us/windows/deployment/update/windows-update-troubleshooting">Windows Update troubleshooting</a> under section &ldquo;<a href="https://docs.microsoft.com/en-us/windows/deployment/update/windows-update-troubleshooting#the-update-is-not-applicable-to-your-computer">The update is not applicable to your computer</a>&rdquo; for a list of the most common reasons for this error.</span></li>
+			</ol>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="198">
+			<div><span>Contact <a href="https://support.microsoft.com/contactus/">Microsoft Support</a> and provide the CBS log file (C:\Windows\Logs\CBS\CBS.log).</span></div>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<div>&nbsp;</div>
+
+			<div><span>Installer encountered an error: 0x80096010 The digital signature of the object did not verify.</span></div>
+
+			<p>&nbsp;</p>
+
+			<p><span><span><span asset="4541399" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541399]</span></span></span></p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="203">
+			<div><span>The SHA-2 updates are missing on the machine. </span></div>
+			</td>
+			<td width="230">
+			<div><span>Install SHA-2 updates. List of prerequisites and SHA-2 updates can be found <a href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/how-to-get-extended-security-updates-for-eligible-windows/ba-p/917807">here</a> under the Installation prerequisites section. </span></div>
+			</td>
+			<td width="198">
+			<p><span>&nbsp;</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p><span>&nbsp;<span>&nbsp;</span><em>Placeholder</em></span></p>
+			</td>
+			<td width="203">
+			<p><span>&nbsp;</span></p>
+			</td>
+			<td width="230">
+			<p><span>&nbsp;</span></p>
+			</td>
+			<td width="198">
+			<p><span>&nbsp;</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p><span>&nbsp;<span>&nbsp;</span><em>Placeholder</em></span></p>
+			</td>
+			<td width="203">
+			<p><span>&nbsp;</span></p>
+			</td>
+			<td width="230">
+			<p><span>&nbsp;</span></p>
+			</td>
+			<td width="198">
+			<p><span>&nbsp;</span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</blockquote>
+
+<h2>&nbsp;</h2>
+
+<h2>Section 2. ESU key installation errors</h2>
+
+<div>State of the user machine - All of the prerequisite updates for ESU mentioned here have been installed on the machine and the user is trying to install ESU Year1/Year2/Year3/PA key on the machine.</div>
+
+<div>&nbsp;</div>
+
+<blockquote dir="ltr">
+<div>
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="498">
+			<div>&nbsp;<strong>Error</strong></div>
+			</td>
+			<td width="203">
+			<div><strong>&nbsp;Possible Cause</strong></div>
+			</td>
+			<td width="230">
+			<div><strong>&nbsp;Action to Take</strong></div>
+			</td>
+			<td width="198">
+			<div><strong>If the issue is not resolved, gather this for further investigation</strong></div>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<div>&nbsp;</div>
+
+			<div>Error: 0xC004F050 The Software Licensing Service reported that the product key is invalid.&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div><span asset="4541395" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541395]</span></div>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="203">
+			<ol>
+				<li>The licensing monthly rollup/security only/standalone package is not installed on the computer.</li>
+				<li>The computer has not been restarted after installing the updates.&nbsp;</li>
+			</ol>
+			</td>
+			<td width="230">
+			<ol>
+				<li>Make sure that all the ESU prerequisite updates have been installed successfully, from the update history. See <a href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/how-to-get-extended-security-updates-for-eligible-windows/ba-p/917807">here</a> for the list of prerequisites and packages to be installed.</li>
+				<li>Restart the computer and try again.&#8203;&#8203;</li>
+				<li>&#8203;Double check the key being installed.</li>
+			</ol>
+			</td>
+			<td width="198">
+			<div>Contact <a href="https://support.microsoft.com/contactus/">Microsoft Support</a> and provide the CBS log file (C:\Windows\Logs\CBS\CBS.log).</div>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<div>Run &#39;slui.exe 0x2a 0xC004F050&#39; to display the error text. &nbsp;Error: 0xC004F050</div>
+
+			<div>&nbsp;</div>
+
+			<p><span asset="4541396" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541396]</span></p>
+			</td>
+			<td width="203">
+			<ol>
+				<li>The licensing monthly rollup/security only/standalone package is not installed on the computer.</li>
+				<li>The computer has not been restarted after installing the updates.&nbsp;</li>
+				<li>On Windows Server 2008 SP2, it has been observed that it may sometimes require an additional restart.&nbsp;</li>
+			</ol>
+			</td>
+			<td width="230">
+			<ol>
+				<li>Make sure that all the ESU prerequisite updates have been installed successfully, from the update history. See <a href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/how-to-get-extended-security-updates-for-eligible-windows/ba-p/917807">here</a> for the list of prerequisites and packages to be installed.</li>
+				<li>&#8203;Restart the computer and try again.&#8203;&#8203;</li>
+				<li>&#8203;Double check the key being installed.</li>
+			</ol>
+			</td>
+			<td width="198">
+			<div>Contact <a href="https://support.microsoft.com/contactus/">Microsoft Support</a> and provide the CBS log file (C:\Windows\Logs\CBS\CBS.log).</div>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>&nbsp;<em>Placeholder</em></p>
+			</td>
+			<td width="203">
+			<p>&nbsp;</p>
+			</td>
+			<td width="230">
+			<p>&nbsp;</p>
+			</td>
+			<td width="198">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p><em>&nbsp;Placeholder</em></p>
+			</td>
+			<td width="203">
+			<p>&nbsp;</p>
+			</td>
+			<td width="230">
+			<p>&nbsp;</p>
+			</td>
+			<td width="198">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</blockquote>
+
+<blockquote dir="ltr">
+<div>&nbsp;</div>
+</blockquote>
+
+<h2>Section 3. ESU key activation errors</h2>
+
+<div>This section is divided into 3 subsections based on the type of activation being performed: slmgr, VAMT, or phone.</div>
+
+<div>&nbsp;</div>
+
+<h3>Section 3a. slmgr activation errors</h3>
+
+<div><span><span>State of the user machine - All of the prerequisite updates for ESU mentioned here have been installed on the machine and the user is trying to deploy and activate ESU Year1/Year2/Year3/PA key has been successfully installed on the machine.</span></span></div>
+
+<div>&nbsp;</div>
+
+<blockquote dir="ltr">
+<div>
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="498">
+			<div><strong>&nbsp;Error</strong></div>
+			</td>
+			<td width="203">
+			<div>&nbsp;<strong>Possible Cause</strong></div>
+			</td>
+			<td width="230">
+			<div><strong>&nbsp;Action to Take</strong></div>
+			</td>
+			<td width="198">
+			<div><strong>If the issue is not resolved, gather this for further investigation</strong></div>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<div>&nbsp;</div>
+
+			<div>Product activation failed while trying to activate ESU product key.</div>
+
+			<p>&nbsp;</p>
+
+			<p><span asset="4541415" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541415]</span></p>
+
+			<p>&nbsp;</p>
+
+			<p><span asset="4541416" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541416]</span></p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="203">
+			<div>This Windows OS edition/architecture is not eligible for ESU. &nbsp;</div>
+			</td>
+			<td width="230">
+			<div>Make sure your OS edition/arch is in the list of supported ESU editions/architectures. See <a href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/how-to-get-extended-security-updates-for-eligible-windows/ba-p/917807">here</a> for supported ESU editions/architectures.</div>
+			</td>
+			<td width="198">
+			<div>Contact Microsoft Support</div>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>&nbsp;</p>
+
+			<div>0xC004C020 the activation server reported that the Multiple Activation Key has exceeded its limit</div>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="203">
+			<div>The MAK has exceeded its activation limit. By design, MAKs can be activated a limited number of times.</div>
+			</td>
+			<td width="230">
+			<div>If you require additional activations, contact the <a href="https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers">Microsoft Licensing Activation Centers</a>.</div>
+
+			<div>&nbsp;</div>
+
+			<div>See internal <a href="https://internal.support.services.microsoft.com/en-us/help/4538322">KB 4538322 - How to Add Additional Activations to ESU MAK Key</a></div>
+			</td>
+			<td width="198">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>&nbsp;</p>
+
+			<div>Product not found while trying to activate ESU key</div>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="203">
+			<div>The activation ID used in the activation command is not correct.</div>
+			</td>
+			<td width="230">
+			<div>To get the activation ID for the ESU program -</div>
+
+			<ol>
+				<li>Open command prompt in elevated mode&#8203;</li>
+				<li>Run cscript /h:cscript&#8203;</li>
+				<li>Run slmgr /dlv (If WS 2008 SP2, slmgr /dlv all)&#8203;</li>
+				<li>Copy the Activation ID for the ESU key&#8203;.</li>
+				<li>Run slmgr /ato &lt;Activation ID&gt; from step 4.</li>
+			</ol>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="198">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>&nbsp;</p>
+
+			<div>0xC004F025 access denied: the requested action requires elevated privileges.</div>
+
+			<p>&nbsp;</p>
+
+			<p><span asset="4541417" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541417]</span></p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="203">
+			<div>The command prompt window is opened in non-elevated mode.</div>
+			</td>
+			<td width="230">
+			<div>Open command prompt in elevated mode &ndash;</div>
+
+			<div>Start-&gt; Command Prompt-&gt;right click and select run as administrator</div>
+			</td>
+			<td width="198">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>&nbsp;</p>
+
+			<div>Error: 0x80072EE7</div>
+
+			<div>&nbsp;</div>
+
+			<p><span asset="4541418" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541418]</span></p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="203">
+			<div>The machine is not able to communicate with the AVS server to activate the ESU key.</div>
+			</td>
+			<td width="230">
+			<div>Make sure that the machine is connected to internet or has the Activation URLs white listed and try again. VAMT Proxy activation or Phone activation could alternately be used for machines not directly connected to the internet. Refer to the <a href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/how-to-get-extended-security-updates-for-eligible-windows/ba-p/917807">blog</a>.</div>
+
+			<div>&nbsp;</div>
+
+			<div><span>See Section 3b for the VAMT Proxy Activation URLs.</span>
+
+			<div>&nbsp;</div>
+			</div>
+			</td>
+			<td width="198">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<div>&nbsp;</div>
+
+			<div>0x80072EE2 The operation timed out</div>
+
+			<p>&nbsp;</p>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="203">
+			<div>Machine is not able to connect to the Microsoft Activation service, possibly disconnected from internet or having issues with internet connectivity.</div>
+			</td>
+			<td width="230">
+			<div>Make sure that the machine is connected to internet or has the Activation URLs white listed and try again. VAMT Proxy activation or Phone activation could alternately be used for machines not directly connected to the internet. Refer to the <a href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/how-to-get-extended-security-updates-for-eligible-windows/ba-p/917807">blog</a>.</div>
+
+			<div>&nbsp;</div>
+
+			<div><span>See Section 3b for the VAMT Proxy Activation URLs.</span></div>
+			</td>
+			<td width="198">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<div>&nbsp;</div>
+
+			<div>Activation command succeeds but the ESU key is still in Unlicensed</div>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="203">
+			<div>ESU Activation ID is not passed to the slmgr /ato command.</div>
+			</td>
+			<td width="230">
+			<div>&nbsp;Activate ESU key using: Slmgr /ato &lt;ESU Activation Id&gt;. Please refer to the <a href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/how-to-get-extended-security-updates-for-eligible-windows/ba-p/917807">blog</a>.</div>
+			</td>
+			<td width="198">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<div>&nbsp;</div>
+
+			<div>License Status: Unlicensed</div>
+
+			<div>Machine state &ndash; All pre-requisites installed and ESU key is activated. Installed the standalone package after which the ESU keys license status shows Unlicensed.</div>
+
+			<div><span asset="4541419" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541419]</span></div>
+
+			<div>&nbsp;</div>
+			</td>
+			<td width="203">
+			<p>&nbsp;</p>
+			</td>
+			<td width="230">
+			<div>Activate the installed ESU key again using slmgr/phone activation/ VAMT(Online or Offline) activation.</div>
+			</td>
+			<td width="198">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p><em>&nbsp;Placeholder</em></p>
+			</td>
+			<td width="203">
+			<p>&nbsp;</p>
+			</td>
+			<td width="230">
+			<p>&nbsp;</p>
+			</td>
+			<td width="198">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</blockquote>
+
+<h3>Section 3b.&nbsp; Volume Activation Management Tool (VAMT) activation errors</h3>
+
+<div><span><span>State of the user machine - All of the prerequisite updates for ESU mentioned here have been installed on the machine and ESU Year1/Year2/Year3/PA key using VAMT online/proxy activation.</span></span></div>
+
+<div><strong>VAMT Proxy Activation URLs</strong></div>
+
+<div>
+<div>https://activation.sls.microsoft.com/BatchActivation/BatchActivation.asmx&#8203;</div>
+
+<div>http://go.microsoft.com/fwlink/?LinkId=82160 (This FWLink redirects to the above URL.)&#8203;</div>
+
+<div>&#8203;</div>
+
+<div>Alternatively, white list the domains: &#8203;</div>
+
+<div>activation.sls.microsoft.com&#8203;</div>
+</div>
+
+<div>go.microsoft.com</div>
+
+<div>&nbsp;</div>
+
+<blockquote dir="ltr">
+<div>
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="498">
+			<div><strong>&nbsp;Error</strong></div>
+			</td>
+			<td width="203">
+			<div><strong>&nbsp;Possible Cause</strong></div>
+			</td>
+			<td width="230">
+			<div>&nbsp;<strong>Action to Take</strong></div>
+			</td>
+			<td width="198">
+			<div><strong>If the issue is not resolved, gather this for further investigation</strong></div>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<div>&nbsp;</div>
+
+			<div>Unable to verify product key</div>
+
+			<div>The specified product key is invalid, or is unsupported by this version of VAMT. An update to support additional products may be available online.</div>
+
+			<div>&nbsp;</div>
+
+			<div><span asset="4541407" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541407]</span></div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+			</td>
+			<td width="203">
+			<div>&nbsp;</div>
+
+			<div>pkconfig files needs to be replaced.</div>
+
+			<div>&nbsp;</div>
+			</td>
+			<td width="230">
+			<div>&nbsp;</div>
+
+			<ol>
+				<li>Download the pkconfig files from <a href="https://www.microsoft.com/en-us/download/details.aspx?id=100304">here</a> and replace the files at the following location - C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\VAMT3\pkconfig\ .</li>
+				<li>Restart VAMT and try to add the key again.</li>
+			</ol>
+
+			<div>&nbsp;</div>
+			</td>
+			<td width="198">
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table class="table">
+	<tbody>
+		<tr>
+		</tr>
+		<tr>
+		</tr>
+	</tbody>
+</table>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="498">
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div>Unable to connect to the WMI service on the remote machine while activating the remote machine using VAMT online/proxy activation.</div>
+
+			<div>&nbsp;</div>
+
+			<div><span asset="4541408" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541408]</span></div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+			</td>
+			<td width="203">
+			<div>&nbsp;</div>
+
+			<ol>
+				<li><span>The WMI (Windows Management Instrumentation) service is not enabled on the client machine.</span></li>
+				<li><span>Windows firewall is not configured properly on the remote machine to allow VAMT access.</span></li>
+			</ol>
+
+			<div>&nbsp;</div>
+			</td>
+			<td width="230">
+			<div>&nbsp;</div>
+
+			<ol>
+				<li><span>To enable WMI service, click </span>Start -&gt; Services -&gt; Right click Windows Management Instrumentation and select restart&#8203;.</li>
+				<li>To configure windows firewall on client and host computer , follow instructions <a href="https://docs.microsoft.com/en-us/windows/deployment/volume-activation/configure-client-computers-vamt">here</a>.&#8203;</li>
+				<li><span>Please visit <a href="https://docs.microsoft.com/en-us/windows/deployment/volume-activation/install-configure-vamt">install and configure </a><span><a href="https://docs.microsoft.com/en-us/windows/deployment/volume-activation/install-configure-vamt">VAMT</a> </span>for detailed information on how to install the VAMT tool and configure client computers .</span></li>
+			</ol>
+
+			<div>&nbsp;</div>
+			</td>
+			<td width="198">
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table class="table">
+	<tbody>
+		<tr>
+		</tr>
+		<tr>
+		</tr>
+	</tbody>
+</table>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="498">
+			<div>&nbsp;</div>
+
+			<div>&nbsp;Error: Access is denied.</div>
+
+			<div>&nbsp;</div>
+
+			<div><span asset="4541409" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541409]</span></div>
+
+			<div>&nbsp;</div>
+			</td>
+			<td width="203">
+			<div>&nbsp;</div>
+
+			<div>The user doesn&rsquo;t have permissions to access the client computer.</div>
+
+			<div>&nbsp;</div>
+			</td>
+			<td width="230">
+			<div>&nbsp;</div>
+
+			<ol>
+				<li>Make sure that the client has access/permissions to the client computer if it is domain joined.</li>
+				<li>If client computer is domain joined, make sure that the user is a part of list of user accounts on the client computer. Steps to create a new user account &ndash; Start -&gt;Control Panel -&gt; User Accounts -&gt; User Accounts and Family Safety -&gt;User Accounts -&gt; Manage Accounts-&gt;Create a new account-&gt; fill in the account name and select Administrator and put in the domain name if required.</li>
+			</ol>
+
+			<div>&nbsp;</div>
+			</td>
+			<td width="198">
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table class="table">
+	<tbody>
+		<tr>
+		</tr>
+		<tr>
+		</tr>
+	</tbody>
+</table>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="498">
+			<div>&nbsp;</div>
+
+			<div>&nbsp;<em>Placeholder</em></div>
+
+			<div>&nbsp;</div>
+			</td>
+			<td width="203">
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+			</td>
+			<td width="230">
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+			</td>
+			<td width="198">
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table class="table">
+	<tbody>
+		<tr>
+		</tr>
+		<tr>
+		</tr>
+	</tbody>
+</table>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="498">
+			<div>&nbsp;</div>
+
+			<div>&nbsp;<em>Placeholder</em></div>
+			</td>
+			<td width="203">
+			<p>&nbsp;</p>
+			</td>
+			<td width="230">
+			<p>&nbsp;</p>
+			</td>
+			<td width="198">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</blockquote>
+
+<div>&nbsp;</div>
+
+<h3>Section 3c.&nbsp; Phone activation errors</h3>
+
+<div><span>State of the user machine - All of the prerequisite updates for ESU mentioned here have been installed on the machine and ESU Year1/Year2/Year3/PA key using phone activation.</span></div>
+
+<div>&nbsp;</div>
+
+<blockquote dir="ltr">
+<div>
+<div>
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="498">
+			<div>&nbsp;<strong>Error</strong></div>
+			</td>
+			<td width="203">
+			<div>&nbsp;<strong>Possible Cause</strong></div>
+			</td>
+			<td width="230">
+			<div><strong>Action to Take&nbsp;</strong></div>
+			</td>
+			<td width="198">
+			<div><strong>If the issue is not resolved, gather this for further investigation</strong></div>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<div>Error: 0xC004F04D The Software Licensing Service determined that the Installation ID (IID) or the Confirmation ID (CID) is invalid.&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div><span asset="4541410" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541410]</span></div>
+			</td>
+			<td width="203">
+			<div>The Confirmation ID is incorrect.</div>
+			</td>
+			<td width="230">
+			<ol>
+				<li>Call the <a href="https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers">Microsoft Licensing Activation Centers</a> again and they will walk you through the steps to get the confirmation ID.</li>
+				<li><span>Run slmgr /atp &lt;Confirmation ID&gt; &lt;ESU Activation ID&gt; to activate the ESU SKU using the confirmation ID obtained in step 1.</span></li>
+			</ol>
+			</td>
+			<td width="198">
+			<p><span>&nbsp;</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>&nbsp;<em>Placeholder</em></p>
+			</td>
+			<td width="203">
+			<p>&nbsp;</p>
+			</td>
+			<td width="230">
+			<p>&nbsp;</p>
+			</td>
+			<td width="198">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p><span>&nbsp;</span><em>Placeholder</em></p>
+			</td>
+			<td width="203">
+			<p>&nbsp;</p>
+			</td>
+			<td width="230">
+			<p>&nbsp;</p>
+			</td>
+			<td width="198">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>&nbsp;<em>Placeholder</em></p>
+			</td>
+			<td width="203">
+			<p>&nbsp;</p>
+			</td>
+			<td width="230">
+			<p>&nbsp;</p>
+			</td>
+			<td width="198">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>&nbsp;<em>Placeholder</em></p>
+			</td>
+			<td width="203">
+			<p>&nbsp;</p>
+			</td>
+			<td width="230">
+			<p>&nbsp;</p>
+			</td>
+			<td width="198">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</blockquote>
+
+<h2>Section 4. ESU security update installation errors</h2>
+
+<div>State of the user machine - All of the prerequisite updates for ESU mentioned here have been installed on the machine and the ESU Year1/Year2/Year3/PA key has been successfully deployed and activated on the machine.&nbsp; The user is trying to install the February 2020 or later extended security update on the machine.</div>
+
+<div>&nbsp;</div>
+
+<div>
+<blockquote dir="ltr">
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="498">
+			<div><span>&nbsp;<strong>Error</strong></span></div>
+			</td>
+			<td width="203">
+			<div><span><strong>&nbsp;Possible Cause</strong></span></div>
+			</td>
+			<td width="230">
+			<div><span>&nbsp;<strong>Action to Take</strong></span></div>
+			</td>
+			<td width="198">
+			<div><span><strong>If the issue is not resolved, gather this for further investigation&nbsp;</strong></span></div>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p><span>&nbsp;</span></p>
+
+			<div><span>The Windows Module Installer must be updated before you can install the package. Unable to install the security update on my machine after installing ESU product key.</span></div>
+
+			<div>&nbsp;</div>
+
+			<div><span><span asset="4541402" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541402]</span></span></div>
+
+			<div>&nbsp;</div>
+			</td>
+			<td width="203">
+			<div><span>The SSU (Servicing Stack Update with AI changes) package is not installed on the computer.</span></div>
+			</td>
+			<td width="230">
+			<div><span>Make sure that the SSU package is installed on the machine. Go to Start -&gt; Control Panel -&gt; Programs -&gt; Program and Features -&gt;View Installed updates. If not, then install the SSU package and restart the machine after successfully installing it.</span></div>
+			</td>
+			<td width="198">
+			<div><span>Contact <a href="https://support.microsoft.com/contactus/">Microsoft Support</a> and provide the CBS log file (C:\Windows\Logs\CBS\CBS.log).</span></div>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<div><span>&nbsp;</span></div>
+
+			<div><span>Some updates were not installed while trying to install the security update.</span></div>
+
+			<div>&nbsp;</div>
+
+			<div><span><span asset="4541403" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541403]</span></span></div>
+			</td>
+			<td width="203">
+			<div><span>ESU Specific: -</span></div>
+
+			<ol>
+				<li><span>A valid ESU key is not installed on the machine.&#8203;</span></li>
+				<li><span>For Desktop Client/server, the ESU key is installed but not activated on the machine. Link to Possible causes and error codes.&#8203;</span></li>
+				<li><span>For embedded systems (FES), potential causes can be found in the row below.&#8203;</span></li>
+				<li><span>The Windows OS is not in the list of ESU supported editions/ architectures. See <a href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/how-to-get-extended-security-updates-for-eligible-windows/ba-p/917807">here</a> for the list of supported editions/architectures.</span></li>
+			</ol>
+			</td>
+			<td width="230">
+			<ol>
+				<li><span>For Desktop Client/Server machines, check if a valid ESU key is installed and activated on the machine -&nbsp;</span>
+				<ol>
+					<li><span>Open command prompt in elevated mode&#8203;</span></li>
+					<li><span>Run slmgr /dlv or slmgr /dlv &lt;Activation ID&gt;&#8203;</span></li>
+					<li><span>Verify ESU add-on key is licensed&#8203;</span></li>
+					<li><span>&nbsp;<span asset="4541404" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541404]</span></span></li>
+					<li><span>&nbsp;NOTE: For Windows Server 2008: Running &quot;slmgr /dlv&quot; doesn&#39;t show the licensing status of add-on SKU. Run &quot;slmgr /dlv &lt;Activation ID&gt;&quot; or &rdquo;slmgr /dlv all&rdquo; to view the licensing status of add-on SKU.&#8203;</span></li>
+				</ol>
+				</li>
+				<li><span><span>For non-embedded machines, install and activate the ESU key if not done already via -</span></span>
+				<div><span>- <a href="https://docs.microsoft.com/en-us/windows/deployment/volume-activation/install-configure-vamt">VAMT Online/Proxy Activation</a>&#8203;</span></div>
+
+				<div><span>- Phone Activation&#8203;</span></div>
+
+				<div><span>- Using command prompt (slmgr /ato)&#8203;</span></div>
+
+				<div><span>a. Open command prompt in &nbsp; &nbsp;elevated mode&#8203;</span></div>
+
+				<div><span>b. Run slmgr /ipk &lt;ESU key&gt; and wait for the success message.&#8203;</span></div>
+
+				<div><span>c. Run slmgr /ato &lt;Activation ID&gt;&#8203;</span></div>
+				</li>
+				<li>
+				<div><span>For embedded machines, actions to be taken can be found in the row below.</span></div>
+				</li>
+				<li>
+				<div><span><span>For more potential error codes, refer to the <a href="https://docs.microsoft.com/en-us/windows/deployment/update/windows-update-error-reference">Windows Update</a> error reference.</span></span></div>
+				</li>
+			</ol>
+
+			<div dir="ltr">&nbsp;</div>
+			</td>
+			<td width="198">
+			<div><span>Contact <a href="https://support.microsoft.com/contactus/">Microsoft Support</a> and provide the CBS log file (C:\Windows\Logs\CBS\CBS.log).</span></div>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<div><span>For embedded machines (FES) (continued from above)</span></div>
+
+			<div><span>Some updates may not install and the CBS log may contain entries like these:</span></div>
+
+			<div>&nbsp;</div>
+
+			<div><span><u>Condition 1:</u></span></div>
+
+			<div><span>&nbsp;ESU: NO ESU KEY FOUND</span></div>
+
+			<div><span>&nbsp;ESU: not eligible:HRESULT_FROM_WIN32(1633)</span></div>
+
+			<div><span><span asset="4541426" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541426]</span></span></div>
+
+			<div>&nbsp;</div>
+
+			<div><span><span><u>Condition 2:</u></span></span></div>
+
+			<div><span>&nbsp;ESU: Windows is not activated</span></div>
+
+			<div><span>&nbsp;ESU: not eligible:HRESULT_FROM_WIN32(1633)</span></div>
+
+			<div><span><span asset="4541427" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541427]</span></span></div>
+
+			<div>&nbsp;</div>
+
+			<div><span><span><u>Condition 3:</u></span></span></div>
+
+			<div><span>&nbsp;ESU: Windows is not activated</span></div>
+
+			<div><span>&nbsp;ESU: not eligible:HRESULT_FROM_WIN32(1633)</span></div>
+
+			<p>&nbsp;</p>
+
+			<div><span><span asset="4541428" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4541428]</span></span></div>
+
+			<p>&nbsp;</p>
+
+			<div>&nbsp;</div>
+			</td>
+			<td width="203">
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div><span><span><u>Condition 1</u>:</span> If Windows key is IN the range (of keys for Embedded editions) and activated, then ESU key is not installed on the computer .</span></div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div><span><span><u>Condition 2</u>:</span> If Windows key is IN the range (of keys for Embedded editions) but Windows is NOT activated and ESU key is installed (but not activated) on the computer.</span></div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div><span><span><u>Condition 3</u>: </span>If Windows key is NOT in the range (of keys for Embedded editions) and ESU key is installed (but not activated) on the computer.</span></div>
+			</td>
+			<td width="230">
+			<div>&nbsp;</div>
+
+			<div><span><u>For </u><span><u>C</u></span><span><u>ondition 1</u>:</span> Install a valid FES ESU key on the computer and attempt to install the ESU package</span></div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div><span><u>For </u><span><u>Condition 2</u>: </span>Activate Windows key OR activate ESU key and attempt to install the ESU package. Either of these two solutions will work in this case.</span></div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div>&nbsp;</div>
+
+			<div><span><u>For </u><span><u>Condition 3</u>:</span> Activate ESU key and try the ESU package.</span></div>
+			</td>
+			<td width="198">
+			<p><span>&nbsp;</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<div><span>Error: 80070643 &ndash; prep-check KB installation fails with this error code.</span></div>
+
+			<ul>
+				<li><span>KB 4528081 for Windows Server 2008 SP2</span></li>
+				<li><span>KB 4528069 for Windows 7 / Windows Server 2008R2</span></li>
+			</ul>
+
+			<div><span>The CBS log may contain entries like these:</span></div>
+
+			<div><span>&nbsp;ESU: Product = 36 (0x00000024).</span></div>
+
+			<div><span>&nbsp;ESU: Is IMDS check needed:FALSE&#8203;</span></div>
+
+			<div><span>&nbsp;ESU: Pre IMDS checks failed, Not Eligible:HRESULT_FROM_WIN32(1605)</span></div>
+
+			<div>&nbsp;</div>
+
+			<div><span><a href="https://docs.microsoft.com/en-us/windows/win32/debug/system-error-codes--1300-1699-">1605 =&nbsp;ERROR_UNKNOWN_PRODUCT</a></span></div>
+
+			<div>&nbsp;</div>
+			</td>
+			<td width="203">
+			<p><span>&nbsp;</span></p>
+
+			<ol>
+				<li><span>The OS edition is not supported by the prep-check KB. Non supported editions are all *V and *Core editions.</span></li>
+				<li><span>Latest Servicing Stack Update (<span>Feb 11, 2020</span> or later) and Monthly Rollup (<span>Feb 11, 2020</span> or later) is not installed on the machine.</span></li>
+			</ol>
+
+			<p>&nbsp;</p>
+			</td>
+			<td width="230">
+			<div><span>Install the latest Servicing Stack Update (i.e. Feb 11, 2020 or later) and monthly rollup (Feb 11, 2020 or later) and try again.</span></div>
+			</td>
+			<td width="198">
+			<p><span>&nbsp;</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>ThinPC SKU fails to install update later than 2020 11B</p>
+
+			<p>CBS Log shows SKU as WES<br>
+			<span asset="4593365" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4593365]</span></p>
+			</td>
+			<td width="203">
+			<p>SSU before 2020 8B didn&rsquo;t differentiate THINPC with WES SKU. Embedded ESU Program started 2020 11B</p>
+			</td>
+			<td width="230">
+			<p>Need to install SSU later than 2020 8B SSU.<br>
+			(KB4570673)</p>
+			</td>
+			<td width="198">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>WES Pilot Key no longer able to install update with 2020 12B SSU</p>
+
+			<p>CBS log looks same as when the device didn&rsquo;t install Product Key<br>
+			<span asset="4593366" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4593366]</span></p>
+			</td>
+			<td width="203">
+			<p>WES Pilot Program Ended</p>
+			</td>
+			<td width="230">
+			<p>Need to install new ESU Key which customer purchased</p>
+			</td>
+			<td width="198">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>Cannot install update</p>
+
+			<p>CBS Los shows expired PKey<br>
+			<span asset="4593367" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4593367]</span></p>
+			</td>
+			<td width="203">
+			<p>ESU Product Key is invalid. Either pilot program expired or the key verified as leaked.</p>
+			</td>
+			<td width="230">
+			<p>Need to install new ESU Key which customer purchased. May need to ask IT admin.</p>
+			</td>
+			<td width="198">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>Failed install update on Azure VM with 12029 Error(ERROR_WINHTTP_CANNOT_CONNECT)</p>
+
+			<p>2020-08-12 22:23:03, Info CSI 00000001 ESU: Product = 7.<br>
+			2020-08-12 22:23:03, Info CSI 00000002 ESU: Is IMDS check needed:TRUE<br>
+			2020-08-12 22:23:03, Info CSI 00000003 ESU: Checking IMDS<br>
+			2020-08-12 22:23:03, Info CSI 00000004 Azure<br>
+			2020-08-12 22:23:03, Info CSI 00000005 ESU: check failed HRESULT_FROM_WIN32(12029).</p>
+			</td>
+			<td width="203">
+			<p>Case 1. Azure endpoint is blocked. It needs to be allowed for IMDS check work</p>
+
+			<p>Case 2. There can be issue with network configuration, need to update SSU</p>
+			</td>
+			<td width="230">
+			<p>Case 1. 169.254.169.254 is virtual IP of host node.</p>
+
+			<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fvirtual-network%2Fsecurity-overview&amp;data=04%7C01%7Cdelhan%40microsoft.com%7Ca70520f5538a4f67c31d08d882fdc144%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637403374114113744%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=UvxIEI%2F6kcoELAkFipUR%2BSxv4WgK%2FfsdDN1xr%2FIE9QQ%3D&amp;reserved=0">https://docs.microsoft.com/en-us/azure/virtual-network/security-overview</a></p>
+
+			<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fvirtual-machines%2Fwindows%2Finstance-metadata-service&amp;data=04%7C01%7Cdelhan%40microsoft.com%7Ca70520f5538a4f67c31d08d882fdc144%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637403374114113744%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=VZEb4hzrJMElqCjDviFMFGbpi3oTWMzubVU6wsagTfU%3D&amp;reserved=0">https://docs.microsoft.com/en-us/azure/virtual-machines/windows/instance-metadata-service</a></p>
+
+			<p>It should be allowed to have GET operation from 169.254.169.254 ip address. Otherwise it&rsquo;ll fail.</p>
+
+			<p>Case 2. Need to install SSU later than 2020 10B. depending on Customer configuration, network interface may need more time to show up. 10B added retry logic to overcome this issue.</p>
+			</td>
+			<td width="198">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>Failed install update on Azure VM with certificate chain error on Azure</p>
+
+			<p>2020-05-18 09:34:48, Info CSI 00000001 ESU: Product = 10 (0x0000000a).<br>
+			2020-05-18 09:34:48, Info CSI 00000002 ESU: Is IMDS check needed:TRUE<br>
+			2020-05-18 09:34:48, Info CSI 00000003 ESU: Checking IMDS<br>
+			2020-05-18 09:34:48, Info CSI 00000004 Azure<br>
+			2020-05-18 09:34:48, Info CSI 00000005 The chain does not seem valid<br>
+			2020-05-18 09:34:48, Info CSI 00000006 ESU: check failed CRYPT_E_NOT_FOUND.</p>
+			</td>
+			<td width="203">
+			<p>Customer may not allow access to certificate renewal site.</p>
+			</td>
+			<td width="230">
+			<p>The customer will need to make sure intermediate certificates can be installed on the VM by allowing network connection to the CRL sites shown in following page.</p>
+
+			<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Farchive%2Fblogs%2Fkv%2Fazure-tls-certificates-changes&amp;data=04%7C01%7Cdelhan%40microsoft.com%7Ca70520f5538a4f67c31d08d882fdc144%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637403374114123737%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=3wmkJyHZ39PkzOkSi4VCRDfIgQA04D52O2NUb%2BiWS6s%3D&amp;reserved=0">https://docs.microsoft.com/en-us/archive/blogs/kv/azure-tls-certificates-changes</a></p>
+
+			<p>These certificates are required for using various Azure Services. If these are not installed, then other services also may fail.</p>
+
+			<p>If they don&rsquo;t want to allow network connection to the CRL sites, they may download and install certificates from following page.</p>
+
+			<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.microsoft.com%2Fpki%2Fmscorp%2Fcps%2Fdefault.htm&amp;data=04%7C01%7Cdelhan%40microsoft.com%7Ca70520f5538a4f67c31d08d882fdc144%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637403374114123737%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=R8FwMYvTgY9bqSrAeJADmJLU%2FYyEKo4CG2wmci5tfc4%3D&amp;reserved=0">https://www.microsoft.com/pki/mscorp/cps/default.htm</a></p>
+
+			<p>If the intermediate certificates are present, then please check next the root certificate is available:</p>
+
+			<p><strong>Connectivity issues may occur when the Baltimore CyberTrust Root certificate is not installed on client computers that use Microsoft Intune</strong></p>
+
+			<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fen-us%2Fhelp%2F2831435%2Fconnectivity-issues-may-occur-when-the-baltimore-cybertrust-root-certi&amp;data=04%7C01%7Cdelhan%40microsoft.com%7Ca70520f5538a4f67c31d08d882fdc144%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637403374114133731%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=rCIF5oNsUs%2BWVecmlKAFmAEN9L298QNq08FIyOtbcuc%3D&amp;reserved=0">https://support.microsoft.com/en-us/help/2831435/connectivity-issues-may-occur-when-the-baltimore-cybertrust-root-certi</a></p>
+			</td>
+			<td width="198">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>&nbsp;<em>Placeholder</em></p>
+			</td>
+			<td width="203">&nbsp;</td>
+			<td width="230">&nbsp;</td>
+			<td width="198">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>&nbsp;<em>Placeholder</em></p>
+			</td>
+			<td width="203">&nbsp;</td>
+			<td width="230">&nbsp;</td>
+			<td width="198">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>&nbsp;<em>Placeholder</em></p>
+			</td>
+			<td width="203">&nbsp;</td>
+			<td width="230">&nbsp;</td>
+			<td width="198">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>&nbsp;<em>Placeholder</em></p>
+			</td>
+			<td width="203">&nbsp;</td>
+			<td width="230">&nbsp;</td>
+			<td width="198">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>&nbsp;<em>Placeholder</em></p>
+			</td>
+			<td width="203">&nbsp;</td>
+			<td width="230">&nbsp;</td>
+			<td width="198">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="498">
+			<p>&nbsp;<em>Placeholder</em></p>
+			</td>
+			<td width="203">&nbsp;</td>
+			<td width="230">&nbsp;</td>
+			<td width="198">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+</blockquote>
+</div>
+
+<div>
+<h2><span>Resources</span></h2>
+</div>
+
+<ul>
+	<li><a href="https://docs.microsoft.com/en-us/windows-server/get-started/activation-troubleshooting-guide">Troubleshooting Windows volume activation</a></li>
+	<li><a href="https://docs.microsoft.com/en-us/windows-server/get-started/activation-error-codes">Resolve Windows activation error codes</a></li>
+	<li><a href="https://support.microsoft.com/en-au/help/20527/windows-10-activation-troubleshooter">Using the Activation troubleshooter</a></li>
+	<li><a href="https://support.microsoft.com/en-us/help/10738/windows-10-get-help-with-activation-errors">Get help with Windows activation errors</a></li>
+	<li><span><a href="https://support.microsoft.com/en-us/help/4527878/faq-about-extended-security-updates-for-windows-7">FAQ about Extended Security Updates for Windows 7</a></span></li>
+	<li><span><a href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091">Obtaining Extended Security Updates for eligible Windows devices</a> (Feb 2020 Blog)</span></li>
+	<li><span><a href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/how-to-get-extended-security-updates-for-eligible-windows/ba-p/917807">How to get Extended Security Updates for eligible Windows devices</a> (Oct 2019 Blog)</span></li>
+	<li><a href="https://support.microsoft.com/en-us/help/4539036/faq-about-esu-for-windows-server-and-sql-server-2008-2008-r2">Frequently asked questions about ESU for Windows Server and SQL Server 2008 and 2008 R2&#8203;</a></li>
+	<li><a href="https://docs.microsoft.com/en-us/windows-server/get-started/extended-security-updates">How to use Windows Server 2008 and 2008 R2 extended security updates (ESU)&#8203;</a></li>
+	<li><a href="https://techcommunity.microsoft.com/t5/configuration-manager-blog/extended-security-updates-and-configuration-manager/ba-p/825618">Extended Security Updates and Configuration Manager &#8203;</a></li>
+	<li><a href="https://docs.microsoft.com/en-us/sql/sql-server/end-of-support/sql-server-extended-security-updates?view=sql-server-ver15">What are Extended Security Updates for SQL Server?</a></li>
+	<li>&#8203;<span><a href="https://support.microsoft.com/en-us/help/4497181/lifecycle-faq-extended-security-updates">Lifecycle FAQ-Extended Security Updates</a></span></li>
+</ul>
+
+<div>
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+</div>

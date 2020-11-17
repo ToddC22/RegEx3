@@ -1,0 +1,207 @@
+﻿<header><h1>Tool User Guide: Modern Commerce Support Tooling (CSTv2)</h1></header><p><span asset="4462485" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4462485]</span></p>
+
+<h3>Who should use this article?</h3>
+
+<ul>
+	<li>All Commercial</li>
+</ul>
+
+<h3>What is this article for?</h3>
+
+<p>This guide covers how to accomplish various tasks within the new tool, Modern Commerce Support Tooling (CSTv2). It is not intended to replace existing guidance &ndash; refer here for help understanding how to execute a task.</p>
+
+<h3><a id="top" name="top"></a>Table of contents</h3>
+
+<h4>1.&nbsp;<a bookmark-id="1" href="#1" managed-link="">Show Download In-Progress</a></h4>
+
+<h4>2.&nbsp;<a bookmark-id="2" href="#2" managed-link="">Payment on account (POA) - Overpayment amount visibility</a></h4>
+
+<h4>3.&nbsp;<a bookmark-id="3" href="#3" managed-link="">Refund on Returned Item</a></h4>
+
+<h4>4.&nbsp;<a bookmark-id="4" href="#4" managed-link="">Disable Override for Databricks Returns</a></h4>
+
+<h4>5.&nbsp;<a bookmark-id="5" href="#5" managed-link="">VAT ID support for Bangladesh</a></h4>
+
+<p>&nbsp;</p>
+<h3>Feature updates</h3>
+
+<h4>November 2019:</h4>
+
+<h4><a id="1" name="1"></a>1. Show Download In-Progress</h4>
+
+<p>CST now shows download in-progress while downloading the current month usage. To download the current (open) month&rsquo;s usage:</p>
+
+<ol>
+	<li>
+	<p>From Home, select Billing Profile + Payment Instruments:<br>
+	<span asset="4535410" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4535410]</span><br>
+	<span asset="4535411" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4535411]</span></p>
+	</li>
+	<li>
+	<p>There will now be a menu in top right corner, select it then choose the <strong>Download Unbilled Azure Usage </strong>option:</p>
+
+	<ol>
+		<li>
+		<p>Choose the <strong>month</strong> in the next screen, then select the <strong>Download </strong>button:<br>
+		<span asset="4535412" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4535412]</span></p>
+		</li>
+		<li>
+		<p>The Download button will become a <strong>download in-progress</strong> icon instead:<br>
+		<span asset="4535413" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4535413]</span></p>
+		</li>
+	</ol>
+	</li>
+	<li>
+	<p>Once file is downloaded CST it you will be given the option to save the usage file:<br>
+	<span asset="4535414" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4535414]</span></p>
+	</li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<div>
+<h4><a id="2" name="2"></a>2.&nbsp;Payment on account (POA) - Overpayment amount visibility</h4>
+
+<p>Customers sometimes make overpayments to their account for various reasons, but afterwards they don&rsquo;t have a way to see the amount that was overpaid.</p>
+
+<p>Microsoft has decided to provide a way for them to see the overpaid amount by using Ibiza and/or Admin Center. CST/CMAT will have to provide a similar capability to Support Engineers so that they can address customers query around overpayments.</p>
+
+<p>CMAT:</p>
+
+<ul>
+	<li>Overpayment details in CMAT will be displayed in <strong>Payment On Account</strong>, which is within the <strong>Billing </strong>section:<span asset="4535415" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4535415]</span>
+
+	<ul>
+		<li>
+		<p>Since Partners can have payments made in multiple currencies, we <strong>cannot show the</strong> <strong>total overpayment amount</strong> in CMAT but <strong>can show</strong> the payment and currency details, so if needed, the total overpayment per currency can be calculated offline.</p>
+
+		<ul>
+			<li>
+			<p><span>The tab will display </span><strong>all payments</strong><span> made on the account.</span></p>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<p><span>CST</span><span>:</span></p>
+
+<ul>
+	<li>Total overpayment will show as <strong>Unallocated amount</strong>.</li>
+	<li><span><span><span>CST will show overpayment details under <strong>Billing Profile + Payment Instruments</strong> as well as Legacy dashboard view. under <strong>Billing Profile </strong></span></span></span><strong><span><span><span>&agrave;</span></span></span><span><span><span> Payment</span></span></span></strong><span><span><span> <strong>on Account</strong> Legacy dashboard vie</span></span></span>w</li>
+</ul>
+
+<p><strong><span>Billing Profile + PI</span></strong><strong><span><span><span><br>
+Legacy Dashboard</span></span></span></strong></p>
+
+<p><span><span><span>Overpayment details will show under Billing Profile </span></span></span><span><span><span>&agrave;</span></span></span><span><span><span> Payment on Account.<br>
+<span asset="4535416" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4535416]</span><br>
+<span asset="4535417" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4535417]</span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="3" name="3"></a>3.&nbsp;Refund on Returned Item</h4>
+
+<p>There will be times when a customer uses the self-serve return/cancel feature to return service (for example, Reservations). Self-service cancellation will provide pro-rated refund that the customer may contest and request for full refund. Previously, there was no ability to provide on returned item and support agent will have to escalate such cases to engineering team.</p>
+
+<p>Now, CST provides the ability to provide a refund (remaining amount only) on a returned item. To provide a refund:</p>
+
+<ol>
+	<li><span><span><span>Go to the Purchases blade and look up the item and then select the <strong>Refund/Credit</strong> option. The user will be able to refund up to remaining value of the service.<br>
+	<span asset="4535420" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4535420]</span></span></span></span><br>
+	<br>
+	The rest of the flows remains unchanged once the user selects the <strong>Refund/Credit</strong> option.</li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="4" name="4"></a>4.&nbsp;Disable Override for Databricks Returns</h4>
+
+<p>Databricks reservations is transaction-based service meaning if customer cancels the service, they will get a pro-rated refund based on the remaining transactions. Overriding a refund to provide more than system calculated refund will be a loss situation for Microsoft.</p>
+
+<p><span><span><span>CST has now blocked the override refund option for Databricks reservations. The &ldquo;Override&rdquo; link will be grayed out and will not be clickable.<br>
+<span asset="4535421" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4535421]</span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h4><a id="5" name="5"></a>5.&nbsp;VAT ID support for Bangladesh</h4>
+
+<p>CST/CMAT now supports Add/Modify/View VAT ID operations for Bangladesh. Support engineers can use the regular Add/Modify/View Tax workflow and do the needful to support customers.</p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+</div>
+
+<h4><span><span><span><span>Oct 15<sup>th</sup>, 2019:</span></span></span></span></h4>
+
+<p><strong><span>Partner Led Features </span></strong></p>
+
+<ul>
+	<li><span><span>View Profile (Organization, Partner and Account) </span></span><span><span>NEW!</span></span></li>
+	<li><span><span>Customer Segment or Type </span></span><span><span>NEW!</span></span></li>
+	<li><span>View and Manage Billing Groups, Quotes, Purchases and Assets <span>NEW!</span></span></li>
+	<li><span>Invoice and Usage Section (Download and Re-Download) <span>NEW!</span></span></li>
+	<li><span>Dunning at BG and Invoice Level<span> NEW!</span></span></li>
+	<li><span>Paid Monetary Credit <span>NEW!</span></span></li>
+	<li><span>Invoice Whitelisting &ndash; Moving CL Customer from CC to Check/Wire <span>NEW!</span></span></li>
+	<li><span>Lockbox Compliance <span>NEW!</span></span></li>
+	<li><span>Is Match feature in Overview Section <span>NEW!</span></span></li>
+	<li><span>Complex Customer <span>NEW!</span></span></li>
+</ul>
+
+<p><strong><span>Customer Led Features </span></strong></p>
+
+<ul>
+	<li><span>Free Trial (Start and End Dates)<span> NEW!</span></span></li>
+</ul>
+
+<ul>
+	<li><span>Offer Conversion (Free Trial to Paid)<span> NEW!</span></span></li>
+</ul>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+<p><strong><span asset="4346858" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4346858]</span>January 2019</strong></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>Item</strong></p>
+			</td>
+			<td><strong>Title</strong></td>
+			<td><strong>Date</strong></td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/150081">CONTENT TRACKING 150081</a></td>
+			<td>TUG: CST feature updates Nov</td>
+			<td>12/11/2019</td>
+		</tr>
+		<tr>
+			<td><a class="caption" href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/148033">Content Tracking 148033</a></td>
+			<td>Cross LOB: Rewrite Overview Commercial TUG for New CST tool</td>
+			<td>10/14/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/147795">CONTENT TRACKING 147795</a></td>
+			<td>Azure/M365: Update Side Nav to Replace CST TSG with New Content</td>
+			<td>10/10/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/CSS-IRT/CSS%20IRT/_workitems/edit/148033">CONTENT TRACKING 148033</a></td>
+			<td>Cross LOB: Rewrite Overview Commercial TUG for New CST tool</td>
+			<td>10/8/2019</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a aria-level="1" href="https://tfsirt/tfs/IRT1/CSS%20IRT/_workitems/edit/139093" role="heading">Content Tracking 139093</a></p>
+			</td>
+			<td>New TUG: Customer View</td>
+			<td>1/18/2019</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/116128" managed-link="">CT 116128</a></td>
+			<td>Remove Keyword&nbsp;vkb69 and LOB19 tag for Commercial CS Post-Sales</td>
+			<td>April 2, 2020</td>
+		</tr>
+	</tbody>
+</table>

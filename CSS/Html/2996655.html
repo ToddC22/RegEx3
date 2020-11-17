@@ -1,0 +1,814 @@
+﻿<header><h1>Procedure: M365 Commerce: Applying a credit to a customer’s account using CMAT</h1></header><div class="kb-references-section section">
+<p class="sbody-h3"><span asset="4462485" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4462485]</span></p>
+
+<h3 class="sbody-h3"><span class="text-base"><span class="text-base">Content</span></span><a class="bookmark" id="toc"></a></h3>
+&nbsp;
+
+<div class="indent">
+<div class="indent">
+<div class="indent">
+<div class="indent"><a bookmark-id="applies" href="#applies" managed-link="" target="">1. Applies to</a><br>
+<a bookmark-id="policy" href="#policy" managed-link="" target="">2. Guidance</a><br>
+<a bookmark-id="process" href="#process" managed-link="" target="">3. Procedure</a>
+
+<div class="indent"><a bookmark-id="1" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2996655#1" managed-link="" target="_blank">a. What to do if an incorrect credit is applied to an account</a><br>
+<a bookmark-id="2" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2996655#2" managed-link="" target="_blank">b. Steps for applying a credit</a><br>
+<a bookmark-id="3" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2996655#3" managed-link="" target="_blank">c. How to cancel a pending Refund Transaction request (if you choose the wrong approver)</a><br>
+<a bookmark-id="4" data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/2996655#4" managed-link="" target="_blank">d. Credit reasons for common credit scenarios</a></div>
+<a bookmark-id="exceptions" href="#exceptions" managed-link="" target="">4. Exceptions</a><br>
+<a bookmark-id="suppdocs" href="#suppdocs" managed-link="" target="">5. Supporting documents</a><br>
+<a bookmark-id="version" href="#version" managed-link="" target="">6. Version history</a></div>
+</div>
+</div>
+</div>
+&nbsp;
+
+<h3 class="sbody-h3">1. Applies to <a class="bookmark" id="applies"></a></h3>
+
+<div class="indent"><span class="text-base">The following services:</span> All services<br>
+<span class="text-base">The following advocate roles:</span> All roles<br>
+<span class="text-base">The following markets: </span>All markets (For detailed information about product-specific availability, see <a data-content-id="" data-content-type="" href="/en-us/help/2748142" id="kb-link-1" managed-link="" target="_blank">2748142: Markets where Microsoft Online Services are available </a>.)</div>
+&nbsp;
+
+<h4 class="sbody-h4">Scenario</h4>
+A customer&rsquo;s credit request has been approved and is ready to be applied to their account.<br>
+<br>
+* Refer to this <a data-content-id="" data-content-type="" href="https://microsoft.sharepoint.com/teams/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/126/bemisdocuments/3072368_en-US.xlsx?d=w909aa9d281074c6b8cd7af055469985e" id="kb-link-2" managed-link="" target="_blank">worksheet</a>&nbsp;for other currency equivalents.<br>
+<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a><br>
+<br>
+<span class="text-base"></span>
+
+<h3 class="sbody-h3">2. Guidance<a class="bookmark" id="policy"></a></h3>
+
+<ul class="sbody-free_list">
+	<li>The monetary thresholds listed in this article are per request.</li>
+	<li>For a subscription cancelled on the same day as purchased, if the refundable transaction is visible in CMAT, advocates can apply the credit in CMAT without waiting for the invoice to be generated.</li>
+	<li>Commerce advocates are authorized to process approved credits in the Commerce Management Agent Tool (CMAT) for <span class="text-base">Credit Card<span class="text-base">, Direct Debit, </span></span>and <span class="text-base">Invoice Pay</span> customers <span class="sbody-italic">without creating a request&nbsp;for PayOps</span>, except for withholding tax and sales and use tax exemptions.</li>
+	<li>Advocates in EMEA are authorized to apply VAT credits for customers per conditions explained in <a data-content-id="" data-content-type="" href="/en-us/help/2849736" id="kb-link-3" managed-link="" target="_blank">2849736: Supporting Value-Added Tax and Tax Exemption </a>.</li>
+	<li>If the approved credit is &le;$650 USD, CMAT will apply the credit to the customer&rsquo;s account without triggering the approval workflow. <span class="text-base">IMPORTANT:</span> If Tier 1 or 2&rsquo;s approval limit is lower than the CMAT threshold of $650, the advocate must obtain approval for the credit <span class="text-base"><span class="sbody-italic">before</span></span> submitting the credit in CMAT.</li>
+	<li>If the credit is &gt; $650 USD, CMAT will prompt the advocate to select approvers in the Refund Transaction workflow. The approvers will be notified of the pending credit needing their approval. Once the transaction is approved, the credit is applied to the customer&rsquo;s account.</li>
+	<li><span class="text-base">This procedure is for direct subscriptions only.</span></li>
+</ul>
+<br>
+<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a><br>
+<br>
+&nbsp;
+<h3 class="sbody-h3">3. Procedure<a class="bookmark" id="process"></a></h3>
+<span class="sbody-italic"><span class="text-base">Please ensure that you have validated and approved or have received validation and approval before applying a credit.</span></span><br>
+<br>
+<span class="text-base">Note:</span>&nbsp;credit threshold varies on what the type of credit request. Credit scenarios can be found in the following KBs:
+
+<ul class="sbody-free_list">
+	<li>Cancellation credits, please see article <a data-content-id="" data-content-type="" href="/en-us/help/2812902" id="kb-link-4" managed-link="" target="_blank">2812902: </a><a href="https://internal.support.services.microsoft.com/en-us/help/2812902" managed-link="" target="_blank">Procedure: M365 Commerce: MOS Cancellation Guidance</a><a data-content-id="" data-content-type="" href="/en-us/help/2812902" managed-link="" target="_blank">&nbsp;</a>.</li>
+	<li>Credit for direct customer moving to Volume Licensing agreement, see article <a data-content-id="" data-content-type="" href="/help/2820242#3c" id="kb-link-5" managed-link="" target="_blank">2820242: Supporting Volume Licensing customers</a>.</li>
+	<li>Value Added Tax credits, see article <a data-content-id="" data-content-type="" href="/help/2849736#3c" id="kb-link-6" managed-link="" target="_blank">2849736: Supporting Value-Added Tax and EOC Tax Exemption</a>.</li>
+	<li>Withholding tax credits, see article <a data-content-id="" data-content-type="" href="/help/2809401#3c" id="kb-link-7" managed-link="" target="_blank">2809401: Supporting withholding tax credit requests from customers</a>.</li>
+	<li>Sales and Use Tax credits, see article <a data-content-id="" data-content-type="" href="/help/2807966#3c" id="kb-link-8" managed-link="" target="_blank">2807966: Processing a Sales and Use Tax Exemption Certificate for customers in the United States, Canada and Puerto Rico</a>.</li>
+	<li>CPE credits, see article <a data-content-id="" data-content-type="" href="/help/3081494#3c" id="kb-link-9" managed-link="" target="_blank">3081494: Processing a CPE Credit</a>.</li>
+	<li>SLA credits, see article <a data-content-id="" data-content-type="" href="https://internal.support.services.microsoft.com/en-us/help/3078460" id="kb-link-10" managed-link="" target="_blank">3078460: Processing a credit request due to a service outage for Direct and Prepaid customer</a>.</li>
+</ul>
+
+<p><br>
+<strong><span class="text-base">High level overview of the credit approval workflow in CMAT: </span></strong></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="76">
+			<p><span><span><strong><span><span><span>Credit amount:</span></span></span></strong></span></span></p>
+			</td>
+			<td width="155">
+			<p><span><span><strong><span><span><span>Is the credit within Tier 1 or 2 credit approval limit?</span></span></span></strong></span></span></p>
+			</td>
+			<td width="200">
+			<p><span><span><strong><span><span><span>Next step</span></span></span></strong></span></span></p>
+			</td>
+			<td width="211">
+			<p><span><span><strong><span><span><span>What happens next?</span></span></span></strong></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="76">
+			<p><span><span><span><span><span>0 - $650</span></span></span></span></span></p>
+			</td>
+			<td width="155">
+			<p><span><span><span><span><span>Yes</span></span></span></span></span></p>
+			</td>
+			<td width="200">
+			<p><span><span><span><span><span>Create the CMAT Refund Transaction.</span></span></span></span></span></p>
+			</td>
+			<td width="211">
+			<p><span><span><span><span><span>Credit is applied to the customer&rsquo;s account.</span></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2" width="76">
+			<p><span><span><span><span><span>$650 - $2500</span></span></span></span></span></p>
+			</td>
+			<td rowspan="2" width="155">
+			<p><span><span><span><span><span>N/A &ndash; Credit approval is integrated into the credit approval workflow</span></span></span></span></span></p>
+			</td>
+			<td width="200">
+			<p><span><span><span><span><span>1. Create the CMAT Refund Transaction.</span></span></span></span></span></p>
+			</td>
+			<td width="211">
+			<p><span><span><span><span><span>1. Approvers will be notified of pending credit approval requests.</span></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="200">
+			<p><span><span><span><span><span>2. Once approved, inform the customer.</span></span></span></span></span></p>
+			</td>
+			<td width="211">
+			<p><span><span><span><span><span>2. Upon approval, the credit will be applied to the customer&rsquo;s account.</span></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="3" width="76">
+			<p><span><span><span><span><span>$2500 - $10000 </span></span></span></span></span></p>
+			</td>
+			<td rowspan="3" width="155">
+			<p><span><span><span><span><span>No</span></span></span></span></span></p>
+			</td>
+			<td width="200">
+			<p><span><span><span><span><span>1. Create assistance request to Commerce Tier 3 to obtain approval.</span></span></span></span></span></p>
+			</td>
+			<td width="211">
+			<p><span><span><span><span><span>1. Tier 3 will obtain approval from SAFE POC.</span></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="200">
+			<p><span><span><span><span><span>2. Once Tier 3 closes the escalation request, follow direction to apply credit if approved.</span></span></span></span></span></p>
+			</td>
+			<td width="211">
+			<p><span><span><span><span><span>2. If </span></span></span>&nbsp;<span><span><span>SAFE POC approval is received, Tier 3 will update the escalation request.</span></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="200">
+			<p><span><span><span><span><span>3. Tier 1 will create the CMAT refund transaction.</span></span></span></span></span></p>
+			</td>
+			<td width="211">
+			<p><span><span> </span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="3" width="76">
+			<p><span><span><span><span><span>&gt;$10000</span></span></span></span></span></p>
+			</td>
+			<td rowspan="3" width="155">
+			<p><span><span><span><span><span>No</span></span></span></span></span></p>
+			</td>
+			<td width="200">
+			<p><span><span><span><span><span>1. Create assistance request to Commerce Tier 3 to obtain BG approval.</span></span></span></span></span></p>
+			</td>
+			<td width="211">
+			<p><span><span><span><span><span>1. Tier 3 will obtain BG approval.</span></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="200">
+			<p><span><span><span><span><span>2. Once Tier 3 closes the escalation request, follow direction to apply credit if approved.</span></span></span></span></span></p>
+			</td>
+			<td width="211">
+			<p><span><span><span><span><span>2. If BG approval is received, Tier 3 will update the escalation request.</span></span></span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="200">
+			<p><span><span><span><span><span>3. Tier 1 will create the CMAT refund transaction.</span></span></span></span></span></p>
+			</td>
+			<td width="211">
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+&nbsp;
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading="" faq-panel-id="1"><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="text-base">a. What to do if an incorrect credit is applied to an account:</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<p>1. If you make a mistake applying a credit to an account, create a credit reversal, navigate to CMAT and select Transaction: verify that the line item to be reversed displays as a negative amount. If the amount to be reversed is positive, process as a standard offset.</p>
+
+<p><span class="text-base">Note</span>: Reversals can only be completed one Line item at a time and must be 100% reversed. Ex. A credit was submitted for $50.00, so the reversal must be entered for $50.00.<br>
+<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a></p>
+</div>
+</div>
+</div>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading="" faq-panel-id="2"><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">b.&nbsp;<span class="text-base">Steps for applying a credit:&nbsp;</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td>1. Is this an SLA credit?</td>
+			<td>If this is an SLA credit, first check the Message Center Alerts to see if there is an alert about the outage. If the alert states that automatic or proactive credits will be issued, do not request or apply a credit.</td>
+		</tr>
+		<tr>
+			<td>2. Is this a cancellation credit?</td>
+			<td>If this is a cancellation credit, first check the Commerce Management Agent Tool (CMAT) to see if an automatic credit has been applied to the account since the cancellation. An automatic credit may affect the credit amount you plan to apply.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>3. In CMAT, search for the customer.<br>
+<br>
+4. Once the customer is selected, go to the Transactions page. Determine the line item to which you will apply the credit.&nbsp;<br>
+<br>
+5. Expand the line item. <span class="text-base">Can</span><span class="text-base"></span><span class="text-base">refund</span> must be &ldquo;true&rdquo; in order to use this line item. Click <span class="text-base">Refund Transaction</span>.<br>
+<span asset="4016726" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4016726]</span><br>
+<br>
+6. Change the Refund Amount, if needed. The amount entered should be Pretax.<br>
+<br>
+7. Select the credit reason from the <span class="text-base">Reason</span> drop-down list.<span asset="4533818" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4533818]</span></p>
+
+<div class="kb-collapsible kb-collapsible-collapsed">&nbsp;</div>
+
+<p>8. Select the <span class="text-base">Refund Option </span>based on the payment method<span class="text-base">:<br>
+<span asset="4533819" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4533819]</span></span></p>
+
+<div class="kb-collapsible kb-collapsible-collapsed"><br>
+<span>8.a.</span><span class="text-base"> For Invoice Pay customers:</span><span>&nbsp;</span></div>
+
+<div class="indent">Select <span class="text-base">Refund to billing account</span>. This will apply the credit to the customer&#39;s next Microsoft invoice. <span class="sbody-italic">Refund to billing account is the only Refund Option available for Invoice Pay customers.</span></div>
+
+<p><span class="sbody-italic"></span>8.b. <span class="text-base">For Credit Card customers</span> (use one of the following options):</p>
+
+<ul class="sbody-free_list">
+	<li><span class="text-base">To apply the credit to the customer&#39;s next Microsoft invoice</span>, select <span class="text-base">Refund to billing account</span> (use this option if the customer still has an active order on the tenant).</li>
+	<li><span class="text-base">To refund to the credit card <span class="sbody-italic">on the next calendar day: </span></span>
+	<ol class="sbody-num_list">
+		<li>Select <span class="text-base">Refund to billing account. </span>This creates an Offset transaction with the credit amount.</li>
+		<li>After you finish this refund transaction, you must then click <span class="text-base">Process Balance </span>on the offset transaction to push the refund to the card the following day.&nbsp;<strong>Note:</strong> Before pressing the button to process the balance to the customer&rsquo;s credit card, advocates should ask for confirmation that the credit card is still valid.</li>
+	</ol>
+	</li>
+	<li><span class="text-base">To refund to the credit card </span><span class="sbody-italic"><span class="text-base">in 10 calendar days: </span></span><br>
+	<br>
+	1. Check the status of the charge on the Charges page:<br>
+	<br>
+	<span class="text-base">Succeeded </span>means the charge to the credit card was successful. You can proceed with the refund.<br>
+	<br>
+	<span class="text-base">Open </span>or<span class="text-base"> Failed </span>means the card has not yet been charged. Do not proceed with the refund.<br>
+	<br>
+	2. If charge status is Succeeded, select <span class="text-base">Refund to Payment Instrument immediately</span>.<br>
+	<br>
+	If an offset transaction already exists for the credit, and the customer is asking for a refund to their credit card, advocates are authorized to use <span class="text-base">Process Balance </span>to refund to the credit card.</li>
+</ul>
+
+<p>8.c. <span class="text-base">For Direct Debit customers:</span></p>
+
+<ul class="sbody-free_list">
+	<li><span class="text-base">To apply the credit to the customer&#39;s next Microsoft invoice</span>, select <span class="text-base">Refund to billing account </span>(use this option if the customer still has an active order on the tenant).</li>
+	<li><span class="text-base">If the customer requests a refund:</span>
+	<ol class="sbody-num_list">
+		<li><span class="sbody-italic">You must wait 10 calendar days from the date on the Charges page before proceeding with this step.</span></li>
+		<li>What is the status of the Charge Attempt?
+		<ul class="sbody-free_list">
+			<li><span class="text-base">Failed</span>: Do not proceed. The bank declined the charge.</li>
+			<li><span class="text-base">Complete</span>: Go to the next step.</li>
+		</ul>
+		</li>
+		<li>Select <span class="text-base">Refund to Payment Instrument immediately</span>. The refund to the customer&rsquo;s bank account will be applied in approximately 5 business days.&nbsp;</li>
+	</ol>
+	</li>
+</ul>
+
+<div class="kb-collapsible kb-collapsible-collapsed"><br>
+<span asset="4487407" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4487407]</span></div>
+
+<p><br>
+9. In the Comments field, enter the following information:</p>
+
+<div class="indent">Date<br>
+Your alias<br>
+Case #<br>
+Invoice #<br>
+CMAT<br>
+Subscription ID<br>
+Service Plan<br>
+<span><span><span>Incident ID<br>
+BG<strong>/</strong>SAFE pprover Name</span></span></span><br>
+Reason for credit (from the table: Credit reasons for common credit scenarios)</div>
+
+<p><br>
+10. If the credit/refund amount is greater than $650 USD (or local currency equivalent), the Approval field will show Required. Click the arrow icon to go to the next page.</p>
+
+<p><span class="text-base">11.a. </span><span class="text-base">For approved refunds/credits &le;$650 USD</span>, enter the Case Number and click the checkmark icon to apply the credit.<br>
+&nbsp;<span asset="4533820" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4533820]</span></p>
+
+<div class="kb-collapsible kb-collapsible-collapsed"><span class="text-base">11.b</span>. <span class="text-base">For refunds/credits &gt;$650 USD (Approval field = Required).<br>
+<br>
+The Tier 3 <strong>Credit Request template</strong> needs to be noted in the case. For more information on how to escalate a platform, billing or subscription issue,&nbsp;please see <a href="https://internal.support.services.microsoft.com/en-us/help/2778091" managed-link="" target="_blank">2778091: How to escalate a case to Tier 3, Engineering</a>.<br>
+<br>
+<em>Tier 3 Credit Request template:</em></span></div>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td>Information Needed:</td>
+			<td><span lang="EN-US"><span><span>Advocate</span></span></span>-provided information:</td>
+		</tr>
+		<tr>
+			<td>Company Name&nbsp;(From CMAT)</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Customer Country</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Customer Last Name&nbsp;(From CMAT)</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Request Type (complete new template for each request for the customer)&nbsp;(List one: Credit, Discount, Push Manual Refund, Question)</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Credit reason&nbsp;(List ONE of the options below):&nbsp;<br>
+			<br>
+			Accidentally purchased a subscription<br>
+			<br>
+			Billed after cancellation<br>
+			<br>
+			CPE-Did not understand the price/bill<br>
+			<br>
+			CPE-Misinformation or promise from Microsoft<br>
+			<br>
+			CPE-Technical reason (non-SLA)<br>
+			<br>
+			Dissatisfied with Product &ndash; Customer<br>
+			<br>
+			Duplicate Order &ndash; CP<br>
+			<br>
+			SLA Credit<br>
+			<br>
+			Special/Exceptional Circumstances<br>
+			<br>
+			System Error<br>
+			<br>
+			Tax Credit<br>
+			<br>
+			N/A (no credit requested)</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Overview of Issue</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Information for&nbsp;subscription&nbsp;to be credited, refunded&nbsp;or discounted</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Tenant ID&nbsp;(Tenant GUID in CMAT on the Customer Profile page)</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Order ID&nbsp;(from CMAT)</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Name of Affected Online Service&nbsp;(List all applicable)</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Amount of Request (include Currency)<br>
+			<br>
+			Refer to this&nbsp;<a href="https://sharepoint.partners.extranet.microsoft.com/sites/LegacyUploaded_BemisRepository/Bemis/BemisUploadedFiles/BemisDocuments/126/bemisdocuments/3072368_en-us.xlsx" id="kb-link-7" target="_self">worksheet&nbsp;</a>for local currency equivalents.</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Calculation<em>(1. Actual calculation (need to include how credit calculation was obtained). 2. Attach a copy of credit calculator spreadsheet and highlight row.)</em></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Dates Billed for Credit Amount Requested&nbsp;(from CMAT)</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="text-base"></span></p>
+
+<ol class="sbody-num_list">
+	<li>Select the aliases of all the POD leads, credit approvers <span><span><span>(</span></span></span><span><span><span>&#8203;</span></span></span><span><span><span>Swetha Samishetty:<a href="mailto:v-swsami@microsoft.com,">v-swsami@microsoft.com,</a> Andrew Patty: <a href="mailto:anpatty@microsoft.com">anpatty@microsoft.com</a>, Jeff Gunter: <a href="mailto:jegunter@microsoft.com">jegunter@microsoft.com</a>, Michael Boyko:</span></span></span> <span><span><span><span><span><span><a href="mailto:miboyko@microsoft.com">miboyko@microsoft.com</a></span></span></span>, Tanuja Pasupuleti:&nbsp;</span></span></span><span><span><span><a href="mailto:v-tapas@microsoft.com" target="_self"><span><span><span>v-tapas@microsoft.com</span></span></span></a></span></span></span><span><span><span>) </span></span></span> or Tier 3 for your region from the Approver drop-down list. While still in the Approver drop-down list, scroll to the bottom of the list and click <span class="text-base">OK</span>.
+
+	<p><strong>NOTE</strong>: Use the above aliases only for this type of actions and only in CMAT. Do not provide the aliases to external users.</p>
+	</li>
+	<li>If this is the <span class="sbody-italic"><span class="text-base">only </span></span>or <span class="sbody-italic"><span class="text-base">final </span></span>refund transaction for the case, check the <span class="text-base">Send email to Approver(s)</span> box, enter the Case Number, and click the checkmark icon to submit.</li>
+	<li><span class="sbody-italic">If you have <span class="text-base">multiple </span>refund transactions for the same case, submit the request but do not click <span class="text-base">Send email to Approver(s)</span> until you are submitting the last request for the case.</span></li>
+	<li>Once the request is submitted with <span class="text-base">Send email to Approver(s)</span> checked, an email will be sent to the approver and the advocate&rsquo;s email alias will be cc&rsquo;d. <span class="text-base">(See <a bookmark-id="sample" href="#sample" managed-link="" target="">Sample email sent to the approver and copied to the requester</a>.)</span></li>
+</ol>
+
+<p>&nbsp;&nbsp;<span asset="4533821" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4533821]</span></p>
+
+<div class="kb-collapsible kb-collapsible-collapsed">&nbsp;</div>
+
+<p>12. You can view your requests by clicking the Requests hyperlink in the Title Bar of CMAT. The number to the left of <span class="text-base">Requests</span> (&ldquo;0&rdquo; in this screenshot) indicates to <span class="sbody-italic">approvers</span> how many outstanding requests they have. It does not indicate how many requests you have submitted.</p>
+
+<div class="kb-collapsible kb-collapsible-collapsed"><span asset="4533822" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4533822]</span><br>
+&nbsp;</div>
+
+<p>13. The default filters on the Requests page are &ldquo;Assigned to me&rdquo; and &ldquo;Pending&rdquo;. Change the values to &ldquo;My requests&rdquo; and &ldquo;All&rdquo;. Possible values for the status field are: All, Pending, Approved, Rejected, Cancelled, Expired.<span asset="4533823" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4533823]</span></p>
+
+<div class="kb-collapsible kb-collapsible-collapsed">
+<p><span asset="4293868" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4293868]</span><br>
+<br>
+14. If the request is approved, the credit will be applied automatically in CMAT. You will be able to see the Offset Transaction on the Transactions page.</p>
+
+<div class="kb-collapsible kb-collapsible-collapsed"><span asset="4293871" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4293871]</span><br>
+<span asset="4533824" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4533824]</span><br>
+&nbsp;</div>
+</div>
+
+<p><a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a></p>
+</div>
+</div>
+</div>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading="" faq-panel-id="3"><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">c.&nbsp;<span class="text-base">How to cancel a pending Refund Transaction request (if you choose the wrong approver)</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<ol>
+	<li>Go to My Requests on the Requests page.</li>
+	<li>Expand the Pending Request to see the Details page. Scroll to the bottom and click <strong><span class="text-base">Cancel Request</span></strong>.<span asset="4533825" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4533825]</span></li>
+	<li class="kb-collapsible kb-collapsible-collapsed">Enter relevant information in the Comments field and click the checkmark to submit the cancellation.&nbsp;<span asset="4487408" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4487408]</span></li>
+</ol>
+
+<p class="kb-collapsible kb-collapsible-collapsed"><br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a></p>
+</div>
+</div>
+</div>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading="" faq-panel-id="4"><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">d.&nbsp;<span class="text-base">Credit reasons for common credit scenarios</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<ol class="sbody-alpha_list">
+	<li>
+	<div class="table-responsive">
+	<table class="table">
+		<tbody>
+			<tr class="sbody-tr">
+				<th class="sbody-th"><span class="text-base"><span class="sbody-italic">Scenario for Office 365 &amp; Microsoft Intune: </span></span></th>
+				<th class="sbody-th"><span class="text-base"><span class="sbody-italic">Credit Reason in CMAT</span></span></th>
+				<th class="sbody-th"><span class="text-base"><span class="sbody-italic">Sample text to enter into the Comments field in CMAT.</span></span></th>
+			</tr>
+			<tr class="sbody-tr">
+				<td class="sbody-td"><span class="text-base">Cancellation &ndash; (Direct) customer cancels within the first 30 days</span></td>
+				<td class="sbody-td">Accidentally purchased a subscription<br>
+				<br>
+				Dissatisfied with Product &ndash; Customer</td>
+				<td class="sbody-td">07/22/2014 - v-aliasname&ndash; 1255125551 &ndash; E08000BNDT &ndash; eoaHnAAAAAAAAAIA &ndash; O365E1 &ndash; Customer cancelled within 1st 30 days. Credit for the first month.</td>
+			</tr>
+			<tr class="sbody-tr">
+				<td class="sbody-td"><span class="text-base">Cancellation: (Direct) customer states they have never used the service</span></td>
+				<td class="sbody-td">Accidentally purchased a subscription</td>
+				<td class="sbody-td">07/22/2014 - v-aliasname&ndash; 1255125551 &ndash; E08000BNDT &ndash; eoaHnAAAAAAAAAIA &ndash; O365E1 &ndash; Customer cancelled within 90 days of purchase &ndash; never used the service. Credit for the amount billed to date.</td>
+			</tr>
+			<tr class="sbody-tr">
+				<td class="sbody-td"><span class="text-base">Cancellation: (Direct) billed after cancellation</span></td>
+				<td class="sbody-td">Billed after cancellation</td>
+				<td class="sbody-td">07/22/2014 - v-aliasname&ndash; 1255125551 &ndash; E08000BNDT &ndash; eoaHnAAAAAAAAAIA &ndash; O365E1 &ndash; Customer contacted Support to cancel on 7/1/14, but subscription was not cancelled. Credit for the amount billed since the 1st date customer requested cancellation.</td>
+			</tr>
+			<tr class="sbody-tr">
+				<td class="sbody-td"><span class="text-base">Cancellation: (Direct) Purchased incorrect subscription</span></td>
+				<td class="sbody-td">Accidentally purchased a subscription</td>
+				<td class="sbody-td">07/22/2014 - v-aliasname&ndash; 1255125551 &ndash; E08000BNDT &ndash; eoaHnAAAAAAAAAIA &ndash; O365E1- Customer purchased Small Business Premium, but only wanted Small Business. Credit for the price difference between the purchase of the intended subscription and the cancellation of the incorrect subscription for the time overlap.</td>
+			</tr>
+			<tr class="sbody-tr">
+				<td class="sbody-td"><span class="text-base">CPE</span></td>
+				<td class="sbody-td">System Error<br>
+				<br>
+				CPE-Misinformation or promise from Msft<br>
+				<br>
+				CPE-Did not understand the price/bill<br>
+				<br>
+				Dissatisfied with Product &ndash; Customer<br>
+				<br>
+				CPE-Technical reason (non-SLA)</td>
+				<td class="sbody-td">07/22/2014 - v-aliasname&ndash; 1255125551 &ndash; E08000BNDT &ndash; eoaHnAAAAAAAAAIA &ndash; O365E1- CPE credit 50% of full month billing for (choose one):
+				<ul class="sbody-free_list">
+					<li>poor support experience: Case&nbsp;# _________ on date ___ due to:
+					<ul class="sbody-free_list">
+						<li>delay in response to a technical escalation, or</li>
+						<li>upgrade grievances, or</li>
+						<li>customer is irate and threatening to leave the service</li>
+					</ul>
+					</li>
+					<li>identified/known bug</li>
+					<li>identified billing error</li>
+					<li>incorrect or lack of documentation from Microsoft Online help</li>
+				</ul>
+				</td>
+			</tr>
+			<tr class="sbody-tr">
+				<td class="sbody-td"><span class="text-base">Duplicate Order: (Direct) Customer accidentally ordered duplicate subscriptions</span></td>
+				<td class="sbody-td">Duplicate Order - CP</td>
+				<td class="sbody-td">07/22/2014 - v-aliasname&ndash; 1255125551 &ndash; E08000BNDT &ndash; eoaHnAAAAAAAAAIA &ndash; O365E1- Duplicate order: credit for the incorrect subscription for the full time of overlap (between the purchase of the intended subscription and the cancellation of the incorrect subscription).</td>
+			</tr>
+			<tr class="sbody-tr">
+				<td class="sbody-td"><span class="text-base">Duplicate Order: Customer migrating from a direct to VL subscription (credit for direct subs)</span></td>
+				<td class="sbody-td">Duplicate Order - CP</td>
+				<td class="sbody-td">07/22/2014 - v-aliasname&ndash; 1255125551 &ndash; E08000BNDT &ndash; eoaHnAAAAAAAAAIA &ndash; O365E1- Duplicate Order Credit for the Direct subscription from the Coverage Start Date of the VL subscription to the cancellation date of the Direct subscription.</td>
+			</tr>
+			<tr class="sbody-tr">
+				<td class="sbody-td"><span class="text-base">Fraud/unrecognized charge</span>
+				<ul class="sbody-free_list">
+					<li>Personal Information Fraud - Customer does not recognize the charge, does not have a Microsoft account or never approved the purchase.</li>
+					<li>Friendly Fraud -Customer did not approve the purchase but does have an account, and it&rsquo;s possible a guest or family member made the purchase.</li>
+					<li>Suspected fraud - Account was disabled due to suspected fraud, but was later re-enabled after no fraud was discovered.</li>
+				</ul>
+				</td>
+				<td class="sbody-td">Fraud/Unrecognized charge</td>
+				<td class="sbody-td">07/22/2014 - v-aliasname&ndash; 1255125551 &ndash; E08000BNDT &ndash; eoaHnAAAAAAAAAIA &ndash; O365E1 &ndash; Credit for number of days the subscription was disabled due to fraud when Fraud Ops team later determined no fraud occurred.</td>
+			</tr>
+			<tr class="sbody-tr">
+				<td class="sbody-td"><span class="text-base">SLA Credit</span></td>
+				<td class="sbody-td">SLA Credit</td>
+				<td class="sbody-td">07/22/2014 - v-aliasname&ndash; 1255125551 &ndash; E08000BNDT &ndash; eoaHnAAAAAAAAAIA &ndash; O365E1 &ndash; a 50% SLA credit for the Skype for Business Online (formally Lync Online)component of O365E1 for outage on 6/23/2014.</td>
+			</tr>
+			<tr class="sbody-tr">
+				<td class="sbody-td"><span class="text-base">Special Pricing</span><br>
+				&nbsp;
+				<ul class="sbody-free_list">
+					<li>Valid nonprofit, GPC (GOV tag in CMAT)&nbsp;or EDU</li>
+					<li>Price Match</li>
+					<li>MOSA pricing/amendments</li>
+					<li>Unique special pricing scenarios</li>
+				</ul>
+				</td>
+				<td class="sbody-td">
+				<p>Approved price reduction.<br>
+				PayOps. PayOps will apply credit.</p>
+
+				<p><strong>Note:</strong> For non-profit/GPC/EDU customers, advocates should proactively help them to proceed credit for their existing plans.</p>
+				</td>
+				<td class="sbody-td"><span class="text-base">N/A</span></td>
+			</tr>
+			<tr class="sbody-tr">
+				<td class="sbody-td"><span class="text-base">Tax Credit: Sales and tax exemptions</span></td>
+				<td class="sbody-td">Tax Credit<br>
+				<span class="text-base">Follow the procedure to apply credit in CMAT.</span></td>
+				<td class="sbody-td"><span class="text-base">N/A</span></td>
+			</tr>
+			<tr class="sbody-tr">
+				<td class="sbody-td"><span class="text-base">Tax Credit (VAT) for customer who did not previously enter their VAT ID</span></td>
+				<td class="sbody-td">Tax Credit<br>
+				<span class="text-base">See conditions, authorization threshold and procedure explained in</span><a href="/en-us/help/2849736" id="kb-link-11">2849736: Supporting Value-Added Tax and Tax Exemption </a>.</td>
+				<td class="sbody-td"><span class="text-base">N/A</span></td>
+			</tr>
+			<tr class="sbody-tr">
+				<td class="sbody-td"><span class="text-base">Tax Credit (VAT) for the difference between customer&rsquo;s local VAT rate and the Irish rate resulting from the April 2016 VAT change</span></td>
+				<td class="sbody-td">Tax Credit<br>
+				<span class="text-base">See conditions, authorization threshold and procedure explained in</span><a href="/en-us/help/2849736" id="kb-link-12">2849736: Supporting Value-Added Tax and Tax Exemption </a>.</td>
+				<td class="sbody-td">EU VAT rate change</td>
+			</tr>
+			<tr class="sbody-tr">
+				<td class="sbody-td"><span class="text-base">Tax Credit: Withholding tax (WHT) charged in error</span></td>
+				<td class="sbody-td">Withholding tax<br>
+				<br>
+				<span class="text-base">Do not</span><span class="text-base"></span><span class="text-base">apply credit. PayOps</span><span class="text-base">&nbsp;</span><span class="text-base">will apply credit.</span> PayOps needs to validate WHT credit forms and upload to WHT Tool.</td>
+				<td class="sbody-td"><span class="text-base">N/A</span></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</li>
+</ol>
+
+<p>&nbsp;</p>
+
+<div class="table-responsive">
+<table class="table">
+	<tbody>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base"><span class="sbody-italic">Scenario for <em><span lang="EN-US"><span><span>Dynamics 365</span></span></span></em>:</span></span></td>
+			<td class="sbody-td"><span class="sbody-italic"><span class="text-base">Credit </span><span class="text-base">Reason in CMAT</span></span></td>
+			<td class="sbody-td">&nbsp;</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">Duplicate Order/Purchase</span></td>
+			<td class="sbody-td">Duplicate Order - CP</td>
+			<td class="sbody-td">07/22/2014 - v-aliasname&ndash; 1255125551 &ndash; E08000BNDT &ndash; eoaHnAAAAAAAAAIA &ndash; <span lang="EN-US"><span><span>Dynamics 365</span></span></span> - Duplicate order: credit for the incorrect subscription for the full time of overlap (between the purchase of the intended subscription and the cancellation of the incorrect subscription).</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">Cancellation</span></td>
+			<td class="sbody-td">Special/Exceptional Circumstances</td>
+			<td class="sbody-td">Select one of the cancellation examples from the Office 365/Intune table.</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">CPE</span></td>
+			<td class="sbody-td">Special/Exceptional Circumstances</td>
+			<td class="sbody-td">07/22/2014 - v-aliasname&ndash; 1255125551 &ndash; E08000BNDT &ndash; eoaHnAAAAAAAAAIA &ndash; <span lang="EN-US"><span><span>Dynamics 365</span></span></span> CPE credit for <span class="sbody-italic">(</span><span class="sbody-italic">choose one</span><span class="sbody-italic">):</span>
+			<ul class="sbody-free_list">
+				<li>poor support experience: Case # _________ on date _________ due to:</li>
+				<li>
+				<ul class="sbody-free_list">
+					<li>delay in response to a technical escalation, or</li>
+					<li>upgrade grievances, or</li>
+					<li>customer is irate and threatening to leave the service</li>
+				</ul>
+				</li>
+			</ul>
+
+			<ul class="sbody-free_list">
+				<li>identified/known bug</li>
+				<li>billing error</li>
+				<li>lack of documentation from Microsoft Online help</li>
+			</ul>
+			</td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">Special Pricing</span></td>
+			<td class="sbody-td">Approved price reduction.<br>
+			<br>
+			<span class="text-base">Do not&nbsp;</span><span class="text-base"></span><span class="text-base">apply credit. PayOps</span><span class="text-base">&nbsp;will apply credit.</span> Special Pricing is due to a Microsoft Online Services Agreement (MOSA) amendment which needs to be validated by PayOps or due to a Business Group (BG)-approved discount which needs to be applied by PayOps.</td>
+			<td class="sbody-td"><span class="text-base">N/A</span></td>
+		</tr>
+		<tr class="sbody-tr">
+			<td class="sbody-td"><span class="text-base">SLA Credit</span></td>
+			<td class="sbody-td">SLA Credit</td>
+			<td class="sbody-td">07/22/2014 - v-aliasname&ndash; 1255125551 &ndash; E08000BNDT &ndash; eoaHnAAAAAAAAAIA &ndash; <span lang="EN-US"><span><span>Dynamics 365</span></span></span> &ndash; a 50% SLA credit for <span lang="EN-US"><span><span>Dynamics 365</span></span></span> for outage on 6/23/2014.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p><br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a></p>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>
+<a class="bookmark" id="sample"></a>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text"><span class="bold btn-link"><strong>Instructions</strong>: Send an email like the example template to the approver and copy the requester.</span></span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<div class="kb-collapsible kb-collapsible-collapsed"><strong>Email template</strong>&nbsp;<br>
+<br>
+<span class="text-base">From:</span> Universal Store Tooling [<a href="mailto:storetools@email.microsoftonline.com" id="kb-link-13" target="_self">mailto:storetools@email.microsoftonline.com</a>]<br>
+<span class="text-base">Sent:</span> Wednesday, May 11, 2016, 9:20 AM<br>
+<span class="text-base">To:</span> approver alias<br>
+<span class="text-base">Cc:</span> requester alias<br>
+<span class="text-base">Subject:</span> Pending CMAT credit/refund request for your review (Case# 1234)<br>
+<a href="mailto:saraso@microsoft.com" id="kb-link-14" target="_self">{approver_name}@microsoft.com</a>,
+
+<p>&nbsp;</p>
+
+<p><span><span><span><span><span>Hi &lt;approver first name&gt;,</span></span></span></span></span></p>
+<span><span><span><span>You&rsquo;ve received this email from Microsoft 365 subscription support because &lt;requester name&gt;@microsoft.com submitted a credit/refund request in CMAT for your review.<br>
+<br>
+Here&rsquo;s a summary of the request:</span></span></span></span><br>
+<br>
+Operation: Refund Transaction<br>
+Credit/refund amount: 727320 RUB<br>
+Credit/refund reason: Accidentally purchased a subscription<br>
+Credit/refund option: Refund to billing account<br>
+Comments: test<br>
+<br>
+Customer name: Craig eDogTest<br>
+Tenant GUID: ac621c0f-a63b-4e64-bfd5-8316f3f96077<br>
+Email Identity: N/A<br>
+<br>
+Order ID: b9c52fe8-843b-49ad-bec5-3e8b29054dbc<br>
+Invoice ID: E030060XIQ<br>
+Subscription name: Exchange Online Protection<br>
+SKU: AAA-03115<br>
+Payment instrument: InvoicePay<br>
+Pretax amount: -727320.00 RUB<br>
+Tax amount: 0.00 RUB<br>
+Total amount: -727320.00 RUB<br>
+<br>
+Case number: 1234<br>
+Request date: true
+<p>&nbsp;</p>
+
+<p><span><span><span><span><span>For additional details, open this <em>link</em>, or check &ldquo;pending&rdquo; requests assigned to you on CMAT &ldquo;Requests&rdquo; page. Once you approve/reject the request, CMAT will process the credit/refund accordingly.</span></span></span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span><span><span><span><span>Thanks,</span></span></span></span></span></p>
+
+<p><span><span><strong><span><span><span>First and Last Name</span></span></span></strong></span></span></p>
+
+<p><span><span><span><span><span>Microsoft Customer Service and Support</span></span></span></span></span></p>
+
+<p><span><span><span><span><span>Phone Number</span></span></span></span></span></p>
+<span><span><span><span>Email address</span></span></span></span></div>
+</div>
+</div>
+</div>
+<br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a>
+
+<h3 class="sbody-h3">4. Exceptions <a class="bookmark" id="exceptions"></a></h3>
+&nbsp;&nbsp;<span>Tax credits. Tax credits, </span><span class="sbody-italic">except VAT credits</span><span>, must be applied by PayOps.</span><br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a><br>
+<br>
+&nbsp;
+<h3 class="sbody-h3">5. Supporting documents <a class="bookmark" id="suppdocs"></a></h3>
+
+<div class="indent"><a data-content-id="" data-content-type="" href="/en-us/help/3078460" id="kb-link-15" managed-link="" target="_blank">3078460: Processing a credit request due to a service outage for Direct and Prepaid customer&nbsp;</a><br>
+<a data-content-id="" data-content-type="" href="/en-us/help/2778091" id="kb-link-16" managed-link="" target="_blank">2778091: How to escalate a case&nbsp;to Tier 3, Engineering</a><br>
+<span><span><span><span><a href="https://internal.support.services.microsoft.com/en-us/help/4564762" target="_blank"><span><span><span><span>4564762: Informational: M365: Assistance Request V2 for Broad Commercial support</span></span></span></span></a></span></span></span></span><a data-content-id="" data-content-type="" href="/en-us/help/2778091" managed-link="" target="_blank"> </a></div>
+
+<p><br>
+<a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a></p>
+
+<p><a id="version" name="version"></a></p>
+
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">6. Version history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/122047" managed-link="" target="_blank">122047</a></td>
+			<td>Email address update.</td>
+			<td>August 17, 2020</td>
+		</tr>
+		<tr>
+			<td><span><span><span><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/120215" managed-link="" target="_blank">120215</a></span></span></span></td>
+			<td><span><span><span>Updated POC names.</span></span></span></td>
+			<td>July 10, 2020</td>
+		</tr>
+		<tr>
+			<td><a aria-live="assertive" data-bi-name="content-anchor-link" data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/119894" managed-link="" tabindex="0" target="_blank">119894</a></td>
+			<td>Replace escalation center with assistance request</td>
+			<td>June 19, 2020</td>
+		</tr>
+		<tr>
+			<td><a href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/116590">116590</a></td>
+			<td>Updated customer facing email template.</td>
+			<td>April 13, 2020</td>
+		</tr>
+		<tr>
+			<td>112609</td>
+			<td>January 10, 2020</td>
+			<td>Updated article with new table of the credit approval workflow and updated the section under refund transactions #9 to include BG/SAFE Approver Name.</td>
+		</tr>
+		<tr>
+			<td>111006</td>
+			<td>December 12, 2019</td>
+			<td><span lang="EN-US"><span><span>Article title update and term changes.</span></span></span></td>
+		</tr>
+		<tr>
+			<td>111266</td>
+			<td>December 2, 2019</td>
+			<td>Updated the reference article title of&nbsp;2812902.<br>
+			Converted the pictures to image Assets.</td>
+		</tr>
+		<tr>
+			<td>108564</td>
+			<td>October 14, 2019</td>
+			<td><span lang="EN-US">Updated T3 approver in article 2996655.</span></td>
+		</tr>
+		<tr>
+			<td>105087</td>
+			<td>August 9, 2019</td>
+			<td><span lang="EN-US">Updated Dynamics 365 Credit </span><span lang="EN-US">limit</span><span lang="EN-US">. Updated CRM to Dynamics 365.</span></td>
+		</tr>
+		<tr>
+			<td>99894</td>
+			<td>March 27, 2019</td>
+			<td>Add &ldquo;Speak Up&rdquo; to all Commerce articles.</td>
+		</tr>
+		<tr>
+			<td>93709</td>
+			<td>March 19, 2019</td>
+			<td>Updated &ldquo;GOV&rdquo; to &ldquo;GPC (GOV tag in CMAT)&rdquo;.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p class="sbody-h3"><a bookmark-id="toc" href="#toc" managed-link="" target="">Back to the top</a></p>
+</div>
+<div class="kb-securedata-section section">Author ID (email alias): v-kebro, v-sassa<br>
+Writer ID (email alias): v-maqiu, a-fllic, a-misau<br>
+SME ID (email alias): anelson<br>
+Contributor ID (email alias):</div>

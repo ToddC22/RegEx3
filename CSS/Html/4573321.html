@@ -1,0 +1,400 @@
+﻿<header><h1>Procedure: M365TS: Guidance for providing Static VPN to Microsoft 365 Apps for enterprise administrators</h1></header><p><span asset="4462485" contenteditable="false" props="{&quot;size&quot;:&quot;full&quot;}" unselectable="on">[Asset 4462485]</span></p>
+
+<p><span><strong><span><span><span>Who should use this article?</span></span></span></strong></span></p>
+
+<ul>
+	<li>Office 365 Technical Support.</li>
+</ul>
+
+<p><span><strong><span><span><span>What is this article about?</span></span></span></strong></span></p>
+
+<ul>
+	<li><span><span><span>On July 14, 2020, Microsoft releases Version 2002 to the Semi-Annual Enterprise Channel. This update is approximately 400MB, which is significantly larger than the security-only updates during the last few months.</span></span></span></li>
+	<li><span><span><span>If an Enterprise has a significant number of users working from home and using a Virtual Private Network (VPN), the VPN might be put under increased stress during the update.</span></span></span></li>
+	<li><span><span><span>Customers are advised to follow the outline provided in Message Center Post MC216410 or MC216441 which promotes two options: Split tunnel or management of remote machines with cloud management gateway.</span></span></span></li>
+	<li><span><span><span>If either of these two options are not viable or the customers VPN is under stress and overloaded, a mitigation plan is available to these customers. This mitigation plan requires tracking who receives the information.</span></span></span></li>
+</ul>
+
+<p><span><strong><span><span><span><a id="top" name="top"></a>Table of contents</span></span></span></strong></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td><a bookmark-id="Procedure" href="#Procedure" managed-link="">Procedure &ndash; Office 365 Technical Support</a>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a bookmark-id="Customer facing Communication" href="#Customer facing Communication" managed-link="">Customer facing Communication</a></td>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a bookmark-id="FAQ – Office 365 Technical Support" href="#FAQ – Office 365 Technical Support" managed-link="">FAQ &ndash; Office 365 Technical Support</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><a bookmark-id="Content to provide to the customer" href="#Content to provide to the customer" managed-link="">Content to provide to the customer</a></td>
+			<td>
+			<p><a bookmark-id="How to bypass the VPN tunnel for updates to Microsoft 365 Apps" href="#How to bypass the VPN tunnel for updates to Microsoft 365 Apps" managed-link=""><span><span><span><span>How to bypass the VPN tunnel for updates to Microsoft 365 Apps</span></span></span></span></a></p>
+
+			<p><a bookmark-id="Configure Microsoft 365 Apps Updates" href="#Configure Microsoft 365 Apps Updates" managed-link=""><span><span><span><span>Configure Microsoft 365 Apps Updates</span></span></span></span></a></p>
+
+			<p><a bookmark-id="Change the update path with Group Policy" href="#Change the update path with Group Policy" managed-link=""><span><span><span><span>Change the update path with Group Policy </span></span></span></span></a></p>
+
+			<p><a bookmark-id="Change the update path with the Office Deployment Tool" href="#Change the update path with the Office Deployment Tool" managed-link=""><span><span><span><span>Change the update path with the Office Deployment Tool (ODT) </span></span></span></span></a></p>
+
+			<p><a bookmark-id="ODT Examples" href="#ODT Examples" managed-link=""><span><span><span><span>ODT Examples </span></span></span></span></a></p>
+
+			<p><a bookmark-id="List of static UpdatePath URLs" href="#List of static UpdatePath URLs" managed-link=""><span><span><span><span>List of static UpdatePath URLs </span></span></span></span></a></p>
+
+			<p><a bookmark-id="Configure VPN" href="#Configure VPN" managed-link=""><span><span><span><span>Configure VPN </span></span></span></span></a></p>
+
+			<p><a bookmark-id="Configure your VPN with the Microsoft 365 Apps update exclusion routes" href="#Configure your VPN with the Microsoft 365 Apps update exclusion routes" managed-link=""><span><span><span><span>Configure your VPN with the Microsoft 365 Apps update exclusion routes</span></span></span></span></a></p>
+			<a bookmark-id="FAQ" href="#FAQ" managed-link=""><span><span><span>FAQ</span></span></span></a></td>
+		</tr>
+		<tr>
+			<td><a bookmark-id="Change History" href="#Change History" managed-link=""><span><span><span><span><span><span>Change History</span></span></span> </span></span></span></a></td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span> </span></p>
+
+<h3><strong><span><span><span><span><a id="Procedure" name="Procedure"></a>Procedure &ndash; Office 365 Technical Support</span></span></span></span></strong></h3>
+
+<p><span><span><span>Customers must fall into one of the following scenarios:</span></span></span></p>
+
+<ul>
+	<li><span><span><span>They are unable to manage remote machines with cloud management gateway in order to reduce the impact of the Version 2002 Office Update on their network.</span></span></span></li>
+	<li><span><span><span>They are using a </span></span></span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/office365/enterprise/office-365-vpn-implement-split-tunnel#1-vpn-forced-tunnel" managed-link="" target="_blank">VPN Forced Tunnel</a><span><span><span> configuration.</span></span></span></li>
+	<li><span><span><span>Their VPN is already stressed and overloaded due to the July 14 Version 2002 Office Update release.</span></span></span></li>
+</ul>
+
+<p><span><span><span>The information in this article does not apply to customers who have already configured their </span></span></span><a data-content-id="" data-content-type="" href="https://docs.microsoft.com/office365/enterprise/office-365-vpn-implement-split-tunnel#4-vpn-selective-tunnel" managed-link="" target="_blank">VPN with selective tunnel</a><span><span><span>.</span></span></span></p>
+
+<p><span><span><span>For all situations, tag the Rave Case with <strong>#OfficeJulySACVPNBandwidth.</strong></span></span></span></p>
+
+<p><span><span><span>Provide the customer with the content at the end of this article:<em> <a bookmark-id="How to bypass the VPN tunnel for updates to Microsoft 365 Apps" href="#How to bypass the VPN tunnel for updates to Microsoft 365 Apps" managed-link=""><span><span><span><span>How to bypass the VPN tunnel for updates to Microsoft 365 Apps</span></span></span></span></a></em>.</span></span></span></p>
+
+<p><span><span><span>Add the case number and the number of seats to this VSO item to track who receives the guidance. This allows us to track who we&rsquo;ve provided the information so we can contact them in the future when we make a more permanent solution available later this year.</span></span></span></p>
+
+<p><span><span><span>The content is confidential to the customer. They cannot share it with others or publish the solution on the Internet.</span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><strong><span><span><span><span><a id="Customer facing Communication" name="Customer facing Communication"></a>Customer facing Communication</span></span></span></span></strong></h3>
+
+<p><span><span><span>Message Center Post (MC216410 or MC216441) was sent to the top 1500 tenants on June 25, 2020. The same text was used in both posts.</span></span></span></p>
+
+<p><strong><span><span><span>Title: Potential VPN Impact during July SAC Update</span></span></span></strong></p>
+
+<p><span><span><span><span>We want to make you aware of a potential issue that may occur if a significant portion of your Microsoft 365 Apps users are working from home and using a VPN at the time of the next Semi-Annual Enterprise feature update that will start rolling out on July 14, 2020. The next update for Semi-Annual Enterprise Channel is approximately 400 MB, which is significantly larger than the security-only updates during the last few months. Note that the size of the July feature update is similar to previous feature update, and should only be of concern if a large portion of your users are in a remote work scenario using VPN connections. We know that many of you continue to support your employees for expanded remote work scenarios, so we wanted to proactively highlight this upcoming release for your consideration and planning.</span></span></span></span></p>
+
+<p><span><span><strong><span><span>How this affects your organization</span></span></strong></span></span></p>
+
+<p><span><span><span><span>Due to the size of the feature update and because many organizations have more remote workers using VPN solutions at this time, your VPN might be put under increased stress during the update.</span></span></span></span></p>
+
+<p><span><span><span><span>To reduce the impact on your network, you should consider taking one of the following actions in advance of the July 14 feature update.</span></span></span></span></p>
+
+<p><span><span><span><span>To free up capacity on your VPN for the Microsoft 365 update and improve performance for Microsoft 365 overall, reduce the Microsoft 365 traffic load on your VPN by configuring your VPN as a split tunnel that routes certain Microsoft 365 traffic directly to the Internet. For more information, see <a data-content-id="" data-content-type="" href="https://docs.microsoft.com/en-us/Office365/Enterprise/office-365-vpn-split-tunnel" managed-link="" target="_blank">Optimize Office 365 connectivity for remote users</a>.</span></span></span></span></p>
+
+<p><span><span><span><span>Use a cloud management gateway to host and deliver the Microsoft 365 Apps update. For more information, see <a data-content-id="" data-content-type="" href="https://techcommunity.microsoft.com/t5/configuration-manager-blog/managing-remote-machines-with-cloud-management-gateway-in/ba-p/1233895" managed-link="" target="_blank">Managing remote machines with cloud management gateway</a>.</span></span></span></span></p>
+
+<p><span><span><span><span>If you receive updates directly from Microsoft, we are adjusting the update rollout with smaller gradual increments to help reduce the chance of problems, but you should not rely on this to completely eliminate risks to your VPN.</span></span></span></span></p>
+
+<p><span><span><strong><span><span>What you need to do to prepare</span></span></strong></span></span></p>
+
+<p><span><span><span><span>Review the resources provided and assess the situation for your organization. If your organization is unable to mitigate the risk to your VPN and you would like to receive further support or additional options for your situation, please contact your Technical Account Manager or other Microsoft representative. Microsoft is working on additional options that we will communicate as they become available.</span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<h3><span><span><strong><span><span><a id="FAQ – Office 365 Technical Support" name="FAQ – Office 365 Technical Support"></a>FAQ for Office 365 Technical Support </span></span></strong></span></span></h3>
+
+<p><span><span><strong><span><span>Q:</span></span></strong><span><span> Is the July Semi-Annual Enterprise Channel larger than a typical update? </span></span></span></span></p>
+
+<p><span><span><strong><span><span>A:</span></span></strong><span><span> The size of the July SAC version update is similar to prior version updates. For example, the January update to 1908 was 338 MB. What is different is that many organizations now have a large portion of users working remotely and thus are obtaining updates over a VPN connection. If users have returned to work in the office, this is a normal version update. However, if you have many users working remotely, the size of this update may create issues for VPN connections. </span></span></span></span></p>
+
+<p><span><span><strong><span><span>Q:</span></span></strong><span><span> Why is the static CDN option being made available at this time? </span></span></span></span></p>
+
+<p><span><span><strong><span><span>A:</span></span></strong><span><span> Microsoft is providing this option to minimize potential impacts of the update while many organizations are facing a high percentage of remote users. </span></span></span></span></p>
+
+<p><span><span><strong><span><span>Q: </span></span></strong><span><span>How long will the static CDN solution be available? </span></span></span></span></p>
+
+<p><span><span><strong><span><span>A: </span></span></strong><span><span>The static CDN solution will be durable. You should expect this IP addresses to remain consistent and when a publicly available solution is provided, you can move to the solution when ready. </span></span></span></span></p>
+
+<h3><strong><span><span><span><a id="Content to provide to the customer" name="Content to provide to the customer"></a>Content to provide to the customer</span></span></span></strong></h3>
+
+<p><span><span><span>Copy the following content into the case to provide to the customer.</span></span></span></p>
+
+<p><span><span><strong><span><span><a id="How to bypass the VPN tunnel for updates to Microsoft 365 Apps" name="How to bypass the VPN tunnel for updates to Microsoft 365 Apps"></a>How to bypass the VPN tunnel for updates to Microsoft 365 Apps </span></span></strong></span></span></p>
+
+<p><span><span> </span></span></p>
+
+<p><span><span><span><span>If your organization uses a VPN to support remote workers, the steps in this article can help you bypass the VPN for updates to Microsoft 365 Apps. Instead of using the VPN connection, the client devices can connect directly to the Office Content Delivery Network (CDN) to download the updates. By bypassing the VPN, you can reduce the load on your VPN network. This article is shared to our customers who require this support and should not be shared outside of your company. </span></span></span></span></p>
+
+<p><span><span><span><span>NOTE: If your VPN is already configured as </span></span><a href="https://docs.microsoft.com/office365/enterprise/office-365-vpn-implement-split-tunnel#4-vpn-selective-tunnel" target="_blank"><span><span><span>VPN with selective tunnel</span></span></span></a><span><span>, then your client devices are already bypassing the VPN when receiving updates. No action is required in this case. If you&#39;re in doubt, consult with your network team to verify whether your organization uses a </span></span><a href="https://docs.microsoft.com/office365/enterprise/office-365-vpn-implement-split-tunnel#1-vpn-forced-tunnel" target="_blank"><span><span><span>VPN Forced Tunnel</span></span></span></a><span><span> configuration and should apply the steps detailed in this article. </span></span></span></span></p>
+
+<p><span><span> </span></span></p>
+
+<p><span><span><span><span>To make it easier to specify the exceptions, we have provided a new URL for the Office CDN. Unlike the previous URL, this new one uses only a small number of IP addresses, all of them are static. Except for this change, the new URL functions the same as the previous one. </span></span></span></span></p>
+
+<p><span><span><span><span>To bypass the VPN for your Office updates, you change the update path for your updates to the new URL and then add the IP addresses to your VPN exceptions. </span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<p><span><span><strong><span><span><a id="Configure Microsoft 365 Apps Updates" name="Configure Microsoft 365 Apps Updates"></a>Configure Microsoft 365 Apps Updates </span></span></strong></span></span></p>
+
+<p><span><span><span><span>First configure the update location to a new static CDN location. You can use the one of the following options to define the update location. </span></span></span></span></p>
+
+<p><span><span><em><span><span>IMPORTANT</span></span></em> </span></span></p>
+
+<p><span><span><span><span>In order to use the new URL, your client devices must receive updates automatically from the Office CDN. For more information, see </span></span><a href="https://docs.microsoft.com/en-us/deployoffice/manage-microsoft-365-apps-updates-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager" target="_blank"><span><span><span>Enable Office 365 clients to receive updates from the Office CDN instead of Configuration Manager</span></span></span></a><span><span>. </span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<p><span><span><strong><span><span><a id="Change the update path with Group Policy" name="Change the update path with Group Policy"></a>Change the update path with Group Policy </span></span></strong></span></span></p>
+
+<ol>
+	<li><span><span><span><span>Before you begin, make sure the scheduled task &quot;Office Automatic Update 2.0&quot; is enabled on the client devices. This task is a required part of managing updates for Microsoft 365 Apps. </span></span></span></span></li>
+	<li><span><span><span><span>Determine which new URL you should use for the Office CDN. There are six new values, one for each update channel. The values are listed <a bookmark-id="List of static UpdatePath URLs" href="#List of static UpdatePath URLs" managed-link=""><u><span>below</span></u></a>. Make sure to select the value that corresponds to the update channel you want to use. </span></span></span></span></li>
+	<li><span><span><span><span>Use the </span></span><a href="https://www.microsoft.com/download/details.aspx?id=49030" target="_blank"><span><span><span>Group Policy Administrative Template files (ADMX/ADML) for Office</span></span></span></a><span><span> to set the Group Policy setting **Update Path** to the new URL value. The policy setting is under Computer Configuration\Policies\Administrative Templates\\Microsoft Office 2016 (Machine)\\Updates. </span></span></span></span></li>
+	<li><span><span><span><span>Link the updated policy to the OU with the devices whose update path you want to change. If you have a mix of update channels in your environment, you have to create a dedicated policy for each update channel. </span></span></span></span></li>
+	<li><span><span><span><span>By default, Group Policy refreshes in the background every 90 minutes. If you want to refresh policy assignment immediately (for example, if you&#39;re testing in a lab environment), you can use the gpupdate command. For more information, see </span></span><a href="https://docs.microsoft.com/windows-server/administration/windows-commands/gpupdate" target="_blank"><span><span><span>gpupdate</span></span></span></a><span><span>. </span></span></span></span></li>
+</ol>
+
+<p><span><span><span><span>After the policy has been applied, the Office Automatic Update 2.0 task must run. When that task runs, it detects the updated policy and updates the path. </span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<p><span><span><strong><span><span><a id="Change the update path with the Office Deployment Tool" name="Change the update path with the Office Deployment Tool"></a>Change the update path with the Office Deployment Tool (ODT) </span></span></strong></span></span></p>
+
+<p><span><span><span><span>If you have a group policy defined, it takes priority over changes made by the ODT. We recommend using the ODT only if you do not use group policy to define the update method. </span></span></span></span></p>
+
+<ol>
+	<li><span><span><span><span>Before you begin, make sure the scheduled task &quot;Office Automatic Update 2.0&quot; is enabled on the client devices. This task is a required part of managing updates for Microsoft 365 Apps.</span></span></span></span></li>
+	<li><span><span><span><span>Download the latest version of the ODT (setup.exe) from the </span></span></span><a href="https://go.microsoft.com/fwlink/p/?LinkID=626065" target="_blank"><span><span><span>Microsoft Download Center</span></span></span></a><span><span><span> and extract it. </span></span></span></span></li>
+	<li><span><span><span><span>Determine which new URL you should use for the Office CDN. There are six new values, one for each update channel. The values are listed <a bookmark-id="List of static UpdatePath URLs" href="#List of static UpdatePath URLs" managed-link=""><span>below</span></a>. Make sure to select the value that corresponds to the update channel you want to use. </span></span></span></span></li>
+	<li><span><span><span><span>Create a configuration file that specifies the new update path, as shown in the examples below. </span></span></span></span></li>
+	<li><span><span><span><span>Use your standard deployment processes to execute `setup /configure configuration.xml` on each device. Adjust the name of the configuration file to the actual name. You don&#39;t need to close the Office applications to apply these changes. </span></span></span></span></li>
+</ol>
+
+<p><span><span><span><span>After the ODT has executed, the Office Automatic Update 2.0 task must run. The task will detect the change and update the path. </span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<p><span><span><strong><span><span><a id="ODT Examples" name="ODT Examples"></a>ODT Examples </span></span></strong></span></span></p>
+
+<p><span><span><span><span>These examples allow a device to bypass the VPN tunnel, as long as the IP addresses below have been added to the list of exceptions. Because Display Level is set to None, the ODT makes the update without displaying anything to the user on the client device. </span></span></span></span></p>
+
+<p><span><span><em><span><span><span>Semi-Annual Enterprise Channel </span></span></span></em></span></span></p>
+
+<p><span><span><span><span>&lt;Configuration&gt; </span></span></span></span></p>
+
+<p><span><span><span><span>&lt;Updates <span>Enabled</span>=<span>&quot;TRUE&quot;</span> <span>UpdatePath</span><span>=</span><span>&quot;http://static.officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114&quot; </span>/&gt; </span></span></span></span></p>
+
+<p><span><span><span><span>&lt;Display <span>Level</span>=<span>&quot;None&quot;</span> /&gt; </span></span></span></span></p>
+
+<p><span><span><span><span>&lt;/Configuration&gt; </span></span></span></span></p>
+
+<p><span><span> </span></span></p>
+
+<p><span><span><em><span><span><span>Monthly Enterprise Channel </span></span></span></em></span></span></p>
+
+<p><span><span><span><span>&lt;Configuration&gt; </span></span></span></span></p>
+
+<p><span><span><span><span>&lt;Updates <span>Enabled</span>=<span>&quot;TRUE&quot;</span> <span>UpdatePath</span>=<span>&quot;http://static.officecdn.microsoft.com/pr/55336b82-a18d-4dd6-b5f6-9e5095c314a6&quot; </span>/&gt; </span></span></span></span></p>
+
+<p><span><span><span><span>&lt;Display <span>Level</span>=<span>&quot;None&quot; </span>/&gt; </span></span></span></span></p>
+
+<p><span><span><span><span>&lt;/Configuration&gt; </span></span></span></span></p>
+
+<p><span><span> </span></span></p>
+
+<p><span><span><em><span><span><span>Current Channel </span></span></span></em></span></span></p>
+
+<p><span><span><span><span>&lt;Configuration&gt; </span></span></span></span></p>
+
+<p><span><span><span><span>&lt;Updates <span>Enabled</span>=<span>&quot;TRUE&quot;</span> <span>UpdatePath</span>=<span>&quot;http://static.officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60&quot; </span>/&gt; </span></span></span></span></p>
+
+<p><span><span><span><span>&lt;Display <span>Level</span>=<span>&quot;None&quot; </span>/&gt; </span></span></span></span></p>
+
+<p><span><span><span><span>&lt;/Configuration&gt; </span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<p><span><span><strong><span><span><a id="List of static UpdatePath URLs" name="List of static UpdatePath URLs"></a>List of static UpdatePath URLs </span></span></strong></span></span></p>
+
+<p><span><span><span><span>These values are required inputs to define the Microsoft 365 Apps update location, which are applied via Group Policy or via the Office Deployment Tool. Make sure to select the value that corresponds to the update channel you want to use. </span></span></span></span></p>
+
+<table class="table">
+	<tbody>
+		<tr>
+			<td width="269">
+			<p><span><span><strong><span><span><span>Update Channel </span></span></span></strong> </span></span></p>
+			</td>
+			<td width="353">
+			<p><span><span><strong><span><span><span>Value for UpdatePath </span></span></span></strong> </span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="269">
+			<p><span><span><span><span><span>Beta Channel </span></span></span></span></span></p>
+			</td>
+			<td width="353">
+			<p><span><span><span><a href="http://static.officecdn.microsoft.com/pr/5440fd1f-7ecb-4221-8110-145efaa6372f" target="_blank"><span><span><span>http://static.officecdn.microsoft.com/pr/5440fd1f-7ecb-4221-8110-145efaa6372f</span></span></span></a></span> </span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="269">
+			<p><span><span><span><span>Current Channel (Preview) </span></span></span></span></p>
+			</td>
+			<td width="353">
+			<p><span><span><a href="http://static.officecdn.microsoft.com/pr/64256afe-f5d9-4f86-8936-8840a6a4f5be" target="_blank"><span><span><span>http://static.officecdn.microsoft.com/pr/64256afe-f5d9-4f86-8936-8840a6a4f5be</span></span></span></a> </span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="269">
+			<p><span><span><span><span><span>Current Channel </span></span></span></span></span></p>
+			</td>
+			<td width="353">
+			<p><span><span><span><a href="http://static.officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60" target="_blank"><span><span><span>http://static.officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60</span></span></span></a></span> </span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="269">
+			<p><span><span><span><span>Monthly Enterprise Channel </span></span></span></span></p>
+			</td>
+			<td width="353">
+			<p><span><span><a href="http://static.officecdn.microsoft.com/pr/55336b82-a18d-4dd6-b5f6-9e5095c314a6" target="_blank"><span><span><span>http://static.officecdn.microsoft.com/pr/55336b82-a18d-4dd6-b5f6-9e5095c314a6</span></span></span></a> </span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="269">
+			<p><span><span><span><span><span>Semi-Annual Enterprise Channel (Preview) </span></span></span></span></span></p>
+			</td>
+			<td width="353">
+			<p><span><span><span><a href="http://static.officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf" target="_blank"><span><span><span>http://static.officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf</span></span></span></a></span> </span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="269">
+			<p><span><span><span><span>Semi-Annual Enterprise Channel </span></span></span></span></p>
+			</td>
+			<td width="353">
+			<p><span><span><a href="http://static.officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114" target="_blank"><span><span><span>http://static.officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114</span></span></span></a> </span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<p><span><span><strong><span><span><a id="Configure VPN" name="Configure VPN"></a>Configure VPN </span></span></strong></span></span></p>
+
+<p><span><span><span><span>In this section, you will configure your VPN solution to allow the Microsoft 365 Apps updates to bypass your VPN. You must also complete the prior section to configure the update location. </span></span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<p><span><span><strong><span><span><a id="Configure your VPN with the Microsoft 365 Apps update exclusion routes" name="Configure your VPN with the Microsoft 365 Apps update exclusion routes"></a>Configure your VPN with the Microsoft 365 Apps update exclusion routes </span></span></strong></span></span></p>
+
+<p><span><span><span><span>NOTE: Before making any changes to your VPN, we recommend reviewing the implementation details described in </span></span><a href="https://docs.microsoft.com/en-us/office365/enterprise/office-365-vpn-implement-split-tunnel#implement-vpn-split-tunneling" target="_blank"><span><span><span>Implementing VPN split Tunneling for Office 365</span></span></span></a><span><span>. The data in this document can be used to optimize the update traffic in the same way as the article outlines how to do so for the Office 365 endpoints. </span></span></span></span></p>
+
+<p><span><span> </span></span></p>
+
+<p><span><span><span><span>You&rsquo;ll need two pieces of information to implement a forced tunnel exception for the update traffic. </span></span></span></span></p>
+
+<ol>
+	<li>
+	<p>FQDN information for use in PAC files to send the traffic &lsquo;DIRECT&rsquo; rather than to a proxy <a href="https://static.officecdn.microsoft.com/" target="_blank">https://static.officecdn.microsoft.com.</a></p>
+
+	<p>Updating the PAC file with the above FQDN using a shExpMatch rule is all that is needed, e.g.: if shExpMatch (host, &quot;static.officecdn.microsoft.com&quot;) returns &quot;DIRECT&quot;.</p>
+	</li>
+</ol>
+
+<ol start="2">
+	<li><span><span><span><span>Update your VPN configuration with following exclusion routes, all of which are associated with the new FQDN for the Office CDN listed above. Guidance on how to implement forced tunnel exceptions for many common VPN solutions can be found in the VPN article listed above. </span></span></span></span>
+
+	<p><span><span><span><span>23.1.35.109 </span></span></span></span></p>
+
+	<p><span><span><span><span>23.1.99.107 </span></span></span></span></p>
+
+	<p><span><span><span><span>23.1.106.110 </span></span></span></span></p>
+
+	<p><span><span><span><span>104.109.10.106 </span></span></span></span></p>
+
+	<p><span><span><span><span>104.109.11.106 </span></span></span></span></p>
+
+	<p><span><span><span><span>104.109.12.106 </span></span></span></span></p>
+
+	<p><span><span><span><span>184.25.103.106 </span></span></span></span></p>
+
+	<p><span><span><span><span>184.25.179.109 </span></span></span></span></p>
+
+	<p><span><span><span><span>184.31.3.107 </span></span></span></span></p>
+
+	<p><span><span><span><span>184.31.10.110 </span></span></span></span></p>
+	<a href="https://static.officecdn.microsoft.com/" target="_blank"> </a></li>
+</ol>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+
+<p><span><span><strong><span><span><a id="FAQ" name="FAQ"></a>FAQ </span></span></strong></span></span></p>
+
+<p><span><span><strong><span><span>Q:</span></span></strong><span><span> Is the July Semi-Annual Enterprise Channel larger than a typical update? </span></span></span></span></p>
+
+<p><span><span><strong><span><span>A:</span></span></strong><span><span> The size of the July SAC version update is similar to prior version updates. For example, the January update to 1908 was 338 MB. What is different is that many organizations now have a large portion of users working remotely and thus are obtaining updates over a VPN connection. If users have returned to work in the office, this is a normal version update. However, if you have many users working remotely, the size of this update may create issues for VPN connections. </span></span></span></span></p>
+
+<p><span><span><strong><span><span>Q:</span></span></strong><span><span> Why is the static CDN option being made available at this time? </span></span></span></span></p>
+
+<p><span><span><strong><span><span>A:</span></span></strong><span><span> Microsoft is providing this option to minimize potential impacts of the update while many organizations are facing a high percentage of remote users. </span></span></span></span></p>
+
+<p><span><span><strong><span><span>Q: </span></span></strong><span><span>How long will the static CDN solution be available? </span></span></span></span></p>
+
+<p><span><span><strong><span><span>A: </span></span></strong><span><span>The static CDN solution will be durable. You should expect this IP addresses to remain consistent and when a publicly available solution is provided, you can move to the solution when ready. </span></span></span></span></p>
+
+<p><span><span><strong><span><span>Q:</span></span></strong><span><span> Can I share the static CDN solution shared to another organization? </span></span></span></span></p>
+
+<p><strong><span><span><span>A: </span></span></span></strong><span><span><span>This confidential guidance should not be shared outside of your organization. In the future, Microsoft will publish a public article. </span></span></span></p>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+<p><a id="Change History" name="Change History"></a>&nbsp;</p>
+
+<div class="kb-securedata-section section">
+<div class="faq-section" faq-section="">
+<div class="faq-panel">
+<div class="faq-panel-heading" faq-panel-heading=""><span class="link-expand-image"><span class="faq-chevron win-icon win-icon-ChevronUpSmall"></span></span><span class="bold btn-link link-expand-text">Change history</span></div>
+
+<div class="faq-panel-body" faq-panel-body="">
+<table class="table">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>Item</strong></p>
+			</td>
+			<td>
+			<p><strong>Title</strong></p>
+			</td>
+			<td>
+			<p><strong>Date</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td><a data-content-id="" data-content-type="" href="https://dev.azure.com/ContentIdea/ContentIdea/_workitems/edit/120882" managed-link="" target="_blank">CT 120882</a></td>
+			<td>A new article about guidance for providing Static VPN to Microsoft 365 Apps for enterprise administrators.</td>
+			<td>July 13, 2020</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<p><a bookmark-id="top" href="#top" managed-link="">Return to top</a></p>
+</div>
