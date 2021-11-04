@@ -9,7 +9,7 @@
              ;;:grammar 3
              ;;:counts 15 ;; KC this one one work, please look at the following lines to achive what I think you have in mind here.
              ;;:total 15 ;; absolute flag count
-             ;;:issues 15 ;; coming from the platform, will need to be tested.
+             ;;:issues 15 ;; coming from the platform, will need to be test.
              }
     :scores {
              ;;:terminology 100
