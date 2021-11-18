@@ -8,7 +8,7 @@
               ;:clarity 0
               ;:consistency 7
               ;:correctness 10
-              ;:inclusive-language 10
+              ;:inclusive 10
               ;:scannability 10
               ;:tone 10
               ;:words_and_phrases 10
