@@ -102,3 +102,7 @@ Git with syntax support (broken files are immediately identifiable).
 
 We might later support also the JSONC format. This format is however
 not supported natively on the web editor of ADO.
+
+## Updates
+
+- (12/03/2021) The integration now support Azure DevOps PR comments and status written back.
