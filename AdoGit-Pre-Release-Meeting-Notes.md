@@ -105,4 +105,4 @@ not supported natively on the web editor of ADO.
 
 ## Updates
 
-- (12/03/2021) The integration now support Azure DevOps PR comments and status written back.
+- (12/03/2021) The integration now supports Azure DevOps PR comments and status written back to the Ado Git system.
