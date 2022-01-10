@@ -90,6 +90,32 @@ Git with syntax support (broken files are immediately identifiable).
 We might later support also the JSONC format. This format is however
 not supported natively on the web editor of ADO.
 
+## Installation
+
+To install the ADO Git integration please note following:
+
+* Restriction
+   * The remote config directory must be on GitHub (for now)
+
+* Generating the personal access token on Azure DevOps
+   * Current minimal set of rights for the personal access token:
+     * Code: read and status
+     * Pull request threads: Read and write
+
+* Configuration of the service hook notifications
+   * HTTPS must be used to connect with the webhook
+   * Basic authentication must be used
+   * The user name must be the word "secret" (without quotes)
+   * The ADO secret must be entered as the password of this user
+   * "Resource details to send" must be set to "All" (for now)
+   * "Messages to send" shall be set to "None"
+   * "Detailed messages to send" shall be set to "None"
+
+* Configuration changes:
+   * The GitHub secret config option is now :gh-secret (changed from :secret)
+   * The Azure DevOps token config option name is :ado-token (this is the personal access token)
+   * The ADO secret config option name is :ado-secret
+
 ## Updates
 
 - 2021-12-03
