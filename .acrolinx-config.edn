@@ -2,7 +2,7 @@
  :allowed-filename-matches ["(?i)articles/(?:(?!active-directory/saas-apps/toc.yml|role-based-access-control/resource-provider-operations.md))" "(?i)testing/(?:(?!systemuser.md|common.md|brand.string.json|string.json|sub-teams/brand.string.json|sub-teams/string.json|sub-teams/common.md|sub-teams/systemuser.md))" "(?i)Teams/(?:(?!systemuser.md|common.md|brand.string.json|string.json|sub-teams/brand.string.json|sub-teams/string.json|sub-teams/common.md|sub-teams/systemuser.md))"]
  :use-gh-statuses true
  :use-skip-label true
- :guidance-profile "7e7ea0c4-da08-43f2-975f-d20c3907d642" ;;C+L-specific Target
+ ;;:guidance-profile "7e7ea0c4-da08-43f2-975f-d20c3907d642" ;;C+L-specific Target
 :targets ; This requires ":use-gh-statuses" to be enabled.
    {
      :counts {
