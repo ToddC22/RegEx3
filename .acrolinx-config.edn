@@ -19,11 +19,11 @@
               ;:minimum 50
               ;:clarity 80
               ;:consistency 70
-              ;:correctness 80
+              :correctness 80
               ;:inclusive-language 80
               ;:scannability 80
               ;:tone 80
-              ;:words_and_phrases 80
+              :words_and_phrases 80
               :qualityscore 89
               }
     }
