@@ -8,16 +8,8 @@
 
 ## Next Steps
 
-- Dalton agreed on meeting us again on January 11.
-
-- Acrolinx (Samir) will get read access to a low confidentiality
-  repository from Dalton/Dom. The repository will be set up to send
-  Pull Request events to the development webhook EC2 instance.
-
-- Joanna will work with KC to get early approval to install the
-  webhook on their confidential repositories once we reach the status
-  of an official release. The purpose is to identify any security
-  concerns at an early stage.
+- Acrolinx is waiting for the personal access tokens to the first
+  Microsoft repositrories on Azure DevOps Git to proceed.
 
 ## Development Status
 
@@ -28,10 +20,13 @@
 - A comment is written back to the pull request comment thread. It
   contains editable links to the files.
 - The quality gate is working fine
-- The global configuration file and repository list are on GitHub
+- The global configuration file and repository list are on GitHub; The
+  webhook checks for each pull request if the global configuration
+  file has been changed and updates it if changed.
 
 ## Next Development Steps (non-exhaustive list)
 
+- Waiting currently for the personal access tokens
 - Update all tests and verify each configuration option
 - Moving in stages toward production
 - Baseline will be done after the pull requests are in production
@@ -94,7 +89,7 @@ not supported natively on the web editor of ADO.
 
 To install the ADO Git integration please note following:
 
-* Restriction
+* Pre-requisite
    * The remote config directory must be on GitHub (for now)
 
 * Generating the personal access token on Azure DevOps
@@ -116,7 +111,7 @@ To install the ADO Git integration please note following:
    * The Azure DevOps token config option name is :ado-token (this is the personal access token)
    * The ADO secret config option name is :ado-secret
 
-## Updates
+## Updates (visible changes)
 
 - 2021-12-03
   - The integration now supports Azure DevOps PR comments and status
@@ -133,3 +128,7 @@ To install the ADO Git integration please note following:
   - DONE Implement the "refetch" of the incoming event information (incoming
     events can only be tested to have the proper secret set in the HTTP
     headers but are not signed like on GitHub).
+2022-02-03
+  - DONE Document ID is now a proper full URI
+2022-03-01
+  - DONE Remote config now reloads upon each pull request
