@@ -19,45 +19,34 @@ ms.collection:
 appliesto: 
   - Microsoft Teams
 ---
-# Task 541858
 
-See the .artifactignore file.
+# Acrolinx test
 
-SQL Server 2019 Big Data Clusters requires block storage for all persisted volumes. Management operation on top of the persisted volumes created and used by a big data cluster is a capability that depends on the storage provider including, for example, operations to expand persistent volumes (PVs).
-# Task 542306
+https://dev.azure.com/ceapex/CPS/_workitems/edit/550102
+RBAC roles
 
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] offers important brokered services, such as the following.
+https://dev.azure.com/ceapex/CPS/_workitems/edit/591238
+There are several Azure Quickstart Template available here.
 
-A [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] extension should consume a brokered service using the latest available VS release property from the <xref:Microsoft.VisualStudio.VisualStudioServices> class, considering the minimum required version of [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] that the extension targets.
-Taking the previous solution service example, this would mean that an extension that targets [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 2019 Update 9 or later should acquire the VisualStudioServices.VS2019_5Services.SolutionService descriptor from the VisualStudioServices.VS2019_9 property.
+Need to send to add to lexicon: demonstratable, grabbable
 
-# Task 552414
+CScript
 
-You will paste your key and endpoint into the code below later in the quickstart.
+Smartlist
 
-# Task552820
+Microsoft 365 Defender
 
-Fixed issues where the connection would hang when connecting through an RD gateway.
+WACTH
 
-# 549625
+If you don't need the resources the script created, use the az group delete command to delete the resource group and all resources it contains, including the Azure Cosmos DB account and database.
 
-tabu
-Hermitian
-univariate
-filmmaking
-Slurm
-nodearray
-cyclecloud
-Credativ
-OSConfig
-redstone
-transpilation
-quiz
-Cirq
-NXDomain
-Petastorm
-Karbon
-Xdomain
-Airtable
+## Sample script
 
-# 552407
+This script uses the following commands:
+
+- [az group create](/cli/azure/group#az-group-create) creates a resource group to store all resources.
+- [az cosmosdb create](/cli/azure/cosmosdb#az-cosmosdb-create) with the `--capabilities EnableGremlin` parameter creates a Gremlin-enabled Azure Cosmos DB account.
+- [az cosmosdb gremlin database create](/cli/azure/cosmosdb/gremlin/database#az-cosmosdb-gremlin-database-create) creates an Azure Cosmos DB Gremlin database.
+- [az cosmosdb gremlin graph create](/cli/azure/cosmosdb/gremlin/graph#az-cosmosdb-gremlin-graph-create) with the `--max-throughput` parameter set to minimum `4000` creates an Azure Cosmos DB Gremlin graph with autoscale.
+
+:::code language="azurecli" source="~/azure_cli_scripts/cosmosdb/gremlin/autoscale.sh" id="FullScript":::
