@@ -40,7 +40,7 @@ Select **Total score** to review the Acrolinx scorecard for your article. Try to
 "
 
  :template-change
- "| ${s/file} ${s/status} | [${acrolinx/qualityscore}](${acrolinx/scorecard}) | ${acrolinx/scores/words_and_phrases} | ${acrolinx/scores/correctness} | ${acrolinx/scores/clarity} | ${acrolinx/scores/inclusive} |
+ "| ${s/file} ${s/status} | [${acrolinx/qualityscore}](${acrolinx/scorecard}) | ${acrolinx/scores/words_and_phrases}  | ${acrolinx/scores/correctness}  | ${acrolinx/scores/clarity}  | ${acrolinx/scores/inclusive}  |
 "
 
  :template-footer
