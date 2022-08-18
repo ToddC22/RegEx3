@@ -1,5 +1,5 @@
 {:allowed-branchname-matches ["master" "release-.*" "main"]
- :allowed-filename-matches ["(?i)articles/(?:(?!active-directory/saas-apps/toc.yml|role-based-access-control/resource-provider-operations.md))" "(?i)testing/(?:(?!systemuser.md|common.md|brand.string.json|string.json|sub-teams/brand.string.json|sub-teams/string.json|sub-teams/common.md|sub-teams/systemuser.md))" "(?i)Teams/(?:(?!systemuser.md|common.md|brand.string.json|string.json|sub-teams/brand.string.json|sub-teams/string.json|sub-teams/common.md|sub-teams/systemuser.md))"]
+ :allowed-filename-matches ["^[^.]+$|\.(?!(yml|yaml)$)([^.]+$)" "(?i)articles/(?:(?!active-directory/saas-apps/toc.yml|role-based-access-control/resource-provider-operations.md))" "(?i)testing/(?:(?!systemuser.md|common.md|brand.string.json|string.json|sub-teams/brand.string.json|sub-teams/string.json|sub-teams/common.md|sub-teams/systemuser.md))" "(?i)Teams/(?:(?!systemuser.md|common.md|brand.string.json|string.json|sub-teams/brand.string.json|sub-teams/string.json|sub-teams/common.md|sub-teams/systemuser.md))"]
  :use-gh-statuses true
  :use-skip-label true
  :ignored-filetypes ["YAML"]
