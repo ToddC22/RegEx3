@@ -109,7 +109,7 @@ Please follow the following selections for both types of subscriptions
    * HTTPS must be used to connect with the webhook
      * For MS-QA (Testing phase)
         ```https://ms-qa-adogit.acrolinx.cloud/githubhook/listen/```
-     * For MS-Prod (TBD)
+     * For MS-Prod (Production)
         ```https://ms-adogit.acrolinx.cloud/githubhook/listen/```
    * **Basic authentication must be used**
    * The user name must be the word "**secret**" (without quotes)
