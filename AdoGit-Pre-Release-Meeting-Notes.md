@@ -110,9 +110,11 @@ Please follow the following selections for both types of subscriptions
      * For MS-QA (Testing phase)
         ```https://ms-qa-adogit.acrolinx.cloud/githubhook/listen/```
      * For MS-Prod (TBD)
+        ```https://ms-adogit.acrolinx.cloud/githubhook/listen/```
    * **Basic authentication must be used**
    * The user name must be the word "**secret**" (without quotes)
    * The ADO secret must be entered as the password of this user
+     * **Please work with Acrolinx to get the corresponding ADO GIT secret to complete this step** 
    * "Resource details to send" must be set to "**All**" (for now)
    * "Messages to send" shall be set to "**None**"
    * "Detailed messages to send" shall be set to "**None**"
